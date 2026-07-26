@@ -1,5 +1,5 @@
 {
-  "genere": "2026-07-26T10:16:05.668249+00:00",
+  "genere": "2026-07-26T16:14:54.035469+00:00",
   "exceptions_appliquees": 1,
   "nouvelles_alertes": 0,
   "sections": [
@@ -896,23 +896,16 @@
           "nouveau": false
         },
         {
-          "categorie": "hors-referentiel-dares",
-          "gravite": "basse",
-          "titre": "72 code(s) absents du référentiel DARES",
-          "detail": "Pour la plupart des mentions pédagogiques ou des alias internes déjà classés. Voir le rapport complet si tu veux les repasser en revue.",
-          "nouveau": false
-        },
-        {
           "categorie": "lien-interne-casse",
           "gravite": "moyenne",
-          "titre": "outils/outils.html : lien vers « mentions-legales.html » introuvable",
+          "titre": "outils/outils.html : lien vers « menu.html » introuvable",
           "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
           "nouveau": false
         },
         {
           "categorie": "lien-interne-casse",
           "gravite": "moyenne",
-          "titre": "outils/outils.html : lien vers « menu.html » introuvable",
+          "titre": "outils/outils.html : lien vers « mentions-legales.html » introuvable",
           "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
           "nouveau": false
         }
@@ -1120,22 +1113,7 @@
       "id": "noindex",
       "titre": "MonLegiTexte — noindex en direct",
       "module": "noindex-live",
-      "alertes": [
-        {
-          "categorie": "noindex-absent",
-          "gravite": "haute",
-          "titre": "X-Robots-Tag: noindex absent de la réponse réelle",
-          "detail": "Statut 403. En-tête reçu : (absent). Le site est indexable tel quel, même si le code source dit le contraire.",
-          "nouveau": false
-        },
-        {
-          "categorie": "noindex-meta-absent",
-          "gravite": "basse",
-          "titre": "Balise <meta robots noindex> non trouvée dans le HTML reçu",
-          "detail": "Redondant avec l'en-tête HTTP si celui-ci est bien présent — pas grave seul, mais à vérifier si l'en-tête l'est aussi.",
-          "nouveau": false
-        }
-      ]
+      "alertes": []
     }
   ]
 }

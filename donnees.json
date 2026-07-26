@@ -1,7 +1,7 @@
 {
-  "genere": "2026-07-26T19:32:59.065314+00:00",
+  "genere": "2026-07-26T19:44:36.701220+00:00",
   "exceptions_appliquees": 1,
-  "nouvelles_alertes": 15,
+  "nouvelles_alertes": 0,
   "sections": [
     {
       "id": "grilles",
@@ -432,7 +432,7 @@
           "gravite": "basse",
           "titre": "IDCC 3168 — Professions de la photographie",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -460,14 +460,14 @@
           "gravite": "basse",
           "titre": "IDCC 2089 — Industrie des panneaux à base de bois",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 2494 — Coopération maritime",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -495,21 +495,21 @@
           "gravite": "basse",
           "titre": "IDCC 1880 — Négoce de l'ameublement",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 1589 — Mareyeurs-expéditeurs",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 1534 — Industrie et commerces en gros des viandes",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -523,14 +523,14 @@
           "gravite": "basse",
           "titre": "IDCC 1982 — Négoce et prestations de services dans les d",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 2219 — Taxis",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -544,7 +544,7 @@
           "gravite": "basse",
           "titre": "IDCC 1951 — Cabinets ou entreprises d'expertises en auto",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -565,21 +565,21 @@
           "gravite": "basse",
           "titre": "IDCC 1536 — Distributeurs conseils hors domicile (CHD)",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 18 — Industrie textile",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
           "titre": "IDCC 2272 — Assainissement et maintenance industrielle",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-ancienne",
@@ -614,14 +614,14 @@
           "gravite": "basse",
           "titre": "IDCC 3168 — Professions de la photographie",
           "detail": "IDCC 3168 — Professions de la photographie : 15/02/2024 (29 mois)",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-ancienne",
           "gravite": "basse",
           "titre": "IDCC 2089 — Industrie des panneaux à base de bois",
           "detail": "IDCC 2089 — Industrie des panneaux à base de bois : 11/07/2024 (24 mois)",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-ancienne",
@@ -656,7 +656,7 @@
           "gravite": "basse",
           "titre": "IDCC 1801 — Sociétés d'assistance",
           "detail": "IDCC 1801 — Sociétés d'assistance : 12/12/2024 (19 mois)",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grilles-placeholder",
@@ -718,43 +718,7 @@
     {
       "id": "outils",
       "titre": "105 outils",
-      "alertes": [
-        {
-          "categorie": "citation-orpheline",
-          "gravite": "haute",
-          "titre": "L1214-8-2 : cité mais absent d'articles-loi.js",
-          "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-orpheline",
-          "gravite": "haute",
-          "titre": "L225-102-1 : cité mais absent d'articles-loi.js",
-          "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": false
-        },
-        {
-          "categorie": "article-non-confirme",
-          "gravite": "moyenne",
-          "titre": "L431-1 (CSS) : le fonds l'a tenté, Légifrance n'a rien renvoyé — vérifier que le numéro cité est correct",
-          "detail": "Cité dans module-archives.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "article-non-confirme",
-          "gravite": "moyenne",
-          "titre": "L461-1 (CSS) : le fonds l'a tenté, Légifrance n'a rien renvoyé — vérifier que le numéro cité est correct",
-          "detail": "Cité dans module-atmp.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "article-non-confirme",
-          "gravite": "moyenne",
-          "titre": "R351-12 (CSS) : le fonds l'a tenté, Légifrance n'a rien renvoyé — vérifier que le numéro cité est correct",
-          "detail": "Cité dans module-retraite.html.",
-          "nouveau": false
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "guide",
@@ -765,71 +729,7 @@
       "id": "citations",
       "titre": "Citations juridiques (guide + modules)",
       "module": "citations-ecosysteme",
-      "alertes": [
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "D351-1-5 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:rachat-trimestres-retraite-hs.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L113-9 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:droit-auteur-salarie-creatif-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L211-23 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:travailleur-frontalier-luxembourg-hs.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L2123-2 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:elu-local-salarie-credit-heures-hs.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L2323-47 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:surveillance-vie-privee-travail.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L351-15 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:retraite-progressive-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L461-1 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:maladie-professionnelle-guide.html, guide:maladie-professionnelle-hs-reconstitution-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L8222-2 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:travail-dissimule-travail-noir-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "R3324-22 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:epargne-salariale-pee-percol-guide.html.",
-          "nouveau": false
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "syntaxe",

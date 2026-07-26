@@ -89,7 +89,26 @@ def main():
     resultat = {"module": "citations-ecosysteme", "alertes": []}
     abroges, non_confirmes = [], []
 
+    # Même principe que dans verifier-outils.py : des citations vérifiées par
+    # une recherche externe, que ce script ne peut structurellement pas
+    # confirmer -- mauvais code testé, contenu vide côté fonds, ou citées à
+    # dessein pour leur historique (un article abrogé, mentionné pour
+    # expliquer ce qui l'a remplacé, reste une citation correcte).
+    EXCEPTIONS_CONFIRMEES = {
+        "D351-1-5": "Confirmé en vigueur (CSS) -- contenu vide côté fonds, pas une absence réelle.",
+        "L113-9": "Code de la propriété intellectuelle -- hors périmètre CT/CSS.",
+        "L211-23": "Explicitement \"CT-Lux\" dans la page -- droit luxembourgeois, jamais un code français.",
+        "L2123-2": "Code général des collectivités territoriales -- hors périmètre CT/CSS.",
+        "L2323-47": "Abrogé en 2017 (CSE) -- cité à dessein pour expliquer l'historique, contexte déjà ajouté dans le guide.",
+        "L351-15": "Abrogé en 2023 (réforme retraites) -- cité à dessein pour l'historique, contexte déjà ajouté dans le guide.",
+        "L461-1": "Confirmé en vigueur (CSS) -- contenu vide côté fonds, pas une absence réelle.",
+        "L8222-2": "Confirmé en vigueur (CT) -- contenu vide côté fonds, pas une absence réelle.",
+        "R3324-22": "Confirmé en vigueur (CT) -- contenu vide côté fonds, pas une absence réelle.",
+    }
+
     for art, lieux in sorted(citations.items()):
+        if art in EXCEPTIONS_CONFIRMEES:
+            continue
         code, etat = etat_reel(args.fonds, art)
         lieux_uniques = sorted(set(lieux))
         if etat == "ABROGE":

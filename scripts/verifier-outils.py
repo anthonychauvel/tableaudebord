@@ -99,10 +99,32 @@ def main():
     articles_locaux = charger_articles_locaux(args.racine)
     citations, n_fichiers = citations_dans_outils(args.racine)
 
+    # Citations vérifiées par une recherche externe (pas juste supposées) --
+    # ce script ne peut structurellement pas les confirmer lui-même, pour
+    # deux raisons différentes selon le cas, jamais parce que la citation
+    # serait fausse :
+    #   - existent dans un CODE que ce script ne teste pas (seulement CT et
+    #     CSS ici) -- Code des transports, Code de commerce, etc.
+    #   - existent bien dans le fonds (code-travail/code-secu), mais le
+    #     fichier récupéré a un contenu vide (échec de récupération lors du
+    #     scraping, pas une absence réelle -- près de 40% du fonds est dans
+    #     ce cas, ce n'est donc pas isolé à ces trois-là).
+    # Sans cette liste, ces citations reviendraient en erreur à chaque run,
+    # indéfiniment, alors qu'elles sont correctes.
+    EXCEPTIONS_CONFIRMEES = {
+        "L1214-8-2": "Code des transports (plan de mobilité employeur) -- hors périmètre CT/CSS.",
+        "L225-102-1": "Code de commerce (devoir de vigilance) -- hors périmètre CT/CSS.",
+        "L431-1": "Confirmé en vigueur (CSS) -- le fonds a un contenu vide pour cet article, pas une absence réelle.",
+        "L461-1": "Confirmé en vigueur (CSS) -- le fonds a un contenu vide pour cet article, pas une absence réelle.",
+        "R351-12": "Confirmé en vigueur (CSS) -- le fonds a un contenu vide pour cet article, pas une absence réelle.",
+    }
+
     resultat = {"module": "105-outils", "alertes": []}
     manquants_locaux, abroges, non_confirmes = [], [], []
 
     for art, fichiers in sorted(citations.items()):
+        if art in EXCEPTIONS_CONFIRMEES:
+            continue
         code = articles_locaux.get(art)
         if code is None:
             manquants_locaux.append((art, fichiers))

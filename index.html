@@ -102,7 +102,8 @@ body{
 <script>
 const LIB = {grilles:'Grilles CCN', droit:'MonLegiTexte', modules:'8 modules',
              outils:'105 outils', guide:'Guide SEO', citations:'Citations juridiques',
-             syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)'};
+             syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)',
+             contenu:'Contenu des articles'};
 
 // Un conseil par CATÉGORIE, pas par alerte individuelle -- les mêmes sujets
 // reviennent, la correction typique aussi. Sert de mémoire courte : que faire
@@ -144,6 +145,7 @@ const CONSEILS = {
   'audit-introuvable': "Le dernier audit du fonds n'est pas accessible -- vérifier que audits/index.json existe et est à jour côté droit.",
   'changement-reel': "Un vrai changement de contenu a été détecté côté fonds depuis le dernier audit -- vérifier ce qui a changé et si ça impacte l'app.",
   'run-en-retard': "Le workflow ne s'est pas exécuté depuis longtemps -- vérifier qu'il est bien activé et programmé sur GitHub Actions.",
+  'contenu-article-modifie': "Toujours en vigueur, mais le texte a changé depuis la dernière vérification -- ouvrir l'article sur Légifrance, comparer à ce que la logique de calcul suppose, ajuster si les seuils ou montants ont bougé.",
 };
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}

@@ -65,6 +65,8 @@ body{
 .alerte .dot.moyenne{background:var(--moyenne);}
 .alerte .dot.basse{background:var(--basse);}
 .alerte .d{font-size:11.5px;color:var(--txt2);margin-top:3px;margin-left:14px;line-height:1.5;}
+.alerte .conseil{font-size:11px;color:#7FA88A;margin-top:5px;margin-left:14px;line-height:1.45;
+  padding-left:8px;border-left:2px solid #2E4A38;}
 .vide{padding:16px 15px;font-size:12.5px;color:var(--txt2);text-align:center;}
 .non-construit{padding:14px 15px;font-size:12px;color:var(--txt2);text-align:center;
   border-top:1px dashed var(--edge);}
@@ -101,6 +103,48 @@ body{
 const LIB = {grilles:'Grilles CCN', droit:'MonLegiTexte', modules:'8 modules',
              outils:'105 outils', guide:'Guide SEO', citations:'Citations juridiques',
              syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)'};
+
+// Un conseil par CATÉGORIE, pas par alerte individuelle -- les mêmes sujets
+// reviennent, la correction typique aussi. Sert de mémoire courte : que faire
+// concrètement, sans redériver la réponse à chaque fois.
+const CONSEILS = {
+  'grille-perimee': "Chercher un avenant plus récent sur Légifrance/BOCC pour cet IDCC. Si rien n'est publié à ce jour, ce n'est pas une correction en attente de ta part -- ajoute une exception dans exceptions.json avec une note \"rien publié sur Légifrance\" plutôt que de laisser l'alerte revenir indéfiniment.",
+  'grille-a-creer': "Chercher le texte complet de l'avenant cité, en extraire la grille ligne par ligne, l'ajouter à ccn-data.json -- puis régénérer _B64, sinon la correction n'atteint jamais la production.",
+  'grille-ancienne': "Pas forcément une erreur : vérifier juste si un avenant plus récent existe. Si la CCN n'a simplement pas renégocié depuis, rien à faire.",
+  'grille-sans-date': "Champ 'd' manquant ou illisible dans ccn-data.json pour cette grille -- ajouter une date au format JJ/MM/AAAA.",
+  'grille-sous-smic': "Vérifier si la note de source mentionne un motif documenté (indemnité différentielle, indiciaire...). Si oui, c'est normal, rien à faire : le bandeau applicatif gère déjà l'affichage. Si non, le SMIC s'applique automatiquement, rien à corriger côté grille.",
+  'grilles-placeholder': "Grille non encore sourcée sur du réel -- chercher le texte officiel pour remplacer l'estimation SMIC par un vrai montant.",
+  'hors-referentiel-dares': "Vérifier si l'IDCC existe encore sur la DARES/Légifrance. S'il a été retiré ou fusionné, mettre à jour ou retirer l'entrée.",
+  'identite-divergente': "Le libellé ou le champ affiché ne correspond pas à ce que dit la source officielle -- comparer et corriger le nom ou l'identifiant.",
+
+  'article-abroge': "Chercher l'article de remplacement sur Légifrance et mettre à jour la citation (articles-loi.js ou data-art selon l'endroit).",
+  'article-abroge-ecosysteme': "Même chose, mais cité en texte brut dans le guide ou un module -- chercher l'occurrence exacte et remplacer la référence dans le texte.",
+  'article-non-confirme': "Le fonds n'a pas (encore) ce texte -- pas forcément faux, juste pas vérifiable pour l'instant. Revoir si ça persiste sur plusieurs runs.",
+  'citation-orpheline': "Article cité dans un outil mais absent d'articles-loi.js -- soit l'ajouter au référentiel, soit corriger la citation si c'est une coquille.",
+  'citation-ecosysteme-non-confirmee': "Citation en texte brut dans le guide/un module, ni code travail ni code sécu ne la confirme -- vérifier la référence à la main.",
+  'convention-perimee-sans-mention': "Le guide cite une CCN fusionnée sans le dire -- ajouter une mention (ex. \"désormais intégrée à IDCC X\") pour ne pas induire en erreur.",
+
+  'lien-interne-casse': "Lien mort trouvé -- vérifier si la cible a été renommée/déplacée/supprimée, corriger le href ou retirer le lien.",
+  'lien-mort-grillepaye': "Lien vers MonLegiTexte cassé pour cet IDCC -- vérifier le mapping IDCC->code dans GrillePaye/index.html.",
+  'outil-fichier-manquant': "Une clé de TOOLS dans outils.html n'a pas de fichier -- soit créer le fichier manquant, soit retirer l'entrée si l'outil n'existe plus.",
+  'outil-orphelin': "Le fichier existe mais n'est dans aucune catégorie -- l'ajouter à une catégorie de CATS dans outils.html, ou le supprimer s'il ne sert plus.",
+  'asset-casse': "Image ou ressource introuvable -- vérifier le chemin, ou remplacer/retirer la référence si le fichier n'existe plus.",
+  'module-absent-de-prod': "Module présent en bac à sable mais jamais déployé -- décider s'il faut le pousser en production ou l'exclure du suivi si ce n'est pas prévu.",
+  'livrable-session': "Un livrable construit récemment n'est pas encore en ligne -- vérifier s'il doit encore être déployé ou si c'est un choix assumé de ne pas le faire.",
+
+  'jsonld-invalide': "JSON-LD mal formé -- Google l'ignore silencieusement. Corriger la syntaxe JSON du bloc <script type=\"application/ld+json\"> sur la page citée.",
+  'jsonld-incomplet': "Bloc JSON-LD valide mais sans @context/@type -- ajouter les champs manquants pour que Google puisse l'exploiter.",
+
+  'syntaxe-js-cassee': "La page ne charge plus du tout -- ouvrir le fichier, chercher la ligne indiquée par le message de node --check, corriger la syntaxe.",
+
+  'noindex-absent': "L'en-tête X-Robots-Tag noindex n'est plus envoyé en production -- vérifier le Worker Cloudflare déployé, pas seulement le code source.",
+  'noindex-meta-absent': "Balise meta robots absente du HTML reçu -- vérifier qu'elle n'a pas été retirée par erreur d'un template.",
+  'site-injoignable': "Le site ne répond pas au moment du run -- souvent temporaire (déploiement en cours, panne passagère). Vérifier si ça persiste avant de s'inquiéter.",
+
+  'audit-introuvable': "Le dernier audit du fonds n'est pas accessible -- vérifier que audits/index.json existe et est à jour côté droit.",
+  'changement-reel': "Un vrai changement de contenu a été détecté côté fonds depuis le dernier audit -- vérifier ce qui a changé et si ça impacte l'app.",
+  'run-en-retard': "Le workflow ne s'est pas exécuté depuis longtemps -- vérifier qu'il est bien activé et programmé sur GitHub Actions.",
+};
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
@@ -140,7 +184,9 @@ async function charger(){
       </div>`;
     }
     const alertes = (s.alertes||[]).slice().sort((a,b)=>
-      (b.nouveau?1:0)-(a.nouveau?1:0) || (ordreGravite[a.gravite]??9)-(ordreGravite[b.gravite]??9));
+      (b.nouveau?1:0)-(a.nouveau?1:0)
+      || (a.categorie||'').localeCompare(b.categorie||'')
+      || (ordreGravite[a.gravite]??9)-(ordreGravite[b.gravite]??9));
     const n = alertes.length;
     return `<div class="section${n>0?'':''}" id="sec-${i}">
       <div class="section-hd" onclick="document.getElementById('sec-${i}').classList.toggle('open')">
@@ -156,6 +202,7 @@ async function charger(){
           <div class="alerte${a.nouveau?' nouveau':''}">
             <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}${a.nouveau?'<span class="badge-nouveau">NOUVEAU</span>':''}</div>
             <div class="d">${esc(a.detail||'')}</div>
+            ${CONSEILS[a.categorie] ? `<div class="conseil">💡 ${esc(CONSEILS[a.categorie])}</div>` : ''}
           </div>`).join('')}
       </div>
     </div>`;

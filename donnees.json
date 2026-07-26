@@ -1,26 +1,12 @@
 {
-  "genere": "2026-07-26T17:20:10.629647+00:00",
+  "genere": "2026-07-26T19:11:08.375151+00:00",
   "exceptions_appliquees": 1,
-  "nouvelles_alertes": 0,
+  "nouvelles_alertes": 18,
   "sections": [
     {
       "id": "grilles",
       "titre": "Grilles CCN",
       "alertes": [
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1000 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 29 du 24 janvier 2025 relatif aux salaires minima des avocats salariés (24/01/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1170 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 18 du 26 juin 2024 à l'accord du 13 février 2004 relatif aux rémunérations minimales annuelles garanties des ouvriers, employés, techniciens, agents de maîtrise (ETAM) (26/06/2024)",
-          "nouveau": false
-        },
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
@@ -31,37 +17,16 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 1278 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 13 décembre 2017 relatif aux salaires minima au 1er janvier 2018 (13/12/2017)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 1285 : clause au fonds, aucune grille dans l'app",
           "detail": "Accord du 2 mai 2024 relatif aux salaires pour l'année 2024 (02/05/2024)",
           "nouveau": false
         },
         {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 135 : clause au fonds, aucune grille dans l'app",
-          "detail": "Bourgogne-Franche-Comté Accord du 22 avril 2024 relatif aux salaires minimaux (22/04/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1383 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 24 janvier 2023 relatif aux salaires minima conventionnels (24/01/2023)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1424 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 18 février 2026 relatif à l'évolution du salaire national minimum et des salaires minima mensuels forfaitisés (18/02/2026)",
-          "nouveau": false
+          "categorie": "grille-perimee",
+          "gravite": "moyenne",
+          "titre": "IDCC 1424 : grille dépassée de 48 jours",
+          "detail": "Accord du 18 février 2026 relatif à l'évolution du salaire national minimum et des salaires minima mensuels forfaitisés — Coefficients forfaitisés Au 1er janvier 2026 Coefficient 145 1 868,84 € Coefficient 155 1 880,09 € Coefficient 170 1 886,90 € Coefficient 175 1 893,73 € Coefficient 185 1 897,14 € Coefficient 190 1 902,58 € Le barème du salaire national min…",
+          "nouveau": true
         },
         {
           "categorie": "grille-perimee",
@@ -73,29 +38,8 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 1534 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 100 du 12 février 2026 relatif à la revalorisation des salaires minima et de la prime à l'obtention d'un CQP au 1er février 2026 (12/02/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1536 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 2026/1 du 3 mars 2026 relatif aux salaires minima au 1er mars 2026 (03/03/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 1558 : clause au fonds, aucune grille dans l'app",
           "detail": "Accord du 26 février 2026 relatif à l'évolution des salaires minima conventionnels des personnels ouvriers, ETAM et cadres (26/02/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1589 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant du 18 décembre 2025 à l'annexe II de la convention collective relative aux salaires minima au 1er janvier 2026 (18/12/2025)",
           "nouveau": false
         },
         {
@@ -136,13 +80,6 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 1747 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant du 16 janvier 2025 à l'accord du 13 février 2024 relatif aux salaires minima conventionnels (16/01/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 179 : clause au fonds, aucune grille dans l'app",
           "detail": "Avenant n° 913 du 15 mars 2013 relatif aux salaires minima au 1er avril 2013 (15/03/2013)",
           "nouveau": false
@@ -150,36 +87,8 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 18 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 15 janvier 2026 relatif aux salaires minima mensuels au 1er janvier 2026 (15/01/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1801 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 52 du 12 décembre 2024 relatif aux rémunérations (12/12/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 1843 : clause au fonds, aucune grille dans l'app",
           "detail": "Salaires (région parisienne) Avenant n° 6 du 17 décembre 2003 (17/12/2003)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1880 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 19 mars 2026 relatif aux salaires minima pour l'année 2026 (19/03/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1921 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 81 du 21 juillet 2023 relatif à la grille des salaires au 1er août 2023 (21/07/2023)",
           "nouveau": false
         },
         {
@@ -194,27 +103,6 @@
           "gravite": "basse",
           "titre": "IDCC 1944 : clause au fonds, aucune grille dans l'app",
           "detail": "Avenant n° 1 du 12 décembre 2025 à l'avenant n° 23 du 8 décembre 2025 relatif à la rémunération des pilotes et TCM (12/12/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1947 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 20 du 30 janvier 2024 relatif aux minima conventionnels applicables à compter du 1er mars 2024 (30/01/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1951 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 92 du 19 juin 2025 relatif à la grille des salaires (19/06/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 1982 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 2 du 20 février 2026 à l'accord du 9 mars 2023 relatif aux salaires minima hiérarchiques (20/02/2026)",
           "nouveau": false
         },
         {
@@ -241,57 +129,8 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 2089 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 11 juillet 2024 relatif aux salaires professionnels catégoriels minima (11/07/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 211 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 51 du 27 février 2024 relatif aux salaires minimaux (27/02/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2147 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 23 du 10 juin 2025 relatif à la négociation obligatoire sur les salaires (10/06/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 2149 : clause au fonds, aucune grille dans l'app",
           "detail": "Avenant n° 79 du 14 novembre 2024 relatif aux salaires minima conventionnels (14/11/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2150 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 15 du 7 janvier 2026 relatif au barème de rémunérations minimales (07/01/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2219 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 20 juin 2025 relatif aux rémunérations minimales (20/06/2025)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2272 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 45 du 20 février 2026 relatif à la réévaluation des salaires minima conventionnels au 1er avril 2026 (20/02/2026)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2408 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 9 juillet 2015 relatif aux salaires au 1er septembre 2015 (09/07/2015)",
           "nouveau": false
         },
         {
@@ -309,24 +148,10 @@
           "nouveau": false
         },
         {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2494 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 31 mars 2026 relatif aux salaires minima conventionnels au 1er avril 2026 (31/03/2026)",
-          "nouveau": false
-        },
-        {
           "categorie": "grille-perimee",
           "gravite": "moyenne",
           "titre": "IDCC 2528 : grille dépassée de 48 jours",
           "detail": "Accord du 18 février 2026 relatif aux salaires minima à partir du 1er janvier 2026 dans les entreprises de la cordonnerie multiservice — aucun montant repérable, ouvrir la clause",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 2564 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 82 du 9 juin 2022 relatif aux salaires minima et aux classifications (09/06/2022)",
           "nouveau": false
         },
         {
@@ -423,20 +248,6 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 3151 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 10 mars 2017 relatif aux salaires et à la prime de vacances au 1er mars 2017 (10/03/2017)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 3168 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant du 15 février 2024 relatif aux salaires minima (15/02/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 3210 : clause au fonds, aucune grille dans l'app",
           "detail": "Avenant n° 3 du 21 décembre 2023 relatif aux salaires minima conventionnels au 1er janvier 2024 (article 40 de la convention collective) (21/12/2023)",
           "nouveau": false
@@ -505,27 +316,6 @@
           "nouveau": false
         },
         {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 363 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 27 mai 2015 relatif aux rémunérations au 1er mars 2015 (27/05/2015)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 388 : clause au fonds, aucune grille dans l'app",
-          "detail": "ANNEXE I SALAIRES Convention collective nationale du 30 juin 1964 (30/06/1964)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 398 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 13 du 26 février 2016 relatif aux salaires minimaux conventionnels (26/02/2016)",
-          "nouveau": false
-        },
-        {
           "categorie": "grille-sans-date",
           "gravite": "basse",
           "titre": "IDCC 412 : pas de date exploitable",
@@ -533,31 +323,10 @@
           "nouveau": false
         },
         {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 435 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 31 mars 2009 relatif aux salaires des acteurs au 1er avril 2009 (31/03/2009)",
-          "nouveau": false
-        },
-        {
           "categorie": "grille-sans-date",
           "gravite": "basse",
           "titre": "IDCC 468 : pas de date exploitable",
           "detail": "Impossible de comparer à la veille tant que le champ date n'est pas renseigné.",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 504 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 57 du 14 décembre 2010 relatif aux salaires et aux primes pour l'année 2011 (14/12/2010)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 533 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 13 du 26 février 2016 relatif aux salaires minimaux conventionnels (26/02/2016)",
           "nouveau": false
         },
         {
@@ -572,27 +341,6 @@
           "gravite": "haute",
           "titre": "IDCC 567 : grille dépassée de 267 jours",
           "detail": "Accord du 25 septembre 2023 relatif aux salaires minimaux conventionnels « hors annexe salaires horlogerie » — En conséquence, les salaires minimaux conventionnels deviennent les suivants : Salaires minimaux conventionnels pour 151,67 heures mensuelles Niveau 1 à 7 : (En euros.) Niveau 1 Niveau 2 Niveau 3 Niveau 4 Niveau 5 Niveau 6 Niveau 7 Échelon …",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 598 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 9 mai 2007 relatif aux salaires et aux primes (09/05/2007)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 652 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 14 du 26 février 2016 relatif aux salaires minimaux conventionnels (26/02/2016)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 698 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 9 mai 2007 relatif aux salaires et aux primes (09/05/2007)",
           "nouveau": false
         },
         {
@@ -675,58 +423,16 @@
         {
           "categorie": "grille-a-creer",
           "gravite": "basse",
-          "titre": "IDCC 731 : clause au fonds, aucune grille dans l'app",
-          "detail": "Accord du 24 janvier 2023 relatif aux salaires minima conventionnels (24/01/2023)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 802 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 7 du 12 mars 2019 relatif aux salaires minima conventionnels au 1er avril 2019 (12/03/2019)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 832 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant du 8 mars 2019 relatif aux salaires mensuels garantis, aux primes et à la valeur du point pour l'année 2019 (08/03/2019)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 833 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant du 8 mars 2019 relatif aux salaires mensuels garantis, aux primes et à la valeur du point pour l'année 2019 (08/03/2019)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 87 : clause au fonds, aucune grille dans l'app",
-          "detail": "Bourgogne-Franche-Comté Accord du 22 avril 2024 relatif aux salaires minimaux (22/04/2024)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
-          "titre": "IDCC 925 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 7 du 12 mars 2019 relatif aux salaires minima conventionnels au 1er avril 2019 (12/03/2019)",
-          "nouveau": false
-        },
-        {
-          "categorie": "grille-a-creer",
-          "gravite": "basse",
           "titre": "IDCC 953 : clause au fonds, aucune grille dans l'app",
           "detail": "Avenant n° 57 du 4 décembre 2024 relatif aux salaires au 1er janvier 2025 (04/12/2024)",
           "nouveau": false
         },
         {
-          "categorie": "grille-a-creer",
+          "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 992 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 77 du 29 janvier 2025 relatif aux salaires (29/01/2025)",
-          "nouveau": false
+          "titre": "IDCC 3168 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
@@ -738,9 +444,30 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
+          "titre": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
           "titre": "IDCC 1557 — Commerce articles sport équipement loisirs",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": false
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 2089 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 2494 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
@@ -766,6 +493,27 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
+          "titre": "IDCC 1880 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 1589 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 1534 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
           "titre": "IDCC 993 — Prothèse dentaire laboratoires",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": false
@@ -773,9 +521,30 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
+          "titre": "IDCC 1982 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 2219 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
           "titre": "IDCC 1513 — Bière et boissons rafraîchissantes",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": false
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 1951 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
@@ -790,6 +559,27 @@
           "titre": "IDCC 493 — Vins, cidres, jus de fruits, sirops, spiritu",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": false
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 1536 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 18 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-sous-smic",
+          "gravite": "basse",
+          "titre": "IDCC 2272 — ?",
+          "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "nouveau": true
         },
         {
           "categorie": "grille-ancienne",
@@ -811,6 +601,27 @@
           "titre": "IDCC 706 — Reprographie personnel",
           "detail": "IDCC 706 — Reprographie personnel : 29/08/2023 (35 mois)",
           "nouveau": false
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés",
+          "detail": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés : 30/01/2024 (30 mois)",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3168 — ?",
+          "detail": "IDCC 3168 — ? : 15/02/2024 (29 mois)",
+          "nouveau": true
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 2089 — ?",
+          "detail": "IDCC 2089 — ? : 11/07/2024 (24 mois)",
+          "nouveau": true
         },
         {
           "categorie": "grille-ancienne",
@@ -839,6 +650,13 @@
           "titre": "IDCC 733 — Détaillants en chaussures",
           "detail": "IDCC 733 — Détaillants en chaussures : 16/12/2024 (19 mois)",
           "nouveau": false
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 1801 — ?",
+          "detail": "IDCC 1801 — ? : 12/12/2024 (19 mois)",
+          "nouveau": true
         },
         {
           "categorie": "grilles-placeholder",
@@ -945,13 +763,6 @@
         {
           "categorie": "convention-perimee-sans-mention",
           "gravite": "moyenne",
-          "titre": "femme-valet-chambre-hs.html : cite IDCC 800, fusionnée, sans le dire",
-          "detail": "Reprise par « Hôtels Cafés Restaurants ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
-          "nouveau": false
-        },
-        {
-          "categorie": "convention-perimee-sans-mention",
-          "gravite": "moyenne",
           "titre": "hotellerie-chaine-heures-supplementaires.html : cite IDCC 800, fusionnée, sans le dire",
           "detail": "Reprise par « Hôtels Cafés Restaurants ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
           "nouveau": false
@@ -1001,27 +812,6 @@
         {
           "categorie": "citation-ecosysteme-non-confirmee",
           "gravite": "basse",
-          "titre": "L3252-13 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:saisie-sur-salaire.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L3300-1 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:epargne-salariale-participation-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "L3334-8-1 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:per-plan-epargne-retraite-hs-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
           "titre": "L351-15 : aucun des deux corpus (travail/sécu) ne le confirme",
           "detail": "Cité dans guide:retraite-progressive-guide.html.",
           "nouveau": false
@@ -1043,22 +833,8 @@
         {
           "categorie": "citation-ecosysteme-non-confirmee",
           "gravite": "basse",
-          "titre": "R1242-1 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:cdd-usage-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
           "titre": "R3324-22 : aucun des deux corpus (travail/sécu) ne le confirme",
           "detail": "Cité dans guide:epargne-salariale-pee-percol-guide.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "citation-ecosysteme-non-confirmee",
-          "gravite": "basse",
-          "titre": "R4153-1 : aucun des deux corpus (travail/sécu) ne le confirme",
-          "detail": "Cité dans guide:travail-mineurs-regles-generales-guide.html.",
           "nouveau": false
         }
       ]

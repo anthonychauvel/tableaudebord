@@ -1,5 +1,5 @@
 {
-  "genere": "2026-07-26T16:36:46.797066+00:00",
+  "genere": "2026-07-26T17:20:10.629647+00:00",
   "exceptions_appliquees": 1,
   "nouvelles_alertes": 0,
   "sections": [
@@ -945,13 +945,6 @@
         {
           "categorie": "convention-perimee-sans-mention",
           "gravite": "moyenne",
-          "titre": "commerce-gros-non-alimentaire-heures-supplementaires.html : cite IDCC 1761, fusionnée, sans le dire",
-          "detail": "Reprise par « Commerces de gros ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
-          "nouveau": false
-        },
-        {
-          "categorie": "convention-perimee-sans-mention",
-          "gravite": "moyenne",
           "titre": "femme-valet-chambre-hs.html : cite IDCC 800, fusionnée, sans le dire",
           "detail": "Reprise par « Hôtels Cafés Restaurants ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
           "nouveau": false
@@ -1085,6 +1078,12 @@
       "id": "noindex",
       "titre": "MonLegiTexte — noindex en direct",
       "module": "noindex-live",
+      "alertes": []
+    },
+    {
+      "id": "contenu",
+      "titre": "Contenu des articles cités",
+      "module": "contenu-articles",
       "alertes": []
     }
   ]

@@ -1,7 +1,7 @@
 {
-  "genere": "2026-07-26T19:11:08.375151+00:00",
+  "genere": "2026-07-26T19:32:59.065314+00:00",
   "exceptions_appliquees": 1,
-  "nouvelles_alertes": 18,
+  "nouvelles_alertes": 15,
   "sections": [
     {
       "id": "grilles",
@@ -26,7 +26,7 @@
           "gravite": "moyenne",
           "titre": "IDCC 1424 : grille dépassée de 48 jours",
           "detail": "Accord du 18 février 2026 relatif à l'évolution du salaire national minimum et des salaires minima mensuels forfaitisés — Coefficients forfaitisés Au 1er janvier 2026 Coefficient 145 1 868,84 € Coefficient 155 1 880,09 € Coefficient 170 1 886,90 € Coefficient 175 1 893,73 € Coefficient 185 1 897,14 € Coefficient 190 1 902,58 € Le barème du salaire national min…",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-perimee",
@@ -430,7 +430,7 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 3168 — ?",
+          "titre": "IDCC 3168 — Professions de la photographie",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -446,7 +446,7 @@
           "gravite": "basse",
           "titre": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
-          "nouveau": true
+          "nouveau": false
         },
         {
           "categorie": "grille-sous-smic",
@@ -458,14 +458,14 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 2089 — ?",
+          "titre": "IDCC 2089 — Industrie des panneaux à base de bois",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 2494 — ?",
+          "titre": "IDCC 2494 — Coopération maritime",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -493,21 +493,21 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1880 — ?",
+          "titre": "IDCC 1880 — Négoce de l'ameublement",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1589 — ?",
+          "titre": "IDCC 1589 — Mareyeurs-expéditeurs",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1534 — ?",
+          "titre": "IDCC 1534 — Industrie et commerces en gros des viandes",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -521,14 +521,14 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1982 — ?",
+          "titre": "IDCC 1982 — Négoce et prestations de services dans les d",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 2219 — ?",
+          "titre": "IDCC 2219 — Taxis",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -542,7 +542,7 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1951 — ?",
+          "titre": "IDCC 1951 — Cabinets ou entreprises d'expertises en auto",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -563,21 +563,21 @@
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 1536 — ?",
+          "titre": "IDCC 1536 — Distributeurs conseils hors domicile (CHD)",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 18 — ?",
+          "titre": "IDCC 18 — Industrie textile",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
         {
           "categorie": "grille-sous-smic",
           "gravite": "basse",
-          "titre": "IDCC 2272 — ?",
+          "titre": "IDCC 2272 — Assainissement et maintenance industrielle",
           "detail": "Réelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "nouveau": true
         },
@@ -607,20 +607,20 @@
           "gravite": "basse",
           "titre": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés",
           "detail": "IDCC 1947 — Négoce de bois oeuvre et produits dérivés : 30/01/2024 (30 mois)",
+          "nouveau": false
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3168 — Professions de la photographie",
+          "detail": "IDCC 3168 — Professions de la photographie : 15/02/2024 (29 mois)",
           "nouveau": true
         },
         {
           "categorie": "grille-ancienne",
           "gravite": "basse",
-          "titre": "IDCC 3168 — ?",
-          "detail": "IDCC 3168 — ? : 15/02/2024 (29 mois)",
-          "nouveau": true
-        },
-        {
-          "categorie": "grille-ancienne",
-          "gravite": "basse",
-          "titre": "IDCC 2089 — ?",
-          "detail": "IDCC 2089 — ? : 11/07/2024 (24 mois)",
+          "titre": "IDCC 2089 — Industrie des panneaux à base de bois",
+          "detail": "IDCC 2089 — Industrie des panneaux à base de bois : 11/07/2024 (24 mois)",
           "nouveau": true
         },
         {
@@ -654,8 +654,8 @@
         {
           "categorie": "grille-ancienne",
           "gravite": "basse",
-          "titre": "IDCC 1801 — ?",
-          "detail": "IDCC 1801 — ? : 12/12/2024 (19 mois)",
+          "titre": "IDCC 1801 — Sociétés d'assistance",
+          "detail": "IDCC 1801 — Sociétés d'assistance : 12/12/2024 (19 mois)",
           "nouveau": true
         },
         {
@@ -759,15 +759,7 @@
     {
       "id": "guide",
       "titre": "Guide SEO",
-      "alertes": [
-        {
-          "categorie": "convention-perimee-sans-mention",
-          "gravite": "moyenne",
-          "titre": "hotellerie-chaine-heures-supplementaires.html : cite IDCC 800, fusionnée, sans le dire",
-          "detail": "Reprise par « Hôtels Cafés Restaurants ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
-          "nouveau": false
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "citations",
@@ -860,6 +852,12 @@
       "id": "contenu",
       "titre": "Contenu des articles cités",
       "module": "contenu-articles",
+      "alertes": []
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
       "alertes": []
     }
   ]

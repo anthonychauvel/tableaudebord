@@ -30,7 +30,8 @@ import re
 CIT_IDCC = re.compile(r"IDCC\s+(?:n°\s*)?(\d{2,5})")
 MENTION_HISTORIQUE = re.compile(
     r"fusion|repris par|historique|n'existe plus|a cess[ée]|"
-    r"ancienne convention|convention abrog[ée]e|ne s'applique plus",
+    r"ancienne convention|convention abrog[ée]e|ne s'applique plus|"
+    r"absorb[ée]e?",
     re.I)
 
 

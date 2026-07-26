@@ -22,6 +22,7 @@ import glob
 import importlib.util
 import json
 import os
+import re
 
 
 def charger_module(chemin):
@@ -46,6 +47,12 @@ def main():
     data = json.load(open(os.path.join(gp, "ccn-data.json"), encoding="utf-8"))
     grilles = data["grilles"]
 
+    # Même garde-fou que dans verifier-fraicheur.py : une CCN fusionnée vers
+    # une autre qui a déjà une vraie grille n'est pas "à créer".
+    s_idx = open(os.path.join(gp, "index.html"), encoding="utf-8", errors="replace").read()
+    mf = re.search(r"const CCN_FUSIONS=(\{.*?\});", s_idx, re.S)
+    fusions = json.loads(mf.group(1)) if mf else {}
+
     resultat = {"module": "grilles-ccn", "alertes": []}
 
     for chemin in sorted(glob.glob(os.path.join(args.fonds, "output", "ccn", "*.json"))):
@@ -67,6 +74,9 @@ def main():
 
         g = grilles.get(idcc)
         if not g:
+            cible = fusions.get(idcc)
+            if cible and grilles.get(str(cible[0])):
+                continue
             resultat["alertes"].append({
                 "categorie": "grille-a-creer",
                 "gravite": "basse",

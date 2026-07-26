@@ -1,5 +1,5 @@
 {
-  "genere": "2026-07-26T16:14:54.035469+00:00",
+  "genere": "2026-07-26T16:21:54.554320+00:00",
   "exceptions_appliquees": 1,
   "nouvelles_alertes": 0,
   "sections": [
@@ -894,20 +894,6 @@
           "titre": "Onglet « Nos sources » : en ligne",
           "detail": "Marqueur « suivi-public.json » trouvé dans GrillePaye/index.html.",
           "nouveau": false
-        },
-        {
-          "categorie": "lien-interne-casse",
-          "gravite": "moyenne",
-          "titre": "outils/outils.html : lien vers « menu.html » introuvable",
-          "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
-          "nouveau": false
-        },
-        {
-          "categorie": "lien-interne-casse",
-          "gravite": "moyenne",
-          "titre": "outils/outils.html : lien vers « mentions-legales.html » introuvable",
-          "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
-          "nouveau": false
         }
       ]
     },
@@ -948,20 +934,6 @@
           "gravite": "moyenne",
           "titre": "R351-12 (CSS) : le fonds l'a tenté, Légifrance n'a rien renvoyé — vérifier que le numéro cité est correct",
           "detail": "Cité dans module-retraite.html.",
-          "nouveau": false
-        },
-        {
-          "categorie": "lien-interne-casse",
-          "gravite": "moyenne",
-          "titre": "outils.html : lien vers « mentions-legales.html » introuvable",
-          "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
-          "nouveau": false
-        },
-        {
-          "categorie": "lien-interne-casse",
-          "gravite": "moyenne",
-          "titre": "outils.html : lien vers « menu.html » introuvable",
-          "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
           "nouveau": false
         }
       ]

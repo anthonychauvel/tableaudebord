@@ -1,0 +1,10 @@
+[
+  {
+    "_exemple": "Copie ce bloc et adapte-le pour ignorer une alerte que tu as déjà vérifiée toi-même.",
+    "_categorie_possible": "grille-perimee, grille-a-creer, article-abroge-ecosysteme, citation-orpheline, etc. — copie exactement la 'categorie' vue dans donnees.json",
+    "categorie": "grille-perimee",
+    "cle": "IDCC 3250",
+    "note": "Grille en valeur de point, annexe non extraite — connu, pas une vraie alerte.",
+    "date": "2026-07-26"
+  }
+]

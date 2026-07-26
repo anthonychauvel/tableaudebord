@@ -1,0 +1,58 @@
+name: Régénérer les données de veille
+
+# Après chaque run de l'aspirateur (lundi/jeudi) et du mercredi de vérification
+# des grilles : régénère donnees.json à partir des 3 dépôts, et le commit ici.
+# Lançable aussi manuellement depuis l'app GitHub sur iPhone.
+on:
+  schedule:
+    - cron: "0 9 * * 1,3,4"   # lundi, mercredi, jeudi à 9h UTC — après les autres runs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer ce dépôt (veille)
+        uses: actions/checkout@v4
+
+      - name: Récupérer l'application
+        uses: actions/checkout@v4
+        with:
+          repository: tonytonic/hs
+          ref: Android-cloudfare-production
+          path: _hs
+
+      - name: Récupérer le fonds (droit)
+        uses: actions/checkout@v4
+        with:
+          repository: anthonychauvel/droit
+          path: _droit
+
+      - name: Récupérer le guide
+        uses: actions/checkout@v4
+        with:
+          repository: tonytonic/Guide
+          path: _guide
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Construire donnees.json
+        run: |
+          cd scripts
+          python3 construire-donnees.py \
+            --hs ../_hs --droit ../_droit --guide ../_guide \
+            --out ../donnees.json
+
+      - name: Committer si les données ont changé
+        run: |
+          git config user.name "veille-bot"
+          git config user.email "veille-bot@users.noreply.github.com"
+          git add donnees.json sw.js
+          git diff --cached --quiet && echo "Aucun changement." || \
+            git commit -m "Données de veille — $(date -u +%Y-%m-%d\ %H:%M) UTC"
+          git push

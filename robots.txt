@@ -1,0 +1,3 @@
+# Outil personnel de traçabilité — jamais destiné à un public, à ne jamais indexer.
+User-agent: *
+Disallow: /

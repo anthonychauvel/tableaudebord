@@ -1,0 +1,15 @@
+{
+  "name": "Veille — tableau de bord perso",
+  "short_name": "Veille",
+  "description": "Alertes de traçabilité privées : grilles CCN, MonLegiTexte, modules, outils",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0D1116",
+  "theme_color": "#0D1116",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

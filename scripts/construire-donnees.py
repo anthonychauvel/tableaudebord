@@ -205,6 +205,16 @@ def main():
     sections.append({"id": "contenu", "titre": "Contenu des articles cités",
         **lancer("verifier-contenu-articles.py", contenu_args)})
 
+    # Changements de fichiers : constat neutre, pas un jugement -- signale
+    # tout ce qui a changé depuis le dernier run, app + guide + MonLegiTexte
+    # confondus, que ce soit voulu ou non. Empreinte dans son propre fichier.
+    changements_args = ["--hs", args.hs,
+                         "--empreintes", os.path.join(os.path.dirname(args.out), "empreintes-fichiers.json")]
+    if args.guide:
+        changements_args += ["--guide", args.guide]
+    sections.append({"id": "changements", "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+        **lancer("verifier-changements-fichiers.py", changements_args)})
+
     # Exceptions manuelles : un fichier que TOI seul édites (directement sur
     # GitHub, pas par ce script) pour dire "celle-ci, je l'ai déjà vérifiée,
     # arrête de me la remontrer". Sans lui, chaque run réaffiche indéfiniment

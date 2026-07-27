@@ -293,5 +293,17 @@ def main():
         if nouvelle:
             print(f"sw.js : cache renouvelé -> veille-perso-{nouvelle}")
 
+    # Données de consultation (majoration, contingent, source) -- pas des
+    # alertes, un fichier séparé. Node, pas Python : besoin de charger le
+    # VRAI fichier de règles de l'app pour que ça ne puisse jamais diverger
+    # de son vrai comportement.
+    chemin_regles = os.path.join(os.path.dirname(args.out), "ccn-regles.json")
+    r = subprocess.run(
+        ["node", os.path.join(ICI, "extraire-regles-ccn.js"), "--hs", args.hs, "--out", chemin_regles],
+        capture_output=True, text=True)
+    print(f"--- extraire-regles-ccn.js ---\n{r.stdout.strip()}")
+    if r.returncode != 0:
+        print(f"ÉCHEC extraire-regles-ccn.js : {r.stderr.strip()}", file=sys.stderr)
+
 if __name__ == "__main__":
     main()

@@ -85,7 +85,7 @@ def main():
     # Citations du guide + des 8 modules : pas de code explicite, on teste
     # les deux corpus (comme verifier-citations-ecosysteme.py le fait déjà).
     citations_texte_brut = {}
-    for nom, rel in vce.MODULES.items():
+    for nom, rel in vce.decouvrir_modules(args.hs).items():
         chemin = os.path.join(args.hs, rel)
         for art in vce.citations_fichier(chemin):
             citations_texte_brut.setdefault(art, []).append(("module", nom))

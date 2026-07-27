@@ -27,13 +27,23 @@ import tempfile
 
 SCRIPT_INLINE = re.compile(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>', re.S | re.I)
 
-# Fichiers à la racine de l'app, en plus des modules et des outils.
-RACINE = ["index.html", "menu.html", "outils.html", "mentions-legales.html",
-          "nouveautes.html", "privacy.html", "taiko.html"]
-MODULES = ["heures/index.html", "paye/index.html", "fox/index.html",
-           "module4/index.html", "module5/index.html", "module6/index.html",
-           "module7/index.html"]
 AUTRES = ["GrillePaye/index.html"]
+
+
+def decouvrir_cibles_racine_et_modules(racine_hs):
+    """Fichiers .html à la racine + dossiers-module (dossier + index.html,
+    sauf GrillePaye, déjà couvert séparément par AUTRES) -- aucune liste à
+    tenir à jour, un nouveau fichier racine ou un nouveau module apparaît
+    tout seul au run suivant."""
+    cibles = []
+    for nom in sorted(os.listdir(racine_hs)):
+        chemin = os.path.join(racine_hs, nom)
+        if os.path.isfile(chemin) and nom.endswith(".html"):
+            cibles.append((nom, "racine"))
+        elif os.path.isdir(chemin) and nom != "GrillePaye":
+            if os.path.isfile(os.path.join(chemin, "index.html")):
+                cibles.append((f"{nom}/index.html", "module"))
+    return cibles
 
 
 def verifier_fichier(chemin):
@@ -74,8 +84,7 @@ def main():
 
     resultat = {"module": "syntaxe-js", "alertes": []}
 
-    cibles = [(nom, "racine") for nom in RACINE]
-    cibles += [(nom, "module") for nom in MODULES]
+    cibles = decouvrir_cibles_racine_et_modules(args.hs)
     cibles += [(nom, "app") for nom in AUTRES]
     cibles += [(os.path.relpath(p, args.hs), "outil")
                for p in sorted(glob.glob(os.path.join(args.hs, "outils", "*.html")))]

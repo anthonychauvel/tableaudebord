@@ -25,16 +25,25 @@ import re
 
 CIT_TEXTE = re.compile(r"\b([LRD]\d{3,4}-\d{1,3}(?:-\d+)?)\b")
 
-MODULES = {
-    "heures": "heures/index.html",
-    "paye": "paye/index.html",
-    "fox": "fox/index.html",
-    "module4": "module4/index.html",
-    "module5": "module5/index.html",
-    "module6": "module6/index.html",
-    "module7": "module7/index.html",
-    "taiko": "taiko.html",
-}
+def decouvrir_modules(racine_hs):
+    """Un dossier à la racine de l'app avec un index.html EST un module --
+    sauf GrillePaye, la seule exception connue. Pas de liste à tenir à jour :
+    un nouveau module (dossier + index.html) apparaît tout seul au run
+    suivant. taiko.html s'ajoute à part, un fichier racine plutôt qu'un
+    dossier -- inclus seulement s'il existe (pas encore déployé partout).
+    """
+    EXCLUS = {"GrillePaye"}
+    modules = {}
+    for nom in sorted(os.listdir(racine_hs)):
+        chemin_dossier = os.path.join(racine_hs, nom)
+        if nom in EXCLUS or not os.path.isdir(chemin_dossier):
+            continue
+        chemin_index = os.path.join(nom, "index.html")
+        if os.path.isfile(os.path.join(racine_hs, chemin_index)):
+            modules[nom] = chemin_index
+    if os.path.isfile(os.path.join(racine_hs, "taiko.html")):
+        modules["taiko"] = "taiko.html"
+    return modules
 
 
 def citations_fichier(chemin):
@@ -74,7 +83,7 @@ def main():
     citations = {}
     n_pages_guide = 0
 
-    for nom, rel in MODULES.items():
+    for nom, rel in decouvrir_modules(args.hs).items():
         chemin = os.path.join(args.hs, rel)
         for art in citations_fichier(chemin):
             citations.setdefault(art, []).append(("module", nom))

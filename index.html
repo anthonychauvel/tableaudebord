@@ -92,15 +92,26 @@ body{
   <div class="sub" id="hdrSub">Chargement…</div>
 </div>
 
-<div style="padding:0 18px 10px;">
+<div style="padding:0 18px 10px;display:flex;gap:8px;flex-wrap:wrap;">
   <button id="btnHistorique" onclick="basculerHistorique()"
     style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
     font-size:12px;padding:7px 13px;border-radius:10px;">📜 Historique</button>
+  <button id="btnReglesCCN" onclick="basculerReglesCCN()"
+    style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
+    font-size:12px;padding:7px 13px;border-radius:10px;">📋 Règles CCN</button>
 </div>
 
 <div class="resume" id="resume"></div>
 <div id="sections"></div>
 <div class="pied" id="pied"></div>
+
+<div id="vueReglesCCN" style="display:none;padding:0 18px;">
+  <input id="rechercheCCN" type="text" placeholder="IDCC, nom, secteur…" oninput="filtrerReglesCCN()"
+    style="width:100%;box-sizing:border-box;background:var(--ink3);border:1px solid var(--edge);
+    color:var(--txt);font-size:14px;padding:11px 13px;border-radius:12px;margin:14px 0 10px;">
+  <div id="compteurReglesCCN" style="font-size:11.5px;color:var(--txt2);margin-bottom:8px;"></div>
+  <div id="listeReglesCCN"></div>
+</div>
 
 <div id="vueHistorique" style="display:none;padding:0 18px;">
   <div id="listeHistorique"></div>
@@ -271,6 +282,8 @@ function basculerHistorique(){
   document.getElementById('vueHistorique').style.display = enHistorique ? 'none' : 'block';
   document.getElementById('resume').style.display = enHistorique ? 'flex' : 'none';
   document.getElementById('sections').style.display = enHistorique ? 'block' : 'none';
+  document.getElementById('vueReglesCCN').style.display = 'none';
+  document.getElementById('btnReglesCCN').textContent = '📋 Règles CCN';
   document.getElementById('btnHistorique').textContent = enHistorique ? '📜 Historique' : '← Retour au run actuel';
   if(!enHistorique && !historiqueCharge){
     historiqueCharge = true;
@@ -329,6 +342,72 @@ async function afficherDetailHistorique(fichier){
           </div>`).join('')}
         </div></div>`;
     }).join('');
+}
+
+// Règles CCN : consultation, pas des alertes -- pas de plier/déplier, une
+// recherche et une liste, comme l'historique.
+let reglesCCN = null;
+
+function basculerReglesCCN(){
+  const vue = document.getElementById('vueReglesCCN');
+  const enVue = vue.style.display !== 'none';
+  vue.style.display = enVue ? 'none' : 'block';
+  document.getElementById('resume').style.display = enVue ? 'flex' : 'none';
+  document.getElementById('sections').style.display = enVue ? 'block' : 'none';
+  document.getElementById('vueHistorique').style.display = 'none';
+  document.getElementById('btnHistorique').textContent = '📜 Historique';
+  document.getElementById('btnReglesCCN').textContent = enVue ? '📋 Règles CCN' : '← Retour au run actuel';
+  if(!enVue && !reglesCCN){
+    chargerReglesCCN();
+  }
+}
+
+async function chargerReglesCCN(){
+  const conteneur = document.getElementById('listeReglesCCN');
+  try{
+    const r = await fetch('ccn-regles.json', {cache:'no-cache'});
+    const d = await r.json();
+    reglesCCN = d.entrees;
+    document.getElementById('compteurReglesCCN').textContent =
+      `${d.entrees.length} conventions — source app v${d.versionSource}`;
+    filtrerReglesCCN();
+    document.getElementById('rechercheCCN').focus();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Données indisponibles pour l\'instant.</div>';
+  }
+}
+
+function ligneTaux(e){
+  let s = `${e.taux1}% (à partir de la ${e.palier1}e h)`;
+  if(e.taux_inter != null) s += ` → ${e.taux_inter}% (à partir de la ${e.palier_inter}e h)`;
+  s += ` → ${e.taux2}%`;
+  return s;
+}
+
+function filtrerReglesCCN(){
+  if(!reglesCCN) return;
+  const q = document.getElementById('rechercheCCN').value.trim().toLowerCase();
+  let resultats = reglesCCN;
+  if(q){
+    resultats = reglesCCN.filter(e =>
+      String(e.idcc).includes(q) ||
+      (e.nom||'').toLowerCase().includes(q) ||
+      (e.secteur||'').toLowerCase().includes(q));
+  }
+  const conteneur = document.getElementById('listeReglesCCN');
+  const AFFICHES = resultats.slice(0, 40);
+  conteneur.innerHTML = AFFICHES.map(e => `
+    <div class="alerte">
+      <div class="t">${esc(e.nom)} <span style="color:var(--txt2);font-weight:400">— IDCC ${e.idcc}</span></div>
+      <div class="d">
+        Majoration HS : ${esc(ligneTaux(e))}<br>
+        Contingent annuel : ${e.contingent}h · Seuil : ${e.seuil}h/sem
+        ${e.notes ? `<div class="conseil">📖 ${esc(e.notes)}</div>` : ''}
+      </div>
+    </div>`).join('') || '<div class="vide">Aucune convention ne correspond.</div>';
+  if(resultats.length > AFFICHES.length){
+    conteneur.innerHTML += `<div class="vide">… et ${resultats.length - AFFICHES.length} de plus — précise la recherche.</div>`;
+  }
 }
 
 charger();

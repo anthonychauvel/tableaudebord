@@ -1,7 +1,7 @@
 {
-  "genere": "2026-07-26T19:44:36.701220+00:00",
+  "genere": "2026-07-27T11:08:13.111120+00:00",
   "exceptions_appliquees": 1,
-  "nouvelles_alertes": 0,
+  "nouvelles_alertes": 99,
   "sections": [
     {
       "id": "grilles",
@@ -43,6 +43,13 @@
           "nouveau": false
         },
         {
+          "categorie": "grille-perimee",
+          "gravite": "moyenne",
+          "titre": "IDCC 1580 : grille dépassée de 84 jours",
+          "detail": "Accord du 26 mars 2026 relatif aux salaires minima conventionnels — Montant des rémunérations mensuelles minimales À compter du 1er janvier 2026, les rémunérations mensuelles minimales sont définies conformément au tableau ci-après : Niveau Échelon Rémunération mensuelle minimale 1 1 1 823,03 € 2 1 836 € 2 … · Montant des rémunérations annuelles minimales Les rémunérations annuelles minimales pour l'année 2026 sont définies conformément au tableau ci-après : Niveaux 4 à 6 Niveau Échelon Rémunération annuelle minimale 4 1 23 177 € 2 23 814 € 3 25 …",
+          "nouveau": true
+        },
+        {
           "categorie": "grille-a-creer",
           "gravite": "basse",
           "titre": "IDCC 1605 : clause au fonds, aucune grille dans l'app",
@@ -67,7 +74,7 @@
           "categorie": "grille-a-creer",
           "gravite": "basse",
           "titre": "IDCC 1671 : clause au fonds, aucune grille dans l'app",
-          "detail": "Avenant n° 40 du 15 octobre 2009 relatif à la grille des coefficients (15/10/2009)",
+          "detail": "Annexe 1 : Classification (Avenant n° 75 du 9 décembre 2025 relatif à l'actualisation de l'annexe 1 « Classification » et de l'annexe 2 « Coefficients minima ») (09/12/2025)",
           "nouveau": false
         },
         {
@@ -421,6 +428,13 @@
           "nouveau": false
         },
         {
+          "categorie": "grille-perimee",
+          "gravite": "haute",
+          "titre": "IDCC 733 : grille dépassée de 448 jours",
+          "detail": "Avenant n° 108 du 9 mars 2026 relatif aux salaires minima des employés, des agents de maîtrise et des cadres — aucun montant repérable, ouvrir la clause",
+          "nouveau": true
+        },
+        {
           "categorie": "grille-a-creer",
           "gravite": "basse",
           "titre": "IDCC 953 : clause au fonds, aucune grille dans l'app",
@@ -678,14 +692,6 @@
       "titre": "8 modules",
       "alertes": [
         {
-          "categorie": "module-absent-de-prod",
-          "gravite": "basse",
-          "module": "taiko",
-          "titre": "taiko : pas sur la branche de production",
-          "detail": "« taiko.html » absent de cette branche. Probablement encore en bac à sable — à vérifier seulement si ce n'est pas le cas.",
-          "nouveau": false
-        },
-        {
           "categorie": "livrable-session",
           "gravite": "basse",
           "titre": "Mode sobre du menu : pas encore en ligne",
@@ -759,6 +765,692 @@
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
       "alertes": []
+    },
+    {
+      "id": "age",
+      "titre": "Âge de la référence (3 mois et 12 mois)",
+      "module": "age-reference",
+      "alertes": [
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 18 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 15/01/2026 (193 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 29 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 43 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 44 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 112 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 30 du 22 janvier 2026 à l'annexe I ter de la convention collective relative aux (22/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 176 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 200 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 275 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/11/2025 (268 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 292 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 413 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/07/2022 (1487 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 454 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/12/2025 (238 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 478 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/03/2025 (513 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 489 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/05/2025 (452 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 493 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/02/2026 (176 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 31 du 13 février 2026 relatif aux salaires minima conventionnels (13/02/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 500 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 538 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/05/2025 (452 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Accord du 27 novembre 2025 relatif aux salaires garantis et aux autres éléments de rémunér (27/11/2025) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 573 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 17 mars 2026 relatif aux salaires (17/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 733 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 16/12/2024 (588 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Avenant n° 108 du 9 mars 2026 relatif aux salaires minima des employés, des agents de maît (09/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 759 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant du 13 janvier 2026 relatif aux barèmes nationaux de salaires minima (13/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 787 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 843 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Île-de-France Avenant n° 61 du 22 janvier 2026 relatif aux salaires au 1er février 2026 (22/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 897 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 19/02/2026 (158 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1307 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/11/2024 (633 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Avenant n° 70 du 12 novembre 2024 relatif aux salaires minima (12/11/2024) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1424 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 18 février 2026 relatif à l'évolution du salaire national minimum et des salaire (18/02/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1431 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1480 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/07/2025 (391 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Protocole d'accord du 6 novembre 2025 relatif aux minima garantis des journalistes profess (06/11/2025) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1487 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1501 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 05/06/2025 (417 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1505 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1512 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 51 du 12 janvier 2026 relatif aux salaires minima au 1er janvier 2026 (12/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1513 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 03/02/2026 (174 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1518 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1534 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/02/2026 (176 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 100 du 12 février 2026 relatif à la revalorisation des salaires minima et de la (12/02/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1536 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 2026/1 du 3 mars 2026 relatif aux salaires minima au 1er mars 2026 (03/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1557 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/03/2025 (513 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Accord du 4 mars 2025 relatif aux salaires minima conventionnels (grille générale) (04/03/2025) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1580 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 26 mars 2026 relatif aux salaires minima conventionnels (26/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1586 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/02/2026 (176 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1589 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 18/12/2025 (221 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1596 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé Occitanie Accord du 13 février 2026 relatif aux salaires au 1er mai 20 (13/02/2026) -- déjà couvert par une région existante, ce n'est pas la référence elle-même qui a besoin de ce texte précis.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1597 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé Centre-Val de Loire Avenant du 10 avril 2026 relatif aux salaires mini (10/04/2026) -- déjà couvert par une région existante, ce n'est pas la référence elle-même qui a besoin de ce texte précis.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1606 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1607 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/04/2026 (117 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1666 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Pas de fichier fonds pour cet IDCC.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1702 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Île-de-France Accord du 16 janvier 2026 relatif aux salaires minima hiérarchiques pour 202 (16/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1794 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/12/2025 (238 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1801 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 12/12/2024 (592 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1875 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1880 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 19/03/2026 (130 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1909 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 26/01/2026 (182 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1922 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/10/2025 (299 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1930 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 09/02/2026 (168 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 1951 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 19/06/2025 (403 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1978 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 10/03/2026 (139 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1982 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 20/02/2026 (157 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 1987 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 5 mars 2026 relatif aux salaires minima horaires, aux primes d'ancienneté, de va (05/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2002 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant du 11 février 2026 relatif aux barèmes conventionnels de salaires au 1er janvier 2 (11/02/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2021 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/04/2026 (117 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 2046 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 24/10/2024 (641 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Avenant n° 2025-02 du 22 janvier 2025 relatif à la durée minimale d'exercice de l'emploi e (22/01/2025) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 2089 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 11/07/2024 (746 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 2147 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 10/06/2025 (412 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2150 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 07/01/2026 (201 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2156 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2198 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/04/2026 (117 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2205 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 19/02/2026 (158 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 2219 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 20/06/2025 (402 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 2247 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/07/2025 (391 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2257 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 07/01/2026 (201 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2264 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2272 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 20/02/2026 (157 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2332 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé Bretagne Accord du 10 février 2026 relatif aux salaires et à la valeur (10/02/2026) -- déjà couvert par une région existante, ce n'est pas la référence elle-même qui a besoin de ce texte précis.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2335 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2420 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2494 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 31/03/2026 (118 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2511 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2528 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 18 février 2026 relatif aux salaires minima à partir du 1er janvier 2026 dans le (18/02/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2596 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2609 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé Occitanie Accord du 13 février 2026 relatif aux salaires minimaux au 1 (13/02/2026) -- déjà couvert par une région existante, ce n'est pas la référence elle-même qui a besoin de ce texte précis.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2614 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Île-de-France Accord du 16 janvier 2026 relatif aux salaires minima hiérarchiques pour 202 (16/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2728 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/04/2026 (117 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 2972 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3016 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3017 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3043 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/04/2026 (117 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3109 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Accord du 5 mars 2026 relatif aux salaires minima horaires, aux primes d'ancienneté, de va (05/03/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 3168 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 15/02/2024 (893 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3212 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 3218 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/09/2024 (694 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3220 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds a trouvé plus récent : Avenant n° 1 du 21 janvier 2026 relatif à la revalorisation des barèmes de rémunération mi (21/01/2026) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3230 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/12/2025 (238 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 3233 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 3236 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/04/2025 (482 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé plus récent : Avenant du 16 avril 2025 relatif aux salaires minima mensuels au 1er avril 2025 (16/04/2025) — c'est probablement celui-ci qui manque à la référence.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 3249 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/07/2025 (391 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds a trouvé Île-de-France Accord du 19 mars 2026 relatif aux salaires minimaux au  (19/03/2026) -- déjà couvert par une région existante, ce n'est pas la référence elle-même qui a besoin de ce texte précis.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-12-mois",
+          "gravite": "moyenne",
+          "titre": "IDCC 3251 : la référence affiche « Plus de 12 mois » dans l'app",
+          "detail": "Date de référence 01/04/2025 (482 jours) — c'est exactement le bandeau que voient les utilisateurs qui restent sur l'onglet Référence, qu'une région soit à jour ou non. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 5730 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Pas de fichier fonds pour cet IDCC.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 7004 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/01/2026 (207 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 7025 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Le fonds n'a rien de plus récent que la référence actuelle -- personne n'a renégocié depuis, pas une correction en attente de ta part.",
+          "nouveau": true
+        },
+        {
+          "categorie": "reference-plus-3-mois",
+          "gravite": "basse",
+          "titre": "IDCC 25960 : référence de plus de 3 mois — signal précoce",
+          "detail": "Date de référence 01/03/2026 (148 jours) — pas encore ce que l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour vérifier en amont plutôt que d'attendre. Pas de fichier fonds pour cet IDCC.",
+          "nouveau": true
+        }
+      ]
     }
   ]
 }

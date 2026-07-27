@@ -92,9 +92,20 @@ body{
   <div class="sub" id="hdrSub">Chargement…</div>
 </div>
 
+<div style="padding:0 18px 10px;">
+  <button id="btnHistorique" onclick="basculerHistorique()"
+    style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
+    font-size:12px;padding:7px 13px;border-radius:10px;">📜 Historique</button>
+</div>
+
 <div class="resume" id="resume"></div>
 <div id="sections"></div>
 <div class="pied" id="pied"></div>
+
+<div id="vueHistorique" style="display:none;padding:0 18px;">
+  <div id="listeHistorique"></div>
+  <div id="detailHistorique"></div>
+</div>
 
 </div><!-- #app -->
 
@@ -248,6 +259,76 @@ function toggleSection(i){
   const sec = document.getElementById('sec-'+i);
   if(!sec) return;
   if(sec.classList.contains('open')) fermerSection(i); else ouvrirSection(i);
+}
+
+// Historique : une vue séparée, plus simple que la vue courante (pas de
+// plier/déplier par section) -- consulter un instantané passé est un besoin
+// de référence ponctuelle, pas une interaction quotidienne.
+let historiqueCharge = false;
+
+function basculerHistorique(){
+  const enHistorique = document.getElementById('vueHistorique').style.display !== 'none';
+  document.getElementById('vueHistorique').style.display = enHistorique ? 'none' : 'block';
+  document.getElementById('resume').style.display = enHistorique ? 'flex' : 'none';
+  document.getElementById('sections').style.display = enHistorique ? 'block' : 'none';
+  document.getElementById('btnHistorique').textContent = enHistorique ? '📜 Historique' : '← Retour au run actuel';
+  if(!enHistorique && !historiqueCharge){
+    historiqueCharge = true;
+    chargerListeHistorique();
+  }
+}
+
+async function chargerListeHistorique(){
+  const conteneur = document.getElementById('listeHistorique');
+  let index;
+  try{
+    const r = await fetch('historique/index.json', {cache:'no-cache'});
+    index = await r.json();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Aucun historique disponible pour l\'instant -- il se remplit à chaque run.</div>';
+    return;
+  }
+  index = index.slice().reverse(); // le plus récent en premier
+  conteneur.innerHTML = index.map((run, i) => {
+    const dt = new Date(run.genere);
+    const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    return `<div class="alerte" style="cursor:pointer" onclick="afficherDetailHistorique('${run.fichier}')">
+      <div class="t">${date}
+        ${run.nouvelles_alertes>0 ? `<span class="badge-nouveau">${run.nouvelles_alertes} NOUVEAU</span>` : ''}
+      </div>
+      <div class="d">${run.total} alerte(s) — ${run.par_gravite.haute} haute, ${run.par_gravite.moyenne} moyenne, ${run.par_gravite.basse} basse</div>
+    </div>`;
+  }).join('') || '<div class="vide">Aucun run enregistré pour l\'instant.</div>';
+}
+
+async function afficherDetailHistorique(fichier){
+  const conteneur = document.getElementById('detailHistorique');
+  conteneur.innerHTML = '<div class="vide">Chargement…</div>';
+  let d;
+  try{
+    const r = await fetch('historique/' + fichier, {cache:'no-cache'});
+    d = await r.json();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Impossible de charger cet instantané.</div>';
+    return;
+  }
+  const dt = new Date(d.genere);
+  const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  conteneur.innerHTML = `<div style="margin:14px 0 6px;font-size:13px;color:var(--txt2)">
+      Instantané du ${date} — <span onclick="document.getElementById('detailHistorique').innerHTML=''" style="text-decoration:underline;cursor:pointer">fermer</span>
+    </div>` +
+    d.sections.map(s => {
+      const alertes = s.alertes || [];
+      if(!alertes.length) return '';
+      return `<div class="section open"><div class="section-hd" style="cursor:default">
+          <div><div class="titre">${esc(LIB[s.id]||s.titre)}</div><div class="compte">${alertes.length} alerte(s)</div></div>
+        </div><div class="corps" style="max-height:none">
+          ${alertes.map(a => `<div class="alerte">
+            <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}</div>
+            <div class="d">${esc(a.detail||'')}</div>
+          </div>`).join('')}
+        </div></div>`;
+    }).join('');
 }
 
 charger();

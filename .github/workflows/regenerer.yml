@@ -3,9 +3,13 @@ name: Régénérer les données de veille
 # Après chaque run de l'aspirateur (lundi/jeudi) et du mercredi de vérification
 # des grilles : régénère donnees.json à partir des 3 dépôts, et le commit ici.
 # Lançable aussi manuellement depuis l'app GitHub sur iPhone.
+#
+# Minute décalée à :07, pas :00 -- même raison que côté aspirateur.yml : GitHub
+# peut abandonner en silence un run programmé pile à l'heure ronde en cas de
+# forte charge, sans email ni trace nulle part. Repéré le 27/07/2026.
 on:
   schedule:
-    - cron: "0 9 * * 1,3,4"   # lundi, mercredi, jeudi à 9h UTC — après les autres runs
+    - cron: "7 9 * * 1,3,4"   # lundi, mercredi, jeudi à 9h07 UTC — après les autres runs
   workflow_dispatch:
 
 permissions:

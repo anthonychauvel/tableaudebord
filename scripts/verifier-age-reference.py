@@ -27,6 +27,7 @@ import argparse
 import importlib.util
 import json
 import os
+import re
 from datetime import datetime, timezone
 
 
@@ -89,6 +90,13 @@ def croisement_fonds(vf, fonds_racine, idcc, g, d_ref):
              f"manque à la référence.")
 
 
+def charger_fusions(racine_hs):
+    chemin = os.path.join(racine_hs, "GrillePaye", "index.html")
+    s = open(chemin, encoding="utf-8", errors="replace").read()
+    m = re.search(r"const CCN_FUSIONS=(\{.*?\});", s, re.S)
+    return json.loads(m.group(1)) if m else {}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hs", required=True, help="Racine du dépôt de l'application")
@@ -98,6 +106,7 @@ def main():
     args = ap.parse_args()
 
     vf = charger_verifier_fraicheur() if args.fonds else None
+    fusions = charger_fusions(args.hs)
 
     chemin = os.path.join(args.hs, "GrillePaye", "ccn-data.json")
     d = json.load(open(chemin, encoding="utf-8"))
@@ -105,13 +114,21 @@ def main():
 
     resultat = {"module": "age-reference", "alertes": []}
     maintenant = datetime.now(timezone.utc).replace(tzinfo=None)
-    n_verifiees, n_ignorees_etat, n_sans_date = 0, 0, 0
+    n_verifiees, n_ignorees_etat, n_ignorees_fusion, n_sans_date = 0, 0, 0, 0
     n_plus_12, n_plus_3 = 0, 0
 
     for idcc, g in sorted(grilles.items(), key=lambda kv: int(kv[0])):
         st = g.get("st")
         if st in ("estimated", "national"):
             n_ignorees_etat += 1
+            continue
+        if idcc in fusions:
+            # Convention déjà fusionnée : sa référence est volontairement
+            # gelée à titre historique, jamais quelque chose qu'on va mettre
+            # à jour. L'app peut légitimement montrer les deux bandeaux
+            # (fusion + âge) à un utilisateur -- mais côté veille, ce n'est
+            # pas actionnable, donc pas la peine d'en reparler à chaque run.
+            n_ignorees_fusion += 1
             continue
         d_ref = date_de_grille(g.get("d"))
         if not d_ref:
@@ -146,7 +163,8 @@ def main():
         })
 
     print(f"{n_verifiees} grille(s) de référence vérifiée(s) "
-          f"({n_ignorees_etat} estimée(s)/nationale(s) ignorée(s), {n_sans_date} sans date).")
+          f"({n_ignorees_etat} estimée(s)/nationale(s), {n_ignorees_fusion} déjà fusionnée(s) "
+          f"ignorée(s), {n_sans_date} sans date).")
     print(f"{n_plus_12} de plus de 12 mois, {n_plus_3} entre 3 et 12 mois.")
     for a in resultat["alertes"][:15]:
         print(f"  {a['titre']}")

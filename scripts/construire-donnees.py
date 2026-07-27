@@ -246,6 +246,14 @@ def main():
     sections.append({"id": "changements", "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
         **lancer("verifier-changements-fichiers.py", changements_args)})
 
+    # Âge de la référence : reproduit le bandeau "Plus de 12 mois" que l'app
+    # montre elle-même aux utilisateurs -- indépendant de verifier-fraicheur.py
+    # (qui compare au fonds, pas à un seuil absolu), pour ne jamais perdre de
+    # vue ce qu'un utilisateur resté sur l'onglet Référence voit vraiment,
+    # même quand une région est à jour par ailleurs.
+    sections.append({"id": "age", "titre": "Référence : bandeau 12 mois (comme l'app)",
+        **lancer("verifier-age-reference.py", ["--hs", args.hs])})
+
     # Exceptions manuelles : un fichier que TOI seul édites (directement sur
     # GitHub, pas par ce script) pour dire "celle-ci, je l'ai déjà vérifiée,
     # arrête de me la remontrer". Sans lui, chaque run réaffiche indéfiniment

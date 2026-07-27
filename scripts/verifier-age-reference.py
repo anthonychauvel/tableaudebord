@@ -28,9 +28,19 @@ USAGE
     python3 verifier-age-reference.py --hs /chemin/vers/hs --json sortie.json
 """
 import argparse
+import glob
+import importlib.util
 import json
 import os
 from datetime import datetime, timezone
+
+
+def charger_verifier_fraicheur():
+    chemin = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verifier-fraicheur.py")
+    spec = importlib.util.spec_from_file_location("verifier_fraicheur", chemin)
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
 
 
 def date_de_grille(txt):
@@ -47,8 +57,12 @@ def date_de_grille(txt):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hs", required=True, help="Racine du dépôt de l'application")
+    ap.add_argument("--fonds", help="Dossier output/ccn du dépôt droit -- optionnel, "
+                     "enrichit chaque alerte avec ce que le fonds a trouvé de plus récent")
     ap.add_argument("--json", help="Écrire le résultat en JSON à ce chemin")
     args = ap.parse_args()
+
+    vf = charger_verifier_fraicheur() if args.fonds else None
 
     chemin = os.path.join(args.hs, "GrillePaye", "ccn-data.json")
     d = json.load(open(chemin, encoding="utf-8"))
@@ -70,13 +84,59 @@ def main():
         n_verifiees += 1
         age_jours = (maintenant - d_ref).days
         if age_jours > 365:
+            detail = (f"Date de référence {g.get('d')} ({age_jours} jours) — "
+                      f"c'est exactement le bandeau que voient les utilisateurs qui "
+                      f"restent sur l'onglet Référence, qu'une région soit à jour ou non.")
+
+            # Croisement avec le fonds : qu'a-t-il de plus récent pour cette CCN ?
+            # Sans ça, l'alerte dit juste "c'est vieux" sans dire quoi faire.
+            if vf is not None:
+                chemin_fonds = os.path.join(args.fonds, f"{idcc}.json")
+                if os.path.isfile(chemin_fonds):
+                    try:
+                        fonds_data = json.load(open(chemin_fonds, encoding="utf-8"))
+                        clauses = vf.clauses_salaire(fonds_data)
+                    except Exception:
+                        clauses = []
+                    if clauses:
+                        clauses.sort(key=lambda c: c[0], reverse=True)
+                        d_fonds, titre, _ = clauses[0]
+                        d_fonds_naive = d_fonds.replace(tzinfo=None) if d_fonds.tzinfo else d_fonds
+                        d_ref_naive = d_ref.replace(tzinfo=None)
+                        if d_fonds_naive > d_ref_naive:
+                            # Une région couvre-t-elle déjà ce que le fonds a trouvé ? Sinon
+                            # l'alerte suggérerait d'aller chercher un texte déjà présent,
+                            # juste pas sous l'onglet Référence.
+                            deja_couvert = False
+                            for region in (g.get("regions") or {}).values():
+                                d_region = date_de_grille(region.get("d"))
+                                if d_region:
+                                    d_region_naive = d_region.replace(tzinfo=None) if d_region.tzinfo else d_region
+                                    if d_region_naive >= d_fonds_naive:
+                                        deja_couvert = True
+                                        break
+                            if deja_couvert:
+                                detail += (f" Le fonds a trouvé {titre[:70]} ({d_fonds.strftime('%d/%m/%Y')}) "
+                                          f"-- déjà couvert par une région existante, ce n'est pas la "
+                                          f"référence elle-même qui a besoin de ce texte précis.")
+                            else:
+                                detail += (f" Le fonds a trouvé plus récent : {titre[:90]} "
+                                          f"({d_fonds.strftime('%d/%m/%Y')}) — c'est probablement "
+                                          f"celui-ci qui manque à la référence.")
+                        else:
+                            detail += (" Le fonds n'a rien de plus récent que la référence "
+                                      "actuelle — personne n'a renégocié depuis, pas une "
+                                      "correction en attente de ta part.")
+                    else:
+                        detail += " Le fonds n'a aucune clause salaire exploitable pour cette CCN."
+                else:
+                    detail += " Pas de fichier fonds pour cet IDCC."
+
             resultat["alertes"].append({
                 "categorie": "reference-plus-12-mois",
                 "gravite": "moyenne",
                 "titre": f"IDCC {idcc} : la référence affiche \u00ab Plus de 12 mois \u00bb dans l'app",
-                "detail": f"Date de référence {g.get('d')} ({age_jours} jours) — "
-                          f"c'est exactement le bandeau que voient les utilisateurs qui "
-                          f"restent sur l'onglet Référence, qu'une région soit à jour ou non.",
+                "detail": detail,
             })
 
     print(f"{n_verifiees} grille(s) de référence vérifiée(s) "

@@ -252,7 +252,7 @@ def main():
     # vue ce qu'un utilisateur resté sur l'onglet Référence voit vraiment,
     # même quand une région est à jour par ailleurs.
     sections.append({"id": "age", "titre": "Référence : bandeau 12 mois (comme l'app)",
-        **lancer("verifier-age-reference.py", ["--hs", args.hs])})
+        **lancer("verifier-age-reference.py", ["--hs", args.hs, "--fonds", os.path.join(args.droit, "output", "ccn")])})
 
     # Exceptions manuelles : un fichier que TOI seul édites (directement sur
     # GitHub, pas par ce script) pour dire "celle-ci, je l'ai déjà vérifiée,

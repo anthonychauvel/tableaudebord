@@ -123,6 +123,9 @@ def main():
                     or avant.get("dateDebut") != empr["dateDebut"])
         if a_change:
             lieux_txt = ", ".join(f"{t}:{n}" for t, n in lieux[:3])
+            lien = f"https://monlegitexte.heuressupfrance.workers.dev/?art={num}"
+            if code == "CSS":
+                lien += "&code=secu"
             resultat["alertes"].append({
                 "categorie": "contenu-article-modifie",
                 "gravite": "moyenne",
@@ -130,6 +133,7 @@ def main():
                 "detail": f"Toujours en vigueur, mais le contenu diffère de la dernière empreinte "
                           f"(version {avant.get('version')} -> {empr['version']}). "
                           f"Cité dans {lieux_txt} — à relire pour vérifier l'impact sur les calculs.",
+                "lien": lien,
             })
 
     # Fusionner les DEUX sources par clé (code:num) AVANT de traiter -- un

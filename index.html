@@ -124,7 +124,7 @@ body{
 const LIB = {grilles:'Grilles CCN', droit:'MonLegiTexte', modules:'8 modules',
              outils:'105 outils', guide:'Guide SEO', citations:'Citations juridiques',
              syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)',
-             contenu:'Contenu des articles', changements:'Fichiers modifiés'};
+             contenu:'Contenu des articles', changements:'Fichiers modifiés', age:'Référence 12 mois'};
 
 // Un conseil par CATÉGORIE, pas par alerte individuelle -- les mêmes sujets
 // reviennent, la correction typique aussi. Sert de mémoire courte : que faire
@@ -168,6 +168,7 @@ const CONSEILS = {
   'run-en-retard': "Le workflow ne s'est pas exécuté depuis longtemps -- vérifier qu'il est bien activé et programmé sur GitHub Actions.",
   'contenu-article-modifie': "Toujours en vigueur, mais le texte a changé depuis la dernière vérification -- ouvrir l'article sur Légifrance, comparer à ce que la logique de calcul suppose, ajuster si les seuils ou montants ont bougé.",
   'fichier-modifie': "Constat neutre -- vérifier que c'est un changement voulu (ta propre session de travail). Si tu ne reconnais pas ce changement, ouvrir le fichier et comparer à la version précédente sur GitHub.",
+  'reference-plus-12-mois': "L'app affiche déjà ce bandeau aux utilisateurs sur l'onglet Référence -- vérifier s'il existe un avenant plus récent (chercher dans le fonds ou sur Légifrance), ou si une région couvre déjà le besoin sans qu'il soit nécessaire de toucher la référence elle-même.",
 };
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}

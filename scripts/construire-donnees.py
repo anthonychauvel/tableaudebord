@@ -251,7 +251,7 @@ def main():
     # (qui compare au fonds, pas à un seuil absolu), pour ne jamais perdre de
     # vue ce qu'un utilisateur resté sur l'onglet Référence voit vraiment,
     # même quand une région est à jour par ailleurs.
-    sections.append({"id": "age", "titre": "Référence : bandeau 12 mois (comme l'app)",
+    sections.append({"id": "age", "titre": "Âge de la référence (3 mois et 12 mois)",
         **lancer("verifier-age-reference.py", ["--hs", args.hs, "--fonds", os.path.join(args.droit, "output", "ccn")])})
 
     # Exceptions manuelles : un fichier que TOI seul édites (directement sur

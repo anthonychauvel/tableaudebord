@@ -105,13 +105,44 @@ def marquer_nouveautes(sections, chemin_donnees_precedent):
 
 def sauver_historique(dossier_veille, sortie):
     """Un instantané complet à chaque run, jamais écrasé -- pour pouvoir
-    remonter et comparer n'importe quand, pas seulement au run d'avant."""
+    remonter et comparer n'importe quand, pas seulement au run d'avant.
+
+    Un hébergement statique (Cloudflare Pages, GitHub Pages) ne permet pas de
+    lister le contenu d'un dossier depuis le navigateur -- sans un index
+    explicite, le tableau de bord n'aurait aucun moyen de savoir quels
+    instantanés existent pour proposer de les consulter.
+    """
     dossier = os.path.join(dossier_veille, "historique")
     os.makedirs(dossier, exist_ok=True)
     horodatage = datetime.now(timezone.utc).strftime("%Y-%m-%d-%H%M%S")
-    chemin = os.path.join(dossier, f"{horodatage}.json")
+    nom_fichier = f"{horodatage}.json"
+    chemin = os.path.join(dossier, nom_fichier)
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(sortie, f, ensure_ascii=False, indent=2)
+
+    chemin_index = os.path.join(dossier, "index.json")
+    index = []
+    if os.path.isfile(chemin_index):
+        try:
+            index = json.load(open(chemin_index, encoding="utf-8"))
+        except Exception:
+            index = []
+    total = sum(len(s.get("alertes", [])) for s in sortie.get("sections", []))
+    par_gravite = {"haute": 0, "moyenne": 0, "basse": 0}
+    for s in sortie.get("sections", []):
+        for a in s.get("alertes", []):
+            if a.get("gravite") in par_gravite:
+                par_gravite[a["gravite"]] += 1
+    index.append({
+        "fichier": nom_fichier,
+        "genere": sortie.get("genere"),
+        "total": total,
+        "par_gravite": par_gravite,
+        "nouvelles_alertes": sortie.get("nouvelles_alertes", 0),
+    })
+    with open(chemin_index, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+
     return chemin
 
 

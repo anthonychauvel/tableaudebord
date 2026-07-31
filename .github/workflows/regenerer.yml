@@ -56,7 +56,12 @@ jobs:
         run: |
           git config user.name "veille-bot"
           git config user.email "veille-bot@users.noreply.github.com"
-          git add donnees.json sw.js
+          # ccn-regles.json et historique/ étaient générés à chaque run mais
+          # JAMAIS committés -- c'est pourquoi les onglets « Règles CCN » et
+          # « Historique » affichaient "indisponible" en prod : le fetch ne
+          # trouvait rien sur le serveur. sw.js aussi (bump de cache), sinon
+          # la coquille de l'app resterait sur l'ancienne version.
+          git add donnees.json sw.js ccn-regles.json historique/
           git diff --cached --quiet && echo "Aucun changement." || \
             git commit -m "Données de veille — $(date -u +%Y-%m-%d\ %H:%M) UTC"
           git push

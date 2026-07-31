@@ -124,7 +124,8 @@ body{
 const LIB = {grilles:'Grilles CCN', droit:'MonLegiTexte', modules:'8 modules',
              outils:'105 outils', guide:'Guide SEO', citations:'Citations juridiques',
              syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)',
-             contenu:'Contenu des articles', changements:'Fichiers modifiés', age:'Âge de la référence'};
+             contenu:'Contenu des articles', changements:'Fichiers modifiés', age:'Âge de la référence',
+             croisement:'Textes pour CCN en attente'};
 
 // Un conseil par CATÉGORIE, pas par alerte individuelle -- les mêmes sujets
 // reviennent, la correction typique aussi. Sert de mémoire courte : que faire
@@ -170,6 +171,7 @@ const CONSEILS = {
   'fichier-modifie': "Constat neutre -- vérifier que c'est un changement voulu (ta propre session de travail). Si tu ne reconnais pas ce changement, ouvrir le fichier et comparer à la version précédente sur GitHub.",
   'reference-plus-12-mois': "L'app affiche déjà ce bandeau aux utilisateurs sur l'onglet Référence -- vérifier s'il existe un avenant plus récent (chercher dans le fonds ou sur Légifrance), ou si une région couvre déjà le besoin sans qu'il soit nécessaire de toucher la référence elle-même.",
   'reference-plus-3-mois': "Pas encore visible par les utilisateurs, mais autant vérifier maintenant qu'une fois le bandeau affiché -- même logique : un avenant plus récent existe-t-il, une région couvre-t-elle déjà le besoin, ou rien de neuf pour l'instant.",
+  'texte-pour-ccn-en-alerte': "Le plus utile à traiter en priorité : un texte vient de paraître pour une CCN que tu attendais. Ouvrir le texte cité (JORF ou accord), vérifier s'il contient la nouvelle grille, et si oui la reporter dans GrillePaye — ça lève l'alerte d'un coup.",
 };
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}

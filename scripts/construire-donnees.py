@@ -36,11 +36,45 @@ def lancer(script, args_liste):
 
 def fusionner(*resultats):
     """Combine les alertes de plusieurs vérificateurs dans une même section
-    (ex. Grilles CCN = fraîcheur + santé, dans le même onglet du tableau)."""
+    (ex. Grilles CCN = fraîcheur + santé, dans le même onglet du tableau).
+
+    Dédoublonne par IDCC : si deux vérifications différentes signalent le
+    MÊME IDCC (ex. "sous le SMIC" ET "grille de plus de 12 mois"), on ne
+    montre qu'UNE alerte, pas deux lignes qui se suivent pour la même
+    convention. C'est ce qui noyait le tableau -- 5 CCN en double sur la
+    seule section Grilles. La gravité retenue est la plus forte des deux,
+    et les détails sont combinés pour ne rien perdre.
+    """
+    ordre_gravite = {"haute": 3, "moyenne": 2, "basse": 1}
     toutes = []
     for r in resultats:
         toutes.extend(r.get("alertes", []))
-    return {"alertes": toutes}
+
+    par_idcc = {}   # idcc -> alerte fusionnée
+    autres = []     # alertes sans IDCC identifiable, gardées telles quelles
+    for a in toutes:
+        m = re.search(r"\bIDCC\s+(\d{1,5})\b", a.get("titre", ""))
+        if not m:
+            autres.append(a)
+            continue
+        idcc = m.group(1)
+        if idcc not in par_idcc:
+            par_idcc[idcc] = dict(a)
+            continue
+        # Déjà une alerte pour cet IDCC : on combine.
+        existante = par_idcc[idcc]
+        if ordre_gravite.get(a.get("gravite"), 0) > ordre_gravite.get(existante.get("gravite"), 0):
+            existante["gravite"] = a["gravite"]
+            existante["titre"] = a["titre"]  # garder le titre de l'alerte la plus grave
+        d1 = existante.get("detail", "")
+        d2 = a.get("detail", "")
+        if d2 and d2 not in d1:
+            existante["detail"] = (d1 + "\n\n" + d2).strip()
+        # Un lien éventuel (ex. lien MonLegiTexte) ne doit pas être perdu.
+        if a.get("lien") and not existante.get("lien"):
+            existante["lien"] = a["lien"]
+
+    return {"alertes": autres + list(par_idcc.values())}
 
 
 def bumper_service_worker(chemin_sw):
@@ -144,6 +178,59 @@ def sauver_historique(dossier_veille, sortie):
         json.dump(index, f, ensure_ascii=False, indent=2)
 
     return chemin
+
+
+def croiser_en_memoire(sections, dossier_jorf, dossier_acco):
+    """Même logique que croiser-alertes-textes.py, mais sur les sections déjà
+    en mémoire (donnees.json n'existe pas encore au moment de l'appel)."""
+    import glob as _glob
+
+    # 1) IDCC en alerte, depuis les sections grilles + âge déjà construites.
+    en_alerte = {}
+    for section in sections:
+        if section.get("id") not in ("grilles", "age"):
+            continue
+        for a in section.get("alertes", []):
+            m = re.search(r"\bIDCC\s+(\d{1,5})\b", a.get("titre", ""))
+            if m:
+                en_alerte.setdefault(m.group(1), a.get("titre", ""))
+    if not en_alerte:
+        return {"alertes": []}
+
+    # 2) Titres des textes JORF/ACCO récupérés.
+    textes = []
+    for dossier, source in ((dossier_jorf, "Journal Officiel"), (dossier_acco, "accord d'entreprise")):
+        if not dossier or not os.path.isdir(dossier):
+            continue
+        for chemin in _glob.glob(os.path.join(dossier, "*.json")):
+            base = os.path.basename(chemin)
+            if base.startswith("_"):
+                continue
+            try:
+                d = json.load(open(chemin, encoding="utf-8"))
+            except Exception:
+                continue
+            titre = d.get("titre") or ""
+            if titre:
+                textes.append((os.path.splitext(base)[0], titre, source))
+
+    # 3) Croisement : IDCC en alerte cherché dans les titres, en nombre entier.
+    alertes = []
+    for idcc, titre_alerte in sorted(en_alerte.items(), key=lambda kv: int(kv[0])):
+        corr = [(tid, titre, source) for tid, titre, source in textes
+                if re.search(r"(?<!\d)" + re.escape(idcc) + r"(?!\d)", titre)]
+        if not corr:
+            continue
+        lignes = [f"• [{source}] {titre[:90]}" for tid, titre, source in corr[:5]]
+        alertes.append({
+            "categorie": "texte-pour-ccn-en-alerte",
+            "gravite": "haute",
+            "titre": f"IDCC {idcc} : un texte est paru pour cette CCN en attente",
+            "detail": (f"Cette convention est déjà en alerte (« {titre_alerte} »), et un "
+                       f"ou plusieurs textes viennent de paraître qui la mentionnent — "
+                       f"probablement de quoi lever l'alerte :\n" + "\n".join(lignes)),
+        })
+    return {"alertes": alertes}
 
 
 def main():
@@ -253,6 +340,23 @@ def main():
     # même quand une région est à jour par ailleurs.
     sections.append({"id": "age", "titre": "Âge de la référence (3 mois et 12 mois)",
         **lancer("verifier-age-reference.py", ["--hs", args.hs, "--fonds", os.path.join(args.droit, "output", "ccn")])})
+
+    # Croisement CCN en alerte ↔ textes JORF/ACCO fraîchement aspirés.
+    # C'est LA fonctionnalité clé : si une convention est déjà en alerte et
+    # qu'un texte vient de paraître qui la mentionne, on le remonte en tête,
+    # en gravité haute -- probablement l'avenant qui lève l'alerte.
+    # Se calcule sur les sections DÉJÀ construites (grilles + âge), pas sur un
+    # fichier -- donnees.json n'existe pas encore à ce stade. On insère le
+    # résultat EN TÊTE pour qu'il soit la première chose vue.
+    croisement = croiser_en_memoire(
+        sections,
+        os.path.join(args.droit, "output", "jorf"),
+        os.path.join(args.droit, "output", "acco"),
+    )
+    if croisement["alertes"]:
+        sections.insert(0, {"id": "croisement",
+                            "titre": "🔔 Textes parus pour une CCN en attente",
+                            **croisement})
 
     # Exceptions manuelles : un fichier que TOI seul édites (directement sur
     # GitHub, pas par ce script) pour dire "celle-ci, je l'ai déjà vérifiée,

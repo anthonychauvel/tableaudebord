@@ -1,0 +1,13 @@
+[
+  {
+    "fichier": "2026-07-31-111040.json",
+    "genere": "2026-07-31T11:10:40.213810+00:00",
+    "total": 195,
+    "par_gravite": {
+      "haute": 1,
+      "moyenne": 31,
+      "basse": 163
+    },
+    "nouvelles_alertes": 0
+  }
+]

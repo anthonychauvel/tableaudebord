@@ -159,6 +159,14 @@ def main():
     for c in json.loads(m.group(1)):
         noms.setdefault(str(c[0]), c[1])
 
+    # Une CCN fusionnée redirigée vers une autre qui a déjà une vraie grille
+    # n'est PAS "à créer" -- elle est déjà couverte, via la fusion. Sans ce
+    # contrôle, chaque nouvelle fusion ajoutée à CCN_FUSIONS redéclencherait
+    # une fausse alerte "grille à créer" pour une convention dont personne ne
+    # consulte plus jamais la grille de référence directement.
+    mf = re.search(r"const CCN_FUSIONS=(\{.*?\});", s, re.S)
+    fusions = json.loads(mf.group(1)) if mf else {}
+
     a_revoir, sans_date, non_couvertes = [], [], []
 
     for chemin in sorted(glob.glob(os.path.join(args.fonds, "*.json"))):
@@ -177,6 +185,16 @@ def main():
             continue
         clauses.sort(key=lambda c: c[0], reverse=True)
         d_fonds, titre, texte = clauses[0]
+
+        # Une CCN fusionnée ne sera plus jamais mise à jour individuellement --
+        # sa propre entrée peut être vide, cassée, ou périmée, ça n'a plus
+        # d'importance : c'est la CIBLE de la fusion qui compte, pas elle.
+        # Ce contrôle doit passer AVANT de regarder si une grille existe, sinon
+        # une fusion dont la grille est cassée (date vide, format non standard)
+        # continue d'être signalée comme "sans date" ou "périmée" -- seul le
+        # cas "aucune grille du tout" était couvert avant.
+        if idcc in fusions:
+            continue
 
         g = grilles.get(idcc)
         if not g:

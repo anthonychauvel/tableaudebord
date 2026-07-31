@@ -72,11 +72,15 @@ def main():
         clauses.sort(key=lambda c: c[0], reverse=True)
         d_fonds, titre, texte = clauses[0]  # d_fonds est déjà un datetime
 
+        # Même raison qu'ailleurs : une fusion ne sera plus mise à jour
+        # individuellement, sa propre grille peut être vide ou cassée sans
+        # que ça compte -- exclue avant même de la regarder, pas seulement
+        # quand elle est totalement absente.
+        if idcc in fusions:
+            continue
+
         g = grilles.get(idcc)
         if not g:
-            cible = fusions.get(idcc)
-            if cible and grilles.get(str(cible[0])):
-                continue
             resultat["alertes"].append({
                 "categorie": "grille-a-creer",
                 "gravite": "basse",

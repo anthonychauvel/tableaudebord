@@ -153,12 +153,13 @@ def main():
             continue
         contenu = open(chemin, encoding="utf-8", errors="replace").read()
         for marqueur, nom in marqueurs:
-            present = marqueur in contenu
+            if marqueur in contenu:
+                continue  # en ligne -- plus rien à signaler, ce n'était qu'un suivi de déploiement
             resultat["alertes"].append({
                 "categorie": "livrable-session",
-                "gravite": "basse",  # état, pas une alerte à traiter -- même style que les autres "basse"
-                "titre": f"{nom} : {'en ligne' if present else 'pas encore en ligne'}",
-                "detail": f"Marqueur « {marqueur} » {'trouvé' if present else 'absent'} dans {fichier}.",
+                "gravite": "basse",
+                "titre": f"{nom} : pas encore en ligne",
+                "detail": f"Marqueur « {marqueur} » absent de {fichier}.",
             })
 
     if args.json:

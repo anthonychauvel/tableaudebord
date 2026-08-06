@@ -42,5 +42,16 @@
       "basse": 162
     },
     "nouvelles_alertes": 0
+  },
+  {
+    "fichier": "2026-08-06-194659.json",
+    "genere": "2026-08-06T19:46:59.402446+00:00",
+    "total": 360,
+    "par_gravite": {
+      "haute": 153,
+      "moyenne": 53,
+      "basse": 154
+    },
+    "nouvelles_alertes": 40
   }
 ]

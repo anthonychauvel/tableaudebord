@@ -122,12 +122,28 @@ def main():
         detail = (f"Cette convention est déjà en alerte (« {titre_alerte} »), et un ou "
                   f"plusieurs textes viennent de paraître qui la mentionnent — "
                   f"probablement de quoi lever l'alerte :\n" + "\n".join(lignes))
-        resultat["alertes"].append({
+        # Date du texte le plus récent parmi les correspondances, pour la
+        # coupure par date dans exceptions.json (mode « jusqu_au »). On lit
+        # « du J MOIS AAAA » dans le titre ; à défaut, pas de date_texte et
+        # l'alerte reste visible.
+        _MOIS = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4,
+                 "mai": 5, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
+                 "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12,
+                 "decembre": 12}
+        dates_iso = []
+        for _tid, _titre, _src in correspondances:
+            m = re.search(r"\bdu\s+(\d{1,2})\s+([a-zûéèà]+)\s+(20\d\d)", _titre.lower())
+            if m and m.group(2) in _MOIS:
+                dates_iso.append(f"{int(m.group(3)):04d}-{_MOIS[m.group(2)]:02d}-{int(m.group(1)):02d}")
+        alerte = {
             "categorie": "texte-pour-ccn-en-alerte",
             "gravite": "haute",  # c'est exactement ce qu'on veut voir en priorité
             "titre": f"IDCC {idcc} : un texte est paru pour cette CCN en attente",
             "detail": detail,
-        })
+        }
+        if dates_iso:
+            alerte["date_texte"] = max(dates_iso)
+        resultat["alertes"].append(alerte)
 
     print(f"{n_liens} CCN en alerte ont un texte JORF/ACCO correspondant.")
     for a in resultat["alertes"][:10]:

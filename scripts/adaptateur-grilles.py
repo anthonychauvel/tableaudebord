@@ -86,6 +86,7 @@ def main():
                 "gravite": "basse",
                 "titre": f"IDCC {idcc} : clause au fonds, aucune grille dans l'app",
                 "detail": f"{titre} ({d_fonds.strftime('%d/%m/%Y')})",
+                "date_texte": d_fonds.strftime("%Y-%m-%d"),
             })
             continue
 
@@ -118,6 +119,7 @@ def main():
                 "titre": f"IDCC {idcc} : grille dépassée de {ecart} jours",
                 "detail": f"{titre} — " + (" · ".join(montants[:2]) if montants else
                           "aucun montant repérable, ouvrir la clause"),
+                "date_texte": d_fonds.strftime("%Y-%m-%d"),
             })
 
     print(f"{len(resultat['alertes'])} alerte(s) grilles.")

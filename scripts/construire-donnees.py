@@ -372,12 +372,31 @@ def main():
             print(f"exceptions.json illisible, ignoré : {e}", file=sys.stderr)
 
     n_ignorees = 0
+
+    def _exception_couvre(e, a):
+        # Catégorie : toujours exacte.
+        if e["categorie"] != a.get("categorie"):
+            return False
+        # Clé : sous-chaîne du titre. Une clé vide vaut « toute la catégorie »
+        # (utile pour une règle de coupure globale par date).
+        if e.get("cle") and e["cle"] not in a.get("titre", ""):
+            return False
+        # Mode « jusqu_au » : ne masque que si le texte de référence de
+        # l'alerte est ANTÉRIEUR ou ÉGAL à la date d'acquittement. Un texte
+        # paru APRÈS cette date réapparaît tout seul — c'est ce qui permet de
+        # solder le backlog à une date donnée sans masquer les nouveautés.
+        # Sans date_texte sur l'alerte, une exception « jusqu_au » ne matche
+        # pas (on préfère montrer que masquer à l'aveugle).
+        if e.get("mode") == "jusqu_au":
+            dt = a.get("date_texte")
+            return bool(dt) and dt <= e.get("date", "")
+        # Sinon : exception simple, masquage permanent (comportement d'origine).
+        return True
+
     for s in sections:
         gardees = []
         for a in s.get("alertes", []):
-            matché = next((e for e in exceptions
-                           if e["categorie"] == a.get("categorie") and e["cle"] in a.get("titre", "")),
-                          None)
+            matché = next((e for e in exceptions if _exception_couvre(e, a)), None)
             if matché:
                 n_ignorees += 1
             else:

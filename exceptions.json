@@ -1,10 +1,32 @@
 [
   {
-    "_exemple": "Copie ce bloc et adapte-le pour ignorer une alerte que tu as déjà vérifiée toi-même.",
+    "_exemple": "Copie ce bloc et adapte-le pour ignorer UNE alerte précise que tu as déjà vérifiée toi-même.",
     "_categorie_possible": "grille-perimee, grille-a-creer, article-abroge-ecosysteme, citation-orpheline, etc. — copie exactement la 'categorie' vue dans donnees.json",
     "categorie": "grille-perimee",
     "cle": "IDCC 3250",
     "note": "Grille en valeur de point, annexe non extraite — connu, pas une vraie alerte.",
     "date": "2026-07-26"
+  },
+  {
+    "_doc_mode": "mode 'jusqu_au' + cle vide = COUPURE PAR DATE sur toute la catégorie : masque les alertes dont le texte de référence (date_texte) date du 2026-08-10 ou avant ; un texte paru APRÈS cette date réapparaît tout seul.",
+    "categorie": "grille-perimee",
+    "cle": "",
+    "mode": "jusqu_au",
+    "date": "2026-08-10",
+    "note": "Backlog des grilles périmées entièrement passé en revue et traité jusqu'au 10/08/2026 (grilles déjà à jour, ou piège de la date d'application au 01/01). Ne re-signaler que si une clause de rémunération POSTÉRIEURE au 10/08/2026 paraît au fonds."
+  },
+  {
+    "categorie": "grille-a-creer",
+    "cle": "",
+    "mode": "jusqu_au",
+    "date": "2026-08-10",
+    "note": "Conventions sans grille examinées une par une jusqu'au 10/08/2026 : construites quand exploitable (dernière en date : 7001), ou écartées pour raison connue (valeur de point manquante, texte non tabulé, sous-secteur, accord trop ancien). Ne re-signaler que pour une clause postérieure au 10/08/2026."
+  },
+  {
+    "categorie": "texte-pour-ccn-en-alerte",
+    "cle": "",
+    "mode": "jusqu_au",
+    "date": "2026-08-10",
+    "note": "Textes déjà parus au 10/08/2026 pour les CCN en attente (surtout des arrêtés d'extension, sans nouveaux minima). Ne re-signaler que les textes publiés APRÈS le 10/08/2026."
   }
 ]

@@ -70,6 +70,19 @@ body{
 .non-construit{padding:14px 15px;font-size:12px;color:var(--txt2);text-align:center;
   border-top:1px dashed var(--edge);}
 .pied{padding:16px 18px 4px;font-size:10.5px;color:var(--txt2);text-align:center;}
+/* Sous-groupes par ancienneté / nouveauté à l'intérieur d'une section */
+.grp{border-top:1px solid var(--edge);}
+.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 15px;font-size:12px;font-weight:700;color:var(--txt);}
+.grp>summary::-webkit-details-marker{display:none;}
+.grp>summary .gl{display:flex;align-items:center;gap:7px;}
+.grp>summary .gl::before{content:"\25B8";color:var(--txt2);font-size:10px;}
+.grp[open]>summary .gl::before{content:"\25BE";}
+.grp-n{background:rgba(255,255,255,.06);border-radius:99px;padding:1px 9px;font-size:11px;font-weight:800;color:var(--txt2);flex-shrink:0;}
+.grp.g-nouveau>summary{color:var(--haute);}
+.grp.g-nouveau .grp-n{background:rgba(224,92,92,.15);color:var(--haute);}
+.grp.g-v12>summary{color:var(--moyenne);}
+.grp .alerte:first-child{border-top:none;}
+.age-chip{display:inline-block;margin-left:auto;font-size:9.5px;color:var(--txt2);background:rgba(255,255,255,.05);border:1px solid var(--edge);border-radius:5px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
 </style>
 </head>
 <body>
@@ -176,6 +189,58 @@ const CONSEILS = {
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
+// --- Sous-groupement par ancienneté / nouveauté (affichage) ---
+// La date + l'âge en jours sont déjà dans le texte du détail :
+// "... Date de référence 15/01/2026 (207 jours) ...". On les lit ici.
+function _ageDetail(a){
+  var det = a.detail||'';
+  var mj = det.match(/\((\d+)\s*jours?\)/);
+  if(!mj) return null;
+  var md = det.match(/(\d{2}\/\d{2}\/\d{4})/);
+  return { days: parseInt(mj[1],10), date: md?md[1]:'' };
+}
+function _renderAlerte(a){
+  var ai = _ageDetail(a);
+  var chip = ai ? `<span class="age-chip">${esc(ai.date)} · ${ai.days} j</span>` : '';
+  return `<div class="alerte${a.nouveau?' nouveau':''}">
+    <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}${a.nouveau?'<span class="badge-nouveau">NOUVEAU</span>':''}${chip}</div>
+    <div class="d">${esc(a.detail||'')}</div>
+    ${a.lien ? `<a href="${esc(a.lien)}" target="_blank" rel="noopener" class="conseil" style="display:block;text-decoration:none;color:#7FA88A;">🔗 Voir l'article dans MonLegiTexte →</a>` : ''}
+    ${CONSEILS[a.categorie] ? `<div class="conseil">💡 ${esc(CONSEILS[a.categorie])}</div>` : ''}
+  </div>`;
+}
+// Regroupe les alertes d'une section : nouveau d'abord (toujours ouvert), puis
+// par ancienneté quand une date existe (>12 mois ouvert, le reste replié), enfin
+// "déjà vu / sans date" replié — pour ne pas re-vérifier ce qui n'a pas bougé.
+function _grouperAlertes(alertes, ordreGravite){
+  var og = ordreGravite || {haute:0,moyenne:1,basse:2};
+  var tri = function(arr){ return arr.sort(function(a,b){ return (og[a.gravite]??9)-(og[b.gravite]??9); }); };
+  var nouv=[], v12=[], v3=[], frais=[], sansdate=[];
+  (alertes||[]).forEach(function(a){
+    if(a.nouveau){ nouv.push(a); return; }
+    var ai=_ageDetail(a);
+    if(!ai) sansdate.push(a);
+    else if(ai.days>=365) v12.push(a);
+    else if(ai.days>=90) v3.push(a);
+    else frais.push(a);
+  });
+  var g=[];
+  if(nouv.length) g.push({cle:'nouveau', label:'🆕 Nouveau depuis le dernier passage', ouvert:true, alertes:tri(nouv)});
+  if(v12.length) g.push({cle:'v12', label:'⏳ Plus de 12 mois — à revérifier', ouvert:true, alertes:tri(v12)});
+  if(v3.length) g.push({cle:'v3', label:'📅 De 3 à 12 mois — signal précoce', ouvert:false, alertes:tri(v3)});
+  if(frais.length) g.push({cle:'frais', label:'🕐 Moins de 3 mois — récent', ouvert:false, alertes:tri(frais)});
+  if(sansdate.length) g.push({cle:'sansdate', label:'Déjà vu — inchangé depuis le dernier passage', ouvert:false, alertes:tri(sansdate)});
+  return g;
+}
+// Déplier/replier un sous-groupe change la hauteur : on recalcule la hauteur de
+// la section ouverte pour ne rien couper (l'événement 'toggle' ne bouillonne pas).
+document.getElementById('sections').addEventListener('toggle', function(e){
+  if(e.target && e.target.classList && e.target.classList.contains('grp')){
+    var sec = e.target.closest('.section.open');
+    if(sec){ var corps = sec.querySelector('.corps'); if(corps) corps.style.maxHeight = corps.scrollHeight + 'px'; }
+  }
+}, true);
+
 async function charger(){
   let d;
   try{
@@ -211,11 +276,8 @@ async function charger(){
         <div class="non-construit">Section prête, en attente du nom du dépôt pour la brancher.</div>
       </div>`;
     }
-    const alertes = (s.alertes||[]).slice().sort((a,b)=>
-      (b.nouveau?1:0)-(a.nouveau?1:0)
-      || (a.categorie||'').localeCompare(b.categorie||'')
-      || (ordreGravite[a.gravite]??9)-(ordreGravite[b.gravite]??9));
-    const n = alertes.length;
+    const groupes = _grouperAlertes(s.alertes||[], ordreGravite);
+    const n = (s.alertes||[]).length;
     return `<div class="section${n>0?'':''}" id="sec-${i}">
       <div class="section-hd" onclick="toggleSection(${i})">
         <div><div class="titre">${esc(LIB[s.id]||s.titre)}</div>
@@ -226,13 +288,11 @@ async function charger(){
         </div>
       </div>
       <div class="corps">
-        ${n===0 ? '<div class="vide">Rien à signaler.</div>' : alertes.map(a => `
-          <div class="alerte${a.nouveau?' nouveau':''}">
-            <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}${a.nouveau?'<span class="badge-nouveau">NOUVEAU</span>':''}</div>
-            <div class="d">${esc(a.detail||'')}</div>
-            ${a.lien ? `<a href="${esc(a.lien)}" target="_blank" rel="noopener" class="conseil" style="display:block;text-decoration:none;color:#7FA88A;">🔗 Voir l'article dans MonLegiTexte →</a>` : ''}
-            ${CONSEILS[a.categorie] ? `<div class="conseil">💡 ${esc(CONSEILS[a.categorie])}</div>` : ''}
-          </div>`).join('')}
+        ${n===0 ? '<div class="vide">Rien à signaler.</div>'
+          : groupes.map(g => `<details class="grp g-${g.cle}"${g.ouvert?' open':''}>
+              <summary><span class="gl">${g.label}</span><span class="grp-n">${g.alertes.length}</span></summary>
+              <div class="grp-body">${g.alertes.map(_renderAlerte).join('')}</div>
+            </details>`).join('')}
       </div>
     </div>`;
   }).join('');

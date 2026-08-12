@@ -2,7 +2,7 @@
 // fonctionne et que le tableau de bord s'ouvre même sans réseau (avec les
 // dernières données connues). Pas de stratégie sophistiquée — un outil perso
 // à une seule page n'en a pas besoin.
-const CACHE = "veille-perso-20260810-131959";
+const CACHE = "veille-perso-20260812-101858";
 const SHELL = ["./", "./index.html", "./manifest.json", "./donnees.json",
                "./icons/icon-192.png", "./icons/icon-512.png"];
 

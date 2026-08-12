@@ -114,7 +114,7 @@ body{
     font-size:12px;padding:7px 13px;border-radius:10px;">📋 Règles CCN</button>
   <button id="btnExport" onclick="exporterTexte()"
     style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
-    font-size:12px;padding:7px 13px;border-radius:10px;">⬇️ Export .txt</button>
+    font-size:12px;padding:7px 13px;border-radius:10px;">⬇️ Export .zip</button>
 </div>
 
 <div class="resume" id="resume"></div>
@@ -246,26 +246,54 @@ document.getElementById('sections').addEventListener('toggle', function(e){
 
 // Export texte : une liste de contrôle à cocher, groupée comme à l'écran
 // (Nouveau / >12 mois / 3-12 mois / …). Plus simple pour pointer les contrôles.
+// --- Mini-ecrivain ZIP (methode « store », sans compression, sans dependance) ---
+var _crcTable=(function(){var t=[];for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++){c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);}t[n]=c>>>0;}return t;})();
+function _crc32(b){var c=0xFFFFFFFF;for(var i=0;i<b.length;i++){c=_crcTable[(c^b[i])&0xFF]^(c>>>8);}return (c^0xFFFFFFFF)>>>0;}
+function _zipStore(files){
+  var enc=new TextEncoder(),parts=[],central=[],offset=0;
+  var _dt=new Date(),dosTime=((_dt.getHours()&31)<<11)|((_dt.getMinutes()&63)<<5)|((_dt.getSeconds()>>1)&31),dosDate=(((_dt.getFullYear()-1980)&127)<<9)|(((_dt.getMonth()+1)&15)<<5)|(_dt.getDate()&31);
+  files.forEach(function(f){
+    var nm=enc.encode(f.name),data=f.bytes,crc=_crc32(data);
+    var lh=new Uint8Array(30+nm.length),dv=new DataView(lh.buffer);
+    dv.setUint32(0,0x04034b50,true);dv.setUint16(4,20,true);dv.setUint16(6,0x0800,true);dv.setUint16(8,0,true);
+    dv.setUint16(10,dosTime,true);dv.setUint16(12,dosDate,true);dv.setUint32(14,crc,true);dv.setUint32(18,data.length,true);
+    dv.setUint32(22,data.length,true);dv.setUint16(26,nm.length,true);dv.setUint16(28,0,true);lh.set(nm,30);
+    parts.push(lh);parts.push(data);
+    var cd=new Uint8Array(46+nm.length),cv=new DataView(cd.buffer);
+    cv.setUint32(0,0x02014b50,true);cv.setUint16(4,20,true);cv.setUint16(6,20,true);cv.setUint16(8,0x0800,true);
+    cv.setUint16(10,dosTime,true);cv.setUint16(12,dosDate,true);cv.setUint16(14,0,true);cv.setUint32(16,crc,true);
+    cv.setUint32(20,data.length,true);cv.setUint32(24,data.length,true);cv.setUint16(28,nm.length,true);
+    cv.setUint16(30,0,true);cv.setUint16(32,0,true);cv.setUint16(34,0,true);cv.setUint16(36,0,true);
+    cv.setUint32(38,0,true);cv.setUint32(42,offset,true);cd.set(nm,46);central.push(cd);
+    offset+=lh.length+data.length;
+  });
+  var cSize=central.reduce(function(n,c){return n+c.length;},0);
+  var eo=new Uint8Array(22),ev=new DataView(eo.buffer);
+  ev.setUint32(0,0x06054b50,true);ev.setUint16(4,0,true);ev.setUint16(6,0,true);ev.setUint16(8,files.length,true);
+  ev.setUint16(10,files.length,true);ev.setUint32(12,cSize,true);ev.setUint32(16,offset,true);ev.setUint16(20,0,true);
+  var out=new Uint8Array(offset+cSize+22),pos=0;
+  parts.forEach(function(c){out.set(c,pos);pos+=c.length;});
+  central.forEach(function(c){out.set(c,pos);pos+=c.length;});
+  out.set(eo,pos);return out;
+}
 function exporterTexte(){
-  var d = window.__DONNEES;
-  if(!d){ alert('Données non encore chargées, réessaie dans un instant.'); return; }
+  var d=window.__DONNEES;
+  if(!d){ alert('Donnees non encore chargees, reessaie dans un instant.'); return; }
   function p2(n){ return (n<10?'0':'')+n; }
-  function fmtDate(x){ if(!x) return '—'; var t=new Date(x); if(isNaN(t)) return String(x);
+  function fmtDate(x){ if(!x) return '\u2014'; var t=new Date(x); if(isNaN(t)) return String(x);
     return p2(t.getDate())+'/'+p2(t.getMonth()+1)+'/'+t.getFullYear()+' '+p2(t.getHours())+':'+p2(t.getMinutes()); }
-  var now = new Date();
-  var toutes = d.sections.reduce(function(n,s){ return n+((s.alertes||[]).length); }, 0);
-  var nouv = 0; d.sections.forEach(function(s){ (s.alertes||[]).forEach(function(a){ if(a.nouveau) nouv++; }); });
-  var L = [];
-  L.push('VEILLE PERSO — LISTE DE CONTRÔLE');
-  L.push('Généré le : '+fmtDate(d.genere));
-  L.push('Total : '+toutes+' alerte(s) · '+nouv+' nouvelle(s) depuis le dernier passage');
-  L.push('Exporté le : '+fmtDate(now));
-  L.push('Astuce : remplace [ ] par [x] au fur et à mesure des contrôles.');
-  L.push(''.padEnd(60,'='));
-  L.push('');
-  d.sections.forEach(function(s){
-    var al = s.alertes||[]; if(!al.length) return;
-    L.push('########## '+String(s.titre||s.id||'?').toUpperCase()+' ('+al.length+') ##########');
+  function slug(s){ return (String(s||'section').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,42))||'categorie'; }
+  var now=new Date(), enc=new TextEncoder();
+  var secs=d.sections.filter(function(s){ return (s.alertes||[]).length; });
+  if(!secs.length){ alert('Aucune alerte : rien a exporter.'); return; }
+  var dateGen=fmtDate(d.genere), dateExp=fmtDate(now), files=[];
+  secs.forEach(function(s,idx){
+    var al=s.alertes||[], L=[];
+    L.push('VEILLE PERSO \u2014 '+String(s.titre||s.id||'?').toUpperCase());
+    L.push(al.length+' alerte(s) dans cette categorie');
+    L.push('Genere le : '+dateGen+'  \u00b7  Exporte le : '+dateExp);
+    L.push('Cochez [x] au fur et a mesure des controles.');
+    L.push(''.padEnd(60,'='));
     L.push('');
     _grouperAlertes(al).forEach(function(g){
       L.push('--- '+g.label+' ('+g.alertes.length+') ---');
@@ -275,12 +303,19 @@ function exporterTexte(){
       });
       L.push('');
     });
+    files.push({ name:p2(idx+1)+'-'+slug(s.titre||s.id)+'.txt', bytes:enc.encode(L.join('\n')) });
   });
-  if(toutes===0) L.push('Aucune alerte : rien à contrôler. ✓');
-  var blob = new Blob([L.join('\n')], {type:'text/plain;charset=utf-8'});
-  var url = URL.createObjectURL(blob);
-  var a = document.createElement('a');
-  a.href = url; a.download = 'veille-controle-'+now.getFullYear()+p2(now.getMonth()+1)+p2(now.getDate())+'.txt';
+  var tot=secs.reduce(function(n,s){ return n+(s.alertes||[]).length; },0), nouv=0;
+  d.sections.forEach(function(s){ (s.alertes||[]).forEach(function(a){ if(a.nouveau) nouv++; }); });
+  var R=['VEILLE PERSO \u2014 RECAPITULATIF','Genere le : '+dateGen,'Exporte le : '+dateExp,
+    'Total : '+tot+' alerte(s) \u00b7 '+nouv+' nouvelle(s) depuis le dernier passage','',''.padEnd(60,'='),'',
+    'Un fichier .txt par categorie (a cocher [x] au fil des controles) :'];
+  secs.forEach(function(s,idx){ R.push('  '+p2(idx+1)+'. '+(s.titre||s.id)+' \u2014 '+(s.alertes||[]).length+' alerte(s)'); });
+  files.unshift({ name:'00-recapitulatif.txt', bytes:enc.encode(R.join('\n')) });
+  var zip=_zipStore(files);
+  var blob=new Blob([zip],{type:'application/zip'});
+  var url=URL.createObjectURL(blob), a=document.createElement('a');
+  a.href=url; a.download='veille-controle-'+now.getFullYear()+p2(now.getMonth()+1)+p2(now.getDate())+'.zip';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ try{ document.body.removeChild(a); }catch(e){} URL.revokeObjectURL(url); }, 200);
 }

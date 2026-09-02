@@ -180,17 +180,63 @@ def sauver_historique(dossier_veille, sortie):
     return chemin
 
 
+# --- Pertinence des textes JORF/ACCO pour la veille des grilles -------------
+# Un texte qui parle de salaires/minima est probablement l'avenant qui lève
+# une alerte de grille. Un arrêté qui se contente d'ÉTENDRE ou d'AGRÉER un
+# avenant, sans nouveaux minima, est du bruit pour la veille des grilles : on
+# le compte mais on n'en fait pas une alerte prioritaire. C'est ce qui
+# remontait ~200 « textes parus » en gravité haute sans aucun minimum neuf.
+_MOTS_SALAIRE = ("salaire", "salariale", "salarial", "rémunération", "remuneration",
+                 "minima", "minimum", "minimaux", "barème", "bareme", "grille de salaire",
+                 "grille salariale", "valeur du point", "valeur de point",
+                 "pouvoir d'achat", "augmentation", "traitement", "rmh", "rag", "rmg")
+_MOTS_EXTENSION = ("extension", "élargissement", "elargissement",
+                   "agrément", "agrement", "agréé", "agree")
+_MOIS_FR = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5,
+            "juin": 6, "juillet": 7, "août": 8, "aout": 8, "septembre": 9,
+            "octobre": 10, "novembre": 11, "décembre": 12, "decembre": 12}
+
+
+def classer_texte(titre):
+    """salaire / extension / autre. Le mot de salaire l'emporte : un « arrêté
+    portant extension d'un avenant relatif aux salaires » reste pertinent."""
+    t = titre.lower()
+    if any(mot in t for mot in _MOTS_SALAIRE):
+        return "salaire"
+    if any(mot in t for mot in _MOTS_EXTENSION):
+        return "extension"
+    return "autre"
+
+
+def date_iso_du_titre(titre):
+    """Lit « du J MOIS AAAA » dans un titre -> AAAA-MM-JJ, sinon None.
+    Accepte l'ordinal « 1er / 2ème » (fréquent : « à compter du 1er juin »)."""
+    m = re.search(r"\bdu\s+(\d{1,2})(?:er|ère|ème|e|nd)?\s+([a-zûéèà]+)\s+(20\d\d)", titre.lower())
+    if m and m.group(2) in _MOIS_FR:
+        return f"{int(m.group(3)):04d}-{_MOIS_FR[m.group(2)]:02d}-{int(m.group(1)):02d}"
+    return None
+
+
 def croiser_en_memoire(sections, dossier_jorf, dossier_acco):
-    """Même logique que croiser-alertes-textes.py, mais sur les sections déjà
-    en mémoire (donnees.json n'existe pas encore au moment de l'appel)."""
+    """Relie les CCN qui ATTENDENT réellement un texte (grille périmée ou à
+    créer) aux avenants SALAIRES fraîchement aspirés. Ne lit plus la section
+    « âge » (une référence qui vieillit sans successeur au fonds n'attend rien)
+    et ne remonte plus les arrêtés d'extension seuls (aucun minimum nouveau)."""
     import glob as _glob
 
-    # 1) IDCC en alerte, depuis les sections grilles + âge déjà construites.
+    # 1) IDCC en alerte ACTIONNABLE : uniquement les grilles périmées ou à
+    #    créer. Une grille « ancienne / sous SMIC / sans date » ou une simple
+    #    alerte d'âge n'est pas quelque chose qu'un avenant vient lever -> on
+    #    ne la croise pas (c'était la 1re source de faux positifs, ~200 IDCC
+    #    de la section âge injectés ici).
+    ACTIONNABLES = ("grille-perimee", "grille-a-creer")
     en_alerte = {}
     for section in sections:
-        if section.get("id") not in ("grilles", "age"):
+        if section.get("id") != "grilles":
             continue
         for a in section.get("alertes", []):
+            if a.get("categorie") not in ACTIONNABLES:
+                continue
             m = re.search(r"\bIDCC\s+(\d{1,5})\b", a.get("titre", ""))
             if m:
                 en_alerte.setdefault(m.group(1), a.get("titre", ""))
@@ -214,22 +260,46 @@ def croiser_en_memoire(sections, dossier_jorf, dossier_acco):
             if titre:
                 textes.append((os.path.splitext(base)[0], titre, source))
 
-    # 3) Croisement : IDCC en alerte cherché dans les titres, en nombre entier.
+    # 3) Croisement : IDCC cherché dans les titres (nombre entier), puis TRI
+    #    par pertinence salaire. On n'émet une alerte que s'il reste un texte
+    #    qui n'est pas un pur arrêté d'extension.
     alertes = []
     for idcc, titre_alerte in sorted(en_alerte.items(), key=lambda kv: int(kv[0])):
-        corr = [(tid, titre, source) for tid, titre, source in textes
+        corr = [(titre, source) for tid, titre, source in textes
                 if re.search(r"(?<!\d)" + re.escape(idcc) + r"(?!\d)", titre)]
         if not corr:
             continue
-        lignes = [f"• [{source}] {titre[:90]}" for tid, titre, source in corr[:5]]
-        alertes.append({
+        pertinents, autres, extensions = [], [], []
+        for titre, source in corr:
+            cls = classer_texte(titre)
+            (pertinents if cls == "salaire"
+             else autres if cls == "autre" else extensions).append((titre, source))
+        if not pertinents and not autres:
+            # Rien que des extensions/agréments -> pas de minima nouveaux,
+            # on ne crée pas d'alerte (le bruit qu'on veut éliminer).
+            continue
+        a_montrer = pertinents + autres
+        lignes = [f"• 💶 [{s}] {t[:90]}" for t, s in pertinents[:5]]
+        lignes += [f"• [{s}] {t[:90]}" for t, s in autres[:5]]
+        if extensions:
+            lignes.append(f"• (+ {len(extensions)} arrêté(s) d'extension/agrément, sans nouveaux minima)")
+        # Date du texte pertinent le plus récent (extensions exclues) -> permet
+        # la coupure par date d'exceptions.json (mode « jusqu_au »). SANS cette
+        # date, le mode jus_qu_au ne matchait jamais et la coupure au 10/08
+        # était inopérante sur cette section (bug corrigé).
+        dates = [d for d in (date_iso_du_titre(t) for t, _ in a_montrer) if d]
+        alerte = {
             "categorie": "texte-pour-ccn-en-alerte",
-            "gravite": "haute",
-            "titre": f"IDCC {idcc} : un texte est paru pour cette CCN en attente",
-            "detail": (f"Cette convention est déjà en alerte (« {titre_alerte} »), et un "
-                       f"ou plusieurs textes viennent de paraître qui la mentionnent — "
-                       f"probablement de quoi lever l'alerte :\n" + "\n".join(lignes)),
-        })
+            "gravite": "haute" if pertinents else "moyenne",
+            "titre": (f"IDCC {idcc} : {'avenant salaires' if pertinents else 'texte'} "
+                      f"paru pour cette CCN en attente"),
+            "detail": (f"Cette convention attend une grille (« {titre_alerte} »), et un "
+                       f"texte vient de paraître qui la mentionne — probablement de quoi "
+                       f"lever l'alerte :\n" + "\n".join(lignes)),
+        }
+        if dates:
+            alerte["date_texte"] = max(dates)
+        alertes.append(alerte)
     return {"alertes": alertes}
 
 

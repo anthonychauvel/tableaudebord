@@ -30,6 +30,15 @@ import os
 import re
 from datetime import datetime, timezone
 
+# Par défaut, la section « âge » ne remonte PLUS une alerte par CCN : sur ~340
+# grilles, ~200 portent une date d'application au 01/01 (rétroactive) et
+# tombaient dans « 3-12 mois » alors qu'elles sont parfaitement à jour — le
+# piège de la date, répété 200 fois. À la place, on émet un RÉSUMÉ conscient du
+# fonds (combien de références vieilles, et sur combien le fonds a réellement du
+# plus récent — ces dernières étant déjà listées en « Grilles CCN » comme
+# périmées, c'est là qu'on agit). Mettre True pour retrouver le détail par CCN.
+DETAIL_PAR_CCN = False
+
 
 def charger_verifier_fraicheur():
     chemin = os.path.join(os.path.dirname(os.path.abspath(__file__)), "verifier-fraicheur.py")
@@ -51,29 +60,38 @@ def date_de_grille(txt):
 
 
 def croisement_fonds(vf, fonds_racine, idcc, g, d_ref):
-    """Renvoie un bout de phrase sur ce que le fonds a trouvé de plus récent
-    pour cette CCN -- vide si pas de croisement possible (pas de --fonds
-    fourni, pas de fichier, rien d'exploitable)."""
+    """Renvoie (verdict, phrase). Le verdict dit si l'âge est ACTIONNABLE :
+      - "plus-recent"       : le fonds a un texte strictement plus récent, non
+                              couvert par une région -> action possible
+                              (= déjà une périmée dans « Grilles CCN »).
+      - "couvert-region"    : plus récent existe mais déjà pris par une région.
+      - "rien-de-plus-recent": le fonds ne connaît rien de plus récent (piège de
+                              la date d'application / branche non renégociée).
+      - "pas-de-clause"     : fichier fonds présent mais aucune clause salaire.
+      - "pas-de-fichier"    : pas de fichier fonds (IDCC hors corpus).
+      - "pas-de-fonds"      : --fonds non fourni.
+    La phrase reste lisible pour le mode détaillé (DETAIL_PAR_CCN=True)."""
     if vf is None or not fonds_racine:
-        return ""
+        return "pas-de-fonds", ""
     chemin_fonds = os.path.join(fonds_racine, f"{idcc}.json")
     if not os.path.isfile(chemin_fonds):
-        return " Pas de fichier fonds pour cet IDCC."
+        return "pas-de-fichier", " Pas de fichier fonds pour cet IDCC."
     try:
         fonds_data = json.load(open(chemin_fonds, encoding="utf-8"))
         clauses = vf.clauses_salaire(fonds_data)
     except Exception:
         clauses = []
     if not clauses:
-        return " Le fonds n'a aucune clause salaire exploitable pour cette CCN."
+        return "pas-de-clause", " Le fonds n'a aucune clause salaire exploitable pour cette CCN."
 
     clauses.sort(key=lambda c: c[0], reverse=True)
     d_fonds, titre, _ = clauses[0]
     d_fonds_naive = d_fonds.replace(tzinfo=None) if d_fonds.tzinfo else d_fonds
 
     if d_fonds_naive <= d_ref:
-        return (" Le fonds n'a rien de plus récent que la référence actuelle -- "
-                "personne n'a renégocié depuis, pas une correction en attente de ta part.")
+        return "rien-de-plus-recent", (
+            " Le fonds n'a rien de plus récent que la référence actuelle -- "
+            "personne n'a renégocié depuis, pas une correction en attente de ta part.")
 
     # Une région couvre-t-elle déjà ce que le fonds a trouvé ? Sinon l'alerte
     # suggérerait d'aller chercher un texte déjà présent, juste pas sous
@@ -81,13 +99,15 @@ def croisement_fonds(vf, fonds_racine, idcc, g, d_ref):
     for region in (g.get("regions") or {}).values():
         d_region = date_de_grille(region.get("d"))
         if d_region and d_region >= d_fonds_naive:
-            return (f" Le fonds a trouvé {titre[:70]} ({d_fonds.strftime('%d/%m/%Y')}) -- "
-                     f"déjà couvert par une région existante, ce n'est pas la référence "
-                     f"elle-même qui a besoin de ce texte précis.")
+            return "couvert-region", (
+                f" Le fonds a trouvé {titre[:70]} ({d_fonds.strftime('%d/%m/%Y')}) -- "
+                f"déjà couvert par une région existante, ce n'est pas la référence "
+                f"elle-même qui a besoin de ce texte précis.")
 
-    return (f" Le fonds a trouvé plus récent : {titre[:90]} "
-             f"({d_fonds.strftime('%d/%m/%Y')}) — c'est probablement celui-ci qui "
-             f"manque à la référence.")
+    return "plus-recent", (
+        f" Le fonds a trouvé plus récent : {titre[:90]} "
+        f"({d_fonds.strftime('%d/%m/%Y')}) — c'est probablement celui-ci qui "
+        f"manque à la référence.")
 
 
 def charger_fusions(racine_hs):
@@ -116,6 +136,10 @@ def main():
     maintenant = datetime.now(timezone.utc).replace(tzinfo=None)
     n_verifiees, n_ignorees_etat, n_ignorees_fusion, n_sans_date = 0, 0, 0, 0
     n_plus_12, n_plus_3 = 0, 0
+    # Combien de références vieilles ont RÉELLEMENT un texte plus récent au
+    # fonds (verdict "plus-recent") -> les seules actionnables, et déjà en
+    # « Grilles CCN » comme périmées.
+    rec_plus_12, rec_plus_3 = 0, 0
 
     for idcc, g in sorted(grilles.items(), key=lambda kv: int(kv[0])):
         st = g.get("st")
@@ -136,38 +160,67 @@ def main():
             continue
         n_verifiees += 1
         age_jours = (maintenant - d_ref).days
-
-        if age_jours > 365:
-            n_plus_12 += 1
-            titre_alerte = f"IDCC {idcc} : la référence affiche \u00ab Plus de 12 mois \u00bb dans l'app"
-            gravite = "moyenne"
-            intro = (f"Date de référence {g.get('d')} ({age_jours} jours) — c'est exactement le "
-                     f"bandeau que voient les utilisateurs qui restent sur l'onglet Référence, "
-                     f"qu'une région soit à jour ou non.")
-        elif age_jours > 90:
-            n_plus_3 += 1
-            titre_alerte = f"IDCC {idcc} : référence de plus de 3 mois — signal précoce"
-            gravite = "basse"
-            intro = (f"Date de référence {g.get('d')} ({age_jours} jours) — pas encore ce que "
-                     f"l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour "
-                     f"vérifier en amont plutôt que d'attendre.")
-        else:
+        if age_jours <= 90:
             continue
 
-        detail = intro + croisement_fonds(vf, args.fonds, idcc, g, d_ref)
+        verdict, phrase = croisement_fonds(vf, args.fonds, idcc, g, d_ref)
+        if age_jours > 365:
+            n_plus_12 += 1
+            if verdict == "plus-recent":
+                rec_plus_12 += 1
+        else:
+            n_plus_3 += 1
+            if verdict == "plus-recent":
+                rec_plus_3 += 1
+
+        if DETAIL_PAR_CCN:
+            if age_jours > 365:
+                titre_alerte = f"IDCC {idcc} : la référence affiche \u00ab Plus de 12 mois \u00bb dans l'app"
+                gravite = "moyenne"
+                intro = (f"Date de référence {g.get('d')} ({age_jours} jours) — c'est exactement le "
+                         f"bandeau que voient les utilisateurs qui restent sur l'onglet Référence, "
+                         f"qu'une région soit à jour ou non.")
+            else:
+                titre_alerte = f"IDCC {idcc} : référence de plus de 3 mois — signal précoce"
+                gravite = "basse"
+                intro = (f"Date de référence {g.get('d')} ({age_jours} jours) — pas encore ce que "
+                         f"l'app montre aux utilisateurs (ça, c'est à 12 mois), mais un signal pour "
+                         f"vérifier en amont plutôt que d'attendre.")
+            resultat["alertes"].append({
+                "categorie": "reference-plus-12-mois" if age_jours > 365 else "reference-plus-3-mois",
+                "gravite": gravite,
+                "titre": titre_alerte,
+                "detail": intro + phrase,
+            })
+
+    # Résumé par défaut : une seule alerte informative au lieu de ~246 lignes.
+    if not DETAIL_PAR_CCN and (n_plus_12 or n_plus_3):
+        stale_12 = n_plus_12 - rec_plus_12
+        detail = (
+            f"{n_plus_12} référence(s) dépassent 12 mois — le bandeau « Plus de 12 mois » "
+            f"que voient les utilisateurs sur l'onglet Référence.\n"
+            f"  • {rec_plus_12} ont un texte plus récent au fonds → déjà listées en "
+            f"« Grilles CCN » comme périmées, c'est là qu'on agit "
+            f"(peut inclure le même avenant à date de signature plus tardive).\n"
+            f"  • {stale_12} n'ont rien de plus récent au fonds (branche non renégociée ou "
+            f"hors corpus) — rien à reprendre depuis la veille.\n"
+            f"{n_plus_3} référence(s) entre 3 et 12 mois (signal précoce), dont {rec_plus_3} "
+            f"avec un texte plus récent au fonds.\n"
+            f"Détail par CCN masqué pour éviter le bruit (≈200 grilles au 01/01 rétroactif) ; "
+            f"mets DETAIL_PAR_CCN=True en tête du script pour le rétablir.")
         resultat["alertes"].append({
-            "categorie": "reference-plus-12-mois" if age_jours > 365 else "reference-plus-3-mois",
-            "gravite": gravite,
-            "titre": titre_alerte,
+            "categorie": "reference-age-resume",
+            "gravite": "basse",
+            "titre": "Âge des références : synthèse (bandeau « Plus de 12 mois » de l'app)",
             "detail": detail,
         })
 
     print(f"{n_verifiees} grille(s) de référence vérifiée(s) "
           f"({n_ignorees_etat} estimée(s)/nationale(s), {n_ignorees_fusion} déjà fusionnée(s) "
           f"ignorée(s), {n_sans_date} sans date).")
-    print(f"{n_plus_12} de plus de 12 mois, {n_plus_3} entre 3 et 12 mois.")
-    for a in resultat["alertes"][:15]:
-        print(f"  {a['titre']}")
+    print(f"{n_plus_12} de plus de 12 mois ({rec_plus_12} avec du plus récent au fonds), "
+          f"{n_plus_3} entre 3 et 12 mois ({rec_plus_3} avec du plus récent au fonds).")
+    print("Mode : " + ("détail par CCN" if DETAIL_PAR_CCN else "résumé (1 alerte de synthèse)"))
 
     if args.json:
         with open(args.json, "w", encoding="utf-8") as f:

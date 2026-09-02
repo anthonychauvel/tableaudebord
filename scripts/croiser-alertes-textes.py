@@ -47,11 +47,15 @@ def idccs_en_alerte(donnees_path):
         return {}
     en_alerte = {}
     for section in d.get("sections", []):
-        # On se limite aux sections où un IDCC "en attente" a du sens : les
-        # grilles. (Pas les sections techniques comme la syntaxe JS.)
-        if section.get("id") not in ("grilles", "age"):
+        # Uniquement les grilles réellement EN ATTENTE d'un texte : périmée ou
+        # à créer. Pas la section âge (une référence qui vieillit sans
+        # successeur au fonds n'attend rien), pas les états informatifs
+        # (sous SMIC / ancienne / sans date), pas les sections techniques.
+        if section.get("id") != "grilles":
             continue
         for a in section.get("alertes", []):
+            if a.get("categorie") not in ("grille-perimee", "grille-a-creer"):
+                continue
             m = re.search(r"\bIDCC\s+(\d{1,5})\b", a.get("titre", ""))
             if m:
                 en_alerte.setdefault(m.group(1), a.get("titre", ""))
@@ -84,6 +88,24 @@ def cherche_idcc_dans_titre(idcc, titre):
     return re.search(r"(?<!\d)" + re.escape(idcc) + r"(?!\d)", titre) is not None
 
 
+_MOTS_SALAIRE = ("salaire", "salariale", "salarial", "rémunération", "remuneration",
+                 "minima", "minimum", "minimaux", "barème", "bareme", "grille de salaire",
+                 "grille salariale", "valeur du point", "valeur de point",
+                 "pouvoir d'achat", "augmentation", "traitement", "rmh", "rag", "rmg")
+_MOTS_EXTENSION = ("extension", "élargissement", "elargissement",
+                   "agrément", "agrement", "agréé", "agree")
+
+
+def classer_texte(titre):
+    """salaire / extension / autre — le mot de salaire l'emporte sur extension."""
+    t = titre.lower()
+    if any(mot in t for mot in _MOTS_SALAIRE):
+        return "salaire"
+    if any(mot in t for mot in _MOTS_EXTENSION):
+        return "extension"
+    return "autre"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--donnees", required=True, help="donnees.json (les alertes déjà calculées)")
@@ -108,37 +130,48 @@ def main():
 
     print(f"{len(en_alerte)} CCN en alerte, {len(textes)} texte(s) JORF/ACCO à croiser.")
 
+    _MOIS = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4,
+             "mai": 5, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
+             "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12,
+             "decembre": 12}
+
+    def _date_iso(titre):
+        m = re.search(r"\bdu\s+(\d{1,2})(?:er|ère|ème|e|nd)?\s+([a-zûéèà]+)\s+(20\d\d)", titre.lower())
+        if m and m.group(2) in _MOIS:
+            return f"{int(m.group(3)):04d}-{_MOIS[m.group(2)]:02d}-{int(m.group(1)):02d}"
+        return None
+
     n_liens = 0
     for idcc, titre_alerte in sorted(en_alerte.items(), key=lambda kv: int(kv[0])):
         correspondances = [(tid, titre, source) for tid, titre, source in textes
                            if cherche_idcc_dans_titre(idcc, titre)]
         if not correspondances:
             continue
+        pertinents, autres, extensions = [], [], []
+        for tid, titre, source in correspondances:
+            cls = classer_texte(titre)
+            (pertinents if cls == "salaire"
+             else autres if cls == "autre" else extensions).append((titre, source))
+        if not pertinents and not autres:
+            # Rien que des arrêtés d'extension/agrément : pas de minima nouveaux.
+            continue
         n_liens += 1
-        # Une alerte par CCN, listant le(s) texte(s) trouvé(s).
-        lignes = []
-        for tid, titre, source in correspondances[:5]:
-            lignes.append(f"• [{source}] {titre[:90]}")
+        a_montrer = pertinents + autres
+        lignes = [f"• 💶 [{s}] {t[:90]}" for t, s in pertinents[:5]]
+        lignes += [f"• [{s}] {t[:90]}" for t, s in autres[:5]]
+        if extensions:
+            lignes.append(f"• (+ {len(extensions)} arrêté(s) d'extension/agrément, sans nouveaux minima)")
         detail = (f"Cette convention est déjà en alerte (« {titre_alerte} »), et un ou "
                   f"plusieurs textes viennent de paraître qui la mentionnent — "
                   f"probablement de quoi lever l'alerte :\n" + "\n".join(lignes))
-        # Date du texte le plus récent parmi les correspondances, pour la
-        # coupure par date dans exceptions.json (mode « jusqu_au »). On lit
-        # « du J MOIS AAAA » dans le titre ; à défaut, pas de date_texte et
-        # l'alerte reste visible.
-        _MOIS = {"janvier": 1, "février": 2, "fevrier": 2, "mars": 3, "avril": 4,
-                 "mai": 5, "juin": 6, "juillet": 7, "août": 8, "aout": 8,
-                 "septembre": 9, "octobre": 10, "novembre": 11, "décembre": 12,
-                 "decembre": 12}
-        dates_iso = []
-        for _tid, _titre, _src in correspondances:
-            m = re.search(r"\bdu\s+(\d{1,2})\s+([a-zûéèà]+)\s+(20\d\d)", _titre.lower())
-            if m and m.group(2) in _MOIS:
-                dates_iso.append(f"{int(m.group(3)):04d}-{_MOIS[m.group(2)]:02d}-{int(m.group(1)):02d}")
+        # Date du texte PERTINENT le plus récent (extensions exclues), pour la
+        # coupure par date d'exceptions.json (mode « jusqu_au »).
+        dates_iso = [d for d in (_date_iso(t) for t, _ in a_montrer) if d]
         alerte = {
             "categorie": "texte-pour-ccn-en-alerte",
-            "gravite": "haute",  # c'est exactement ce qu'on veut voir en priorité
-            "titre": f"IDCC {idcc} : un texte est paru pour cette CCN en attente",
+            "gravite": "haute" if pertinents else "moyenne",
+            "titre": (f"IDCC {idcc} : {'avenant salaires' if pertinents else 'texte'} "
+                      f"paru pour cette CCN en attente"),
             "detail": detail,
         }
         if dates_iso:

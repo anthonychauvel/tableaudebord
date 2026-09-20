@@ -338,7 +338,14 @@ def main():
         sections.append({"id": "guide", "titre": "Guide SEO",
             **fusionner(
                 lancer("verifier-guide.py", ["--guide", args.guide, "--hs", args.hs]),
-                lancer("verifier-liens.py", ["--cible", args.guide, "--nom-module", "liens-guide"]),
+                # Les pages d'aperçu recopient la structure de l'application
+                # pour donner envie de la télécharger : leurs boutons pointent
+                # vers des fichiers de l'app, absents du guide, et ne sont pas
+                # censés fonctionner depuis ici. Les contrôler produisait 118
+                # alertes — la totalité de cette section, entièrement fausse.
+                lancer("verifier-liens.py", ["--cible", args.guide,
+                                              "--nom-module", "liens-guide",
+                                              "--ignorer", "apercu*.html"]),
             )})
     else:
         sections.append({"id": "guide", "titre": "Guide SEO", "alertes": [],
@@ -387,7 +394,11 @@ def main():
     # (qui, lui, est entièrement régénéré à chaque run -- l'empreinte doit
     # survivre d'un run à l'autre, donc vivre ailleurs).
     contenu_args = ["--hs", args.hs, "--fonds", args.droit,
-                    "--empreintes", os.path.join(os.path.dirname(args.out), "empreintes-articles.json")]
+                    "--empreintes", os.path.join(os.path.dirname(args.out), "empreintes-articles.json"),
+                    # Le relevé complet des fichiers citant un article qui a
+                    # changé : trop long pour tenir dans une alerte (L3121-36
+                    # est cité dans 401 fichiers), gardé à côté et committé.
+                    "--releves", os.path.join(os.path.dirname(args.out), "releves")]
     if args.guide:
         contenu_args += ["--guide", args.guide]
     sections.append({"id": "contenu", "titre": "Contenu des articles cités",

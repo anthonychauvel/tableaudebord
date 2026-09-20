@@ -15,11 +15,26 @@ Portée volontairement limitée aux liens SÛRS à vérifier : relatifs, vers un
 fichier .html du même dépôt. Les ancres (#section), les liens externes
 (http/https) et les protocoles spéciaux (mailto:, tel:) sont ignorés.
 
+LES PAGES D'APERÇU SONT HORS PORTÉE (--ignorer)
+Le guide contient des pages qui montrent à quoi ressemble l'APPLICATION :
+apercu.html, apercu-sommaire.html, apercu-nouveautes.html. Elles recopient la
+structure de l'app — « heures/index.html », « outils/module-astreintes.html »,
+« module6/index.html » — pour donner envie de la télécharger. Ces fichiers
+n'existent évidemment pas dans le dépôt du guide, et c'est voulu : ces boutons
+ne sont pas censés fonctionner depuis le guide, dont le seul rôle est de mener
+au téléchargement.
+
+Les compter comme des liens cassés produisait 118 alertes, soit la TOTALITÉ de
+la section « Guide SEO » du tableau de bord. Une section entièrement fausse
+apprend à ne plus la lire, et le jour où un vrai lien casse dans le guide, il
+se perd au milieu du bruit.
+
 USAGE
     python3 verifier-liens.py --cible /chemin/vers/hs/outils --json sortie.json
-    python3 verifier-liens.py --cible /chemin/vers/Guide --json sortie.json
+    python3 verifier-liens.py --cible /chemin/vers/Guide --ignorer 'apercu*.html' --json sortie.json
 """
 import argparse
+import fnmatch
 import json
 import os
 import re
@@ -48,17 +63,29 @@ def main():
     ap.add_argument("--cible", required=True, help="Dossier à parcourir (récursif)")
     ap.add_argument("--json", help="Écrire le résultat en JSON à ce chemin")
     ap.add_argument("--nom-module", default="liens-internes")
+    ap.add_argument("--ignorer", action="append", default=[], metavar="MOTIF",
+                     help="Motif de fichier à ne pas contrôler, façon glob "
+                          "(ex. 'apercu*.html'). Répétable.")
     args = ap.parse_args()
 
     resultat = {"module": args.nom_module, "alertes": []}
     n_fichiers = 0
+    n_ignores = 0
 
     for base, _, fichiers in os.walk(args.cible):
         for nom in fichiers:
             if not nom.endswith(".html"):
                 continue
-            n_fichiers += 1
             chemin = os.path.join(base, nom)
+            # Le motif est testé sur le nom seul ET sur le chemin relatif, pour
+            # pouvoir viser soit une famille de fichiers ('apercu*.html'), soit
+            # un dossier entier ('vitrine/*').
+            rel_test = os.path.relpath(chemin, args.cible).replace(os.sep, "/")
+            if any(fnmatch.fnmatch(nom, m) or fnmatch.fnmatch(rel_test, m)
+                   for m in args.ignorer):
+                n_ignores += 1
+                continue
+            n_fichiers += 1
             # Chemin RELATIF à la racine scannée : deux fichiers peuvent porter
             # le même nom dans des dossiers différents (outils.html existe à la
             # fois à la racine et, par erreur, dans outils/) — le nom seul ne
@@ -73,7 +100,9 @@ def main():
                     "detail": "Ce lien ne se révèle qu'au clic — rien ne le signale visuellement.",
                 })
 
-    print(f"{n_fichiers} fichiers parcourus, {len(resultat['alertes'])} lien(s) cassé(s).")
+    print(f"{n_fichiers} fichiers parcourus, {len(resultat['alertes'])} lien(s) cassé(s)"
+          + (f" ({n_ignores} fichier(s) hors portée : {', '.join(args.ignorer)})."
+             if n_ignores else "."))
     for a in resultat["alertes"][:15]:
         print(f"  {a['titre']}")
 

@@ -61,7 +61,29 @@ jobs:
           # « Historique » affichaient "indisponible" en prod : le fetch ne
           # trouvait rien sur le serveur. sw.js aussi (bump de cache), sinon
           # la coquille de l'app resterait sur l'ancienne version.
-          git add donnees.json sw.js ccn-regles.json historique/
+          #
+          # MÊME PANNE, DEUXIÈME ENDROIT (corrigé le 20/09/2026).
+          # empreintes-articles.json et empreintes-fichiers.json étaient dans
+          # le même cas. Sauf qu'ici la conséquence ne se voyait NULLE PART :
+          # le runner démarre à neuf à chaque fois, donc sans le fichier commité
+          # chaque article et chaque fichier étaient traités comme vus pour la
+          # première fois -- « empreinte enregistrée, pas d'alerte ». Les deux
+          # scripts de détection de changement tournaient depuis le début sans
+          # avoir jamais pu alerter une seule fois, et le tableau affichait un
+          # 0 parfaitement rassurant.
+          #
+          # C'est la raison pour laquelle ces deux fichiers doivent être
+          # committés : ils SONT la mémoire d'un run à l'autre.
+          #
+          # Un par un, et seulement s'il existe : « git add releves/ » sur un
+          # dossier absent sort en erreur 128 et, bash tournant avec -e sous
+          # Actions, ferait échouer toute l'étape avant le commit. Or releves/
+          # n'apparaît que le jour où un article change.
+          for cible in donnees.json sw.js ccn-regles.json historique/ \
+                       empreintes-articles.json empreintes-fichiers.json \
+                       releves/; do
+            [ -e "$cible" ] && git add "$cible" || true
+          done
           git diff --cached --quiet && echo "Aucun changement." || \
             git commit -m "Données de veille — $(date -u +%Y-%m-%d\ %H:%M) UTC"
           git push

@@ -14,6 +14,7 @@ on:
 
 permissions:
   contents: write
+  issues: write                 # pour le ticket « le droit cité a changé »
 
 jobs:
   regenerer:
@@ -87,3 +88,32 @@ jobs:
           git diff --cached --quiet && echo "Aucun changement." || \
             git commit -m "Données de veille — $(date -u +%Y-%m-%d\ %H:%M) UTC"
           git push
+
+      # Le tableau de bord est muet : il écrit donnees.json et attend qu'on
+      # l'ouvre. Tant qu'il produisait 178 alertes dont 118 fausses, on
+      # l'ouvrait pour faire le tri ; maintenant qu'il est fiable, il est
+      # silencieux presque tout le temps -- et c'est ça qui fait qu'on arrête
+      # de l'ouvrir, juste avant le jour où il a quelque chose à dire.
+      #
+      # APRÈS le push, volontairement : le ticket renvoie vers des fichiers
+      # qui doivent déjà être en ligne quand tu cliques dessus.
+      - name: Le droit cité a-t-il changé ?
+        id: droit
+        run: python3 scripts/alerter-droit.py --donnees donnees.json --sortie /tmp/ticket.md
+
+      # Un ticket NEUF à chaque détection, et jamais refermé automatiquement :
+      # un changement de droit est un événement qui demande une relecture, pas
+      # un état qui se répare tout seul. Tes tickets fermés deviennent la liste
+      # de ce que tu as déjà traité.
+      - name: Ouvrir le ticket
+        if: steps.droit.outputs.alerte == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create droit-modifie \
+            --description "Un article cité par l'écosystème a changé" \
+            --color 0E8A16 2>/dev/null || true
+          gh issue create \
+            --title "${{ steps.droit.outputs.titre }}" \
+            --body-file /tmp/ticket.md \
+            --label droit-modifie

@@ -28,5 +28,19 @@
     "mode": "jusqu_au",
     "date": "2026-08-10",
     "note": "Textes déjà parus au 10/08/2026 pour les CCN en attente (surtout des arrêtés d'extension, sans nouveaux minima). Ne re-signaler que les textes publiés APRÈS le 10/08/2026."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 3109",
+    "mode": "jusqu_au",
+    "date": "2026-09-21",
+    "note": "L'accord du 5/03/2026 ne vise que le « petit champ » des pâtes alimentaires (ex-IDCC 1987), pas la grille principale des 5 branches. Revérifié le 21/09/2026. Un texte arrivé après cette date réapparaît."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 1480",
+    "mode": "jusqu_au",
+    "date": "2026-09-21",
+    "note": "Journalistes : le texte « plus récent » concerne la presse d'information spécialisée, un autre sous-secteur. À trancher à part : la grille reprend le barème des agences de presse (avenant n° 3 du 9/07/2024) alors que sa note cite l'avenant n° 1 PHR du 10/10/2025."
   }
 ]

@@ -229,7 +229,9 @@ def croiser_en_memoire(sections, dossier_jorf, dossier_acco):
     #    alerte d'âge n'est pas quelque chose qu'un avenant vient lever -> on
     #    ne la croise pas (c'était la 1re source de faux positifs, ~200 IDCC
     #    de la section âge injectés ici).
-    ACTIONNABLES = ("grille-perimee", "grille-a-creer")
+    # « grille-sur-texte-ancien » (21/09/2026) : grille dont les MONTANTS sont
+    # ceux d'un texte remplacé -- aussi actionnable qu'une grille périmée.
+    ACTIONNABLES = ("grille-perimee", "grille-a-creer", "grille-sur-texte-ancien")
     en_alerte = {}
     for section in sections:
         if section.get("id") != "grilles":

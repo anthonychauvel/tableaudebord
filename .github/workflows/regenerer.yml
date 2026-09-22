@@ -46,6 +46,17 @@ jobs:
         with:
           python-version: "3.11"
 
+      # P6 (22/09/2026) — verifier-pages.py ouvre VRAIMENT chaque page de l'appli
+      # dans Chromium. Sans cette étape, le script se contente du contrôle du
+      # précache et le signale dans le tableau (« playwright non installé ») :
+      # continue-on-error pour qu'une panne d'installation ne bloque jamais
+      # la régénération du reste.
+      - name: Installer Playwright + Chromium (ouverture des pages)
+        continue-on-error: true
+        run: |
+          pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium
+
       - name: Construire donnees.json
         run: |
           cd scripts

@@ -164,9 +164,22 @@ def analyse_montants(grille, clauses, smic):
     None
         pas assez de montants pour conclure (point, horaire non converti…).
     """
-    montants = [r.get("b") for r in grille.get("g", [])
-                if isinstance(r.get("b"), (int, float)) and r.get("t") != "pct"
-                and r["b"] >= 500 and not (smic and abs(r["b"] - smic) < 0.01)]
+    # P5 (22/09/2026) : les lignes au plancher SMIC portent maintenant leur vrai
+    # montant conventionnel dans « cv » (celui qui figure dans le texte) ;
+    # « sm » = plancher dont le montant conventionnel n'est pas connu.
+    # Avant, on écartait ces lignes en reconnaissant 1 867,02 € exactement : ça
+    # cassait à la prochaine revalorisation (b resterait à 1 867,02, plus égal
+    # au nouveau SMIC, et serait pris pour un montant de grille).
+    montants = []
+    for r in grille.get("g", []):
+        if r.get("t") == "pct" or r.get("sm"):
+            continue
+        v = r.get("cv") if isinstance(r.get("cv"), (int, float)) else r.get("b")
+        if not isinstance(v, (int, float)) or v < 500:
+            continue
+        if "cv" not in r and smic and abs(v - smic) < 0.01:
+            continue    # ancien format : plancher reconnu à la valeur exacte
+        montants.append(v)
     if len(montants) < 3:
         return None
     notes = []

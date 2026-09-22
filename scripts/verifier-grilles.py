@@ -26,6 +26,13 @@ spectacle). Comparer ces montants au SMIC mensuel produirait 5 fausses alertes
 sur 7. Le contrôle ne compare donc que les montants plausiblement mensuels,
 au-dessus du seuil MONTANT_MENSUEL_MINI.
 
+PLANCHER SMIC GÉRÉ À L'AFFICHAGE (P5, 22/09/2026)
+Les lignes au plancher SMIC portent « cv » (montant conventionnel connu) ou
+« sm » (montant non repris) : GrillePaye les affiche au SMIC en vigueur. Elles
+ne sont pas des anomalies et restent justes après une revalorisation : elles
+sont donc exclues de la comparaison. Sans ça, le jour où le SMIC change, les
+398 lignes restées à l'ancienne valeur sortiraient toutes « sous le SMIC ».
+
 USAGE
     python3 verifier-grilles.py                      # rapport à l'écran
     python3 verifier-grilles.py --out rapport.md     # rapport dans un fichier
@@ -131,7 +138,9 @@ def main():
             anciennes.append((idcc, v.get("d"), mois_ecoules(d, ref)))
 
         montants = [r.get("b") for r in v.get("g", [])
-                    if isinstance(r.get("b"), (int, float)) and r.get("t") != "pct"]
+                    if isinstance(r.get("b"), (int, float)) and r.get("t") != "pct"
+                    # P5 : plancher SMIC géré à l'affichage (cv / sm), voir en tête.
+                    and not r.get("sm") and "cv" not in r]
         if not montants:
             continue
         mini = min(montants)

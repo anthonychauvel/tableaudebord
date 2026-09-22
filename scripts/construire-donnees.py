@@ -305,6 +305,85 @@ def croiser_en_memoire(sections, dossier_jorf, dossier_acco):
     return {"alertes": alertes}
 
 
+# --- Revalorisation du SMIC (P5, 22/09/2026) --------------------------------
+# GrillePaye calcule désormais le plancher SMIC à l'affichage : une
+# revalorisation ne demande plus que de changer UNE valeur dans l'appli. Encore
+# faut-il savoir qu'elle a eu lieu -- en cours d'année aussi (01/06/2026,
+# +2,41 %). On guette donc au fonds le texte JORF « portant relèvement du
+# salaire minimum de croissance » plus récent que le SMIC de l'appli.
+_SMIC_TITRE = re.compile(r"rel[eè]vement du salaire minimum de croissance", re.I)
+
+
+def _iso_fr(txt):
+    """« 01/06/2026 » -> « 2026-06-01 » ; sinon None."""
+    m = re.match(r"\s*(\d{1,2})/(\d{1,2})/(\d{4})", str(txt or ""))
+    return f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
+
+
+def verifier_smic(dossier_hs, dossier_jorf):
+    """Deux contrôles, chacun une alerte au plus :
+    - un texte de revalorisation du SMIC est arrivé au fonds, daté APRÈS la
+      date d'effet du SMIC de l'appli (la signature précède toujours l'effet :
+      le décret du 17/12 pour le 01/01 ne déclenche donc rien une fois l'appli
+      à jour) ;
+    - l'appli n'a pas la même valeur à ses deux endroits (SMIC_DEF dans
+      GrillePaye/index.html, _smic dans ccn-data.json) : l'un a été oublié."""
+    import glob as _glob
+    alertes = []
+    gp = os.path.join(dossier_hs, "GrillePaye")
+    try:
+        data = json.load(open(os.path.join(gp, "ccn-data.json"), encoding="utf-8"))
+    except Exception as e:
+        return {"alertes": [], "erreur": f"ccn-data.json illisible : {e}"}
+    smic, smic_date = data.get("_smic"), data.get("_smic_date")
+    smic_iso = _iso_fr(smic_date)
+
+    try:
+        idx = open(os.path.join(gp, "index.html"), encoding="utf-8", errors="replace").read()
+        m = re.search(r"const SMIC_DEF\s*=\s*([\d.]+)", idx)
+        smic_def = float(m.group(1)) if m else None
+    except Exception:
+        smic_def = None
+    if smic_def is not None and smic is not None and abs(smic_def - float(smic)) > 0.001:
+        alertes.append({
+            "categorie": "smic-incoherent",
+            "gravite": "haute",
+            "titre": "SMIC : valeurs différentes dans l'appli",
+            "detail": (f"GrillePaye/index.html (SMIC_DEF) : {smic_def} € — "
+                       f"ccn-data.json (_smic) : {smic} €. Les deux doivent être identiques."),
+        })
+
+    textes = []
+    if dossier_jorf and os.path.isdir(dossier_jorf):
+        for chemin in _glob.glob(os.path.join(dossier_jorf, "*.json")):
+            if os.path.basename(chemin).startswith("_"):
+                continue
+            try:
+                titre = json.load(open(chemin, encoding="utf-8")).get("titre") or ""
+            except Exception:
+                continue
+            if _SMIC_TITRE.search(titre):
+                d = date_iso_du_titre(titre)
+                if d:
+                    textes.append((d, titre.strip()))
+    if smic_iso:
+        recents = sorted((t for t in textes if t[0] > smic_iso), reverse=True)
+        if recents:
+            d, titre = recents[0]
+            alertes.append({
+                "categorie": "smic-revalorisation",
+                "gravite": "haute",
+                "titre": "SMIC : texte de revalorisation plus récent que l'appli",
+                "detail": (f"« {titre} ». L'appli affiche encore {smic} € (au {smic_date}). "
+                           "À faire : SMIC_DEF, SDATE_DEF et SSRC_DEF dans GrillePaye/index.html, "
+                           "_smic et _smic_date dans ccn-data.json (puis _B64), CACHE_NAME dans sw.js "
+                           "— voir RUNBOOK.md de hs. Aucune ligne de grille à reprendre."),
+                "date_texte": d,
+            })
+    print(f"SMIC : {len(textes)} texte(s) de revalorisation au fonds, {len(alertes)} alerte(s).")
+    return {"alertes": alertes}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hs", required=True)
@@ -320,6 +399,10 @@ def main():
             lancer("adaptateur-sante-grilles.py", ["--racine", args.hs,
                    "--idcc-suivis", os.path.join(args.droit, "idcc_list.txt")]),
         )})
+    # Revalorisation du SMIC (P5) : un décret ou arrêté JORF plus récent que
+    # le SMIC de l'appli, ou deux valeurs différentes dans l'appli.
+    sections.append({"id": "smic", "titre": "💶 Revalorisation du SMIC",
+        **verifier_smic(args.hs, os.path.join(args.droit, "output", "jorf"))})
     sections.append({"id": "droit", "titre": "MonLegiTexte",
         **lancer("verifier-droit.py", ["--fonds", args.droit])})
     sections.append({"id": "modules", "titre": "8 modules",
@@ -369,6 +452,13 @@ def main():
     # 8 modules, GrillePaye et les 105 outils.
     sections.append({"id": "syntaxe", "titre": "Syntaxe JS (page entière cassée)",
         **lancer("verifier-syntaxe-js.py", ["--hs", args.hs])})
+
+    # Pages ouvertes pour de vrai (P6) : la syntaxe peut être juste et la page
+    # planter quand même au chargement (variable inconnue, fichier absent).
+    # Contrôle aussi le précache de sw.js (pages et fichiers qu'elles chargent).
+    # Besoin de Playwright + Chromium sur le runner (voir regenerer.yml).
+    sections.append({"id": "pages", "titre": "Pages qui ne se chargent plus (ouverture réelle)",
+        **lancer("verifier-pages.py", ["--hs", args.hs])})
 
     # Structure du guide et des outils : ce qui restait explicitement noté
     # "hors périmètre" dans les tout premiers lots de ce tableau de bord.

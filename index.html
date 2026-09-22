@@ -15,7 +15,7 @@
 :root{
   --ink:#0A0D11; --ink2:#12161B; --ink3:#1B2027; --edge:#2E3742;
   --gold:#f0c040; --txt:#E8EDF2; --txt2:#8A97A5;
-  --haute:#e05c5c; --moyenne:#e0a95c; --basse:#6b7684;
+  --haute:#ff6b6b; --moyenne:#ffb454; --basse:#7d8a99; --ok:#4cd585; --bleu:#5aa9ff; --violet:#a88bff;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{height:100%;}
@@ -25,70 +25,140 @@ body{
     radial-gradient(1100px 620px at 12% -8%, rgba(120,150,190,.16), transparent 60%),
     radial-gradient(900px 520px at 88% 108%, rgba(190,150,110,.10), transparent 62%),
     linear-gradient(168deg, #14181D 0%, #0D1116 46%, #0A0D11 100%);
+  background-attachment:fixed;
   color:var(--txt);
-  min-height:100vh; padding-bottom:calc(24px + env(safe-area-inset-bottom));
+  min-height:100vh; padding-bottom:calc(84px + env(safe-area-inset-bottom));
 }
-.hdr{padding:calc(16px + env(safe-area-inset-top)) 18px 10px;}
-.hdr h1{font-size:19px;font-weight:800;}
-.hdr .sub{font-size:12px;color:var(--txt2);margin-top:2px;}
-.resume{display:flex;gap:10px;padding:4px 18px 14px;overflow-x:auto;}
-.resume .pill{flex-shrink:0;background:var(--ink3);border:1px solid var(--edge);
-  border-radius:12px;padding:8px 13px;text-align:center;min-width:64px;}
-.resume .pill b{display:block;font-size:18px;}
-.resume .pill span{font-size:9.5px;color:var(--txt2);text-transform:uppercase;letter-spacing:.4px;}
-.resume .pill.haute b{color:var(--haute);}
-.resume .pill.moyenne b{color:var(--moyenne);}
-.resume .pill.basse b{color:var(--basse);}
-.resume .pill.nouveau{border-color:var(--haute);}
-.resume .pill.nouveau b{color:var(--haute);}
+button{font-family:inherit;}
+a{color:var(--bleu);}
 
-.section{margin:0 14px 12px;background:linear-gradient(160deg,#1B2027,#12161B);
-  border:1px solid var(--edge);border-radius:16px;overflow:hidden;}
-.section-hd{display:flex;align-items:center;justify-content:space-between;
-  padding:13px 15px;cursor:pointer;}
-.section-hd .titre{font-size:14.5px;font-weight:700;}
-.section-hd .compte{font-size:11px;color:var(--txt2);margin-top:1px;}
-.badge{font-size:11px;font-weight:800;padding:3px 9px;border-radius:99px;flex-shrink:0;}
-.badge.zero{background:rgba(255,255,255,.05);color:var(--txt2);}
-.badge.non-zero{background:rgba(224,92,92,.15);color:var(--haute);}
-.chev{transition:transform .2s;color:var(--txt2);margin-left:8px;}
-.section.open .chev{transform:rotate(90deg);}
-.corps{max-height:0;overflow:hidden;transition:max-height .25s ease;}
-.alerte{padding:11px 15px;border-top:1px solid var(--edge);}
-.alerte.nouveau{border-left:3px solid var(--haute);background:rgba(224,92,92,0.06);}
-.alerte .badge-nouveau{display:inline-block;background:var(--haute);color:#fff;font-size:9px;
-  font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;letter-spacing:.3px;vertical-align:middle;}
-.alerte .t{font-size:13px;font-weight:600;line-height:1.35;display:flex;gap:7px;align-items:flex-start;}
-.alerte .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:4px;}
-.alerte .dot.haute{background:var(--haute);}
-.alerte .dot.moyenne{background:var(--moyenne);}
-.alerte .dot.basse{background:var(--basse);}
-/* pre-line : les alertes de contenu modifié contiennent des retours à la ligne
-   (le bloc AVANT — / APRÈS — de verifier-contenu-articles.py). Sans cette
-   règle, HTML les écrase et les deux versions du texte s'affichent collées en
-   un seul paragraphe, ce qui rend la comparaison illisible. pre-line garde les
-   sauts de ligne et continue de replier les espaces : les alertes qui n'en ont
-   pas s'affichent exactement comme avant. */
-.alerte .d{font-size:11.5px;color:var(--txt2);margin-top:3px;margin-left:14px;line-height:1.5;white-space:pre-line;}
-.alerte .conseil{font-size:11px;color:#7FA88A;margin-top:5px;margin-left:14px;line-height:1.45;
-  padding-left:8px;border-left:2px solid #2E4A38;}
-.vide{padding:16px 15px;font-size:12.5px;color:var(--txt2);text-align:center;}
-.non-construit{padding:14px 15px;font-size:12px;color:var(--txt2);text-align:center;
-  border-top:1px dashed var(--edge);}
-.pied{padding:16px 18px 4px;font-size:10.5px;color:var(--txt2);text-align:center;}
-/* Sous-groupes par ancienneté / nouveauté à l'intérieur d'une section */
-.grp{border-top:1px solid var(--edge);}
-.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px 15px;font-size:12px;font-weight:700;color:var(--txt);}
+/* ── En-tête ── */
+.hdr{padding:calc(14px + env(safe-area-inset-top)) 18px 6px;display:flex;align-items:center;gap:10px;}
+.hdr .logo{font-size:26px;}
+.hdr h1{font-size:18px;font-weight:800;line-height:1.1;}
+.hdr .sub{font-size:11.5px;color:var(--txt2);margin-top:2px;}
+.hdr .sp{flex:1;}
+.btn-mini{background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:12px;font-weight:700;
+  padding:8px 11px;border-radius:11px;cursor:pointer;white-space:nowrap;}
+
+/* ── Vues ── */
+.vue{display:none;}
+.vue.active{display:block;animation:apparait .25s ease;}
+@keyframes apparait{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── Météo (héros) ── */
+.meteo{margin:8px 14px 14px;border-radius:22px;padding:18px 18px 16px;position:relative;overflow:hidden;
+  border:1px solid rgba(255,255,255,.08);}
+.meteo.calme{background:linear-gradient(140deg,#123524,#0f2a1d 60%,#10251c);}
+.meteo.regarder{background:linear-gradient(140deg,#3a2a10,#2a1f0f 60%,#221a0f);}
+.meteo.urgent{background:linear-gradient(140deg,#3b1417,#2a1012 60%,#210d0f);}
+.meteo .emo{font-size:46px;line-height:1;}
+.meteo h2{font-size:21px;font-weight:800;margin-top:8px;line-height:1.2;}
+.meteo p{font-size:13px;color:rgba(255,255,255,.78);margin-top:6px;line-height:1.45;}
+.meteo .cta{margin-top:14px;display:inline-flex;align-items:center;gap:8px;background:#fff;color:#111;border:none;
+  font-size:14px;font-weight:800;padding:11px 16px;border-radius:14px;cursor:pointer;}
+.meteo .bulle{position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.10),transparent 70%);}
+
+/* ── Progression ── */
+.prog{margin:0 14px 16px;background:var(--ink3);border:1px solid var(--edge);border-radius:16px;padding:12px 14px;}
+.prog .l{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2);margin-bottom:8px;}
+.prog .l b{color:var(--txt);}
+.barre{height:9px;border-radius:99px;background:rgba(255,255,255,.07);overflow:hidden;}
+.barre i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--ok),#9be7b8);transition:width .4s;}
+
+/* ── Titres de bloc ── */
+.bloc-t{display:flex;align-items:center;gap:8px;margin:18px 18px 10px;font-size:15px;font-weight:800;}
+.bloc-t small{font-weight:600;color:var(--txt2);font-size:11.5px;}
+
+/* ── Cartes mission ── */
+.carte{margin:0 14px 12px;background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid var(--edge);
+  border-radius:18px;overflow:hidden;}
+.carte.fait{opacity:.55;}
+.carte-hd{display:flex;gap:12px;padding:14px 14px 10px;align-items:flex-start;}
+.carte .ico{flex:0 0 44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:22px;
+  background:rgba(255,255,255,.06);}
+.carte .ico.haute{background:rgba(255,107,107,.16);}
+.carte .ico.moyenne{background:rgba(255,180,84,.16);}
+.carte .ico.basse{background:rgba(125,138,153,.16);}
+.carte .quoi{font-size:14px;font-weight:800;line-height:1.3;}
+.carte .qui{font-size:12px;color:var(--txt2);margin-top:3px;line-height:1.35;word-break:break-word;}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px;}
+.tag{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:99px;background:rgba(255,255,255,.07);color:var(--txt2);}
+.tag.haute{background:rgba(255,107,107,.16);color:var(--haute);}
+.tag.moyenne{background:rgba(255,180,84,.16);color:var(--moyenne);}
+.tag.basse{background:rgba(125,138,153,.18);color:#b5c0cc;}
+.tag.nouveau{background:var(--haute);color:#fff;}
+.tag.fait{background:rgba(76,213,133,.18);color:var(--ok);}
+.pourquoi{margin:0 14px 10px;font-size:12.5px;line-height:1.5;color:#c9d3dd;}
+.etapes{margin:0 14px 10px;padding:10px 12px;background:rgba(90,169,255,.07);border:1px solid rgba(90,169,255,.18);border-radius:12px;}
+.etapes .et{font-size:11px;font-weight:800;color:var(--bleu);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+.etapes ol{padding-left:18px;}
+.etapes li{font-size:12.5px;line-height:1.5;margin:3px 0;}
+.detail-brut{margin:0 14px 10px;}
+.detail-brut summary{font-size:11.5px;color:var(--txt2);cursor:pointer;list-style:none;}
+.detail-brut summary::-webkit-details-marker{display:none;}
+.detail-brut summary::before{content:"▸ ";}
+.detail-brut[open] summary::before{content:"▾ ";}
+.detail-brut .txt{font-size:11.5px;color:var(--txt2);margin-top:6px;line-height:1.5;white-space:pre-line;word-break:break-word;}
+.actions{display:flex;gap:8px;flex-wrap:wrap;padding:4px 14px 14px;}
+.act{flex:1 1 auto;min-width:0;background:rgba(255,255,255,.06);border:1px solid var(--edge);color:var(--txt);
+  font-size:12.5px;font-weight:700;padding:10px 10px;border-radius:12px;cursor:pointer;text-align:center;text-decoration:none;}
+.act.ok{background:rgba(76,213,133,.14);border-color:rgba(76,213,133,.35);color:var(--ok);}
+.act.lien{color:var(--bleu);}
+
+/* ── Thèmes ── */
+.tuiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 14px 14px;}
+.tuile{background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid var(--edge);border-radius:18px;padding:13px;
+  cursor:pointer;text-align:left;color:var(--txt);min-height:96px;display:flex;flex-direction:column;justify-content:space-between;}
+.tuile .te{font-size:24px;}
+.tuile .tn{font-size:12.5px;font-weight:800;line-height:1.25;margin-top:6px;}
+.tuile .tc{font-size:11px;color:var(--txt2);margin-top:3px;}
+.tuile.alerte-h{border-color:rgba(255,107,107,.45);}
+.tuile.alerte-m{border-color:rgba(255,180,84,.4);}
+.tuile .pastille{display:inline-block;margin-left:4px;font-size:10px;font-weight:800;padding:1px 7px;border-radius:99px;}
+.retour{display:inline-flex;align-items:center;gap:6px;margin:6px 16px 10px;background:none;border:none;color:var(--bleu);
+  font-size:14px;font-weight:700;cursor:pointer;}
+.grp{margin:0 0 6px;}
+.grp>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:10px 18px;font-size:12.5px;font-weight:800;color:var(--txt);}
 .grp>summary::-webkit-details-marker{display:none;}
-.grp>summary .gl{display:flex;align-items:center;gap:7px;}
-.grp>summary .gl::before{content:"\25B8";color:var(--txt2);font-size:10px;}
-.grp[open]>summary .gl::before{content:"\25BE";}
-.grp-n{background:rgba(255,255,255,.06);border-radius:99px;padding:1px 9px;font-size:11px;font-weight:800;color:var(--txt2);flex-shrink:0;}
+.grp>summary .gl::before{content:"\25B8  ";color:var(--txt2);}
+.grp[open]>summary .gl::before{content:"\25BE  ";}
+.grp-n{background:rgba(255,255,255,.07);border-radius:99px;padding:1px 9px;font-size:11px;font-weight:800;color:var(--txt2);}
 .grp.g-nouveau>summary{color:var(--haute);}
-.grp.g-nouveau .grp-n{background:rgba(224,92,92,.15);color:var(--haute);}
-.grp.g-v12>summary{color:var(--moyenne);}
-.grp .alerte:first-child{border-top:none;}
-.age-chip{display:inline-block;margin-left:auto;font-size:9.5px;color:var(--txt2);background:rgba(255,255,255,.05);border:1px solid var(--edge);border-radius:5px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
+
+/* ── Lexique ── */
+.lex{margin:0 14px 12px;display:grid;gap:8px;}
+.lex details{background:var(--ink3);border:1px solid var(--edge);border-radius:14px;padding:11px 13px;}
+.lex summary{font-size:13px;font-weight:800;cursor:pointer;list-style:none;}
+.lex summary::-webkit-details-marker{display:none;}
+.lex p{font-size:12.5px;color:#c9d3dd;line-height:1.5;margin-top:6px;}
+
+/* ── Divers ── */
+.vide{padding:22px 18px;font-size:13px;color:var(--txt2);text-align:center;line-height:1.5;}
+.pied{padding:14px 18px 4px;font-size:10.5px;color:var(--txt2);text-align:center;}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);
+  background:#fff;color:#111;font-size:13px;font-weight:700;padding:10px 16px;border-radius:12px;opacity:0;transition:all .25s;
+  z-index:50;max-width:90%;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.4);}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
+input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:14px;
+  padding:11px 13px;border-radius:12px;margin:4px 0 10px;}
+.ligne{background:var(--ink3);border:1px solid var(--edge);border-radius:14px;padding:11px 13px;margin-bottom:8px;}
+.ligne .t{font-size:13px;font-weight:700;}
+.ligne .d{font-size:11.5px;color:var(--txt2);margin-top:3px;line-height:1.5;}
+
+/* ── Barre d'onglets ── */
+.onglets{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;
+  padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(12,15,19,.92);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--edge);}
+.onglet{flex:1;background:none;border:none;color:var(--txt2);font-size:10.5px;font-weight:700;display:flex;flex-direction:column;
+  align-items:center;gap:3px;cursor:pointer;padding:4px 0;position:relative;}
+.onglet .oe{font-size:21px;line-height:1;filter:grayscale(.6);opacity:.8;}
+.onglet.active{color:var(--txt);}
+.onglet.active .oe{filter:none;opacity:1;}
+.onglet .pt{position:absolute;top:0;right:calc(50% - 20px);min-width:16px;height:16px;border-radius:99px;background:var(--haute);
+  color:#fff;font-size:9.5px;font-weight:800;display:none;align-items:center;justify-content:center;padding:0 4px;}
 </style>
 </head>
 <body>
@@ -107,120 +177,312 @@ body{
 <div id="app" style="display:none;">
 
 <div class="hdr">
-  <h1>🔎 Veille perso</h1>
-  <div class="sub" id="hdrSub">Chargement…</div>
+  <div class="logo">🦉</div>
+  <div><h1>Ma veille</h1><div class="sub" id="hdrSub">Chargement…</div></div>
+  <div class="sp"></div>
+  <button class="btn-mini" onclick="exporterTexte()">⬇️ Export</button>
 </div>
 
-<div style="padding:0 18px 10px;display:flex;gap:8px;flex-wrap:wrap;">
-  <button id="btnHistorique" onclick="basculerHistorique()"
-    style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
-    font-size:12px;padding:7px 13px;border-radius:10px;">📜 Historique</button>
-  <button id="btnReglesCCN" onclick="basculerReglesCCN()"
-    style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
-    font-size:12px;padding:7px 13px;border-radius:10px;">📋 Règles CCN</button>
-  <button id="btnExport" onclick="exporterTexte()"
-    style="background:var(--ink3);border:1px solid var(--edge);color:var(--txt2);
-    font-size:12px;padding:7px 13px;border-radius:10px;">⬇️ Export .zip</button>
-</div>
+<!-- ACCUEIL -->
+<section class="vue active" id="v-accueil">
+  <div id="meteo"></div>
+  <div id="progression"></div>
+  <div class="bloc-t">🎯 Ce que tu as à faire <small id="missionCompte"></small></div>
+  <div id="mission"></div>
+  <div class="bloc-t">📚 Les mots à connaître</div>
+  <div class="lex" id="lexique"></div>
+  <div class="pied" id="pied"></div>
+</section>
 
-<div class="resume" id="resume"></div>
-<div id="sections"></div>
-<div class="pied" id="pied"></div>
+<!-- THÈMES -->
+<section class="vue" id="v-themes">
+  <div class="bloc-t">🗂️ Tout, rangé par thème <small>touche une tuile</small></div>
+  <div class="tuiles" id="tuiles"></div>
+</section>
+<section class="vue" id="v-theme">
+  <button class="retour" onclick="allerA('themes')">‹ Thèmes</button>
+  <div class="bloc-t" id="themeTitre"></div>
+  <div id="themeCorps"></div>
+</section>
 
-<div id="vueReglesCCN" style="display:none;padding:0 18px;">
-  <input id="rechercheCCN" type="text" placeholder="IDCC, nom, secteur…" oninput="filtrerReglesCCN()"
-    style="width:100%;box-sizing:border-box;background:var(--ink3);border:1px solid var(--edge);
-    color:var(--txt);font-size:14px;padding:11px 13px;border-radius:12px;margin:14px 0 10px;">
-  <div id="compteurReglesCCN" style="font-size:11.5px;color:var(--txt2);margin-bottom:8px;"></div>
-  <div id="listeReglesCCN"></div>
-</div>
+<!-- HISTORIQUE -->
+<section class="vue" id="v-historique">
+  <div class="bloc-t">📜 Les passages précédents <small>un par run de la veille</small></div>
+  <div style="padding:0 14px" id="listeHistorique"></div>
+  <div style="padding:0 14px" id="detailHistorique"></div>
+</section>
 
-<div id="vueHistorique" style="display:none;padding:0 18px;">
-  <div id="listeHistorique"></div>
-  <div id="detailHistorique"></div>
-</div>
+<!-- RÈGLES CCN -->
+<section class="vue" id="v-regles">
+  <div class="bloc-t">📋 Règles des conventions <small>heures sup, contingent</small></div>
+  <div style="padding:0 14px">
+    <input id="rechercheCCN" class="rech" type="text" placeholder="🔍 IDCC, nom, secteur…" oninput="filtrerReglesCCN()">
+    <div id="compteurReglesCCN" style="font-size:11.5px;color:var(--txt2);margin-bottom:8px;"></div>
+    <div id="listeReglesCCN"></div>
+  </div>
+</section>
+
+<nav class="onglets">
+  <button class="onglet active" data-v="accueil" onclick="allerA('accueil')"><span class="oe">🏠</span>Accueil<span class="pt" id="ptAccueil"></span></button>
+  <button class="onglet" data-v="themes" onclick="allerA('themes')"><span class="oe">🗂️</span>Thèmes</button>
+  <button class="onglet" data-v="historique" onclick="allerA('historique')"><span class="oe">📜</span>Historique</button>
+  <button class="onglet" data-v="regles" onclick="allerA('regles')"><span class="oe">📋</span>Règles CCN</button>
+</nav>
+<div class="toast" id="toast"></div>
 
 </div><!-- #app -->
 
 <script>
-const LIB = {grilles:'Grilles CCN', droit:'MonLegiTexte', modules:'8 modules',
-             outils:'105 outils', guide:'Guide SEO', citations:'Citations juridiques',
-             syntaxe:'Syntaxe JS', structure:'Structure', noindex:'MonLegiTexte (direct)',
-             contenu:'Contenu des articles', changements:'Fichiers modifiés', age:'Âge de la référence',
-             croisement:'Textes pour CCN en attente'};
+/* ════════════════════════════════════════════════════════════════════════
+   Ma veille — refonte « guidée » du 22/09/2026.
+   Même donnees.json qu'avant, mêmes fonctions (historique, règles CCN, export
+   .zip, code d'accès). Ce qui change : chaque alerte est traduite en langage
+   simple, avec POURQUOI c'est important et QUOI FAIRE, étape par étape.
+   « C'est fait » est gardé dans CE téléphone (localStorage), rien n'est écrit
+   dans le dépôt : pour qu'une alerte ne revienne plus, il faut une exception
+   (bouton « Copier l'exception »).
+   ════════════════════════════════════════════════════════════════════════ */
 
-// Un conseil par CATÉGORIE, pas par alerte individuelle -- les mêmes sujets
-// reviennent, la correction typique aussi. Sert de mémoire courte : que faire
-// concrètement, sans redériver la réponse à chaque fois.
+// Thèmes (sections de donnees.json) : nom simple + emoji + phrase d'explication.
+const THEMES = {
+  croisement:{e:'🔔', n:'Nouveaux textes pour une convention en attente', x:"Un texte vient de paraître pour une convention dont la grille attend une mise à jour."},
+  grilles:{e:'💶', n:'Grilles de salaires', x:"Les salaires minimum de chaque convention affichés dans GrillePaye."},
+  smic:{e:'📈', n:'SMIC', x:"La valeur du SMIC utilisée par l'appli."},
+  droit:{e:'⚖️', n:'MonLegiTexte', x:"Le moteur de recherche d'articles de loi de l'écosystème."},
+  modules:{e:'🧩', n:'Les 8 modules', x:"Les grands écrans de l'appli (compteur annuel, paye, Mizuki, Zenji…)."},
+  outils:{e:'🧰', n:'Les 105 outils', x:"Les petits calculateurs de la rubrique Outils."},
+  guide:{e:'📖', n:'Le guide (site)', x:"Les pages du site simulateurheuressupfrance.fr."},
+  citations:{e:'📝', n:'Articles de loi cités', x:"Les références d'articles écrites dans le guide et les modules."},
+  syntaxe:{e:'🧱', n:'Code qui ne se lit plus', x:"Un fichier dont le code est mal écrit : la page ne s'ouvre plus du tout."},
+  pages:{e:'📱', n:'Pages qui ne se chargent plus', x:"Chaque page de l'appli est ouverte pour de vrai, comme sur un téléphone."},
+  structure:{e:'🏗️', n:'Structure', x:"Organisation des outils et informations pour Google."},
+  noindex:{e:'🙈', n:'MonLegiTexte reste caché de Google', x:"MonLegiTexte doit rester hors de Google, volontairement."},
+  contenu:{e:'✍️', n:'Articles de loi modifiés', x:"Un article cité a changé de texte depuis la dernière vérification."},
+  changements:{e:'🔄', n:'Fichiers modifiés', x:"Simple constat : ce qui a changé dans tes dépôts depuis le dernier passage."},
+  age:{e:'⏳', n:'Âge des grilles', x:"Depuis combien de temps chaque grille n'a pas bougé."},
+};
+
+// Guide par TYPE d'alerte : quoi (phrase simple), pourquoi, étapes.
+// {cle} = identifiant de l'alerte (IDCC 1234, nom de fichier…), remplacé à l'affichage.
+const GUIDE = {
+  'texte-pour-ccn-en-alerte':{e:'🔔', quoi:"Un nouveau texte est sorti pour {cle}",
+    pourquoi:"Cette convention attendait une mise à jour de sa grille. Le texte qui vient de paraître contient peut-être les nouveaux salaires : c'est souvent la façon la plus rapide de lever une alerte.",
+    etapes:["Lis le détail ci-dessous : il cite le texte paru (Journal officiel ou accord).","Ouvre ce texte et regarde s'il contient un tableau de salaires minimum.","Si oui : reporte les montants dans GrillePaye (RUNBOOK de hs, « Mettre à jour une grille »).","Si non : copie l'exception ci-dessous et colle-la dans exceptions.json."]},
+  'grille-perimee':{e:'📅', quoi:"La grille de {cle} a pris du retard",
+    pourquoi:"Le fonds juridique contient un texte de salaires plus récent que la grille affichée aux utilisateurs. Ils voient peut-être d'anciens minimum.",
+    etapes:["Lis le détail : il donne le texte plus récent et ses premiers montants.","Compare avec la grille affichée dans GrillePaye pour cette convention.","Si les montants ont changé : mets la grille à jour (RUNBOOK de hs).","Si c'est un faux retard (texte d'une autre région, date d'application antérieure) : copie l'exception."]},
+  'grille-sur-texte-ancien':{e:'🧮', quoi:"La grille de {cle} a été faite avec un ancien texte",
+    pourquoi:"Les montants de la grille correspondent à un texte qui a été remplacé par un plus récent. Les salaires affichés sont donc probablement dépassés.",
+    etapes:["Lis le détail : il nomme l'ancien et le nouveau texte.","Ouvre le nouveau texte et relève ses montants.","Remplace les montants dans la grille (RUNBOOK de hs, « Mettre à jour une grille »)."]},
+  'grille-a-creer':{e:'➕', quoi:"{cle} n'a pas encore de grille",
+    pourquoi:"Le fonds a un texte de salaires pour cette convention, mais l'appli n'en affiche qu'une estimation. Une vraie grille serait plus juste.",
+    etapes:["Ouvre le texte cité dans le détail.","Recopie la grille ligne par ligne dans ccn-data.json.","Régénère _B64 dans GrillePaye/index.html (sinon rien ne change en ligne).","Pas le temps ? Copie l'exception : l'alerte reviendra seulement si un texte plus récent arrive."]},
+  'grille-ancienne':{e:'🕰️', quoi:"La grille de {cle} n'a pas bougé depuis longtemps",
+    pourquoi:"Ce n'est pas forcément une erreur : beaucoup de branches ne renégocient pas chaque année.",
+    etapes:["Regarde si un texte plus récent existe (au fonds ou sur Légifrance).","S'il n'y a rien : rien à faire, ou copie l'exception pour ne plus la voir."]},
+  'grille-sans-date':{e:'❔', quoi:"La grille de {cle} n'a pas de date",
+    pourquoi:"Sans date, la veille ne peut pas savoir si la grille est à jour.",
+    etapes:["Dans ccn-data.json, ajoute le champ « d » à cette grille, au format JJ/MM/AAAA."]},
+  'grille-sous-smic':{e:'⬇️', quoi:"{cle} : des salaires conventionnels sous le SMIC",
+    pourquoi:"La branche n'a pas renégocié depuis la dernière hausse du SMIC. L'appli affiche déjà le SMIC à la place, avec le montant conventionnel en petit : les utilisateurs voient le bon chiffre.",
+    etapes:["Rien à corriger. C'est une information à surveiller.","Si un nouvel accord de salaires sort, la veille te le dira."]},
+  'grilles-placeholder':{e:'🧩', quoi:"Des grilles provisoires à remplacer",
+    pourquoi:"Ces grilles sont des estimations, pas des montants tirés d'un texte officiel.",
+    etapes:["Pour chaque convention citée, cherche le texte de salaires officiel.","Remplace l'estimation par les vrais montants."]},
+  'lien-mort-grillepaye':{e:'🔗', quoi:"Un lien « Voir le texte officiel » ne mène à rien",
+    pourquoi:"Le lecteur tombe sur une fiche vide dans MonLegiTexte.",
+    etapes:["Vérifie que la convention citée existe bien dans le fonds (idcc_list.txt).","Sinon, corrige ou retire le lien dans GrillePaye/index.html."]},
+  'smic-revalorisation':{e:'📈', quoi:"Le SMIC vient d'augmenter",
+    pourquoi:"Un nouveau texte de revalorisation est paru. Tant que l'appli n'est pas mise à jour, elle affiche l'ancien SMIC.",
+    etapes:["Relève le nouveau montant mensuel et sa date d'effet dans le texte cité.","GrillePaye/index.html : change SMIC_DEF, SDATE_DEF et SSRC_DEF.","GrillePaye/ccn-data.json : change _smic et _smic_date, puis régénère _B64.","sw.js : augmente CACHE_NAME. Aucune ligne de grille à reprendre, elles suivent toutes seules."]},
+  'smic-incoherent':{e:'⚠️', quoi:"L'appli n'a pas le même SMIC partout",
+    pourquoi:"Le SMIC est écrit à deux endroits et ils ne correspondent plus : l'un a été oublié lors d'une mise à jour.",
+    etapes:["Mets la même valeur dans GrillePaye/index.html (SMIC_DEF) et dans ccn-data.json (_smic)."]},
+  'page-erreur-js':{e:'💥', quoi:"Une page plante à l'ouverture : {cle}",
+    pourquoi:"Du code s'arrête en pleine exécution. Une partie de la page, ou toute la page, ne marche plus pour les utilisateurs.",
+    etapes:["Lis le message d'erreur dans le détail (ex. « … is not defined »).","Ouvre le fichier sur GitHub et cherche le nom cité dans le message.","Corrige, ou reviens à la version d'avant (RUNBOOK de hs, « Revenir en arrière »)."]},
+  'page-fichier-404':{e:'🧷', quoi:"Un fichier manque pour {cle}",
+    pourquoi:"La page demande un script ou un style qui n'existe pas (renommé, supprimé ou jamais poussé). Elle risque de ne pas marcher.",
+    etapes:["Regarde le nom du fichier manquant dans le détail.","Pousse le fichier oublié, ou corrige son chemin dans la page."]},
+  'page-image-404':{e:'🖼️', quoi:"Une image manque dans {cle}",
+    pourquoi:"Juste un souci d'affichage : l'image ne s'affiche pas (souvent un emoji la remplace).",
+    etapes:["Ajoute l'image manquante, ou retire la référence. Pas urgent."]},
+  'page-ne-charge-pas':{e:'🐢', quoi:"{cle} ne finit pas de charger",
+    pourquoi:"La page n'a pas fini de s'ouvrir en 20 secondes.",
+    etapes:["Ouvre la page sur ton téléphone pour vérifier.","Si elle charge normalement, c'était passager : attends le prochain passage."]},
+  'page-hors-precache':{e:'📴', quoi:"{cle} ne s'ouvrira pas hors ligne",
+    pourquoi:"La page n'est pas dans la liste des fichiers gardés sur le téléphone. Dans l'appli Android, la navigation retombe alors sur le menu sans rien dire.",
+    etapes:["Ouvre sw.js dans hs.","Ajoute la page dans FILES_TO_CACHE (le détail donne la ligne exacte).","Augmente CACHE_NAME."]},
+  'ressource-hors-precache':{e:'📦', quoi:"{cle} n'est pas gardé pour le hors-ligne",
+    pourquoi:"Ce fichier ne sera disponible sans réseau qu'après une première visite en ligne.",
+    etapes:["Ajoute-le à FILES_TO_CACHE dans sw.js et augmente CACHE_NAME."]},
+  'precache-illisible':{e:'🧯', quoi:"La liste hors-ligne de sw.js est illisible",
+    pourquoi:"Impossible de vérifier ce qui s'ouvre sans réseau.",
+    etapes:["Vérifie que sw.js contient bien « const FILES_TO_CACHE = [ … ]; »."]},
+  'syntaxe-js-cassee':{e:'🧱', quoi:"Du code mal écrit dans {cle}",
+    pourquoi:"Le fichier ne peut pas être lu : la page ne s'ouvre plus du tout.",
+    etapes:["Le détail donne la ligne en cause.","Corrige-la, ou reviens à la version d'avant du fichier."]},
+  'contenu-article-modifie':{e:'✍️', quoi:"Un article de loi cité a changé : {cle}",
+    pourquoi:"Il est toujours en vigueur, mais son texte a changé (seuil, montant, formulation). Les calculs de l'appli s'appuient peut-être dessus.",
+    etapes:["Compare les versions « avant » et « après » dans le détail.","Si un chiffre a bougé, vérifie les modules qui l'utilisent."]},
+  'fichier-modifie':{e:'🔄', quoi:"Un fichier a changé : {cle}",
+    pourquoi:"Simple constat. Si c'est toi qui l'as modifié, tout va bien.",
+    etapes:["Tu reconnais ce changement ? Rien à faire.","Sinon, compare avec la version précédente sur GitHub."]},
+};
+
+// Mots à connaître : langage simple.
+const LEXIQUE = [
+  ['IDCC', "Le numéro d'une convention collective. Chaque métier ou branche a le sien (ex. 573 = commerce de gros)."],
+  ['Grille de salaires', "Le tableau des salaires minimum d'une convention, niveau par niveau. GrillePaye les affiche."],
+  ['SMIC', "Le salaire minimum légal. Personne ne peut être payé en dessous, même si la convention prévoit moins."],
+  ['Le fonds (dépôt droit)', "La copie des textes officiels (Légifrance) que l'aspirateur récupère lundi et jeudi."],
+  ['Exception', "Une ligne dans exceptions.json qui dit « celle-là, je l'ai vue, arrête de me la montrer »."],
+  ['Hors-ligne / précache', "La liste des fichiers gardés dans le téléphone (sw.js) pour que l'appli marche sans réseau."],
+  ['Gravité', "🔴 À faire vite · 🟠 À regarder quand tu peux · ⚪ Pour info, rien d'urgent."],
+];
+
+const NIVEAU = {haute:{t:'🔴 À faire vite',o:0}, moyenne:{t:'🟠 À regarder',o:1}, basse:{t:'⚪ Pour info',o:2}};
+
+// Anciens conseils courts : repli pour les types sans guide détaillé.
 const CONSEILS = {
-  'grille-perimee': "Chercher un avenant plus récent sur Légifrance/BOCC pour cet IDCC. Si rien n'est publié à ce jour, ce n'est pas une correction en attente de ta part -- ajoute une exception dans exceptions.json avec une note \"rien publié sur Légifrance\" plutôt que de laisser l'alerte revenir indéfiniment.",
-  'grille-a-creer': "Chercher le texte complet de l'avenant cité, en extraire la grille ligne par ligne, l'ajouter à ccn-data.json -- puis régénérer _B64, sinon la correction n'atteint jamais la production.",
-  'grille-ancienne': "Pas forcément une erreur : vérifier juste si un avenant plus récent existe. Si la CCN n'a simplement pas renégocié depuis, rien à faire.",
-  'grille-sans-date': "Champ 'd' manquant ou illisible dans ccn-data.json pour cette grille -- ajouter une date au format JJ/MM/AAAA.",
-  'grille-sous-smic': "Vérifier si la note de source mentionne un motif documenté (indemnité différentielle, indiciaire...). Si oui, c'est normal, rien à faire : le bandeau applicatif gère déjà l'affichage. Si non, le SMIC s'applique automatiquement, rien à corriger côté grille.",
-  'grilles-placeholder': "Grille non encore sourcée sur du réel -- chercher le texte officiel pour remplacer l'estimation SMIC par un vrai montant.",
   'hors-referentiel-dares': "Vérifier si l'IDCC existe encore sur la DARES/Légifrance. S'il a été retiré ou fusionné, mettre à jour ou retirer l'entrée.",
   'identite-divergente': "Le libellé ou le champ affiché ne correspond pas à ce que dit la source officielle -- comparer et corriger le nom ou l'identifiant.",
-
   'article-abroge': "Chercher l'article de remplacement sur Légifrance et mettre à jour la citation (articles-loi.js ou data-art selon l'endroit).",
   'article-abroge-ecosysteme': "Même chose, mais cité en texte brut dans le guide ou un module -- chercher l'occurrence exacte et remplacer la référence dans le texte.",
   'article-non-confirme': "Le fonds n'a pas (encore) ce texte -- pas forcément faux, juste pas vérifiable pour l'instant. Revoir si ça persiste sur plusieurs runs.",
   'citation-orpheline': "Article cité dans un outil mais absent d'articles-loi.js -- soit l'ajouter au référentiel, soit corriger la citation si c'est une coquille.",
   'citation-ecosysteme-non-confirmee': "Citation en texte brut dans le guide/un module, ni code travail ni code sécu ne la confirme -- vérifier la référence à la main.",
   'convention-perimee-sans-mention': "Le guide cite une CCN fusionnée sans le dire -- ajouter une mention (ex. \"désormais intégrée à IDCC X\") pour ne pas induire en erreur.",
-
   'lien-interne-casse': "Lien mort trouvé -- vérifier si la cible a été renommée/déplacée/supprimée, corriger le href ou retirer le lien.",
-  'lien-mort-grillepaye': "Lien vers MonLegiTexte cassé pour cet IDCC -- vérifier le mapping IDCC->code dans GrillePaye/index.html.",
   'outil-fichier-manquant': "Une clé de TOOLS dans outils.html n'a pas de fichier -- soit créer le fichier manquant, soit retirer l'entrée si l'outil n'existe plus.",
   'outil-orphelin': "Le fichier existe mais n'est dans aucune catégorie -- l'ajouter à une catégorie de CATS dans outils.html, ou le supprimer s'il ne sert plus.",
   'asset-casse': "Image ou ressource introuvable -- vérifier le chemin, ou remplacer/retirer la référence si le fichier n'existe plus.",
   'module-absent-de-prod': "Module présent en bac à sable mais jamais déployé -- décider s'il faut le pousser en production ou l'exclure du suivi si ce n'est pas prévu.",
   'livrable-session': "Un livrable construit récemment n'est pas encore en ligne -- vérifier s'il doit encore être déployé ou si c'est un choix assumé de ne pas le faire.",
-
   'jsonld-invalide': "JSON-LD mal formé -- Google l'ignore silencieusement. Corriger la syntaxe JSON du bloc <script type=\"application/ld+json\"> sur la page citée.",
   'jsonld-incomplet': "Bloc JSON-LD valide mais sans @context/@type -- ajouter les champs manquants pour que Google puisse l'exploiter.",
-
-  'syntaxe-js-cassee': "La page ne charge plus du tout -- ouvrir le fichier, chercher la ligne indiquée par le message de node --check, corriger la syntaxe.",
-
   'noindex-absent': "L'en-tête X-Robots-Tag noindex n'est plus envoyé en production -- vérifier le Worker Cloudflare déployé, pas seulement le code source.",
   'noindex-meta-absent': "Balise meta robots absente du HTML reçu -- vérifier qu'elle n'a pas été retirée par erreur d'un template.",
   'site-injoignable': "Le site ne répond pas au moment du run -- souvent temporaire (déploiement en cours, panne passagère). Vérifier si ça persiste avant de s'inquiéter.",
-
   'audit-introuvable': "Le dernier audit du fonds n'est pas accessible -- vérifier que audits/index.json existe et est à jour côté droit.",
   'changement-reel': "Un vrai changement de contenu a été détecté côté fonds depuis le dernier audit -- vérifier ce qui a changé et si ça impacte l'app.",
   'run-en-retard': "Le workflow ne s'est pas exécuté depuis longtemps -- vérifier qu'il est bien activé et programmé sur GitHub Actions.",
-  'contenu-article-modifie': "Toujours en vigueur, mais le texte a changé depuis la dernière vérification -- ouvrir l'article sur Légifrance, comparer à ce que la logique de calcul suppose, ajuster si les seuils ou montants ont bougé.",
-  'fichier-modifie': "Constat neutre -- vérifier que c'est un changement voulu (ta propre session de travail). Si tu ne reconnais pas ce changement, ouvrir le fichier et comparer à la version précédente sur GitHub.",
-  'reference-plus-12-mois': "L'app affiche déjà ce bandeau aux utilisateurs sur l'onglet Référence -- vérifier s'il existe un avenant plus récent (chercher dans le fonds ou sur Légifrance), ou si une région couvre déjà le besoin sans qu'il soit nécessaire de toucher la référence elle-même.",
-  'reference-plus-3-mois': "Pas encore visible par les utilisateurs, mais autant vérifier maintenant qu'une fois le bandeau affiché -- même logique : un avenant plus récent existe-t-il, une région couvre-t-elle déjà le besoin, ou rien de neuf pour l'instant.",
-  'texte-pour-ccn-en-alerte': "Le plus utile à traiter en priorité : un texte vient de paraître pour une CCN que tu attendais. Ouvrir le texte cité (JORF ou accord), vérifier s'il contient la nouvelle grille, et si oui la reporter dans GrillePaye — ça lève l'alerte d'un coup.",
+  'reference-plus-12-mois': "L'app affiche déjà ce bandeau aux utilisateurs sur l'onglet Référence -- vérifier s'il existe un avenant plus récent (chercher dans le fonds ou sur Légifrance), ou si une région couvre déjà le besoin.",
+  'reference-plus-3-mois': "Pas encore visible par les utilisateurs, mais autant vérifier maintenant : un avenant plus récent existe-t-il, une région couvre-t-elle déjà le besoin, ou rien de neuf pour l'instant.",
 };
 
-function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+const DEPOT_HS = 'https://github.com/tonytonic/hs/blob/Android-cloudfare-production/';
+const EDIT_EXCEPTIONS = 'https://github.com/anthonychauvel/tableaudebord/edit/main/exceptions.json';
+const CLE_FAIT = 'veille_fait_v1';
 
-// --- Sous-groupement par ancienneté / nouveauté (affichage) ---
-// La date + l'âge en jours sont déjà dans le texte du détail :
-// "... Date de référence 15/01/2026 (207 jours) ...". On les lit ici.
-function _ageDetail(a){
-  var det = a.detail||'';
-  var mj = det.match(/\((\d+)\s*jours?\)/);
-  if(!mj) return null;
-  var md = det.match(/(\d{2}\/\d{2}\/\d{4})/);
-  return { days: parseInt(mj[1],10), date: md?md[1]:'' };
+function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+// Même règle que cle_stable() dans construire-donnees.py : ce qui précède « : ».
+function ident(a){var t=a.titre||'';return t.indexOf(' : ')>=0?t.split(' : ')[0].trim():t.trim();}
+function cleAlerte(a){return (a.categorie||'')+'::'+ident(a);}
+
+function lireFait(){try{return JSON.parse(localStorage.getItem(CLE_FAIT)||'{}')||{};}catch(e){return {};}}
+function ecrireFait(f){try{localStorage.setItem(CLE_FAIT,JSON.stringify(f));}catch(e){}}
+let FAIT = lireFait();
+
+function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('on');clearTimeout(toast._t);toast._t=setTimeout(function(){el.classList.remove('on');},2200);}
+
+// --- Rendu d'une alerte en carte guidée ------------------------------------
+function carte(a){
+  var g=GUIDE[a.categorie], k=cleAlerte(a), id=ident(a), fait=!!FAIT[k];
+  var quoi = g ? g.quoi.replace('{cle}', id) : (a.titre||'');
+  var emo = g ? g.e : ((THEMES[a._theme]||{}).e || '🔎');
+  var etapes = g ? g.etapes : (CONSEILS[a.categorie] ? [CONSEILS[a.categorie]] : ["Lis le détail ci-dessous pour comprendre de quoi il s'agit."]);
+  var niv = NIVEAU[a.gravite] || NIVEAU.basse;
+  var fichier = /^[\w./-]+\.(html|js|css|json)$/.test(id) ? id : '';
+  var html = '<div class="carte'+(fait?' fait':'')+'" data-k="'+esc(k)+'">'
+    + '<div class="carte-hd"><div class="ico '+esc(a.gravite)+'">'+emo+'</div><div style="min-width:0">'
+    + '<div class="quoi">'+esc(quoi)+'</div>'
+    + (g ? '<div class="qui">'+esc(a.titre||'')+'</div>' : '')
+    + '<div class="tags"><span class="tag '+esc(a.gravite)+'">'+niv.t+'</span>'
+    + (a.nouveau?'<span class="tag nouveau">NOUVEAU</span>':'')
+    + (fait?'<span class="tag fait">✓ traité</span>':'')
+    + (a._theme&&THEMES[a._theme]?'<span class="tag">'+THEMES[a._theme].e+' '+esc(THEMES[a._theme].n)+'</span>':'')
+    + '</div></div></div>'
+    + (g&&g.pourquoi ? '<div class="pourquoi">💡 '+esc(g.pourquoi)+'</div>' : '')
+    + '<div class="etapes"><div class="et">👣 Que faire</div><ol>'+etapes.map(function(e){return '<li>'+esc(e)+'</li>';}).join('')+'</ol></div>'
+    + (a.detail ? '<details class="detail-brut"><summary>Voir le détail technique</summary><div class="txt">'+esc(a.detail)+'</div></details>' : '')
+    + '<div class="actions">'
+    + '<button class="act ok" onclick="basculerFait(this)">'+(fait?'↩️ Pas encore fait':'✅ C\'est fait')+'</button>'
+    + '<button class="act" onclick="copierException(this)">📋 Copier l\'exception</button>'
+    + (fichier ? '<a class="act lien" href="'+DEPOT_HS+esc(fichier)+'" target="_blank" rel="noopener">📂 Ouvrir le fichier</a>' : '')
+    + (a.lien ? '<a class="act lien" href="'+esc(a.lien)+'" target="_blank" rel="noopener">🔗 Voir l\'article</a>' : '')
+    + '</div></div>';
+  return html;
 }
-function _renderAlerte(a){
-  var ai = _ageDetail(a);
-  var chip = ai ? `<span class="age-chip">${esc(ai.date)} · ${ai.days} j</span>` : '';
-  return `<div class="alerte${a.nouveau?' nouveau':''}">
-    <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}${a.nouveau?'<span class="badge-nouveau">NOUVEAU</span>':''}${chip}</div>
-    <div class="d">${esc(a.detail||'')}</div>
-    ${a.lien ? `<a href="${esc(a.lien)}" target="_blank" rel="noopener" class="conseil" style="display:block;text-decoration:none;color:#7FA88A;">🔗 Voir l'article dans MonLegiTexte →</a>` : ''}
-    ${CONSEILS[a.categorie] ? `<div class="conseil">💡 ${esc(CONSEILS[a.categorie])}</div>` : ''}
-  </div>`;
+
+function trouverAlerte(k){var r=null;(window.__DONNEES.sections||[]).forEach(function(s){(s.alertes||[]).forEach(function(a){if(cleAlerte(a)===k)r=a;});});return r;}
+
+function basculerFait(btn){
+  var k=btn.closest('.carte').getAttribute('data-k');
+  if(FAIT[k]){delete FAIT[k];toast('Remis dans la liste');} else {FAIT[k]=new Date().toISOString().slice(0,10);toast('Bien joué ! 🎉');}
+  ecrireFait(FAIT);rendreTout();
 }
-// Regroupe les alertes d'une section : nouveau d'abord (toujours ouvert), puis
-// par ancienneté quand une date existe (>12 mois ouvert, le reste replié), enfin
-// "déjà vu / sans date" replié — pour ne pas re-vérifier ce qui n'a pas bougé.
+
+function copierException(btn){
+  var a=trouverAlerte(btn.closest('.carte').getAttribute('data-k'));if(!a)return;
+  var ex={categorie:a.categorie,cle:ident(a),note:'Vérifié — rien à changer',date:new Date().toISOString().slice(0,10)};
+  var txt=JSON.stringify(ex, null, 2)+',';
+  var fin=function(){toast('Copié ! Colle-le dans exceptions.json');setTimeout(function(){if(confirm("Ouvrir exceptions.json sur GitHub pour le coller ?\n\nColle-le juste après le premier « [ ».\nL'alerte disparaîtra au prochain passage de la veille."))window.open(EDIT_EXCEPTIONS,'_blank');},400);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(fin,function(){prompt('Copie ce texte :',txt);});}
+  else prompt('Copie ce texte :',txt);
+}
+
+// --- Accueil -------------------------------------------------------------
+function toutesAlertes(){
+  var out=[];(window.__DONNEES.sections||[]).forEach(function(s){(s.alertes||[]).forEach(function(a){a._theme=s.id;out.push(a);});});return out;
+}
+function priorite(a){return (a.nouveau?0:10)+((NIVEAU[a.gravite]||NIVEAU.basse).o*3);}
+
+function rendreAccueil(){
+  var toutes=toutesAlertes();
+  var aFaire=toutes.filter(function(a){return a.gravite!=='basse'||a.nouveau;});
+  var restantes=aFaire.filter(function(a){return !FAIT[cleAlerte(a)];});
+  var urgentes=restantes.filter(function(a){return a.gravite==='haute';});
+  var nouv=restantes.filter(function(a){return a.nouveau;});
+  var etat = urgentes.length ? 'urgent' : (restantes.length ? 'regarder' : 'calme');
+  var M = {
+    calme:{e:'😌', h:'Tout est calme', p:"Rien d'important à faire. La veille continue de surveiller pour toi lundi, mercredi et jeudi."},
+    regarder:{e:'🧐', h:restantes.length+' chose'+(restantes.length>1?'s':'')+' à regarder', p:"Rien d'urgent, mais quelques points méritent un coup d'œil quand tu as un moment."},
+    urgent:{e:'🚨', h:urgentes.length+' chose'+(urgentes.length>1?'s':'')+' à faire vite', p:"Commence par la première carte ci-dessous : chaque étape est expliquée."},
+  }[etat];
+  if(nouv.length) M.p = '🆕 '+nouv.length+' nouveauté'+(nouv.length>1?'s':'')+' depuis le dernier passage. '+M.p;
+  document.getElementById('meteo').innerHTML='<div class="meteo '+etat+'"><div class="bulle"></div><div class="emo">'+M.e+'</div><h2>'+esc(M.h)+'</h2><p>'+esc(M.p)+'</p>'
+    +(restantes.length?'<button class="cta" onclick="document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})">👉 Par où commencer</button>':'<button class="cta" onclick="allerA(\'themes\')">🗂️ Voir tout par thème</button>')+'</div>';
+  var faits=aFaire.length-restantes.length, pc=aFaire.length?Math.round(100*faits/aFaire.length):100;
+  document.getElementById('progression').innerHTML=aFaire.length?'<div class="prog"><div class="l"><span>Ta progression</span><span><b>'+faits+'</b> / '+aFaire.length+' traitée'+(faits>1?'s':'')+'</span></div><div class="barre"><i style="width:'+pc+'%"></i></div></div>':'';
+  var liste=restantes.slice().sort(function(a,b){return priorite(a)-priorite(b);});
+  var montrees=liste.slice(0,8);
+  document.getElementById('missionCompte').textContent=liste.length?(liste.length>8?'les 8 plus importantes sur '+liste.length:liste.length+' en tout'):'';
+  document.getElementById('mission').innerHTML=montrees.length?montrees.map(carte).join('')
+    +(liste.length>8?'<div class="vide">Les autres sont dans l\'onglet 🗂️ Thèmes.</div>':'')
+    :'<div class="vide">🎉 Rien à faire pour l\'instant.<br>Les points « pour info » sont dans l\'onglet 🗂️ Thèmes.</div>';
+  var pt=document.getElementById('ptAccueil');pt.textContent=urgentes.length;pt.style.display=urgentes.length?'flex':'none';
+  var tot=toutes.length;
+  document.getElementById('pied').textContent=tot+' point'+(tot>1?'s':'')+' surveillé'+(tot>1?'s':'')+' en tout, dont '+(tot-aFaire.length)+' pour info · '+(window.__DONNEES.exceptions_appliquees||0)+' masqué(s) par tes exceptions';
+}
+
+// --- Thèmes --------------------------------------------------------------
+function rendreThemes(){
+  var d=window.__DONNEES;
+  document.getElementById('tuiles').innerHTML=d.sections.map(function(s,i){
+    var th=THEMES[s.id]||{e:'🔎',n:s.titre||s.id};
+    var al=s.alertes||[], n=al.length, h=al.filter(function(a){return a.gravite==='haute'&&!FAIT[cleAlerte(a)];}).length,
+        m=al.filter(function(a){return a.gravite==='moyenne'&&!FAIT[cleAlerte(a)];}).length;
+    var cls=h?' alerte-h':(m?' alerte-m':'');
+    var etat = s.non_construit ? 'pas encore branché' : (n? n+' point'+(n>1?'s':'') : '✓ rien à signaler');
+    return '<button class="tuile'+cls+'" onclick="ouvrirTheme('+i+')"><div class="te">'+th.e+'</div><div><div class="tn">'+esc(th.n)+'</div><div class="tc">'+etat
+      +(h?'<span class="pastille" style="background:rgba(255,107,107,.18);color:var(--haute)">'+h+' vite</span>':'')+'</div></div></button>';
+  }).join('');
+}
+
+function _ageDetail(a){var det=a.detail||'';var mj=det.match(/\((\d+)\s*jours?\)/);if(!mj)return null;var md=det.match(/(\d{2}\/\d{2}\/\d{4})/);return {days:parseInt(mj[1],10),date:md?md[1]:''};}
+// Même regroupement qu'avant (sert aussi à l'export).
 function _grouperAlertes(alertes, ordreGravite){
   var og = ordreGravite || {haute:0,moyenne:1,basse:2};
   var tri = function(arr){ return arr.sort(function(a,b){ return (og[a.gravite]??9)-(og[b.gravite]??9); }); };
@@ -241,18 +503,151 @@ function _grouperAlertes(alertes, ordreGravite){
   if(sansdate.length) g.push({cle:'sansdate', label:'Déjà vu — inchangé depuis le dernier passage', ouvert:false, alertes:tri(sansdate)});
   return g;
 }
-// Déplier/replier un sous-groupe change la hauteur : on recalcule la hauteur de
-// la section ouverte pour ne rien couper (l'événement 'toggle' ne bouillonne pas).
-document.getElementById('sections').addEventListener('toggle', function(e){
-  if(e.target && e.target.classList && e.target.classList.contains('grp')){
-    var sec = e.target.closest('.section.open');
-    if(sec){ var corps = sec.querySelector('.corps'); if(corps) corps.style.maxHeight = corps.scrollHeight + 'px'; }
-  }
-}, true);
 
-// Export texte : une liste de contrôle à cocher, groupée comme à l'écran
-// (Nouveau / >12 mois / 3-12 mois / …). Plus simple pour pointer les contrôles.
-// --- Mini-ecrivain ZIP (methode « store », sans compression, sans dependance) ---
+let THEME_OUVERT = -1;
+function ouvrirTheme(i){
+  THEME_OUVERT=i;
+  var s=window.__DONNEES.sections[i], th=THEMES[s.id]||{e:'🔎',n:s.titre||s.id,x:''};
+  document.getElementById('themeTitre').innerHTML=th.e+' '+esc(th.n)+(th.x?'<small style="display:block;margin-top:3px">'+esc(th.x)+'</small>':'');
+  var al=(s.alertes||[]).map(function(a){a._theme=s.id;return a;});
+  var corps;
+  if(s.non_construit) corps='<div class="vide">Ce thème n\'est pas encore branché.</div>';
+  else if(!al.length) corps='<div class="vide">✅ Rien à signaler ici.</div>';
+  else corps=_grouperAlertes(al).map(function(g){
+    return '<details class="grp g-'+g.cle+'"'+(g.ouvert?' open':'')+'><summary><span class="gl">'+g.label+'</span><span class="grp-n">'+g.alertes.length+'</span></summary>'+g.alertes.map(carte).join('')+'</details>';
+  }).join('');
+  document.getElementById('themeCorps').innerHTML=corps;
+  allerA('theme');
+}
+
+// --- Navigation ------------------------------------------------------------
+function allerA(v){
+  document.querySelectorAll('.vue').forEach(function(x){x.classList.remove('active');});
+  document.getElementById('v-'+v).classList.add('active');
+  var onglet = v==='theme' ? 'themes' : v;
+  document.querySelectorAll('.onglet').forEach(function(o){o.classList.toggle('active',o.getAttribute('data-v')===onglet);});
+  if(v!=='theme') window.scrollTo(0,0);
+  if(v==='historique' && !historiqueCharge){historiqueCharge=true;chargerListeHistorique();}
+  if(v==='regles' && !reglesCCN) chargerReglesCCN();
+}
+
+function rendreTout(){
+  if(!window.__DONNEES) return;
+  rendreAccueil(); rendreThemes();
+  if(document.getElementById('v-theme').classList.contains('active') && THEME_OUVERT>=0){
+    var y=window.scrollY; ouvrirTheme(THEME_OUVERT); window.scrollTo(0,y);
+  }
+}
+
+async function charger(){
+  let d;
+  try{
+    const r = await fetch('donnees.json', {cache:'no-cache'});
+    d = await r.json();
+    window.__DONNEES = d;
+  }catch(e){
+    document.getElementById('hdrSub').textContent = 'Données indisponibles hors ligne.';
+    document.getElementById('meteo').innerHTML='<div class="meteo regarder"><div class="emo">📡</div><h2>Pas de réseau</h2><p>Reconnecte-toi pour voir le dernier passage de la veille.</p></div>';
+    return;
+  }
+  const genere = new Date(d.genere);
+  document.getElementById('hdrSub').textContent = 'Dernier passage : ' + genere.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}) + ' à ' +
+    genere.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  document.getElementById('lexique').innerHTML = LEXIQUE.map(function(l){return '<details><summary>❓ '+esc(l[0])+'</summary><p>'+esc(l[1])+'</p></details>';}).join('');
+  // Nettoyage : oublier les « c'est fait » d'alertes qui ont disparu des données.
+  var presentes={}; toutesAlertes().forEach(function(a){presentes[cleAlerte(a)]=1;});
+  Object.keys(FAIT).forEach(function(k){if(!presentes[k])delete FAIT[k];}); ecrireFait(FAIT);
+  rendreTout();
+}
+
+// --- Historique (inchangé sur le fond) -------------------------------------
+let historiqueCharge = false;
+async function chargerListeHistorique(){
+  const conteneur = document.getElementById('listeHistorique');
+  let index;
+  try{
+    const r = await fetch('historique/index.json', {cache:'no-cache'});
+    index = await r.json();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Aucun historique pour l\'instant — il se remplit à chaque passage.</div>';
+    return;
+  }
+  index = index.slice().reverse();
+  conteneur.innerHTML = index.map((run) => {
+    const dt = new Date(run.genere);
+    const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+    return `<div class="ligne" style="cursor:pointer" onclick="afficherDetailHistorique('${run.fichier}')">
+      <div class="t">${date} ${run.nouvelles_alertes>0 ? `<span class="tag nouveau">${run.nouvelles_alertes} nouveau</span>` : ''}</div>
+      <div class="d">${run.total} point(s) — 🔴 ${run.par_gravite.haute} · 🟠 ${run.par_gravite.moyenne} · ⚪ ${run.par_gravite.basse}</div>
+    </div>`;
+  }).join('') || '<div class="vide">Aucun passage enregistré pour l\'instant.</div>';
+}
+async function afficherDetailHistorique(fichier){
+  const conteneur = document.getElementById('detailHistorique');
+  conteneur.innerHTML = '<div class="vide">Chargement…</div>';
+  let d;
+  try{
+    const r = await fetch('historique/' + fichier, {cache:'no-cache'});
+    d = await r.json();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Impossible de charger ce passage.</div>';
+    return;
+  }
+  const dt = new Date(d.genere);
+  const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  conteneur.innerHTML = `<div style="margin:14px 0 8px;font-size:13px;color:var(--txt2)">Passage du ${date} —
+      <span onclick="document.getElementById('detailHistorique').innerHTML=''" style="text-decoration:underline;cursor:pointer">fermer</span></div>` +
+    d.sections.map(s => {
+      const alertes = s.alertes || [];
+      if(!alertes.length) return '';
+      const th = THEMES[s.id]||{e:'🔎',n:s.titre||s.id};
+      return `<div class="bloc-t" style="margin:14px 0 8px">${th.e} ${esc(th.n)} <small>${alertes.length}</small></div>` +
+        alertes.map(a => `<div class="ligne"><div class="t">${(NIVEAU[a.gravite]||NIVEAU.basse).t.split(' ')[0]} ${esc(a.titre)}</div><div class="d">${esc(a.detail||'')}</div></div>`).join('');
+    }).join('');
+}
+
+// --- Règles CCN (inchangé sur le fond) --------------------------------------
+let reglesCCN = null;
+async function chargerReglesCCN(){
+  const conteneur = document.getElementById('listeReglesCCN');
+  try{
+    const r = await fetch('ccn-regles.json', {cache:'no-cache'});
+    const d = await r.json();
+    reglesCCN = d.entrees;
+    document.getElementById('compteurReglesCCN').textContent = `${d.entrees.length} conventions — source app v${d.versionSource}`;
+    filtrerReglesCCN();
+  }catch(e){
+    conteneur.innerHTML = '<div class="vide">Données indisponibles pour l\'instant.</div>';
+  }
+}
+function ligneTaux(e){
+  let s = `${e.taux1}% (à partir de la ${e.palier1}e h)`;
+  if(e.taux_inter != null) s += ` → ${e.taux_inter}% (à partir de la ${e.palier_inter}e h)`;
+  s += ` → ${e.taux2}%`;
+  return s;
+}
+function filtrerReglesCCN(){
+  if(!reglesCCN) return;
+  const q = document.getElementById('rechercheCCN').value.trim().toLowerCase();
+  let resultats = reglesCCN;
+  if(q){
+    resultats = reglesCCN.filter(e =>
+      String(e.idcc).includes(q) || (e.nom||'').toLowerCase().includes(q) || (e.secteur||'').toLowerCase().includes(q));
+  }
+  const conteneur = document.getElementById('listeReglesCCN');
+  const AFFICHES = resultats.slice(0, 40);
+  conteneur.innerHTML = AFFICHES.map(e => `
+    <div class="ligne">
+      <div class="t">${esc(e.nom)} <span style="color:var(--txt2);font-weight:400">— IDCC ${e.idcc}</span></div>
+      <div class="d">⏱️ Majoration des heures sup : ${esc(ligneTaux(e))}<br>📦 Contingent annuel : ${e.contingent} h · Seuil : ${e.seuil} h/semaine
+        ${e.notes ? `<div style="margin-top:5px;color:#9fc3a8">📖 ${esc(e.notes)}</div>` : ''}</div>
+    </div>`).join('') || '<div class="vide">Aucune convention ne correspond.</div>';
+  if(resultats.length > AFFICHES.length){
+    conteneur.innerHTML += `<div class="vide">… et ${resultats.length - AFFICHES.length} de plus — précise la recherche.</div>`;
+  }
+}
+
+// --- Export .zip (inchangé) --------------------------------------------------
 var _crcTable=(function(){var t=[];for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++){c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);}t[n]=c>>>0;}return t;})();
 function _crc32(b){var c=0xFFFFFFFF;for(var i=0;i<b.length;i++){c=_crcTable[(c^b[i])&0xFF]^(c>>>8);}return (c^0xFFFFFFFF)>>>0;}
 function _zipStore(files){
@@ -284,14 +679,14 @@ function _zipStore(files){
 }
 function exporterTexte(){
   var d=window.__DONNEES;
-  if(!d){ alert('Donnees non encore chargees, reessaie dans un instant.'); return; }
+  if(!d){ alert('Données pas encore chargées, réessaie dans un instant.'); return; }
   function p2(n){ return (n<10?'0':'')+n; }
   function fmtDate(x){ if(!x) return '\u2014'; var t=new Date(x); if(isNaN(t)) return String(x);
     return p2(t.getDate())+'/'+p2(t.getMonth()+1)+'/'+t.getFullYear()+' '+p2(t.getHours())+':'+p2(t.getMinutes()); }
   function slug(s){ return (String(s||'section').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,42))||'categorie'; }
   var now=new Date(), enc=new TextEncoder();
   var secs=d.sections.filter(function(s){ return (s.alertes||[]).length; });
-  if(!secs.length){ alert('Aucune alerte : rien a exporter.'); return; }
+  if(!secs.length){ alert('Aucune alerte : rien à exporter.'); return; }
   var dateGen=fmtDate(d.genere), dateExp=fmtDate(now), files=[];
   secs.forEach(function(s,idx){
     var al=s.alertes||[], L=[];
@@ -304,7 +699,7 @@ function exporterTexte(){
     _grouperAlertes(al).forEach(function(g){
       L.push('--- '+g.label+' ('+g.alertes.length+') ---');
       g.alertes.forEach(function(a){
-        L.push('[ ] ('+(a.gravite||'?')+') '+String(a.titre||'').trim());
+        L.push('['+(FAIT[cleAlerte(a)]?'x':' ')+'] ('+(a.gravite||'?')+') '+String(a.titre||'').trim());
         if(a.detail) L.push('      '+String(a.detail).replace(/\s+/g,' ').trim());
       });
       L.push('');
@@ -324,240 +719,6 @@ function exporterTexte(){
   a.href=url; a.download='veille-controle-'+now.getFullYear()+p2(now.getMonth()+1)+p2(now.getDate())+'.zip';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ try{ document.body.removeChild(a); }catch(e){} URL.revokeObjectURL(url); }, 200);
-}
-async function charger(){
-  let d;
-  try{
-    const r = await fetch('donnees.json', {cache:'no-cache'});
-    d = await r.json();
-    window.__DONNEES = d;
-  }catch(e){
-    document.getElementById('hdrSub').textContent = 'Données indisponibles hors-ligne.';
-    return;
-  }
-
-  const toutes = d.sections.flatMap(s => s.alertes || []);
-  const compte = {haute:0, moyenne:0, basse:0};
-  toutes.forEach(a => { if(compte[a.gravite]!=null) compte[a.gravite]++; });
-
-  const genere = new Date(d.genere);
-  document.getElementById('hdrSub').textContent =
-    'Généré le ' + genere.toLocaleDateString('fr-FR') + ' à ' +
-    genere.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-
-  document.getElementById('resume').innerHTML =
-    (d.nouvelles_alertes>0 ? `<div class="pill nouveau"><b>${d.nouvelles_alertes}</b><span>nouveau</span></div>` : '') +
-    ['haute','moyenne','basse'].map(g =>
-    `<div class="pill ${g}"><b>${compte[g]}</b><span>${g}</span></div>`
-  ).join('');
-
-  const ordreGravite = {haute:0, moyenne:1, basse:2};
-
-  document.getElementById('sections').innerHTML = d.sections.map((s, i) => {
-    if(s.non_construit){
-      return `<div class="section">
-        <div class="section-hd"><div><div class="titre">${esc(LIB[s.id]||s.titre)}</div>
-        <div class="compte">Pas encore de détection automatique</div></div></div>
-        <div class="non-construit">Section prête, en attente du nom du dépôt pour la brancher.</div>
-      </div>`;
-    }
-    const groupes = _grouperAlertes(s.alertes||[], ordreGravite);
-    const n = (s.alertes||[]).length;
-    return `<div class="section${n>0?'':''}" id="sec-${i}">
-      <div class="section-hd" onclick="toggleSection(${i})">
-        <div><div class="titre">${esc(LIB[s.id]||s.titre)}</div>
-        <div class="compte">${n} alerte${n>1?'s':''}</div></div>
-        <div style="display:flex;align-items:center">
-          <span class="badge ${n>0?'non-zero':'zero'}">${n>0?n:'✓'}</span>
-          <span class="chev">›</span>
-        </div>
-      </div>
-      <div class="corps">
-        ${n===0 ? '<div class="vide">Rien à signaler.</div>'
-          : groupes.map(g => `<details class="grp g-${g.cle}"${g.ouvert?' open':''}>
-              <summary><span class="gl">${g.label}</span><span class="grp-n">${g.alertes.length}</span></summary>
-              <div class="grp-body">${g.alertes.map(_renderAlerte).join('')}</div>
-            </details>`).join('')}
-      </div>
-    </div>`;
-  }).join('');
-
-  // La section la plus grave s'ouvre par défaut, pour ne pas cliquer à l'aveugle --
-  // et toute section contenant du nouveau s'ouvre aussi : c'est justement ce qu'on
-  // veut voir en premier, pas seulement ce qui est grave depuis longtemps.
-  const pireIdx = d.sections.findIndex(s => (s.alertes||[]).some(a=>a.gravite==='haute'));
-  const aOuvrir = pireIdx>=0 ? pireIdx : d.sections.findIndex(s=>(s.alertes||[]).length>0);
-  if(aOuvrir>=0) ouvrirSection(aOuvrir);
-  d.sections.forEach((s,i)=>{
-    if((s.alertes||[]).some(a=>a.nouveau)) ouvrirSection(i);
-  });
-
-  document.getElementById('pied').textContent = toutes.length===0
-    ? 'Aucune alerte, tout est à jour.'
-    : toutes.length + ' alerte(s) au total sur ' + d.sections.length + ' catégories.';
-}
-
-// Hauteur calculée dynamiquement (scrollHeight), jamais un plafond fixe --
-// un plafond en dur a déjà coupé une section à 12 alertes visibles sur 120
-// réelles, l'ajout du texte de conseil sous chaque alerte ayant fait
-// dépasser l'ancien plafond de 2000px. Ça ne doit plus jamais dépendre d'un
-// nombre choisi à l'avance : ça s'adapte au contenu réel, quelle que soit sa
-// taille future.
-function ouvrirSection(i){
-  const sec = document.getElementById('sec-'+i);
-  if(!sec) return;
-  sec.classList.add('open');
-  const corps = sec.querySelector('.corps');
-  corps.style.maxHeight = corps.scrollHeight + 'px';
-}
-function fermerSection(i){
-  const sec = document.getElementById('sec-'+i);
-  if(!sec) return;
-  sec.classList.remove('open');
-  sec.querySelector('.corps').style.maxHeight = '0px';
-}
-function toggleSection(i){
-  const sec = document.getElementById('sec-'+i);
-  if(!sec) return;
-  if(sec.classList.contains('open')) fermerSection(i); else ouvrirSection(i);
-}
-
-// Historique : une vue séparée, plus simple que la vue courante (pas de
-// plier/déplier par section) -- consulter un instantané passé est un besoin
-// de référence ponctuelle, pas une interaction quotidienne.
-let historiqueCharge = false;
-
-function basculerHistorique(){
-  const enHistorique = document.getElementById('vueHistorique').style.display !== 'none';
-  document.getElementById('vueHistorique').style.display = enHistorique ? 'none' : 'block';
-  document.getElementById('resume').style.display = enHistorique ? 'flex' : 'none';
-  document.getElementById('sections').style.display = enHistorique ? 'block' : 'none';
-  document.getElementById('vueReglesCCN').style.display = 'none';
-  document.getElementById('btnReglesCCN').textContent = '📋 Règles CCN';
-  document.getElementById('btnHistorique').textContent = enHistorique ? '📜 Historique' : '← Retour au run actuel';
-  if(!enHistorique && !historiqueCharge){
-    historiqueCharge = true;
-    chargerListeHistorique();
-  }
-}
-
-async function chargerListeHistorique(){
-  const conteneur = document.getElementById('listeHistorique');
-  let index;
-  try{
-    const r = await fetch('historique/index.json', {cache:'no-cache'});
-    index = await r.json();
-  }catch(e){
-    conteneur.innerHTML = '<div class="vide">Aucun historique disponible pour l\'instant -- il se remplit à chaque run.</div>';
-    return;
-  }
-  index = index.slice().reverse(); // le plus récent en premier
-  conteneur.innerHTML = index.map((run, i) => {
-    const dt = new Date(run.genere);
-    const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-    return `<div class="alerte" style="cursor:pointer" onclick="afficherDetailHistorique('${run.fichier}')">
-      <div class="t">${date}
-        ${run.nouvelles_alertes>0 ? `<span class="badge-nouveau">${run.nouvelles_alertes} NOUVEAU</span>` : ''}
-      </div>
-      <div class="d">${run.total} alerte(s) — ${run.par_gravite.haute} haute, ${run.par_gravite.moyenne} moyenne, ${run.par_gravite.basse} basse</div>
-    </div>`;
-  }).join('') || '<div class="vide">Aucun run enregistré pour l\'instant.</div>';
-}
-
-async function afficherDetailHistorique(fichier){
-  const conteneur = document.getElementById('detailHistorique');
-  conteneur.innerHTML = '<div class="vide">Chargement…</div>';
-  let d;
-  try{
-    const r = await fetch('historique/' + fichier, {cache:'no-cache'});
-    d = await r.json();
-  }catch(e){
-    conteneur.innerHTML = '<div class="vide">Impossible de charger cet instantané.</div>';
-    return;
-  }
-  const dt = new Date(d.genere);
-  const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-  conteneur.innerHTML = `<div style="margin:14px 0 6px;font-size:13px;color:var(--txt2)">
-      Instantané du ${date} — <span onclick="document.getElementById('detailHistorique').innerHTML=''" style="text-decoration:underline;cursor:pointer">fermer</span>
-    </div>` +
-    d.sections.map(s => {
-      const alertes = s.alertes || [];
-      if(!alertes.length) return '';
-      return `<div class="section open"><div class="section-hd" style="cursor:default">
-          <div><div class="titre">${esc(LIB[s.id]||s.titre)}</div><div class="compte">${alertes.length} alerte(s)</div></div>
-        </div><div class="corps" style="max-height:none">
-          ${alertes.map(a => `<div class="alerte">
-            <div class="t"><span class="dot ${a.gravite}"></span>${esc(a.titre)}</div>
-            <div class="d">${esc(a.detail||'')}</div>
-          </div>`).join('')}
-        </div></div>`;
-    }).join('');
-}
-
-// Règles CCN : consultation, pas des alertes -- pas de plier/déplier, une
-// recherche et une liste, comme l'historique.
-let reglesCCN = null;
-
-function basculerReglesCCN(){
-  const vue = document.getElementById('vueReglesCCN');
-  const enVue = vue.style.display !== 'none';
-  vue.style.display = enVue ? 'none' : 'block';
-  document.getElementById('resume').style.display = enVue ? 'flex' : 'none';
-  document.getElementById('sections').style.display = enVue ? 'block' : 'none';
-  document.getElementById('vueHistorique').style.display = 'none';
-  document.getElementById('btnHistorique').textContent = '📜 Historique';
-  document.getElementById('btnReglesCCN').textContent = enVue ? '📋 Règles CCN' : '← Retour au run actuel';
-  if(!enVue && !reglesCCN){
-    chargerReglesCCN();
-  }
-}
-
-async function chargerReglesCCN(){
-  const conteneur = document.getElementById('listeReglesCCN');
-  try{
-    const r = await fetch('ccn-regles.json', {cache:'no-cache'});
-    const d = await r.json();
-    reglesCCN = d.entrees;
-    document.getElementById('compteurReglesCCN').textContent =
-      `${d.entrees.length} conventions — source app v${d.versionSource}`;
-    filtrerReglesCCN();
-    document.getElementById('rechercheCCN').focus();
-  }catch(e){
-    conteneur.innerHTML = '<div class="vide">Données indisponibles pour l\'instant.</div>';
-  }
-}
-
-function ligneTaux(e){
-  let s = `${e.taux1}% (à partir de la ${e.palier1}e h)`;
-  if(e.taux_inter != null) s += ` → ${e.taux_inter}% (à partir de la ${e.palier_inter}e h)`;
-  s += ` → ${e.taux2}%`;
-  return s;
-}
-
-function filtrerReglesCCN(){
-  if(!reglesCCN) return;
-  const q = document.getElementById('rechercheCCN').value.trim().toLowerCase();
-  let resultats = reglesCCN;
-  if(q){
-    resultats = reglesCCN.filter(e =>
-      String(e.idcc).includes(q) ||
-      (e.nom||'').toLowerCase().includes(q) ||
-      (e.secteur||'').toLowerCase().includes(q));
-  }
-  const conteneur = document.getElementById('listeReglesCCN');
-  const AFFICHES = resultats.slice(0, 40);
-  conteneur.innerHTML = AFFICHES.map(e => `
-    <div class="alerte">
-      <div class="t">${esc(e.nom)} <span style="color:var(--txt2);font-weight:400">— IDCC ${e.idcc}</span></div>
-      <div class="d">
-        Majoration HS : ${esc(ligneTaux(e))}<br>
-        Contingent annuel : ${e.contingent}h · Seuil : ${e.seuil}h/sem
-        ${e.notes ? `<div class="conseil">📖 ${esc(e.notes)}</div>` : ''}
-      </div>
-    </div>`).join('') || '<div class="vide">Aucune convention ne correspond.</div>';
-  if(resultats.length > AFFICHES.length){
-    conteneur.innerHTML += `<div class="vide">… et ${resultats.length - AFFICHES.length} de plus — précise la recherche.</div>`;
-  }
 }
 
 charger();

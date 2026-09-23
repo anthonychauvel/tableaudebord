@@ -1,0 +1,2994 @@
+{
+  "pages": {
+    "module6/index.html": [
+      "L3111-2",
+      "L3121-65"
+    ],
+    "nouveautes.html": [
+      "D3121-24",
+      "L2143-13",
+      "L3121-18",
+      "L3121-20",
+      "L3121-22",
+      "L3121-36",
+      "L3131-1",
+      "L3133-3"
+    ],
+    "outils/_reference-loi.html": [
+      "D1225-11",
+      "D1226-3",
+      "D3261-15-2",
+      "L1153-5",
+      "L1214-8",
+      "L1225-46",
+      "L1234-1",
+      "L1237-10",
+      "L1237-19",
+      "L131-4",
+      "L225-102",
+      "L3142-19",
+      "L3153-3",
+      "L3154-3",
+      "L3231-5",
+      "L3261-3",
+      "L331-8",
+      "L3342-1",
+      "L441-1",
+      "L441-2",
+      "L452-1",
+      "L452-2",
+      "L452-3",
+      "L452-4",
+      "L6325-10",
+      "L6325-8",
+      "R3252-3",
+      "R441-1",
+      "R441-3"
+    ],
+    "outils/module-alternance.html": [
+      "L6211-1",
+      "L6325-24"
+    ],
+    "outils/module-anciennete.html": [
+      "L3342-1"
+    ],
+    "outils/module-archives.html": [
+      "D3171-16",
+      "D3243-8",
+      "L1471-1",
+      "L2411-1",
+      "L243-16",
+      "L3171-3",
+      "L3243-4",
+      "L431-1",
+      "L441-4",
+      "R1221-26",
+      "R4624-46"
+    ],
+    "outils/module-arret.html": [
+      "D1226-1",
+      "D1226-3",
+      "L3141-19-3",
+      "R162-1-7"
+    ],
+    "outils/module-astreintes.html": [
+      "L3121-11",
+      "L3121-12",
+      "L3121-9"
+    ],
+    "outils/module-atmp.html": [
+      "L411-1",
+      "L441-1",
+      "L452-5",
+      "L461-1",
+      "L461-7"
+    ],
+    "outils/module-c2p.html": [
+      "L3122-2",
+      "L3122-5"
+    ],
+    "outils/module-cet.html": [
+      "L3151-1",
+      "L3153-1",
+      "L3154-3",
+      "L3334-8"
+    ],
+    "outils/module-conge-ss.html": [
+      "L1237-1"
+    ],
+    "outils/module-conges.html": [
+      "D3141-6",
+      "L3141-3",
+      "L3141-5-1"
+    ],
+    "outils/module-contrats.html": [
+      "L1221-19",
+      "L1221-22",
+      "L1234-9",
+      "L1237-11",
+      "R1234-2",
+      "R1234-4"
+    ],
+    "outils/module-cumul-retraite.html": [
+      "L161-22"
+    ],
+    "outils/module-delegation.html": [
+      "L2141-5",
+      "L2143-13",
+      "L2315-10",
+      "L2315-14",
+      "L2315-7",
+      "R2314-1",
+      "R2315-5"
+    ],
+    "outils/module-demission-are.html": [
+      "L1237-1-1",
+      "L5422-1-1"
+    ],
+    "outils/module-egalite.html": [
+      "L1142-7",
+      "L1142-9"
+    ],
+    "outils/module-entretien.html": [
+      "L6315-1"
+    ],
+    "outils/module-epargne.html": [
+      "L3311-1",
+      "L3333-6"
+    ],
+    "outils/module-essai.html": [
+      "L1221-19",
+      "L1221-21",
+      "L1221-22",
+      "L1221-23",
+      "L1221-25",
+      "L1221-26"
+    ],
+    "outils/module-feries.html": [
+      "L3121-50",
+      "L3133-1",
+      "L3133-3",
+      "L3133-4",
+      "L3133-7"
+    ],
+    "outils/module-fincontrat2.html": [
+      "L1234-19",
+      "L1234-20",
+      "L1237-18"
+    ],
+    "outils/module-formation.html": [
+      "L6323-1"
+    ],
+    "outils/module-greve.html": [
+      "L1242-6",
+      "L1251-10",
+      "L2511-1",
+      "L2512-5"
+    ],
+    "outils/module-inaptitude.html": [
+      "L1226-1",
+      "L1226-14",
+      "L1226-22",
+      "R4624-31"
+    ],
+    "outils/module-invalidite.html": [
+      "L341-1",
+      "L341-16"
+    ],
+    "outils/module-miseapied.html": [
+      "L1332-1",
+      "L1332-4"
+    ],
+    "outils/module-mobilites.html": [
+      "L3261-3-1"
+    ],
+    "outils/module-parentalite.html": [
+      "D1225-11-3",
+      "L1225-1",
+      "L1225-46-2",
+      "L1225-65",
+      "L331-3"
+    ],
+    "outils/module-preavis-comp.html": [
+      "L1234-1",
+      "L1237-1",
+      "L1237-13",
+      "L1237-19"
+    ],
+    "outils/module-preavis.html": [
+      "L1234-1",
+      "L1234-5",
+      "L1237-1",
+      "L1237-10"
+    ],
+    "outils/module-precarite.html": [
+      "D1242-1",
+      "L1243-10",
+      "L1243-8"
+    ],
+    "outils/module-proche-aidant.html": [
+      "L3142-16",
+      "L3142-19",
+      "L3142-27"
+    ],
+    "outils/module-retraite.html": [
+      "R351-12"
+    ],
+    "outils/module-rupture.html": [
+      "L1237-11",
+      "L1237-13",
+      "L1237-14",
+      "L1237-19-4",
+      "L242-1"
+    ],
+    "outils/module-sabbatique.html": [
+      "L3142-28",
+      "L3142-40"
+    ],
+    "outils/module-teletravail.html": [
+      "L1222-11",
+      "L1222-9",
+      "L3261-2"
+    ],
+    "outils/module-temps.html": [
+      "L3121-16",
+      "L3121-18",
+      "L3121-20",
+      "L3121-22",
+      "L3121-27",
+      "L3121-30",
+      "L3121-33",
+      "L3121-36",
+      "L3122-20",
+      "L3122-5",
+      "L3122-6",
+      "L3131-1",
+      "L3132-1",
+      "L3132-2",
+      "L3132-3"
+    ],
+    "outils/module-transport.html": [
+      "L3261-2"
+    ],
+    "taiko.html": [
+      "L3121-16",
+      "L3121-18",
+      "L3121-20",
+      "L3121-22",
+      "L3122-1",
+      "L3131-1",
+      "L3132-1",
+      "L3132-2"
+    ],
+    "guide:abattoir-industrie-viande-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:accident-travail-droits.html": [
+      "L411-1"
+    ],
+    "guide:accord-methode-negociation-guide.html": [
+      "L1233-21"
+    ],
+    "guide:acompte-avance-salaire-guide.html": [
+      "L3251-3"
+    ],
+    "guide:accord-performance-collective-guide.html": [
+      "L2254-2"
+    ],
+    "guide:action-de-groupe-hs-salaries-guide.html": [
+      "L1143-1"
+    ],
+    "guide:action-groupe-discrimination-guide.html": [
+      "L1132-1"
+    ],
+    "guide:addictions-travail-tests-depistage-guide.html": [
+      "R4228-20"
+    ],
+    "guide:aeronautique-spatial-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agence-communication-publicite-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agences-travail-temporaire-droits.html": [
+      "L1251-1",
+      "L1251-18",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-collecte-dechets-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-escale-aeroportuaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-funeraire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-funeraire-pompes-funebres-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-immobilier-commercial-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-nettoyage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-portuaire-docker-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-quai-manutentionnaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-securite-ronde-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-service-hospitalier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-surete-aeroportuaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agent-territorial-fonctions-techniques-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agissement-sexiste-travail-guide.html": [
+      "L1142-2-1"
+    ],
+    "guide:agent-tri-postal-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agriculture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agriculture-maraichage-serre-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:agroalimentaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-a-domicile-garde-malade-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-medico-psychologique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-medico-psychologique-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-soignant-domicile-had-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-soignant-domicile-ssiad-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:aide-soignant-ehpad-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:alimentation-biere-chocolat-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:alimentation-succursales-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:allaitement-travail-droits-guide.html": [
+      "L1225-30",
+      "L1225-32",
+      "L1225-33",
+      "L1225-4",
+      "R4152-13",
+      "R4152-28"
+    ],
+    "guide:alsh-centres-loisirs-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ambulancier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:amenagement-temps-partiel-aidant.html": [
+      "L3123-1",
+      "L433-1",
+      "L433-2"
+    ],
+    "guide:animateur-bafa-contrat-engagement-educatif-guide.html": [
+      "L432-1",
+      "L432-2"
+    ],
+    "guide:animateur-periscolaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:animateur-periscolaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:apiculteur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:apiculture-elevage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:apprenti-alternant-hs-guide.html": [
+      "L6221-1"
+    ],
+    "guide:architecte-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:architecture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:architecture-interieure-decoration-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ardoises-marbre-materiaux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:arret-maladie-salarie.html": [
+      "D1226-1",
+      "L1226-1",
+      "L323-1",
+      "R162-1-7",
+      "R323-1",
+      "R323-4"
+    ],
+    "guide:artisan-patron-salarie-mixte-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ascensoriste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-9"
+    ],
+    "guide:ascensoriste-maintenance-elevateurs-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:assistant-juridique-avocat-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:assistant-ressources-humaines-heures-supplementaires.html": [
+      "L3121-58"
+    ],
+    "guide:assistant-rh-paie-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:assistante-dentaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:association-insertion-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:assurance-mutuelle-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:astreinte-guide-complet-2026.html": [
+      "L3121-12"
+    ],
+    "guide:astreinte-guide.html": [
+      "L3121-9"
+    ],
+    "guide:atsem-agent-scolaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:audioprothesiste-salarie-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:audiovisuel-radio-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:auto-ecole-conduite-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:auxiliaire-puericulture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:auxiliaire-puericulture-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:auxiliaire-veterinaire-asv-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:auxiliaire-vie-domicile-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:auxiliaire-vie-severe-polyhandicap-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:avance-commission-salaire-variable-guide.html": [
+      "L3251-3"
+    ],
+    "guide:avocats-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:badgeage-obligation-controle-temps-guide.html": [
+      "L3171-2"
+    ],
+    "guide:banque-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:bareme-macron-indemnites-guide.html": [
+      "L1235-3"
+    ],
+    "guide:bdese-base-donnees-guide.html": [
+      "L2317-1"
+    ],
+    "guide:bijouterie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:bijoutier-joaillier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boucher-charcutier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boucher-charcutier-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boucher-grande-surface-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boucherie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boulanger-patissier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:boulangerie-industrielle-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:brancardier-agent-service-hospitalier-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:brancardier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:bricolage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:bruit-vibrations-travail-guide.html": [
+      "R4441-1"
+    ],
+    "guide:btp-etam-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cabinet-conseil-management-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cabinet-medical-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cabinets-dentaires-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cadre-dirigeant-vs-cadre-autonome.html": [
+      "L3111-2"
+    ],
+    "guide:caissier-grande-surface-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:calcul-conges-payes-hs.html": [
+      "L3141-1"
+    ],
+    "guide:camping-tourisme-plein-air-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:caoutchouc-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cariste-frigorifique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:carreleur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:carreleur-poseur-revetement-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:carrossier-peintre-auto-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:casino-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:caves-cooperatives-viticoles-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:caviste-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:cdd-motifs-requalification.html": [
+      "D1242-1"
+    ],
+    "guide:cdd-usage-guide.html": [
+      "D1242-1",
+      "L1242-2"
+    ],
+    "guide:cdi-chantier-operation-guide.html": [
+      "L1223-8"
+    ],
+    "guide:centre-contact-outsourcing-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:centres-equestres-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:centres-medico-psychologiques-hs-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ceramique-porcelaine-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:certificat-travail-contenu-guide.html": [
+      "L1234-19"
+    ],
+    "guide:cession-fonds-commerce-salarie-guide.html": [
+      "L1224-1"
+    ],
+    "guide:charge-clientele-assurance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:charge-clientele-assurance-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:charge-de-mission-association-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:charpentier-couvreur-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:charpentier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:charte-informatique-entreprise-guide.html": [
+      "L2242-17"
+    ],
+    "guide:chauffeur-btp-engins-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chauffeur-bus-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chauffeur-livreur-vl-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chauffeur-pl-messagerie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chauffeur-poids-lourd-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chef-chantier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:chef-projet-it-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ciment-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cinema-production-audiovisuelle-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:clause-confidentialite-guide.html": [
+      "L1227-1"
+    ],
+    "guide:clause-dedit-formation-guide.html": [
+      "L3251-3"
+    ],
+    "guide:clcc-lutte-cancer-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:clerc-de-notaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coach-sportif-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coiffeur-domicile-independant-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coiffeur-estheticien-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coiffure-esthetique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:commerce-animaux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:commerce-detail-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:commerce-gros-alimentaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:commerce-gros-non-alimentaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:community-manager-digital-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:community-manager-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:comptable-commerce-detail-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:comptable-expert-hs-guide.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:comptable-industrie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:compte-epargne-temps-guide.html": [
+      "L3151-1",
+      "L3153-2"
+    ],
+    "guide:compte-epargne-temps-universel-cetu-guide.html": [
+      "L3151-1"
+    ],
+    "guide:conducteur-benne-ordures-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:conducteur-engins-travaux-publics-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:conducteur-travaux-heures-supplementaires.html": [
+      "L3121-36"
+    ],
+    "guide:conducteur-travaux-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:conge-creation-entreprise-guide.html": [
+      "L3142-105"
+    ],
+    "guide:conge-parental-educatif-guide.html": [
+      "L1225-47",
+      "L1225-59"
+    ],
+    "guide:conge-paternite-accueil-enfant-guide.html": [
+      "L3142-4"
+    ],
+    "guide:conge-sabbatique-enrichi.html": [
+      "L3142-28",
+      "L3142-35"
+    ],
+    "guide:congres-salons-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:conseiller-bancaire-agence-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:conseiller-clientele-mutuelle-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:consultant-independant-portage-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:contrat-professionnalisation-guide.html": [
+      "L6324-1"
+    ],
+    "guide:controle-redressement-urssaf-guide.html": [
+      "L8271-1"
+    ],
+    "guide:controleur-sncf-conducteur-train-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:controleur-sncf-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:controleur-technique-auto-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:convocation-entretien-prealable-guide.html": [
+      "L1232-2",
+      "R1232-1"
+    ],
+    "guide:convoyeur-fonds-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cooperatives-consommation-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cordiste-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:cordonnier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coursier-velo-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:coursier-velo-livreur-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:couvreur-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:creation-graphisme-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:creche-petite-enfance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:credit-impot-services-personne.html": [
+      "L7231-1"
+    ],
+    "guide:cse-comite-social-economique-guide.html": [
+      "L2311-1",
+      "L2311-2"
+    ],
+    "guide:cse-droits-salaries.html": [
+      "L2311-1",
+      "L4131-1"
+    ],
+    "guide:cssct-commission-sante-securite-guide.html": [
+      "L2315-36"
+    ],
+    "guide:cuisinier-chef-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:cumul-emplois-obligation-loyaute.html": [
+      "L8261-1",
+      "L8261-2"
+    ],
+    "guide:data-scientist-heures-supplementaires.html": [
+      "L3121-58"
+    ],
+    "guide:data-scientist-ia-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:defenseur-syndical-procedure-guide.html": [
+      "L2523-10",
+      "L3121-1",
+      "R1453-2"
+    ],
+    "guide:delai-carence-cdd-guide.html": [
+      "L1242-1",
+      "L1244-3"
+    ],
+    "guide:delegation-syndicale-heures-guide.html": [
+      "L1442-1",
+      "L2142-1-3",
+      "L2143-13",
+      "L2143-17",
+      "L2146-1",
+      "L2315-10",
+      "L2315-7",
+      "R2314-1"
+    ],
+    "guide:delegue-syndical-heures-delegation-guide.html": [
+      "L2143-13"
+    ],
+    "guide:demande-conges-payes-refus-employeur-guide.html": [
+      "L3141-13"
+    ],
+    "guide:demenageur-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:demolition-desamiantage-heures-supplementaires.html": [
+      "R4412-100",
+      "R4412-94"
+    ],
+    "guide:depassement-contingent-refus-salarie-avance.html": [
+      "L3121-33"
+    ],
+    "guide:developpeur-web-hs-guide.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:devops-ingenieur-heures-supplementaires.html": [
+      "L3121-9"
+    ],
+    "guide:dialyse-centres-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:dieteticien-nutritionniste-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:directeur-artistique-spectacle-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:discrimination-embauche-recrutement-guide.html": [
+      "L1132-1"
+    ],
+    "guide:don-jours-repos-solidarite.html": [
+      "L1225-65-1",
+      "L3142-25-1",
+      "L3142-6"
+    ],
+    "guide:don-sang-organes-temps-travail-guide.html": [
+      "L1244-2"
+    ],
+    "guide:donnees-biometriques-travail-guide.html": [
+      "L2312-38"
+    ],
+    "guide:dossier-disciplinaire-salarie-guide.html": [
+      "L1332-5"
+    ],
+    "guide:doublage-audiovisuel-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:dpae-formalites-embauche-guide.html": [
+      "L1221-10",
+      "L1221-13",
+      "L8223-1"
+    ],
+    "guide:drive-logistique-ecommerce-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:droit-auteur-salarie-creatif-guide.html": [
+      "L113-9"
+    ],
+    "guide:droit-de-retrait-guide.html": [
+      "L4131-1"
+    ],
+    "guide:droit-deconnexion-guide.html": [
+      "L2242-17"
+    ],
+    "guide:droit-deconnexion-hs-guide.html": [
+      "L2242-17"
+    ],
+    "guide:duerp-document-unique-guide.html": [
+      "R4121-1"
+    ],
+    "guide:durees-maximales-travail-guide.html": [
+      "L3121-18",
+      "L3121-24"
+    ],
+    "guide:eau-assainissement-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ecole-musique-danse-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:editeur-livre-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:editeurs-logiciels-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:edition-jeux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:edition-musicale-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:educateur-jeunes-enfants-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:educateur-specialise-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:educateur-specialise-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:educateur-sportif-club-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:egalite-professionnelle-fh.html": [
+      "L3221-2",
+      "L3221-6"
+    ],
+    "guide:egalite-salariale-fh-index-guide.html": [
+      "L3221-6"
+    ],
+    "guide:elagueur-arboriste-grimpeur-heures-supplementaires.html": [
+      "L4121-2"
+    ],
+    "guide:elections-cse-protocole-electoral-guide.html": [
+      "L2311-2",
+      "L2314-6"
+    ],
+    "guide:electricien-batiment-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:electricien-industriel-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:electronique-electrique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:eleve-ingenieur-stagiaire-longue-duree-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:elu-local-salarie-credit-heures-hs.html": [
+      "L2123-2",
+      "L2411-4"
+    ],
+    "guide:employe-banque-guichet-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:employe-libre-service-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:employe-libre-service-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:energie-gaz-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:energie-renouvelable-eolien-solaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:enseignant-prive-professeur-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:enseignement-prive-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:epargne-salariale-participation-guide.html": [
+      "L3311-1",
+      "L3322-1"
+    ],
+    "guide:epargne-salariale-pee-percol-guide.html": [
+      "L3312-1",
+      "L3322-1",
+      "L3332-1",
+      "L3332-11",
+      "L3334-1"
+    ],
+    "guide:equipements-thermiques-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:equivalences-horaires-transport-hotellerie-guide.html": [
+      "L3121-13"
+    ],
+    "guide:ergotherapeute-salarie-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:estheticienne-domicile-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:etancheur-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:execution-loyale-contrat-travail-guide.html": [
+      "L1222-1"
+    ],
+    "guide:expert-judiciaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:expertise-comptable-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:facadier-ravaleur-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:facteur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:faute-inexcusable-employeur-guide.html": [
+      "L452-1"
+    ],
+    "guide:femme-valet-chambre-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ferroviaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fiche-paie-dematerialisee-guide.html": [
+      "L3243-2"
+    ],
+    "guide:finance-societes-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fleuriste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fleuriste-vendeur-boutique-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fleuriste-vendeur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fonderie-forge-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fonderie-non-ferreux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fouille-salarie-travail-guide.html": [
+      "L1121-1"
+    ],
+    "guide:foyers-jeunes-travailleurs-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:franchise-commerce-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:frigoriste-climaticien-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-9"
+    ],
+    "guide:fromager-cremier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:fruits-legumes-export-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ganterie-cuir-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:gardiennage-immeuble-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:geometre-expert-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:geometre-expert-topographe-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:gestionnaire-copropriete-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:gestionnaire-sinistres-assurance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:grande-distribution-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:graphiste-designer-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:greve-droits-salaries-guide.html": [
+      "L2511-1"
+    ],
+    "guide:groupement-employeurs-temps-partage.html": [
+      "L1253-1",
+      "L8241-1"
+    ],
+    "guide:grutier-btp-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:grutier-levagiste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:habillage-deshabillage-temps-travail-guide.html": [
+      "L3121-3"
+    ],
+    "guide:handicap-travail-protege-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:harcelement-moral-travail.html": [
+      "L1152-1",
+      "L1154-1"
+    ],
+    "guide:harcelement-sexuel-travail-guide.html": [
+      "L1152-1",
+      "L1153-1"
+    ],
+    "guide:heures-non-payees.html": [
+      "L3245-1"
+    ],
+    "guide:heures-supplementaires-guadeloupe-guide.html": [
+      "L3422-2"
+    ],
+    "guide:heures-supplementaires-guide.html": [
+      "L3121-28"
+    ],
+    "guide:heures-supplementaires-guyane-guide.html": [
+      "L3422-2"
+    ],
+    "guide:heures-supplementaires-martinique-guide.html": [
+      "L3422-2"
+    ],
+    "guide:heures-supplementaires-mayotte-guide.html": [
+      "L3421-1"
+    ],
+    "guide:heures-supplementaires-reunion-guide.html": [
+      "L3422-2"
+    ],
+    "guide:heures-supplementaires-saint-martin-saint-barthelemy-guide.html": [
+      "L3422-2"
+    ],
+    "guide:hierarchie-normes-principe-faveur-guide.html": [
+      "L2253-1",
+      "L2253-3"
+    ],
+    "guide:hlm-bailleurs-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:horaires-individualises-guide.html": [
+      "L3121-48"
+    ],
+    "guide:horloger-bijoutier-artisan-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:horloger-reparateur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:horlogerie-bijouterie-industrie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:horticulteur-pepiniere-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:horticulture-pepiniere-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hote-accueil-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hote-accueil-standardiste-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hotellerie-chaine-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hotellerie-plein-air-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hs-cdi-intermittent-guide.html": [
+      "L3123-33"
+    ],
+    "guide:hs-mandataire-social-dirigeant-guide.html": [
+      "L3111-2"
+    ],
+    "guide:hs-non-pris-en-compte-entreprise-rachetee.html": [
+      "L1224-1"
+    ],
+    "guide:hs-salaires-nets-bruts-guide.html": [
+      "L241-17"
+    ],
+    "guide:hs-travail-a-distance-international.html": [
+      "L1261-1"
+    ],
+    "guide:huissier-commissaire-justice-hs-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:huissiers-commissaires-justice-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:hypermarche-supermarche-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ia-data-cyber-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ia-recrutement-discrimination-guide.html": [
+      "L1132-1"
+    ],
+    "guide:ifsi-ecole-soins-infirmiers-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:immobilier-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:import-export-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:imprimerie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:imprimeur-technicien-prepresse-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:inaptitude-guide.html": [
+      "L1226-14",
+      "L1226-4",
+      "R4624-42"
+    ],
+    "guide:indemnite-transport-guide.html": [
+      "L3261-2"
+    ],
+    "guide:index.html": [
+      "D3121-24",
+      "L241-17",
+      "L3121-27",
+      "L3121-36",
+      "L3245-1"
+    ],
+    "guide:industrie-bois-ameublement-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-ceramique-verre-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-chimique-petrochimie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-cuir-maroquinerie-luxe-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-electronique-composants-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-papier-emballage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-pharmaceutique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industrie-textile-habillement-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industries-agroalimentaires-diverses-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:industries-mode-chapellerie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:infirmier-anesthesiste-iade-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:infirmier-bloc-operatoire-ibode-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:infirmier-clinique-privee-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:infirmier-hopital-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:information-salaries-cession-entreprise-2026-guide.html": [
+      "L1224-1"
+    ],
+    "guide:informatique-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ingenieur-bureau-etudes-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ingenieur-qhse-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:instruments-mesure-precision-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:intelligence-artificielle-surveillance-travail-guide.html": [
+      "L1222-4",
+      "L2312-8"
+    ],
+    "guide:interim-agence-emploi-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:interim-cdd-droits-specifiques-guide.html": [
+      "L1242-1",
+      "L1251-1"
+    ],
+    "guide:interim-longue-duree-hs-guide.html": [
+      "L1251-18"
+    ],
+    "guide:interim-longue-mission-hs.html": [
+      "L1251-1"
+    ],
+    "guide:interim-vs-cdd-vs-cdi-comparatif.html": [
+      "L1221-1",
+      "L1242-1",
+      "L1251-1"
+    ],
+    "guide:jardinier-espaces-verts-municipal-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:jardinier-paysagiste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:jeune-travailleur-mineur-hs.html": [
+      "L3121-27",
+      "L3121-36",
+      "L3162-1"
+    ],
+    "guide:jeux-video-studio-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:jouets-puericulture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:jour-solidarite-lundi-pentecote-guide.html": [
+      "L3133-7"
+    ],
+    "guide:journaliste-pigiste-requalification-hs.html": [
+      "L7112-1"
+    ],
+    "guide:journaliste-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:juriste-entreprise-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:kinesitherapeute-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:kinesitherapeute-salarie-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:labo-biologie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:lettre-licenciement-motivation-guide.html": [
+      "L1232-6"
+    ],
+    "guide:librairie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:licenciement-nul-causes-guide.html": [
+      "L1132-3-3",
+      "L1132-4",
+      "L1152-3",
+      "L1153-4",
+      "L1225-4",
+      "L1226-9",
+      "L2411-1"
+    ],
+    "guide:location-vehicules-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:logistique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:loueur-courte-duree-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:macon-coffreur-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:magasin-populaire-variete-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:magasinier-cariste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:magasinier-cariste-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:maintien-salaire-maladie-maternite-guide.html": [
+      "L1226-1"
+    ],
+    "guide:maisons-familiales-rurales-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:maitre-chien-securite-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:maitre-hotel-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:maladie-enfant-conges-guide.html": [
+      "L3142-1",
+      "L3142-4"
+    ],
+    "guide:maladie-professionnelle-guide.html": [
+      "L461-1"
+    ],
+    "guide:maladie-professionnelle-inaptitude-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36",
+      "L4624-4"
+    ],
+    "guide:manager-equipe-production-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:manipulateur-radio-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:mannequin-salarie-presomption-heures-supplementaires.html": [
+      "L7123-2"
+    ],
+    "guide:manucure-prothesiste-ongulaire-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:maraichage-horticulture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:marine-marchande-marins-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:maroquinerie-cuir-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:maxi-discount-hard-discount-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:mecanicien-auto-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:medecin-pharmacien-salarie-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:mentions-obligatoires-contrat-travail-guide.html": [
+      "L1242-12",
+      "L1331-2",
+      "L3123-6",
+      "L3245-1"
+    ],
+    "guide:merchandiser-commercial-terrain-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:messagerie-livraison-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:meubles-bois-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:meunerie-semoulerie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:militaire-gendarmerie-reserve-hs.html": [
+      "L3121-27",
+      "L3121-36",
+      "L3142-89"
+    ],
+    "guide:minerais-carrieres-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:mise-a-pied-disciplinaire-conservatoire-guide.html": [
+      "L1332-3"
+    ],
+    "guide:mise-en-demeure-hs-guide.html": [
+      "L3121-27",
+      "L3121-28"
+    ],
+    "guide:mobilite-volontaire-securisee-guide.html": [
+      "L1222-12",
+      "L1222-16"
+    ],
+    "guide:modulation-annualisation-temps-travail.html": [
+      "L3121-41",
+      "L3121-44"
+    ],
+    "guide:moniteur-atelier-esat-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:moniteur-auto-ecole-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:moniteur-educateur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:monteur-audiovisuel-heures-supplementaires.html": [
+      "D1242-1"
+    ],
+    "guide:monteur-reseaux-electriques-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:musique-enregistrement-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:nao-negociation-annuelle-hs-guide.html": [
+      "D3121-24",
+      "L2242-1"
+    ],
+    "guide:navigation-interieure-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:negociation-annuelle-obligatoire-nao-guide.html": [
+      "L2242-1"
+    ],
+    "guide:negociation-collective-accord-entreprise.html": [
+      "L2221-1"
+    ],
+    "guide:nettoyage-entretien-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:notaire-assistant-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:notaire-clerc-specialise-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:notariat-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:obligation-securite-employeur-guide.html": [
+      "L4121-1"
+    ],
+    "guide:oeth-obligation-emploi-handicapes-guide.html": [
+      "L3121-1"
+    ],
+    "guide:office-manager-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:operateur-cnc-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:operateur-cnc-machiniste-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:operateur-production-agroalimentaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:opticien-lunetier-conseil-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:opticien-lunetier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:optique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:organisation-temps-travail-guide.html": [
+      "L3121-1"
+    ],
+    "guide:orthopediste-orthesiste-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:orthophoniste-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:orthoptiste-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:osteopathe-salarie-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:ouvrier-agricole-saisonnier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ouvrier-agricole-saisonnier-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ouvrier-viticole-permanent-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:papier-carton-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:participation-salaries-guide.html": [
+      "L3324-1"
+    ],
+    "guide:patron-paie-hs-bons-cadeaux.html": [
+      "L3241-1",
+      "R3246-1"
+    ],
+    "guide:paysagiste-heures-supplementaires.html": [
+      "L3121-44"
+    ],
+    "guide:paysage-jardinage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:paysagiste-jardinier-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:peche-maritime-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:peintre-batiment-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:per-plan-epargne-retraite-hs-guide.html": [
+      "L3334-8"
+    ],
+    "guide:periode-essai-rupture-guide.html": [
+      "L1221-19",
+      "L1221-26"
+    ],
+    "guide:periode-essai-droits-obligations-guide.html": [
+      "L1221-25"
+    ],
+    "guide:periode-essai.html": [
+      "L1221-19"
+    ],
+    "guide:personnel-navigation-aerienne-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:petrole-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pharma-industrie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pharmacien-officine-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pigiste-journaliste-statut-heures-supplementaires.html": [
+      "L7111-3"
+    ],
+    "guide:plan-prevention-coactivite-sous-traitance-guide.html": [
+      "R4512-6"
+    ],
+    "guide:plasturgie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:plombier-chauffagiste-btp-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:plombier-chauffagiste-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:plongeur-commis-cuisine-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pneumatique-aluminium-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pneumatique-caoutchouc-plastique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:podologue-salarie-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:poissonnier-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:pompes-funebres-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:portage-salarial-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:porteur-courrier-distribution-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:preavis-dispense-indemnite.html": [
+      "L1234-1",
+      "L1237-1"
+    ],
+    "guide:preavis-licenciement.html": [
+      "L1234-1"
+    ],
+    "guide:preparateur-commandes-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:preparateur-pharmacie-officine-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:preretrait-dispotifs-fin-carriere.html": [
+      "L1237-19"
+    ],
+    "guide:prescription-procedure-prudhomale-guide.html": [
+      "L1233-67",
+      "L1235-7",
+      "L431-2"
+    ],
+    "guide:prescription-salaires-rappel-guide.html": [
+      "L3245-1"
+    ],
+    "guide:presse-journaliste-agence-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:presse-media-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:prestataires-tertiaire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:pret-main-oeuvre-illicite-marchandage-guide.html": [
+      "L8231-1",
+      "L8241-2"
+    ],
+    "guide:preuve-heures-travail-guide.html": [
+      "L3171-4"
+    ],
+    "guide:prevention-addictions-travail-guide.html": [
+      "L4121-1",
+      "L4122-1"
+    ],
+    "guide:prime-precarite-cdd-calcul-guide.html": [
+      "L1243-8"
+    ],
+    "guide:priorite-reembauche-licenciement-economique-guide.html": [
+      "L1233-4",
+      "L1233-45"
+    ],
+    "guide:product-owner-scrum-master-heures-supplementaires.html": [
+      "L3121-58"
+    ],
+    "guide:profession-liberale-independant-converti-salarie.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:professions-liberales-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:promotion-immobiliere-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:protection-grossesse-licenciement-guide.html": [
+      "L1225-4"
+    ],
+    "guide:protection-lanceur-alerte-hs-guide.html": [
+      "L3121-27"
+    ],
+    "guide:protection-representants-personnel.html": [
+      "L2411-1"
+    ],
+    "guide:prud-hommes-procedure-guide.html": [
+      "L1134-5",
+      "L1411-1",
+      "L1471-1",
+      "L3245-1"
+    ],
+    "guide:psychologue-salarie-heures-supplementaires.html": [
+      "L3121-58"
+    ],
+    "guide:psychologue-salarie-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:psychomotricien-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:publicite-regies-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:rachat-trimestres-retraite-hs.html": [
+      "D351-1-5"
+    ],
+    "guide:radio-television-technicien-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ramonage-entretien-fumisterie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:receptionniste-clinique-veterinaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:recherche-scientifique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:reconversion-professionnelle-guide.html": [
+      "L6311-1",
+      "L6323-1"
+    ],
+    "guide:recuperation-dechets-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:redacteur-web-seo-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:refere-prudhommal-guide.html": [
+      "R1455-5"
+    ],
+    "guide:refere-prudhommes-urgence-guide.html": [
+      "R1455-5"
+    ],
+    "guide:reglement-interieur-entreprise-guide.html": [
+      "L1311-2",
+      "L1321-1",
+      "L1321-3",
+      "L1321-4",
+      "L1322-1",
+      "L1331-2"
+    ],
+    "guide:regles-paie-bulletins-specifiques.html": [
+      "L3243-1"
+    ],
+    "guide:repos-dominical-derogations-guide.html": [
+      "L3132-1",
+      "L3132-12",
+      "L3132-14",
+      "L3132-20",
+      "L3132-26",
+      "L3132-27",
+      "L3132-3",
+      "L3134-11",
+      "R3132-5"
+    ],
+    "guide:responsable-rayon-grande-surface-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:responsable-rayon-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:restauration-etablissements-sante-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:restauration-gastronomique-etoilee-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:restauration-rapide-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:restructuration-plan-sauvegarde-hs-guide.html": [
+      "L3245-1"
+    ],
+    "guide:retour-maternite-hs-guide.html": [
+      "L1225-26",
+      "L1225-44"
+    ],
+    "guide:retraite-progressive-guide.html": [
+      "L351-15"
+    ],
+    "guide:retrogradation-disciplinaire-guide.html": [
+      "L1332-1"
+    ],
+    "guide:rh-conseil-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:risque-routier-professionnel-guide.html": [
+      "L4121-1"
+    ],
+    "guide:risques-chimiques-cmr-guide.html": [
+      "R4412-1"
+    ],
+    "guide:risques-psychosociaux-prevention-guide.html": [
+      "L4121-1",
+      "L4131-1"
+    ],
+    "guide:rqth-amenagement-poste-guide.html": [
+      "L5213-1",
+      "L5213-6"
+    ],
+    "guide:rqth-reconnaissance-handicap-travail-guide.html": [
+      "L5213-1"
+    ],
+    "guide:rupture-anticipee-cdd-faute-grave-guide.html": [
+      "L1243-1"
+    ],
+    "guide:rupture-conventionnelle-collective-rcc-guide.html": [
+      "L1237-19"
+    ],
+    "guide:rupture-conventionnelle.html": [
+      "L1237-11",
+      "L1237-13",
+      "L1237-16"
+    ],
+    "guide:sage-femme-salariee-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sage-femme-salariee-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:saisie-sur-salaire.html": [
+      "R3252-2"
+    ],
+    "guide:salaire-variable-commissions-bonus.html": [
+      "L3121-22"
+    ],
+    "guide:salarie-etranger-titre-travail-guide.html": [
+      "L1262-1"
+    ],
+    "guide:salarie-multi-employeurs-hs.html": [
+      "L8261-1"
+    ],
+    "guide:salarie-prive-emploi-senior-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sanitaire-social-prive-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sante-animale-veterinaire-clinique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:secretaire-btp-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:secretaire-medicale-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:secretaire-syntec-heures-supplementaires.html": [
+      "L3121-36"
+    ],
+    "guide:section-syndicale-representativite-guide.html": [
+      "L2121-1",
+      "L2142-1"
+    ],
+    "guide:securite-defense-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:securite-sociale-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:semaine-4-jours-droit-travail-guide.html": [
+      "L2253-1"
+    ],
+    "guide:serveur-salle-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:services-funeraires-cremation-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:services-personne-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:services-proprete-milieu-industriel-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:seuils-effectifs-guide.html": [
+      "L2242-1",
+      "L2242-13",
+      "L2311-2",
+      "L2312-1",
+      "L3121-44"
+    ],
+    "guide:soins-suite-readaptation-ssr-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:solderie-destockage-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sommelier-barman-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:soudeur-chaudronnier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:soudeur-industrie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:spectacle-vivant-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sport-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sport-professionnel-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:sucrerie-distillerie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:suppression-limite-mandats-cse-guide.html": [
+      "L2143-3",
+      "L2314-33"
+    ],
+    "guide:surveillance-vie-privee-travail.html": [
+      "L1121-1",
+      "L2312-37",
+      "L2312-38",
+      "L2323-47"
+    ],
+    "guide:surveillant-etablissement-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:surveillant-nuit-etablissement-social-guide.html": [
+      "L3121-27"
+    ],
+    "guide:tailleur-couturier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:tapissier-decorateur-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:tatoueur-salarie-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:technicien-aeronautique-maintenance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-alarme-securite-electronique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-bureau-etudes-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-fibre-optique-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-hygiene-proprete-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-informatique-helpdesk-heures-supplementaires.html": [
+      "L3121-36"
+    ],
+    "guide:technicien-intervention-sociale-familiale-tisf-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:technicien-laboratoire-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-maintenance-industrielle-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-qualite-industrie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:technicien-veterinaire-laboratoire-analyse-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:telecoms-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:teleconseiller-assurance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:teletravail-droits.html": [
+      "L1222-10",
+      "L1222-9"
+    ],
+    "guide:teletravail-frais-heures-supplementaires-guide.html": [
+      "L1222-10",
+      "L1222-9",
+      "L2242-17",
+      "L3171-2"
+    ],
+    "guide:teletravail-sante-securite-guide.html": [
+      "L1222-9"
+    ],
+    "guide:televendeur-centre-appel-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:televendeur-centre-appels-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:temps-habillage-deshabillage-guide.html": [
+      "L3121-3"
+    ],
+    "guide:temps-pause-legale-guide.html": [
+      "L3121-16"
+    ],
+    "guide:temps-plein-vers-temps-partiel-guide.html": [
+      "L3123-7"
+    ],
+    "guide:temps-trajet-domicile-travail-guide.html": [
+      "L3121-4"
+    ],
+    "guide:textile-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:thalasso-spa-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:thermalisme-thalasso-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:ticket-restaurant-titres-avantages.html": [
+      "L3262-1"
+    ],
+    "guide:tourisme-agences-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:traducteur-interprete-salarie-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:traiteurs-reception-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:transfert-entreprise-l1224-guide.html": [
+      "L1224-1"
+    ],
+    "guide:transidentite-travail-droits-guide.html": [
+      "L1132-1"
+    ],
+    "guide:transport-aerien-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:transport-aerien-sol-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:transport-sanitaire-ambulancier-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:transports-ports-manutention-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:travail-dissimule-hs-non-declarees-2026.html": [
+      "L8221-5"
+    ],
+    "guide:travail-dissimule-travail-noir-guide.html": [
+      "L243-7",
+      "L8221-1",
+      "L8221-3",
+      "L8221-5",
+      "L8222-2",
+      "L8222-4",
+      "L8223-1",
+      "L8224-1",
+      "L8224-2",
+      "L8224-5"
+    ],
+    "guide:travail-equipe-feu-continu-guide.html": [
+      "L3121-16",
+      "L3132-12",
+      "L3132-14"
+    ],
+    "guide:travail-hauteur-reglementation-guide.html": [
+      "L4131-1",
+      "R4323-55",
+      "R4323-58",
+      "R4323-59",
+      "R4323-84",
+      "R4323-87"
+    ],
+    "guide:travail-interimaire-heures-supplementaires.html": [
+      "L1251-18"
+    ],
+    "guide:travail-mineurs-regles-generales-guide.html": [
+      "D4153-15",
+      "L4153-1",
+      "L4153-8"
+    ],
+    "guide:travail-saisonnier-droits.html": [
+      "L1242-2",
+      "L1244-1"
+    ],
+    "guide:travailleur-frontalier-france-suisse-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:travailleur-frontalier-luxembourg-hs.html": [
+      "L211-23",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:travailleur-handicape-milieu-ordinaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:travaux-agricoles-ruraux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:travaux-publics-heures-supplementaires.html": [
+      "L3121-20",
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:trois-consultations-cse-guide.html": [
+      "L2312-17",
+      "L2312-36"
+    ],
+    "guide:ux-designer-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vendeur-automobile-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vendeur-automobile-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vendeur-conseil-magasin-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vendeur-telephonie-multimedia-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:vendeur-luxe-bijouterie-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vente-distance-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:verre-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:veterinaire-auxiliaire-hs.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:veterinaires-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vigneron-viticulture-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:vins-spiritueux-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ],
+    "guide:voiturier-hotel-heures-supplementaires.html": [
+      "L3121-27"
+    ],
+    "guide:vote-electronique-elections-cse-guide.html": [
+      "L2314-26",
+      "R2314-18",
+      "R2314-5"
+    ],
+    "guide:vrp-representants-heures-supplementaires.html": [
+      "L3121-27",
+      "L3121-36"
+    ]
+  },
+  "articles": [
+    "D1225-11",
+    "D1225-11-3",
+    "D1226-1",
+    "D1226-3",
+    "D1242-1",
+    "D3121-24",
+    "D3141-6",
+    "D3171-16",
+    "D3243-8",
+    "D3261-15-2",
+    "D351-1-5",
+    "D4153-15",
+    "L1121-1",
+    "L113-9",
+    "L1132-1",
+    "L1132-3-3",
+    "L1132-4",
+    "L1134-5",
+    "L1142-2-1",
+    "L1142-7",
+    "L1142-9",
+    "L1143-1",
+    "L1152-1",
+    "L1152-3",
+    "L1153-1",
+    "L1153-4",
+    "L1153-5",
+    "L1154-1",
+    "L1214-8",
+    "L1221-1",
+    "L1221-10",
+    "L1221-13",
+    "L1221-19",
+    "L1221-21",
+    "L1221-22",
+    "L1221-23",
+    "L1221-25",
+    "L1221-26",
+    "L1222-1",
+    "L1222-10",
+    "L1222-11",
+    "L1222-12",
+    "L1222-16",
+    "L1222-4",
+    "L1222-9",
+    "L1223-8",
+    "L1224-1",
+    "L1225-1",
+    "L1225-26",
+    "L1225-30",
+    "L1225-32",
+    "L1225-33",
+    "L1225-4",
+    "L1225-44",
+    "L1225-46",
+    "L1225-46-2",
+    "L1225-47",
+    "L1225-59",
+    "L1225-65",
+    "L1225-65-1",
+    "L1226-1",
+    "L1226-14",
+    "L1226-22",
+    "L1226-4",
+    "L1226-9",
+    "L1227-1",
+    "L1232-2",
+    "L1232-6",
+    "L1233-21",
+    "L1233-4",
+    "L1233-45",
+    "L1233-67",
+    "L1234-1",
+    "L1234-19",
+    "L1234-20",
+    "L1234-5",
+    "L1234-9",
+    "L1235-3",
+    "L1235-7",
+    "L1237-1",
+    "L1237-1-1",
+    "L1237-10",
+    "L1237-11",
+    "L1237-13",
+    "L1237-14",
+    "L1237-16",
+    "L1237-18",
+    "L1237-19",
+    "L1237-19-4",
+    "L1242-1",
+    "L1242-12",
+    "L1242-2",
+    "L1242-6",
+    "L1243-1",
+    "L1243-10",
+    "L1243-8",
+    "L1244-1",
+    "L1244-2",
+    "L1244-3",
+    "L1251-1",
+    "L1251-10",
+    "L1251-18",
+    "L1253-1",
+    "L1261-1",
+    "L1262-1",
+    "L131-4",
+    "L1311-2",
+    "L1321-1",
+    "L1321-3",
+    "L1321-4",
+    "L1322-1",
+    "L1331-2",
+    "L1332-1",
+    "L1332-3",
+    "L1332-4",
+    "L1332-5",
+    "L1411-1",
+    "L1442-1",
+    "L1471-1",
+    "L161-22",
+    "L211-23",
+    "L2121-1",
+    "L2123-2",
+    "L2141-5",
+    "L2142-1",
+    "L2142-1-3",
+    "L2143-13",
+    "L2143-17",
+    "L2143-3",
+    "L2146-1",
+    "L2221-1",
+    "L2242-1",
+    "L2242-13",
+    "L2242-17",
+    "L225-102",
+    "L2253-1",
+    "L2253-3",
+    "L2254-2",
+    "L2311-1",
+    "L2311-2",
+    "L2312-1",
+    "L2312-17",
+    "L2312-36",
+    "L2312-37",
+    "L2312-38",
+    "L2312-8",
+    "L2314-26",
+    "L2314-33",
+    "L2314-6",
+    "L2315-10",
+    "L2315-14",
+    "L2315-36",
+    "L2315-7",
+    "L2317-1",
+    "L2323-47",
+    "L241-17",
+    "L2411-1",
+    "L2411-4",
+    "L242-1",
+    "L243-16",
+    "L243-7",
+    "L2511-1",
+    "L2512-5",
+    "L2523-10",
+    "L3111-2",
+    "L3121-1",
+    "L3121-11",
+    "L3121-12",
+    "L3121-13",
+    "L3121-16",
+    "L3121-18",
+    "L3121-20",
+    "L3121-22",
+    "L3121-24",
+    "L3121-27",
+    "L3121-28",
+    "L3121-3",
+    "L3121-30",
+    "L3121-33",
+    "L3121-36",
+    "L3121-4",
+    "L3121-41",
+    "L3121-44",
+    "L3121-48",
+    "L3121-50",
+    "L3121-58",
+    "L3121-65",
+    "L3121-9",
+    "L3122-1",
+    "L3122-2",
+    "L3122-20",
+    "L3122-5",
+    "L3122-6",
+    "L3123-1",
+    "L3123-33",
+    "L3123-6",
+    "L3123-7",
+    "L3131-1",
+    "L3132-1",
+    "L3132-12",
+    "L3132-14",
+    "L3132-2",
+    "L3132-20",
+    "L3132-26",
+    "L3132-27",
+    "L3132-3",
+    "L3133-1",
+    "L3133-3",
+    "L3133-4",
+    "L3133-7",
+    "L3134-11",
+    "L3141-1",
+    "L3141-13",
+    "L3141-19-3",
+    "L3141-3",
+    "L3141-5-1",
+    "L3142-1",
+    "L3142-105",
+    "L3142-16",
+    "L3142-19",
+    "L3142-25-1",
+    "L3142-27",
+    "L3142-28",
+    "L3142-35",
+    "L3142-4",
+    "L3142-40",
+    "L3142-6",
+    "L3142-89",
+    "L3151-1",
+    "L3153-1",
+    "L3153-2",
+    "L3153-3",
+    "L3154-3",
+    "L3162-1",
+    "L3171-2",
+    "L3171-3",
+    "L3171-4",
+    "L3221-2",
+    "L3221-6",
+    "L323-1",
+    "L3231-5",
+    "L3241-1",
+    "L3243-1",
+    "L3243-2",
+    "L3243-4",
+    "L3245-1",
+    "L3251-3",
+    "L3261-2",
+    "L3261-3",
+    "L3261-3-1",
+    "L3262-1",
+    "L331-3",
+    "L331-8",
+    "L3311-1",
+    "L3312-1",
+    "L3322-1",
+    "L3324-1",
+    "L3332-1",
+    "L3332-11",
+    "L3333-6",
+    "L3334-1",
+    "L3334-8",
+    "L3342-1",
+    "L341-1",
+    "L341-16",
+    "L3421-1",
+    "L3422-2",
+    "L351-15",
+    "L411-1",
+    "L4121-1",
+    "L4121-2",
+    "L4122-1",
+    "L4131-1",
+    "L4153-1",
+    "L4153-8",
+    "L431-1",
+    "L431-2",
+    "L432-1",
+    "L432-2",
+    "L433-1",
+    "L433-2",
+    "L441-1",
+    "L441-2",
+    "L441-4",
+    "L452-1",
+    "L452-2",
+    "L452-3",
+    "L452-4",
+    "L452-5",
+    "L461-1",
+    "L461-7",
+    "L4624-4",
+    "L5213-1",
+    "L5213-6",
+    "L5422-1-1",
+    "L6211-1",
+    "L6221-1",
+    "L6311-1",
+    "L6315-1",
+    "L6323-1",
+    "L6324-1",
+    "L6325-10",
+    "L6325-24",
+    "L6325-8",
+    "L7111-3",
+    "L7112-1",
+    "L7123-2",
+    "L7231-1",
+    "L8221-1",
+    "L8221-3",
+    "L8221-5",
+    "L8222-2",
+    "L8222-4",
+    "L8223-1",
+    "L8224-1",
+    "L8224-2",
+    "L8224-5",
+    "L8231-1",
+    "L8241-1",
+    "L8241-2",
+    "L8261-1",
+    "L8261-2",
+    "L8271-1",
+    "R1221-26",
+    "R1232-1",
+    "R1234-2",
+    "R1234-4",
+    "R1453-2",
+    "R1455-5",
+    "R162-1-7",
+    "R2314-1",
+    "R2314-18",
+    "R2314-5",
+    "R2315-5",
+    "R3132-5",
+    "R323-1",
+    "R323-4",
+    "R3246-1",
+    "R3252-2",
+    "R3252-3",
+    "R351-12",
+    "R4121-1",
+    "R4152-13",
+    "R4152-28",
+    "R4228-20",
+    "R4323-55",
+    "R4323-58",
+    "R4323-59",
+    "R4323-84",
+    "R4323-87",
+    "R441-1",
+    "R441-3",
+    "R4412-1",
+    "R4412-100",
+    "R4412-94",
+    "R4441-1",
+    "R4512-6",
+    "R4624-31",
+    "R4624-42",
+    "R4624-46"
+  ]
+}

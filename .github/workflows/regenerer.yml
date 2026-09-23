@@ -19,6 +19,10 @@ permissions:
 jobs:
   regenerer:
     runs-on: ubuntu-latest
+    # Ouvrir les ~1 100 pages de l'appli et du guide prend 8 à 10 minutes :
+    # la limite par défaut (6 h) est large, mais on borne pour qu'un blocage
+    # ne consomme pas des heures de runner en silence.
+    timeout-minutes: 45
     steps:
       - name: Récupérer ce dépôt (veille)
         uses: actions/checkout@v4
@@ -93,7 +97,7 @@ jobs:
           # n'apparaît que le jour où un article change.
           for cible in donnees.json sw.js ccn-regles.json historique/ \
                        empreintes-articles.json empreintes-fichiers.json \
-                       releves/; do
+                       pages-articles.json releves/; do
             [ -e "$cible" ] && git add "$cible" || true
           done
           git diff --cached --quiet && echo "Aucun changement." || \

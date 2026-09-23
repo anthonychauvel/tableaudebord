@@ -148,6 +148,18 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 .ligne .t{font-size:13px;font-weight:700;}
 .ligne .d{font-size:11.5px;color:var(--txt2);margin-top:3px;line-height:1.5;}
 
+/* ── Feuille d'export ── */
+.sheet-fond{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:60;display:none;}
+.sheet-fond.on{display:block;}
+.sheet{position:fixed;left:10px;right:10px;bottom:-100%;z-index:61;background:#171C22;border:1px solid var(--edge);
+  border-radius:22px;padding:14px;transition:bottom .25s ease;display:grid;gap:8px;}
+.sheet.on{bottom:calc(12px + env(safe-area-inset-bottom));}
+.sheet-t{font-size:15px;font-weight:800;padding:4px 4px 6px;}
+.sheet-b{display:block;width:100%;text-align:left;background:rgba(255,255,255,.06);border:1px solid var(--edge);
+  color:var(--txt);font-size:13.5px;font-weight:700;padding:12px 14px;border-radius:14px;cursor:pointer;}
+.sheet-b small{display:block;font-weight:600;font-size:11px;color:var(--txt2);margin-top:2px;}
+.sheet-b.annul{text-align:center;background:none;color:var(--txt2);}
+
 /* ── Barre d'onglets ── */
 .onglets{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;
   padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(12,15,19,.92);
@@ -180,7 +192,7 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
   <div class="logo">🦉</div>
   <div><h1>Ma veille</h1><div class="sub" id="hdrSub">Chargement…</div></div>
   <div class="sp"></div>
-  <button class="btn-mini" onclick="exporterTexte()">⬇️ Export</button>
+  <button class="btn-mini" onclick="ouvrirExport()">📤 Exporter</button>
 </div>
 
 <!-- ACCUEIL -->
@@ -228,6 +240,15 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
   <button class="onglet" data-v="historique" onclick="allerA('historique')"><span class="oe">📜</span>Historique</button>
   <button class="onglet" data-v="regles" onclick="allerA('regles')"><span class="oe">📋</span>Règles CCN</button>
 </nav>
+<div class="sheet-fond" id="sheetFond" onclick="fermerExport()"></div>
+<div class="sheet" id="sheet">
+  <div class="sheet-t">📤 Exporter mes tâches</div>
+  <button class="sheet-b" onclick="exporterTaches('copier')">📋 Copier la liste (texte)<small>Pour la coller dans une conversation</small></button>
+  <button class="sheet-b" onclick="exporterTaches('json')">🧾 Fichier .json<small>Tout le détail, à envoyer tel quel</small></button>
+  <button class="sheet-b" onclick="exporterTaches('txt')">📄 Fichier .txt<small>Même liste, en texte simple</small></button>
+  <button class="sheet-b" onclick="fermerExport();exporterTexte()">⬇️ Liste de contrôle (.zip)<small>Un fichier par thème, à cocher</small></button>
+  <button class="sheet-b annul" onclick="fermerExport()">Annuler</button>
+</div>
 <div class="toast" id="toast"></div>
 
 </div><!-- #app -->
@@ -645,6 +666,63 @@ function filtrerReglesCCN(){
   if(resultats.length > AFFICHES.length){
     conteneur.innerHTML += `<div class="vide">… et ${resultats.length - AFFICHES.length} de plus — précise la recherche.</div>`;
   }
+}
+
+// --- Export des tâches (nouveau) : de quoi m'envoyer l'état en un coller ---
+function ouvrirExport(){document.getElementById('sheetFond').classList.add('on');document.getElementById('sheet').classList.add('on');}
+function fermerExport(){document.getElementById('sheetFond').classList.remove('on');document.getElementById('sheet').classList.remove('on');}
+
+function _taches(){
+  var d=window.__DONNEES||{sections:[]};
+  var l=toutesAlertes().map(function(a){
+    var g=GUIDE[a.categorie];
+    return {theme:(THEMES[a._theme]||{}).n||a._theme, categorie:a.categorie, gravite:a.gravite,
+            nouveau:!!a.nouveau, fait:!!FAIT[cleAlerte(a)],
+            titre:a.titre||'', resume:g?g.quoi.replace('{cle}',ident(a)):'', detail:a.detail||''};
+  });
+  // à faire d'abord, puis regroupé par thème, du plus grave au moins grave
+  l.sort(function(x,y){return (x.fait-y.fait)||String(x.theme).localeCompare(String(y.theme))||((NIVEAU[x.gravite]||NIVEAU.basse).o-(NIVEAU[y.gravite]||NIVEAU.basse).o);});
+  return {genere:d.genere, exporte:new Date().toISOString(),
+          total:l.length, a_faire:l.filter(function(t){return !t.fait&&(t.gravite!=='basse'||t.nouveau);}).length,
+          faites:l.filter(function(t){return t.fait;}).length,
+          exceptions_appliquees:d.exceptions_appliquees||0, taches:l};
+}
+function _tachesTexte(){
+  var t=_taches(), L=[];
+  L.push('MES TÂCHES DE VEILLE');
+  L.push('Dernier passage : '+(t.genere?new Date(t.genere).toLocaleString('fr-FR'):'?'));
+  L.push('Exporté le : '+new Date(t.exporte).toLocaleString('fr-FR'));
+  L.push(t.total+' point(s) · '+t.a_faire+' à faire · '+t.faites+' déjà traité(s) · '+t.exceptions_appliquees+' masqué(s) par exceptions');
+  L.push('');
+  var themeCourant='';
+  t.taches.forEach(function(x){
+    if(x.theme!==themeCourant){themeCourant=x.theme;L.push('== '+themeCourant+' ==');}
+    L.push('['+(x.fait?'x':' ')+'] '+((NIVEAU[x.gravite]||NIVEAU.basse).t.split(' ')[0])+(x.nouveau?' 🆕':'')+' '+x.titre);
+    if(x.resume) L.push('    → '+x.resume);
+    if(x.detail) L.push('    '+String(x.detail).replace(/\s+/g,' ').trim().slice(0,400));
+  });
+  return L.join('\n');
+}
+function _telecharger(nom, contenu, type){
+  var blob=new Blob([contenu],{type:type});
+  if(navigator.share&&navigator.canShare){
+    try{ var f=new File([blob],nom,{type:type});
+      if(navigator.canShare({files:[f]})){ navigator.share({files:[f],title:nom}).then(function(){toast('Envoyé');},function(){}); return; } }catch(e){}
+  }
+  var url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download=nom;document.body.appendChild(a);a.click();
+  setTimeout(function(){try{document.body.removeChild(a);}catch(e){}URL.revokeObjectURL(url);},200);
+  toast('Fichier créé');
+}
+function exporterTaches(mode){
+  if(!window.__DONNEES){alert('Données pas encore chargées.');return;}
+  fermerExport();
+  var jour=new Date().toISOString().slice(0,10);
+  if(mode==='json'){ _telecharger('mes-taches-veille-'+jour+'.json', JSON.stringify(_taches(),null,2), 'application/json'); return; }
+  if(mode==='txt'){ _telecharger('mes-taches-veille-'+jour+'.txt', _tachesTexte(), 'text/plain'); return; }
+  var txt=_tachesTexte();
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){toast('Liste copiée ✅');},function(){prompt('Copie ce texte :',txt);});
+  else prompt('Copie ce texte :',txt);
 }
 
 // --- Export .zip (inchangé) --------------------------------------------------

@@ -126,6 +126,32 @@ def montants_du_texte(txt):
     return mensuels, horaires
 
 
+# Montants « en euros » d'un texte : avec centimes (« 1 823,10 ») ou suivis de
+# « € ». Plus strict que montants_du_texte, qui prend aussi les années (2026),
+# les numéros d'article (L. 2241-10) ou l'IDCC lui-même : ici, on veut être sûr
+# de ne comparer que des salaires.
+_M_EUROS = re.compile(r"(?<![\d,.])(\d{1,3}(?:" + _ESP + r"\d{3})+|\d{3,6})(?:,(\d{2})(?!\d)|" + _ESP + r"?€)")
+
+
+def montants_en_euros(txt):
+    out = set()
+    for m in _M_EUROS.finditer(txt or ""):
+        v = float(re.sub(_ESP, "", m.group(1)) + "." + (m.group(2) or "0"))
+        if 500 <= v <= 300000:
+            out.add(round(v, 2))
+    return out
+
+
+def deja_integre(texte, montants_grille):
+    """Un avenant PARTIEL (il ne touche qu'un niveau) dont tous les montants sont
+    déjà dans la grille ne la « remplace » pas : il a été reporté. Exemple :
+    IDCC 1316, l'avenant n° 78 ne fixe que le niveau A (1 823,10 €) et laisse
+    les niveaux B à G de l'avenant n° 77 — avant ce contrôle, la grille restait
+    signalée « construite sur un texte remplacé » même une fois à jour."""
+    euros = montants_en_euros(texte)
+    return bool(euros) and all(any(abs(x - b) <= 0.6 for b in montants_grille) for x in euros)
+
+
 def _couvert(b, mensuels, horaires):
     return (any(abs(b - x) <= 0.6 for x in mensuels)
             or any(abs(b - h * 151.67) <= 1.0 for h in horaires))
@@ -196,7 +222,8 @@ def analyse_montants(grille, clauses, smic):
         return None
     plus_recents = sorted((c for t, c in notes
                            if c["d"] > source["d"] and t < taux
-                           and meme_portee(c["titre"], source["titre"])),
+                           and meme_portee(c["titre"], source["titre"])
+                           and not deja_integre(c["texte"], montants)),
                           key=lambda c: c["d"], reverse=True)
     if plus_recents:
         return ("ancien", source, plus_recents[0], taux)

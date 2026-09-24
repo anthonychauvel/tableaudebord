@@ -603,27 +603,37 @@ async function chargerListeHistorique(){
     </div>`;
   }).join('') || '<div class="vide">Aucun passage enregistré pour l\'instant.</div>';
 }
+function fermerDetailHistorique(){
+  document.getElementById('detailHistorique').innerHTML='';
+  document.getElementById('listeHistorique').style.display='';
+  window.scrollTo(0,0);
+}
 async function afficherDetailHistorique(fichier){
   const conteneur = document.getElementById('detailHistorique');
+  // Le détail REMPLACE la liste (avant, il s'ajoutait tout en bas d'une longue
+  // liste : on touchait un passage et rien ne semblait se passer).
+  document.getElementById('listeHistorique').style.display='none';
+  window.scrollTo(0,0);
   conteneur.innerHTML = '<div class="vide">Chargement…</div>';
   let d;
   try{
     const r = await fetch('historique/' + fichier, {cache:'no-cache'});
     d = await r.json();
   }catch(e){
-    conteneur.innerHTML = '<div class="vide">Impossible de charger ce passage.</div>';
+    conteneur.innerHTML = '<button class="retour" style="margin-left:0" onclick="fermerDetailHistorique()">‹ Tous les passages</button><div class="vide">Impossible de charger ce passage.</div>';
     return;
   }
   const dt = new Date(d.genere);
   const date = dt.toLocaleDateString('fr-FR') + ' à ' + dt.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
-  conteneur.innerHTML = `<div style="margin:14px 0 8px;font-size:13px;color:var(--txt2)">Passage du ${date} —
-      <span onclick="document.getElementById('detailHistorique').innerHTML=''" style="text-decoration:underline;cursor:pointer">fermer</span></div>` +
+  const tot = d.sections.reduce((n,s)=>n+(s.alertes||[]).length,0);
+  conteneur.innerHTML = `<button class="retour" style="margin-left:0" onclick="fermerDetailHistorique()">‹ Tous les passages</button>
+      <div style="margin:0 0 8px;font-size:13px;color:var(--txt2)">Passage du <b style="color:var(--txt)">${date}</b> · ${tot} point(s)${d.nouvelles_alertes?` · <span class="tag nouveau">${d.nouvelles_alertes} nouveau</span>`:''}</div>` +
     d.sections.map(s => {
       const alertes = s.alertes || [];
       if(!alertes.length) return '';
       const th = THEMES[s.id]||{e:'🔎',n:s.titre||s.id};
       return `<div class="bloc-t" style="margin:14px 0 8px">${th.e} ${esc(th.n)} <small>${alertes.length}</small></div>` +
-        alertes.map(a => `<div class="ligne"><div class="t">${(NIVEAU[a.gravite]||NIVEAU.basse).t.split(' ')[0]} ${esc(a.titre)}</div><div class="d">${esc(a.detail||'')}</div></div>`).join('');
+        alertes.slice().sort((x,y)=>(y.nouveau?1:0)-(x.nouveau?1:0)).map(a => `<div class="ligne"><div class="t">${(NIVEAU[a.gravite]||NIVEAU.basse).t.split(' ')[0]} ${a.nouveau?'<span class="tag nouveau">NOUVEAU</span> ':''}${esc(a.titre)}</div><details class="detail-brut" style="margin:6px 0 0"><summary>Voir le détail</summary><div class="txt">${esc(a.detail||'')}</div></details></div>`).join('');
     }).join('');
 }
 

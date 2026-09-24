@@ -372,5 +372,16 @@
       "basse": 65
     },
     "nouvelles_alertes": 0
+  },
+  {
+    "fichier": "2026-09-24-075409.json",
+    "genere": "2026-09-24T07:54:09.714285+00:00",
+    "total": 69,
+    "par_gravite": {
+      "haute": 1,
+      "moyenne": 0,
+      "basse": 68
+    },
+    "nouvelles_alertes": 4
   }
 ]

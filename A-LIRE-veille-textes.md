@@ -38,6 +38,14 @@ expressions est ignoré.
 | Jurisprudence | mot-clé (décisions de moins d'un an) | 🟠 |
 | Accords d'entreprise | mot-clé | ⚪ regroupés par thème |
 
+## Articles clés hors Code du travail
+
+Une vingtaine d'articles, listés dans `articles_cles_autres_codes.txt` (dépôt
+`droit`) : CGI art. 81 quater (exonération d'impôt des heures sup), Code des
+transports L1321-1 à 10, Code rural L713-1 à 6 et L713-13. Suivis comme les
+articles cités : texte modifié 🟠 (🔴 si changement de sujet), disparu 🔴.
+Un numéro inexistant est simplement ignoré ; la liste se corrige sur GitHub.
+
 ## Santé de l'aspirateur (🩺 dans Thèmes)
 
 - **Étape en échec** 🔴 : l'aspirateur note chaque étape ratée dans

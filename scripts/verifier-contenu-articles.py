@@ -75,11 +75,28 @@ def empreinte_article(fonds, code, num):
 SEUIL_SUJET = 0.35
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from veille_commun import lien_monlegitexte  # noqa: E402
+from veille_commun import lien_monlegitexte, lien_legifrance  # noqa: E402
+
+
+# Articles clés HORS Code du travail / Sécu (30/09/2026) : une vingtaine,
+# listés côté fonds dans articles_cles_autres_codes.txt (impôts : exonération
+# des heures sup ; transports et rural : durée du travail). Suivis TOUS, qu'ils
+# soient cités ou non : la liste est déjà un choix.
+AUTRES_CODES = {"CGI": "code-impots", "TRANSP": "code-transports", "RURAL": "code-rural"}
 
 
 def dossier_code(fonds, code):
+    if code in AUTRES_CODES:
+        return os.path.join(fonds, "output", AUTRES_CODES[code])
     return os.path.join(fonds, "output", "code-secu" if code == "CSS" else "code-travail")
+
+
+def lien_article(code, num, empreinte):
+    """MonLegiTexte pour le travail et la Sécu ; Légifrance pour les autres
+    codes, que MonLegiTexte ne contient pas."""
+    if code in AUTRES_CODES:
+        return lien_legifrance((empreinte or {}).get("id")) or "https://www.legifrance.gouv.fr/"
+    return lien_monlegitexte(num, code)
 
 
 def lire_article(fonds, code, num):
@@ -259,6 +276,9 @@ def main():
         # qu'il pouvait y en avoir 400 : L3121-36 est cité dans 401 fichiers.
         # Le compte passe donc devant, l'application avant le guide (c'est
         # elle qu'on édite), et le relevé complet part dans un fichier.
+        if lieux and all(t == "liste" for t, _ in lieux):
+            return ("Article clé suivi hors Code du travail (liste "
+                    "articles_cles_autres_codes.txt du dépôt droit)"), None
         app = [f"{t}:{n}" for t, n in lieux if t != "guide"]
         gui = [n for t, n in lieux if t == "guide"]
         ou = []
@@ -283,12 +303,12 @@ def main():
         ou, releve = decrire_lieux(num, sorted(set(lieux)))
         detail = (f"Introuvable au fonds depuis le {memoire['disparu_depuis']} : Légifrance ne "
                   f"renvoie plus rien pour ce numéro (abrogé, transféré ou renuméroté). {ou}.")
-        lien = lien_monlegitexte(num, code)
+        lien = lien_article(code, num, memoire)
         if rempl:
             detail = (f"➡️ REMPLACÉ PAR {rempl['num']}"
                       + (f" — {rempl['loi']}" if rempl.get("loi") else "")
                       + f" (trouvé par {rempl['comment']}).\n\n" + detail)
-            lien = lien_monlegitexte(rempl["num"], code)
+            lien = lien_article(code, rempl["num"], rempl)
         else:
             detail += "\n\nAucun remplaçant trouvé automatiquement : chercher sur Légifrance."
         if memoire.get("texte"):
@@ -332,9 +352,7 @@ def main():
                     or avant.get("dateDebut") != empr["dateDebut"])
         if a_change:
             lieux = sorted(set(lieux))
-            lien = f"https://monlegitexte.heuressupfrance.workers.dev/?art={num}"
-            if code == "CSS":
-                lien += "&code=secu"
+            lien = lien_article(code, num, empr)
             ou, releve = decrire_lieux(num, lieux)
 
             ea, eb = extraits_compares(avant.get("texte"), empr.get("texte"))
@@ -388,6 +406,19 @@ def main():
             if empreinte_article(args.fonds, code, num) is not None or cle in empreintes_avant:
                 a_traiter[cle] = (code, num, list(lieux))
                 break
+
+    for code in AUTRES_CODES:
+        dossier = dossier_code(args.fonds, code)
+        if not os.path.isdir(dossier):
+            continue
+        for nom in sorted(os.listdir(dossier)):
+            if nom.endswith(".json") and not nom.startswith("_"):
+                num = nom[:-5]
+                a_traiter.setdefault(f"{code}:{num}", (code, num, [("liste", "articles clés suivis")]))
+    for cle in empreintes_avant:            # disparus du dossier : on s'en souvient
+        code, _, num = cle.partition(":")
+        if code in AUTRES_CODES:
+            a_traiter.setdefault(cle, (code, num, [("liste", "articles clés suivis")]))
 
     for cle, (code, num, lieux) in a_traiter.items():
         traiter(cle, code, num, lieux)

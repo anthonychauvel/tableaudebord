@@ -160,6 +160,32 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 .sheet-b small{display:block;font-weight:600;font-size:11px;color:var(--txt2);margin-top:2px;}
 .sheet-b.annul{text-align:center;background:none;color:var(--txt2);}
 
+/* ── Cartes repliables (30/09) : on voit la liste d'un coup d'œil, on touche pour ouvrir ── */
+details.carte>summary{list-style:none;cursor:pointer;}
+details.carte>summary::-webkit-details-marker{display:none;}
+details.carte>summary .chev{margin-left:auto;flex:0 0 auto;color:var(--txt2);font-size:18px;line-height:44px;transition:transform .2s;}
+details.carte[open]>summary .chev{transform:rotate(90deg);}
+.carte.g-haute{border-left:4px solid var(--haute);}
+.carte.g-moyenne{border-left:4px solid var(--moyenne);}
+.carte.g-basse{border-left:4px solid var(--edge);}
+.tag.etiq{background:rgba(168,139,255,.2);color:var(--violet);}
+.tag.fonds{background:rgba(90,169,255,.14);color:var(--bleu);}
+/* ── Filtres rapides ── */
+.puces{display:flex;gap:8px;overflow-x:auto;padding:2px 14px 10px;scrollbar-width:none;}
+.puces::-webkit-scrollbar{display:none;}
+.puce{flex:0 0 auto;background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:12.5px;font-weight:700;
+  padding:8px 12px;border-radius:99px;cursor:pointer;white-space:nowrap;}
+.puce.on{background:#fff;color:#111;border-color:#fff;}
+.puce b{font-weight:800;margin-left:3px;opacity:.75;}
+/* ── Résumé « nouveaux textes » sur l'accueil ── */
+.resume-textes{margin:0 14px 12px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.rt{background:var(--ink3);border:1px solid var(--edge);border-radius:14px;padding:10px 6px;text-align:center;cursor:pointer;color:var(--txt);}
+.rt .n{font-size:20px;font-weight:800;}
+.rt .l{font-size:10.5px;color:var(--txt2);margin-top:2px;}
+.rt.chaud{border-color:rgba(255,107,107,.5);}
+.plus{display:block;margin:4px 14px 14px;width:calc(100% - 28px);background:none;border:1px dashed var(--edge);color:var(--txt2);
+  font-size:13px;font-weight:700;padding:11px;border-radius:14px;cursor:pointer;}
+
 /* ── Barre d'onglets ── */
 .onglets{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:space-around;
   padding:8px 6px calc(8px + env(safe-area-inset-bottom));background:rgba(12,15,19,.92);
@@ -199,7 +225,9 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 <section class="vue active" id="v-accueil">
   <div id="meteo"></div>
   <div id="progression"></div>
+  <div id="blocTextes"></div>
   <div class="bloc-t">🎯 Ce que tu as à faire <small id="missionCompte"></small></div>
+  <div class="puces" id="puces"></div>
   <div id="mission"></div>
   <div class="bloc-t">📚 Les mots à connaître</div>
   <div class="lex" id="lexique"></div>
@@ -215,6 +243,14 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
   <button class="retour" onclick="allerA('themes')">‹ Thèmes</button>
   <div class="bloc-t" id="themeTitre"></div>
   <div id="themeCorps"></div>
+</section>
+
+<!-- NOUVEAUX TEXTES -->
+<section class="vue" id="v-textes">
+  <div class="bloc-t">📰 Nouveaux textes <small>Code, conventions, Journal officiel, accords</small></div>
+  <div style="margin:-4px 18px 10px;font-size:12px;color:var(--txt2);line-height:1.45">Tout texte nouveau qui touche tes sujets (mots-cles.json), gardé 45 jours. Touche une carte pour l'ouvrir.</div>
+  <div class="puces" id="pucesTextes"></div>
+  <div id="listeTextes"></div>
 </section>
 
 <!-- HISTORIQUE -->
@@ -236,9 +272,10 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 
 <nav class="onglets">
   <button class="onglet active" data-v="accueil" onclick="allerA('accueil')"><span class="oe">🏠</span>Accueil<span class="pt" id="ptAccueil"></span></button>
+  <button class="onglet" data-v="textes" onclick="allerA('textes')"><span class="oe">📰</span>Textes<span class="pt" id="ptTextes"></span></button>
   <button class="onglet" data-v="themes" onclick="allerA('themes')"><span class="oe">🗂️</span>Thèmes</button>
   <button class="onglet" data-v="historique" onclick="allerA('historique')"><span class="oe">📜</span>Historique</button>
-  <button class="onglet" data-v="regles" onclick="allerA('regles')"><span class="oe">📋</span>Règles CCN</button>
+  <button class="onglet" data-v="regles" onclick="allerA('regles')"><span class="oe">📋</span>Règles</button>
 </nav>
 <div class="sheet-fond" id="sheetFond" onclick="fermerExport()"></div>
 <div class="sheet" id="sheet">
@@ -266,10 +303,12 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 
 // Thèmes (sections de donnees.json) : nom simple + emoji + phrase d'explication.
 const THEMES = {
+  nouveaux:{e:'📰', n:'Nouveaux textes sur tes sujets', x:"Code, conventions, Journal officiel : tout texte nouveau qui touche tes sujets (mots-cles.json)."},
+  accords:{e:'🏢', n:"Accords d'entreprise", x:"Accords d'entreprise récents sur tes sujets, regroupés par thème. Pour info."},
   croisement:{e:'🔔', n:'Nouveaux textes pour une convention en attente', x:"Un texte vient de paraître pour une convention dont la grille attend une mise à jour."},
   grilles:{e:'💶', n:'Grilles de salaires', x:"Les salaires minimum de chaque convention affichés dans GrillePaye."},
   smic:{e:'📈', n:'SMIC', x:"La valeur du SMIC utilisée par l'appli."},
-  droit:{e:'⚖️', n:'MonLegiTexte', x:"Le moteur de recherche d'articles de loi de l'écosystème."},
+  droit:{e:'⚖️', n:'MonLegiTexte', x:"Seuls les changements qui touchent tes sujets sont signalés : le reste se met à jour tout seul pour les utilisateurs."},
   modules:{e:'🧩', n:'Les 8 modules', x:"Les grands écrans de l'appli (compteur annuel, paye, Mizuki, Zenji…)."},
   outils:{e:'🧰', n:'Les 105 outils', x:"Les petits calculateurs de la rubrique Outils."},
   guide:{e:'📖', n:'Le guide (site)', x:"Les pages du site simulateurheuressupfrance.fr."},
@@ -346,9 +385,30 @@ const GUIDE = {
   'contenu-article-modifie':{e:'✍️', quoi:"Un article de loi cité a changé : {cle}",
     pourquoi:"Il est toujours en vigueur, mais son texte a changé (seuil, montant, formulation). Les calculs de l'appli s'appuient peut-être dessus.",
     etapes:["Compare les versions « avant » et « après » dans le détail.","Si un chiffre a bougé, vérifie les modules qui l'utilisent."]},
-  'fichier-modifie':{e:'🔄', quoi:"Un fichier a changé : {cle}",
-    pourquoi:"Simple constat. Si c'est toi qui l'as modifié, tout va bien.",
-    etapes:["Tu reconnais ce changement ? Rien à faire.","Sinon, compare avec la version précédente sur GitHub."]},
+  'fichier-modifie':{e:'🔄', quoi:"{cle}",
+    pourquoi:"Simple constat, regroupé en une seule carte. Si c'est toi qui as travaillé sur ces fichiers, tout va bien.",
+    etapes:["Tu reconnais ces changements ? Rien à faire.","Sinon, ouvre le détail et compare avec la version précédente sur GitHub."]},
+  'article-introuvable':{e:'🚫', quoi:"{cle} n'existe plus sous ce numéro",
+    pourquoi:"Un article que l'appli ou le guide cite a disparu de Légifrance (abrogé, transféré ou renuméroté). La citation affichée aux utilisateurs est donc fausse.",
+    etapes:["Lis le détail : le remplaçant (« REMPLACÉ PAR ») et le dernier texte connu y sont.","Vérifie le nouveau numéro avec le bouton « Voir l'article ».","Remplace l'ancien numéro partout où il est cité (relevé complet indiqué dans le détail)."]},
+  'nouvel-article-section':{e:'🆕', quoi:"Nouvel article à côté de ceux que tu cites : {cle}",
+    pourquoi:"Un article vient d'apparaître dans une partie du Code que l'appli utilise. Il complète ou modifie peut-être une règle de calcul.",
+    etapes:["Lis le texte dans le détail.","Si ça change une règle utilisée par l'appli : adapte le module ou l'outil concerné.","Sinon : c'est fait."]},
+  'nouveau-texte-jorf':{e:'📰', quoi:"Nouveau texte au Journal officiel",
+    pourquoi:"Une loi, un décret ou un arrêté vient de paraître sur un de tes sujets. Le détail dit pourquoi il a été retenu.",
+    etapes:["Lis l'extrait autour du mot trouvé dans le détail.","Ouvre le texte complet (bouton « Voir le texte »).","S'il modifie une règle de l'appli : note ce qu'il faut changer. Sinon : c'est fait."]},
+  'nouvel-avenant-ccn':{e:'📑', quoi:"Nouveau texte pour {cle}",
+    pourquoi:"Un avenant ou un accord vient d'être ajouté à cette convention. S'il touche les heures sup, le temps partiel, le forfait ou les salaires, l'appli doit peut-être suivre.",
+    etapes:["Lis le titre et l'extrait dans le détail.","Ouvre le texte complet (bouton « Voir le texte »).","Si ça change une règle de la convention dans l'appli (majoration, contingent, salaires) : mets-la à jour."]},
+  'accords-entreprise':{e:'🏢', quoi:"{cle}",
+    pourquoi:"Des entreprises ont signé des accords sur ce sujet. Rien d'obligatoire pour l'appli : c'est une source d'idées et de pratiques.",
+    etapes:["Parcours la liste dans le détail si le sujet t'intéresse.","Sinon, rien à faire."]},
+  'rattrapage-fonds':{e:'📦', quoi:"{cle}",
+    pourquoi:"L'aspirateur a récupéré beaucoup de textes anciens d'un coup. Ils sont mémorisés sans alerte pour ne pas te noyer.",
+    etapes:["Rien à faire."]},
+  'changement-reel':{e:'⚖️', quoi:"Un texte sur tes sujets a changé",
+    pourquoi:"Un texte du fonds a vraiment changé (pas juste re-téléchargé) et il touche un article cité, une convention de l'appli ou un de tes mots-clés.",
+    etapes:["Lis l'avant / après dans le détail.","Si l'appli s'appuie sur ce texte : vérifie le calcul ou la citation.","Sinon : c'est fait."]},
 };
 
 // Mots à connaître : langage simple.
@@ -360,6 +420,8 @@ const LEXIQUE = [
   ['Exception', "Une ligne dans exceptions.json qui dit « celle-là, je l'ai vue, arrête de me la montrer »."],
   ['Hors-ligne / précache', "La liste des fichiers gardés dans le téléphone (sw.js) pour que l'appli marche sans réseau."],
   ['Gravité', "🔴 À faire vite · 🟠 À regarder quand tu peux · ⚪ Pour info, rien d'urgent."],
+  ['Mots-clés (mots-cles.json)', "La liste de tes sujets (heures sup, temps partiel, forfait jours…). Tout texte nouveau qui contient une de ces expressions remonte dans 📰 Textes. Modifiable sur GitHub, comme exceptions.json."],
+  ['Ne plus voir', "Copie une exception à coller dans exceptions.json : l'alerte disparaît au passage suivant. « C'est fait » ne vaut que sur ce téléphone."],
 ];
 
 const NIVEAU = {haute:{t:'🔴 À faire vite',o:0}, moyenne:{t:'🟠 À regarder',o:1}, basse:{t:'⚪ Pour info',o:2}};
@@ -409,31 +471,37 @@ let FAIT = lireFait();
 function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('on');clearTimeout(toast._t);toast._t=setTimeout(function(){el.classList.remove('on');},2200);}
 
 // --- Rendu d'une alerte en carte guidée ------------------------------------
-function carte(a){
+const FONDS_E={JORF:'📰 JO',CCN:'📑 CCN',Code:'📘 Code',ACCO:'🏢 Accord'};
+function carte(a, ouverte){
   var g=GUIDE[a.categorie], k=cleAlerte(a), id=ident(a), fait=!!FAIT[k];
   var quoi = g ? g.quoi.replace('{cle}', id) : (a.titre||'');
   var emo = g ? g.e : ((THEMES[a._theme]||{}).e || '🔎');
   var etapes = g ? g.etapes : (CONSEILS[a.categorie] ? [CONSEILS[a.categorie]] : ["Lis le détail ci-dessous pour comprendre de quoi il s'agit."]);
   var niv = NIVEAU[a.gravite] || NIVEAU.basse;
   var fichier = /^[\w./-]+\.(html|js|css|json)$/.test(id) ? id : '';
-  var html = '<div class="carte'+(fait?' fait':'')+'" data-k="'+esc(k)+'">'
-    + '<div class="carte-hd"><div class="ico '+esc(a.gravite)+'">'+emo+'</div><div style="min-width:0">'
+  var sousTitre = (g && quoi!==(a.titre||'')) ? (a.titre||'') : '';
+  var lienTxt = /legifrance/.test(a.lien||'') ? '📜 Voir le texte' : '🔗 Voir l\'article';
+  var detailOuvert = a.fonds || a.categorie==='article-introuvable' || a.categorie==='changement-reel';
+  var html = '<details class="carte g-'+esc(a.gravite)+(fait?' fait':'')+'" data-k="'+esc(k)+'"'+(ouverte?' open':'')+'>'
+    + '<summary class="carte-hd"><div class="ico '+esc(a.gravite)+'">'+emo+'</div><div style="min-width:0;flex:1">'
     + '<div class="quoi">'+esc(quoi)+'</div>'
-    + (g ? '<div class="qui">'+esc(a.titre||'')+'</div>' : '')
+    + (sousTitre ? '<div class="qui">'+esc(sousTitre)+'</div>' : '')
     + '<div class="tags"><span class="tag '+esc(a.gravite)+'">'+niv.t+'</span>'
     + (a.nouveau?'<span class="tag nouveau">NOUVEAU</span>':'')
     + (fait?'<span class="tag fait">✓ traité</span>':'')
-    + (a._theme&&THEMES[a._theme]?'<span class="tag">'+THEMES[a._theme].e+' '+esc(THEMES[a._theme].n)+'</span>':'')
-    + '</div></div></div>'
+    + (a.etiquettes||[]).map(function(e){return '<span class="tag etiq">'+esc(e)+'</span>';}).join('')
+    + (a.fonds&&FONDS_E[a.fonds]?'<span class="tag fonds">'+FONDS_E[a.fonds]+'</span>':'')
+    + (a.theme?'<span class="tag">'+esc(a.theme)+'</span>':(a._theme&&THEMES[a._theme]?'<span class="tag">'+THEMES[a._theme].e+' '+esc(THEMES[a._theme].n)+'</span>':''))
+    + '</div></div><span class="chev">›</span></summary>'
     + (g&&g.pourquoi ? '<div class="pourquoi">💡 '+esc(g.pourquoi)+'</div>' : '')
     + '<div class="etapes"><div class="et">👣 Que faire</div><ol>'+etapes.map(function(e){return '<li>'+esc(e)+'</li>';}).join('')+'</ol></div>'
-    + (a.detail ? '<details class="detail-brut"><summary>Voir le détail technique</summary><div class="txt">'+esc(a.detail)+'</div></details>' : '')
+    + (a.detail ? '<details class="detail-brut"'+(detailOuvert?' open':'')+'><summary>Voir le détail</summary><div class="txt">'+esc(a.detail)+'</div></details>' : '')
     + '<div class="actions">'
     + '<button class="act ok" onclick="basculerFait(this)">'+(fait?'↩️ Pas encore fait':'✅ C\'est fait')+'</button>'
-    + '<button class="act" onclick="copierException(this)">📋 Copier l\'exception</button>'
+    + (a.lien ? '<a class="act lien" href="'+esc(a.lien)+'" target="_blank" rel="noopener">'+lienTxt+'</a>' : '')
     + (fichier ? '<a class="act lien" href="'+DEPOT_HS+esc(fichier)+'" target="_blank" rel="noopener">📂 Ouvrir le fichier</a>' : '')
-    + (a.lien ? '<a class="act lien" href="'+esc(a.lien)+'" target="_blank" rel="noopener">🔗 Voir l\'article</a>' : '')
-    + '</div></div>';
+    + '<button class="act" onclick="copierException(this)">🙈 Ne plus voir</button>'
+    + '</div></details>';
   return html;
 }
 
@@ -460,9 +528,27 @@ function toutesAlertes(){
 }
 function priorite(a){return (a.nouveau?0:10)+((NIVEAU[a.gravite]||NIVEAU.basse).o*3);}
 
+// Filtres rapides de l'accueil (30/09) : un doigt pour ne voir que l'urgent,
+// le nouveau, les textes ou les articles de loi.
+const FILTRES = [
+  {k:'tout', l:'Tout', f:function(a){return true;}},
+  {k:'vite', l:'🔴 Vite', f:function(a){return a.gravite==='haute';}},
+  {k:'nouveau', l:'🆕 Nouveau', f:function(a){return !!a.nouveau;}},
+  {k:'textes', l:'📰 Textes', f:function(a){return a._theme==='nouveaux'||a._theme==='croisement'||a._theme==='droit';}},
+  {k:'articles', l:'⚖️ Articles', f:function(a){return a._theme==='contenu'||a._theme==='citations'||a._theme==='outils';}},
+  {k:'grilles', l:'💶 Grilles', f:function(a){return a._theme==='grilles'||a._theme==='smic'||a._theme==='age';}},
+  {k:'appli', l:'📱 Appli', f:function(a){return ['modules','pages','syntaxe','structure','guide','noindex'].indexOf(a._theme)>=0;}},
+];
+let FILTRE='tout', NB_MONTRES=10;
+function choisirFiltre(k){FILTRE=k;NB_MONTRES=10;rendreAccueil();}
+function voirPlus(){NB_MONTRES+=10;rendreAccueil();}
+
 function rendreAccueil(){
   var toutes=toutesAlertes();
-  var aFaire=toutes.filter(function(a){return a.gravite!=='basse'||a.nouveau;});
+  // « À faire » = rouge ou orange. Les points ⚪ « pour info » (fichiers modifiés,
+  // accords d'entreprise…) restent dans Thèmes et Textes, jamais dans la liste
+  // du jour — même quand ils sont nouveaux : c'est ce qui la noyait.
+  var aFaire=toutes.filter(function(a){return a.gravite!=='basse';});
   var restantes=aFaire.filter(function(a){return !FAIT[cleAlerte(a)];});
   var urgentes=restantes.filter(function(a){return a.gravite==='haute';});
   var nouv=restantes.filter(function(a){return a.nouveau;});
@@ -470,22 +556,64 @@ function rendreAccueil(){
   var M = {
     calme:{e:'😌', h:'Tout est calme', p:"Rien d'important à faire. La veille continue de surveiller pour toi lundi, mercredi et jeudi."},
     regarder:{e:'🧐', h:restantes.length+' chose'+(restantes.length>1?'s':'')+' à regarder', p:"Rien d'urgent, mais quelques points méritent un coup d'œil quand tu as un moment."},
-    urgent:{e:'🚨', h:urgentes.length+' chose'+(urgentes.length>1?'s':'')+' à faire vite', p:"Commence par la première carte ci-dessous : chaque étape est expliquée."},
+    urgent:{e:'🚨', h:urgentes.length+' chose'+(urgentes.length>1?'s':'')+' à faire vite', p:"Commence par la première carte ci-dessous : touche-la pour voir quoi faire."},
   }[etat];
   if(nouv.length) M.p = '🆕 '+nouv.length+' nouveauté'+(nouv.length>1?'s':'')+' depuis le dernier passage. '+M.p;
   document.getElementById('meteo').innerHTML='<div class="meteo '+etat+'"><div class="bulle"></div><div class="emo">'+M.e+'</div><h2>'+esc(M.h)+'</h2><p>'+esc(M.p)+'</p>'
-    +(restantes.length?'<button class="cta" onclick="document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})">👉 Par où commencer</button>':'<button class="cta" onclick="allerA(\'themes\')">🗂️ Voir tout par thème</button>')+'</div>';
+    +(restantes.length?'<button class="cta" onclick="choisirFiltre(\''+(urgentes.length?'vite':'tout')+'\');document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})">👉 Par où commencer</button>':'<button class="cta" onclick="allerA(\'themes\')">🗂️ Voir tout par thème</button>')+'</div>';
   var faits=aFaire.length-restantes.length, pc=aFaire.length?Math.round(100*faits/aFaire.length):100;
   document.getElementById('progression').innerHTML=aFaire.length?'<div class="prog"><div class="l"><span>Ta progression</span><span><b>'+faits+'</b> / '+aFaire.length+' traitée'+(faits>1?'s':'')+'</span></div><div class="barre"><i style="width:'+pc+'%"></i></div></div>':'';
-  var liste=restantes.slice().sort(function(a,b){return priorite(a)-priorite(b);});
-  var montrees=liste.slice(0,8);
-  document.getElementById('missionCompte').textContent=liste.length?(liste.length>8?'les 8 plus importantes sur '+liste.length:liste.length+' en tout'):'';
-  document.getElementById('mission').innerHTML=montrees.length?montrees.map(carte).join('')
-    +(liste.length>8?'<div class="vide">Les autres sont dans l\'onglet 🗂️ Thèmes.</div>':'')
-    :'<div class="vide">🎉 Rien à faire pour l\'instant.<br>Les points « pour info » sont dans l\'onglet 🗂️ Thèmes.</div>';
+
+  // Résumé des nouveaux textes, par fonds.
+  var tx=textesAlertes(), parF={JORF:[],CCN:[],Code:[],ACCO:[]};
+  tx.forEach(function(a){if(parF[a.fonds])parF[a.fonds].push(a);});
+  var tuileF=function(f,l){var arr=parF[f],n=arr.filter(function(a){return !FAIT[cleAlerte(a)];}).length,
+      chaud=arr.some(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];});
+    return '<button class="rt'+(chaud?' chaud':'')+'" onclick="ouvrirTextes(\''+f+'\')"><div class="n">'+n+'</div><div class="l">'+l+'</div></button>';};
+  document.getElementById('blocTextes').innerHTML='<div class="bloc-t">📰 Nouveaux textes <small>45 derniers jours</small></div>'
+    +'<div class="resume-textes">'+tuileF('JORF','Journal off.')+tuileF('CCN','Conventions')+tuileF('Code','Code')+tuileF('ACCO','Accords')+'</div>';
+
+  document.getElementById('puces').innerHTML=FILTRES.map(function(x){
+    var n=restantes.filter(x.f).length;
+    if(x.k!=='tout'&&!n) return '';
+    return '<button class="puce'+(FILTRE===x.k?' on':'')+'" onclick="choisirFiltre(\''+x.k+'\')">'+x.l+'<b>'+n+'</b></button>';
+  }).join('');
+  var filtre=(FILTRES.filter(function(x){return x.k===FILTRE;})[0]||FILTRES[0]).f;
+  var liste=restantes.filter(filtre).sort(function(a,b){return priorite(a)-priorite(b);});
+  var montrees=liste.slice(0,NB_MONTRES);
+  document.getElementById('missionCompte').textContent=liste.length?liste.length+' en tout':'';
+  document.getElementById('mission').innerHTML=montrees.length?montrees.map(function(a,i){return carte(a,i===0);}).join('')
+    +(liste.length>montrees.length?'<button class="plus" onclick="voirPlus()">Voir '+Math.min(10,liste.length-montrees.length)+' de plus ('+(liste.length-montrees.length)+' restantes)</button>':'')
+    :'<div class="vide">🎉 Rien à faire ici.<br>Les points « pour info » sont dans 🗂️ Thèmes.</div>';
   var pt=document.getElementById('ptAccueil');pt.textContent=urgentes.length;pt.style.display=urgentes.length?'flex':'none';
+  var nt=tx.filter(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];}).length, ptt=document.getElementById('ptTextes');
+  ptt.textContent=nt;ptt.style.display=nt?'flex':'none';
   var tot=toutes.length;
   document.getElementById('pied').textContent=tot+' point'+(tot>1?'s':'')+' surveillé'+(tot>1?'s':'')+' en tout, dont '+(tot-aFaire.length)+' pour info · '+(window.__DONNEES.exceptions_appliquees||0)+' masqué(s) par tes exceptions';
+}
+
+// --- Nouveaux textes -------------------------------------------------------
+function textesAlertes(){
+  return toutesAlertes().filter(function(a){return a._theme==='nouveaux'||a._theme==='accords';});
+}
+let FILTRE_TEXTES='tout';
+function ouvrirTextes(f){FILTRE_TEXTES=f||'tout';allerA('textes');}
+function choisirFiltreTextes(f){FILTRE_TEXTES=f;rendreTextes();}
+function rendreTextes(){
+  var tx=textesAlertes();
+  var cles=[['tout','Tout'],['JORF','📰 Journal officiel'],['CCN','📑 Conventions'],['Code','📘 Code'],['ACCO','🏢 Accords']];
+  var themes={};tx.forEach(function(a){if(a.theme)themes[a.theme]=1;});
+  Object.keys(themes).sort().forEach(function(t){cles.push(['t:'+t,t]);});
+  document.getElementById('pucesTextes').innerHTML=cles.map(function(c){
+    var n=tx.filter(function(a){return c[0]==='tout'||a.fonds===c[0]||('t:'+a.theme)===c[0];}).length;
+    if(c[0]!=='tout'&&!n) return '';
+    return '<button class="puce'+(FILTRE_TEXTES===c[0]?' on':'')+'" onclick="choisirFiltreTextes(\''+esc(c[0]).replace(/'/g,"\\'")+'\')">'+esc(c[1])+'<b>'+n+'</b></button>';
+  }).join('');
+  var l=tx.filter(function(a){return FILTRE_TEXTES==='tout'||a.fonds===FILTRE_TEXTES||('t:'+a.theme)===FILTRE_TEXTES;});
+  l.sort(function(a,b){return (FAIT[cleAlerte(a)]?1:0)-(FAIT[cleAlerte(b)]?1:0)||(b.nouveau?1:0)-(a.nouveau?1:0)
+    ||(NIVEAU[a.gravite]||NIVEAU.basse).o-(NIVEAU[b.gravite]||NIVEAU.basse).o||String(b.date_texte||'').localeCompare(String(a.date_texte||''));});
+  document.getElementById('listeTextes').innerHTML=l.length?l.map(function(a){return carte(a);}).join('')
+    :'<div class="vide">Aucun nouveau texte sur tes sujets pour l\'instant.<br>La veille regarde à chaque passage (lundi, mercredi, jeudi).</div>';
 }
 
 // --- Thèmes --------------------------------------------------------------
@@ -535,7 +663,7 @@ function ouvrirTheme(i){
   if(s.non_construit) corps='<div class="vide">Ce thème n\'est pas encore branché.</div>';
   else if(!al.length) corps='<div class="vide">✅ Rien à signaler ici.</div>';
   else corps=_grouperAlertes(al).map(function(g){
-    return '<details class="grp g-'+g.cle+'"'+(g.ouvert?' open':'')+'><summary><span class="gl">'+g.label+'</span><span class="grp-n">'+g.alertes.length+'</span></summary>'+g.alertes.map(carte).join('')+'</details>';
+    return '<details class="grp g-'+g.cle+'"'+(g.ouvert?' open':'')+'><summary><span class="gl">'+g.label+'</span><span class="grp-n">'+g.alertes.length+'</span></summary>'+g.alertes.map(function(a){return carte(a);}).join('')+'</details>';
   }).join('');
   document.getElementById('themeCorps').innerHTML=corps;
   allerA('theme');
@@ -548,6 +676,7 @@ function allerA(v){
   var onglet = v==='theme' ? 'themes' : v;
   document.querySelectorAll('.onglet').forEach(function(o){o.classList.toggle('active',o.getAttribute('data-v')===onglet);});
   if(v!=='theme') window.scrollTo(0,0);
+  if(v==='textes') rendreTextes();
   if(v==='historique' && !historiqueCharge){historiqueCharge=true;chargerListeHistorique();}
   if(v==='regles' && !reglesCCN) chargerReglesCCN();
 }
@@ -555,6 +684,7 @@ function allerA(v){
 function rendreTout(){
   if(!window.__DONNEES) return;
   rendreAccueil(); rendreThemes();
+  if(document.getElementById('v-textes').classList.contains('active')){var yt=window.scrollY;rendreTextes();window.scrollTo(0,yt);}
   if(document.getElementById('v-theme').classList.contains('active') && THEME_OUVERT>=0){
     var y=window.scrollY; ouvrirTheme(THEME_OUVERT); window.scrollTo(0,y);
   }
@@ -693,7 +823,7 @@ function _taches(){
   // à faire d'abord, puis regroupé par thème, du plus grave au moins grave
   l.sort(function(x,y){return (x.fait-y.fait)||String(x.theme).localeCompare(String(y.theme))||((NIVEAU[x.gravite]||NIVEAU.basse).o-(NIVEAU[y.gravite]||NIVEAU.basse).o);});
   return {genere:d.genere, exporte:new Date().toISOString(),
-          total:l.length, a_faire:l.filter(function(t){return !t.fait&&(t.gravite!=='basse'||t.nouveau);}).length,
+          total:l.length, a_faire:l.filter(function(t){return !t.fait&&t.gravite!=='basse';}).length,
           faites:l.filter(function(t){return t.fait;}).length,
           exceptions_appliquees:d.exceptions_appliquees||0, taches:l};
 }

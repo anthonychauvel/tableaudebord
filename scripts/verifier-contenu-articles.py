@@ -27,11 +27,13 @@ USAGE
     python3 verifier-contenu-articles.py --hs /chemin/hs --guide /chemin/Guide --fonds /chemin/droit --empreintes /chemin/empreintes-articles.json --json sortie.json
 """
 import argparse
+import difflib
 import hashlib
 import importlib.util
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 
 def charger_module(nom_fichier):
@@ -45,15 +47,7 @@ def charger_module(nom_fichier):
 def empreinte_article(fonds, code, num):
     """Renvoie (version, dateDebut, hash_texte) ou None si l'article est
     introuvable dans le corpus indiqué."""
-    sous_dossier = "code-secu" if code == "CSS" else "code-travail"
-    chemin = os.path.join(fonds, "output", sous_dossier, num + ".json")
-    if not os.path.isfile(chemin):
-        return None
-    try:
-        d = json.load(open(chemin, encoding="utf-8"))
-    except Exception:
-        return None
-    art = d.get("article")
+    art = lire_article(fonds, code, num)
     if not art:
         return None
     texte = (art.get("texte") or "") + (art.get("nota") or "")
@@ -62,6 +56,11 @@ def empreinte_article(fonds, code, num):
         "version": art.get("versionArticle"),
         "dateDebut": art.get("dateDebut"),
         "hash": h,
+        # Identifiant Légifrance et section : servent à retrouver le
+        # remplaçant le jour où le numéro disparaît (voir chercher_remplacant).
+        "id": art.get("id"),
+        "section": art.get("sectionParentCid"),
+        "sectionTitre": art.get("sectionParentTitre"),
         # Le texte lui-même, et pas seulement son empreinte. Sans lui, l'alerte
         # sait DIRE qu'un article a changé mais pas MONTRER en quoi : il faut
         # aller relire Légifrance à la main pour comprendre. Avec lui, on
@@ -70,6 +69,113 @@ def empreinte_article(fonds, code, num):
         # sans broncher.
         "texte": " ".join(texte.split()),
     }
+
+
+# En dessous de 35 % de texte commun, on parle de « changement de sujet ».
+SEUIL_SUJET = 0.35
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from veille_commun import lien_monlegitexte  # noqa: E402
+
+
+def dossier_code(fonds, code):
+    return os.path.join(fonds, "output", "code-secu" if code == "CSS" else "code-travail")
+
+
+def lire_article(fonds, code, num):
+    """L'article du fonds, ou None s'il n'y est pas (fichier absent OU
+    « "article": null »)."""
+    chemin = os.path.join(dossier_code(fonds, code), num + ".json")
+    if not os.path.isfile(chemin):
+        return None
+    try:
+        return json.load(open(chemin, encoding="utf-8")).get("article")
+    except Exception:
+        return None
+
+
+def statut_fonds(fonds, code, num):
+    """« present » / « introuvable » (le fonds a interrogé Légifrance sur ce
+    numéro et n'a rien reçu : l'article n'existe plus sous ce numéro) /
+    « jamais-tente » (pas de fichier : on ne sait rien, on ne conclut rien)."""
+    chemin = os.path.join(dossier_code(fonds, code), num + ".json")
+    if not os.path.isfile(chemin):
+        return "jamais-tente"
+    try:
+        d = json.load(open(chemin, encoding="utf-8"))
+    except Exception:
+        return "jamais-tente"
+    if "_error" in d:
+        return "jamais-tente"
+    return "present" if d.get("article") else "introuvable"
+
+
+def ressemblance(a, b):
+    """0 = rien en commun, 1 = identique. Comparé MOT à mot, pas lettre à
+    lettre : deux phrases françaises sans rapport partagent tant de lettres
+    qu'une comparaison par caractère les jugeait « à 50 % semblables ».
+    Sur les 500 premiers mots : largement assez pour juger, et reste rapide."""
+    a = (a or "").lower().split()[:500]
+    b = (b or "").lower().split()[:500]
+    if not a or not b:
+        return 0.0
+    return difflib.SequenceMatcher(None, a, b, autojunk=False).ratio()
+
+
+def chercher_remplacant(fonds, code, num, ancien):
+    """Un article cité a disparu : qui l'a remplacé ?
+    1. un article actuel qui porte une CONCORDANCE vers l'ancien numéro
+       (recodification : L212-7 -> L3121-36) ;
+    2. sinon, dans la MÊME section, l'article dont le texte ressemble le plus
+       au dernier texte connu (renumérotation : le texte déménage, le numéro
+       change) — retenu seulement au-dessus de 60 % de ressemblance.
+    Pré-filtre sur le texte brut du fichier avant tout décodage JSON : on lit
+    les ~20 000 fiches, on n'en décode qu'une poignée."""
+    dossier = dossier_code(fonds, code)
+    if not os.path.isdir(dossier):
+        return None
+    cle_conc = f'"articleNum": "{num}"'
+    section = (ancien or {}).get("section")
+    cle_sect = f'"sectionParentCid": "{section}"' if section else None
+    texte_ancien = (ancien or {}).get("texte") or ""
+    meilleur = None
+    for e in os.scandir(dossier):
+        if not e.name.endswith(".json") or e.name.startswith("_") or e.name == num + ".json":
+            continue
+        try:
+            brut = open(e.path, encoding="utf-8").read()
+        except Exception:
+            continue
+        conc = cle_conc in brut
+        sect = bool(cle_sect) and cle_sect in brut
+        if not conc and not sect:
+            continue
+        try:
+            art = json.loads(brut).get("article")
+        except Exception:
+            continue
+        if not art or art.get("etat") != "VIGUEUR":
+            continue
+        if conc and any(l.get("articleNum") == num for l in (art.get("lienConcordes") or [])):
+            return _remplacant(art, "concordance officielle", 1.0)
+        if sect and texte_ancien:
+            r = ressemblance(" ".join((art.get("texte") or "").split()), texte_ancien)
+            if r >= 0.6 and (meilleur is None or r > meilleur[1]):
+                meilleur = (art, r)
+    if meilleur:
+        return _remplacant(meilleur[0], "texte presque identique dans la même section", meilleur[1])
+    return None
+
+
+def _remplacant(art, comment, score):
+    loi = ""
+    for l in sorted(art.get("lienModifications") or [],
+                    key=lambda l: l.get("datePubliTexte") or "", reverse=True):
+        if l.get("linkType") in ("DEPLACE", "TRANSFERE", "CREE", "CODIFICATION", "MODIFIE"):
+            loi = l.get("textTitle") or ""
+            break
+    return {"num": art.get("num"), "loi": loi, "comment": comment,
+            "score": round(score, 2), "id": art.get("id")}
 
 
 def extraits_compares(avant, apres, n=300):
@@ -148,14 +254,76 @@ def main():
     resultat = {"module": "contenu-articles", "alertes": []}
     n_verifies, n_premiere_fois = 0, 0
 
+    def decrire_lieux(num, lieux):
+        # OÙ, pour de bon. L'ancienne version nommait trois lieux et taisait
+        # qu'il pouvait y en avoir 400 : L3121-36 est cité dans 401 fichiers.
+        # Le compte passe donc devant, l'application avant le guide (c'est
+        # elle qu'on édite), et le relevé complet part dans un fichier.
+        app = [f"{t}:{n}" for t, n in lieux if t != "guide"]
+        gui = [n for t, n in lieux if t == "guide"]
+        ou = []
+        if app:
+            ou.append("dans l'application : " + ", ".join(app[:8])
+                      + (f" et {len(app)-8} autre(s)" if len(app) > 8 else ""))
+        if gui:
+            ou.append(f"{len(gui)} page(s) du guide" if len(gui) > 4
+                      else "guide : " + ", ".join(gui))
+        releve = ecrire_releve(args.releves, num, lieux) if args.releves else None
+        return f"Cité dans {len(lieux)} fichier(s) — " + " ; ".join(ou), releve
+
+    def signaler_disparu(cle, code, num, lieux, memoire):
+        """(b) + (a) : un article cité, en vigueur la dernière fois, n'existe
+        plus sous ce numéro. Alerte haute, avec son dernier texte connu et,
+        si on le trouve, son remplaçant."""
+        aujourd_hui = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        memoire.setdefault("disparu_depuis", aujourd_hui)
+        if "remplacant" not in memoire:
+            memoire["remplacant"] = chercher_remplacant(args.fonds, code, num, memoire)
+        rempl = memoire.get("remplacant")
+        ou, releve = decrire_lieux(num, sorted(set(lieux)))
+        detail = (f"Introuvable au fonds depuis le {memoire['disparu_depuis']} : Légifrance ne "
+                  f"renvoie plus rien pour ce numéro (abrogé, transféré ou renuméroté). {ou}.")
+        lien = lien_monlegitexte(num, code)
+        if rempl:
+            detail = (f"➡️ REMPLACÉ PAR {rempl['num']}"
+                      + (f" — {rempl['loi']}" if rempl.get("loi") else "")
+                      + f" (trouvé par {rempl['comment']}).\n\n" + detail)
+            lien = lien_monlegitexte(rempl["num"], code)
+        else:
+            detail += "\n\nAucun remplaçant trouvé automatiquement : chercher sur Légifrance."
+        if memoire.get("texte"):
+            t = memoire["texte"]
+            detail += "\n\nDERNIER TEXTE CONNU — " + (t if len(t) <= 700 else t[:700].rsplit(" ", 1)[0] + "…")
+        if releve:
+            detail += f"\n\nRelevé complet des lieux : {releve}"
+        alerte = {
+            "categorie": "article-introuvable",
+            "gravite": "haute",
+            "titre": f"{num} ({code}) : n'existe plus sous ce numéro"
+                     + (f", remplacé par {rempl['num']}" if rempl else ""),
+            "detail": detail,
+            "lien": lien,
+            "date_texte": memoire["disparu_depuis"],
+        }
+        if rempl:
+            alerte["remplace_par"] = rempl["num"]
+        resultat["alertes"].append(alerte)
+
     def traiter(cle, code, num, lieux):
         nonlocal n_verifies, n_premiere_fois
         empr = empreinte_article(args.fonds, code, num)
+        avant = empreintes_avant.get(cle)
         if empr is None:
+            if avant is None:
+                return
+            # On garde la mémoire : sans elle, le dernier texte connu serait
+            # perdu au passage suivant, et l'alerte avec.
+            empreintes_apres[cle] = dict(avant)
+            if statut_fonds(args.fonds, code, num) == "introuvable":
+                signaler_disparu(cle, code, num, lieux, empreintes_apres[cle])
             return
         n_verifies += 1
         empreintes_apres[cle] = empr
-        avant = empreintes_avant.get(cle)
         if avant is None:
             n_premiere_fois += 1
             return
@@ -167,26 +335,12 @@ def main():
             lien = f"https://monlegitexte.heuressupfrance.workers.dev/?art={num}"
             if code == "CSS":
                 lien += "&code=secu"
-
-            # OÙ, pour de bon. L'ancienne version nommait trois lieux et taisait
-            # qu'il pouvait y en avoir 400 : L3121-36 est cité dans 401 fichiers.
-            # Le compte passe donc devant, l'application avant le guide (c'est
-            # elle qu'on édite), et le relevé complet part dans un fichier.
-            app = [f"{t}:{n}" for t, n in lieux if t != "guide"]
-            gui = [n for t, n in lieux if t == "guide"]
-            ou = []
-            if app:
-                ou.append("dans l'application : " + ", ".join(app[:8])
-                          + (f" et {len(app)-8} autre(s)" if len(app) > 8 else ""))
-            if gui:
-                ou.append(f"{len(gui)} page(s) du guide" if len(gui) > 4
-                          else "guide : " + ", ".join(gui))
-            releve = ecrire_releve(args.releves, num, lieux) if args.releves else None
+            ou, releve = decrire_lieux(num, lieux)
 
             ea, eb = extraits_compares(avant.get("texte"), empr.get("texte"))
             detail = (f"Toujours en vigueur, mais le contenu diffère de la dernière "
                       f"empreinte (version {avant.get('version')} -> {empr['version']}). "
-                      f"Cité dans {len(lieux)} fichier(s) — " + " ; ".join(ou) + ".")
+                      + ou + ".")
             if ea and eb and ea != eb:
                 detail += f"\n\nAVANT — {ea}\n\nAPRÈS — {eb}"
             elif not avant.get("texte"):
@@ -195,13 +349,23 @@ def main():
             if releve:
                 detail += f"\n\nRelevé complet des lieux : {releve}"
 
-            resultat["alertes"].append({
+            alerte = {
                 "categorie": "contenu-article-modifie",
                 "gravite": "moyenne",
                 "titre": f"{num} ({code}) : le texte a changé depuis la dernière vérification",
                 "detail": detail,
                 "lien": lien,
-            })
+            }
+            # (c) Le texte a presque ENTIÈREMENT changé : ce n'est plus un
+            # seuil ou une virgule, l'article parle d'autre chose — la
+            # citation de l'appli est peut-être devenue fausse.
+            r = ressemblance(avant.get("texte"), empr.get("texte"))
+            if avant.get("texte") and r < SEUIL_SUJET:
+                alerte["gravite"] = "haute"
+                alerte["etiquettes"] = ["Changement de sujet"]
+                alerte["detail"] = (f"⚠️ CHANGEMENT DE SUJET : l'ancien et le nouveau texte n'ont "
+                                    f"plus que {round(r*100)} % en commun.\n\n" + detail)
+            resultat["alertes"].append(alerte)
 
     # Fusionner les DEUX sources par clé (code:num) AVANT de traiter -- un
     # article cité à la fois par un outil et par le guide ne doit être
@@ -219,7 +383,9 @@ def main():
             if cle in a_traiter:
                 a_traiter[cle][2].extend(lieux)
                 break
-            if empreinte_article(args.fonds, code, num) is not None:
+            # « or cle in empreintes_avant » : un article disparu du fonds
+            # n'a plus d'empreinte actuelle, mais on se souvient de lui.
+            if empreinte_article(args.fonds, code, num) is not None or cle in empreintes_avant:
                 a_traiter[cle] = (code, num, list(lieux))
                 break
 

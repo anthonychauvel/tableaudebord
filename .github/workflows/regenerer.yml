@@ -95,9 +95,14 @@ jobs:
           # dossier absent sort en erreur 128 et, bash tournant avec -e sous
           # Actions, ferait échouer toute l'étape avant le commit. Or releves/
           # n'apparaît que le jour où un article change.
+          # textes-vus.json et empreintes-droit.json (30/09/2026) : mémoire de
+          # la veille des nouveaux textes et du filtre MonLegiTexte -- même
+          # raison que les empreintes ci-dessus, sans eux chaque passage
+          # repartirait de zéro et ne signalerait jamais rien.
           for cible in donnees.json sw.js ccn-regles.json historique/ \
                        empreintes-articles.json empreintes-fichiers.json \
-                       pages-articles.json releves/; do
+                       pages-articles.json releves/ \
+                       textes-vus.json empreintes-droit.json; do
             [ -e "$cible" ] && git add "$cible" || true
           done
           git diff --cached --quiet && echo "Aucun changement." || \

@@ -159,6 +159,12 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
   color:var(--txt);font-size:13.5px;font-weight:700;padding:12px 14px;border-radius:14px;cursor:pointer;}
 .sheet-b small{display:block;font-weight:600;font-size:11px;color:var(--txt2);margin-top:2px;}
 .sheet-b.annul{text-align:center;background:none;color:var(--txt2);}
+.sheet{max-height:86vh;overflow-y:auto;}
+.etat-run{display:block;font-size:11px;font-weight:700;margin-top:4px;}
+.etat-run.ok{color:var(--ok);} .etat-run.ko{color:var(--haute);} .etat-run.encours{color:var(--moyenne);}
+.cle-zone{background:rgba(255,255,255,.04);border:1px dashed var(--edge);border-radius:14px;padding:12px;font-size:12px;color:var(--txt2);line-height:1.5;}
+.cle-zone input{width:100%;margin:8px 0;background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:13px;padding:10px;border-radius:10px;}
+.cle-zone ol{padding-left:18px;margin:6px 0;}
 
 /* ── Cartes repliables (30/09) : on voit la liste d'un coup d'œil, on touche pour ouvrir ── */
 details.carte>summary{list-style:none;cursor:pointer;}
@@ -218,7 +224,8 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
   <div class="logo">🦉</div>
   <div><h1>Ma veille</h1><div class="sub" id="hdrSub">Chargement…</div></div>
   <div class="sp"></div>
-  <button class="btn-mini" onclick="ouvrirExport()">📤 Exporter</button>
+  <button class="btn-mini" onclick="ouvrirRelance()">🔄 Relancer</button>
+  <button class="btn-mini" onclick="ouvrirExport()">📤</button>
 </div>
 
 <!-- ACCUEIL -->
@@ -285,6 +292,12 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
   <button class="sheet-b" onclick="exporterTaches('txt')">📄 Fichier .txt<small>Même liste, en texte simple</small></button>
   <button class="sheet-b" onclick="fermerExport();exporterTexte()">⬇️ Liste de contrôle (.zip)<small>Un fichier par thème, à cocher</small></button>
   <button class="sheet-b annul" onclick="fermerExport()">Annuler</button>
+</div>
+<div class="sheet-fond" id="relanceFond" onclick="fermerRelance()"></div>
+<div class="sheet" id="relance">
+  <div class="sheet-t">🔄 Relancer un robot</div>
+  <div id="relanceCorps"></div>
+  <button class="sheet-b annul" onclick="fermerRelance()">Fermer</button>
 </div>
 <div class="toast" id="toast"></div>
 
@@ -939,6 +952,73 @@ function exporterTexte(){
   a.href=url; a.download='veille-controle-'+now.getFullYear()+p2(now.getMonth()+1)+p2(now.getDate())+'.zip';
   document.body.appendChild(a); a.click();
   setTimeout(function(){ try{ document.body.removeChild(a); }catch(e){} URL.revokeObjectURL(url); }, 200);
+}
+
+// --- Relancer un workflow GitHub (30/09/2026) ------------------------------
+// La page est publique : AUCUNE clé n'est écrite dans ce fichier. La clé
+// (jeton GitHub à droits limités « Actions : écriture » sur les 2 dépôts) est
+// collée une fois et gardée dans CE téléphone seulement (localStorage). Sans
+// clé, le bouton ouvre la page GitHub du workflow ; l'état du dernier run se
+// lit sans clé (dépôts publics).
+const ROBOTS = [
+  {k:'aspirateur', n:'🧲 Aspirateur Légifrance', d:'Récupère les nouveaux textes (Code, conventions, JO, accords). Plusieurs heures.',
+   repo:'anthonychauvel/droit', wf:'aspirateur.yml', inputs:{cible:'tout', seulement_manquants:'oui'}},
+  {k:'veille', n:'🦉 Tableau de bord', d:'Recalcule les alertes à partir des données actuelles. ~10 minutes.',
+   repo:'anthonychauvel/tableaudebord', wf:'regenerer.yml', inputs:{}},
+];
+const CLE_JETON='veille_jeton_github';
+function lireJeton(){try{return localStorage.getItem(CLE_JETON)||'';}catch(e){return '';}}
+function ouvrirRelance(){document.getElementById('relanceFond').classList.add('on');document.getElementById('relance').classList.add('on');rendreRelance();}
+function fermerRelance(){document.getElementById('relanceFond').classList.remove('on');document.getElementById('relance').classList.remove('on');}
+function pageWf(r){return 'https://github.com/'+r.repo+'/actions/workflows/'+r.wf;}
+function rendreRelance(){
+  var j=lireJeton();
+  document.getElementById('relanceCorps').innerHTML=ROBOTS.map(function(r){
+    return '<button class="sheet-b" onclick="relancer(\''+r.k+'\')">'+r.n+'<small>'+esc(r.d)+'</small>'
+      +'<span class="etat-run" id="etat-'+r.k+'">État du dernier passage…</span></button>';
+  }).join('')
+  +(j?'<div class="cle-zone">🔑 Clé GitHub enregistrée sur ce téléphone. <a href="#" onclick="oublierJeton();return false;">L\'oublier</a></div>'
+     :'<div class="cle-zone">🔑 <b>Pour lancer en un geste</b>, colle une fois une clé GitHub (sinon le bouton ouvre la page GitHub, puis « Run workflow ») :'
+      +'<ol><li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Créer une clé « fine-grained »</a></li>'
+      +'<li>Repository access : <b>droit</b> et <b>tableaudebord</b> seulement</li>'
+      +'<li>Permissions → <b>Actions : Read and write</b> (rien d\'autre)</li>'
+      +'<li>Generate token, copie-la, colle-la ici :</li></ol>'
+      +'<input id="champJeton" type="password" autocomplete="off" placeholder="github_pat_…">'
+      +'<button class="act ok" style="width:100%" onclick="enregistrerJeton()">Enregistrer sur ce téléphone</button></div>');
+  ROBOTS.forEach(majEtat);
+}
+function enregistrerJeton(){
+  var v=(document.getElementById('champJeton').value||'').trim();
+  if(!/^(github_pat_|ghp_)/.test(v)){toast('Ça ne ressemble pas à une clé GitHub');return;}
+  try{localStorage.setItem(CLE_JETON,v);}catch(e){}
+  toast('Clé enregistrée 🔑');rendreRelance();
+}
+function oublierJeton(){try{localStorage.removeItem(CLE_JETON);}catch(e){}toast('Clé oubliée');rendreRelance();}
+async function majEtat(r){
+  var el=document.getElementById('etat-'+r.k); if(!el) return;
+  try{
+    var h={'Accept':'application/vnd.github+json'}, j=lireJeton(); if(j) h.Authorization='Bearer '+j;
+    var rep=await fetch('https://api.github.com/repos/'+r.repo+'/actions/workflows/'+r.wf+'/runs?per_page=1',{headers:h,cache:'no-store'});
+    var d=await rep.json(), run=(d.workflow_runs||[])[0];
+    if(!run){el.textContent='Aucun passage connu';return;}
+    var q=new Date(run.created_at).toLocaleString('fr-FR',{weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'});
+    if(run.status!=='completed'){el.className='etat-run encours';el.textContent='⏳ En cours (lancé '+q+')';}
+    else if(run.conclusion==='success'){el.className='etat-run ok';el.textContent='✅ Réussi — '+q;}
+    else {el.className='etat-run ko';el.textContent='❌ '+(run.conclusion||'échec')+' — '+q;}
+  }catch(e){el.textContent='État indisponible (réseau)';}
+}
+async function relancer(k){
+  var r=ROBOTS.filter(function(x){return x.k===k;})[0], j=lireJeton();
+  if(!j){window.open(pageWf(r),'_blank');return;}
+  if(!confirm('Lancer « '+r.n.replace(/^\S+\s/,'')+' » maintenant ?')) return;
+  try{
+    var rep=await fetch('https://api.github.com/repos/'+r.repo+'/actions/workflows/'+r.wf+'/dispatches',{
+      method:'POST',headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+j,'Content-Type':'application/json'},
+      body:JSON.stringify({ref:'main',inputs:r.inputs})});
+    if(rep.status===204){toast('C\'est parti 🚀');setTimeout(function(){majEtat(r);},4000);return;}
+    if(rep.status===401||rep.status===403){toast('Clé refusée : vérifie « Actions : Read and write »');return;}
+    var t=await rep.text(); toast('GitHub a refusé ('+rep.status+')'); console.log(t);
+  }catch(e){toast('Pas de réseau ?');}
 }
 
 charger();

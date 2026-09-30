@@ -36,6 +36,7 @@ import json
 import os
 import re
 import sys
+import urllib.request
 from datetime import datetime, timezone, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -223,6 +224,73 @@ class FiltrePertinence:
             "date_texte": max(m["change_le"] for _, m, _ in retenus),
         })
 
+# ── Pannes de l'aspirateur (30/09/2026) ────────────────────────────────────
+# Le 30/09, l'étape JORF a échoué (jeton PISTE refusé) mais le run est resté
+# vert : « || echo » avalait l'erreur. Deux filets :
+#   1. audits/etapes-en-echec.log, écrit par aspirateur.yml à chaque échec ;
+#   2. l'état du dernier run sur GitHub (dépôt public : pas de clé nécessaire).
+NOMS_ETAPES = {"jorf": "Journal officiel", "acco": "Accords d'entreprise",
+               "jurisprudence-cc": "Jurisprudence (Cour de cassation)",
+               "jurisprudence-ca": "Jurisprudence (cours d'appel)",
+               "ccn-textes-recents": "Texte complet des avenants récents"}
+JOURS_ECHEC = 7
+API_RUNS = "https://api.github.com/repos/anthonychauvel/droit/actions/workflows/aspirateur.yml/runs?per_page=1"
+
+
+def verifier_etapes_en_echec(fonds, alertes):
+    chemin = os.path.join(fonds, "audits", "etapes-en-echec.log")
+    if not os.path.isfile(chemin):
+        return
+    limite = (datetime.now(timezone.utc) - timedelta(days=JOURS_ECHEC)).strftime("%Y-%m-%d")
+    dernier = {}
+    for ligne in open(chemin, encoding="utf-8", errors="replace"):
+        parts = ligne.split()
+        if len(parts) >= 2 and parts[0][:10] >= limite:
+            dernier[parts[1]] = parts[0]
+    for etape, quand in sorted(dernier.items()):
+        nom = NOMS_ETAPES.get(etape, etape)
+        alertes.append({
+            "categorie": "etape-aspirateur-en-echec",
+            "gravite": "haute",
+            "titre": f"[Aspirateur] {nom} : étape en échec ({quand[:10]})",
+            "detail": (f"L'étape « {nom} » de l'aspirateur a échoué le {quand.replace('T', ' à ')} "
+                       f"(consigné dans audits/etapes-en-echec.log du dépôt droit). Le run a pu "
+                       f"rester vert : les textes de ce fonds n'ont pas été récupérés ce jour-là. "
+                       f"Relance l'aspirateur ; si ça recommence, ouvre le journal du run et "
+                       f"cherche « a échoué »."),
+            "lien": "https://github.com/anthonychauvel/droit/actions/workflows/aspirateur.yml",
+            "date_texte": quand[:10],
+        })
+    print(f"Étapes en échec sur {JOURS_ECHEC} jours : {len(dernier)}")
+
+
+def verifier_dernier_run(alertes):
+    try:
+        h = {"Accept": "application/vnd.github+json", "User-Agent": "veille"}
+        if os.environ.get("GITHUB_TOKEN"):
+            h["Authorization"] = "Bearer " + os.environ["GITHUB_TOKEN"]
+        with urllib.request.urlopen(urllib.request.Request(API_RUNS, headers=h), timeout=15) as r:
+            run = (json.loads(r.read()).get("workflow_runs") or [None])[0]
+    except Exception as e:
+        print(f"État du dernier run de l'aspirateur indisponible ({e}) -- pas d'alerte.")
+        return
+    if not run or run.get("status") != "completed":
+        return
+    if run.get("conclusion") not in ("success", "skipped", "cancelled", None):
+        quand = (run.get("created_at") or "")[:10]
+        alertes.append({
+            "categorie": "run-aspirateur-en-echec",
+            "gravite": "haute",
+            "titre": f"[Aspirateur] dernier passage en échec ({quand})",
+            "detail": (f"Le dernier run de l'aspirateur (lancé le {quand}) s'est terminé en "
+                       f"« {run.get('conclusion')} ». Une partie des textes n'a pas été récupérée. "
+                       f"Ouvre-le pour voir l'étape en rouge, puis relance-le."),
+            "lien": run.get("html_url") or "",
+            "date_texte": quand,
+        })
+    print(f"Dernier run de l'aspirateur : {run.get('conclusion')}")
+
+
 
 CONTEXTE = {}
 
@@ -235,6 +303,7 @@ def main():
     ap.add_argument("--empreintes-articles", help="empreintes-articles.json (articles cités)")
     ap.add_argument("--hs", help="Racine de l'appli (conventions de l'appli)")
     ap.add_argument("--memoire", help="empreintes-droit.json : texte des fichiers d'un passage à l'autre")
+    ap.add_argument("--hors-ligne", action="store_true", help="Ne pas interroger l'API GitHub (tests)")
     args = ap.parse_args()
 
     filtre = None
@@ -274,6 +343,10 @@ def main():
     for nom_fichier, label, cadence, marge in SOURCES:
         verifier_source(dossier_audits, nom_fichier, label, cadence, marge, resultat["alertes"])
         print()
+
+    verifier_etapes_en_echec(args.fonds, resultat["alertes"])
+    if not args.hors_ligne:
+        verifier_dernier_run(resultat["alertes"])
 
     if filtre:
         with open(args.memoire, "w", encoding="utf-8") as f:

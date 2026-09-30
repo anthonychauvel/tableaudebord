@@ -140,7 +140,7 @@ a{color:var(--bleu);}
 .pied{padding:14px 18px 4px;font-size:10.5px;color:var(--txt2);text-align:center;}
 .toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);
   background:#fff;color:#111;font-size:13px;font-weight:700;padding:10px 16px;border-radius:12px;opacity:0;transition:all .25s;
-  z-index:50;max-width:90%;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.4);}
+  z-index:100;max-width:90%;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,.4);}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0);}
 input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:14px;
   padding:11px 13px;border-radius:12px;margin:4px 0 10px;}
@@ -165,6 +165,11 @@ input.rech{width:100%;background:var(--ink3);border:1px solid var(--edge);color:
 .cle-zone{background:rgba(255,255,255,.04);border:1px dashed var(--edge);border-radius:14px;padding:12px;font-size:12px;color:var(--txt2);line-height:1.5;}
 .cle-zone input{width:100%;margin:8px 0;background:var(--ink3);border:1px solid var(--edge);color:var(--txt);font-size:13px;padding:10px;border-radius:10px;}
 .cle-zone ol{padding-left:18px;margin:6px 0;}
+.relance-msg{display:none;border-radius:14px;padding:12px;font-size:13px;font-weight:700;line-height:1.45;}
+.relance-msg.on{display:block;}
+.relance-msg.ok{background:rgba(76,213,133,.14);color:var(--ok);}
+.relance-msg.ko{background:rgba(255,107,107,.14);color:var(--haute);}
+.relance-msg.info{background:rgba(90,169,255,.12);color:var(--bleu);}
 
 /* ── Cartes repliables (30/09) : on voit la liste d'un coup d'œil, on touche pour ouvrir ── */
 details.carte>summary{list-style:none;cursor:pointer;}
@@ -296,6 +301,7 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 <div class="sheet-fond" id="relanceFond" onclick="fermerRelance()"></div>
 <div class="sheet" id="relance">
   <div class="sheet-t">🔄 Relancer un robot</div>
+  <div class="relance-msg" id="relanceMsg"></div>
   <div id="relanceCorps"></div>
   <button class="sheet-b annul" onclick="fermerRelance()">Fermer</button>
 </div>
@@ -968,7 +974,9 @@ const ROBOTS = [
 ];
 const CLE_JETON='veille_jeton_github';
 function lireJeton(){try{return localStorage.getItem(CLE_JETON)||'';}catch(e){return '';}}
-function ouvrirRelance(){document.getElementById('relanceFond').classList.add('on');document.getElementById('relance').classList.add('on');rendreRelance();}
+// Message DANS le panneau : c'est là que tu regardes quand tu viens de toucher.
+function msgRelance(cls, txt){var m=document.getElementById('relanceMsg');m.className='relance-msg on '+cls;m.textContent=txt;}
+function ouvrirRelance(){document.getElementById('relanceMsg').className='relance-msg';document.getElementById('relanceFond').classList.add('on');document.getElementById('relance').classList.add('on');rendreRelance();}
 function fermerRelance(){document.getElementById('relanceFond').classList.remove('on');document.getElementById('relance').classList.remove('on');}
 function pageWf(r){return 'https://github.com/'+r.repo+'/actions/workflows/'+r.wf;}
 function rendreRelance(){
@@ -977,7 +985,7 @@ function rendreRelance(){
     return '<button class="sheet-b" onclick="relancer(\''+r.k+'\')">'+r.n+'<small>'+esc(r.d)+'</small>'
       +'<span class="etat-run" id="etat-'+r.k+'">État du dernier passage…</span></button>';
   }).join('')
-  +(j?'<div class="cle-zone">🔑 Clé GitHub enregistrée sur ce téléphone. <a href="#" onclick="oublierJeton();return false;">L\'oublier</a></div>'
+  +(j?'<div class="cle-zone">🔑 Clé GitHub enregistrée sur ce téléphone (…'+esc(j.slice(-4))+'). <a href="#" onclick="oublierJeton();return false;">L\'oublier</a></div>'
      :'<div class="cle-zone">🔑 <b>Pour lancer en un geste</b>, colle une fois une clé GitHub (sinon le bouton ouvre la page GitHub, puis « Run workflow ») :'
       +'<ol><li><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Créer une clé « fine-grained »</a></li>'
       +'<li>Repository access : <b>droit</b> et <b>tableaudebord</b> seulement</li>'
@@ -989,11 +997,12 @@ function rendreRelance(){
 }
 function enregistrerJeton(){
   var v=(document.getElementById('champJeton').value||'').trim();
-  if(!/^(github_pat_|ghp_)/.test(v)){toast('Ça ne ressemble pas à une clé GitHub');return;}
+  if(/^https?:/.test(v)){msgRelance('ko',"C'est un lien, pas une clé. Sur GitHub, après « Generate token », copie le long code qui commence par github_pat_ (il n'est affiché qu'une fois).");return;}
+  if(!/^(github_pat_|ghp_)[A-Za-z0-9_]{20,}$/.test(v)){msgRelance('ko',"Ça ne ressemble pas à une clé GitHub : elle commence par github_pat_ et fait environ 90 caractères, sans espace.");return;}
   try{localStorage.setItem(CLE_JETON,v);}catch(e){}
-  toast('Clé enregistrée 🔑');rendreRelance();
+  rendreRelance();msgRelance('ok','🔑 Clé enregistrée sur ce téléphone. Touche un robot pour le lancer.');
 }
-function oublierJeton(){try{localStorage.removeItem(CLE_JETON);}catch(e){}toast('Clé oubliée');rendreRelance();}
+function oublierJeton(){try{localStorage.removeItem(CLE_JETON);}catch(e){}rendreRelance();msgRelance('info','Clé oubliée.');}
 async function majEtat(r){
   var el=document.getElementById('etat-'+r.k); if(!el) return;
   try{
@@ -1009,16 +1018,22 @@ async function majEtat(r){
 }
 async function relancer(k){
   var r=ROBOTS.filter(function(x){return x.k===k;})[0], j=lireJeton();
-  if(!j){window.open(pageWf(r),'_blank');return;}
+  if(!j){
+    msgRelance('info',"Pas de clé sur ce téléphone : j'ouvre la page GitHub, touche « Run workflow » puis le bouton vert.");
+    window.open(pageWf(r),'_blank');return;
+  }
   if(!confirm('Lancer « '+r.n.replace(/^\S+\s/,'')+' » maintenant ?')) return;
+  msgRelance('info','⏳ Envoi à GitHub…');
   try{
     var rep=await fetch('https://api.github.com/repos/'+r.repo+'/actions/workflows/'+r.wf+'/dispatches',{
-      method:'POST',headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+j,'Content-Type':'application/json'},
+      method:'POST',cache:'no-store',headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+j,'Content-Type':'application/json'},
       body:JSON.stringify({ref:'main',inputs:r.inputs})});
-    if(rep.status===204){toast('C\'est parti 🚀');setTimeout(function(){majEtat(r);},4000);return;}
-    if(rep.status===401||rep.status===403){toast('Clé refusée : vérifie « Actions : Read and write »');return;}
-    var t=await rep.text(); toast('GitHub a refusé ('+rep.status+')'); console.log(t);
-  }catch(e){toast('Pas de réseau ?');}
+    if(rep.status===204){msgRelance('ok','🚀 Lancé ! Le robot démarre dans quelques secondes (état ci-dessous).');setTimeout(function(){majEtat(r);},5000);return;}
+    var t=''; try{t=(await rep.json()).message||'';}catch(e){}
+    if(rep.status===401) msgRelance('ko','❌ Clé refusée par GitHub (expirée ou mal copiée). Touche « L\'oublier » et colle-la de nouveau.');
+    else if(rep.status===403||rep.status===404) msgRelance('ko','❌ La clé n\'a pas le droit de lancer « '+r.repo.split('/')[1]+' ». Sur GitHub, vérifie : Repository access = droit ET tableaudebord ; Permissions → Actions = Read and write. ('+rep.status+(t?' : '+t:'')+')');
+    else msgRelance('ko','❌ GitHub a refusé ('+rep.status+(t?' : '+t:'')+').');
+  }catch(e){msgRelance('ko','❌ Pas de réseau, ou appel bloqué ('+(e&&e.message||e)+').');}
 }
 
 charger();

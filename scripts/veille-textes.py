@@ -360,8 +360,13 @@ def infos_accord(meta, idcc_appli):
         return ""
     brut = json.dumps(meta, ensure_ascii=False)
     morceaux = []
-    for k, v in meta.items():
-        if "date" in k.lower() and isinstance(v, (int, str)):
+    # Date de signature d'abord (dateTexte), puis de dépôt : « dateMaj » n'est
+    # que la dernière mise à jour de la fiche Légifrance.
+    cles_date = [k for k in ("dateTexte", "dateDepot", "dateDiffusion", "dateEffet") if k in meta]
+    cles_date += [k for k in meta if "date" in k.lower() and k not in cles_date and k != "dateFin"]
+    for k in cles_date:
+        v = meta[k]
+        if isinstance(v, (int, str)):
             d = date_ms(v) if isinstance(v, int) else str(v)[:10]
             if d:
                 morceaux.append(d)

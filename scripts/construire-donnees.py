@@ -384,6 +384,31 @@ def verifier_smic(dossier_hs, dossier_jorf):
     return {"alertes": alertes}
 
 
+def regrouper_fichiers_modifies(resultat):
+    """123 cartes « tel fichier a changé » le 28/09 noyaient tout le reste,
+    pour un simple constat. Une seule carte, avec la liste, suffit."""
+    alertes = resultat.get("alertes", [])
+    modifies = [a for a in alertes if a.get("categorie") == "fichier-modifie"]
+    if len(modifies) <= 1:
+        return resultat
+    autres = [a for a in alertes if a.get("categorie") != "fichier-modifie"]
+    noms = [a.get("titre", "").split(" : ", 1)[0] for a in modifies]
+    par_zone = {}
+    for n in noms:
+        par_zone.setdefault(n.split(":", 1)[0], []).append(n.split(":", 1)[-1])
+    jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    detail = ("Simple constat : ces fichiers ont changé depuis le passage précédent. "
+              "Si c'est toi qui as travaillé dessus, rien à faire.\n\n"
+              + "\n\n".join(f"{z.upper()} ({len(l)}) : " + ", ".join(l) for z, l in sorted(par_zone.items())))
+    autres.append({
+        "categorie": "fichier-modifie",
+        "gravite": "basse",
+        "titre": f"{len(modifies)} fichiers modifiés ({jour}) : app, guide, MonLegiTexte",
+        "detail": detail,
+    })
+    return {**resultat, "alertes": autres}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hs", required=True)
@@ -403,8 +428,15 @@ def main():
     # le SMIC de l'appli, ou deux valeurs différentes dans l'appli.
     sections.append({"id": "smic", "titre": "💶 Revalorisation du SMIC",
         **verifier_smic(args.hs, os.path.join(args.droit, "output", "jorf"))})
+    # MonLegiTexte : n'alerte plus sur « N fichiers mis à jour » en bloc, mais
+    # seulement sur les textes qui ont VRAIMENT changé ET touchent un sujet
+    # suivi (articles cités, conventions de l'appli, mots-cles.json).
+    ici_veille = os.path.dirname(os.path.abspath(args.out))
     sections.append({"id": "droit", "titre": "MonLegiTexte",
-        **lancer("verifier-droit.py", ["--fonds", args.droit])})
+        **lancer("verifier-droit.py", ["--fonds", args.droit, "--hs", args.hs,
+                 "--mots-cles", os.path.join(ici_veille, "mots-cles.json"),
+                 "--empreintes-articles", os.path.join(ici_veille, "empreintes-articles.json"),
+                 "--memoire", os.path.join(ici_veille, "empreintes-droit.json")])})
     sections.append({"id": "modules", "titre": "8 modules",
         **fusionner(
             lancer("verifier-modules.py", ["--racine", args.hs]),
@@ -516,6 +548,20 @@ def main():
     sections.append({"id": "contenu", "titre": "Contenu des articles cités",
         **lancer("verifier-contenu-articles.py", contenu_args)})
 
+    # Nouveaux textes sur les sujets suivis (30/09/2026) : Code (sections des
+    # articles cités), CCN, JORF, accords d'entreprise. APRÈS la section
+    # « contenu » : elle lit empreintes-articles.json que celle-ci vient
+    # d'écrire (la liste à jour des articles cités).
+    veille = lancer("veille-textes.py", ["--hs", args.hs, "--fonds", args.droit,
+        "--mots-cles", os.path.join(ici_veille, "mots-cles.json"),
+        "--memoire", os.path.join(ici_veille, "textes-vus.json"),
+        "--empreintes-articles", os.path.join(ici_veille, "empreintes-articles.json")])
+    sections.append({"id": "nouveaux", "titre": "📰 Nouveaux textes sur tes sujets",
+                     "alertes": veille.get("alertes", []),
+                     **({"erreur": veille["erreur"]} if veille.get("erreur") else {})})
+    sections.append({"id": "accords", "titre": "🏢 Accords d'entreprise à regarder",
+                     "alertes": veille.get("alertes_accords", [])})
+
     # Changements de fichiers : constat neutre, pas un jugement -- signale
     # tout ce qui a changé depuis le dernier run, app + guide + MonLegiTexte
     # confondus, que ce soit voulu ou non. Empreinte dans son propre fichier.
@@ -524,7 +570,7 @@ def main():
     if args.guide:
         changements_args += ["--guide", args.guide]
     sections.append({"id": "changements", "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
-        **lancer("verifier-changements-fichiers.py", changements_args)})
+        **regrouper_fichiers_modifies(lancer("verifier-changements-fichiers.py", changements_args))})
 
     # Âge de la référence : reproduit le bandeau "Plus de 12 mois" que l'app
     # montre elle-même aux utilisateurs -- indépendant de verifier-fraicheur.py

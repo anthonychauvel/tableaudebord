@@ -1,0 +1,109 @@
+{
+  "_mode_emploi": "Modifiable directement sur GitHub (crayon ✏️). Chaque texte NOUVEAU du fonds (Code, CCN, JORF, accords d'entreprise) qui contient une des « expressions » d'un thème remonte dans le tableau de bord, rubrique « Nouveaux textes ». Les majuscules et les accents ne comptent pas. Pour ajouter un sujet : copie un bloc de « themes », change le nom et les expressions. « exclusions » : un texte dont le TITRE contient une de ces expressions est ignoré (bruit).",
+  "themes": [
+    {
+      "nom": "Heures supplémentaires",
+      "emoji": "⏱️",
+      "expressions": [
+        "heures supplémentaires",
+        "heure supplémentaire",
+        "contingent annuel",
+        "majoration des heures",
+        "majoration de salaire",
+        "repos compensateur",
+        "contrepartie obligatoire en repos",
+        "repos compensateur de remplacement",
+        "exonération de cotisations salariales"
+      ]
+    },
+    {
+      "nom": "Temps partiel",
+      "emoji": "🕐",
+      "expressions": [
+        "heures complémentaires",
+        "temps partiel",
+        "complément d'heures",
+        "durée minimale de travail",
+        "avenant de complément d'heures"
+      ]
+    },
+    {
+      "nom": "Forfait jours",
+      "emoji": "📆",
+      "expressions": [
+        "forfait annuel en jours",
+        "forfait en jours",
+        "forfait jours",
+        "forfait annuel en heures",
+        "convention de forfait",
+        "renonciation à des jours de repos"
+      ]
+    },
+    {
+      "nom": "Durée du travail",
+      "emoji": "🕘",
+      "expressions": [
+        "durée du travail",
+        "durée légale",
+        "temps de travail effectif",
+        "durées maximales",
+        "durée maximale",
+        "aménagement du temps de travail",
+        "annualisation",
+        "travail de nuit",
+        "travail du dimanche",
+        "repos dominical",
+        "horaires individualisés"
+      ]
+    },
+    {
+      "nom": "Repos et congés",
+      "emoji": "🏖️",
+      "expressions": [
+        "repos quotidien",
+        "repos hebdomadaire",
+        "congés payés",
+        "congé payé",
+        "jours fériés",
+        "journée de solidarité",
+        "compte épargne-temps",
+        "compte épargne temps",
+        "jours de réduction du temps de travail",
+        "jours rtt"
+      ]
+    },
+    {
+      "nom": "Astreintes",
+      "emoji": "📟",
+      "expressions": [
+        "astreinte",
+        "astreintes",
+        "temps d'intervention",
+        "temps de déplacement professionnel"
+      ]
+    },
+    {
+      "nom": "Salaires minima",
+      "emoji": "💶",
+      "expressions": [
+        "salaires minima",
+        "salaire minimum conventionnel",
+        "salaires minimaux",
+        "grille de salaires",
+        "grille des salaires",
+        "rémunération minimale",
+        "rémunérations minimales",
+        "valeur du point",
+        "salaire minimum de croissance"
+      ]
+    }
+  ],
+  "exclusions": [
+    "portant nomination",
+    "portant publication de l'accord entre le gouvernement",
+    "fonction publique",
+    "agents publics",
+    "militaires",
+    "magistrats"
+  ]
+}

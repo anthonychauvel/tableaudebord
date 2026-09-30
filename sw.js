@@ -2,7 +2,7 @@
 // fonctionne et que le tableau de bord s'ouvre même sans réseau (avec les
 // dernières données connues). Pas de stratégie sophistiquée — un outil perso
 // à une seule page n'en a pas besoin.
-const CACHE = "veille-perso-20260928-174707";
+const CACHE = "veille-perso-20260930-bouton";
 const SHELL = ["./", "./index.html", "./manifest.json", "./donnees.json",
                "./icons/icon-192.png", "./icons/icon-512.png"];
 
@@ -20,12 +20,16 @@ self.addEventListener("activate", (e) => {
   self.clients.claim();
 });
 
-// donnees.json : réseau d'abord (les alertes doivent être fraîches), cache en
-// repli si hors-ligne. Le reste (coquille de l'app) : cache d'abord, c'est
-// statique.
+// donnees.json ET la page elle-même : réseau d'abord, cache en repli si
+// hors-ligne. La page était servie « cache d'abord » : une nouvelle version de
+// l'interface (bouton Relancer, 30/09/2026) restait invisible sur le téléphone
+// jusqu'au passage suivant de la veille. Le reste (icônes, manifest) : cache
+// d'abord, c'est statique.
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
-  if (url.pathname.endsWith("donnees.json")) {
+  if (e.request.method !== "GET" || url.origin !== self.location.origin) return;
+  if (url.pathname.endsWith("donnees.json") || url.pathname.endsWith("/")
+      || url.pathname.endsWith("index.html") || e.request.mode === "navigate") {
     e.respondWith(
       fetch(e.request)
         .then((r) => { caches.open(CACHE).then((c) => c.put(e.request, r.clone())); return r; })

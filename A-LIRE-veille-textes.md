@@ -46,6 +46,17 @@ transports L1321-1 à 10, Code rural L713-1 à 6 et L713-13. Suivis comme les
 articles cités : texte modifié 🟠 (🔴 si changement de sujet), disparu 🔴.
 Un numéro inexistant est simplement ignoré ; la liste se corrige sur GitHub.
 
+## Règles et montants officiels (📐)
+
+Le Code du travail numérique (simulateurs de préavis, indemnités de
+licenciement, rupture conventionnelle, retraite, précarité) et l'URSSAF (SMIC,
+plafond de la Sécurité sociale, exonération des heures sup, frais pro…)
+publient leurs règles de calcul. À chaque nouvelle version, la veille compare
+l'ancienne et la nouvelle, valeur par valeur, et ne signale que ce qui a
+vraiment changé, avec l'avant / l'après et l'outil de l'appli à revoir.
+🔴 si un montant, taux, durée ou coefficient bouge (règle générale ou
+convention de l'appli), 🟠 sinon. Mémoire : `regles-officielles.json`.
+
 ## Santé de l'aspirateur (🩺 dans Thèmes)
 
 - **Étape en échec** 🔴 : l'aspirateur note chaque étape ratée dans

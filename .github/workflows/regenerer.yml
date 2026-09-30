@@ -102,7 +102,7 @@ jobs:
           for cible in donnees.json sw.js ccn-regles.json historique/ \
                        empreintes-articles.json empreintes-fichiers.json \
                        pages-articles.json releves/ \
-                       textes-vus.json empreintes-droit.json; do
+                       textes-vus.json empreintes-droit.json regles-officielles.json; do
             [ -e "$cible" ] && git add "$cible" || true
           done
           git diff --cached --quiet && echo "Aucun changement." || \

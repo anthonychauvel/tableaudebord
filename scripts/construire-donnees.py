@@ -561,6 +561,13 @@ def main():
                      **({"erreur": veille["erreur"]} if veille.get("erreur") else {})})
     sections.append({"id": "accords", "titre": "🏢 Accords d'entreprise à regarder",
                      "alertes": veille.get("alertes_accords", [])})
+    # Règles et montants officiels (30/09/2026) : une nouvelle version des règles
+    # de calcul du Code du travail numérique ou de l'URSSAF qui change vraiment
+    # une valeur (SMIC, plafond, préavis, indemnité…). Réseau : registre npm.
+    sections.append({"id": "regles", "titre": "📐 Règles et montants officiels",
+        **lancer("veille-regles-officielles.py", ["--hs", args.hs,
+                 "--memoire", os.path.join(ici_veille, "regles-officielles.json")])})
+
     # « Fonds figé » (un fonds qui ne reçoit plus rien) : rangé avec les autres
     # signaux de santé de l'aspirateur, dans la section MonLegiTexte / fonds.
     for s_ in sections:

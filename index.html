@@ -480,6 +480,8 @@ function carte(a, ouverte){
   var niv = NIVEAU[a.gravite] || NIVEAU.basse;
   var fichier = /^[\w./-]+\.(html|js|css|json)$/.test(id) ? id : '';
   var sousTitre = (g && quoi!==(a.titre||'')) ? (a.titre||'') : '';
+  // Le titre répète déjà l'identifiant affiché en gros : on n'en garde que la fin.
+  if(sousTitre && id && quoi.indexOf(id)>=0 && sousTitre.indexOf(' : ')>0) sousTitre = sousTitre.split(' : ').slice(1).join(' : ');
   var lienTxt = /legifrance/.test(a.lien||'') ? '📜 Voir le texte' : '🔗 Voir l\'article';
   var detailOuvert = a.fonds || a.categorie==='article-introuvable' || a.categorie==='changement-reel';
   var html = '<details class="carte g-'+esc(a.gravite)+(fait?' fait':'')+'" data-k="'+esc(k)+'"'+(ouverte?' open':'')+'>'

@@ -416,5 +416,16 @@
       "basse": 66
     },
     "nouvelles_alertes": 1
+  },
+  {
+    "fichier": "2026-09-30-150553.json",
+    "genere": "2026-09-30T15:05:53.083771+00:00",
+    "total": 72,
+    "par_gravite": {
+      "haute": 0,
+      "moyenne": 1,
+      "basse": 71
+    },
+    "nouvelles_alertes": 7
   }
 ]

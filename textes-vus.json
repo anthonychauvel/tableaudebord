@@ -2451,7 +2451,86 @@
   "993": 53434016,
   "998": 52986138
  },
- "acco_max": 54863571,
- "detectes": [],
+ "acco_max": 54863677,
+ "detectes": [
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "⏱️ Heures supplémentaires (2026-09-30) : 4 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• Accord collectif d'augmentation du contingent annuel d'heures supplémentaires\n  2026-09-18 · HOPITAL LES MAGNOLIAS · IDCC 29 — convention de l'appli\n  « heures supplémentaires » : Accord collectif d'augmentation du contingent annuel d'heures supplémentaires Accord collectif d'augmentation du contingent annuel d'heures supplémentaires ACCORD COLLECTIF D’AUGMENTATION…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863572\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « heures supplémentaires » : …daire et quotidienne 5 Article 2.4 – Repos quotidien 6 Article 2.5 – Définition de la semaine 6 Article 2.6 – Heures supplémentaires 6 Article 2.6.1 – Heures supplémentaires et contingent 6 Article 2.6.2 – Contrepartie aux heures…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « heures supplémentaires » : …les horaires hebdomadaires définis au jour de la signature de l’accord sont présents en annexe. Article 1.11. Heures supplémentaires Les heures supplémentaires sont effectuées à la demande expresse du responsable hiérarchique en…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675\n\n• Accord relatif à l'annualisation du temps de travail des équipes affectés au cycle 3x8 de l'entreprise Vinci…\n  2026-09-17 · OPTEOR ILE DE FRANCE · IDCC 1843\n  « heures supplémentaires » : …gale du travail (soit 35 heures par semaine) et la limite maximale susvisée ne sont pas considérées comme des heures supplémentaires. Elles ne s'imputent pas sur le contingent annuel d'heures supplémentaires et n'ouvrent pas droit à repos…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863629",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863572",
+   "fonds": "ACCO",
+   "theme": "Heures supplémentaires",
+   "compteur": 4,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Heures supplémentaires:2026-09-30",
+   "vu_le": "2026-09-30"
+  },
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "🕐 Temps partiel (2026-09-30) : 3 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• Accord collectif d'augmentation du contingent annuel d'heures supplémentaires\n  2026-09-18 · HOPITAL LES MAGNOLIAS · IDCC 29 — convention de l'appli\n  « temps partiel » : …majoration de salaire de 25 % · Les suivantes jusqu’à la 48ème avec une majoration de 50% · Pour un salarié à temps partiel · Majoration de 10 % pour chaque heure complémentaire accomplie dans la limite de 1/10e de la durée de travai…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863572\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « temps partiel » : …Aménagement et répartition du temps de travail 7 Article 4 – Organisation du temps de travail des salariés à temps partiel 8 Article 5 – Organisation du temps de travail dans un cadre annuel avec attribution de jours de repos supplé…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « temps partiel » : …igeants, tel que défini par les dispositions légales et conventionnelles. Il ne s’applique pas aux salariés à temps partiel, dont la situation spécifique est régie par leur contrat de travail. Article 1.2. Objet de l’accord Le présen…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863572",
+   "fonds": "ACCO",
+   "theme": "Temps partiel",
+   "compteur": 3,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Temps partiel:2026-09-30",
+   "vu_le": "2026-09-30"
+  },
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "🕘 Durée du travail (2026-09-30) : 3 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « durée du travail » : …MMAIRE PREAMBULE 4 Article 1 – Champ d’application 5 Article 2 – Cadre juridique et principes 5 Article 2.1 – Durée du travail 5 Article 2.2 – Définition du temps de travail effectif 5 Article 2.3 – Durées maximales de travail hebdomada…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « durée du travail » : …travail. Article 1.2. Objet de l’accord Le présent accord a pour objet de fixer les conditions relatives à la durée du travail et de ses modalités de décompte au sein de la Société. Article 1.3. Modalités d’application Conformément à l’…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675\n\n• Accord relatif à l'annualisation du temps de travail des équipes affectés au cycle 3x8 de l'entreprise Vinci…\n  2026-09-17 · OPTEOR ILE DE FRANCE · IDCC 1843\n  « durée du travail » : …du travail. 4.2) Cycle de travail La programmation prévisionnelle, détaillant la composition des équipes, la durée du travail et les horaires de travail sera communiquée aux salariés au moins 7 jours avant le début de la période annuel…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863629",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625",
+   "fonds": "ACCO",
+   "theme": "Durée du travail",
+   "compteur": 3,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Durée du travail:2026-09-30",
+   "vu_le": "2026-09-30"
+  },
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "🏖️ Repos et congés (2026-09-30) : 3 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « repos quotidien » : …s de travail effectif 5 Article 2.3 – Durées maximales de travail hebdomadaire et quotidienne 5 Article 2.4 – Repos quotidien 6 Article 2.5 – Définition de la semaine 6 Article 2.6 – Heures supplémentaires 6 Article 2.6.1 – Heures supp…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « repos quotidien » : …s est fixé à 35 heures par semaine, selon les modalités prévues à l’article 2 du présent Accord. Article 1.8. Repos quotidien et hebdomadaire et durée maximale du travail Concernant les durées du travail maximales quotidienne et hebdom…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675\n\n• Accord relatif à l'annualisation du temps de travail des équipes affectés au cycle 3x8 de l'entreprise Vinci…\n  2026-09-17 · OPTEOR ILE DE FRANCE · IDCC 1843\n  « repos quotidien » : …aucun cas, la durée hebdomadaire de travail ne peut dépasser, au cours d'une même semaine, 48 heures. 3.4) Le repos quotidien Les salariés bénéficient d'un repos quotidien de 11 heures consécutives, sauf dérogation autorisée par la loi…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863629",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625",
+   "fonds": "ACCO",
+   "theme": "Repos et congés",
+   "compteur": 3,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Repos et congés:2026-09-30",
+   "vu_le": "2026-09-30"
+  },
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "📆 Forfait jours (2026-09-30) : 2 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « forfait annuel en jours » : …s sur les « JRS » (dits également « JRTT ») 9 Article 6 – Organisation du temps de travail dans le cadre d’un forfait annuel en jours 10 Article 6.1 – Salariés concernés 10 Article 6.2 – Durée annuelle décomptée en jours 11 Article 6.3 –…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « forfait annuel en jours » : …au sein du service ou de l’équipe auquel ou à laquelle ils sont intégrés, peuvent conclure une convention de forfait annuel en jours. Les collaborateurs non-cadres, notamment les salariés commerciaux itinérants, dont la durée du temps de…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625",
+   "fonds": "ACCO",
+   "theme": "Forfait jours",
+   "compteur": 2,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Forfait jours:2026-09-30",
+   "vu_le": "2026-09-30"
+  },
+  {
+   "categorie": "accords-entreprise",
+   "gravite": "basse",
+   "titre": "📟 Astreintes (2026-09-30) : 2 accord(s) d'entreprise nouveau(x)",
+   "detail": "Accords d'entreprise publiés depuis le dernier passage qui parlent de ce sujet — pour t'inspirer ou repérer une pratique, rien d'obligatoire.\n\n• ACCORD COLLECTIF D'ENTREPRISE RELATIF A L'AMENAGEMENT ET A L'ORGANISATION DU TEMPS DE TRAVAIL AU SEIN DE LA…\n  2026-09-16 · ULTRAEDGE · IDCC 2148 — convention de l'appli\n  « astreinte » : …té des services ou en cas d’urgence ou de surcroit exceptionnel d’activité ou d’intervention par un salarié d’astreinte, le repos quotidien pourra être abaissé à 9 heures. Article 2.5 – Définition de la semaine Le décompte de la…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625\n\n• Accord Temps de Travail\n  2026-09-18 · WS AUDIOLOGY FRANCE · IDCC 3248 — convention de l'appli\n  « astreinte » : …temps de travail, pendant ses congés, ses temps de repos et absences autorisées, sauf cas de force majeure ou astreinte. Il est recommandé aux salariés de ne pas contacter les autres salariés, par téléphone ou courriel, en dehors…\n  https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863675",
+   "lien": "https://www.legifrance.gouv.fr/acco/id/ACCOTEXT000054863625",
+   "fonds": "ACCO",
+   "theme": "Astreintes",
+   "compteur": 2,
+   "date_texte": "2026-09-30",
+   "_id": "acco:Astreintes:2026-09-30",
+   "vu_le": "2026-09-30"
+  }
+ ],
  "dernier_passage": "2026-09-30"
 }

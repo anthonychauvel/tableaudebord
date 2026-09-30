@@ -15,15 +15,29 @@ import unicodedata
 MONLEGITEXTE = "https://monlegitexte.heuressupfrance.workers.dev/"
 
 
+def _lisible(t):
+    """Texte d'affichage : balises retirées, espaces simples, casse et accents
+    GARDÉS (c'est ce que tu lis dans l'extrait)."""
+    t = str(t or "").replace("\u00a0", " ").replace("<mark>", "").replace("</mark>", "")
+    t = re.sub(r"<[^>]+>", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _plier(c):
+    """Un caractère -> un caractère, sans accent et en minuscule. Garder la
+    même longueur permet de retrouver l'extrait dans le texte d'origine."""
+    if c == "\u2019":
+        return "'"
+    b = "".join(x for x in unicodedata.normalize("NFD", c) if unicodedata.category(x) != "Mn")
+    b = b.lower()
+    return b if len(b) == 1 else c.lower()[:1] or c
+
+
 def normaliser(t):
     """Minuscules, sans accents, apostrophes unifiées, espaces simples : la
     recherche d'une expression ne doit pas dépendre de « é » contre « e » ni
     de l'apostrophe typographique."""
-    t = unicodedata.normalize("NFD", str(t or ""))
-    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
-    t = t.replace("’", "'").replace(" ", " ").lower()
-    t = re.sub(r"<[^>]+>", " ", t)
-    return re.sub(r"\s+", " ", t).strip()
+    return "".join(_plier(c) for c in _lisible(t))
 
 
 def charger_mots_cles(chemin):
@@ -57,7 +71,8 @@ def exclu(titre, exclusions):
 def themes_trouves(texte, themes, largeur=160):
     """-> [(nom_theme, emoji, expression, extrait)] : un résultat par thème
     (la première expression trouvée), avec l'extrait autour du mot."""
-    n = normaliser(texte)
+    lisible = _lisible(texte)
+    n = "".join(_plier(c) for c in lisible)     # même longueur que « lisible »
     out = []
     for t in themes:
         for expr, rx in t["motifs"]:
@@ -65,7 +80,7 @@ def themes_trouves(texte, themes, largeur=160):
             if m:
                 deb = max(0, m.start() - largeur)
                 fin = min(len(n), m.end() + largeur)
-                extrait = ("…" if deb else "") + n[deb:fin].strip() + ("…" if fin < len(n) else "")
+                extrait = ("…" if deb else "") + lisible[deb:fin].strip() + ("…" if fin < len(n) else "")
                 out.append((t["nom"], t["emoji"], expr, extrait))
                 break
     return out

@@ -232,18 +232,25 @@ def veille_jorf(fonds, memoire, alertes, themes, exclusions, suivis, idcc_appli,
         refs = refs_articles(texte)
         touche = sorted(refs & tous_suivis) if _MODIFIE.search(n_texte) and (
             "code du travail" in n_texte or "code de la securite sociale" in n_texte) else []
+        # « Avis relatif à l'extension… » n'est qu'une annonce : l'arrêté
+        # d'extension suit quelques semaines après et sera, lui, signalé. Les
+        # garder doublait presque le volume (1 texte JORF sur 3) pour rien.
+        if normaliser(titre).startswith("avis relatif a l'extension"):
+            continue
         idcc = {g for m in _IDCC_TITRE.finditer(titre) for g in m.groups() if g}
         idcc_app = sorted(idcc & idcc_appli, key=int)
         est_avis = normaliser(titre).startswith("avis ")
+        sujets = ", ".join(t[0] for t in trouves)
 
         if touche:
             gravite, pourquoi = "haute", (f"modifie des articles du Code que tu suis : "
                                           f"{', '.join(touche[:12])}")
         elif idcc_app and not est_avis:
             gravite = "haute" if trouves else "moyenne"
-            pourquoi = f"concerne une convention de l'appli (IDCC {', '.join(idcc_app)})"
+            pourquoi = (f"concerne une convention de l'appli (IDCC {', '.join(idcc_app)})"
+                        + (f" — {sujets}" if sujets else ""))
         elif trouves:
-            gravite, pourquoi = "moyenne", "parle d'un de tes sujets"
+            gravite, pourquoi = "moyenne", f"parle de : {sujets}"
         else:
             continue
         detail = (f"Paru au JO le {date}. Ce texte {pourquoi}.\n\n"

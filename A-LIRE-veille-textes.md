@@ -51,14 +51,28 @@ alerte, avec juste une carte ⚪ « enregistrés sans alerte ».
   MonLegiTexte, pour distinguer un vrai changement d'un simple
   re-téléchargement.
 
-## Limites connues (voir aussi la réponse de Claude)
+## Aspirateur (dépôt `droit`, branche `veille-textes-aspirateur`)
 
-- L'aspirateur (dépôt `droit`) ne garde au JORF que les textes dont le
-  **titre** contient des mots RH : un décret « relatif à la durée du
-  travail » peut ne jamais arriver. À corriger côté `droit`.
-- Accords d'entreprise : ni date, ni IDCC stockés par l'aspirateur.
-- Conventions : le corps n'est récupéré que pour les avenants salaires /
-  heures sup / forfait / temps partiel / classification ; pour les autres,
-  seul le titre est lu.
-- Chaque convention n'est relue qu'environ toutes les 5 semaines ;
-  l'extension au JO arrive souvent avant, d'où l'alerte JORF.
+À fusionner AUSSI, sinon la veille reste partielle :
+- **JORF** : le filtre des titres accepte maintenant tes sujets (durée du
+  travail, heures sup/complémentaires, temps partiel, repos, nuit, dimanche,
+  congés, astreintes…). Avant, un décret « relatif à la durée du travail »
+  n'était jamais aspiré.
+- **Accords d'entreprise** : date, entreprise et IDCC sont gardés (champ
+  `meta`) ; nouveaux thèmes de recherche heures sup, temps partiel, nuit,
+  dimanche. Le tableau de bord les affiche et met en tête les accords d'une
+  convention de l'appli.
+- **Conventions** : nouvelle étape `fetch_recents_details.py` qui récupère le
+  texte complet de TOUT avenant des 120 derniers jours (212 en attente
+  aujourd'hui), plus seulement salaires / heures sup / forfait / temps
+  partiel / classification.
+
+Élargir le filtre JORF fera aspirer d'anciens textes dans les premiers
+passages : c'est un rattrapage, ignoré par la veille (seuls les textes
+plus récents que le dernier vu sont signalés).
+
+## Limite qui reste
+
+Chaque convention n'est relue qu'environ toutes les 5 semaines ; l'arrêté
+d'extension au JO arrive souvent avant, d'où l'alerte JORF « concerne une
+convention de l'appli ».

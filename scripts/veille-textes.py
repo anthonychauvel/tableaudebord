@@ -352,7 +352,32 @@ def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_
 
 
 # ── ACCO ───────────────────────────────────────────────────────────────────
-def veille_acco(fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui):
+def infos_accord(meta, idcc_appli):
+    """« 12/09/2026 · ACME (SIRET 123…) · IDCC 1516 — convention de l'appli »,
+    à partir des métadonnées gardées par l'aspirateur depuis le 30/09/2026
+    (les accords plus anciens n'en ont pas : chaîne vide)."""
+    if not meta:
+        return ""
+    brut = json.dumps(meta, ensure_ascii=False)
+    morceaux = []
+    for k, v in meta.items():
+        if "date" in k.lower() and isinstance(v, (int, str)):
+            d = date_ms(v) if isinstance(v, int) else str(v)[:10]
+            if d:
+                morceaux.append(d)
+                break
+    for k in ("raisonSociale", "raison_sociale", "entreprise", "denomination"):
+        if meta.get(k):
+            morceaux.append(str(meta[k])[:60])
+            break
+    idcc = sorted({m for m in re.findall(r'"(?:idcc|codeIdcc|IDCC|num)":\s*"?(\d{1,4})\b', brut)}, key=int)
+    if idcc:
+        dans = [i for i in idcc if i in idcc_appli]
+        morceaux.append("IDCC " + ", ".join(idcc[:3]) + (" — convention de l'appli" if dans else ""))
+    return " · ".join(morceaux)
+
+
+def veille_acco(fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, idcc_appli=frozenset()):
     dossier = os.path.join(fonds, "output", "acco")
     if not os.path.isdir(dossier):
         return
@@ -383,11 +408,15 @@ def veille_acco(fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui):
         if exclu(titre, exclusions):
             continue
         trouves = themes_trouves(titre + " " + texte_de(d.get("text") or {}), themes, largeur=110)
+        info = infos_accord(d.get("meta") or {}, idcc_appli)
         for nom_t, emo, expr, extrait in trouves:
-            par_theme.setdefault((nom_t, emo), []).append((nom[:-5], titre, expr, extrait))
+            par_theme.setdefault((nom_t, emo), []).append((nom[:-5], titre, expr, extrait, info))
     for (nom_t, emo), liste in sorted(par_theme.items(), key=lambda kv: -len(kv[1])):
-        lignes = [f"• {court(t, 110)}\n  « {expr} » : {court(ex, 240)}\n  {lien_legifrance(i)}"
-                  for i, t, expr, ex in liste[:12]]
+        # Les accords d'une convention de l'appli d'abord.
+        liste.sort(key=lambda x: 0 if "convention de l'appli" in x[4] else 1)
+        lignes = [f"• {court(t, 110)}" + (f"\n  {info}" if info else "")
+                  + f"\n  « {expr} » : {court(ex, 240)}\n  {lien_legifrance(i)}"
+                  for i, t, expr, ex, info in liste[:12]]
         if len(liste) > 12:
             lignes.append(f"… et {len(liste) - 12} autre(s).")
         alertes_acco.append({
@@ -463,7 +492,7 @@ def main():
     print(f"Code : {sum(len(v) for v in suivis.values())} article(s) dans les sections suivies.")
     veille_jorf(args.fonds, memoire, alertes, themes, exclusions, suivis, idcc_appli, aujourd_hui)
     veille_ccn(args.fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui)
-    veille_acco(args.fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui)
+    veille_acco(args.fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, idcc_appli)
 
     toutes = fusionner_retention(memoire, alertes + alertes_acco, aujourd_hui)
     memoire["dernier_passage"] = aujourd_hui

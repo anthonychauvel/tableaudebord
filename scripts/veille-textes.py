@@ -58,7 +58,7 @@ from veille_commun import (charger_mots_cles, exclu, themes_trouves, texte_de,  
 
 RETENTION_JOURS = 45
 # Au-delà, c'est un rattrapage de l'aspirateur, pas l'actualité d'un passage.
-SEUIL_RATTRAPAGE = {"jorf": 300, "acco": 500, "ccn": 40, "code": 60}
+SEUIL_RATTRAPAGE = {"jorf": 300, "acco": 500, "ccn": 40, "code": 60, "juris": 400}
 MAX_DETECTES = 400
 
 CODES = {"CT": "code-travail", "CSS": "code-secu"}
@@ -360,8 +360,13 @@ def infos_accord(meta, idcc_appli):
         return ""
     brut = json.dumps(meta, ensure_ascii=False)
     morceaux = []
-    for k, v in meta.items():
-        if "date" in k.lower() and isinstance(v, (int, str)):
+    # Date de signature d'abord (dateTexte), puis de dépôt : « dateMaj » n'est
+    # que la dernière mise à jour de la fiche Légifrance.
+    cles_date = [k for k in ("dateTexte", "dateDepot", "dateDiffusion", "dateEffet") if k in meta]
+    cles_date += [k for k in meta if "date" in k.lower() and k not in cles_date and k != "dateFin"]
+    for k in cles_date:
+        v = meta[k]
+        if isinstance(v, (int, str)):
             d = date_ms(v) if isinstance(v, int) else str(v)[:10]
             if d:
                 morceaux.append(d)
@@ -435,6 +440,125 @@ def veille_acco(fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, i
         })
 
 
+# ── JURISPRUDENCE (30/09/2026) ─────────────────────────────────────────────
+# Le fonds récupère les arrêts de la Cour de cassation (chambre sociale) et des
+# cours d'appel, mais rien ne les regardait : un arrêt qui tranche une question
+# d'heures sup passait inaperçu. Pas d'identifiant croissant ici (noms de
+# fichier = numéros de pourvoi) : on garde la liste des décisions déjà vues, et
+# on ignore celles de plus d'un an (rattrapage de décisions anciennes).
+AGE_MAX_JURIS = 365
+
+
+def veille_jurisprudence(fonds, memoire, alertes, themes, cites, aujourd_hui):
+    dossier = os.path.join(fonds, "output", "jurisprudence")
+    if not os.path.isdir(dossier):
+        return
+    noms = sorted(n for n in os.listdir(dossier) if n.endswith(".json") and not n.startswith("_"))
+    avant = memoire.get("juris_vus")
+    memoire["juris_vus"] = noms
+    if avant is None:
+        print(f"Jurisprudence : état de départ enregistré ({len(noms)} décisions), pas d'alerte.")
+        return
+    deja = set(avant)
+    nouveaux = [n for n in noms if n not in deja]
+    print(f"Jurisprudence : {len(nouveaux)} décision(s) nouvelle(s).")
+    if len(nouveaux) > SEUIL_RATTRAPAGE["juris"]:
+        alertes.append(_rattrapage("juris", "Jurisprudence", len(nouveaux), aujourd_hui))
+        return
+    limite = (datetime.strptime(aujourd_hui, "%Y-%m-%d") - timedelta(days=AGE_MAX_JURIS)).strftime("%Y-%m-%d")
+    tous_cites = {n for v in cites.values() for n in v}
+    for nom in nouveaux:
+        try:
+            d = json.load(open(os.path.join(dossier, nom), encoding="utf-8"))
+        except Exception:
+            continue
+        t = d.get("text") if isinstance(d.get("text"), dict) else {}
+        date = str(t.get("date") or "")[:10] or date_ms(t.get("dateTexte")) or ""
+        if date and date < limite:
+            continue                       # décision ancienne récupérée tardivement
+        titre = t.get("titre") or t.get("titreLong") or nom[:-5]
+        texte = " ".join(str(t.get(k) or "") for k in ("texte", "sommaire", "solution"))
+        if not texte.strip():
+            texte = texte_de(t)
+        trouves = themes_trouves(titre + " " + texte, themes)
+        refs = sorted(refs_articles(texte) & tous_cites)
+        if refs:
+            gravite, pourquoi = "haute", f"applique des articles que tu cites : {', '.join(refs[:10])}"
+        elif trouves:
+            gravite, pourquoi = "moyenne", "parle de : " + ", ".join(x[0] for x in trouves)
+        else:
+            continue
+        # Judilibre code la publication (« b » = Bulletin) ; Légifrance l'écrit
+        # dans le titre (« Publié au bulletin »).
+        pub = t.get("publication") or []
+        pub = pub if isinstance(pub, list) else [pub]
+        publie = ("b" in [str(x).lower() for x in pub]
+                  or "bulletin" in normaliser(" ".join(map(str, pub)) + " " + titre))
+        ident = t.get("id") or ""
+        lien = (lien_legifrance(ident) if str(ident).startswith("JURI") else
+                f"https://www.courdecassation.fr/decision/{ident}" if ident else "")
+        detail = (f"Décision du {date or '?'} — {t.get('juridiction') or ''} "
+                  f"{t.get('chambre') or t.get('formation') or ''}".strip()
+                  + (f" · solution : {t.get('solution')}" if t.get("solution") else "")
+                  + (" · publiée au Bulletin (fait jurisprudence)" if publie else "")
+                  + f"\n\n{court(titre, 300)}\n\nElle {pourquoi}.")
+        if trouves:
+            detail += "\n\n" + lignes_themes(trouves)
+        alertes.append({
+            "categorie": "nouvelle-jurisprudence",
+            "gravite": gravite,
+            "titre": f"{court(titre, 130)} : {pourquoi}",
+            "detail": detail,
+            "lien": lien,
+            "fonds": "Juris",
+            "theme": trouves[0][0] if trouves else "Article cité",
+            "date_texte": date or aujourd_hui,
+            **({"etiquettes": ["Publiée au Bulletin"]} if publie else {}),
+            "_id": f"juris:{nom}",
+        })
+
+
+# ── Santé des fonds (30/09/2026) ───────────────────────────────────────────
+# Le 30/09, l'étape JORF de l'aspirateur a échoué sans que rien ne le signale.
+# Filet de sécurité indépendant de la cause : un fonds qui n'a rien reçu de
+# nouveau depuis trop longtemps (le JO publie tous les jours, les conventions
+# tous les mois…) est suspect.
+LIMITE_FIGE = {"jorf": ("Journal officiel", 10), "acco": ("Accords d'entreprise", 30),
+               "ccn": ("Conventions collectives", 45), "juris": ("Jurisprudence", 30)}
+
+
+def sante_fonds(memoire, avant, apres, aujourd_hui):
+    """avant/après : {fonds: indicateur} ; un indicateur qui a augmenté = le
+    fonds a reçu du nouveau. Renvoie les alertes « fonds figé »."""
+    crois = memoire.setdefault("croissance", {})
+    alertes = []
+    for f, (nom, jours) in LIMITE_FIGE.items():
+        if apres.get(f) is None:
+            continue
+        if f not in crois or (avant.get(f) is not None and apres[f] > avant[f]):
+            crois[f] = aujourd_hui
+        age = (datetime.strptime(aujourd_hui, "%Y-%m-%d") - datetime.strptime(crois[f], "%Y-%m-%d")).days
+        if age > jours:
+            alertes.append({
+                "categorie": "fonds-fige",
+                "gravite": "moyenne",
+                "titre": f"{nom} : rien de nouveau depuis {age} jours",
+                "detail": (f"Le fonds « {nom} » n'a reçu aucun texte nouveau depuis le {crois[f]} "
+                           f"({age} jours ; d'habitude, il en arrive en moins de {jours} jours). "
+                           f"L'étape correspondante de l'aspirateur échoue peut-être sans le dire : "
+                           f"ouvre le dernier run de l'aspirateur sur GitHub et cherche « a échoué »."),
+                "date_texte": crois[f],
+            })
+    return alertes
+
+
+def indicateurs(memoire):
+    ccn = memoire.get("ccn_max") or {}
+    return {"jorf": memoire.get("jorf_max"), "acco": memoire.get("acco_max"),
+            "ccn": sum(ccn.values()) if ccn else None,
+            "juris": len(memoire["juris_vus"]) if memoire.get("juris_vus") is not None else None}
+
+
 def _rattrapage(fonds, quoi, n, aujourd_hui):
     return {
         "categorie": "rattrapage-fonds",
@@ -488,11 +612,14 @@ def main():
     cites = articles_cites(args.empreintes_articles)
     alertes, alertes_acco = [], []
 
+    avant = indicateurs(memoire)         # pour repérer un fonds qui ne grossit plus
     suivis = veille_sections(args.fonds, cites, memoire, alertes, themes, aujourd_hui)
     print(f"Code : {sum(len(v) for v in suivis.values())} article(s) dans les sections suivies.")
     veille_jorf(args.fonds, memoire, alertes, themes, exclusions, suivis, idcc_appli, aujourd_hui)
     veille_ccn(args.fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui)
     veille_acco(args.fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, idcc_appli)
+    veille_jurisprudence(args.fonds, memoire, alertes, themes, cites, aujourd_hui)
+    alertes_sante = sante_fonds(memoire, avant, indicateurs(memoire), aujourd_hui)
 
     toutes = fusionner_retention(memoire, alertes + alertes_acco, aujourd_hui)
     memoire["dernier_passage"] = aujourd_hui
@@ -505,6 +632,7 @@ def main():
         "module": "veille-textes",
         "alertes": [propre(a) for a in toutes if a.get("categorie") != "accords-entreprise"
                     and a.get("fonds") != "ACCO"],
+        "alertes_sante": alertes_sante,
         "alertes_accords": [propre(a) for a in toutes if a.get("categorie") == "accords-entreprise"
                             or a.get("fonds") == "ACCO"],
     }

@@ -189,7 +189,7 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 .puce.on{background:#fff;color:#111;border-color:#fff;}
 .puce b{font-weight:800;margin-left:3px;opacity:.75;}
 /* ── Résumé « nouveaux textes » sur l'accueil ── */
-.resume-textes{margin:0 14px 12px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.resume-textes{margin:0 14px 12px;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
 .rt{background:var(--ink3);border:1px solid var(--edge);border-radius:14px;padding:10px 6px;text-align:center;cursor:pointer;color:var(--txt);}
 .rt .n{font-size:20px;font-weight:800;}
 .rt .l{font-size:10.5px;color:var(--txt2);margin-top:2px;}
@@ -259,7 +259,7 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 
 <!-- NOUVEAUX TEXTES -->
 <section class="vue" id="v-textes">
-  <div class="bloc-t">📰 Nouveaux textes <small>Code, conventions, Journal officiel, accords</small></div>
+  <div class="bloc-t">📰 Nouveaux textes <small>Code, conventions, JO, jurisprudence, accords</small></div>
   <div style="margin:-4px 18px 10px;font-size:12px;color:var(--txt2);line-height:1.45">Tout texte nouveau qui touche tes sujets (mots-cles.json), gardé 45 jours. Touche une carte pour l'ouvrir.</div>
   <div class="puces" id="pucesTextes"></div>
   <div id="listeTextes"></div>
@@ -327,7 +327,7 @@ const THEMES = {
   croisement:{e:'🔔', n:'Nouveaux textes pour une convention en attente', x:"Un texte vient de paraître pour une convention dont la grille attend une mise à jour."},
   grilles:{e:'💶', n:'Grilles de salaires', x:"Les salaires minimum de chaque convention affichés dans GrillePaye."},
   smic:{e:'📈', n:'SMIC', x:"La valeur du SMIC utilisée par l'appli."},
-  droit:{e:'⚖️', n:'MonLegiTexte', x:"Seuls les changements qui touchent tes sujets sont signalés : le reste se met à jour tout seul pour les utilisateurs."},
+  droit:{e:'🩺', n:'Fonds & aspirateur', x:"Santé de l'aspirateur (étapes en échec, fonds qui ne reçoit plus rien) et changements de MonLegiTexte qui touchent tes sujets."},
   modules:{e:'🧩', n:'Les 8 modules', x:"Les grands écrans de l'appli (compteur annuel, paye, Mizuki, Zenji…)."},
   outils:{e:'🧰', n:'Les 105 outils', x:"Les petits calculateurs de la rubrique Outils."},
   guide:{e:'📖', n:'Le guide (site)', x:"Les pages du site simulateurheuressupfrance.fr."},
@@ -422,6 +422,18 @@ const GUIDE = {
   'accords-entreprise':{e:'🏢', quoi:"{cle}",
     pourquoi:"Des entreprises ont signé des accords sur ce sujet. Rien d'obligatoire pour l'appli : c'est une source d'idées et de pratiques.",
     etapes:["Parcours la liste dans le détail si le sujet t'intéresse.","Sinon, rien à faire."]},
+  'nouvelle-jurisprudence':{e:'⚖️', quoi:"Nouvelle décision de justice sur tes sujets",
+    pourquoi:"Un arrêt récent (Cour de cassation ou cour d'appel) applique un article que tu cites ou parle d'un de tes sujets. S'il est « publié au Bulletin », il fait jurisprudence : les explications de l'appli devront peut-être suivre.",
+    etapes:["Lis la solution et l'extrait dans le détail.","Ouvre la décision (bouton « Voir le texte »).","Si elle change l'interprétation d'une règle de l'appli (calcul, explication, guide) : note ce qu'il faut adapter. Sinon : c'est fait."]},
+  'etape-aspirateur-en-echec':{e:'🧯', quoi:"{cle}",
+    pourquoi:"Une étape de l'aspirateur a échoué : les textes de ce fonds n'ont pas été récupérés ce jour-là, même si le run GitHub est resté vert.",
+    etapes:["Relance l'aspirateur (🔄 Relancer, ou GitHub → Actions → aspirateur).","Si l'alerte revient au passage suivant, ouvre le journal du run et cherche « a échoué », puis envoie-le moi."]},
+  'run-aspirateur-en-echec':{e:'🧯', quoi:"Le dernier passage de l'aspirateur a échoué",
+    pourquoi:"Une partie des textes n'a pas été récupérée : la veille travaille sur des données incomplètes.",
+    etapes:["Ouvre le run (bouton ci-dessous) et regarde l'étape en rouge.","Relance l'aspirateur. Si ça recommence, envoie-moi le message d'erreur."]},
+  'fonds-fige':{e:'🧊', quoi:"{cle}",
+    pourquoi:"Ce fonds ne reçoit plus rien depuis anormalement longtemps : l'étape de l'aspirateur qui le remplit échoue peut-être sans le dire.",
+    etapes:["Regarde s'il y a aussi une alerte « étape en échec ».","Ouvre le dernier run de l'aspirateur et cherche « a échoué ».","Relance l'aspirateur."]},
   'rattrapage-fonds':{e:'📦', quoi:"{cle}",
     pourquoi:"L'aspirateur a récupéré beaucoup de textes anciens d'un coup. Ils sont mémorisés sans alerte pour ne pas te noyer.",
     etapes:["Rien à faire."]},
@@ -490,7 +502,7 @@ let FAIT = lireFait();
 function toast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('on');clearTimeout(toast._t);toast._t=setTimeout(function(){el.classList.remove('on');},2200);}
 
 // --- Rendu d'une alerte en carte guidée ------------------------------------
-const FONDS_E={JORF:'📰 JO',CCN:'📑 CCN',Code:'📘 Code',ACCO:'🏢 Accord'};
+const FONDS_E={JORF:'📰 JO',CCN:'📑 CCN',Code:'📘 Code',ACCO:'🏢 Accord',Juris:'⚖️ Juris'};
 function carte(a, ouverte){
   var g=GUIDE[a.categorie], k=cleAlerte(a), id=ident(a), fait=!!FAIT[k];
   var quoi = g ? g.quoi.replace('{cle}', id) : (a.titre||'');
@@ -555,7 +567,8 @@ const FILTRES = [
   {k:'tout', l:'Tout', f:function(a){return true;}},
   {k:'vite', l:'🔴 Vite', f:function(a){return a.gravite==='haute';}},
   {k:'nouveau', l:'🆕 Nouveau', f:function(a){return !!a.nouveau;}},
-  {k:'textes', l:'📰 Textes', f:function(a){return a._theme==='nouveaux'||a._theme==='croisement'||a._theme==='droit';}},
+  {k:'textes', l:'📰 Textes', f:function(a){return a._theme==='nouveaux'||a._theme==='croisement';}},
+  {k:'robot', l:'🩺 Aspirateur', f:function(a){return a._theme==='droit';}},
   {k:'articles', l:'⚖️ Articles', f:function(a){return a._theme==='contenu'||a._theme==='citations'||a._theme==='outils';}},
   {k:'grilles', l:'💶 Grilles', f:function(a){return a._theme==='grilles'||a._theme==='smic'||a._theme==='age';}},
   {k:'appli', l:'📱 Appli', f:function(a){return ['modules','pages','syntaxe','structure','guide','noindex'].indexOf(a._theme)>=0;}},
@@ -586,13 +599,13 @@ function rendreAccueil(){
   document.getElementById('progression').innerHTML=aFaire.length?'<div class="prog"><div class="l"><span>Ta progression</span><span><b>'+faits+'</b> / '+aFaire.length+' traitée'+(faits>1?'s':'')+'</span></div><div class="barre"><i style="width:'+pc+'%"></i></div></div>':'';
 
   // Résumé des nouveaux textes, par fonds.
-  var tx=textesAlertes(), parF={JORF:[],CCN:[],Code:[],ACCO:[]};
+  var tx=textesAlertes(), parF={JORF:[],CCN:[],Code:[],Juris:[],ACCO:[]};
   tx.forEach(function(a){if(parF[a.fonds])parF[a.fonds].push(a);});
   var tuileF=function(f,l){var arr=parF[f],n=arr.filter(function(a){return !FAIT[cleAlerte(a)];}).length,
       chaud=arr.some(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];});
     return '<button class="rt'+(chaud?' chaud':'')+'" onclick="ouvrirTextes(\''+f+'\')"><div class="n">'+n+'</div><div class="l">'+l+'</div></button>';};
   document.getElementById('blocTextes').innerHTML='<div class="bloc-t">📰 Nouveaux textes <small>45 derniers jours</small></div>'
-    +'<div class="resume-textes">'+tuileF('JORF','Journal off.')+tuileF('CCN','Conventions')+tuileF('Code','Code')+tuileF('ACCO','Accords')+'</div>';
+    +'<div class="resume-textes">'+tuileF('JORF','Journal off.')+tuileF('CCN','Conventions')+tuileF('Code','Code')+tuileF('Juris','Juris-prudence')+tuileF('ACCO','Accords')+'</div>';
 
   document.getElementById('puces').innerHTML=FILTRES.map(function(x){
     var n=restantes.filter(x.f).length;
@@ -622,7 +635,7 @@ function ouvrirTextes(f){FILTRE_TEXTES=f||'tout';allerA('textes');}
 function choisirFiltreTextes(f){FILTRE_TEXTES=f;rendreTextes();}
 function rendreTextes(){
   var tx=textesAlertes();
-  var cles=[['tout','Tout'],['JORF','📰 Journal officiel'],['CCN','📑 Conventions'],['Code','📘 Code'],['ACCO','🏢 Accords']];
+  var cles=[['tout','Tout'],['JORF','📰 Journal officiel'],['CCN','📑 Conventions'],['Code','📘 Code'],['Juris','⚖️ Jurisprudence'],['ACCO','🏢 Accords']];
   var themes={};tx.forEach(function(a){if(a.theme)themes[a.theme]=1;});
   Object.keys(themes).sort().forEach(function(t){cles.push(['t:'+t,t]);});
   document.getElementById('pucesTextes').innerHTML=cles.map(function(c){

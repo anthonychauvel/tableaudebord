@@ -131,6 +131,8 @@ def lien_legifrance(identifiant):
         return f"https://www.legifrance.gouv.fr/conv_coll/id/{i}"
     if i.startswith("ACCOTEXT"):
         return f"https://www.legifrance.gouv.fr/acco/id/{i}"
+    if i.startswith("JURITEXT"):
+        return f"https://www.legifrance.gouv.fr/juri/id/{i}"
     if i.startswith("LEGIARTI"):
         return f"https://www.legifrance.gouv.fr/codes/article_lc/{i}"
     return ""

@@ -34,7 +34,26 @@ expressions est ignoré.
 | JORF | contient un mot-clé | 🟠 |
 | CCN | nouveau texte d'une convention de l'appli (340 IDCC) | 🔴 |
 | CCN | nouveau texte d'une autre convention avec mot-clé | 🟠 |
+| Jurisprudence (cassation, appel) | applique un article que tu cites | 🔴 |
+| Jurisprudence | mot-clé (décisions de moins d'un an) | 🟠 |
 | Accords d'entreprise | mot-clé | ⚪ regroupés par thème |
+
+## Articles clés hors Code du travail
+
+Une vingtaine d'articles, listés dans `articles_cles_autres_codes.txt` (dépôt
+`droit`) : CGI art. 81 quater (exonération d'impôt des heures sup), Code des
+transports L1321-1 à 10, Code rural L713-1 à 6 et L713-13. Suivis comme les
+articles cités : texte modifié 🟠 (🔴 si changement de sujet), disparu 🔴.
+Un numéro inexistant est simplement ignoré ; la liste se corrige sur GitHub.
+
+## Santé de l'aspirateur (🩺 dans Thèmes)
+
+- **Étape en échec** 🔴 : l'aspirateur note chaque étape ratée dans
+  `audits/etapes-en-echec.log` (dépôt `droit`) ; le tableau de bord
+  l'affiche pendant 7 jours. Avant, un échec (JO du 30/09) passait inaperçu.
+- **Dernier passage en échec** 🔴 : état du dernier run lu sur GitHub.
+- **Fonds figé** 🟠 : un fonds qui ne reçoit plus rien (JO 10 jours,
+  jurisprudence et accords 30 jours, conventions 45 jours).
 
 ## Premier passage
 

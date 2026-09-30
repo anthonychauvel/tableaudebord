@@ -561,6 +561,11 @@ def main():
                      **({"erreur": veille["erreur"]} if veille.get("erreur") else {})})
     sections.append({"id": "accords", "titre": "🏢 Accords d'entreprise à regarder",
                      "alertes": veille.get("alertes_accords", [])})
+    # « Fonds figé » (un fonds qui ne reçoit plus rien) : rangé avec les autres
+    # signaux de santé de l'aspirateur, dans la section MonLegiTexte / fonds.
+    for s_ in sections:
+        if s_["id"] == "droit":
+            s_.setdefault("alertes", []).extend(veille.get("alertes_sante", []))
 
     # Changements de fichiers : constat neutre, pas un jugement -- signale
     # tout ce qui a changé depuis le dernier run, app + guide + MonLegiTexte

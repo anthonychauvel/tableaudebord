@@ -148,8 +148,19 @@ def citations_ecosysteme(racine_hs, racine_guide=None, inclure_fox=None):
 # le fonds ne descend pas : il n'aspire que le travail et la sécu. Ce n'est pas
 # une anomalie à signaler, c'est un périmètre. Les lire depuis le champ `code`
 # évite d'avoir à tenir une exception à la main pour chacun.
+# Pour sortir un article de la veille : dans outils/articles-loi.js, donner à
+# sa fiche l'un de ces codes (ex. code:'CSP' ou code:'lux').
 CODES_HORS_PERIMETRE = {"transports": "code des transports",
-                        "com.": "code de commerce"}
+                        "com.": "code de commerce",
+                        "CSP": "code de la santé publique",
+                        "lux": "Code du travail luxembourgeois",
+                        "CGI": "code général des impôts",
+                        "civ.": "code civil",
+                        "pén.": "code pénal",
+                        "rural": "code rural",
+                        "CGCT": "code général des collectivités territoriales",
+                        "CPI": "code de la propriété intellectuelle",
+                        "autre": "texte hors code du travail et de la sécu"}
 
 
 def codes_declares(racine_hs):

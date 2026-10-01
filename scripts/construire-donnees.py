@@ -376,7 +376,7 @@ def verifier_smic(dossier_hs, dossier_jorf):
                 "titre": "SMIC : texte de revalorisation plus récent que l'appli",
                 "detail": (f"« {titre} ». L'appli affiche encore {smic} € (au {smic_date}). "
                            "À faire : SMIC_DEF, SDATE_DEF et SSRC_DEF dans GrillePaye/index.html, "
-                           "_smic et _smic_date dans ccn-data.json (puis _B64), CACHE_NAME dans sw.js "
+                           "_smic et _smic_date dans ccn-data.json, CACHE_NAME dans sw.js "
                            "— voir RUNBOOK.md de hs. Aucune ligne de grille à reprendre."),
                 "date_texte": d,
             })

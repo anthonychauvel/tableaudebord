@@ -86,10 +86,32 @@ MOIS = {"janvier": 1, "fevrier": 2, "mars": 3, "avril": 4, "mai": 5, "juin": 6, 
         "aout": 8, "septembre": 9, "octobre": 10, "novembre": 11, "decembre": 12}
 
 
-def ouvrir(url, delai=40):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9"})
+# Relais facultatif (secret/variable VEILLE_RELAIS, ex. un Worker Cloudflare
+# « https://…/?url= ») : le test du 02/10/2026 montre que boss.gouv.fr ne répond
+# pas aux machines de GitHub (délai dépassé). Sans relais, l'alerte 📡 le dit.
+RELAIS = os.environ.get("VEILLE_RELAIS", "").strip()
+ENTETES = {"User-Agent": UA, "Accept-Language": "fr-FR,fr;q=0.9",
+           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
+
+
+def ouvrir_octets(url, delai=40, relais=False):
+    if relais and RELAIS:
+        url = RELAIS + urllib.parse.quote(url, safe="")
+    req = urllib.request.Request(url, headers=ENTETES)
     with urllib.request.urlopen(req, timeout=delai) as r:
-        return r.read().decode(r.headers.get_content_charset() or "utf-8", "replace")
+        return r.read(), r.headers.get_content_charset()
+
+
+def ouvrir(url, delai=40, relais=False):
+    octets, cs = ouvrir_octets(url, delai, relais)
+    if not cs:
+        m = re.search(rb'charset=["\']?([A-Za-z0-9_-]+)', octets[:2000]) or \
+            re.search(rb'encoding=["\']([A-Za-z0-9_-]+)', octets[:200])
+        cs = m.group(1).decode() if m else "utf-8"
+    try:
+        return octets.decode(cs, "replace")
+    except LookupError:
+        return octets.decode("utf-8", "replace")
 
 
 def court(t, n=300):
@@ -154,7 +176,7 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
     accueil, base = None, None
     for u in BOSS_DEPART:
         try:
-            accueil, base = ouvrir(u), u
+            accueil, base = ouvrir(u, delai=90, relais=True), u
             break
         except Exception as e:                       # noqa: BLE001
             if diag:
@@ -178,7 +200,7 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
     n_modif = 0
     for u in cibles:
         try:
-            page = ouvrir(u)
+            page = ouvrir(u, delai=90, relais=True)
         except Exception as e:                       # noqa: BLE001
             if diag:
                 print(f"  {u} : {e}")
@@ -222,11 +244,15 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
 
 
 # ── PARLEMENT ─────────────────────────────────────────────────────────────
-def items_flux(xml_txt):
+def items_flux(octets):
+    """octets bruts du flux : l'analyseur XML lit lui-même l'encodage déclaré
+    (le Sénat publie en ISO-8859-1 : décodé en UTF-8, les accents étaient
+    détruits et les mots-clés ne trouvaient plus « salariés »)."""
+    xml_txt = None
     """RSS 2.0 ou Atom -> [(titre, lien, date, description)]."""
     out = []
     try:
-        racine = ET.fromstring(xml_txt.encode("utf-8"))
+        racine = ET.fromstring(octets)
     except ET.ParseError:
         racine = None
     if racine is not None:
@@ -245,6 +271,11 @@ def items_flux(xml_txt):
                         d.get("pubdate") or d.get("updated") or d.get("date") or d.get("published") or "",
                         html.unescape(re.sub(r"<[^>]+>", " ", d.get("description") or d.get("summary") or ""))))
         return out
+    m = re.search(rb'encoding=["\']([A-Za-z0-9_-]+)', octets[:200])
+    try:
+        xml_txt = octets.decode(m.group(1).decode() if m else "utf-8", "replace")
+    except LookupError:
+        xml_txt = octets.decode("utf-8", "replace")
     for bloc in re.findall(r"<(?:item|entry)\b.*?</(?:item|entry)>", xml_txt, re.S | re.I):
         def champ(n):
             m = re.search(rf"<{n}\b[^>]*>(.*?)</{n}>", bloc, re.S | re.I)
@@ -261,7 +292,7 @@ def veille_parlement(memoire, alertes, sante, themes, aujourd_hui, diag):
     for nom, url in FLUX:
         etat = mem.setdefault("flux", {}).setdefault(url, {})
         try:
-            items = items_flux(ouvrir(url))
+            items = items_flux(ouvrir_octets(url)[0])
         except Exception as e:                       # noqa: BLE001
             if diag:
                 print(f"  {nom} : {e}")
@@ -345,6 +376,29 @@ def veille_dares(droit, alertes, aujourd_hui):
         return
     age = (datetime.strptime(aujourd_hui, "%Y-%m-%d") - datetime.strptime(d, "%Y-%m-%d")).days
     print(f"DARES : {nom} ({d}, {age} jours).")
+    # maj_dares.py (lundi, dépôt droit) note ce que la page officielle propose.
+    try:
+        src = json.load(open(os.path.join(droit, "ccn", "dares-source.json"), encoding="utf-8"))
+    except Exception:
+        src = {}
+    nv = src.get("nouvelle_version")
+    if nv:
+        alertes.append({
+            "categorie": "dares-perime",
+            "gravite": "moyenne",
+            "titre": f"Nouvelle liste DARES des conventions : {nv.get('fichier')}",
+            "detail": (f"La DARES a publié {nv.get('fichier')} (vu le {nv.get('vue_le')}), mais le site bloque le "
+                       f"téléchargement automatique. Le dépôt utilise encore {nom}.\n\nTélécharge-le avec le "
+                       f"bouton ci-dessous et pose-le dans droit/ccn/ sous le nom Dares_Suivi_DERNIER.xlsx."),
+            "lien": nv.get("url") or "",
+            "date_texte": nv.get("vue_le") or aujourd_hui,
+        })
+        return
+    verifie = src.get("verifie_le") or ""
+    if src.get("a_jour") and verifie and \
+            (datetime.strptime(aujourd_hui, "%Y-%m-%d") - datetime.strptime(verifie[:10], "%Y-%m-%d")).days <= 21:
+        print(f"DARES : vérifié le {verifie} — c'est la dernière version publiée.")
+        return
     if age <= DARES_MAX_JOURS:
         return
     alertes.append({

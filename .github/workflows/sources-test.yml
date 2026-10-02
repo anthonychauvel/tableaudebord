@@ -1,0 +1,50 @@
+name: TEST sources officielles (sans commit)
+
+# Lancement manuel. Lit le BOSS, les flux du Parlement et cherche le fichier
+# DARES, en affichant tout ce qui est trouvé. Ne committe rien.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Récupérer le fonds (droit) — juste ccn/ et scripts/
+        uses: actions/checkout@v4
+        with:
+          repository: anthonychauvel/droit
+          path: _droit
+          sparse-checkout: |
+            ccn
+            scripts
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 1. BOSS, Parlement, DARES (diagnostic, mémoire temporaire)
+        run: |
+          cd scripts
+          python3 veille-sources-officielles.py --droit ../_droit \
+            --mots-cles ../mots-cles.json --memoire /tmp/memoire.json \
+            --json /tmp/r.json --diagnostic
+
+      - name: 2. Alertes produites
+        run: |
+          python3 -c "
+          import json; r=json.load(open('/tmp/r.json'))
+          for a in r['alertes']: print(a['gravite'], '|', a['titre'])
+          print(len(r['alertes']), 'alerte(s)')"
+
+      - name: 3. Recherche du fichier DARES le plus récent
+        run: |
+          pip install --quiet openpyxl
+          mkdir -p /tmp/ccn && cp _droit/ccn/*.xlsx /tmp/ccn/ 2>/dev/null || true
+          python3 _droit/scripts/maj_dares.py --ccn /tmp/ccn
+          ls -la /tmp/ccn

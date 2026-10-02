@@ -12,6 +12,9 @@ inaperçus. Ce script regarde les quatre fonds :
 
   CODE  (d) les SECTIONS du Code qui contiennent nos articles cités : un
         numéro qui y apparaît = « Nouvel article sur un sujet suivi ».
+  BOCC  un texte du Bulletin officiel des conventions collectives (PDF aspiré
+        par bocc.yml) : haute si c'est une grille de salaires d'une convention
+        de l'appli, avec les montants lus et la comparaison au SMIC.
   CCN   un texte (avenant, accord) nouveau dans une convention : haute si la
         convention est dans l'appli (GrillePaye), sinon seulement s'il parle
         d'un de nos sujets (mots-clés).
@@ -58,7 +61,7 @@ from veille_commun import (charger_mots_cles, exclu, themes_trouves, texte_de,  
 
 RETENTION_JOURS = 45
 # Au-delà, c'est un rattrapage de l'aspirateur, pas l'actualité d'un passage.
-SEUIL_RATTRAPAGE = {"jorf": 300, "acco": 500, "ccn": 40, "code": 60, "juris": 400}
+SEUIL_RATTRAPAGE = {"jorf": 300, "acco": 500, "ccn": 40, "code": 60, "juris": 400, "bocc": 12}
 MAX_DETECTES = 400
 
 CODES = {"CT": "code-travail", "CSS": "code-secu"}
@@ -351,6 +354,109 @@ def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_
     print(f"CCN : {total} texte(s) nouveau(x) retenu(s).")
 
 
+# ── BOCC (02/10/2026) ──────────────────────────────────────────────────────
+# Les bulletins officiels des conventions collectives, aspirés par bocc.yml
+# (dépôt droit) dans output/bocc/<année>/*.json : un fichier par bulletin,
+# découpé en textes (IDCC, titre, salaires, montants). Beaucoup d'avenants
+# « salaires » n'ont dans KALI que leur titre : la grille est dans le PDF du
+# BOCC. Mémoire : la liste des fichiers déjà lus (bocc_vus).
+def _grilles_appli(racine_hs):
+    try:
+        d = json.load(open(os.path.join(racine_hs, "GrillePaye", "ccn-data.json"), encoding="utf-8"))
+        return d.get("grilles") or {}, float(d.get("_smic") or 0)
+    except Exception:
+        return {}, 0.0
+
+
+def _euros(v):
+    return f"{v:,.2f}".replace(",", " ").replace(".", ",") + " €"
+
+
+def veille_bocc(fonds, racine_hs, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui):
+    dossier = os.path.join(fonds, "output", "bocc")
+    if not os.path.isdir(dossier):
+        return
+    fichiers = []
+    for rac, _, noms in os.walk(dossier):
+        for n in noms:
+            if n.endswith(".json") and not n.startswith("_"):
+                fichiers.append(os.path.relpath(os.path.join(rac, n), dossier))
+    premier = "bocc_vus" not in memoire
+    vus = set(memoire.get("bocc_vus") or [])
+    nouveaux = sorted(f for f in fichiers if f not in vus)
+    memoire["bocc_vus"] = sorted(vus | set(fichiers))
+    if premier or not nouveaux:
+        print(f"BOCC : {len(fichiers)} bulletin(s) au fonds, "
+              + ("état de départ enregistré sans alerte." if premier else "rien de nouveau."))
+        return
+    if len(nouveaux) > SEUIL_RATTRAPAGE["bocc"]:
+        alertes.append(_rattrapage("bocc", "BOCC", len(nouveaux), aujourd_hui))
+        return
+    grilles, smic = _grilles_appli(racine_hs)
+    total = 0
+    for rel in nouveaux:
+        try:
+            b = json.load(open(os.path.join(dossier, rel), encoding="utf-8"))
+        except Exception:
+            continue
+        nom_b = b.get("fichier") or rel
+        for doc in b.get("documents") or []:
+            if doc.get("scanne") and not doc.get("textes"):
+                continue
+            for k, t in enumerate(doc.get("textes") or []):
+                titre = t.get("titre") or "(sans titre)"
+                if exclu(titre, exclusions):
+                    continue
+                ids = [str(i) for i in t.get("idcc") or []]
+                dans_appli = [i for i in ids if i in idcc_appli]
+                trouves = themes_trouves(titre + " " + (t.get("texte") or ""), themes)
+                if not dans_appli and not trouves:
+                    continue
+                total += 1
+                salaires = bool(t.get("salaires"))
+                p1, p2 = (t.get("pages") or [None, None])[:2]
+                detail = (f"Bulletin officiel des conventions collectives : {nom_b}"
+                          + (f" (publié le {b['date_fichier']})" if b.get("date_fichier") else "")
+                          + (f", pages {p1}–{p2}" if p1 else "")
+                          + f".\nConvention(s) citée(s) : {', '.join('IDCC ' + i for i in ids) or 'aucune repérée'}"
+                          + (" — dans l'appli." if dans_appli else ".")
+                          + (f"\nSigné le {t['date_signature']}." if t.get("date_signature") else "")
+                          + f"\n\n{court(titre, 400)}")
+                montants = [m for m in t.get("montants") or [] if isinstance(m, (int, float))]
+                if salaires and montants:
+                    detail += f"\n\n💶 Montants lus dans le texte : {', '.join(_euros(m) for m in montants[:12])}"
+                    if len(montants) > 12:
+                        detail += f" (+ {len(montants) - 12})"
+                    sous = [m for m in montants if smic and 1000 <= m < smic]
+                    if sous:
+                        detail += (f"\n⚠️ {len(sous)} montant(s) sous le SMIC mensuel ({_euros(smic)}) : "
+                                   f"le SMIC prime pour ces niveaux.")
+                    detail += ("\n(Lecture automatique d'un PDF : les montants peuvent être mélangés "
+                               "— vérifie dans le bulletin avant de reprendre la grille.)")
+                for i in dans_appli:
+                    g = grilles.get(i) or {}
+                    if g:
+                        detail += f"\n\nGrille de l'appli pour l'IDCC {i} : {g.get('d') or '?'} — {court(g.get('s') or '', 160)}"
+                if trouves:
+                    detail += "\n\n" + lignes_themes(trouves)
+                if doc.get("scanne"):
+                    detail += "\n\n(PDF scanné : le texte vient de l'OCR, à relire.)"
+                alertes.append({
+                    "categorie": "nouvel-avenant-ccn",
+                    "gravite": "haute" if (dans_appli and salaires) else "moyenne",
+                    "titre": (f"📕 BOCC — {'IDCC ' + ids[0] if ids else 'convention ?'} — {court(titre, 110)}"
+                              + (" : grille de salaires" if salaires else
+                                 f" ({trouves[0][0]})" if trouves else " : nouveau texte")),
+                    "detail": detail,
+                    "lien": b.get("url") or "https://www.legifrance.gouv.fr/liste/bocc",
+                    "fonds": "CCN",
+                    "theme": "Salaires minima" if salaires else (trouves[0][0] if trouves else "Convention de l'appli"),
+                    "date_texte": b.get("date_fichier") or aujourd_hui,
+                    "_id": f"bocc:{rel}:{doc.get('nom')}:{k}",
+                })
+    print(f"BOCC : {len(nouveaux)} bulletin(s) nouveau(x), {total} texte(s) retenu(s).")
+
+
 # ── ACCO ───────────────────────────────────────────────────────────────────
 def infos_accord(meta, idcc_appli):
     """« 12/09/2026 · ACME (SIRET 123…) · IDCC 1516 — convention de l'appli »,
@@ -524,7 +630,8 @@ def veille_jurisprudence(fonds, memoire, alertes, themes, cites, aujourd_hui):
 # nouveau depuis trop longtemps (le JO publie tous les jours, les conventions
 # tous les mois…) est suspect.
 LIMITE_FIGE = {"jorf": ("Journal officiel", 10), "acco": ("Accords d'entreprise", 30),
-               "ccn": ("Conventions collectives", 45), "juris": ("Jurisprudence", 30)}
+               "ccn": ("Conventions collectives", 45), "juris": ("Jurisprudence", 30),
+               "bocc": ("BOCC (bulletins des conventions)", 21)}
 
 
 def sante_fonds(memoire, avant, apres, aujourd_hui):
@@ -556,7 +663,8 @@ def indicateurs(memoire):
     ccn = memoire.get("ccn_max") or {}
     return {"jorf": memoire.get("jorf_max"), "acco": memoire.get("acco_max"),
             "ccn": sum(ccn.values()) if ccn else None,
-            "juris": len(memoire["juris_vus"]) if memoire.get("juris_vus") is not None else None}
+            "juris": len(memoire["juris_vus"]) if memoire.get("juris_vus") is not None else None,
+            "bocc": len(memoire["bocc_vus"]) if memoire.get("bocc_vus") is not None else None}
 
 
 def _rattrapage(fonds, quoi, n, aujourd_hui):
@@ -617,6 +725,7 @@ def main():
     print(f"Code : {sum(len(v) for v in suivis.values())} article(s) dans les sections suivies.")
     veille_jorf(args.fonds, memoire, alertes, themes, exclusions, suivis, idcc_appli, aujourd_hui)
     veille_ccn(args.fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui)
+    veille_bocc(args.fonds, args.hs, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui)
     veille_acco(args.fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, idcc_appli)
     veille_jurisprudence(args.fonds, memoire, alertes, themes, cites, aujourd_hui)
     alertes_sante = sante_fonds(memoire, avant, indicateurs(memoire), aujourd_hui)

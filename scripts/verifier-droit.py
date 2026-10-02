@@ -233,7 +233,8 @@ NOMS_ETAPES = {"jorf": "Journal officiel", "acco": "Accords d'entreprise",
                "jurisprudence-cc": "Jurisprudence (Cour de cassation)",
                "jurisprudence-ca": "Jurisprudence (cours d'appel)",
                "ccn-textes-recents": "Texte complet des avenants récents",
-               "bocc": "Bulletins du BOCC (bocc.yml)"}
+               "bocc": "Bulletins du BOCC (bocc.yml)",
+               "dares": "Liste officielle des conventions (DARES)"}
 JOURS_ECHEC = 7
 API_RUNS = "https://api.github.com/repos/anthonychauvel/droit/actions/workflows/aspirateur.yml/runs?per_page=1"
 

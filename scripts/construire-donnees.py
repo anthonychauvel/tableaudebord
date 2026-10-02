@@ -568,6 +568,14 @@ def main():
         **lancer("veille-regles-officielles.py", ["--hs", args.hs,
                  "--memoire", os.path.join(ici_veille, "regles-officielles.json")])})
 
+    # BOSS, Parlement, fraîcheur de la liste DARES (02/10/2026) : les trois
+    # sources officielles qui manquaient. Réseau (boss.gouv.fr, flux RSS du
+    # Sénat et de l'Assemblée) ; une panne n'arrête jamais le reste.
+    sections.append({"id": "sources", "titre": "🏛️ BOSS, Parlement, liste DARES",
+        **lancer("veille-sources-officielles.py", ["--droit", args.droit,
+                 "--mots-cles", os.path.join(ici_veille, "mots-cles.json"),
+                 "--memoire", os.path.join(ici_veille, "sources-officielles.json")])})
+
     # « Fonds figé » (un fonds qui ne reçoit plus rien) : rangé avec les autres
     # signaux de santé de l'aspirateur, dans la section MonLegiTexte / fonds.
     for s_ in sections:

@@ -101,6 +101,52 @@ alerte, avec juste une carte ⚪ « enregistrés sans alerte ».
 passages : c'est un rattrapage, ignoré par la veille (seuls les textes
 plus récents que le dernier vu sont signalés).
 
+## BOCC — les grilles en PDF (📕, 02/10/2026)
+
+Beaucoup d'avenants « salaires » n'ont dans KALI que leur titre (« tableau non
+reproduit, consultable au BOCC ») : la grille est dans le PDF du Bulletin
+officiel des conventions collectives.
+
+- **Aspiration** : `bocc.yml` (dépôt `droit`), le mercredi à 5h07 UTC, lit
+  l'open data de la DILA (`echanges.dila.gouv.fr/OPENDATA/BOCC/<année>/`),
+  télécharge les nouveaux bulletins (PDF, XML ou archives), lit le texte
+  (`pdftotext`, OCR français pour les PDF scannés) et le découpe par
+  convention dans `output/bocc/<année>/*.json` : IDCC, titre, date de
+  signature, « parle de salaires », montants en euros. Mémoire :
+  `output/bocc/_vus.json`. Premier passage : seuls les 60 derniers jours.
+- **Veille** : chaque texte d'une convention de l'appli remonte dans
+  « Conventions » avec le titre « 📕 BOCC — … ». 🔴 si c'est une grille de
+  salaires : montants lus, ceux sous le SMIC, et la date de la grille
+  actuelle de l'appli pour comparer. Les autres conventions ne remontent
+  qu'avec un mot-clé. Rien n'est repris automatiquement : un tableau lu dans
+  un PDF peut être mal découpé, tu vérifies dans le bulletin (lien).
+- **Santé** : « BOCC » figé au bout de 21 jours sans bulletin ; un échec de
+  l'aspiration s'affiche comme les autres étapes (`bocc`).
+
+## BOSS, Parlement, liste DARES (🏛️, 02/10/2026)
+
+Nouvelle section « BOSS, Parlement, liste DARES » (script
+`veille-sources-officielles.py`, mémoire `sources-officielles.json`) :
+
+- **BOSS** (boss.gouv.fr) : les pages sur tes sujets (heures sup et
+  complémentaires, réduction générale, avantages en nature, frais pro,
+  assiette, temps partiel, apprentis…) sont trouvées depuis l'accueil et
+  relues à chaque passage. Seuls les paragraphes vraiment ajoutés ou retirés
+  remontent (－ avant / ＋ après) ; un simple changement de date de mise à
+  jour est ignoré. 🔴 si ça touche un taux, un plafond, le SMIC, une
+  exonération ou une majoration.
+- **Parlement** : flux RSS du Sénat (textes déposés, affaires sociales) et
+  de l'Assemblée (documents, commission des affaires sociales), filtrés par
+  tes mots-clés et les mots du travail. 🔴 pour le budget de la Sécu (PLFSS),
+  les heures sup, le Code du travail, la durée du travail, le SMIC. Le premier
+  passage ne garde que ces textes majeurs (le PLFSS se dépose en octobre).
+- **DARES** : alerte si la liste officielle des conventions a plus de 4 mois.
+  Côté `droit`, `maj_dares.py` va chercher chaque lundi la dernière version
+  (garde l'ancienne si le site bloque) et `aspirateur.yml` installe enfin
+  openpyxl : sans lui, la relecture du fichier DARES échouait en silence
+  chaque lundi.
+- Une source injoignable deux passages de suite = alerte 📡.
+
 ## Limite qui reste
 
 Chaque convention n'est relue qu'environ toutes les 5 semaines ; l'arrêté

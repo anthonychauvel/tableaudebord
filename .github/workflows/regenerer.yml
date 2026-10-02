@@ -1,4 +1,4 @@
-: Régénérer les données de veille
+name: Régénérer les données de veille
 
 # Après chaque run de l'aspirateur (lundi/jeudi) et du mercredi de vérification
 # des grilles : régénère donnees.json à partir des 3 dépôts, et le commit ici.
@@ -140,3 +140,4 @@ jobs:
           gh issue create \
             --title "${{ steps.droit.outputs.titre }}" \
             --body-file /tmp/ticket.md \
+            --label droit-modifie

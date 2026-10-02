@@ -1,4 +1,4 @@
-name: Régénérer les données de veille
+: Régénérer les données de veille
 
 # Après chaque run de l'aspirateur (lundi/jeudi) et du mercredi de vérification
 # des grilles : régénère donnees.json à partir des 3 dépôts, et le commit ici.
@@ -23,6 +23,9 @@ jobs:
     # la limite par défaut (6 h) est large, mais on borne pour qu'un blocage
     # ne consomme pas des heures de runner en silence.
     timeout-minutes: 45
+    # Relais facultatif pour boss.gouv.fr (cf. relais-boss-worker.js) : vide = pas de relais.
+    env:
+      VEILLE_RELAIS: ${{ vars.VEILLE_RELAIS }}
     steps:
       - name: Récupérer ce dépôt (veille)
         uses: actions/checkout@v4
@@ -137,4 +140,3 @@ jobs:
           gh issue create \
             --title "${{ steps.droit.outputs.titre }}" \
             --body-file /tmp/ticket.md \
-            --label droit-modifie

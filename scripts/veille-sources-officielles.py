@@ -244,6 +244,22 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
 
 
 # ── PARLEMENT ─────────────────────────────────────────────────────────────
+PARL_MAX_JOURS = 30
+_MOIS_EN = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+
+
+def date_flux(v):
+    """« Fri,02 Oct 2026 », « Thu, 01 Oct 2026 10:00:00 +0200 », « 2026-10-01T… » -> « 2026-10-01 »."""
+    v = str(v or "")
+    m = re.search(r"(20\d\d)-(\d\d)-(\d\d)", v)
+    if m:
+        return m.group(0)
+    m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})[a-z]*\.?\s+(20\d\d)", v)
+    if m and m.group(2).lower() in _MOIS_EN:
+        return f"{m.group(3)}-{_MOIS_EN[m.group(2).lower()]:02d}-{int(m.group(1)):02d}"
+    return None
+
+
 def items_flux(octets):
     """octets bruts du flux : l'analyseur XML lit lui-même l'encodage déclaré
     (le Sénat publie en ISO-8859-1 : décodé en UTF-8, les accents étaient
@@ -305,11 +321,21 @@ def veille_parlement(memoire, alertes, sante, themes, aujourd_hui, diag):
             print(f"{nom} : {len(items)} élément(s)")
             for t, l, d, _ in items[:8]:
                 print(f"   - {court(t, 110)} ({d[:16]})")
+        titres_vus = set()
         for titre, lien, date, desc in items:
             cle = lien or titre
             if not cle or cle in vus:
                 continue
             vus[cle] = aujourd_hui
+            # Test du 02/10/2026 : le flux « affaires sociales » du Sénat garde
+            # ~200 éléments, dont tout le PLFSS 2026 de l'an dernier. Un élément
+            # daté de plus de PARL_MAX_JOURS jours n'est pas une actualité.
+            d = date_flux(date)
+            if d and d < (datetime.strptime(aujourd_hui, "%Y-%m-%d") - timedelta(days=PARL_MAX_JOURS)).strftime("%Y-%m-%d"):
+                continue
+            if normaliser(titre) in titres_vus:          # même titre deux fois (tomes, doublons)
+                continue
+            titres_vus.add(normaliser(titre))
             texte = normaliser(titre + " " + desc)
             # Premier passage : départ sans alerte… sauf les textes majeurs déjà
             # dans le flux (le PLFSS se dépose début octobre : ne pas le rater).

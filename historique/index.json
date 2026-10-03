@@ -515,5 +515,16 @@
       "basse": 73
     },
     "nouvelles_alertes": 37
+  },
+  {
+    "fichier": "2026-10-03-121914.json",
+    "genere": "2026-10-03T12:19:14.682614+00:00",
+    "total": 151,
+    "par_gravite": {
+      "haute": 27,
+      "moyenne": 51,
+      "basse": 73
+    },
+    "nouvelles_alertes": 0
   }
 ]

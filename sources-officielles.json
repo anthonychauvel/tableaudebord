@@ -1,7 +1,10 @@
 {
  "boss": {
   "pages": {},
-  "echecs": 1
+  "echecs": 1,
+  "capture_empreinte": "5f36b2ea290645ee",
+  "capture_recue": "2026-10-03",
+  "dernier": "2026-10-03"
  },
  "parlement": {
   "vus": {
@@ -238,24 +241,26 @@
    "https://www.assemblee-nationale.fr/17/propositions/pion3131.asp": "2026-10-02",
    "https://www.assemblee-nationale.fr/17/propositions/pion3128.asp": "2026-10-02",
    "https://www.assemblee-nationale.fr/17/propositions/pion3123.asp": "2026-10-02",
-   "https://www.assemblee-nationale.fr/17/propositions/pion3176.asp": "2026-10-02"
+   "https://www.assemblee-nationale.fr/17/propositions/pion3176.asp": "2026-10-02",
+   "http://www.senat.fr/leg/ppl25-963.html": "2026-10-03",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3132.asp": "2026-10-03"
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
     "echecs": 0,
-    "lu": "2026-10-02"
+    "lu": "2026-10-03"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
     "echecs": 0,
-    "lu": "2026-10-02"
+    "lu": "2026-10-03"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {
     "echecs": 0,
-    "lu": "2026-10-02"
+    "lu": "2026-10-03"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance": {
     "echecs": 0,
-    "lu": "2026-10-02"
+    "lu": "2026-10-03"
    }
   }
  },
@@ -271,5 +276,28 @@
    "vu_le": "2026-10-02"
   }
  ],
- "dernier_passage": "2026-10-02"
+ "dernier_passage": "2026-10-03",
+ "fonds_dila": {
+  "circulaires": [],
+  "constit": [],
+  "jade": [
+   "CETATEXT000054903624.json",
+   "CETATEXT000054912215.json",
+   "CETATEXT000054912217.json",
+   "CETATEXT000054912218.json",
+   "CETATEXT000054912222.json",
+   "CETATEXT000054928013.json",
+   "CETATEXT000054928032.json",
+   "CETATEXT000054928061.json",
+   "CETATEXT000054936420.json",
+   "CETATEXT000054936434.json",
+   "CETATEXT000054936435.json",
+   "CETATEXT000054936442.json",
+   "CETATEXT000054944222.json"
+  ]
+ },
+ "openfisca": {
+  "echecs": 0,
+  "version": "176.1.2"
+ }
 }

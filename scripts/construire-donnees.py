@@ -574,7 +574,16 @@ def main():
     sections.append({"id": "sources", "titre": "🏛️ BOSS, Parlement, liste DARES",
         **lancer("veille-sources-officielles.py", ["--droit", args.droit,
                  "--mots-cles", os.path.join(ici_veille, "mots-cles.json"),
-                 "--memoire", os.path.join(ici_veille, "sources-officielles.json")])})
+                 "--memoire", os.path.join(ici_veille, "sources-officielles.json"),
+                 # 02/10/2026 : boss.gouv.fr bloque les serveurs (GitHub : délai dépassé,
+                 # Cloudflare : erreur 520). Le BOSS est lu depuis l'iPhone par le
+                 # Raccourci « Veille BOSS », qui dépose boss-capture.json ici.
+                 "--boss-capture", os.path.join(ici_veille, "boss-capture.json"),
+                 "--boss-liste", os.path.join(ici_veille, "boss-pages.txt"),
+                 # Circulaires / Conseil constitutionnel / Conseil d'État (fonds DILA du dépôt
+                 # droit) et barèmes hors droit du travail (OpenFisca-France) : 02/10/2026.
+                 "--hs", args.hs,
+                 "--empreintes-articles", os.path.join(ici_veille, "empreintes-articles.json")])})
 
     # « Fonds figé » (un fonds qui ne reçoit plus rien) : rangé avec les autres
     # signaux de santé de l'aspirateur, dans la section MonLegiTexte / fonds.
@@ -664,10 +673,28 @@ def main():
 
     n_nouvelles = marquer_nouveautes(sections, args.out)
 
+    # Routage (03/10/2026) : pour chaque alerte, OÙ elle se traite dans
+    # l'écosystème (appli + module, 105 outils, GrillePaye, guide,
+    # MonLegiTexte, chaîne de veille) et quels fichiers ouvrir. Jamais
+    # bloquant : en cas de panne, le tableau de bord affiche les alertes
+    # comme avant, sans destination.
+    routage = None
+    try:
+        import importlib.util as _ilu
+        _spec = _ilu.spec_from_file_location("routage", os.path.join(os.path.dirname(os.path.abspath(__file__)), "routage.py"))
+        _rt = _ilu.module_from_spec(_spec)
+        _spec.loader.exec_module(_rt)
+        routage = _rt.router_sections(sections, args.hs, args.guide,
+                                      os.path.join(os.path.dirname(args.out), "pages-articles.json"))
+        print(f"Routage : {routage['par_zone']} ({routage['non_routees']} à trier)")
+    except Exception as e:                           # noqa: BLE001
+        print(f"Routage indisponible : {e}", file=sys.stderr)
+
     sortie = {
         "genere": datetime.now(timezone.utc).isoformat(),
         "exceptions_appliquees": n_ignorees,
         "nouvelles_alertes": n_nouvelles,
+        "routage": routage,
         "sections": sections,
     }
     sauver_historique(os.path.dirname(args.out), sortie)

@@ -35,6 +35,7 @@ import argparse
 import difflib
 import hashlib
 import html
+import io
 import json
 import os
 import re
@@ -170,50 +171,98 @@ def liens_boss(page, base):
     return out
 
 
-def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
+def _paras_texte(t):
+    """Page reçue en texte brut (le Raccourci peut envoyer le texte affiché au
+    lieu du HTML) : un paragraphe par ligne."""
+    out = []
+    for ligne in str(t or "").splitlines():
+        ligne = " ".join(ligne.split())
+        if len(ligne) >= 25 and (not out or ligne != out[-1]):
+            out.append(ligne)
+    return out
+
+
+def _est_html(t):
+    return bool(re.search(r"<(html|body|div|p|main|a)\b", str(t or "")[:5000], re.I))
+
+
+def lire_capture(chemin):
+    """boss-capture.json écrit par le Raccourci iPhone : {"_date": …, url: page, …}
+    ou {"date": …, "pages": {url: page}}. -> (date, {url: page}, empreinte)."""
+    try:
+        brut = open(chemin, encoding="utf-8").read()
+        d = json.loads(brut)
+    except Exception:
+        return None, {}, None
+    pages = d.get("pages") if isinstance(d.get("pages"), dict) else \
+        {k: v for k, v in d.items() if str(k).startswith("http")}
+    return str(d.get("_date") or d.get("date") or ""), pages, empreinte(brut)
+
+
+def ecrire_liste_boss(chemin, decouvertes):
+    """boss-pages.txt : la liste que le Raccourci télécharge avant de lire le BOSS.
+    Tes lignes sont gardées (tu peux en ajouter à la main) ; les pages trouvées
+    dans les liens du BOSS sont ajoutées à la fin."""
+    try:
+        lignes = open(chemin, encoding="utf-8").read().splitlines()
+    except Exception:
+        lignes = ["# Pages du BOSS lues chaque semaine par le Raccourci iPhone.",
+                  "# Une adresse par ligne ; tu peux en ajouter. Les lignes # sont ignorées."] + BOSS_DEPART[:1]
+    deja = {l.strip() for l in lignes if l.strip() and not l.startswith("#")}
+    ajout = [u for u in decouvertes if u not in deja][:max(0, BOSS_MAX_PAGES - len(deja))]
+    if ajout or not os.path.exists(chemin):
+        with open(chemin, "w", encoding="utf-8") as f:
+            f.write("\n".join(lignes + ajout) + "\n")
+    return len(deja) + len(ajout)
+
+
+def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=None):
+    """boss.gouv.fr bloque GitHub ET Cloudflare (02/10/2026) : la lecture se fait
+    depuis l'iPhone (Raccourci « Veille BOSS ») qui dépose boss-capture.json dans
+    ce dépôt. Ici on compare cette capture à la précédente."""
     mem = memoire.setdefault("boss", {})
     pages_mem = mem.setdefault("pages", {})
-    accueil, base = None, None
-    for u in BOSS_DEPART:
-        try:
-            accueil, base = ouvrir(u, delai=90, relais=True), u
-            break
-        except Exception as e:                       # noqa: BLE001
-            if diag:
-                print(f"  BOSS {u} : {e}")
-    if accueil is None:
-        _injoignable(mem, sante, "BOSS (boss.gouv.fr)", BOSS_DEPART[0], aujourd_hui)
-        print("BOSS : accueil injoignable.")
+    if not capture or not os.path.exists(capture):
+        print("BOSS : pas encore de capture du Raccourci iPhone (boss-capture.json).")
+        if liste:
+            ecrire_liste_boss(liste, [])
         return
-    mem["echecs"] = 0
-    cibles = liens_boss(accueil, base)
-    # Les pages déjà suivies restent suivies même si l'accueil ne les montre plus.
-    for u in pages_mem:
-        if u not in cibles:
-            cibles.append(u)
-    cibles = cibles[:BOSS_MAX_PAGES]
-    if diag:
-        print(f"BOSS : {len(cibles)} page(s) sur nos sujets :")
-        for u in cibles:
-            print(f"   {u}")
+    date_cap, pages, h_cap = lire_capture(capture)
+    if h_cap and h_cap != mem.get("capture_empreinte"):
+        mem["capture_empreinte"] = h_cap
+        mem["capture_recue"] = aujourd_hui
+    recue = mem.get("capture_recue") or aujourd_hui
+    age = (datetime.strptime(aujourd_hui, "%Y-%m-%d") - datetime.strptime(recue, "%Y-%m-%d")).days
+    if age > 10:
+        sante.append({
+            "categorie": "source-injoignable",
+            "gravite": "moyenne",
+            "titre": f"BOSS : le Raccourci iPhone n'a rien envoyé depuis {age} jours",
+            "detail": ("La veille du BOSS dépend du Raccourci « Veille BOSS » de ton iPhone (le site bloque les "
+                       "serveurs). Sa dernière capture date du " + recue + ". Vérifie l'automatisation dans "
+                       "l'app Raccourcis (onglet Automatisation) ou lance-le à la main."),
+            "lien": "https://boss.gouv.fr/",
+            "date_texte": recue,
+        })
+    decouvertes = []
     premier = not pages_mem
-    n_modif = 0
-    for u in cibles:
-        try:
-            page = ouvrir(u, delai=90, relais=True)
-        except Exception as e:                       # noqa: BLE001
-            if diag:
-                print(f"  {u} : {e}")
-            continue
-        paras = paragraphes(page)
+    n_modif = n_lues = 0
+    for u, page in pages.items():
+        html_ok = _est_html(page)
+        if html_ok:
+            decouvertes += [l for l in liens_boss(page, u) if l not in decouvertes]
+            paras, titre = paragraphes(page), titre_page(page, u)
+        else:
+            paras = _paras_texte(page)
+            titre = paras[0][:120] if paras else u
         if not paras:
             continue
-        titre = titre_page(page, u)
+        n_lues += 1
         h = empreinte("\n".join(paras))
         avant = pages_mem.get(u)
         pages_mem[u] = {"titre": titre, "empreinte": h, "paragraphes": paras, "vu_le": aujourd_hui}
         if diag:
-            print(f"  {court(titre, 80)} : {len(paras)} paragraphe(s)")
+            print(f"  {court(titre, 80)} : {len(paras)} paragraphe(s){'' if html_ok else ' (texte brut)'}")
         if premier or avant is None or avant.get("empreinte") == h:
             continue
         anciens, nouveaux = avant.get("paragraphes") or [], paras
@@ -233,13 +282,17 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag):
             "gravite": "haute" if sensible else "moyenne",
             "titre": f"BOSS — {court(titre, 110)} : {len(retires) + len(ajoutes)} paragraphe(s) modifié(s)",
             "detail": ("Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé "
-                       f"depuis le passage du {avant.get('vu_le') or '?'}.\n\n" + "\n".join(lignes)),
+                       f"depuis la capture du {avant.get('vu_le') or '?'}.\n\n" + "\n".join(lignes)),
             "lien": u,
             "date_texte": aujourd_hui,
             "_id": f"boss:{u}:{h}",
         })
+    if liste:
+        n_liste = ecrire_liste_boss(liste, decouvertes)
+        if diag:
+            print(f"BOSS : {len(decouvertes)} lien(s) sur nos sujets trouvés ; liste du Raccourci : {n_liste} page(s).")
     mem["dernier"] = aujourd_hui
-    print(f"BOSS : {len(cibles)} page(s) suivie(s), "
+    print(f"BOSS : capture du {date_cap or recue}, {n_lues} page(s) lue(s), "
           + ("état de départ enregistré sans alerte." if premier else f"{n_modif} modifiée(s)."))
 
 
@@ -442,6 +495,227 @@ def veille_dares(droit, alertes, aujourd_hui):
     })
 
 
+# ── FONDS DILA : circulaires, Conseil constitutionnel, Conseil d'État ─────
+# Aspirés par dila-fonds.yml (dépôt droit) dans output/{circulaires,constit,jade}/ :
+# une fiche par texte qui touche l'écosystème (le tri grossier est fait là-bas).
+FONDS_DILA = {
+    "circulaires": ("Circulaire / instruction", "📨", "nouvelle-circulaire"),
+    "constit": ("Conseil constitutionnel", "🏛️", "decision-haute-juridiction"),
+    "jade": ("Conseil d'État", "🏛️", "decision-haute-juridiction"),
+}
+CENSURE = re.compile(r"non[- ]conformite|contraire a la constitution|annul|abrog|censur|illegal", re.I)
+FORT_DILA = re.compile(r"code du travail|heures? supplementaires?|duree du travail|conges? payes?|smic"
+                       r"|cotisations?|reduction generale|convention collective|arrete d.extension", re.I)
+
+
+def articles_cites_ecosysteme(chemin):
+    try:
+        return {k.partition(":")[2] for k in json.load(open(chemin, encoding="utf-8"))}
+    except Exception:
+        return set()
+
+
+def veille_fonds_dila(droit, memoire, alertes, themes, cites, aujourd_hui, diag):
+    if not droit:
+        return
+    mem = memoire.setdefault("fonds_dila", {})
+    for dossier, (nom, emoji, categorie) in FONDS_DILA.items():
+        racine = os.path.join(droit, "output", dossier)
+        if not os.path.isdir(racine):
+            if diag:
+                print(f"{nom} : pas encore de fonds ({racine}).")
+            continue
+        fichiers = sorted(n for n in os.listdir(racine) if n.endswith(".json") and not n.startswith("_"))
+        premier = dossier not in mem
+        vus = set(mem.get(dossier) or [])
+        nouveaux = [n for n in fichiers if n not in vus]
+        mem[dossier] = sorted(vus | set(fichiers))[-20000:]
+        if premier:
+            print(f"{nom} : {len(fichiers)} texte(s) au fonds, état de départ sans alerte.")
+            continue
+        if len(nouveaux) > 150:
+            alertes.append({"categorie": "rattrapage-fonds", "gravite": "basse",
+                            "titre": f"{nom} ({aujourd_hui}) : {len(nouveaux)} textes arrivés d'un coup, enregistrés sans alerte",
+                            "detail": "Rattrapage de l'aspirateur : textes anciens récupérés en masse.",
+                            "_id": f"rattrapage:{dossier}:{aujourd_hui}"})
+            continue
+        retenus = 0
+        for n in nouveaux:
+            try:
+                f = json.load(open(os.path.join(racine, n), encoding="utf-8"))
+            except Exception:
+                continue
+            texte = f"{f.get('titre', '')} {f.get('solution', '')} {f.get('extrait', '')}"
+            norm = normaliser(texte)
+            trouves = themes_trouves(texte, themes)
+            arts = [a for a in (f.get("articles") or []) if a in cites]
+            if not trouves and not arts and not FORT_DILA.search(norm):
+                continue
+            retenus += 1
+            censure = dossier != "circulaires" and bool(CENSURE.search(normaliser(f.get("solution", "") + " " + f.get("titre", ""))))
+            haute = bool(arts) or (censure and bool(FORT_DILA.search(norm)))
+            detail = (f"{nom}" + (f" — {f['juridiction']}" if f.get("juridiction") else "")
+                      + (f" — n° {f['numero']}" if f.get("numero") else "")
+                      + (f" — {f['date']}" if f.get("date") else "") + "."
+                      + f"\n\n{court(f.get('titre'), 400)}"
+                      + (f"\n\nSolution : {court(f.get('solution'), 300)}" if f.get("solution") else "")
+                      + (f"\n\n⚠️ Articles que l'écosystème cite : {', '.join(arts)}" if arts else "")
+                      + (f"\n\nExtrait : {court(f.get('extrait'), 500)}" if f.get("extrait") else ""))
+            if trouves:
+                detail += "\n\n" + "\n".join(f"{e} {t} — « {x} »" for t, e, x, _ in trouves)
+            ident = str(f.get("id") or n[:-5])
+            lien = (f"https://www.legifrance.gouv.fr/cons/id/{ident}" if ident.startswith("CONSTEXT") else
+                    f"https://www.legifrance.gouv.fr/ceta/id/{ident}" if ident.startswith("CETATEXT") else
+                    f"https://www.legifrance.gouv.fr/circulaire/id/{ident}" if dossier == "circulaires" else "")
+            alertes.append({
+                "categorie": categorie,
+                "gravite": "haute" if haute else "moyenne",
+                "titre": f"{emoji} {nom} — {court(f.get('titre'), 120)}" + (" : CENSURE / ANNULATION" if censure else ""),
+                "detail": detail,
+                "lien": lien,
+                "date_texte": f.get("date") or aujourd_hui,
+                "_id": f"dila:{dossier}:{ident}",
+            })
+        print(f"{nom} : {len(nouveaux)} texte(s) nouveau(x), {retenus} retenu(s).")
+
+
+# ── PARAMÈTRES SOCIAUX HORS DROIT DU TRAVAIL (OpenFisca-France) ────────────
+# Chômage, prestations familiales, minima sociaux, retraite complémentaire,
+# cotisations, impôt… : les barèmes que certains des 105 outils utilisent.
+# OpenFisca-France (le modèle socio-fiscal ouvert de l'État) les tient à jour
+# avec leur date d'effet ; à chaque nouvelle version publiée sur PyPI, on
+# compare les fichiers de paramètres ligne à ligne (pas besoin de PyYAML).
+PYPI = "https://pypi.org/pypi/OpenFisca-France/json"
+DOMAINES_OF = [
+    ("chomage/", "Assurance chômage", ["chomage", "demission-are", "fincontrat", "activite-partielle"]),
+    ("prestations_sociales/prestations_familiales/", "Prestations familiales",
+     ["allocations-familiales", "famille", "parentalite", "naissance", "proche-aidant"]),
+    ("prestations_sociales/solidarite_insertion/", "Minima sociaux (RSA, prime d'activité, ASS…)", ["budget", "chomage"]),
+    ("prestations_sociales/prestations_etat_de_sante/", "Indemnités maladie, invalidité, AT-MP",
+     ["arret", "invalidite", "atmp", "inaptitude"]),
+    ("prestations_sociales/aides_logement/", "Aides au logement", ["logement", "loyer"]),
+    ("prelevements_sociaux/regimes_complementaires_retraite_secteur_prive/", "Retraite complémentaire (Agirc-Arrco)",
+     ["retraite", "cumul-retraite", "bulletin"]),
+    ("prelevements_sociaux/cotisations_securite_sociale_regime_general/", "Cotisations de sécurité sociale",
+     ["bulletin", "salaire-cout-employeur"]),
+    ("prelevements_sociaux/reductions_cotisations_sociales/", "Réductions de cotisations (dont heures sup)",
+     ["bulletin", "salaire-cout-employeur"]),
+    ("prelevements_sociaux/pss/", "Plafond de la Sécurité sociale", ["bulletin", "salaire-cout-employeur", "retraite"]),
+    ("prelevements_sociaux/contributions_sociales/", "CSG / CRDS", ["bulletin", "salaire-cout-employeur"]),
+    ("marche_travail/salaire_minimum/", "SMIC et minimum garanti", ["bulletin", "salaire-cout-employeur", "alternance"]),
+    ("marche_travail/indemnite_fin_contrat/", "Indemnité de fin de contrat", ["precarite", "fincontrat"]),
+    ("impot_revenu/bareme_ir_depuis_1945/", "Barème de l'impôt sur le revenu", ["impot-revenu"]),
+    ("impot_revenu/calcul_revenus_imposables/", "Revenus imposables (dont exonération heures sup)", ["impot-revenu"]),
+    ("taxation_capital/epargne/", "Épargne réglementée", ["livrets-epargne", "epargne"]),
+]
+
+
+_VAL = re.compile(r"(\d{4}-\d{2}-\d{2})\s*:\s*\n\s*value\s*:\s*([^\n#]+)")
+
+
+def _valeurs(yaml_txt):
+    """Paires (date d'effet, valeur) d'un fichier de paramètres OpenFisca — les
+    titres, liens et « last_value_still_valid_on » ne comptent pas (test du
+    02/10/2026 : ils changeaient sans qu'aucune valeur ne bouge)."""
+    return sorted((d, v.strip().strip("'\"")) for d, v in _VAL.findall(yaml_txt))
+
+
+def _http_json(url):
+    return json.loads(ouvrir_octets(url, delai=60)[0].decode("utf-8"))
+
+
+def _params_wheel(info, version):
+    for f in info.get("releases", {}).get(version, []):
+        if f.get("packagetype") == "bdist_wheel":
+            import zipfile
+            octets = ouvrir_octets(f["url"], delai=300)[0]
+            z = zipfile.ZipFile(io.BytesIO(octets))
+            out = {}
+            for n in z.namelist():
+                if "/parameters/" in n and n.endswith(".yaml"):
+                    out[n.split("/parameters/", 1)[1]] = z.read(n).decode("utf-8", "replace")
+            return out
+    return None
+
+
+def outils_de(hs, mots):
+    d = os.path.join(hs or "", "outils")
+    if not os.path.isdir(d):
+        return mots
+    noms = [n[7:-5] for n in os.listdir(d) if n.startswith("module-") and n.endswith(".html")]
+    return sorted({n for n in noms for m in mots if m in n})
+
+
+def veille_openfisca(memoire, alertes, sante, hs, aujourd_hui, diag):
+    mem = memoire.setdefault("openfisca", {})
+    try:
+        info = _http_json(PYPI)
+        derniere = info["info"]["version"]
+    except Exception as e:                           # noqa: BLE001
+        _injoignable(mem, sante, "OpenFisca-France (PyPI)", PYPI, aujourd_hui)
+        print(f"OpenFisca : PyPI illisible ({e}).")
+        return
+    mem["echecs"] = 0
+    avant = mem.get("version")
+    if not avant:
+        mem["version"] = derniere
+        print(f"OpenFisca : version de départ {derniere} enregistrée, pas d'alerte.")
+        return
+    if avant == derniere:
+        print(f"OpenFisca : toujours en {derniere}.")
+        return
+    try:
+        p_av, p_ap = _params_wheel(info, avant), _params_wheel(info, derniere)
+    except Exception as e:                           # noqa: BLE001
+        print(f"OpenFisca : téléchargement impossible ({e}), on réessaiera.")
+        return
+    if p_av is None or p_ap is None:
+        mem["version"] = derniere
+        print(f"OpenFisca : {avant} -> {derniere}, une des versions n'a pas de wheel ; départ recalé.")
+        return
+    n_alertes = 0
+    for prefixe, nom, mots in DOMAINES_OF:
+        lignes, fichiers, nouvelle_date = [], 0, False
+        for chemin in sorted(set(p_av) | set(p_ap)):
+            if not chemin.startswith(prefixe):
+                continue
+            a, b = _valeurs(p_av.get(chemin) or ""), _valeurs(p_ap.get(chemin) or "")
+            if a == b:
+                continue                      # seules les sources / descriptions ont bougé
+            # Valeurs historiques ajoutées d'un coup (ex. ARE depuis 2008) = rattrapage
+            # de la base, pas une actualité : on ne regarde que les 2 dernières années.
+            recent = (datetime.strptime(aujourd_hui, "%Y-%m-%d") - timedelta(days=730)).strftime("%Y-%m-%d")
+            ajoutees = [x for x in b if x not in a and x[0] >= recent]
+            retirees = [x for x in a if x not in b and x[0] >= recent]
+            if not ajoutees and not retirees:
+                continue
+            fichiers += 1
+            nouvelle_date |= bool(ajoutees)
+            lignes.append(f"• {chemin[len(prefixe):-5]}")
+            lignes += [f"－ {d} : {court(val, 60)}" for d, val in retirees[:3]]
+            lignes += [f"＋ à partir du {d} : {court(val, 60)}" for d, val in ajoutees[:4]]
+        if not fichiers:
+            continue
+        n_alertes += 1
+        outils = outils_de(hs, mots)
+        alertes.append({
+            "categorie": "parametre-social-modifie",
+            "gravite": "haute" if nouvelle_date else "moyenne",
+            "titre": f"Barème modifié — {nom} ({fichiers} paramètre(s))",
+            "detail": (f"OpenFisca-France {avant} → {derniere} : des paramètres officiels de « {nom} » ont changé"
+                       + (" (nouvelle valeur avec une date d'effet)" if nouvelle_date else "") + ".\n\n"
+                       + "\n".join(lignes[:60])
+                       + (f"\n\nOutils de l'appli à revoir : {', '.join(outils)}" if outils else "")
+                       + "\n\nOpenFisca reprend les textes officiels (décrets, circulaires, délibérations) : "
+                         "vérifie la valeur à la source avant de modifier l'outil."),
+            "lien": f"https://github.com/openfisca/openfisca-france/tree/master/openfisca_france/parameters/{prefixe}",
+            "date_texte": aujourd_hui,
+            "_id": f"openfisca:{derniere}:{prefixe}",
+        })
+    mem["version"] = derniere
+    print(f"OpenFisca : {avant} → {derniere}, {n_alertes} domaine(s) modifié(s).")
+
+
 # ── commun ────────────────────────────────────────────────────────────────
 def _injoignable(etat, sante, nom, url, aujourd_hui):
     etat["echecs"] = etat.get("echecs", 0) + 1
@@ -478,7 +752,11 @@ def main():
     ap.add_argument("--memoire", required=True)
     ap.add_argument("--json")
     ap.add_argument("--diagnostic", action="store_true")
-    ap.add_argument("--sans", default="", help="sources à sauter : boss,parlement,dares")
+    ap.add_argument("--sans", default="", help="sources à sauter : boss,parlement,dares,fonds,openfisca")
+    ap.add_argument("--boss-capture", default="", help="boss-capture.json déposé par le Raccourci iPhone")
+    ap.add_argument("--boss-liste", default="", help="boss-pages.txt : pages que le Raccourci doit lire")
+    ap.add_argument("--hs", default="", help="dépôt de l'appli (pour nommer les outils à revoir)")
+    ap.add_argument("--empreintes-articles", default="", help="articles cités par l'écosystème")
     args = ap.parse_args()
 
     aujourd_hui = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -491,7 +769,8 @@ def main():
     alertes, sante = [], []
     if "boss" not in sans:
         try:
-            veille_boss(memoire, alertes, sante, aujourd_hui, args.diagnostic)
+            veille_boss(memoire, alertes, sante, aujourd_hui, args.diagnostic,
+                        capture=args.boss_capture, liste=args.boss_liste)
         except Exception as e:                       # noqa: BLE001
             print(f"BOSS : erreur {e}")
     if "parlement" not in sans:
@@ -499,6 +778,17 @@ def main():
             veille_parlement(memoire, alertes, sante, themes, aujourd_hui, args.diagnostic)
         except Exception as e:                       # noqa: BLE001
             print(f"Parlement : erreur {e}")
+    if "fonds" not in sans:
+        try:
+            veille_fonds_dila(args.droit, memoire, alertes, themes,
+                              articles_cites_ecosysteme(args.empreintes_articles), aujourd_hui, args.diagnostic)
+        except Exception as e:                       # noqa: BLE001
+            print(f"Fonds DILA : erreur {e}")
+    if "openfisca" not in sans:
+        try:
+            veille_openfisca(memoire, alertes, sante, args.hs, aujourd_hui, args.diagnostic)
+        except Exception as e:                       # noqa: BLE001
+            print(f"OpenFisca : erreur {e}")
     if "dares" not in sans:
         veille_dares(args.droit, sante, aujourd_hui)      # un état, pas un événement : pas de rétention
 

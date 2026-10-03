@@ -147,6 +147,60 @@ Nouvelle section « BOSS, Parlement, liste DARES » (script
   chaque lundi.
 - Une source injoignable deux passages de suite = alerte 📡.
 
+## Circulaires, Conseil constitutionnel, Conseil d'État, barèmes sociaux (02/10/2026)
+
+Dans la section « Sources officielles » :
+- **📨 Circulaires / instructions** (DGT, DSS…) : `dila-fonds.yml` (dépôt
+  `droit`, le mardi) aspire l'open data DILA et garde ce qui touche
+  l'écosystème dans `output/circulaires/`.
+- **🏛️ Conseil constitutionnel / Conseil d'État** : même aspirateur,
+  `output/constit/` et `output/jade/`. « CENSURE / ANNULATION » dans le titre
+  quand la décision fait disparaître un article ou un décret ; 🔴 si un
+  article cité par l'appli est en cause.
+- **🧮 Barèmes hors droit du travail** (chômage, prestations familiales,
+  minima sociaux, logement, retraite complémentaire, cotisations, CSG,
+  impôt, épargne) : à chaque nouvelle version d'OpenFisca-France (le modèle
+  socio-fiscal ouvert de l'État), les valeurs datées des 2 dernières années
+  sont comparées ; l'alerte donne les nouvelles valeurs et les outils de
+  l'appli à revoir.
+- **BOSS** : lu par le Raccourci iPhone (voir A-LIRE-raccourci-boss.md).
+
+## Où traiter chaque alerte + nouvelle présentation (03/10/2026)
+
+Chaque alerte dit maintenant **où elle se traite** dans l'écosystème, avec
+les fichiers à ouvrir (liens directs vers GitHub) :
+
+| Destination | Ce que ça couvre |
+|---|---|
+| 📱 Application | le module précis : M1 compteur annuel, M2 paye, M3 Fox, M4 DTE, M5 Mizuki, M6 Zenji, M7 Mimizuku, Taiko, règles des conventions (ccn/conventions-collectives.js), coquille (menu, sw.js) |
+| 🧰 105 outils | l'outil précis (Congés payés, Préavis, Chômage…) ou articles-loi.js |
+| 💶 GrillePaye | la convention (IDCC + nom) dans GrillePaye/ccn-data.json, le SMIC |
+| 📘 Guide | les pages exactes qui citent l'article ou la convention |
+| ⚖️ MonLegiTexte | site et fiches d'articles (souvent « automatique » : ça se met à jour seul) |
+| 🩺 Chaîne de veille | aspirateur, sources, tableau de bord : pannes à relancer |
+
+Une alerte peut viser plusieurs endroits (un arrêt sur L3141-3 → Fox, Zenji,
+outil Congés payés et les pages du guide qui citent L3141-3).
+
+**Comment c'est calculé** (`scripts/routage.py`, à chaque passage) : la
+catégorie de l'alerte, les fichiers qu'elle nomme, les articles de loi cités
+(index de TOUS les fichiers de l'appli et du guide), les conventions (IDCC :
+grille, règles HS/temps partiel, pages du guide si des montants changent),
+les outils que la source désigne elle-même (« Outils de l'appli à revoir »)
+et, en dernier, le thème du titre. Rien n'est inventé : une alerte sans
+destination reconnue tombe dans « Chaîne de veille › À trier ».
+
+**Écran** : Synthèse (statut, 4 indicateurs, tuiles « Où traiter », actions
+prioritaires filtrables par destination, sources surveillées avec leur état),
+onglet « Où traiter » (une destination → ses alertes rangées par module,
+outil, IDCC ou pages), Textes, Catégories, Historique, Règles. Export
+« Plan d'action par destination » : la liste à cocher, rangée par endroit,
+avec les fichiers.
+
+`mots-cles.json` : « durées maximales » seul faisait remonter un décret sur la
+conservation des données des CAF ; remplacé par « durée(s) maximale(s)
+du/de travail ».
+
 ## Limite qui reste
 
 Chaque convention n'est relue qu'environ toutes les 5 semaines ; l'arrêté

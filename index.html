@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Veille — tableau de bord</title>
+<title>Veille juridique — SimulHeures</title>
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <meta name="theme-color" content="#0D1116">
@@ -13,8 +13,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{
-  --ink:#0A0D11; --ink2:#12161B; --ink3:#1B2027; --edge:#2E3742;
-  --gold:#f0c040; --txt:#E8EDF2; --txt2:#8A97A5;
+  --ink:#0B0E12; --ink2:#11151A; --ink3:#171C22; --edge:#262E38;
+  --gold:#d9b45a; --txt:#E6EBF0; --txt2:#8994A1; --accent:#6EA8FE;
   --haute:#ff6b6b; --moyenne:#ffb454; --basse:#7d8a99; --ok:#4cd585; --bleu:#5aa9ff; --violet:#a88bff;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
@@ -25,11 +25,8 @@
 html{min-height:100%;background:#0A0D11;}
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:
-    radial-gradient(1100px 620px at 12% -8%, rgba(120,150,190,.16), transparent 60%),
-    radial-gradient(900px 520px at 88% 108%, rgba(190,150,110,.10), transparent 62%),
-    linear-gradient(168deg, #14181D 0%, #0D1116 46%, #0A0D11 100%);
-  background-attachment:fixed;
+  background:#0B0E12;
+  font-variant-numeric:tabular-nums;
   color:var(--txt);
   min-height:100vh; padding-bottom:calc(110px + env(safe-area-inset-bottom));
 }
@@ -212,6 +209,96 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 .onglet.active .oe{filter:none;opacity:1;}
 .onglet .pt{position:absolute;top:0;right:calc(50% - 20px);min-width:16px;height:16px;border-radius:99px;background:var(--haute);
   color:#fff;font-size:9.5px;font-weight:800;display:none;align-items:center;justify-content:center;padding:0 4px;}
+
+/* ══ Refonte « console » (03/10/2026) : présentation sobre, lisible par un tiers ══ */
+.hdr{padding:calc(14px + env(safe-area-inset-top)) 16px 10px;border-bottom:1px solid var(--edge);background:var(--ink2);}
+.hdr .marque{width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#24476e,#1a2f4a);display:flex;align-items:center;
+  justify-content:center;font-size:17px;flex:0 0 34px;border:1px solid #2f5580;}
+.hdr h1{font-size:15.5px;font-weight:750;letter-spacing:.1px;}
+.hdr .sub{font-size:11px;}
+.btn-mini{background:transparent;border:1px solid var(--edge);color:var(--txt);font-size:12px;font-weight:650;padding:7px 10px;border-radius:8px;}
+.sect{margin:18px 16px 8px;display:flex;align-items:baseline;justify-content:space-between;gap:10px;}
+.sect h2{font-size:11px;font-weight:750;letter-spacing:1.1px;text-transform:uppercase;color:var(--txt2);}
+.sect small{font-size:11px;color:var(--txt2);}
+.sect a,.sect button.lnk{font-size:12px;font-weight:650;color:var(--accent);background:none;border:none;cursor:pointer;text-decoration:none;}
+.statut{margin:14px 16px 4px;border:1px solid var(--edge);border-left:4px solid var(--ok);background:var(--ink2);border-radius:10px;padding:12px 14px;}
+.statut.regarder{border-left-color:var(--moyenne);} .statut.urgent{border-left-color:var(--haute);}
+.statut .s1{font-size:15px;font-weight:750;}
+.statut .s2{font-size:12px;color:var(--txt2);margin-top:4px;line-height:1.45;}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:10px 16px 0;}
+.kpi{background:var(--ink2);border:1px solid var(--edge);border-radius:10px;padding:10px 8px;text-align:left;cursor:pointer;color:var(--txt);}
+.kpi .v{font-size:21px;font-weight:780;line-height:1.1;}
+.kpi .l{font-size:10px;color:var(--txt2);margin-top:3px;text-transform:uppercase;letter-spacing:.5px;font-weight:650;}
+.kpi.h .v{color:var(--haute);} .kpi.m .v{color:var(--moyenne);} .kpi.n .v{color:var(--accent);} .kpi.o .v{color:var(--ok);}
+.kpi .mini{height:3px;border-radius:9px;background:rgba(255,255,255,.07);margin-top:6px;overflow:hidden;}
+.kpi .mini i{display:block;height:100%;background:var(--ok);}
+.dests{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 16px;}
+.dest{background:var(--ink2);border:1px solid var(--edge);border-radius:10px;padding:11px 12px;text-align:left;cursor:pointer;color:var(--txt);
+  display:flex;flex-direction:column;gap:6px;min-height:92px;}
+.dest .dh{display:flex;align-items:center;gap:8px;}
+.dest .de{font-size:16px;width:28px;height:28px;border-radius:7px;background:rgba(110,168,254,.10);display:flex;align-items:center;justify-content:center;}
+.dest .dn{font-size:13px;font-weight:720;line-height:1.2;}
+.dest .dc{display:flex;gap:6px;flex-wrap:wrap;font-size:11px;color:var(--txt2);}
+.dest .dc b{color:var(--txt);font-weight:750;}
+.dest .dsub{font-size:10.5px;color:var(--txt2);line-height:1.35;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.dest.h{border-color:rgba(255,107,107,.45);} .dest.m{border-color:rgba(255,180,84,.35);}
+.dest.vide-d{opacity:.6;}
+.pt-h{color:var(--haute);font-weight:750;} .pt-m{color:var(--moyenne);font-weight:750;}
+.carte{margin:0 16px 8px;background:var(--ink2);border-radius:10px;}
+.carte-hd{padding:12px 12px 10px;gap:10px;}
+.carte .ico{flex:0 0 34px;height:34px;border-radius:9px;font-size:17px;}
+.carte .quoi{font-size:13.5px;font-weight:720;}
+details.carte>summary .chev{line-height:34px;}
+.tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;}
+.zchips{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;}
+.zchip{font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(110,168,254,.12);color:#a9c8ff;border:1px solid rgba(110,168,254,.22);}
+.zchip.auto{background:transparent;color:var(--txt2);border-style:dashed;border-color:var(--edge);}
+.ou{margin:0 12px 10px;border:1px solid var(--edge);border-radius:9px;overflow:hidden;}
+.ou .ot{font-size:10.5px;font-weight:750;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);padding:8px 10px;background:rgba(110,168,254,.06);border-bottom:1px solid var(--edge);}
+.ou .oc{padding:9px 10px;border-bottom:1px solid var(--edge);}
+.ou .oc:last-child{border-bottom:none;}
+.ou .oc.auto{opacity:.65;}
+.ou .oz{font-size:10px;font-weight:750;color:var(--txt2);text-transform:uppercase;letter-spacing:.6px;}
+.ou .on{font-size:12.5px;font-weight:700;margin-top:1px;}
+.ou .oa{font-size:12px;color:#c9d3dd;margin-top:3px;line-height:1.4;}
+.ou .of{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}
+.ou .of a,.ou .of span{font-size:10.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;padding:2px 6px;border-radius:5px;
+  background:rgba(255,255,255,.05);border:1px solid var(--edge);color:#b9c6d4;text-decoration:none;word-break:break-all;}
+.ou .or{font-size:10.5px;color:var(--txt2);margin-top:4px;}
+.etapes{margin:0 12px 10px;background:rgba(255,255,255,.03);border-color:var(--edge);border-radius:9px;}
+.etapes .et{color:var(--txt2);}
+.pourquoi{margin:0 12px 10px;}
+.detail-brut{margin:0 12px 10px;}
+.actions{padding:4px 12px 12px;}
+.act{border-radius:8px;font-size:12px;padding:9px 8px;}
+.puce{border-radius:7px;font-size:12px;padding:7px 10px;}
+.puce.on{background:#E6EBF0;border-color:#E6EBF0;}
+.grp>summary{padding:10px 16px;}
+.grp .gsub{display:block;font-size:10.5px;font-weight:600;color:var(--txt2);margin-top:2px;}
+.couv{margin:0 16px;background:var(--ink2);border:1px solid var(--edge);border-radius:10px;overflow:hidden;}
+.couv .cl{display:flex;align-items:center;gap:10px;padding:8px 12px;border-bottom:1px solid var(--edge);font-size:12px;}
+.couv .cl:last-child{border-bottom:none;}
+.couv .cl .cn{flex:1;min-width:0;}
+.couv .cl .cn b{font-weight:700;}
+.couv .cl .cn small{display:block;color:var(--txt2);font-size:10.5px;margin-top:1px;}
+.couv .cl .cs{font-size:10.5px;font-weight:750;white-space:nowrap;}
+.cs.ok{color:var(--ok);} .cs.ko{color:var(--haute);} .cs.att{color:var(--moyenne);}
+.dest-hd{margin:6px 16px 10px;background:var(--ink2);border:1px solid var(--edge);border-radius:10px;padding:12px;}
+.dest-hd h3{font-size:16px;font-weight:760;display:flex;align-items:center;gap:8px;}
+.dest-hd p{font-size:12px;color:var(--txt2);margin-top:5px;line-height:1.45;}
+.dest-hd .lk{display:inline-block;margin-top:8px;font-size:12px;font-weight:650;color:var(--accent);text-decoration:none;}
+.onglet{font-size:10px;}
+.onglet .oe{font-size:19px;}
+.lex details{border-radius:9px;}
+.meteo{display:none;}
+.tuiles{margin:0 16px 14px;gap:8px;}
+.tuile{background:var(--ink2);border-radius:10px;min-height:84px;padding:11px 12px;}
+.tuile .te{font-size:18px;}
+.tuile .tn{font-size:12.5px;font-weight:720;}
+.bloc-t{margin:16px 16px 8px;font-size:13.5px;font-weight:750;}
+.resume-textes{margin:0 16px 4px;}
+.rt{background:var(--ink2);border-radius:10px;}
+.ligne{background:var(--ink2);border-radius:10px;}
 </style>
 </head>
 <body>
@@ -230,33 +317,50 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 <div id="app" style="display:none;">
 
 <div class="hdr">
-  <div class="logo">🦉</div>
-  <div><h1>Ma veille</h1><div class="sub" id="hdrSub">Chargement…</div></div>
+  <div class="marque">⚖️</div>
+  <div style="min-width:0"><h1>Veille juridique · SimulHeures</h1><div class="sub" id="hdrSub">Chargement…</div></div>
   <div class="sp"></div>
-  <button class="btn-mini" onclick="ouvrirRelance()">🔄 Relancer</button>
-  <button class="btn-mini" onclick="ouvrirExport()">📤</button>
+  <button class="btn-mini" onclick="ouvrirRelance()" aria-label="Relancer">⟳</button>
+  <button class="btn-mini" onclick="ouvrirExport()">Exporter</button>
 </div>
 
 <!-- ACCUEIL -->
 <section class="vue active" id="v-accueil">
-  <div id="meteo"></div>
-  <div id="progression"></div>
-  <div id="blocTextes"></div>
-  <div class="bloc-t">🎯 Ce que tu as à faire <small id="missionCompte"></small></div>
+  <div id="statut"></div>
+  <div class="kpis" id="kpis"></div>
+  <div class="sect"><h2>Où traiter</h2><button class="lnk" onclick="allerA('dests')">Détail ›</button></div>
+  <div class="dests" id="destsAccueil"></div>
+  <div class="sect"><h2>Actions prioritaires</h2><small id="missionCompte"></small></div>
   <div class="puces" id="puces"></div>
   <div id="mission"></div>
-  <div class="bloc-t">📚 Les mots à connaître</div>
+  <div id="blocTextes"></div>
+  <div class="sect"><h2>Sources surveillées</h2><small id="couvCompte"></small></div>
+  <div class="couv" id="couverture"></div>
+  <div class="sect"><h2>Glossaire</h2></div>
   <div class="lex" id="lexique"></div>
   <div class="pied" id="pied"></div>
 </section>
 
+<!-- DESTINATIONS (03/10/2026) : chaque alerte rangée là où elle se traite -->
+<section class="vue" id="v-dests">
+  <div class="sect"><h2>Destinations dans l'écosystème</h2><small>une alerte peut en viser plusieurs</small></div>
+  <div class="dests" id="destsGrille"></div>
+  <div class="pied" style="text-align:left;padding:14px 16px">Le routage est calculé à chaque passage : catégorie de l'alerte, fichiers nommés, articles de loi cités (index de tous les fichiers de l'appli et du guide), conventions (IDCC) et thème du texte. « Automatique » = se met à jour seul, à vérifier seulement.</div>
+</section>
+<section class="vue" id="v-dest">
+  <button class="retour" onclick="allerA('dests')">‹ Destinations</button>
+  <div id="destTete"></div>
+  <div class="puces" id="pucesDest"></div>
+  <div id="destCorps"></div>
+</section>
+
 <!-- THÈMES -->
 <section class="vue" id="v-themes">
-  <div class="bloc-t">🗂️ Tout, rangé par thème <small>touche une tuile</small></div>
+  <div class="sect"><h2>Par catégorie de contrôle</h2><small>touche une tuile</small></div>
   <div class="tuiles" id="tuiles"></div>
 </section>
 <section class="vue" id="v-theme">
-  <button class="retour" onclick="allerA('themes')">‹ Thèmes</button>
+  <button class="retour" onclick="allerA('themes')">‹ Catégories</button>
   <div class="bloc-t" id="themeTitre"></div>
   <div id="themeCorps"></div>
 </section>
@@ -287,15 +391,17 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 </section>
 
 <nav class="onglets">
-  <button class="onglet active" data-v="accueil" onclick="allerA('accueil')"><span class="oe">🏠</span>Accueil<span class="pt" id="ptAccueil"></span></button>
+  <button class="onglet active" data-v="accueil" onclick="allerA('accueil')"><span class="oe">📊</span>Synthèse<span class="pt" id="ptAccueil"></span></button>
+  <button class="onglet" data-v="dests" onclick="allerA('dests')"><span class="oe">🧭</span>Où traiter</button>
   <button class="onglet" data-v="textes" onclick="allerA('textes')"><span class="oe">📰</span>Textes<span class="pt" id="ptTextes"></span></button>
-  <button class="onglet" data-v="themes" onclick="allerA('themes')"><span class="oe">🗂️</span>Thèmes</button>
+  <button class="onglet" data-v="themes" onclick="allerA('themes')"><span class="oe">🗂️</span>Catégories</button>
   <button class="onglet" data-v="historique" onclick="allerA('historique')"><span class="oe">📜</span>Historique</button>
   <button class="onglet" data-v="regles" onclick="allerA('regles')"><span class="oe">📋</span>Règles</button>
 </nav>
 <div class="sheet-fond" id="sheetFond" onclick="fermerExport()"></div>
 <div class="sheet" id="sheet">
   <div class="sheet-t">📤 Exporter mes tâches</div>
+  <button class="sheet-b" onclick="exporterTaches('plan')">🧭 Plan d'action par destination (.txt)<small>Appli, outils, GrillePaye, guide, MonLegiTexte, veille : quoi faire, où, quels fichiers</small></button>
   <button class="sheet-b" onclick="exporterTaches('copier')">📋 Copier la liste (texte)<small>Pour la coller dans une conversation</small></button>
   <button class="sheet-b" onclick="exporterTaches('json')">🧾 Fichier .json<small>Tout le détail, à envoyer tel quel</small></button>
   <button class="sheet-b" onclick="exporterTaches('txt')">📄 Fichier .txt<small>Même liste, en texte simple</small></button>
@@ -327,7 +433,7 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 // Thèmes (sections de donnees.json) : nom simple + emoji + phrase d'explication.
 const THEMES = {
   nouveaux:{e:'📰', n:'Nouveaux textes sur tes sujets', x:"Code, conventions, Journal officiel : tout texte nouveau qui touche tes sujets (mots-cles.json)."},
-  sources:{e:'🏛️', n:'BOSS, Parlement, liste DARES', x:"Doctrine URSSAF (Bulletin officiel de la Sécurité sociale), projets de loi pas encore votés (dont le budget de la Sécu), et fraîcheur de la liste officielle des conventions."},
+  sources:{e:'🏛️', n:'Sources officielles', x:"BOSS (doctrine URSSAF), projets de loi pas encore votés (dont le budget de la Sécu), circulaires et instructions des ministères, Conseil constitutionnel, Conseil d'État, barèmes sociaux hors droit du travail (chômage, famille, retraite…) et liste officielle des conventions."},
   regles:{e:'📐', n:'Règles et montants officiels', x:"Une nouvelle version des règles de calcul du Code du travail numérique ou de l'URSSAF change une valeur : SMIC, plafond, préavis, indemnité…"},
   accords:{e:'🏢', n:"Accords d'entreprise", x:"Accords d'entreprise récents sur tes sujets, regroupés par thème. Pour info."},
   croisement:{e:'🔔', n:'Nouveaux textes pour une convention en attente', x:"Un texte vient de paraître pour une convention dont la grille attend une mise à jour."},
@@ -452,6 +558,15 @@ const GUIDE = {
   'dares-perime':{e:'🗂️', quoi:"{cle}",
     pourquoi:"La liste officielle des conventions collectives (DARES) qui sert à trouver les nouvelles conventions et les fusions est trop ancienne.",
     etapes:["Regarde le dernier run de l'aspirateur (lundi) : la ligne « Fichier DARES utilisé » dit ce qui a été trouvé.","S'il n'a rien trouvé : télécharge le fichier sur le site du ministère et pose-le dans droit/ccn/Dares_Suivi_DERNIER.xlsx."]},
+  'nouvelle-circulaire':{e:'📨', quoi:"{cle}",
+    pourquoi:"Un ministère (Travail, Sécurité sociale…) a publié une circulaire ou une instruction sur un de tes sujets : c'est sa façon officielle d'appliquer la règle, que les inspecteurs et les caisses suivent.",
+    etapes:["Lis le titre et l'extrait dans le détail.","Ouvre le texte (bouton ci-dessous).","Si l'appli applique la règle autrement, ou si un montant y est fixé : mets à jour le module ou l'outil."]},
+  'decision-haute-juridiction':{e:'🏛️', quoi:"{cle}",
+    pourquoi:"Le Conseil constitutionnel ou le Conseil d'État a rendu une décision sur un de tes sujets. S'il y a CENSURE / ANNULATION, un article ou un décret disparaît, parfois du jour au lendemain.",
+    etapes:["Regarde la solution et les articles cités dans le détail.","Si un article que l'appli cite est censuré ou un décret annulé : vérifie la date d'effet et corrige le calcul ou la citation.","Sinon : c'est fait."]},
+  'parametre-social-modifie':{e:'🧮', quoi:"{cle}",
+    pourquoi:"Un barème officiel hors droit du travail a changé (chômage, prestations familiales, retraite complémentaire, cotisations, impôt…). Les outils de l'appli qui l'utilisent affichent peut-être l'ancienne valeur.",
+    etapes:["Lis les nouvelles valeurs et leur date d'effet dans le détail.","Vérifie la valeur à la source officielle (le lien mène aux paramètres et à leurs références).","Mets à jour les outils cités en fin de détail."]},
   'source-injoignable':{e:'📡', quoi:"{cle}",
     pourquoi:"La veille n'arrive plus à lire cette source officielle : tant que ça dure, rien n'en remonte.",
     etapes:["Ouvre le lien pour voir si le site a changé d'adresse.","Relance « Régénérer » et regarde le journal de veille-sources-officielles.py.","Si l'adresse a changé : envoie-la moi."]},
@@ -465,18 +580,20 @@ const GUIDE = {
 
 // Mots à connaître : langage simple.
 const LEXIQUE = [
+  ['Où traiter', "Pour chaque alerte, l'endroit de l'écosystème où elle se corrige : Application (et le module), 105 outils, GrillePaye, Guide, MonLegiTexte ou chaîne de veille — avec les fichiers à ouvrir. Une alerte peut viser plusieurs endroits."],
+  ['Automatique', "La destination se met à jour seule (ex. fiches d'articles de MonLegiTexte) : à vérifier, rien à réécrire."],
   ['IDCC', "Le numéro d'une convention collective. Chaque métier ou branche a le sien (ex. 573 = commerce de gros)."],
   ['Grille de salaires', "Le tableau des salaires minimum d'une convention, niveau par niveau. GrillePaye les affiche."],
   ['SMIC', "Le salaire minimum légal. Personne ne peut être payé en dessous, même si la convention prévoit moins."],
   ['Le fonds (dépôt droit)', "La copie des textes officiels (Légifrance) que l'aspirateur récupère lundi et jeudi."],
   ['Exception', "Une ligne dans exceptions.json qui dit « celle-là, je l'ai vue, arrête de me la montrer »."],
   ['Hors-ligne / précache', "La liste des fichiers gardés dans le téléphone (sw.js) pour que l'appli marche sans réseau."],
-  ['Gravité', "🔴 À faire vite · 🟠 À regarder quand tu peux · ⚪ Pour info, rien d'urgent."],
+  ['Gravité', "🔴 Critique · 🟠 À traiter · ⚪ Pour info."],
   ['Mots-clés (mots-cles.json)', "La liste de tes sujets (heures sup, temps partiel, forfait jours…). Tout texte nouveau qui contient une de ces expressions remonte dans 📰 Textes. Modifiable sur GitHub, comme exceptions.json."],
   ['Ne plus voir', "Copie une exception à coller dans exceptions.json : l'alerte disparaît au passage suivant. « C'est fait » ne vaut que sur ce téléphone."],
 ];
 
-const NIVEAU = {haute:{t:'🔴 À faire vite',o:0}, moyenne:{t:'🟠 À regarder',o:1}, basse:{t:'⚪ Pour info',o:2}};
+const NIVEAU = {haute:{t:'🔴 Critique',o:0}, moyenne:{t:'🟠 À traiter',o:1}, basse:{t:'⚪ Pour info',o:2}};
 
 // Anciens conseils courts : repli pour les types sans guide détaillé.
 const CONSEILS = {
@@ -509,6 +626,162 @@ const CONSEILS = {
 const DEPOT_HS = 'https://github.com/tonytonic/hs/blob/Android-cloudfare-production/';
 const EDIT_EXCEPTIONS = 'https://github.com/anthonychauvel/tableaudebord/edit/main/exceptions.json';
 const CLE_FAIT = 'veille_fait_v1';
+
+// ── Destinations dans l'écosystème (03/10/2026) ────────────────────────────
+// Chaque alerte porte « cibles » (calculées par scripts/routage.py) : zone,
+// sous-cible (module, outil, IDCC, pages…), fichiers à ouvrir, action.
+const DEPOT_GUIDE = 'https://github.com/tonytonic/Guide/blob/main/';
+const DEPOT_DROIT = 'https://github.com/anthonychauvel/droit';
+const DEPOT_VEILLE = 'https://github.com/anthonychauvel/tableaudebord';
+const ZONES = {
+  app:{e:'📱', n:'Application', c:'Appli', x:"Les modules de l'appli SimulHeures (compteur annuel, paye, Fox, DTE, Mizuki, Zenji, Mimizuku, Taiko), les règles des conventions et la coquille (menu, hors ligne).", lien:'https://github.com/tonytonic/hs/tree/Android-cloudfare-production'},
+  outils:{e:'🧰', n:'105 outils', c:'Outils', x:"Les simulateurs et fiches de la rubrique Outils, et leur référentiel d'articles (articles-loi.js).", lien:'https://github.com/tonytonic/hs/tree/Android-cloudfare-production/outils'},
+  grilles:{e:'💶', n:'GrillePaye', c:'GrillePaye', x:"Les grilles de salaires des conventions (GrillePaye/ccn-data.json) et la valeur du SMIC.", lien:DEPOT_HS+'GrillePaye/ccn-data.json'},
+  guide:{e:'📘', n:'Guide', c:'Guide', x:"Les pages du guide (dépôt Guide) : montants, règles et articles cités.", lien:'https://github.com/tonytonic/Guide'},
+  mlt:{e:'⚖️', n:'MonLegiTexte', c:'MonLegiTexte', x:"Le site des textes officiels (dépôt droit). Les fiches d'articles se mettent à jour seules : on vérifie, on ne réécrit pas.", lien:DEPOT_DROIT},
+  veille:{e:'🩺', n:'Chaîne de veille', c:'Veille', x:"L'aspirateur, les sources officielles et ce tableau de bord : pannes à relancer, sources à réparer.", lien:DEPOT_VEILLE+'/actions'},
+};
+const ORDRE_ZONES = ['app','outils','grilles','guide','mlt','veille'];
+// Repli pour une alerte sans routage (historique ancien, routage en panne).
+const ZONE_SECTION = {grilles:'grilles',smic:'grilles',age:'grilles',croisement:'grilles',droit:'mlt',noindex:'mlt',contenu:'mlt',
+  outils:'outils',guide:'guide',structure:'guide',modules:'app',pages:'app',syntaxe:'app',changements:'app',citations:'app',
+  nouveaux:'veille',accords:'veille',regles:'outils',sources:'veille'};
+function ciblesDe(a){
+  if(a.cibles && a.cibles.length) return a.cibles;
+  var z=ZONE_SECTION[a._theme]||'veille';
+  return [{zone:z, cible:'(non routé)', fichiers:[], plus:0, action:'', raison:'', auto:false}];
+}
+function zonesDe(a){
+  if(a.zones && a.zones.length) return a.zones;
+  return ciblesDe(a).map(function(c){return c.zone;}).filter(function(z,i,t){return t.indexOf(z)===i;});
+}
+function lienFichier(zone, f){
+  if(!f) return '';
+  if(zone==='guide') return DEPOT_GUIDE+f;
+  if(zone==='mlt') return DEPOT_DROIT;
+  if(zone==='veille') return DEPOT_VEILLE;
+  if(f.indexOf('*')>=0) return DEPOT_HS.replace('/blob/','/tree/')+f.slice(0,f.lastIndexOf('/'));
+  return DEPOT_HS+f;
+}
+function chipsZones(a){
+  var C=ciblesDe(a), vus={};
+  C.forEach(function(c){var k=c.zone+(c.auto?'~':'');vus[k]=vus[k]||{z:c.zone,auto:c.auto,n:0};vus[k].n+=1;});
+  return '<div class="zchips">'+Object.keys(vus).map(function(k){var v=vus[k],Z=ZONES[v.z]||{e:'•',c:v.z};
+    return '<span class="zchip'+(v.auto?' auto':'')+'">'+Z.e+' '+esc(Z.c)+(v.n>1?' ×'+v.n:'')+(v.auto?' · auto':'')+'</span>';}).join('')+'</div>';
+}
+function blocOuTraiter(a){
+  var C=ciblesDe(a);
+  if(!C.length) return '';
+  return '<div class="ou"><div class="ot">Où traiter · '+C.filter(function(c){return !c.auto;}).length+' endroit(s)</div>'+C.map(function(c){
+    var Z=ZONES[c.zone]||{n:c.zone,e:'•'};
+    var fs=(c.fichiers||[]).map(function(f){var u=lienFichier(c.zone,f);
+      var nom=f.length>46?'…'+f.slice(-44):f;
+      return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(nom)+'</a>':'<span>'+esc(nom)+'</span>';}).join('')
+      +(c.plus?'<span>+'+c.plus+' autre(s)</span>':'');
+    return '<div class="oc'+(c.auto?' auto':'')+'"><div class="oz">'+Z.e+' '+esc(Z.n)+(c.auto?' · automatique':'')+'</div>'
+      +'<div class="on">'+esc(c.cible)+'</div>'
+      +(c.action?'<div class="oa">'+esc(c.action)+'</div>':'')
+      +(fs?'<div class="of">'+fs+'</div>':'')
+      +(c.raison?'<div class="or">Pourquoi ici : '+esc(c.raison)+'</div>':'')+'</div>';
+  }).join('')+'</div>';
+}
+
+// Couverture : les sources surveillées et leur état (d'après les alertes de santé).
+const SANTE_CATS = ['etape-aspirateur-en-echec','run-aspirateur-en-echec','run-en-retard','fonds-fige','source-injoignable','dares-perime','site-injoignable','rattrapage-fonds','audit-introuvable','audit-illisible'];
+const SOURCES = [
+  {n:'Codes du travail et de la sécurité sociale', d:'Légifrance · articles cités par l’écosystème', rx:/\bcode\b|legi|contenu/i, f:function(a){return a.fonds==='Code'||a._theme==='contenu'||a._theme==='citations';}},
+  {n:'Journal officiel', d:'Légifrance JORF · décrets, arrêtés d’extension', rx:/jorf|journal officiel|\bJO\b/i, f:function(a){return a.fonds==='JORF';}},
+  {n:'Conventions collectives', d:'Légifrance KALI · avenants des conventions', rx:/kali|\bccn\b|avenants/i, f:function(a){return a.fonds==='CCN'&&!/BOCC/.test(a.titre||'');}},
+  {n:'Bulletin officiel des conventions (BOCC)', d:'DILA · grilles publiées en PDF', rx:/bocc/i, f:function(a){return /BOCC/.test(a.titre||'');}},
+  {n:'Jurisprudence', d:'Cour de cassation, cours d’appel', rx:/juris|cassation|appel/i, f:function(a){return a.fonds==='Juris';}},
+  {n:'Accords d’entreprise', d:'Légifrance ACCO', rx:/acco|accords? d.entreprise/i, f:function(a){return a.fonds==='ACCO';}},
+  {n:'BOSS (doctrine URSSAF)', d:'boss.gouv.fr · capture par Raccourci iPhone', rx:/boss/i, f:function(a){return a.categorie==='boss-modifie';}},
+  {n:'Parlement', d:'Sénat, Assemblée nationale · projets et propositions de loi', rx:/parlement|s[ée]nat|assembl/i, f:function(a){return a.categorie==='texte-parlement';}},
+  {n:'Circulaires et instructions', d:'DILA · DGT, DSS, ministères', rx:/circulaire/i, f:function(a){return a.categorie==='nouvelle-circulaire';}},
+  {n:'Conseil constitutionnel, Conseil d’État', d:'DILA CONSTIT, JADE · QPC, annulations', rx:/constit|jade|conseil d.[ée]tat/i, f:function(a){return a.categorie==='decision-haute-juridiction';}},
+  {n:'Règles de calcul officielles', d:'Code du travail numérique, URSSAF', rx:/cdtn|urssaf|r[èe]gles officielles/i, f:function(a){return a.categorie==='regle-officielle-modifiee';}},
+  {n:'Barèmes sociaux', d:'OpenFisca-France · chômage, famille, retraite, impôt', rx:/openfisca/i, f:function(a){return a.categorie==='parametre-social-modifie';}},
+  {n:'Liste officielle des conventions', d:'DARES', rx:/dares/i, f:function(a){return a.categorie==='dares-perime'||a.categorie==='hors-referentiel-dares';}},
+  {n:'Écosystème SimulHeures', d:'Appli, 105 outils, GrillePaye, guide, MonLegiTexte · pages ouvertes à chaque passage', rx:/monlegitexte|noindex|pages?/i, f:function(a){return ['pages','syntaxe','structure','guide','modules','outils','noindex'].indexOf(a._theme)>=0;}},
+];
+function rendreCouverture(toutes){
+  var sante=toutes.filter(function(a){return SANTE_CATS.indexOf(a.categorie)>=0;});
+  var nInc=0;
+  document.getElementById('couverture').innerHTML=SOURCES.map(function(src){
+    var pb=sante.filter(function(a){return src.rx.test((a.titre||'')+' '+(a.detail||'').slice(0,300));});
+    var n=toutes.filter(src.f).length;
+    var cls='ok', t='Surveillé';
+    if(pb.some(function(a){return a.gravite==='haute';})){cls='ko';t='Incident';nInc++;}
+    else if(pb.length){cls='att';t='À vérifier';}
+    return '<div class="cl"><div class="cn"><b>'+esc(src.n)+'</b><small>'+esc(src.d)+(n?' · '+n+' signalement'+(n>1?'s':''):'')+'</small></div><div class="cs '+cls+'">'+(cls==='ok'?'● ':'▲ ')+t+'</div></div>';
+  }).join('');
+  document.getElementById('couvCompte').textContent=SOURCES.length+' sources'+(nInc?' · '+nInc+' incident(s)':'');
+}
+
+// Compte par destination : à traiter (rouge/orange non fait), critiques, total.
+function statsZones(toutes){
+  var st={};ORDRE_ZONES.forEach(function(z){st[z]={tot:0,af:0,h:0,sub:{}};});
+  toutes.forEach(function(a){
+    var fait=!!FAIT[cleAlerte(a)], af=!fait&&a.gravite!=='basse';
+    ciblesDe(a).forEach(function(c){
+      var S=st[c.zone]; if(!S||c.auto) return;
+      S.sub[c.cible]=(S.sub[c.cible]||0)+(af?1:0);
+    });
+    zonesDe(a).forEach(function(z){var S=st[z];if(!S)return;S.tot++;if(af)S.af++;if(af&&a.gravite==='haute')S.h++;});
+  });
+  return st;
+}
+function tuileZone(z,S,detail){
+  var Z=ZONES[z], cls=S.h?' h':(S.af?' m':(S.tot?'':' vide-d'));
+  var subs=Object.keys(S.sub).filter(function(k){return S.sub[k];}).sort(function(a,b){return S.sub[b]-S.sub[a];});
+  return '<button class="dest'+cls+'" onclick="ouvrirDestination(\''+z+'\')"><div class="dh"><div class="de">'+Z.e+'</div><div class="dn">'+esc(Z.n)+'</div></div>'
+    +'<div class="dc"><span><b>'+S.af+'</b> à traiter</span>'+(S.h?'<span class="pt-h">'+S.h+' critique'+(S.h>1?'s':'')+'</span>':'')+'<span>'+S.tot+' au total</span></div>'
+    +(detail&&subs.length?'<div class="dsub">'+subs.slice(0,4).map(function(k){return esc(k)+' ('+S.sub[k]+')';}).join(' · ')+'</div>'
+      :(detail?'<div class="dsub">'+esc(Z.x)+'</div>':''))+'</button>';
+}
+function rendreDestinations(){
+  var st=statsZones(toutesAlertes());
+  var h=ORDRE_ZONES.map(function(z){return tuileZone(z,st[z],false);}).join('');
+  document.getElementById('destsAccueil').innerHTML=h;
+  document.getElementById('destsGrille').innerHTML=ORDRE_ZONES.map(function(z){return tuileZone(z,st[z],true);}).join('');
+}
+let DEST_OUVERTE=null, DEST_FILTRE='afaire';
+function ouvrirDestination(z){DEST_OUVERTE=z;DEST_FILTRE='afaire';rendreDestination();allerA('dest');}
+function choisirFiltreDest(f){DEST_FILTRE=f;var y=window.scrollY;rendreDestination();window.scrollTo(0,y);}
+function rendreDestination(){
+  var z=DEST_OUVERTE, Z=ZONES[z]; if(!Z) return;
+  var toutes=toutesAlertes().filter(function(a){return zonesDe(a).indexOf(z)>=0||ciblesDe(a).some(function(c){return c.zone===z;});});
+  var st=statsZones(toutes)[z];
+  document.getElementById('destTete').innerHTML='<div class="dest-hd"><h3>'+Z.e+' '+esc(Z.n)+'</h3><p>'+esc(Z.x)+'</p>'
+    +'<p><b style="color:var(--txt)">'+st.af+'</b> à traiter · '+(st.h?'<span class="pt-h">'+st.h+' critique(s)</span> · ':'')+toutes.length+' alerte(s) au total</p>'
+    +'<a class="lk" href="'+esc(Z.lien)+'" target="_blank" rel="noopener">Ouvrir le dépôt ›</a></div>';
+  var F=[['afaire','À traiter'],['haute','Critiques'],['nouveau','Nouveau'],['tout','Tout (y c. pour info)']];
+  var filt={afaire:function(a){return a.gravite!=='basse'&&!FAIT[cleAlerte(a)];},haute:function(a){return a.gravite==='haute'&&!FAIT[cleAlerte(a)];},
+            nouveau:function(a){return !!a.nouveau;},tout:function(){return true;}};
+  document.getElementById('pucesDest').innerHTML=F.map(function(f){var n=toutes.filter(filt[f[0]]).length;
+    return '<button class="puce'+(DEST_FILTRE===f[0]?' on':'')+'" onclick="choisirFiltreDest(\''+f[0]+'\')">'+f[1]+'<b>'+n+'</b></button>';}).join('');
+  var l=toutes.filter(filt[DEST_FILTRE]);
+  // Regroupé par sous-cible (module, outil, IDCC, pages du guide…).
+  var grp={}, ordre=[];
+  l.forEach(function(a){
+    var cs=ciblesDe(a).filter(function(c){return c.zone===z;});
+    if(!cs.length) cs=[{cible:'Autres',fichiers:[]}];
+    cs.forEach(function(c){
+      if(!grp[c.cible]){grp[c.cible]={a:[],f:{}};ordre.push(c.cible);}
+      if(grp[c.cible].a.indexOf(a)<0) grp[c.cible].a.push(a);
+      (c.fichiers||[]).forEach(function(f){grp[c.cible].f[f]=1;});
+    });
+  });
+  ordre.sort(function(x,y){return grp[y].a.filter(function(a){return a.gravite==='haute';}).length-grp[x].a.filter(function(a){return a.gravite==='haute';}).length||grp[y].a.length-grp[x].a.length;});
+  document.getElementById('destCorps').innerHTML=ordre.length?ordre.map(function(k,i){
+    var G=grp[k], fs=Object.keys(G.f);
+    G.a.sort(function(a,b){return priorite(a)-priorite(b);});
+    return '<details class="grp"'+(i<3?' open':'')+'><summary><span class="gl">'+esc(k)
+      +(fs.length?'<span class="gsub">'+esc(fs.slice(0,3).join(' · '))+(fs.length>3?' +'+(fs.length-3):'')+'</span>':'')
+      +'</span><span class="grp-n">'+G.a.length+'</span></summary>'+G.a.map(function(a){return carte(a);}).join('')+'</details>';
+  }).join(''):'<div class="vide">Rien dans cette destination pour ce filtre.</div>';
+}
+
 
 function esc(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
@@ -546,15 +819,16 @@ function carte(a, ouverte){
     + (a.etiquettes||[]).map(function(e){return '<span class="tag etiq">'+esc(e)+'</span>';}).join('')
     + (a.fonds&&FONDS_E[a.fonds]?'<span class="tag fonds">'+FONDS_E[a.fonds]+'</span>':'')
     + (a.theme?'<span class="tag">'+esc(a.theme)+'</span>':(a._theme&&THEMES[a._theme]?'<span class="tag">'+THEMES[a._theme].e+' '+esc(THEMES[a._theme].n)+'</span>':''))
-    + '</div></div><span class="chev">›</span></summary>'
-    + (g&&g.pourquoi ? '<div class="pourquoi">💡 '+esc(g.pourquoi)+'</div>' : '')
-    + '<div class="etapes"><div class="et">👣 Que faire</div><ol>'+etapes.map(function(e){return '<li>'+esc(e)+'</li>';}).join('')+'</ol></div>'
+    + '</div>'+chipsZones(a)+'</div><span class="chev">›</span></summary>'
+    + (g&&g.pourquoi ? '<div class="pourquoi">'+esc(g.pourquoi)+'</div>' : '')
+    + blocOuTraiter(a)
+    + '<div class="etapes"><div class="et">Méthode</div><ol>'+etapes.map(function(e){return '<li>'+esc(e)+'</li>';}).join('')+'</ol></div>'
     + (a.detail ? '<details class="detail-brut"'+(detailOuvert?' open':'')+'><summary>Voir le détail</summary><div class="txt">'+esc(a.detail)+'</div></details>' : '')
     + '<div class="actions">'
-    + '<button class="act ok" onclick="basculerFait(this)">'+(fait?'↩️ Pas encore fait':'✅ C\'est fait')+'</button>'
+    + '<button class="act ok" onclick="basculerFait(this)">'+(fait?'↩ Rouvrir':'✓ Marquer traité')+'</button>'
     + (a.lien ? '<a class="act lien" href="'+esc(a.lien)+'" target="_blank" rel="noopener">'+lienTxt+'</a>' : '')
     + (fichier ? '<a class="act lien" href="'+DEPOT_HS+esc(fichier)+'" target="_blank" rel="noopener">📂 Ouvrir le fichier</a>' : '')
-    + '<button class="act" onclick="copierException(this)">🙈 Ne plus voir</button>'
+    + '<button class="act" onclick="copierException(this)">Classer sans suite</button>'
     + '</div></details>';
   return html;
 }
@@ -563,7 +837,7 @@ function trouverAlerte(k){var r=null;(window.__DONNEES.sections||[]).forEach(fun
 
 function basculerFait(btn){
   var k=btn.closest('.carte').getAttribute('data-k');
-  if(FAIT[k]){delete FAIT[k];toast('Remis dans la liste');} else {FAIT[k]=new Date().toISOString().slice(0,10);toast('Bien joué ! 🎉');}
+  if(FAIT[k]){delete FAIT[k];toast('Rouvert');} else {FAIT[k]=new Date().toISOString().slice(0,10);toast('Marqué traité');}
   ecrireFait(FAIT);rendreTout();
 }
 
@@ -586,13 +860,14 @@ function priorite(a){return (a.nouveau?0:10)+((NIVEAU[a.gravite]||NIVEAU.basse).
 // le nouveau, les textes ou les articles de loi.
 const FILTRES = [
   {k:'tout', l:'Tout', f:function(a){return true;}},
-  {k:'vite', l:'🔴 Vite', f:function(a){return a.gravite==='haute';}},
-  {k:'nouveau', l:'🆕 Nouveau', f:function(a){return !!a.nouveau;}},
-  {k:'textes', l:'📰 Textes', f:function(a){return a._theme==='nouveaux'||a._theme==='croisement'||a._theme==='regles';}},
-  {k:'robot', l:'🩺 Aspirateur', f:function(a){return a._theme==='droit';}},
-  {k:'articles', l:'⚖️ Articles', f:function(a){return a._theme==='contenu'||a._theme==='citations'||a._theme==='outils';}},
-  {k:'grilles', l:'💶 Grilles', f:function(a){return a._theme==='grilles'||a._theme==='smic'||a._theme==='age';}},
-  {k:'appli', l:'📱 Appli', f:function(a){return ['modules','pages','syntaxe','structure','guide','noindex'].indexOf(a._theme)>=0;}},
+  {k:'vite', l:'Critiques', f:function(a){return a.gravite==='haute';}},
+  {k:'nouveau', l:'Nouveaux', f:function(a){return !!a.nouveau;}},
+  {k:'z-app', l:'📱 Appli', f:function(a){return zonesDe(a).indexOf('app')>=0;}},
+  {k:'z-outils', l:'🧰 Outils', f:function(a){return zonesDe(a).indexOf('outils')>=0;}},
+  {k:'z-grilles', l:'💶 GrillePaye', f:function(a){return zonesDe(a).indexOf('grilles')>=0;}},
+  {k:'z-guide', l:'📘 Guide', f:function(a){return zonesDe(a).indexOf('guide')>=0;}},
+  {k:'z-mlt', l:'⚖️ MonLegiTexte', f:function(a){return zonesDe(a).indexOf('mlt')>=0;}},
+  {k:'z-veille', l:'🩺 Veille', f:function(a){return zonesDe(a).indexOf('veille')>=0;}},
 ];
 let FILTRE='tout', NB_MONTRES=10;
 function choisirFiltre(k){FILTRE=k;NB_MONTRES=10;rendreAccueil();}
@@ -600,32 +875,35 @@ function voirPlus(){NB_MONTRES+=10;rendreAccueil();}
 
 function rendreAccueil(){
   var toutes=toutesAlertes();
-  // « À faire » = rouge ou orange. Les points ⚪ « pour info » (fichiers modifiés,
-  // accords d'entreprise…) restent dans Thèmes et Textes, jamais dans la liste
-  // du jour — même quand ils sont nouveaux : c'est ce qui la noyait.
+  // « À traiter » = rouge ou orange. Les points ⚪ « pour info » restent dans
+  // Catégories, Textes et Où traiter (filtre « Tout »), jamais dans les priorités.
   var aFaire=toutes.filter(function(a){return a.gravite!=='basse';});
   var restantes=aFaire.filter(function(a){return !FAIT[cleAlerte(a)];});
   var urgentes=restantes.filter(function(a){return a.gravite==='haute';});
-  var nouv=restantes.filter(function(a){return a.nouveau;});
+  var nouv=toutes.filter(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];});
   var etat = urgentes.length ? 'urgent' : (restantes.length ? 'regarder' : 'calme');
-  var M = {
-    calme:{e:'😌', h:'Tout est calme', p:"Rien d'important à faire. La veille continue de surveiller pour toi lundi, mercredi et jeudi."},
-    regarder:{e:'🧐', h:restantes.length+' chose'+(restantes.length>1?'s':'')+' à regarder', p:"Rien d'urgent, mais quelques points méritent un coup d'œil quand tu as un moment."},
-    urgent:{e:'🚨', h:urgentes.length+' chose'+(urgentes.length>1?'s':'')+' à faire vite', p:"Commence par la première carte ci-dessous : touche-la pour voir quoi faire."},
-  }[etat];
-  if(nouv.length) M.p = '🆕 '+nouv.length+' nouveauté'+(nouv.length>1?'s':'')+' depuis le dernier passage. '+M.p;
-  document.getElementById('meteo').innerHTML='<div class="meteo '+etat+'"><div class="bulle"></div><div class="emo">'+M.e+'</div><h2>'+esc(M.h)+'</h2><p>'+esc(M.p)+'</p>'
-    +(restantes.length?'<button class="cta" onclick="choisirFiltre(\''+(urgentes.length?'vite':'tout')+'\');document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})">👉 Par où commencer</button>':'<button class="cta" onclick="allerA(\'themes\')">🗂️ Voir tout par thème</button>')+'</div>';
+  var st=statsZones(toutes), zonesTouchees=ORDRE_ZONES.filter(function(z){return st[z].af;});
+  var S1 = {calme:'Aucune action requise', regarder:restantes.length+' point'+(restantes.length>1?'s':'')+' à traiter, aucun critique',
+            urgent:urgentes.length+' action'+(urgentes.length>1?'s':'')+' critique'+(urgentes.length>1?'s':'')+' · '+restantes.length+' à traiter'}[etat];
+  var S2 = zonesTouchees.length ? 'Concerne : '+zonesTouchees.map(function(z){return ZONES[z].n+' ('+st[z].af+')';}).join(', ')+'.'
+           : 'La veille surveille '+SOURCES.length+' sources lundi, mercredi et jeudi.';
+  document.getElementById('statut').innerHTML='<div class="statut '+etat+'"><div class="s1">'+esc(S1)+'</div><div class="s2">'+esc(S2)+'</div></div>';
   var faits=aFaire.length-restantes.length, pc=aFaire.length?Math.round(100*faits/aFaire.length):100;
-  document.getElementById('progression').innerHTML=aFaire.length?'<div class="prog"><div class="l"><span>Ta progression</span><span><b>'+faits+'</b> / '+aFaire.length+' traitée'+(faits>1?'s':'')+'</span></div><div class="barre"><i style="width:'+pc+'%"></i></div></div>':'';
+  document.getElementById('kpis').innerHTML=
+     '<button class="kpi m" onclick="choisirFiltre(\'tout\');document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})"><div class="v">'+restantes.length+'</div><div class="l">À traiter</div></button>'
+    +'<button class="kpi h" onclick="choisirFiltre(\'vite\');document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})"><div class="v">'+urgentes.length+'</div><div class="l">Critiques</div></button>'
+    +'<button class="kpi n" onclick="choisirFiltre(\'nouveau\');document.getElementById(\'mission\').scrollIntoView({behavior:\'smooth\'})"><div class="v">'+nouv.length+'</div><div class="l">Nouveaux</div></button>'
+    +'<div class="kpi o"><div class="v">'+pc+'%</div><div class="l">Traité</div><div class="mini"><i style="width:'+pc+'%"></i></div></div>';
+  rendreDestinations();
+  rendreCouverture(toutes);
 
-  // Résumé des nouveaux textes, par fonds.
+  // Nouveaux textes, par fonds.
   var tx=textesAlertes(), parF={JORF:[],CCN:[],Code:[],Juris:[],'Règles':[],ACCO:[]};
   tx.forEach(function(a){if(parF[a.fonds])parF[a.fonds].push(a);});
   var tuileF=function(f,l){var arr=parF[f],n=arr.filter(function(a){return !FAIT[cleAlerte(a)];}).length,
       chaud=arr.some(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];});
     return '<button class="rt'+(chaud?' chaud':'')+'" onclick="ouvrirTextes(\''+f+'\')"><div class="n">'+n+'</div><div class="l">'+l+'</div></button>';};
-  document.getElementById('blocTextes').innerHTML='<div class="bloc-t">📰 Nouveaux textes <small>45 derniers jours</small></div>'
+  document.getElementById('blocTextes').innerHTML='<div class="sect"><h2>Nouveaux textes</h2><small>45 derniers jours</small></div>'
     +'<div class="resume-textes">'+tuileF('JORF','Journal officiel')+tuileF('CCN','Conventions')+tuileF('Code','Code')+tuileF('Juris','Jurisprudence')+tuileF('Règles','Règles & montants')+tuileF('ACCO','Accords')+'</div>';
 
   document.getElementById('puces').innerHTML=FILTRES.map(function(x){
@@ -634,37 +912,39 @@ function rendreAccueil(){
     return '<button class="puce'+(FILTRE===x.k?' on':'')+'" onclick="choisirFiltre(\''+x.k+'\')">'+x.l+'<b>'+n+'</b></button>';
   }).join('');
   var filtre=(FILTRES.filter(function(x){return x.k===FILTRE;})[0]||FILTRES[0]).f;
-  var liste=restantes.filter(filtre).sort(function(a,b){return priorite(a)-priorite(b);});
+  var base = FILTRE==='nouveau' ? nouv : restantes;
+  var liste=base.filter(filtre).sort(function(a,b){return priorite(a)-priorite(b);});
   var montrees=liste.slice(0,NB_MONTRES);
-  document.getElementById('missionCompte').textContent=liste.length?liste.length+' en tout':'';
-  document.getElementById('mission').innerHTML=montrees.length?montrees.map(function(a,i){return carte(a,i===0);}).join('')
-    +(liste.length>montrees.length?'<button class="plus" onclick="voirPlus()">Voir '+Math.min(10,liste.length-montrees.length)+' de plus ('+(liste.length-montrees.length)+' restantes)</button>':'')
-    :'<div class="vide">🎉 Rien à faire ici.<br>Les points « pour info » sont dans 🗂️ Thèmes.</div>';
+  document.getElementById('missionCompte').textContent=liste.length?liste.length+' au total':'';
+  document.getElementById('mission').innerHTML=montrees.length?montrees.map(function(a,i){return carte(a,false);}).join('')
+    +(liste.length>montrees.length?'<button class="plus" onclick="voirPlus()">Afficher '+Math.min(10,liste.length-montrees.length)+' de plus ('+(liste.length-montrees.length)+' restantes)</button>':'')
+    :'<div class="vide">Aucune action en attente pour ce filtre.<br>Les points « pour info » sont dans Catégories et Où traiter.</div>';
   var pt=document.getElementById('ptAccueil');pt.textContent=urgentes.length;pt.style.display=urgentes.length?'flex':'none';
   var nt=tx.filter(function(a){return a.nouveau&&!FAIT[cleAlerte(a)];}).length, ptt=document.getElementById('ptTextes');
   ptt.textContent=nt;ptt.style.display=nt?'flex':'none';
-  var tot=toutes.length;
-  document.getElementById('pied').textContent=tot+' point'+(tot>1?'s':'')+' surveillé'+(tot>1?'s':'')+' en tout, dont '+(tot-aFaire.length)+' pour info · '+(window.__DONNEES.exceptions_appliquees||0)+' masqué(s) par tes exceptions';
+  var tot=toutes.length, R=window.__DONNEES.routage;
+  document.getElementById('pied').textContent=tot+' point'+(tot>1?'s':'')+' suivis, dont '+(tot-aFaire.length)+' pour info · '+(window.__DONNEES.exceptions_appliquees||0)+' classé(s) sans suite'
+    +(R&&R.index?' · routage : '+R.index.articles+' articles indexés, '+R.index.pages_guide+' pages du guide, '+R.index.outils+' outils':'');
 }
 
 // --- Nouveaux textes -------------------------------------------------------
 function textesAlertes(){
-  return toutesAlertes().filter(function(a){return a._theme==='nouveaux'||a._theme==='accords'||a._theme==='regles';});
+  return toutesAlertes().filter(function(a){return a._theme==='nouveaux'||a._theme==='accords'||a._theme==='regles'||a._theme==='sources';});
 }
 let FILTRE_TEXTES='tout';
 function ouvrirTextes(f){FILTRE_TEXTES=f||'tout';allerA('textes');}
 function choisirFiltreTextes(f){FILTRE_TEXTES=f;rendreTextes();}
 function rendreTextes(){
   var tx=textesAlertes();
-  var cles=[['tout','Tout'],['JORF','📰 Journal officiel'],['CCN','📑 Conventions'],['Code','📘 Code'],['Juris','⚖️ Jurisprudence'],['Règles','📐 Règles & montants'],['ACCO','🏢 Accords']];
+  var cles=[['tout','Tout'],['JORF','📰 Journal officiel'],['CCN','📑 Conventions'],['Code','📘 Code'],['Juris','⚖️ Jurisprudence'],['Règles','📐 Règles & montants'],['ACCO','🏢 Accords'],['sources','🏛️ Sources officielles']];
   var themes={};tx.forEach(function(a){if(a.theme)themes[a.theme]=1;});
   Object.keys(themes).sort().forEach(function(t){cles.push(['t:'+t,t]);});
   document.getElementById('pucesTextes').innerHTML=cles.map(function(c){
-    var n=tx.filter(function(a){return c[0]==='tout'||a.fonds===c[0]||('t:'+a.theme)===c[0];}).length;
+    var n=tx.filter(function(a){return c[0]==='tout'||a.fonds===c[0]||a._theme===c[0]||('t:'+a.theme)===c[0];}).length;
     if(c[0]!=='tout'&&!n) return '';
     return '<button class="puce'+(FILTRE_TEXTES===c[0]?' on':'')+'" onclick="choisirFiltreTextes(\''+esc(c[0]).replace(/'/g,"\\'")+'\')">'+esc(c[1])+'<b>'+n+'</b></button>';
   }).join('');
-  var l=tx.filter(function(a){return FILTRE_TEXTES==='tout'||a.fonds===FILTRE_TEXTES||('t:'+a.theme)===FILTRE_TEXTES;});
+  var l=tx.filter(function(a){return FILTRE_TEXTES==='tout'||a.fonds===FILTRE_TEXTES||a._theme===FILTRE_TEXTES||('t:'+a.theme)===FILTRE_TEXTES;});
   l.sort(function(a,b){return (FAIT[cleAlerte(a)]?1:0)-(FAIT[cleAlerte(b)]?1:0)||(b.nouveau?1:0)-(a.nouveau?1:0)
     ||(NIVEAU[a.gravite]||NIVEAU.basse).o-(NIVEAU[b.gravite]||NIVEAU.basse).o||String(b.date_texte||'').localeCompare(String(a.date_texte||''));});
   document.getElementById('listeTextes').innerHTML=l.length?l.map(function(a){return carte(a);}).join('')
@@ -728,7 +1008,7 @@ function ouvrirTheme(i){
 function allerA(v){
   document.querySelectorAll('.vue').forEach(function(x){x.classList.remove('active');});
   document.getElementById('v-'+v).classList.add('active');
-  var onglet = v==='theme' ? 'themes' : v;
+  var onglet = v==='theme' ? 'themes' : (v==='dest' ? 'dests' : v);
   document.querySelectorAll('.onglet').forEach(function(o){o.classList.toggle('active',o.getAttribute('data-v')===onglet);});
   if(v!=='theme') window.scrollTo(0,0);
   if(v==='textes') rendreTextes();
@@ -739,6 +1019,7 @@ function allerA(v){
 function rendreTout(){
   if(!window.__DONNEES) return;
   rendreAccueil(); rendreThemes();
+  if(document.getElementById('v-dest').classList.contains('active') && DEST_OUVERTE){var yd=window.scrollY;rendreDestination();window.scrollTo(0,yd);}
   if(document.getElementById('v-textes').classList.contains('active')){var yt=window.scrollY;rendreTextes();window.scrollTo(0,yt);}
   if(document.getElementById('v-theme').classList.contains('active') && THEME_OUVERT>=0){
     var y=window.scrollY; ouvrirTheme(THEME_OUVERT); window.scrollTo(0,y);
@@ -753,7 +1034,7 @@ async function charger(){
     window.__DONNEES = d;
   }catch(e){
     document.getElementById('hdrSub').textContent = 'Données indisponibles hors ligne.';
-    document.getElementById('meteo').innerHTML='<div class="meteo regarder"><div class="emo">📡</div><h2>Pas de réseau</h2><p>Reconnecte-toi pour voir le dernier passage de la veille.</p></div>';
+    document.getElementById('statut').innerHTML='<div class="statut regarder"><div class="s1">Pas de réseau</div><div class="s2">Reconnecte-toi pour voir le dernier passage de la veille.</div></div>';
     return;
   }
   const genere = new Date(d.genere);
@@ -873,7 +1154,9 @@ function _taches(){
     var g=GUIDE[a.categorie];
     return {theme:(THEMES[a._theme]||{}).n||a._theme, categorie:a.categorie, gravite:a.gravite,
             nouveau:!!a.nouveau, fait:!!FAIT[cleAlerte(a)],
-            titre:a.titre||'', resume:g?g.quoi.replace('{cle}',ident(a)):'', detail:a.detail||''};
+            titre:a.titre||'', resume:g?g.quoi.replace('{cle}',ident(a)):'', detail:a.detail||'',
+            destinations:ciblesDe(a).map(function(c){return {zone:(ZONES[c.zone]||{}).n||c.zone, cible:c.cible, action:c.action,
+              fichiers:c.fichiers||[], automatique:!!c.auto};})};
   });
   // à faire d'abord, puis regroupé par thème, du plus grave au moins grave
   l.sort(function(x,y){return (x.fait-y.fait)||String(x.theme).localeCompare(String(y.theme))||((NIVEAU[x.gravite]||NIVEAU.basse).o-(NIVEAU[y.gravite]||NIVEAU.basse).o);});
@@ -894,6 +1177,10 @@ function _tachesTexte(){
     if(x.theme!==themeCourant){themeCourant=x.theme;L.push('== '+themeCourant+' ==');}
     L.push('['+(x.fait?'x':' ')+'] '+((NIVEAU[x.gravite]||NIVEAU.basse).t.split(' ')[0])+(x.nouveau?' 🆕':'')+' '+x.titre);
     if(x.resume) L.push('    → '+x.resume);
+    (x.destinations||[]).forEach(function(c){
+      L.push('    ⇒ '+c.zone+' › '+c.cible+(c.automatique?' (automatique)':'')+(c.action?' : '+c.action:''));
+      if(c.fichiers&&c.fichiers.length) L.push('       fichiers : '+c.fichiers.join(', '));
+    });
     if(x.detail) L.push('    '+String(x.detail).replace(/\s+/g,' ').trim().slice(0,400));
   });
   return L.join('\n');
@@ -909,12 +1196,45 @@ function _telecharger(nom, contenu, type){
   setTimeout(function(){try{document.body.removeChild(a);}catch(e){}URL.revokeObjectURL(url);},200);
   toast('Fichier créé');
 }
+// Plan d'action : les points à traiter, rangés par destination puis sous-cible.
+function _planTexte(){
+  var d=window.__DONNEES||{}, toutes=toutesAlertes().filter(function(a){return a.gravite!=='basse'&&!FAIT[cleAlerte(a)];});
+  var L=['PLAN D\'ACTION PAR DESTINATION — VEILLE JURIDIQUE SIMULHEURES',
+         'Dernier passage : '+(d.genere?new Date(d.genere).toLocaleString('fr-FR'):'?')+' · exporté le '+new Date().toLocaleString('fr-FR'),
+         toutes.length+' point(s) à traiter (critiques et à traiter, hors « pour info » et déjà traités).',''];
+  ORDRE_ZONES.forEach(function(z){
+    var grp={}, ordre=[];
+    toutes.forEach(function(a){ciblesDe(a).forEach(function(c){
+      if(c.zone!==z||c.auto) return;
+      if(!grp[c.cible]){grp[c.cible]={a:[],f:{},act:{}};ordre.push(c.cible);}
+      if(grp[c.cible].a.indexOf(a)<0) grp[c.cible].a.push(a);
+      (c.fichiers||[]).forEach(function(f){grp[c.cible].f[f]=1;});
+      if(c.action) grp[c.cible].act[c.action]=1;
+    });});
+    if(!ordre.length) return;
+    var n=ordre.reduce(function(t,k){return t+grp[k].a.length;},0);
+    L.push(''.padEnd(64,'='));L.push(ZONES[z].n.toUpperCase()+' — '+ordre.length+' endroit(s), '+n+' tâche(s)');L.push(''.padEnd(64,'='));
+    ordre.sort(function(x,y){return grp[y].a.length-grp[x].a.length;});
+    ordre.forEach(function(k){
+      var G=grp[k], fs=Object.keys(G.f);
+      L.push('');L.push('▸ '+k+(fs.length?'  ['+fs.slice(0,6).join(', ')+(fs.length>6?' +'+(fs.length-6):'')+']':''));
+      G.a.sort(function(a,b){return priorite(a)-priorite(b);}).forEach(function(a){
+        L.push('  [ ] '+((NIVEAU[a.gravite]||NIVEAU.basse).t.split(' ')[0])+(a.nouveau?' 🆕':'')+' '+String(a.titre||'').slice(0,160));
+        var c=ciblesDe(a).filter(function(c){return c.zone===z&&c.cible===k;})[0];
+        if(c&&c.action) L.push('        → '+c.action);
+      });
+    });
+    L.push('');
+  });
+  return L.join('\n');
+}
 function exporterTaches(mode){
   if(!window.__DONNEES){alert('Données pas encore chargées.');return;}
   fermerExport();
   var jour=new Date().toISOString().slice(0,10);
   if(mode==='json'){ _telecharger('mes-taches-veille-'+jour+'.json', JSON.stringify(_taches(),null,2), 'application/json'); return; }
   if(mode==='txt'){ _telecharger('mes-taches-veille-'+jour+'.txt', _tachesTexte(), 'text/plain'); return; }
+  if(mode==='plan'){ _telecharger('plan-action-veille-'+jour+'.txt', _planTexte(), 'text/plain'); return; }
   var txt=_tachesTexte();
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(function(){toast('Liste copiée ✅');},function(){prompt('Copie ce texte :',txt);});
   else prompt('Copie ce texte :',txt);

@@ -1,3 +1,10 @@
 # Pages du BOSS lues chaque semaine par le Raccourci iPhone.
 # Une adresse par ligne ; tu peux en ajouter. Les lignes # sont ignorées.
 https://boss.gouv.fr/portail/accueil.html
+https://boss.gouv.fr/portail/accueil/bulletin-de-paie/montant-net-social.html
+https://boss.gouv.fr/portail/accueil/bulletin-de-paie.html
+https://boss.gouv.fr/portail/accueil/regles-dassujettissement.html
+https://boss.gouv.fr/portail/accueil/exonerations.html
+https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration.html
+https://boss.gouv.fr/portail/accueil/actualites.html
+https://boss.gouv.fr/portail/accueil/rescrits.html

@@ -71,3 +71,9 @@ jobs:
           mem = {"openfisca": {"version": vs[-4]}}; al = []; sa = []
           v.veille_openfisca(mem, al, sa, "", "2026-10-02", True)
           for a in al:
+              print(a["gravite"], "|", a["titre"]); print(a["detail"][:600]); print("---")
+          PY
+
+# ── fin du fichier ──
+# (ces lignes de commentaire servent de marge : si le collage
+#  depuis l iPhone coupe la fin, il ne coupe que ces lignes)

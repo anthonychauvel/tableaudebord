@@ -54,11 +54,16 @@ RETENTION_JOURS = 45
 # ── BOSS ──────────────────────────────────────────────────────────────────
 BOSS_DEPART = ["https://boss.gouv.fr/portail/accueil.html", "https://boss.gouv.fr/"]
 # Une page du BOSS est suivie si son adresse ou l'intitulé du lien parle d'un de ces sujets.
+# 03/10/2026 : élargi à tout l'écosystème (paye, outils de rupture, épargne,
+# prévoyance, activité partielle, titres-restaurant, outre-mer…).
 BOSS_SUJETS = re.compile(
     r"heures?[- ]suppl|heures?[- ]compl|reduction[- ]generale|allegement|exoneration|avantages?[- ]en[- ]nature"
     r"|frais[- ]professionnel|assiette|temps[- ]partiel|apprenti|smic|cotisation|mise[s]?[- ]a[- ]jour"
-    r"|historique|actualit|nouveaute", re.I)
-BOSS_MAX_PAGES = 30
+    r"|historique|actualit|nouveaute|bulletin[- ]de[- ]paie|assujettissement|plafond|taux|rupture"
+    r"|indemnit|activite[- ]partielle|epargne[- ]salariale|interessement|participation|protection[- ]sociale"
+    r"|prevoyance|complementaire|retraite|titres?[- ]restaurant|mobilite|teletravail|stagiaire|outre[- ]mer"
+    r"|lodeom|jeunes|cotisations|csg|crds|forfait[- ]social|autres[- ]elements|remuneration", re.I)
+BOSS_MAX_PAGES = 45
 BOSS_TEXTE_MAX = 25000
 # Paragraphe « sensible » : touche directement un calcul de l'appli -> 🔴
 SENSIBLE = re.compile(r"heures? suppl|heures? compl|reduction generale|exoneration|smic|plafond"
@@ -228,6 +233,26 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
             ecrire_liste_boss(liste, [])
         return
     date_cap, pages, h_cap = lire_capture(capture)
+    # Le Raccourci envoie le texte des pages (pas le HTML) : les liens arrivent
+    # à part, sous des clés « liens|<adresse de la page> » (03/10/2026).
+    liens_cap = []
+    try:
+        brut_cap = json.load(open(capture, encoding="utf-8"))
+        for k, v in (brut_cap.items() if isinstance(brut_cap, dict) else []):
+            if not str(k).startswith("liens|"):
+                continue
+            for l in re.split(r"[\s,]+", str(v)):
+                l = l.strip().rstrip(").;")
+                if not l.startswith("http") or "#" in l:
+                    continue
+                if urllib.parse.urlparse(l).netloc not in ("boss.gouv.fr", "www.boss.gouv.fr"):
+                    continue
+                if re.search(r"\.(pdf|jpg|png|zip|xlsx?)$", l, re.I):
+                    continue
+                if BOSS_SUJETS.search(normaliser(l)) and l not in liens_cap:
+                    liens_cap.append(l)
+    except Exception:
+        pass
     if h_cap and h_cap != mem.get("capture_empreinte"):
         mem["capture_empreinte"] = h_cap
         mem["capture_recue"] = aujourd_hui
@@ -244,7 +269,7 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
             "lien": "https://boss.gouv.fr/",
             "date_texte": recue,
         })
-    decouvertes = []
+    decouvertes = list(liens_cap)
     premier = not pages_mem
     n_modif = n_lues = 0
     for u, page in pages.items():
@@ -254,7 +279,11 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
             paras, titre = paragraphes(page), titre_page(page, u)
         else:
             paras = _paras_texte(page)
-            titre = paras[0][:120] if paras else u
+            # Texte brut : la 1re ligne est le menu (« Aller au contenu »…) ;
+            # le titre vient de l'adresse (…/heures-supplementaires.html).
+            seg = urllib.parse.urlparse(u).path.rstrip("/").rsplit("/", 1)[-1]
+            seg = re.sub(r"\.html?$", "", seg).replace("-", " ").strip()
+            titre = (seg[:1].upper() + seg[1:]) if seg else u
         if not paras:
             continue
         n_lues += 1

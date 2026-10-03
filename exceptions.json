@@ -42,5 +42,466 @@
     "mode": "jusqu_au",
     "date": "2026-09-21",
     "note": "Journalistes : le texte « plus récent » concerne la presse d'information spécialisée, un autre sous-secteur. À trancher à part : la grille reprend le barème des agences de presse (avenant n° 3 du 9/07/2024) alors que sa note cite l'avenant n° 1 PHR du 10/10/2025."
+  },
+  {
+    "categorie": "texte-pour-ccn-en-alerte",
+    "cle": "IDCC 3123",
+    "note": "3123 : seuls des accords d'entreprise (temps partiel) et un arrêté sans minima. Pas de grille de branche à créer.",
+    "date": "2026-10-03"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Décret n° 2026-916 du 30 septembre 2026 fixant les durées maximales de conservation par les organismes débiteurs des prestations familiales…",
+    "note": "Faux positif : décret sur la conservation des données CAF/MSA, sans lien avec la durée du travail.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale du…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des industries…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des entreprises du…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des maisons à…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie et des…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord territorial (Charente) conclu dans le cadre de la convention collective nationale…",
+    "note": "Métallurgie 3248 : accord territorial (emploi/formation, indemnité d'éloignement Aube). L'appli suit les SMH nationaux : rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord territorial (Eure-et-Loir) conclu dans le cadre de la convention…",
+    "note": "Métallurgie 3248 : accord territorial (emploi/formation, indemnité d'éloignement Aube). L'appli suit les SMH nationaux : rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord territorial (région parisienne) conclu dans le cadre de la convention collective…",
+    "note": "Métallurgie 3248 : accord territorial (emploi/formation, indemnité d'éloignement Aube). L'appli suit les SMH nationaux : rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord territorial (Seine-et-Marne) conclu dans le cadre de la convention collective…",
+    "note": "Métallurgie 3248 : accord territorial (emploi/formation, indemnité d'éloignement Aube). L'appli suit les SMH nationaux : rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale de la…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des taxis…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale métropolitaine des entreprises de la…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'habitat et du…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale du travail du personnel des institutions de…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale des salariés des cabinets d'avocats (n°…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale du sport (n° 2511)",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale des commissaires de justice et sociétés de…",
+    "note": "3250 : coefficient Clerc assistant CQP ; la grille de l'appli est en coefficients génériques. Rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'hôtellerie de…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un accord territorial (Aube) conclu dans le cadre de la convention collective nationale de…",
+    "note": "Métallurgie 3248 : accord territorial (emploi/formation, indemnité d'éloignement Aube). L'appli suit les SMH nationaux : rien à changer.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale de la miroiterie, de la transformation et…",
+    "note": "Arrêté du 23/09/2026 : accord sans salaires ni temps de travail (dialogue social, CPPNI, paritarisme, formation, frais, champ, santé, participation, non-concurrence, CDD de mission, aidants…). Rien à changer dans l'écosystème.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour d'appel 1re chambre sociale, 2026-09-16, n° 24/01910",
+    "note": "Cour d'appel sur L3141-3 : application classique de l'acquisition des congés, déjà conforme dans l'appli et le guide.",
+    "date": "2026-09-16",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour d'appel 1re chambre sociale, 2026-09-16, n° 24/02040",
+    "note": "Cour d'appel sur L3141-3 : application classique de l'acquisition des congés, déjà conforme dans l'appli et le guide.",
+    "date": "2026-09-16",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 24-20.131 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 24-22.430 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 24-22.767 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 25-13.570 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 25-14.347 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 25-14.348 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-09-23, n° 25-15.834 e.a.",
+    "note": "Cass. soc. 23/09/2026, arrêts F-D (non publiés) appliquant une jurisprudence constante (requalification, harcèlement, transfert conventionnel, vie privée, unicité d'instance). Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un avenant à la convention collective nationale des vins, cidres, jus de fruits, sirops,…",
+    "note": "493 : avenant n° 32 déjà intégré dans GrillePaye (01/07/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des…",
+    "note": "2528 : accord du secteur cordonnerie multiservice ; la grille de l'appli couvre la maroquinerie. Sous-secteur non modélisé.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie textile…",
+    "note": "18 : accord du secteur textiles artificiels et synthétiques ; la grille de l'appli est la grille générale du textile. Sous-secteur non modélisé.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du commerce de détail…",
+    "note": "1483 : accords propres à Mayotte (convergence sociale) ; la grille de l'appli est la grille métropolitaine.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord territorial (Ardennes) conclu dans le cadre de la convention collective nationale…",
+    "note": "3248 : valeur de point territoriale (prime d'ancienneté, Ardennes / Occitanie). L'appli ne calcule pas la prime d'ancienneté territoriale.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord territorial (CPTN Occitanie) conclu dans le cadre de la convention collective…",
+    "note": "3248 : valeur de point territoriale (prime d'ancienneté, Ardennes / Occitanie). L'appli ne calcule pas la prime d'ancienneté territoriale.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale de…",
+    "note": "1170 tuiles et briques : convention absente de l'appli.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'avenants à la convention collective nationale des entreprises d'installation sans…",
+    "note": "1412 : avenants n° 79 et 80 déjà intégrés dans GrillePaye (01/07/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un avenant à la convention collective nationale de l'industrie et des services nautiques…",
+    "note": "3236 : avenant du 10/07/2026 déjà intégré dans GrillePaye (01/06/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un avenant à un accord (agences de presse) conclu dans le cadre de la convention collective…",
+    "note": "1480 : avenant n° 5 propre aux journalistes d'agences de presse ; la grille de l'appli est celle de la PHR (avenant n° 1 du 10/10/2025). Sous-secteur non modélisé.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des…",
+    "note": "1285 : accord salaires 2026 et avenant rectificatif du 16/07/2026 déjà intégrés dans GrillePaye (01/08/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale des services de l'automobile (n° 1090)",
+    "note": "1090 : avenant n° 111 sur l'entretien de parcours professionnel, sans effet sur les heures ni les salaires.",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 25 septembre 2026 portant extension d'un accord conclu dans le secteur du travail temporaire (n° 1413)",
+    "note": "1413 : accord du 24/07/2026 déjà intégré dans GrillePaye (01/09/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Avis portant extension de l'avenant n° 51 du 9 juillet 2026 relatif à la grille des salaires en conchyliculture de la convention collective…",
+    "note": "7019 : avenant n° 51 déjà intégré dans GrillePaye (01/08/2026).",
+    "date": "2026-09-30",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à la convention collective nationale métropolitaine des entreprises de la…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'avenants à la convention collective nationale des acteurs du lien social et familial (n°…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des services de…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale de…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des vins,…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à la convention collective nationale des industries des jeux, jouets, articles…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à la convention collective nationale des sociétés d'assistance (n° 1801)",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à la convention collective nationale des industries des jeux, jouets, articles…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du commerce de détail…",
+    "note": "1483 : accords propres à Mayotte (convergence sociale) ; la grille de l'appli est la grille métropolitaine.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 21 septembre 2026 portant extension d'un avenant à la convention collective nationale de la coopération maritime (salariés non…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 22 septembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des fleuristes, de la…",
+    "note": "1978 : accord du 09/07/2026 déjà intégré dans GrillePaye (01/11/2026).",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 23 septembre 2026 portant extension d'un avenant à la convention collective nationale des acteurs du lien social et familial (n°…",
+    "note": "1261 : avenant 05-26 sur le champ d'application, sans effet sur les grilles.",
+    "date": "2026-10-01",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1090 — Avenant n° 111 du 16 avril 2026 relatif à la modification de la convention collective (article 1.21.d.1 « Entretien de…",
+    "note": "1090 : avenant n° 111 sur l'entretien de parcours professionnel, sans effet sur les heures ni les salaires.",
+    "date": "2026-07-16",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1261 — Avenant n° 03-26 du 5 mai 2026 relatif au régime de prévoyance",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-09-22",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1261 — Avenant n° 04-26 du 4 juin 2026 relatif à la désignation d'un organisme gestionnaire unique des fonds de solidarité et…",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-09-23",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1267 — Avenant n° 115 du 19 mars 2026 à l'avenant n° 98 du 7 juillet 2022 relatif au régime de prévoyance",
+    "note": "Prévoyance / frais de santé / capital fin de carrière / solidarité : l'écosystème ne modélise pas ces régimes. Rien à changer.",
+    "date": "2026-09-07",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1267 — Avenant n° 116 du 19 mars 2026 relatif à la modification de l'article 21 « Indemnité de licenciement » de la convention…",
+    "note": "1267 : indemnité de licenciement conventionnelle. Les outils Fin de contrat / Préavis calculent le minimum légal et préviennent que les barèmes conventionnels ne sont pas couverts. Rien à changer.",
+    "date": "2026-09-07",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1286 — Accord du 26 septembre 2018 relatif à la mise en place de la commission paritaire permanente de négociation et…",
+    "note": "1286 : accord CPPNI de 2018, simple mention du temps partiel. Rien à changer.",
+    "date": "2026-09-07",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "🏛️ N° 3211 - Projet de loi de financement de la sécurité sociale pour 2027",
+    "note": "PLFSS 2027 = projet de loi. On traitera la LFSS quand elle paraîtra au JO.",
+    "date": "2026-10-02",
+    "mode": "jusqu_au"
   }
 ]

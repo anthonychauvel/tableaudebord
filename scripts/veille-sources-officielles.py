@@ -62,7 +62,7 @@ BOSS_SUJETS = re.compile(
     r"|historique|actualit|nouveaute|bulletin[- ]de[- ]paie|assujettissement|plafond|taux|rupture"
     r"|indemnit|activite[- ]partielle|epargne[- ]salariale|interessement|participation|protection[- ]sociale"
     r"|prevoyance|complementaire|retraite|titres?[- ]restaurant|mobilite|teletravail|stagiaire|outre[- ]mer"
-    r"|lodeom|jeunes|cotisations|csg|crds|forfait[- ]social|autres[- ]elements|remuneration", re.I)
+    r"|lodeom|jeunes|cotisations|csg|crds|forfait[- ]social|autres[- ]elements|remuneration|rescrit", re.I)
 BOSS_MAX_PAGES = 45
 BOSS_TEXTE_MAX = 25000
 # Paragraphe « sensible » : touche directement un calcul de l'appli -> 🔴
@@ -241,8 +241,11 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
         for k, v in (brut_cap.items() if isinstance(brut_cap, dict) else []):
             if not str(k).startswith("liens|"):
                 continue
-            for l in re.split(r"[\s,]+", str(v)):
-                l = l.strip().rstrip(").;")
+            # Le Raccourci envoie une vraie liste JSON (test du 03/10) ; on
+            # accepte aussi un texte, au cas où.
+            elements = v if isinstance(v, list) else re.split(r"[\s,]+", str(v))
+            for l in elements:
+                l = str(l).strip().strip("'\"[]").rstrip(").;")
                 if not l.startswith("http") or "#" in l:
                     continue
                 if urllib.parse.urlparse(l).netloc not in ("boss.gouv.fr", "www.boss.gouv.fr"):
@@ -292,6 +295,12 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
         pages_mem[u] = {"titre": titre, "empreinte": h, "paragraphes": paras, "vu_le": aujourd_hui}
         if diag:
             print(f"  {court(titre, 80)} : {len(paras)} paragraphe(s){'' if html_ok else ' (texte brut)'}")
+        # Passage du texte au HTML (Raccourci modifié le 03/10/2026) : les
+        # paragraphes ne se comparent pas d'un format à l'autre -> nouveau
+        # point de départ pour cette page, sans alerte.
+        pages_mem[u]["format"] = "html" if html_ok else "texte"
+        if avant is not None and avant.get("format", "texte") != pages_mem[u]["format"]:
+            continue
         if premier or avant is None or avant.get("empreinte") == h:
             continue
         anciens, nouveaux = avant.get("paragraphes") or [], paras

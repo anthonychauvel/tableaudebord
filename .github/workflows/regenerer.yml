@@ -106,7 +106,7 @@ jobs:
                        empreintes-articles.json empreintes-fichiers.json \
                        pages-articles.json releves/ \
                        textes-vus.json empreintes-droit.json regles-officielles.json \
-                       sources-officielles.json; do
+                       sources-officielles.json boss-pages.txt; do
             [ -e "$cible" ] && git add "$cible" || true
           done
           git diff --cached --quiet && echo "Aucun changement." || \

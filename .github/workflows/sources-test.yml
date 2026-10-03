@@ -58,3 +58,16 @@ jobs:
           mkdir -p /tmp/ccn && cp _droit/ccn/*.xlsx /tmp/ccn/ 2>/dev/null || true
           python3 _droit/scripts/maj_dares.py --ccn /tmp/ccn
           ls -la /tmp/ccn
+
+      - name: 4. Barèmes hors droit du travail (OpenFisca, 3 versions en arrière)
+        run: |
+          cd scripts
+          python3 - <<'PY'
+          import importlib.util, json
+          spec = importlib.util.spec_from_file_location("v", "veille-sources-officielles.py")
+          v = importlib.util.module_from_spec(spec); spec.loader.exec_module(v)
+          info = v._http_json(v.PYPI)
+          vs = sorted(info["releases"], key=lambda x: [int(p) if p.isdigit() else 0 for p in x.split(".")])
+          mem = {"openfisca": {"version": vs[-4]}}; al = []; sa = []
+          v.veille_openfisca(mem, al, sa, "", "2026-10-02", True)
+          for a in al:

@@ -162,13 +162,27 @@ def titre_page(page, url):
     return t or url.rstrip("/").rsplit("/", 1)[-1]
 
 
+def boss_a_suivre(u):
+    """Adresse normalisée d'une page BOSS à suivre, ou None.
+    Écartés (passage du 03/10/2026) : variantes « ?displayTab=… » de la même
+    page, articles d'actualité datés (…/2026/octobre/…, ils ne changent plus
+    une fois publiés : la page actualites.html suffit à voir les nouveaux),
+    aide, circulaires abrogées."""
+    u = u.split("#")[0].split("?")[0]
+    if urllib.parse.urlparse(u).netloc not in ("boss.gouv.fr", "www.boss.gouv.fr"):
+        return None
+    if re.search(r"\.(pdf|jpg|png|zip|xlsx?)$", u, re.I):
+        return None
+    if re.search(r"/20\d\d/|aide-utilisateurs|circulaires-abrogees|mentions-legales|plan-du-site|accessibilite", u):
+        return None
+    return u
+
+
 def liens_boss(page, base):
     out = []
     for href, texte in re.findall(r'<a\b[^>]*href="([^"#]+)"[^>]*>(.*?)</a>', page, re.S | re.I):
-        u = urllib.parse.urljoin(base, html.unescape(href))
-        if urllib.parse.urlparse(u).netloc not in ("boss.gouv.fr", "www.boss.gouv.fr"):
-            continue
-        if re.search(r"\.(pdf|jpg|png|zip|xlsx?)$", u, re.I):
+        u = boss_a_suivre(urllib.parse.urljoin(base, html.unescape(href)))
+        if not u:
             continue
         cle = normaliser(u + " " + re.sub(r"<[^>]+>", " ", texte))
         if BOSS_SUJETS.search(cle) and u not in out:
@@ -246,11 +260,8 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
             elements = v if isinstance(v, list) else re.split(r"[\s,]+", str(v))
             for l in elements:
                 l = str(l).strip().strip("'\"[]").rstrip(").;")
-                if not l.startswith("http") or "#" in l:
-                    continue
-                if urllib.parse.urlparse(l).netloc not in ("boss.gouv.fr", "www.boss.gouv.fr"):
-                    continue
-                if re.search(r"\.(pdf|jpg|png|zip|xlsx?)$", l, re.I):
+                l = boss_a_suivre(l) if l.startswith("http") else None
+                if not l:
                     continue
                 if BOSS_SUJETS.search(normaliser(l)) and l not in liens_cap:
                     liens_cap.append(l)

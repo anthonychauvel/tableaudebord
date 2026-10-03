@@ -63,7 +63,7 @@ BOSS_SUJETS = re.compile(
     r"|indemnit|activite[- ]partielle|epargne[- ]salariale|interessement|participation|protection[- ]sociale"
     r"|prevoyance|complementaire|retraite|titres?[- ]restaurant|mobilite|teletravail|stagiaire|outre[- ]mer"
     r"|lodeom|jeunes|cotisations|csg|crds|forfait[- ]social|autres[- ]elements|remuneration|rescrit", re.I)
-BOSS_MAX_PAGES = 45
+BOSS_MAX_PAGES = 60
 BOSS_TEXTE_MAX = 25000
 # Paragraphe « sensible » : touche directement un calcul de l'appli -> 🔴
 SENSIBLE = re.compile(r"heures? suppl|heures? compl|reduction generale|exoneration|smic|plafond"
@@ -227,11 +227,27 @@ def ecrire_liste_boss(chemin, decouvertes):
     except Exception:
         lignes = ["# Pages du BOSS lues chaque semaine par le Raccourci iPhone.",
                   "# Une adresse par ligne ; tu peux en ajouter. Les lignes # sont ignorées."] + BOSS_DEPART[:1]
-    deja = {l.strip() for l in lignes if l.strip() and not l.startswith("#")}
-    ajout = [u for u in decouvertes if u not in deja][:max(0, BOSS_MAX_PAGES - len(deja))]
-    if ajout or not os.path.exists(chemin):
+    # Une seule écriture par page : http:// → https://, sans « ?… » (le
+    # 03/10/2026, 7 pages étaient en double sous http://). Les commentaires
+    # et l'ordre sont gardés.
+    propres, deja = [], set()
+    for l in lignes:
+        if not l.strip() or l.startswith("#"):
+            propres.append(l)
+            continue
+        u = l.strip().replace("http://", "https://", 1).split("#")[0].split("?")[0]
+        if u not in deja:
+            deja.add(u)
+            propres.append(u)
+    ajout = []
+    for u in decouvertes:
+        u = u.replace("http://", "https://", 1)
+        if u not in deja and u not in ajout:
+            ajout.append(u)
+    ajout = ajout[:max(0, BOSS_MAX_PAGES - len(deja))]
+    if ajout or propres != lignes or not os.path.exists(chemin):
         with open(chemin, "w", encoding="utf-8") as f:
-            f.write("\n".join(lignes + ajout) + "\n")
+            f.write("\n".join(propres + ajout) + "\n")
     return len(deja) + len(ajout)
 
 
@@ -284,6 +300,7 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
             "date_texte": recue,
         })
     decouvertes = list(liens_cap)
+    empreintes_alertees = set()
     premier = not pages_mem
     n_modif = n_lues = 0
     for u, page in pages.items():
@@ -321,6 +338,9 @@ def veille_boss(memoire, alertes, sante, aujourd_hui, diag, capture=None, liste=
         fond = [p for p in retires + ajoutes if not re.fullmatch(r".{0,60}\d{1,2}[/ ]\w+[/ ]\d{4}.{0,20}", p)]
         if not fond:
             continue
+        if h in empreintes_alertees:
+            continue                                   # même page, autre adresse
+        empreintes_alertees.add(h)
         n_modif += 1
         sensible = any(SENSIBLE.search(normaliser(p)) for p in fond)
         lignes = [f"－ {court(p)}" for p in retires[:5]] + [f"＋ {court(p)}" for p in ajoutes[:5]]

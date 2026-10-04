@@ -15,7 +15,7 @@
      "Mesures exceptionnelles et dispositifs temporaires",
      "Recueil des rescrits sociaux de portée générale"
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits.html": {
@@ -33,7 +33,7 @@
      "Un nouvel environnement dédié aux Rescrits sociaux de portée générale est intégré au Bulletin officiel de la Sécurité sociale",
      "Des rescrits opposables seront progressivement ajoutés dans le but de renforcer l’accessibilité au droit en matière de cotisations et de contributions sociales."
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration.html": {
@@ -42,7 +42,7 @@
     "paragraphes": [
      "Autres éléments de rémunération"
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/actualites.html": {
@@ -211,7 +211,7 @@
      "3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et « famille », au profit de leur intégration dans la RGDU. Elle a toutefois maintenu ces réductions proportionnelles dans leur version antérieure pour les rémunérations ouvrant droit à une exonération dégressive spécifique. En outre, la LFSS pour 2026 prévoit un maintien de ces réductions proportionnelles pour certains employeurs relevant de régimes spéciaux qui en bénéficiaient sans relever de la réduction générale. Aussi, le décret retient des seuils identiques à ceux en vigueur en 2025 soit les seuils suivants :",
      "Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie (2,3960 SMIC au 1er janvier 2026) ; 3,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’allocations familiales (3,3544 SMIC au 1er janvier 2026). Pour rappel, la perte du bénéfice des réductions proportionnelles reste concomitante à la perte du bénéfice de l’exonération spécifique dégressive associée."
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/montant-net-social.html": {
@@ -341,7 +341,7 @@
      "26. Pour les salariés bénéficiant de la déduction forfaitaire spécifique pour frais professionnels (DFS), faut-il déduire le montant de l’abattement dans le calcul du montant net social ?",
      "Comme précisé dans le tableau du A du 1 de la partie II, l’ensemble de la rémunération brute du salarié est pris en compte, indépendamment des abattements applicables. Seules les cotisations et contributions sociales à la charge du salarié sont à déduire du montant net social. Le montant net social ne doit donc pas être diminué du montant de l’abattement pour les salariés bénéficiant de la déduction forfaitaire spécifique (DFS)."
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement.html": {
@@ -350,14 +350,14 @@
     "paragraphes": [
      "Règles d'assujettissement"
     ],
-    "vu_le": "2026-10-03",
+    "vu_le": "2026-10-04",
     "format": "html"
    }
   },
   "echecs": 1,
   "capture_empreinte": "047b0a1ec13ba7dd",
   "capture_recue": "2026-10-03",
-  "dernier": "2026-10-03"
+  "dernier": "2026-10-04"
  },
  "parlement": {
   "vus": {
@@ -601,19 +601,19 @@
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
     "echecs": 0,
-    "lu": "2026-10-03"
+    "lu": "2026-10-04"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
     "echecs": 0,
-    "lu": "2026-10-03"
+    "lu": "2026-10-04"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {
     "echecs": 0,
-    "lu": "2026-10-03"
+    "lu": "2026-10-04"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance": {
     "echecs": 0,
-    "lu": "2026-10-03"
+    "lu": "2026-10-04"
    }
   }
  },
@@ -629,7 +629,7 @@
    "vu_le": "2026-10-02"
   }
  ],
- "dernier_passage": "2026-10-03",
+ "dernier_passage": "2026-10-04",
  "fonds_dila": {
   "circulaires": [],
   "constit": [],

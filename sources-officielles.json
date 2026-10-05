@@ -4959,11 +4959,11 @@
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
-    "echecs": 1,
+    "echecs": 2,
     "lu": "2026-10-05"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
-    "echecs": 1,
+    "echecs": 2,
     "lu": "2026-10-05"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {

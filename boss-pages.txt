@@ -44,3 +44,19 @@ https://boss.gouv.fr/portail/accueil/rescrits/effectif.html
 https://boss.gouv.fr/portail/accueil/exonerations/reductions-proportionnelles-du-t.html
 https://boss.gouv.fr/portail/accueil/mesures-exceptionnelles/sapeurs-pompiers-volontaires.html
 https://boss.gouv.fr/portail/accueil/bulletin-de-paie/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/regles-dassujettissement/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/exonerations/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/exonerations/Article L. 245-3 du code de l’action sociale et des familles
+https://boss.gouv.fr/portail/accueil/exonerations/Article L. 541-1 du code de l’action sociale et des familles
+https://boss.gouv.fr/portail/accueil/rescrits/'+data.fiches.valeurs[i].url+'
+https://boss.gouv.fr/portail/accueil/rescrits/impatries/boss-res-000009.html
+https://boss.gouv.fr/portail/files/Avantages en nature/2024 Modèle dattestation micro-crèches.docx
+https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 245-3 du code de l’action sociale et des familles
+https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 541-1 du code de l’action sociale et des familles
+https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/nourriture.html
+https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/autres-avantages-en-nature.html
+https://boss.gouv.fr/portail/accueil/rescrits/effectif/boss-res-000006.html
+https://boss.gouv.fr/portail/accueil/rescrits/frais-professionnels/boss-res-000002.html

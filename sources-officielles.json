@@ -4945,15 +4945,25 @@
    "https://www.assemblee-nationale.fr/17/propositions/pion3088.asp": "2026-10-05",
    "https://www.assemblee-nationale.fr/17/propositions/pion3125.asp": "2026-10-05",
    "https://www.assemblee-nationale.fr/17/propositions/pion3107.asp": "2026-10-05",
-   "https://www.assemblee-nationale.fr/17/propositions/pion3106.asp": "2026-10-05"
+   "https://www.assemblee-nationale.fr/17/propositions/pion3106.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/ta/ta0346.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion0575.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/rapports/r3209.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion1535.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion0673.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/projets/pl2471.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion0426.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/ta/ta0345.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion0670.asp": "2026-10-05",
+   "https://www.assemblee-nationale.fr/17/propositions/pion0410.asp": "2026-10-05"
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
-    "echecs": 0,
+    "echecs": 1,
     "lu": "2026-10-05"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
-    "echecs": 0,
+    "echecs": 1,
     "lu": "2026-10-05"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {

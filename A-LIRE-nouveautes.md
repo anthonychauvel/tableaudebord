@@ -68,3 +68,27 @@ n'a besoin d'aucun changement de ce côté.
 | Code d'accès : mauvais code rejeté, bon code déverrouille | testé |
 | Persistance après rechargement (localStorage) | testé |
 | Tous les scripts compilent, JSON valides, JS valide | oui |
+
+## Règles anti-bruit (07/10/2026)
+
+Le passage du 06/10/2026 affichait 110 points à faire, dont environ 95 de bruit.
+Les règles sont regroupées en tête de `exceptions.json`, entre les deux lignes
+`=== RÈGLES ANTI-BRUIT … ===`. Une règle = un type de bruit ; pour en couper
+une, supprime son bloc.
+
+Nouveaux champs facultatifs d'une exception (les anciennes marchent comme avant) :
+
+| Champ | Effet |
+|---|---|
+| `motif` | masque si l'expression est dans le titre ou le détail (sans accents, minuscules) |
+| `sauf` | ne masque PAS si cette expression est présente |
+| `champ: "titre"` | `motif` et `sauf` ne regardent que le titre |
+| `avant_jours` | ne masque que les textes datés de plus de N jours (glissant) |
+| `expire` | l'exception s'arrête à cette date : l'alerte revient toute seule |
+| `categorie: "*"` | vise toutes les catégories |
+
+À la source aussi : `veille-sources-officielles.py` ignore désormais les
+circulaires et décisions datées de plus de 180 jours (`DILA_MAX_JOURS`), au lieu
+de les signaler comme nouvelles quand l'aspirateur rattrape ses archives.
+
+Simulation sur les données du 06/10/2026 : 189 points → 15.

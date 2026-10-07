@@ -8,6 +8,176 @@
     "date": "2026-07-26"
   },
   {
+    "_bloc": "=== RÈGLES ANTI-BRUIT DU 07/10/2026 — une règle = un type de bruit. Pour en couper une, supprime son bloc. ==="
+  },
+  {
+    "categorie": "accords-entreprise",
+    "cle": "",
+    "date": "2026-10-07",
+    "note": "Accords d'entreprise : pour info seulement, jamais une correction à faire dans l'appli ou le guide."
+  },
+  {
+    "categorie": "grille-sous-smic",
+    "cle": "",
+    "date": "2026-10-07",
+    "note": "Grille conventionnelle sous le SMIC : l'appli relève déjà au SMIC (b = max(conventionnel, SMIC)). Rien à corriger."
+  },
+  {
+    "categorie": "reference-age-resume",
+    "cle": "",
+    "date": "2026-10-07",
+    "note": "Synthèse « Âge des références » : redit ce que la section Grilles liste déjà."
+  },
+  {
+    "categorie": "grille-ancienne",
+    "cle": "",
+    "date": "2026-10-07",
+    "expire": "2026-11-07",
+    "note": "Grilles anciennes passées en revue le 07/10/2026 (branches non renégociées). Reviennent toutes seules le 08/11/2026 pour la revue mensuelle."
+  },
+  {
+    "categorie": "page-image-404",
+    "cle": "",
+    "motif": "mascotte\\.png",
+    "date": "2026-10-07",
+    "note": "Mascotte.png absente dans 8 outils : la page affiche déjà un emoji à la place (onerror). Cosmétique."
+  },
+  {
+    "categorie": "nouvelle-circulaire",
+    "cle": "",
+    "avant_jours": 180,
+    "date": "2026-10-07",
+    "note": "Circulaires de plus de 6 mois : vieux textes rattrapés par l'aspirateur (lot 2012-2014 du 06/10/2026), pas des nouveautés."
+  },
+  {
+    "categorie": "nouvelle-circulaire",
+    "cle": "",
+    "date": "2026-10-07",
+    "motif": "defense|armees|militaire|fonction publique|hospitali|dgos|enseignants|demandeurs d.asile|\\binternes\\b|etudiants en medecine|ministere de la justice|\\bmsa\\b|professions agricoles|medicaments|interieur|immigration",
+    "sauf": "heures? supplementaires|\\bsmic\\b|reduction generale",
+    "note": "Circulaires pour l'armée, la fonction publique, l'hôpital public, la MSA, l'immigration… : hors salariés du privé."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "",
+    "date": "2026-10-07",
+    "motif": "caa de |cour administrative d.appel|inedit au recueil lebon",
+    "note": "Cours administratives d'appel : décisions d'espèce (fiscal, séjour, salariés protégés), aucun changement de règle."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "",
+    "date": "2026-10-07",
+    "motif": "nature juridique de certaines dispositions",
+    "note": "Conseil constitutionnel « nature juridique » (déclassement vers le réglementaire) : le fond de la règle ne change pas."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "",
+    "date": "2026-10-07",
+    "motif": "programmation militaire|service national",
+    "note": "Défense / service national : hors sujet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "",
+    "date": "2026-10-07",
+    "champ": "titre",
+    "motif": "prevoyance|paritarisme|reconversion|\\bcse\\b|dialogue social|valorisation de l.experience|formation professionnelle|champ d.application|prevention|non[- ]concurrence|evenements familiaux|frais de sante|complementaire sante|egalite professionnelle|cppni|contribution conventionnelle|apprentissage",
+    "sauf": "salaire|remuneration|minima|heures? supplementaires|duree du travail|temps de travail|forfait[- ]jours|amenagement du temps",
+    "note": "Avenant sur un sujet sans calcul dans l'appli (prévoyance, paritarisme, formation, CSE…) et qui ne parle ni de salaire ni de durée du travail."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "",
+    "date": "2026-10-07",
+    "champ": "titre",
+    "motif": "prevoyance|paritarisme|reconversion|\\bcse\\b|dialogue social|valorisation de l.experience|formation professionnelle|champ d.application|prevention|non[- ]concurrence|evenements familiaux|frais de sante|complementaire sante|egalite professionnelle|cppni|contribution conventionnelle|apprentissage",
+    "sauf": "salaire|remuneration|minima|heures? supplementaires|duree du travail|temps de travail|forfait[- ]jours|amenagement du temps",
+    "note": "Même règle pour le Journal officiel."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "",
+    "date": "2026-10-07",
+    "champ": "titre",
+    "motif": "petits deplacements|grands deplacements|indemnites de trajet",
+    "note": "BTP : indemnités de déplacement régionales, pas de calcul dans l'appli."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "",
+    "mode": "jusqu_au",
+    "date": "2026-10-06",
+    "sauf": "idcc 3223\\b",
+    "note": "Arrêtés d'extension parus jusqu'au 06/10/2026 : tous lus le 07/10/2026 (grilles 3239, 292, 993… mises à jour, le reste sans effet). Seul l'avis 3223 (avenant n° 5 salaires) reste à traiter."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "",
+    "mode": "jusqu_au",
+    "date": "2026-10-06",
+    "sauf": "idcc (1516|1672|1679|1596|1597|1702)\\b",
+    "note": "Avenants arrivés jusqu'au 06/10/2026 : traités (1505, 1619, 1760, 1790…). Restent visibles les décisions en attente : 1516 (minima 2027), 1672/1679 (non étendus), BTP régional 1596/1597/1702."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L131-4 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L3153-3 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L431-1 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L452-2 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L452-3 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "R351-12 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "D1225-11 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L1214-8 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L225-102 :",
+    "date": "2026-10-07",
+    "note": "Faux positif : numéro coupé (ex. D1225-11-3, L1214-8-2, L225-102-1), article d'un autre code, ou mention « ancien … abrogé »."
+  },
+  {
+    "_bloc": "=== FIN DES RÈGLES ANTI-BRUIT ==="
+  },
+  {
     "_doc_mode": "mode 'jusqu_au' + cle vide = COUPURE PAR DATE sur toute la catégorie : masque les alertes dont le texte de référence (date_texte) date du 2026-08-10 ou avant ; un texte paru APRÈS cette date réapparaît tout seul.",
     "categorie": "grille-perimee",
     "cle": "",

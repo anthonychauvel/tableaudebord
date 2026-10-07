@@ -4985,7 +4985,22 @@
    "https://www.assemblee-nationale.fr/17/propositions/pion3258.asp": "2026-10-07",
    "https://www.assemblee-nationale.fr/17/propositions/pion3227.asp": "2026-10-07",
    "https://www.assemblee-nationale.fr/17/propositions/pion3251.asp": "2026-10-07",
-   "https://www.assemblee-nationale.fr/17/propositions/pion3232.asp": "2026-10-07"
+   "https://www.assemblee-nationale.fr/17/propositions/pion3232.asp": "2026-10-07",
+   "http://www.senat.fr/leg/ppl26-012.html": "2026-10-07",
+   "http://www.senat.fr/leg/ppl26-010.html": "2026-10-07",
+   "http://www.senat.fr/leg/ppl26-008.html": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3280.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3228.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/rap-info/i3275.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion2713.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3242.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3243.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3244.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/europe/resolutions/ppe3180.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/rapports/r3220.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3257.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3238.asp": "2026-10-07",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3249.asp": "2026-10-07"
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
@@ -5007,6 +5022,16 @@
   }
  },
  "detectes": [
+  {
+   "categorie": "texte-parlement",
+   "gravite": "moyenne",
+   "titre": "🏛️ N° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires",
+   "detail": "Assemblée — documents parlementaires — Tue, 06 Oct 2026 00:00:00 +0000.\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.\n\n🕐 Temps partiel — « temps partiel »",
+   "lien": "https://www.assemblee-nationale.fr/17/propositions/pion3244.asp",
+   "date_texte": "2026-10-07",
+   "_id": "parl:https://www.assemblee-nationale.fr/17/propositions/pion3244.asp",
+   "vu_le": "2026-10-07"
+  },
   {
    "categorie": "nouvelle-circulaire",
    "gravite": "moyenne",

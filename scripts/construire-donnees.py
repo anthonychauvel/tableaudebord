@@ -8,7 +8,7 @@ USAGE
     python3 construire-donnees.py --hs /chemin/vers/hs --droit /chemin/vers/droit --out ../donnees.json
 """
 import argparse, json, os, re, subprocess, sys
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 
@@ -641,14 +641,66 @@ def main():
 
     n_ignorees = 0
 
+    # Règles anti-bruit (07/10/2026) — champs FACULTATIFS d'une exception, tous
+    # rétro-compatibles (une exception qui ne les a pas marche comme avant) :
+    #   "motif"       : expression cherchée dans le titre + le détail (sans
+    #                   accents, minuscules). Ex. "cour administrative|caa de".
+    #   "sauf"        : si cette expression est présente, l'exception NE
+    #                   s'applique PAS (ex. garder un texte qui parle de salaire).
+    #   "avant_jours" : ne masque que les textes datés de plus de N jours
+    #                   (coupure glissante, recalculée à chaque passage).
+    #   "expire"      : date AAAA-MM-JJ après laquelle l'exception cesse de
+    #                   s'appliquer -> l'alerte revient toute seule (revue mensuelle).
+    #   "champ"       : "titre" pour ne chercher motif/sauf QUE dans le titre
+    #                   (le détail cite souvent « salaire » sans rapport).
+    #   "categorie" peut valoir "*" pour viser toutes les catégories.
+    try:
+        from veille_commun import normaliser as _norm
+    except Exception:                                # noqa: BLE001
+        def _norm(t):
+            return (t or "").lower()
+    _aujourdhui = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    _regex_cache = {}
+
+    def _rx(motif):
+        if motif not in _regex_cache:
+            try:
+                _regex_cache[motif] = re.compile(_norm(motif), re.I)
+            except re.error as err:
+                print(f"exceptions.json : motif invalide « {motif} » ({err}), ignoré", file=sys.stderr)
+                _regex_cache[motif] = None
+        return _regex_cache[motif]
+
     def _exception_couvre(e, a):
-        # Catégorie : toujours exacte.
-        if e["categorie"] != a.get("categorie"):
+        # Catégorie : toujours exacte (ou « * » pour toutes).
+        if e["categorie"] != "*" and e["categorie"] != a.get("categorie"):
             return False
         # Clé : sous-chaîne du titre. Une clé vide vaut « toute la catégorie »
         # (utile pour une règle de coupure globale par date).
         if e.get("cle") and e["cle"] not in a.get("titre", ""):
             return False
+        if e.get("expire") and _aujourdhui > e["expire"]:
+            return False
+        if e.get("motif") or e.get("sauf"):
+            texte = _norm(a.get("titre", "") if e.get("champ") == "titre"
+                          else f"{a.get('titre', '')}\n{a.get('detail', '')}")
+            if e.get("motif"):
+                rx = _rx(e["motif"])
+                if rx is None or not rx.search(texte):
+                    return False
+            if e.get("sauf"):
+                rx = _rx(e["sauf"])
+                if rx is not None and rx.search(texte):
+                    return False
+        if e.get("avant_jours") is not None:
+            dt = a.get("date_texte")
+            try:
+                limite = (datetime.strptime(_aujourdhui, "%Y-%m-%d")
+                          - timedelta(days=int(e["avant_jours"]))).strftime("%Y-%m-%d")
+            except (TypeError, ValueError):
+                return False
+            if not dt or dt >= limite:
+                return False
         # Mode « jusqu_au » : ne masque que si le texte de référence de
         # l'alerte est ANTÉRIEUR ou ÉGAL à la date d'acquittement. Un texte
         # paru APRÈS cette date réapparaît tout seul — c'est ce qui permet de

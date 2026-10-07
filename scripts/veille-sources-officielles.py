@@ -572,6 +572,8 @@ FONDS_DILA = {
     "constit": ("Conseil constitutionnel", "🏛️", "decision-haute-juridiction"),
     "jade": ("Conseil d'État", "🏛️", "decision-haute-juridiction"),
 }
+# Au-delà, un texte « nouveau au fonds » est en fait un vieux texte rattrapé.
+DILA_MAX_JOURS = 180
 CENSURE = re.compile(r"non[- ]conformite|contraire a la constitution|annul|abrog|censur|illegal", re.I)
 FORT_DILA = re.compile(r"code du travail|heures? supplementaires?|duree du travail|conges? payes?|smic"
                        r"|cotisations?|reduction generale|convention collective|arrete d.extension", re.I)
@@ -608,11 +610,19 @@ def veille_fonds_dila(droit, memoire, alertes, themes, cites, aujourd_hui, diag)
                             "detail": "Rattrapage de l'aspirateur : textes anciens récupérés en masse.",
                             "_id": f"rattrapage:{dossier}:{aujourd_hui}"})
             continue
-        retenus = 0
+        retenus, anciens = 0, 0
+        # 07/10/2026 : l'aspirateur a versé d'un coup ~50 circulaires de 2012-2014
+        # (sous le seuil de 150 du rattrapage). Un texte daté de plus de
+        # DILA_MAX_JOURS n'est pas une nouveauté : enregistré, jamais signalé.
+        limite_date = (datetime.strptime(aujourd_hui, "%Y-%m-%d")
+                       - timedelta(days=DILA_MAX_JOURS)).strftime("%Y-%m-%d")
         for n in nouveaux:
             try:
                 f = json.load(open(os.path.join(racine, n), encoding="utf-8"))
             except Exception:
+                continue
+            if str(f.get("date") or "")[:10] and str(f.get("date"))[:10] < limite_date:
+                anciens += 1
                 continue
             texte = f"{f.get('titre', '')} {f.get('solution', '')} {f.get('extrait', '')}"
             norm = normaliser(texte)
@@ -645,7 +655,8 @@ def veille_fonds_dila(droit, memoire, alertes, themes, cites, aujourd_hui, diag)
                 "date_texte": f.get("date") or aujourd_hui,
                 "_id": f"dila:{dossier}:{ident}",
             })
-        print(f"{nom} : {len(nouveaux)} texte(s) nouveau(x), {retenus} retenu(s).")
+        print(f"{nom} : {len(nouveaux)} texte(s) nouveau(x), {retenus} retenu(s)"
+              + (f", {anciens} trop ancien(s) ignoré(s)" if anciens else "") + ".")
 
 
 # ── PARAMÈTRES SOCIAUX HORS DROIT DU TRAVAIL (OpenFisca-France) ────────────

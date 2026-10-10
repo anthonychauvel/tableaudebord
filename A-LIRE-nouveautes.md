@@ -42,9 +42,10 @@ garde le compte (`exceptions_appliquees`), donc rien ne disparaît sans trace.
 
 ## 3. Code d'accès
 
-Un écran demande **19871502** avant de montrer le tableau de bord. Une fois
-tapé, retenu sur ton appareil (`localStorage`) — tu n'as à le taper qu'une
-fois.
+Un écran demande ta **clé d'administration** (la même que `ADMIN_KEY` dans
+Cloudflare, projet Vezoria) avant de montrer le tableau de bord. Elle est
+vérifiée par le serveur Vezoria — aucun code n'est écrit dans ce dépôt — puis
+retenue sur ton appareil (`localStorage`) : tu n'as à la taper qu'une fois.
 
 **À prendre pour ce que c'est, pas plus** : c'est une barrière côté
 navigateur, pas une vraie authentification. Elle arrête quelqu'un qui tombe

@@ -1,18 +1,27 @@
-# Vezoria — surveille le stockage du serveur chaque lundi et ouvre une « issue » (GitHub t'envoie un mail)
-# quand les photos dépassent 70 % de la limite (9 Go sur les 10 Go gratuits de Cloudflare R2).
-# Secrets à créer dans ce dépôt (Settings → Secrets and variables → Actions) :
-#   VEZORIA_URL        ex. https://vezoria.pages.dev
+# Vezoria — chaque jour : relève les installations et la place du stockage Cloudflare,
+# les écrit dans vezoria.json (affiché sur l'accueil du tableau de bord), et ouvre une
+# « issue » (GitHub t'envoie un mail) si les photos dépassent 70 % de la limite
+# (9 Go sur les 10 Go gratuits de Cloudflare R2).
+# Secrets de ce dépôt (Settings → Secrets and variables → Actions → Repository secrets) :
+#   VEZORIA_URL        ex. https://vezoria.pages.dev   (sans / à la fin)
 #   VEZORIA_STATS_KEY  la même valeur que la variable STATS_KEY du projet Cloudflare Pages
+#
+# Minute décalée (:13) : GitHub peut abandonner en silence un run programmé pile à l'heure ronde.
 name: Vezoria stockage
 on:
-  schedule: [{ cron: '0 7 * * 1' }]
+  schedule: [{ cron: '13 6 * * *' }]   # tous les jours à 6h13 UTC (8h13 à Paris l'été)
   workflow_dispatch:
 permissions:
-  issues: write
+  contents: write                       # pour committer vezoria.json
+  issues: write                         # pour l'alerte par mail
+concurrency: { group: vezoria-stockage, cancel-in-progress: false }
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
+      - uses: actions/checkout@v4
+
       - name: Lire l'état du serveur
         id: st
         run: |
@@ -29,6 +38,30 @@ jobs:
           echo "pct=$(echo "$J" | jq -r '.r2.pct')" >> $GITHUB_OUTPUT
           echo "gb=$(echo "$J" | jq -r '.r2.usedGb')" >> $GITHUB_OUTPUT
           echo "sp=$(echo "$J" | jq -r '.spaces')" >> $GITHUB_OUTPUT
+          # installations (compteur public de l'appli)
+          curl -s -o ins.json "${{ secrets.VEZORIA_URL }}/api/installs" || echo '{}' > ins.json
+          jq -e '.total' ins.json >/dev/null 2>&1 || echo '{}' > ins.json
+          echo "Installations : $(cat ins.json)"
+
+      - name: Écrire vezoria.json pour le tableau de bord
+        if: steps.st.outputs.pct != '-1'
+        run: |
+          OLD='{}'; [ -f vezoria.json ] && OLD=$(cat vezoria.json)
+          JOUR=$(date -u +%Y-%m-%d)
+          jq -n --argjson st "$(cat rep.json)" --argjson ins "$(cat ins.json)" --argjson old "$OLD" --arg jour "$JOUR" --arg maj "$(date -u +%Y-%m-%dT%H:%M:%SZ)" '
+            {maj:$maj,
+             installs:$ins,
+             stockage:{octets:$st.r2.used, max:$st.r2.max, pct:$st.r2.pct, carnets:$st.spaces, fiches:$st.records, gros:[$st.bigSpaces[]?.mb]},
+             historique:((($old.historique // []) | map(select(.d != $jour))) + [{d:$jour, go:($st.r2.used/1e9), inst:($ins.total // null)}] | .[-120:])}
+          ' > vezoria.json
+          cat vezoria.json | head -c 400; echo
+          git config user.name "veille-bot"
+          git config user.email "veille-bot@users.noreply.github.com"
+          git add vezoria.json
+          git diff --cached --quiet && { echo "Aucun changement."; exit 0; }
+          git commit -m "Vezoria — relevé du $JOUR"
+          for i in 1 2 3; do git pull --rebase -q && git push && break; sleep 5; done
+
       - name: Prévenir si besoin
         env:
           GH_TOKEN: ${{ github.token }}

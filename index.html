@@ -233,6 +233,17 @@ details.carte[open]>summary .chev{transform:rotate(90deg);}
 .kpi.h .v{color:var(--haute);} .kpi.m .v{color:var(--moyenne);} .kpi.n .v{color:var(--accent);} .kpi.o .v{color:var(--ok);}
 .kpi .mini{height:3px;border-radius:9px;background:rgba(255,255,255,.07);margin-top:6px;overflow:hidden;}
 .kpi .mini i{display:block;height:100%;background:var(--ok);}
+/* 10/10/2026 : bloc Vezoria (installations + stockage Cloudflare), lu dans vezoria.json */
+.vz{margin:0 14px 12px;background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid var(--edge);border-radius:18px;padding:14px;}
+.vz .kpis{margin:0 0 12px;grid-template-columns:repeat(3,1fr);}
+.vz .kpi{cursor:default;}
+.vz .jauge{height:10px;border-radius:9px;background:rgba(255,255,255,.07);overflow:hidden;margin:6px 0 4px;}
+.vz .jauge i{display:block;height:100%;border-radius:9px;background:var(--ok);}
+.vz .jauge.m i{background:var(--moyenne);} .vz .jauge.h i{background:var(--haute);}
+.vz .lg{display:flex;justify-content:space-between;font-size:12px;color:var(--txt2);}
+.vz .lg b{color:var(--txt);}
+.vz svg{display:block;width:100%;height:46px;margin-top:10px;}
+.vz .pl{font-size:11px;color:var(--txt2);margin-top:8px;line-height:1.45;}
 .dests{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 16px;}
 .dest{background:var(--ink2);border:1px solid var(--edge);border-radius:10px;padding:11px 12px;text-align:left;cursor:pointer;color:var(--txt);
   display:flex;flex-direction:column;gap:6px;min-height:92px;}
@@ -335,6 +346,7 @@ details.carte>summary .chev{line-height:34px;}
   <div class="puces" id="puces"></div>
   <div id="mission"></div>
   <div id="blocTextes"></div>
+  <div id="blocVezoria"></div>
   <div class="sect"><h2>Sources surveillées</h2><small id="couvCompte"></small></div>
   <div class="couv" id="couverture"></div>
   <div class="sect"><h2>Glossaire</h2></div>
@@ -1392,6 +1404,37 @@ async function relancer(k){
 }
 
 charger();
+// 10/10/2026 — Vezoria : installations + place du stockage Cloudflare. vezoria.json est
+// écrit chaque jour par .github/workflows/vezoria-stockage.yml (la clé du serveur reste
+// dans les secrets GitHub, jamais dans cette page publique).
+async function chargerVezoria(){
+  var el=document.getElementById('blocVezoria'); if(!el) return;
+  var v; try{ var r=await fetch('vezoria.json',{cache:'no-cache'}); if(!r.ok) return; v=await r.json(); }catch(e){ return; }
+  var s=v.stockage||{}, ins=v.installs||{}, pct=+s.pct||0, cl=pct>=85?'h':pct>=70?'m':'';
+  var fmt=function(n){return (n==null?'—':Number(n).toLocaleString('fr-FR'));};
+  var gb=function(o){return o==null?'—':(o/1e9).toLocaleString('fr-FR',{maximumFractionDigits:2})+' Go';};
+  var jr=function(d){try{return new Date(d+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'short'});}catch(e){return esc(d);}};
+  var h=(v.historique||[]).slice(-60), spark='';
+  if(h.length>1){
+    var mx=Math.max.apply(null,h.map(function(p){return p.go||0;}).concat([0.01])), w=300, H=40;
+    var pts=h.map(function(p,i){return (i/(h.length-1)*w).toFixed(1)+','+(H-(p.go||0)/mx*(H-4)-2).toFixed(1);}).join(' ');
+    spark='<svg viewBox="0 0 '+w+' '+H+'" preserveAspectRatio="none" aria-label="Évolution du stockage"><polyline points="'+pts+'" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>'
+      +'<div class="lg"><span>'+jr(h[0].d)+'</span><span>stockage photos ('+h.length+' jours)</span><span>'+jr(h[h.length-1].d)+'</span></div>';
+  }
+  var quand=v.maj?new Date(v.maj):null;
+  el.innerHTML='<div class="sect"><h2>Vezoria</h2><small>'+(quand?'relevé du '+quand.toLocaleDateString('fr-FR',{day:'numeric',month:'short'})+' à '+quand.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'}):'')+'</small></div>'
+    +'<div class="vz"><div class="kpis">'
+    +'<div class="kpi n"><div class="v">'+fmt(ins.total)+'</div><div class="l">Installations</div></div>'
+    +'<div class="kpi o"><div class="v">+'+fmt(ins.semaine)+'</div><div class="l">7 derniers jours</div></div>'
+    +'<div class="kpi"><div class="v">'+fmt(s.carnets)+'</div><div class="l">Carnets en ligne</div></div></div>'
+    +'<div class="lg"><span>📱 iPhone <b>'+fmt(ins.ios)+'</b></span><span>🤖 Android <b>'+fmt(ins.android)+'</b></span><span>💻 Ordi <b>'+fmt(ins.ordinateur)+'</b></span></div>'
+    +'<div class="sect" style="margin:14px 0 4px"><h2>Stockage photos (Cloudflare R2)</h2><small>'+pct.toLocaleString('fr-FR')+' %</small></div>'
+    +'<div class="jauge '+cl+'"><i style="width:'+Math.min(100,pct)+'%"></i></div>'
+    +'<div class="lg"><span><b>'+gb(s.octets)+'</b> utilisés</span><span>limite '+gb(s.max)+' · gratuit jusqu’à 10 Go</span></div>'
+    +spark
+    +'<div class="pl">'+fmt(s.fiches)+' fiches · plus gros carnets : '+(s.gros||[]).map(function(m){return m+' Mo';}).join(', ')+'<br>Alerte par mail (ticket GitHub) au-delà de 70 %.</div></div>';
+}
+chargerVezoria();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
 
 // Code d'accès -- une barrière simple, pas une vraie sécurité. Tout se passe

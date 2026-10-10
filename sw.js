@@ -2,7 +2,7 @@
 // fonctionne et que le tableau de bord s'ouvre même sans réseau (avec les
 // dernières données connues). Pas de stratégie sophistiquée — un outil perso
 // à une seule page n'en a pas besoin.
-const CACHE = "veille-perso-20261009-142604";
+const CACHE = "veille-perso-20261010-160000";
 const SHELL = ["./", "./index.html", "./manifest.json", "./donnees.json",
                "./icons/icon-192.png", "./icons/icon-512.png"];
 
@@ -28,7 +28,7 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== self.location.origin) return;
-  if (url.pathname.endsWith("donnees.json") || url.pathname.endsWith("/")
+  if (url.pathname.endsWith("donnees.json") || url.pathname.endsWith("vezoria.json") || url.pathname.endsWith("/")
       || url.pathname.endsWith("index.html") || e.request.mode === "navigate") {
     e.respondWith(
       fetch(e.request)

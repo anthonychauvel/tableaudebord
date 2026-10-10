@@ -1,0 +1,31 @@
+{
+  "maj": "2026-10-10T13:53:19Z",
+  "installs": {
+    "total": 9,
+    "ios": 9,
+    "android": 0,
+    "ordinateur": 0,
+    "semaine": 9
+  },
+  "stockage": {
+    "octets": 752144704,
+    "max": 9000000000,
+    "pct": 8.4,
+    "carnets": 17,
+    "fiches": 1257,
+    "gros": [
+      364,
+      213,
+      105,
+      19,
+      16
+    ]
+  },
+  "historique": [
+    {
+      "d": "2026-10-10",
+      "go": 0.752144704,
+      "inst": 9
+    }
+  ]
+}

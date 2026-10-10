@@ -1432,7 +1432,7 @@ async function chargerVezoria(){
     +'<div class="jauge '+cl+'"><i style="width:'+Math.min(100,pct)+'%"></i></div>'
     +'<div class="lg"><span><b>'+gb(s.octets)+'</b> utilisés</span><span>limite '+gb(s.max)+' · gratuit jusqu’à 10 Go</span></div>'
     +spark
-    +'<div class="pl">'+fmt(s.fiches)+' fiches · plus gros carnets : '+(s.gros||[]).map(function(m){return m+' Mo';}).join(', ')+'<br>Alerte par mail (ticket GitHub) au-delà de 70 %.</div></div>';
+    +'<div class="pl">'+fmt(s.fiches)+' fiches · plus gros carnets : '+(s.gros||[]).map(function(m){return m+' Mo';}).join(', ')+'<br>Alerte par mail (ticket GitHub) au-delà de 70 %.</div><div class="row" style="display:flex;margin-top:10px"><a href="vezoria-admin.html" style="flex:1;text-align:center;padding:10px;border-radius:12px;background:#232a33;color:var(--txt);font-weight:700;font-size:13px;text-decoration:none">🛡️ Signalements et carnets suspendus</a></div></div>';
 }
 chargerVezoria();
 if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');

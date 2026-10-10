@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Vezoria — signalements</title>
+<meta name="theme-color" content="#11151A">
+<style>
+:root{--ink:#0B0E12;--ink2:#11151A;--ink3:#171C22;--edge:#262E38;--txt:#E6EBF0;--txt2:#8994A1;--accent:#6EA8FE;--haute:#ff6b6b;--moyenne:#ffb454;--ok:#4cd585}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#0A0D11}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--ink);color:var(--txt);min-height:100vh;padding:calc(14px + env(safe-area-inset-top)) 14px calc(30px + env(safe-area-inset-bottom));max-width:620px;margin:0 auto}
+h1{font-size:20px;font-weight:800;margin:4px 2px 2px}h1 small{display:block;font-size:12px;color:var(--txt2);font-weight:600;margin-top:3px}
+.c{background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid var(--edge);border-radius:18px;padding:14px;margin:12px 0}
+.c h2{font-size:11px;font-weight:750;letter-spacing:1.1px;text-transform:uppercase;color:var(--txt2);margin-bottom:10px}
+label{display:block;font-size:12px;color:var(--txt2);margin:8px 0 4px;font-weight:650}
+input,textarea{width:100%;background:var(--ink2);border:1px solid var(--edge);border-radius:12px;color:var(--txt);font:16px -apple-system,system-ui,sans-serif;padding:11px 12px}
+textarea{min-height:64px;resize:vertical}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+button{border:0;border-radius:12px;padding:11px 14px;font:700 14px -apple-system,system-ui,sans-serif;color:#0B0E12;background:var(--accent);cursor:pointer;flex:1 1 auto}
+button.sec{background:#232a33;color:var(--txt)}button.warn{background:var(--moyenne)}button.dang{background:var(--haute);color:#fff}button.ok{background:var(--ok)}
+button:disabled{opacity:.45}
+.msg{font-size:13px;line-height:1.45;margin-top:10px;color:var(--txt2)}.msg b{color:var(--txt)}
+.res{margin-top:12px;border-radius:12px;background:var(--ink2);border:1px solid var(--edge);padding:12px;font-size:14px;line-height:1.55}
+.res .st{display:inline-block;font-size:11px;font-weight:800;padding:2px 9px;border-radius:99px;margin-left:6px}
+.st.s{background:rgba(255,180,84,.18);color:var(--moyenne)}.st.e{background:rgba(255,107,107,.18);color:var(--haute)}.st.a{background:rgba(76,213,133,.15);color:var(--ok)}
+.it{border-top:1px solid var(--edge);padding:10px 0;font-size:13px;line-height:1.45}.it:first-child{border-top:0}.it small{color:var(--txt2)}
+.it .row{margin-top:6px}.it button{padding:7px 10px;font-size:12px}
+.alerte{border-left:4px solid var(--haute);background:rgba(255,107,107,.07);border-radius:12px;padding:11px 12px;font-size:13px;line-height:1.5}
+.alerte a{color:var(--accent)}
+code{font:12px ui-monospace,Menlo,monospace;color:#c7d2fe}
+a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
+</style>
+</head>
+<body>
+<a class="back" href="index.html">‹ Tableau de bord</a>
+<h1>🛡️ Vezoria — signalements<small>Suspendre, rétablir ou effacer un carnet signalé, sans jamais voir son contenu.</small></h1>
+
+<div class="c">
+  <div class="alerte"><b>Règles d'or</b><br>
+  1. Ne jamais ouvrir le voyage ni les photos signalées pour « vérifier ».<br>
+  2. Commencer par <b>suspendre</b> : c'est réversible, rien n'est effacé, le propriétaire voit un message et peut contester.<br>
+  3. Contenu pédocriminel ou terroriste signalé : suspendre, puis signaler <b>tout de suite</b> sur <a href="https://www.internet-signalement.gouv.fr" target="_blank" rel="noopener">internet-signalement.gouv.fr</a> (Pharos) en donnant le code. Effacer seulement quand les autorités le demandent ou après leur réponse.<br>
+  4. Signalement douteux (dispute, ex-compagnon…) : suspendre, demander des précisions, rétablir si rien n'est établi.</div>
+</div>
+
+<div class="c">
+  <h2>Carnet signalé</h2>
+  <label for="code">Code du carnet ou lien reçu (rejoindre / suivre)</label>
+  <input id="code" placeholder="ABCD-EFGH-JKLM ou https://…#rejoindre=…" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false">
+  <div class="row"><button id="bLook" onclick="look()">🔎 Rechercher</button></div>
+  <div id="res"></div>
+  <label for="note">Motif (gardé dans le journal : date, motif, qui a signalé…)</label>
+  <textarea id="note" placeholder="Ex. Signalé le 12/10 par e-mail (x@y.fr) pour contenu illicite. Pharos n° …"></textarea>
+  <div class="row">
+    <button class="warn" id="bSus" onclick="act('suspend')" disabled>⏸ Suspendre (réversible)</button>
+    <button class="ok" id="bRes" onclick="act('restore')" disabled>▶ Rétablir</button>
+  </div>
+  <div class="row"><button class="dang" id="bDel" onclick="act('delete')" disabled>🗑 Effacer définitivement</button></div>
+  <div class="msg" id="msg"></div>
+</div>
+
+<div class="c">
+  <h2>Carnets suspendus ou effacés</h2>
+  <div id="list"><div class="msg">Renseigne les réglages ci-dessous, puis touche « Actualiser ».</div></div>
+  <div class="row"><button class="sec" onclick="list()">↻ Actualiser</button></div>
+  <h2 style="margin-top:16px">Journal</h2>
+  <div id="log"></div>
+</div>
+
+<div class="c">
+  <h2>Réglages (gardés sur ce téléphone seulement)</h2>
+  <label for="url">Adresse de Vezoria</label>
+  <input id="url" placeholder="https://vezoria.pages.dev" autocapitalize="off" autocomplete="off">
+  <label for="key">Clé d'administration (variable ADMIN_KEY dans Cloudflare)</label>
+  <input id="key" type="password" autocomplete="off">
+  <div class="row"><button class="sec" onclick="save()">💾 Enregistrer</button><button class="sec" onclick="forget()">Oublier la clé</button></div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const LS = {get:k=>{try{return localStorage.getItem(k)||'';}catch(e){return '';}}, set:(k,v)=>{try{localStorage.setItem(k,v);}catch(e){}}, del:k=>{try{localStorage.removeItem(k);}catch(e){}}};
+const esc = t => String(t==null?'':t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('url').value = LS.get('vz_admin_url'); $('key').value = LS.get('vz_admin_key');
+function save(){ LS.set('vz_admin_url', $('url').value.trim().replace(/\/+$/,'')); LS.set('vz_admin_key', $('key').value); msg('Réglages enregistrés sur ce téléphone.'); list(); }
+function forget(){ LS.del('vz_admin_key'); $('key').value=''; msg('Clé oubliée.'); }
+function msg(h){ $('msg').innerHTML = h; }
+// Même calcul que l'appli : empreinte = PBKDF2(code, « carnet-voyage/space/v2 », 200 000 tours, SHA-256).
+// Le code reste sur ce téléphone ; seul ce résultat part vers le serveur.
+function codeOf(v){
+  v = String(v||'').trim(); try { v = decodeURIComponent(v); } catch(e){}
+  const m = v.match(/#(?:rejoindre|suivre)=([A-Za-z0-9-]{8,})/); if(m) v = m[1];
+  return v.toUpperCase().replace(/\s+/g,'');
+}
+async function tokenOf(code){
+  const te = new TextEncoder(), base = await crypto.subtle.importKey('raw', te.encode(code), 'PBKDF2', false, ['deriveBits']);
+  const b = await crypto.subtle.deriveBits({name:'PBKDF2', salt:te.encode('carnet-voyage/space/v2'), iterations:200000, hash:'SHA-256'}, base, 256);
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+async function api(body){
+  const url = LS.get('vz_admin_url') || $('url').value.trim().replace(/\/+$/,''), key = LS.get('vz_admin_key') || $('key').value;
+  if(!url || !key) throw new Error('Renseigne l’adresse de Vezoria et la clé dans les réglages en bas.');
+  const r = await fetch(url + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json','X-Admin-Key':key}, body:JSON.stringify(body)});
+  let j = {}; try { j = await r.json(); } catch(e){}
+  if(!r.ok) throw new Error(r.status === 403 ? 'Clé refusée.' : r.status === 404 ? 'Page désactivée : ajoute ADMIN_KEY dans Cloudflare puis redéploie.' : (j.error || ('erreur ' + r.status)));
+  return j;
+}
+let CUR = null;   // {token} ou {space}
+const when = t => t ? new Date(t).toLocaleString('fr-FR',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}) : '—';
+const stTag = b => !b ? '<span class="st a">actif</span>' : b.status === 'effacé' ? '<span class="st e">effacé</span>' : '<span class="st s">suspendu</span>';
+function show(i){
+  $('res').innerHTML = `<div class="res"><b>Carnet <code>${esc(i.short)}…</code></b>${stTag(i.blocked)}<br>
+    ${i.exists ? `${i.records} fiche(s) · ${i.photosMb} Mo de photos · dernière activité : ${when(i.last)}` : 'Rien sur le serveur pour ce code (jamais synchronisé, ou déjà effacé).'}
+    ${i.blocked ? `<br><small style="color:var(--txt2)">${esc(i.blocked.status)} le ${when(i.blocked.at)}${i.blocked.note ? ' — ' + esc(i.blocked.note) : ''}</small>` : ''}</div>`;
+  $('bSus').disabled = !!(i.blocked && i.blocked.status === 'suspendu') || (!i.exists && !i.blocked);
+  $('bRes').disabled = !(i.blocked && i.blocked.status === 'suspendu');
+  $('bDel').disabled = !(i.exists || (i.blocked && i.blocked.status === 'suspendu'));
+}
+async function look(){
+  const code = codeOf($('code').value); if(code.length < 8){ msg('Colle un code (12 caractères) ou un lien d’invitation.'); return; }
+  $('bLook').disabled = true; msg('⏳ Calcul de l’empreinte (quelques secondes)…');
+  try { const token = await tokenOf(code); CUR = {token}; show(await api({action:'look', token})); msg(''); }
+  catch(e){ msg('⚠️ ' + esc(e.message)); } finally { $('bLook').disabled = false; }
+}
+async function act(a, target){
+  const t = target || CUR; if(!t) return; const note = $('note').value.trim();
+  if(a === 'suspend' && !confirm('Suspendre ce carnet ?\n\nSes membres ne pourront plus le synchroniser ni voir ses photos en ligne, et verront un message les invitant à te contacter. Rien n’est effacé : tu peux le rétablir à tout moment.')) return;
+  if(a === 'restore' && !confirm('Rétablir ce carnet ? Il refonctionnera normalement pour ses membres.')) return;
+  if(a === 'delete'){
+    if(!confirm('EFFACER DÉFINITIVEMENT toutes les fiches et photos de ce carnet sur le serveur ?\n\nC’est irréversible. Pour un contenu signalé aux autorités, attends leur réponse avant d’effacer.')) return;
+    if((prompt('Pour confirmer, écris EFFACER') || '').trim().toUpperCase() !== 'EFFACER') return;
+  }
+  if(!note && a !== 'restore' && !confirm('Aucun motif noté. Continuer quand même ?')) return;
+  try { const j = await api(Object.assign({action:a, note}, t)); if(!target) show(j); msg(a === 'suspend' ? '⏸ Carnet suspendu.' : a === 'restore' ? '▶ Carnet rétabli.' : '🗑 Carnet effacé (' + (j.wiped ? j.wiped.records + ' fiches, ' + j.wiped.photos + ' photos' : '') + '), il reste bloqué.'); list(); }
+  catch(e){ msg('⚠️ ' + esc(e.message)); }
+}
+async function list(){
+  try {
+    const j = await api({action:'list'});
+    $('list').innerHTML = (j.blocked||[]).map(b=>`<div class="it"><code>${esc(b.short)}…</code> <span class="st ${b.status==='effacé'?'e':'s'}">${esc(b.status)}</span><br><small>${when(b.at)}${b.note ? ' — ' + esc(b.note) : ''}</small>
+      ${b.status === 'suspendu' ? `<div class="row"><button class="ok" onclick="act('restore',{space:'${b.space}'})">▶ Rétablir</button><button class="dang" onclick="act('delete',{space:'${b.space}'})">🗑 Effacer</button></div>` : ''}</div>`).join('') || '<div class="msg">Aucun carnet suspendu.</div>';
+    $('log').innerHTML = (j.log||[]).map(l=>`<div class="it"><b>${esc(l.action)}</b> <code>${esc(l.short)}…</code><br><small>${when(l.at)}${l.note ? ' — ' + esc(l.note) : ''}</small></div>`).join('') || '<div class="msg">Journal vide.</div>';
+  } catch(e){ $('list').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
+}
+if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) list();
+</script>
+</body>
+</html>

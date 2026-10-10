@@ -1,0 +1,35 @@
+# Vezoria — surveille le stockage du serveur chaque lundi et ouvre une « issue » (GitHub t'envoie un mail)
+# quand les photos dépassent 70 % de la limite (9 Go sur les 10 Go gratuits de Cloudflare R2).
+# Secrets à créer dans ce dépôt (Settings → Secrets and variables → Actions) :
+#   VEZORIA_URL        ex. https://vezoria.pages.dev
+#   VEZORIA_STATS_KEY  la même valeur que la variable STATS_KEY du projet Cloudflare Pages
+name: Vezoria stockage
+on:
+  schedule: [{ cron: '0 7 * * 1' }]
+  workflow_dispatch:
+permissions:
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lire l'état du serveur
+        id: st
+        run: |
+          J=$(curl -sf -H "X-Stats-Key: ${{ secrets.VEZORIA_STATS_KEY }}" "${{ secrets.VEZORIA_URL }}/api/stats") || { echo "pct=-1" >> $GITHUB_OUTPUT; exit 0; }
+          echo "$J"
+          echo "pct=$(echo "$J" | jq -r '.r2.pct')" >> $GITHUB_OUTPUT
+          echo "gb=$(echo "$J" | jq -r '.r2.usedGb')" >> $GITHUB_OUTPUT
+          echo "sp=$(echo "$J" | jq -r '.spaces')" >> $GITHUB_OUTPUT
+      - name: Prévenir si besoin
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PCT: ${{ steps.st.outputs.pct }}
+          GB: ${{ steps.st.outputs.gb }}
+          SP: ${{ steps.st.outputs.sp }}
+        run: |
+          if [ "$PCT" = "-1" ]; then T="⚠️ Vezoria : le serveur ne répond pas à /api/stats"; B="Vérifie que le site est en ligne et que STATS_KEY est la même des deux côtés.";
+          elif awk "BEGIN{exit !($PCT >= 70)}"; then T="⚠️ Vezoria : photos à $PCT % de la limite ($GB Go)"; B="Stockage photos : $GB Go sur 9 Go autorisés ($SP carnets). Au-delà de 10 Go, Cloudflare facture 0,015 \$/Go/mois. Pistes : passer à l'offre payante, ou relever MAX_TOTAL_R2 dans functions/api/photo.js.";
+          else echo "OK : $PCT %"; exit 0; fi
+          if gh issue list -R "$GITHUB_REPOSITORY" --state open --search "Vezoria in:title" --json number -q '.[0].number' | grep -q .; then echo "Alerte déjà ouverte"; exit 0; fi
+          gh issue create -R "$GITHUB_REPOSITORY" --title "$T" --body "$B"

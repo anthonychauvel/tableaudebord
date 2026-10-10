@@ -16,8 +16,16 @@ jobs:
       - name: Lire l'état du serveur
         id: st
         run: |
-          J=$(curl -sf -H "X-Stats-Key: ${{ secrets.VEZORIA_STATS_KEY }}" "${{ secrets.VEZORIA_URL }}/api/stats") || { echo "pct=-1" >> $GITHUB_OUTPUT; exit 0; }
-          echo "$J"
+          CODE=$(curl -s -o rep.json -w "%{http_code}" -H "X-Stats-Key: ${{ secrets.VEZORIA_STATS_KEY }}" "${{ secrets.VEZORIA_URL }}/api/stats" || echo 000)
+          J=$(cat rep.json 2>/dev/null); echo "Code HTTP : $CODE"; echo "$J" | head -c 300; echo
+          case "$CODE" in
+            200) ;;
+            404) echo "➜ 404 : stats.js pas encore déployé, ou STATS_KEY absente côté Cloudflare (ajoute-la puis redéploie)"; echo "pct=-1" >> $GITHUB_OUTPUT; exit 0;;
+            403) echo "➜ 403 : le mot de passe n'est pas le même dans GitHub (VEZORIA_STATS_KEY) et Cloudflare (STATS_KEY)"; echo "pct=-1" >> $GITHUB_OUTPUT; exit 0;;
+            000) echo "➜ adresse injoignable : vérifie VEZORIA_URL (https://… sans / à la fin)"; echo "pct=-1" >> $GITHUB_OUTPUT; exit 0;;
+            *) echo "pct=-1" >> $GITHUB_OUTPUT; exit 0;;
+          esac
+          echo "$J" | jq -e '.r2.pct' >/dev/null || { echo "➜ réponse inattendue : VEZORIA_URL pointe-t-elle bien sur Vezoria ?"; echo "pct=-1" >> $GITHUB_OUTPUT; exit 0; }
           echo "pct=$(echo "$J" | jq -r '.r2.pct')" >> $GITHUB_OUTPUT
           echo "gb=$(echo "$J" | jq -r '.r2.usedGb')" >> $GITHUB_OUTPUT
           echo "sp=$(echo "$J" | jq -r '.spaces')" >> $GITHUB_OUTPUT

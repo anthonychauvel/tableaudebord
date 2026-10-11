@@ -1,25 +1,32 @@
 {
-  "maj": "2026-10-10T15:53:12Z",
+  "maj": "2026-10-11T07:02:57Z",
   "installs": {
-    "total": 1,
-    "ios": 1,
-    "android": 0,
+    "total": 6,
+    "ios": 2,
+    "android": 4,
     "ordinateur": 0,
-    "semaine": 1
+    "semaine": 6
   },
   "stockage": {
-    "octets": 0,
+    "octets": 338146,
     "max": 9000000000,
     "pct": 0,
-    "carnets": 0,
-    "fiches": 0,
-    "gros": []
+    "carnets": 2,
+    "fiches": 48,
+    "gros": [
+      0
+    ]
   },
   "historique": [
     {
       "d": "2026-10-10",
       "go": 0,
       "inst": 1
+    },
+    {
+      "d": "2026-10-11",
+      "go": 0.000338146,
+      "inst": 6
     }
   ]
 }

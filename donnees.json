@@ -1,13 +1,13 @@
 {
-  "genere": "2026-10-10T14:25:56.086154+00:00",
+  "genere": "2026-10-11T07:23:24.218769+00:00",
   "exceptions_appliquees": 298,
-  "nouvelles_alertes": 1,
+  "nouvelles_alertes": 2,
   "routage": {
     "par_zone": {
       "app": 4,
       "outils": 4,
-      "grilles": 9,
-      "guide": 11,
+      "grilles": 10,
+      "guide": 12,
       "mlt": 1,
       "veille": 2
     },
@@ -105,8 +105,8 @@
         {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 18 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 18 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 19 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 19 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -848,7 +848,7 @@
         {
           "categorie": "dares-perime",
           "gravite": "moyenne",
-          "titre": "Liste officielle des conventions (DARES) : 131 jours",
+          "titre": "Liste officielle des conventions (DARES) : 132 jours",
           "detail": "Le fichier qui sert d'univers des IDCC (Dares_Suivi_Historique_convention_collective_Juin2026.xlsx, daté du 2026-06-01 d'après nom du fichier) a plus de 120 jours. Les conventions créées ou fusionnées depuis ne sont pas vues par l'aspirateur.\n\nLe téléchargement automatique (maj_dares.py, dépôt droit) n'a pas trouvé de version plus récente, ou le site l'a bloqué. Récupère le fichier « Suivi historique des conventions collectives » sur le site de la DARES / du ministère du Travail et pose-le dans droit/ccn/ sous le nom Dares_Suivi_DERNIER.xlsx.",
           "lien": "https://travail-emploi.gouv.fr/conventions-collectives-nomenclatures",
           "date_texte": "2026-06-01",
@@ -888,7 +888,44 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "3 fichiers modifiés (2026-10-11) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (1) : grillepaye:ccn-data.json\n\nGUIDE (2) : licenciement-faute-guide.html, preavis-licenciement.html",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "licenciement-faute-guide.html",
+                "preavis-licenciement.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
     },
     {
       "id": "age",

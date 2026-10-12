@@ -1,14 +1,14 @@
 {
-  "genere": "2026-10-11T07:23:24.218769+00:00",
+  "genere": "2026-10-12T19:06:33.170643+00:00",
   "exceptions_appliquees": 298,
-  "nouvelles_alertes": 2,
+  "nouvelles_alertes": 3,
   "routage": {
     "par_zone": {
-      "app": 4,
+      "app": 5,
       "outils": 4,
-      "grilles": 10,
-      "guide": 12,
-      "mlt": 1,
+      "grilles": 11,
+      "guide": 11,
+      "mlt": 0,
       "veille": 2
     },
     "non_routees": 0,
@@ -81,32 +81,10 @@
       "module": "monlegitexte-droit",
       "alertes": [
         {
-          "categorie": "changement-reel",
-          "gravite": "haute",
-          "titre": "[Aspirateur principal (France)] 115 changement(s) sur tes sujets",
-          "detail": "Run du 2026-10-08 18:40 UTC (audits/2026-10-08.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1044.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🏖️ Repos et congés (« repos hebdomadaire ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de l'horlogerie du 17 décembre 1979. Remplacée par la convention collective nationale de la bijouterie, joaillerie, orfèvrerie, horlogerie (BJOH) du 3 octobre 2023 (IDCC 3251) Repos journalier et hebdomadaire, temps de…\n  APRÈS — Convention collective nationale de l'horlogerie du 17 décembre 1979. Remplacée par la convention collective nationale de la bijouterie, joaillerie, orfèvrerie, horlogerie (BJOH) du 3 octobre 2023 (IDCC 3251) Repos journalier et hebdomadaire, temps de…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1182.json — 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« repos hebdomadaire ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des personnels des ports de plaisance du 8 mars 2012 Titre IV : Durée du travail, congés, absences Titre IV : Durée du travail, congés, absences Durée du travail et repos hebdomadaire …ctive, trente-neuf heures par sem…\n  APRÈS — Convention collective nationale des personnels des ports de plaisance du 8 mars 2012 Titre IV : Durée du travail, congés, absences Titre IV : Durée du travail, congés, absences Durée du travail et repos hebdomadaire …ctive, trente-neuf heures par sem…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-08)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n… et 100 autre(s).",
-          "date_texte": "2026-10-08",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "mlt",
-              "cible": "Site MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul pour les lecteurs — ouvrir seulement si le sujet te concerne",
-              "raison": "MonLegiTexte",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "mlt"
-          ]
-        },
-        {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 19 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 19 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 20 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 20 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -124,7 +102,7 @@
           ]
         }
       ],
-      "hors_sujet_ignores": 60
+      "hors_sujet_ignores": 0
     },
     {
       "id": "modules",
@@ -226,6 +204,74 @@
       "id": "nouveaux",
       "titre": "📰 Nouveaux textes sur tes sujets",
       "alertes": [
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la… : concerne une convention de l'appli (IDCC 2128)",
+          "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 2128).\n\nArrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la mutualité (n° 2128)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965962",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-09",
+          "vu_le": "2026-10-12",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2128 — Mutualité",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 2128, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des… : concerne une convention de l'appli (IDCC 1486)",
+          "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 1486).\n\nArrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils (n° 1486)\n\nArticles de code cités dans le texte : L2222-1, L2231-1, L2261-15, L2261-2, L2261-23, L2261-25, L2261-32, L2261-7",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965971",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-09",
+          "vu_le": "2026-10-12",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 1486",
+              "raison": "IDCC 1486 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1486 — Syntec bureaux études techniques informatique in",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 1486, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
         {
           "categorie": "nouvelle-jurisprudence",
           "gravite": "haute",
@@ -848,7 +894,7 @@
         {
           "categorie": "dares-perime",
           "gravite": "moyenne",
-          "titre": "Liste officielle des conventions (DARES) : 132 jours",
+          "titre": "Liste officielle des conventions (DARES) : 133 jours",
           "detail": "Le fichier qui sert d'univers des IDCC (Dares_Suivi_Historique_convention_collective_Juin2026.xlsx, daté du 2026-06-01 d'après nom du fichier) a plus de 120 jours. Les conventions créées ou fusionnées depuis ne sont pas vues par l'aspirateur.\n\nLe téléchargement automatique (maj_dares.py, dépôt droit) n'a pas trouvé de version plus récente, ou le site l'a bloqué. Récupère le fichier « Suivi historique des conventions collectives » sur le site de la DARES / du ministère du Travail et pose-le dans droit/ccn/ sous le nom Dares_Suivi_DERNIER.xlsx.",
           "lien": "https://travail-emploi.gouv.fr/conventions-collectives-nomenclatures",
           "date_texte": "2026-06-01",
@@ -888,44 +934,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "3 fichiers modifiés (2026-10-11) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (1) : grillepaye:ccn-data.json\n\nGUIDE (2) : licenciement-faute-guide.html, preavis-licenciement.html",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "licenciement-faute-guide.html",
-                "preavis-licenciement.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles",
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

@@ -2169,7 +2169,7 @@
    ]
   }
  },
- "jorf_max": 54961225,
+ "jorf_max": 54969986,
  "ccn_max": {
   "1000": 51537685,
   "1043": 54337295,
@@ -2487,6 +2487,30 @@
  },
  "acco_max": 54963391,
  "detectes": [
+  {
+   "categorie": "nouveau-texte-jorf",
+   "gravite": "moyenne",
+   "titre": "Arrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la… : concerne une convention de l'appli (IDCC 2128)",
+   "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 2128).\n\nArrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la mutualité (n° 2128)",
+   "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965962",
+   "fonds": "JORF",
+   "theme": "Convention de l'appli",
+   "date_texte": "2026-10-09",
+   "_id": "JORFTEXT000054965962",
+   "vu_le": "2026-10-12"
+  },
+  {
+   "categorie": "nouveau-texte-jorf",
+   "gravite": "moyenne",
+   "titre": "Arrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des… : concerne une convention de l'appli (IDCC 1486)",
+   "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 1486).\n\nArrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils (n° 1486)\n\nArticles de code cités dans le texte : L2222-1, L2231-1, L2261-15, L2261-2, L2261-23, L2261-25, L2261-32, L2261-7",
+   "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965971",
+   "fonds": "JORF",
+   "theme": "Convention de l'appli",
+   "date_texte": "2026-10-09",
+   "_id": "JORFTEXT000054965971",
+   "vu_le": "2026-10-12"
+  },
   {
    "categorie": "nouveau-texte-jorf",
    "gravite": "moyenne",
@@ -4403,7 +4427,7 @@
    "vu_le": "2026-09-30"
   }
  ],
- "dernier_passage": "2026-10-11",
+ "dernier_passage": "2026-10-12",
  "juris_vus": [
   "01-00.712.json",
   "02-41.865.json",
@@ -7161,7 +7185,7 @@
   "98-44.292.json"
  ],
  "croissance": {
-  "jorf": "2026-10-08",
+  "jorf": "2026-10-12",
   "acco": "2026-10-08",
   "ccn": "2026-10-08",
   "juris": "2026-10-08"

@@ -1,0 +1,946 @@
+{
+  "genere": "2026-10-12T19:06:33.170643+00:00",
+  "exceptions_appliquees": 298,
+  "nouvelles_alertes": 3,
+  "routage": {
+    "par_zone": {
+      "app": 5,
+      "outils": 4,
+      "grilles": 11,
+      "guide": 11,
+      "mlt": 0,
+      "veille": 2
+    },
+    "non_routees": 0,
+    "zones": {
+      "app": {
+        "nom": "Application",
+        "emoji": "📱",
+        "depot": "hs"
+      },
+      "outils": {
+        "nom": "105 outils",
+        "emoji": "🧰",
+        "depot": "hs"
+      },
+      "grilles": {
+        "nom": "GrillePaye · Lumina",
+        "emoji": "💶",
+        "depot": "hs"
+      },
+      "guide": {
+        "nom": "Guide",
+        "emoji": "📘",
+        "depot": "guide"
+      },
+      "mlt": {
+        "nom": "MonLegiTexte",
+        "emoji": "⚖️",
+        "depot": "droit"
+      },
+      "veille": {
+        "nom": "Chaîne de veille",
+        "emoji": "🩺",
+        "depot": "tableaudebord"
+      }
+    },
+    "ordre": [
+      "app",
+      "outils",
+      "grilles",
+      "guide",
+      "mlt",
+      "veille"
+    ],
+    "index": {
+      "articles": 520,
+      "pages_guide": 980,
+      "outils": 104,
+      "idcc_grilles": 340
+    }
+  },
+  "sections": [
+    {
+      "id": "croisement",
+      "titre": "🔔 Textes parus pour une CCN en attente",
+      "alertes": []
+    },
+    {
+      "id": "grilles",
+      "titre": "Grilles CCN",
+      "alertes": []
+    },
+    {
+      "id": "smic",
+      "titre": "💶 Revalorisation du SMIC",
+      "alertes": []
+    },
+    {
+      "id": "droit",
+      "titre": "MonLegiTexte",
+      "module": "monlegitexte-droit",
+      "alertes": [
+        {
+          "categorie": "run-en-retard",
+          "gravite": "moyenne",
+          "titre": "[OIT] Dernier run vieux de 20 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 20 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "Aspirateur (dépôt droit, Actions)",
+              "fichiers": [],
+              "action": "Ouvrir le dernier passage dans GitHub Actions et relancer / corriger",
+              "raison": "santé de la veille",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        }
+      ],
+      "hors_sujet_ignores": 0
+    },
+    {
+      "id": "modules",
+      "titre": "8 modules",
+      "alertes": []
+    },
+    {
+      "id": "outils",
+      "titre": "105 outils",
+      "alertes": []
+    },
+    {
+      "id": "guide",
+      "titre": "Guide SEO",
+      "alertes": []
+    },
+    {
+      "id": "syntaxe",
+      "titre": "Syntaxe JS (page entière cassée)",
+      "module": "syntaxe-js",
+      "alertes": []
+    },
+    {
+      "id": "pages",
+      "titre": "Pages qui ne se chargent plus (ouverture réelle)",
+      "module": "pages",
+      "alertes": []
+    },
+    {
+      "id": "citations",
+      "titre": "Citations juridiques (guide + modules)",
+      "alertes": [
+        {
+          "categorie": "citation-ecosysteme-non-confirmee",
+          "gravite": "basse",
+          "titre": "D3261-15-2 : aucun des deux corpus (travail/sécu) ne le confirme",
+          "detail": "Cité dans outil:outils/articles-loi.js.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier le numéro et le code de l'article cité",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils"
+          ]
+        },
+        {
+          "categorie": "citation-ecosysteme-non-confirmee",
+          "gravite": "basse",
+          "titre": "L3154-3 : aucun des deux corpus (travail/sécu) ne le confirme",
+          "detail": "Cité dans outil:outils/articles-loi.js.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier le numéro et le code de l'article cité",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "structure",
+      "titre": "Structure (JSON-LD, outils orphelins)",
+      "alertes": []
+    },
+    {
+      "id": "noindex",
+      "titre": "MonLegiTexte — noindex en direct",
+      "module": "noindex-live",
+      "alertes": []
+    },
+    {
+      "id": "contenu",
+      "titre": "Contenu des articles cités",
+      "module": "contenu-articles",
+      "alertes": []
+    },
+    {
+      "id": "nouveaux",
+      "titre": "📰 Nouveaux textes sur tes sujets",
+      "alertes": [
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la… : concerne une convention de l'appli (IDCC 2128)",
+          "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 2128).\n\nArrêté du 28 septembre 2026 portant extension d'un accord et d'un avenant conclus dans le cadre de la convention collective nationale de la mutualité (n° 2128)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965962",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-09",
+          "vu_le": "2026-10-12",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2128 — Mutualité",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 2128, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des… : concerne une convention de l'appli (IDCC 1486)",
+          "detail": "Paru au JO le 2026-10-09. Ce texte concerne une convention de l'appli (IDCC 1486).\n\nArrêté du 28 septembre 2026 portant extension d'un avenant à la convention collective nationale des bureaux d'études techniques, des cabinets d'ingénieurs-conseils et des sociétés de conseils (n° 1486)\n\nArticles de code cités dans le texte : L2222-1, L2231-1, L2261-15, L2261-2, L2261-23, L2261-25, L2261-32, L2261-7",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054965971",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-09",
+          "vu_le": "2026-10-12",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 1486",
+              "raison": "IDCC 1486 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1486 — Syntec bureaux études techniques informatique in",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 1486, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "haute",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 24-13.821 e.a. : applique des articles que tu cites : L1224-1, L1237-11",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · publiée au Bulletin (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 24-13.821 e.a.\n\nElle applique des articles que tu cites : L1224-1, L1237-11.\n\n🏖️ Repos et congés — « congés payés » : …demande tendant à dire sans cause réelle et sérieuse son licenciement notifié pour faute grave et de ses demandes en paiement d'une indemnité de préavis et des congés payés afférents, d'une indemnité de licenciement et d'une indemnité pour licenciement sans cause réelle et sérieuse, qui s'y rattachent par un lien de dépendance néc…\n📟 Astreintes — « astreinte » : …ransdev et Flybus entraîne la cassation des chefs de dispositif déboutant le salarié de ses demandes principales tendant à ordonner à la société Transdev, sous astreinte, de le réintégrer dans ses effectifs dans les fonctions qui étaient les siennes à la date du 11 février 2019, et de condamnation de cette société à lui payer u…",
+          "lien": "https://www.courdecassation.fr/decision/6ac6079ac27382d099f59f74",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-07",
+          "etiquettes": [
+            "Publiée au Bulletin"
+          ],
+          "vu_le": "2026-10-08",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Fichiers communs (références de loi, glossaire, scripts)",
+              "fichiers": [
+                "legi-ref.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/index.html",
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
+              "fichiers": [
+                "module6/js/data/glossaire-cadres.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CDI / CDD / Intérim",
+              "fichiers": [
+                "outils/module-contrats.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Rupture Conventionnelle",
+              "fichiers": [
+                "outils/module-rupture.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "agent-nettoyage-heures-supplementaires.html",
+                "cession-fonds-commerce-salarie-guide.html",
+                "hs-non-pris-en-compte-entreprise-rachetee.html",
+                "index.html",
+                "transfert-entreprise-l1224-guide.html",
+                "rupture-conventionnelle.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1224-1 · cite L1237-11",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1516 — Avenant du 17 avril 2026 relatif aux salaires minima conventionnels annuels bruts de l'année 2027 : nouveau texte (Durée du travail)",
+          "detail": "Nouveau texte dans la convention IDCC 1516 (Convention collective nationale des organismes de formation du 10 juin 1988) — convention présente dans l'appli.\nDate : 2026-10-01 · État : VIGUEUR_ETEN\n\nAvenant du 17 avril 2026 relatif aux salaires minima conventionnels annuels bruts de l'année 2027\n\n🕘 Durée du travail — « durée du travail » : …minima conventionnels annuels bruts pour l'année 2027 est la suivante : Palier Fourchette de coefficient Salaire minimum conventionnel annuel brut 2027 (base : durée du travail annuelle à temps complet) 1 De 100 à 109 22 532,19 € 2 De 110 à 119 22 587,11 € 3 De 120 à 132 22 694,42 € 4 De 133 à 144 22 723,04 € 5 De 145 à 157 22 803,24…\n💶 Salaires minima — « salaires minima » : Avenant du 17 avril 2026 relatif aux salaires minima conventionnels annuels bruts de l'année 2027 Préambule Le présent avenant détermine les salaires minima conventionnels annuels bruts pour l'année 2027 dans la…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054936671",
+          "fonds": "CCN",
+          "theme": "Durée du travail",
+          "date_texte": "2026-10-01",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Ajouter ou mettre à jour la règle conventionnelle de l'IDCC 1516 (HS, temps partiel, forfait, repos)",
+              "raison": "texte de l'IDCC 1516 sur le temps de travail",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1516 — Formation professionnelle continue",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1516, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "formateur-organisme-formation-heures-supplementaires.html",
+                "formation-professionnelle-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1516",
+              "raison": "parlent de l'IDCC 1516",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1596 — Bourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1596 (Convention collective nationale des ouvriers employés par les entreprises du bâtiment…) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_ETEN\n\nBourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027\n\n💶 Salaires minima — « salaires minimaux » : Bourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027 Préambule En application des articles XII-8 et XII-9 de la convention collective nationale du bâtiment du 8 octobre 199…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054887658",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-23",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1596 — Bâtiment Ouvriers plus 10 salariés",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1596, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "btp-etam-heures-supplementaires.html",
+                "btp-heures-supplementaires.html",
+                "carreleur-heures-supplementaires.html",
+                "carreleur-poseur-revetement-hs.html",
+                "charpentier-couvreur-hs.html",
+                "charpentier-heures-supplementaires.html",
+                "chauffeur-btp-engins-heures-supplementaires.html",
+                "chauffeur-variantes-ccn-guide.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1596",
+              "raison": "parlent de l'IDCC 1596",
+              "auto": false,
+              "plus": 22
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1596 — Centre-Val de Loire Avenant du 10 avril 2026 relatif aux salaires au 1er mai 2026 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1596 (Convention collective nationale des ouvriers employés par les entreprises du bâtiment…) — convention présente dans l'appli.\nDate : 2026-10-01 · État : VIGUEUR_ETEN\n\nCentre-Val de Loire Avenant du 10 avril 2026 relatif aux salaires au 1er mai 2026\n\n💶 Salaires minima — « salaires minimaux » : …Loire, les parties signataires du présent accord prenant en compte l'objectif d'égalité professionnelle entre les femmes et les hommes, ont fixé le barème des salaires minimaux des ouvriers du bâtiment de la région à compter du 1er mai 2026. Grilles des salaires (au 1er mai 2026) Les parties signataires du présent accord ont arrêté :…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054936694",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-01",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1596 — Bâtiment Ouvriers plus 10 salariés",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1596, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "btp-etam-heures-supplementaires.html",
+                "btp-heures-supplementaires.html",
+                "carreleur-heures-supplementaires.html",
+                "carreleur-poseur-revetement-hs.html",
+                "charpentier-couvreur-hs.html",
+                "charpentier-heures-supplementaires.html",
+                "chauffeur-btp-engins-heures-supplementaires.html",
+                "chauffeur-variantes-ccn-guide.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1596",
+              "raison": "parlent de l'IDCC 1596",
+              "auto": false,
+              "plus": 22
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1597 — Bourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1597 (Convention collective nationale des ouvriers employés par les entreprises du bâtiment non…) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_ETEN\n\nBourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027\n\n💶 Salaires minima — « salaires minimaux » : Bourgogne-Franche-Comté Accord du 30 avril 2026 relatif aux salaires minimaux au 1er juillet 2026 et 1er janvier 2027 Préambule En application des articles XII-8 et XII-9 de la convention collective nationale du bâtiment du 8 octobre 199…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054887678",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-23",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1597 — Bâtiment Ouvriers moins 10 salariés",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1597, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "carreleur-heures-supplementaires.html",
+                "carreleur-poseur-revetement-hs.html",
+                "charpentier-couvreur-hs.html",
+                "charpentier-heures-supplementaires.html",
+                "cordiste-heures-supplementaires.html",
+                "couvreur-heures-supplementaires.html",
+                "electricien-batiment-heures-supplementaires.html",
+                "etancheur-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1597",
+              "raison": "parlent de l'IDCC 1597",
+              "auto": false,
+              "plus": 7
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1672 — Protocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1672 (Convention collective nationale des sociétés d'assurances du 27 mai 1992) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_NON_ETEN\n\nProtocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026\n\n💶 Salaires minima — « rémunération minimale » : …itaine. Conformément à l' article L. 2241-10 du code du travail , modifié par la loi n° 2022-1158 du 16 août 2022 , dans l'hypothèse où le premier niveau de la rémunération minimale annuelle (RMA) serait inférieur au Smic, les partenaires sociaux se réuniront dans les conditions prévues par la loi.",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054887698",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-23",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1672 — Sociétés assurances",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1672, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "assurance-heures-supplementaires.html",
+                "assurance-mutuelle-heures-supplementaires.html",
+                "charge-clientele-assurance-heures-supplementaires.html",
+                "charge-clientele-assurance-hs.html",
+                "gestionnaire-sinistres-assurance-heures-supplementaires.html",
+                "prime-anciennete-calcul-guide.html",
+                "teleconseiller-assurance-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1672",
+              "raison": "parlent de l'IDCC 1672",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1679 — Protocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1679 (Convention collective nationale de l'inspection d'assurance du 27 juillet 1992. Etendue…) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_NON_ETEN\n\nProtocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026\n\n💶 Salaires minima — « rémunération minimale » : …itaine. Conformément à l' article L. 2241-10 du code du travail , modifié par la loi n° 2022-1158 du 16 août 2022 , dans l'hypothèse où le premier niveau de la rémunération minimale annuelle (RMA) serait inférieur au Smic, les partenaires sociaux se réuniront dans les conditions prévues par la loi.",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054887714",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-23",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1679 — Inspection d'assurance",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1679, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1702 — Pays de la Loire Accord du 4 décembre 2025 relatif aux salaires minima hiérarchiques pour 2026 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1702 (Convention collective nationale des ouvriers des travaux publics du 15 décembre 1992) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_ETEN\n\nPays de la Loire Accord du 4 décembre 2025 relatif aux salaires minima hiérarchiques pour 2026\n\n💶 Salaires minima — « salaires minima » : Pays de la Loire Accord du 4 décembre 2025 relatif aux salaires minima hiérarchiques pour 2026 Dans le cadre de la délégation prévue par l'article 3.2 de l'accord du 23 mai 2018 relatif à la mise en place de la commission paritair…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054886381",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-23",
+          "vu_le": "2026-10-05",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1702 — Ouvriers de travaux publics",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1702, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conducteur-engins-travaux-publics-hs.html",
+                "grutier-levagiste-heures-supplementaires.html",
+                "travaux-publics-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1702",
+              "raison": "parlent de l'IDCC 1702",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels… : parle de : Salaires minima",
+          "detail": "Paru au JO le 2026-09-30. Ce texte parle de : Salaires minima.\n\nAvis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223\n\n💶 Salaires minima — « salaires minima » : Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223 Avis portant extension…\n\nArticles de code cités dans le texte : L2231-5, L2231-6, L2261-15",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054914379",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-30",
+          "vu_le": "2026-10-01",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3223 — Transports et services maritimes, personnels nav",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 3223, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "marine-marchande-marins-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 3223",
+              "raison": "parlent de l'IDCC 3223",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accords",
+      "titre": "🏢 Accords d'entreprise à regarder",
+      "alertes": []
+    },
+    {
+      "id": "regles",
+      "titre": "📐 Règles et montants officiels",
+      "module": "regles-officielles",
+      "alertes": []
+    },
+    {
+      "id": "sources",
+      "titre": "🏛️ BOSS, Parlement, liste DARES",
+      "module": "veille-sources-officielles",
+      "alertes": [
+        {
+          "categorie": "texte-parlement",
+          "gravite": "moyenne",
+          "titre": "🏛️ N° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires",
+          "detail": "Assemblée — documents parlementaires — Tue, 06 Oct 2026 00:00:00 +0000.\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.\n\n🕐 Temps partiel — « temps partiel »",
+          "lien": "https://www.assemblee-nationale.fr/17/propositions/pion3244.asp",
+          "date_texte": "2026-10-07",
+          "vu_le": "2026-10-07",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M5 · Mizuki, temps partiel",
+              "fichiers": [
+                "module5/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : temps partiel",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "amenagement-temps-partiel-aidant.html",
+                "cdi-temps-partiel-complementaires-hs.html",
+                "hs-temps-partiel-therapeutique-guide.html",
+                "temps-partiel-heures-complementaires.html",
+                "temps-plein-vers-temps-partiel-guide.html",
+                "clause-exclusivite-temps-partiel-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : temps partiel",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "haute",
+          "titre": "🏛️ Conseil constitutionnel — Loi relative à la lutte contre les fraudes sociales et fiscales : CENSURE / ANNULATION",
+          "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-904 — 2026-06-18.\n\nLoi relative à la lutte contre les fraudes sociales et fiscales\n\nSolution : Non conformité partielle - réserve\n\n⚠️ Articles que l'écosystème cite : L243-7\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, dans les conditions prévues au deuxième alinéa de l'article 61 de la Constitution, de la loi relative à la lutte contre les fraudes sociales et fiscales, sous le n° 2026-904 DC, le 18 mai 2026, par M. Boris VALLAUD, Mme Marie-José ALLEMAND, MM. Joël AVIRAGNET, Christian BAPTISTE, Fabrice BARUSSEAU, Mme Marie-Noëlle BATTISTEL, MM. Laurent BAUMEL, Belkhir BELHADDAD, Mme Béatrice BELLAY, MM. Karim BENBRAHIM, Mickaël BOULOUX, Mme Dorine BREGMAN, MM. Philippe…",
+          "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054398790",
+          "date_texte": "2026-06-18",
+          "vu_le": "2026-10-06",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "controle-redressement-urssaf-guide.html",
+                "travail-dissimule-travail-noir-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L243-7",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        },
+        {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "haute",
+          "titre": "🏛️ Conseil constitutionnel — M. Bruno N. et M. Joseph A. [Absence d'indemnité compensatrice de congé payé en cas de rupture du contrat de travail… : CENSURE / ANNULATION",
+          "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-1217/1218 — 2026-08-06.\n\nM. Bruno N. et M. Joseph A. [Absence d'indemnité compensatrice de congé payé en cas de rupture du contrat de travail provoquée par la faute lourde du salarié en Nouvelle-Calédonie]\n\nSolution : Non conformité totale\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI le 17 juin 2026 par la Cour de cassation (chambre sociale, arrêts nos 599 et 600 du 11 juin 2026), dans les conditions prévues à l'article 61-1 de la Constitution, de deux questions prioritaires de constitutionnalité. Ces questions ont été posées pour M. Bruno N. et M. Joseph A. par la SCP Alain Bénabent, avocat au Conseil d'État et à la Cour de cassation. Elles ont été enregistrées au secrétariat général du Conseil constitutionnel sous les nos 2026-1217…\n\n🏖️ Repos et congés — « congés payés »",
+          "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054952962",
+          "date_texte": "2026-08-06",
+          "vu_le": "2026-10-06",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "dares-perime",
+          "gravite": "moyenne",
+          "titre": "Liste officielle des conventions (DARES) : 133 jours",
+          "detail": "Le fichier qui sert d'univers des IDCC (Dares_Suivi_Historique_convention_collective_Juin2026.xlsx, daté du 2026-06-01 d'après nom du fichier) a plus de 120 jours. Les conventions créées ou fusionnées depuis ne sont pas vues par l'aspirateur.\n\nLe téléchargement automatique (maj_dares.py, dépôt droit) n'a pas trouvé de version plus récente, ou le site l'a bloqué. Récupère le fichier « Suivi historique des conventions collectives » sur le site de la DARES / du ministère du Travail et pose-le dans droit/ccn/ sous le nom Dares_Suivi_DERNIER.xlsx.",
+          "lien": "https://travail-emploi.gouv.fr/conventions-collectives-nomenclatures",
+          "date_texte": "2026-06-01",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "Référentiel des conventions (codes IDCC)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Vérifier les conventions fusionnées ou disparues",
+              "raison": "référentiel",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "veille",
+              "cible": "Liste DARES (maj_dares.py, dépôt droit)",
+              "fichiers": [
+                "ccn/Dares_Suivi_Historique_convention_collective_*.xlsx"
+              ],
+              "action": "Télécharger la dernière liste DARES et la poser dans ccn/ (appli) — maj_dares le tente chaque lundi",
+              "raison": "référentiel des conventions",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "veille"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
+      "alertes": []
+    },
+    {
+      "id": "age",
+      "titre": "Âge de la référence (3 mois et 12 mois)",
+      "module": "age-reference",
+      "alertes": []
+    }
+  ]
+}

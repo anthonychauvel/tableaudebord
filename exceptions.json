@@ -673,5 +673,184 @@
     "note": "PLFSS 2027 = projet de loi. On traitera la LFSS quand elle paraîtra au JO.",
     "date": "2026-10-02",
     "mode": "jusqu_au"
+  },
+  {
+    "_bloc": "=== REVUE DU 13/10/2026 — décisions et textes lus en entier dans le dépôt droit, rien à changer (ou déjà changé) ==="
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour d'appel",
+    "note": "Décisions de cour d'appel : pas de jurisprudence. Seules les décisions de la Cour de cassation sont suivies. Pour revoir les cours d'appel, supprimer ce bloc.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 24-13.821",
+    "note": "Cass. soc. 7 oct. 2026 (FS-B) : transfert d'un salarié protégé par convention tripartite = autorisation de l'inspecteur du travail exigée (L2414-1). Ligne ajoutée dans transfert-entreprise-l1224-guide.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.800",
+    "note": "Cass. soc. 30 sept. 2026 : contrat à temps partiel sans répartition de la durée = présumé temps complet (L3123-6). Glossaire du module 5 mis à jour.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.868",
+    "note": "Cass. soc. 30 sept. 2026 : rejet, présomption de temps complet si horaires non communiqués (rugby). Couvert par la mise à jour du module 5.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.871",
+    "note": "Cass. soc. 30 sept. 2026 : rejet, même série rugby que 25-18.868. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.872",
+    "note": "Cass. soc. 30 sept. 2026 : rejet, même série rugby que 25-18.868. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.873",
+    "note": "Cass. soc. 30 sept. 2026 : rejet, même série rugby que 25-18.868. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-11.514",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : Air Tahiti Nui, droit du travail de Polynésie, office du juge. Hors périmètre métropole.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-12.624",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : Air Tahiti Nui, droit de Polynésie, intérêts sur créances de salaire. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-14.434",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : procédure, demande d'heures sup en appel pas nouvelle (art. 564-565 CPC). Non publié, rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-15.171",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : ICCP due à toute rupture (L3141-28), résiliation judiciaire. Cohérent avec le guide.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-15.717",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : heures sup dans le salaire de référence de l'indemnité de licenciement. Précision ajoutée dans les outils Fin de contrat et Rupture.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-13.594",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : rejet, travail sans contrat écrit = temps plein. Cohérent avec le module 5.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-16.126",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : requalification de CDD, prescription et coemploi SNCF. Hors sujet.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.186",
+    "note": "Cass. soc. 30 sept. 2026 (F-D) : compétence prud'hommes / juge de l'exécution. Hors sujet.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1516 — Avenant du 17 avril 2026",
+    "note": "Grille 2027 enregistrée dans GrillePaye/ccn-data.json (clé prochain), effet 01/01/2027. Aucune règle d'heures sup.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1596 — Bourgogne-Franche-Comté Accord du 30 avril 2026",
+    "note": "Accord régional BTP : la grille de l'appli est la base Île-de-France avec renvoi vers la région. Rien à reporter.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1596 — Centre-Val de Loire Avenant du 10 avril 2026",
+    "note": "Avenant régional BTP : même règle, base Île-de-France avec renvoi vers la région.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1597 — Bourgogne-Franche-Comté Accord du 30 avril 2026",
+    "note": "Accord régional BTP : même règle, base Île-de-France avec renvoi vers la région.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1702 — Pays de la Loire Accord du 4 décembre 2025",
+    "note": "Accord régional travaux publics : grille nationale indicative avec renvoi vers la FNTP régionale. Rien à reporter.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1679 — Protocole d'accord du 10 juin 2026",
+    "note": "Protocole RMA 2026 déjà intégré dans la grille (BOCC 2026-27).",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "concerne une convention de l'appli (IDCC 2128)",
+    "note": "Mutualité : avenant n° 36 formation professionnelle et accord de méthode. Ni minima ni durée du travail. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "concerne une convention de l'appli (IDCC 1486)",
+    "note": "Syntec : avenant n° 48, champ d'application professionnel au 01/01/2026. Ni minima ni durée du travail. Rien à changer.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "D3261-15-2 :",
+    "note": "Article abrogé en 2020, cité volontairement dans outils/articles-loi.js pour renvoyer vers L3261-3-1 et R3261-13-1.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "citation-ecosysteme-non-confirmee",
+    "cle": "L3154-3 :",
+    "note": "Article abrogé en 2016, cité volontairement dans outils/articles-loi.js pour renvoyer vers la règle du compte épargne-temps.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "lutte contre les fraudes sociales et fiscales",
+    "note": "Décision 2026-904 DC du 18/06/2026 : loi validée pour l'essentiel, réserves sur les allocations et les données. Ne touche ni L243-7 ni la prescription URSSAF. Rien à changer dans le guide.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "Bruno N. et M. Joseph A.",
+    "note": "Décision 2026-1217/1218 QPC : Nouvelle-Calédonie uniquement (la métropole a été censurée en 2016). Pages du guide sur la faute lourde corrigées.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3244",
+    "note": "Proposition de loi sur le temps partiel thérapeutique des fonctionnaires : pas encore une loi, hors salariés du privé.",
+    "date": "2026-10-13"
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "",
+    "note": "Textes parlementaires sur les fonctionnaires ou la fonction publique : hors salariés du privé.",
+    "date": "2026-10-13",
+    "motif": "fonctionnaires|fonction publique",
+    "sauf": "heures? supplementaires|\\bsmic\\b"
   }
 ]

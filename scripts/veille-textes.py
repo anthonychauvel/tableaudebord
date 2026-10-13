@@ -290,6 +290,35 @@ def _textes_ccn(o, acc):
             _textes_ccn(v, acc)
 
 
+# Amélioration du 13/10/2026 — avenants CCN.
+# (1) Bâtiment et travaux publics : la grille de l'appli est une base
+#     nationale / Île-de-France avec renvoi vers la région ; un accord d'une
+#     région n'appelle aucun montant à reporter -> gravité basse + mention.
+IDCC_GRILLE_REGIONALE = {"1596", "1597", "1702", "1569", "2609", "2614", "1635"}
+_REGIONS = ("bourgogne", "franche-comte", "centre-val de loire", "pays de la loire", "ile-de-france",
+            "bretagne", "normandie", "occitanie", "nouvelle-aquitaine", "auvergne", "rhone-alpes",
+            "hauts-de-france", "grand est", "alsace", "lorraine", "champagne", "provence", "corse",
+            "poitou", "aquitaine", "midi-pyrenees", "languedoc", "limousin", "picardie", "nord-pas-de-calais",
+            "departement", "territorial", "regional", "region ")
+
+
+def _titre_regional(titre):
+    n = normaliser(titre)
+    return any(r in n[:140] for r in _REGIONS)
+
+
+# (2) Un avenant de salaires écrit « base : durée du travail annuelle à temps
+#     complet » en tête de son tableau : ce n'est pas un texte sur la durée du
+#     travail. Sur un titre de salaires, on retire le thème « Durée du travail »
+#     sauf si le titre lui-même en parle.
+def _sans_faux_duree(titre, trouves):
+    n = normaliser(titre)
+    if re.search(r"salaire|remuneration|minima|minimaux|grille|valeur du point", n) \
+            and not re.search(r"duree du travail|temps de travail|heures? supplementaires|forfait", n):
+        return [x for x in trouves if "dur" not in normaliser(x[0]) or "travail" not in normaliser(x[0])]
+    return trouves
+
+
 def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_hui):
     dossier = os.path.join(fonds, "output", "ccn")
     if not os.path.isdir(dossier):
@@ -326,7 +355,9 @@ def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_
                 continue
             texte = texte_de({"x": t.get("sections"), "y": t.get("articles")})
             trouves = themes_trouves(titre + " " + texte, themes)
+            trouves = _sans_faux_duree(titre, trouves)
             dans_appli = idcc in idcc_appli
+            regional = idcc in IDCC_GRILLE_REGIONALE and _titre_regional(titre)
             if not dans_appli and not trouves:
                 continue
             total += 1
@@ -334,6 +365,10 @@ def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_
                       + (" — convention présente dans l'appli." if dans_appli else ".")
                       + f"\nDate : {t.get('dateModif') or '?'} · État : {t.get('etat') or '?'}"
                       + f"\n\n{court(titre, 400)}")
+            if regional:
+                detail += ("\n\nℹ️ Accord RÉGIONAL : la grille de l'appli pour cette convention est une "
+                           "base nationale / Île-de-France avec renvoi vers la région de l'utilisateur. "
+                           "Aucun montant à reporter, sauf si tu veux ajouter ce barème régional.")
             if trouves:
                 detail += "\n\n" + lignes_themes(trouves)
             elif not texte.strip():
@@ -341,7 +376,7 @@ def veille_ccn(fonds, memoire, alertes, themes, exclusions, idcc_appli, aujourd_
                            "seul le titre a pu être lu.)")
             alertes.append({
                 "categorie": "nouvel-avenant-ccn",
-                "gravite": "haute" if dans_appli else "moyenne",
+                "gravite": "basse" if regional else ("haute" if dans_appli else "moyenne"),
                 "titre": f"IDCC {idcc} — {court(titre, 120)} : nouveau texte"
                          + (f" ({trouves[0][0]})" if trouves else ""),
                 "detail": detail,
@@ -554,6 +589,58 @@ def veille_acco(fonds, memoire, alertes_acco, themes, exclusions, aujourd_hui, i
 # on ignore celles de plus d'un an (rattrapage de décisions anciennes).
 AGE_MAX_JURIS = 365
 
+# Amélioration du 13/10/2026 : sur 137 décisions remontées en une semaine,
+# 123 étaient des arrêts de cour d'appel (pas de jurisprudence) et il fallait
+# ouvrir chaque arrêt pour savoir ce que la Cour avait jugé. Désormais :
+#  - les cours d'appel sont ignorées (mettre False pour les suivre à nouveau) ;
+#  - on lit dans le texte la formation (« FS-B », « F-D »…) pour savoir si
+#    l'arrêt est publié, puis le dispositif et le début de la réponse de la
+#    Cour, affichés dans l'alerte ;
+#  - la gravité dépend de la publication : un arrêt publié qui applique un
+#    article cité = haute ; non publié = moyenne (articles cités) ou basse.
+IGNORER_COURS_APPEL = True
+
+
+def _texte_decision(t):
+    return re.sub(r"\s+", " ", str(t.get("texte") or ""))
+
+
+def _formation_arret(txt):
+    """« Arrêt n° 814 FS-B » -> « FS-B » ; chaîne vide si absent."""
+    m = re.search(r"Arr[êe]t n° \d+ ([A-Z]{1,4}(?:[-+][A-Z]{1,2})*)", txt)
+    return m.group(1) if m else ""
+
+
+def _arret_publie(formation):
+    """Publié = une lettre P (Bulletin), B (Bulletin), R (rapport annuel) ou I
+    (Internet) après le tiret. « F-D » (diffusion seule) ne l'est pas."""
+    suite = formation.split("-", 1)[1] if "-" in formation else ""
+    return any(c in suite for c in "PBRI")
+
+
+def _dispositif_arret(txt):
+    """-> (« Cassation partielle » / « Rejet »…, extrait de la réponse de la Cour)."""
+    solution = ""
+    m = re.search(r"PAR CES MOTIFS.{0,300}?\b(CASSE ET ANNULE|REJETTE|DECLARE|DÉCLARE|ANNULE|CONSTATE)", txt)
+    if m:
+        solution = {"CASSE ET ANNULE": "Cassation", "REJETTE": "Rejet", "ANNULE": "Annulation"}.get(
+            m.group(1), m.group(1).capitalize())
+        if solution == "Cassation" and re.search(r"CASSE ET ANNULE,? mais seulement", txt):
+            solution = "Cassation partielle"
+    reponse = ""
+    blocs = [m.end() for m in re.finditer(r"R[ée]ponse de la Cour", txt)]
+    # Le motif de la cassation est introduit par « Vu l'article… » ; sinon, le dernier bloc.
+    choisi = next((i for i in blocs if txt[i:i + 6].strip().startswith("Vu")), blocs[-1] if blocs else None)
+    if choisi is None:                                   # « moyen relevé d'office » : pas de « Réponse de la Cour »
+        mv = re.search(r"\bVu (?:les? |l')articles? [^:]{0,300}: ", txt)
+        choisi = mv.start() if mv else None
+    if choisi is not None:
+        morceau = txt[choisi:choisi + 1600].strip()
+        morceau = re.sub(r"^Vu [^:]{0,400}: ", "", morceau)          # « Vu l'article L. 3123-6 : »
+        morceau = re.sub(r"^\d+\. ", "", morceau)                    # numéro de paragraphe
+        reponse = morceau[:700]
+    return solution, reponse
+
 
 def veille_jurisprudence(fonds, memoire, alertes, themes, cites, aujourd_hui):
     dossier = os.path.join(fonds, "output", "jurisprudence")
@@ -583,31 +670,43 @@ def veille_jurisprudence(fonds, memoire, alertes, themes, cites, aujourd_hui):
         if date and date < limite:
             continue                       # décision ancienne récupérée tardivement
         titre = t.get("titre") or t.get("titreLong") or nom[:-5]
+        if IGNORER_COURS_APPEL and normaliser(titre).startswith("cour d'appel"):
+            continue                       # pas de jurisprudence : cf. IGNORER_COURS_APPEL
         texte = " ".join(str(t.get(k) or "") for k in ("texte", "sommaire", "solution"))
         if not texte.strip():
             texte = texte_de(t)
         trouves = themes_trouves(titre + " " + texte, themes)
         refs = sorted(refs_articles(texte) & tous_cites)
+        txt_dec = _texte_decision(t)
+        formation = _formation_arret(txt_dec)
+        publie_formation = _arret_publie(formation) if formation else False
         if refs:
             gravite, pourquoi = "haute", f"applique des articles que tu cites : {', '.join(refs[:10])}"
         elif trouves:
             gravite, pourquoi = "moyenne", "parle de : " + ", ".join(x[0] for x in trouves)
         else:
             continue
+        # Un arrêt non publié (F-D…) ne fait pas jurisprudence : on baisse d'un cran.
+        if formation and not publie_formation:
+            gravite = "moyenne" if gravite == "haute" else "basse"
         # Judilibre code la publication (« b » = Bulletin) ; Légifrance l'écrit
         # dans le titre (« Publié au bulletin »).
         pub = t.get("publication") or []
         pub = pub if isinstance(pub, list) else [pub]
         publie = ("b" in [str(x).lower() for x in pub]
-                  or "bulletin" in normaliser(" ".join(map(str, pub)) + " " + titre))
+                  or "bulletin" in normaliser(" ".join(map(str, pub)) + " " + titre)
+                  or publie_formation)
+        solution_txt, reponse_txt = _dispositif_arret(txt_dec)
         ident = t.get("id") or ""
         lien = (lien_legifrance(ident) if str(ident).startswith("JURI") else
                 f"https://www.courdecassation.fr/decision/{ident}" if ident else "")
         detail = (f"Décision du {date or '?'} — {t.get('juridiction') or ''} "
                   f"{t.get('chambre') or t.get('formation') or ''}".strip()
-                  + (f" · solution : {t.get('solution')}" if t.get("solution") else "")
-                  + (" · publiée au Bulletin (fait jurisprudence)" if publie else "")
-                  + f"\n\n{court(titre, 300)}\n\nElle {pourquoi}.")
+                  + (f" · solution : {t.get('solution') or solution_txt}" if (t.get("solution") or solution_txt) else "")
+                  + (f" · formation {formation}" if formation else "")
+                  + (" · publiée (fait jurisprudence)" if publie else " · non publiée (ne fait pas jurisprudence)" if formation else "")
+                  + f"\n\n{court(titre, 300)}\n\nElle {pourquoi}."
+                  + (f"\n\nCe que la Cour a jugé : {court(reponse_txt, 500)}" if reponse_txt else ""))
         if trouves:
             detail += "\n\n" + lignes_themes(trouves)
         alertes.append({
@@ -620,6 +719,7 @@ def veille_jurisprudence(fonds, memoire, alertes, themes, cites, aujourd_hui):
             "theme": trouves[0][0] if trouves else "Article cité",
             "date_texte": date or aujourd_hui,
             **({"etiquettes": ["Publiée au Bulletin"]} if publie else {}),
+            **({"formation": formation} if formation else {}),
             "_id": f"juris:{nom}",
         })
 

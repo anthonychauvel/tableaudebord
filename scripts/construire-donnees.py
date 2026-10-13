@@ -14,6 +14,16 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 
 _compteur_appels = [0]
 
+
+def _fichier_dares(droit):
+    """Liste DARES à utiliser : Dares_Suivi_DERNIER.xlsx (posé à la main ou par
+    maj_dares.py) s'il existe, sinon l'ancien fichier daté Juin2026."""
+    ccn = os.path.join(droit, "ccn")
+    for nom in ("Dares_Suivi_DERNIER.xlsx", "Dares_Suivi_Historique_convention_collective_Juin2026.xlsx"):
+        if os.path.isfile(os.path.join(ccn, nom)):
+            return os.path.join(ccn, nom)
+    return os.path.join(ccn, "Dares_Suivi_Historique_convention_collective_Juin2026.xlsx")
+
 def lancer(script, args_liste):
     # Un compteur, pas seulement le nom du script : verifier-liens.py est
     # appelé 3 fois (app, outils, guide) dans ce même run. Un nom de fichier
@@ -441,8 +451,7 @@ def main():
         **fusionner(
             lancer("verifier-modules.py", ["--racine", args.hs]),
             lancer("adaptateur-coherence-ccn.py", ["--racine", args.hs,
-                   "--dares", os.path.join(args.droit, "ccn",
-                   "Dares_Suivi_Historique_convention_collective_Juin2026.xlsx")]),
+                   "--dares", _fichier_dares(args.droit)]),
             lancer("verifier-liens.py", ["--cible", args.hs, "--nom-module", "liens-app"]),
         )})
     sections.append({"id": "outils", "titre": "105 outils",

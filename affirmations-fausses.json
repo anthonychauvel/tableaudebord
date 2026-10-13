@@ -1,0 +1,17 @@
+[
+  {
+    "_mode_emploi": "Une règle = une affirmation FAUSSE à ne plus laisser écrire dans le guide, l'appli ou les outils. Chaque règle : 'id', 'titre', 'motifs' (liste d'expressions régulières, texte sans accents ni majuscules), 'sauf' (si cette expression apparaît juste autour de la phrase, la phrase est considérée comme déjà corrigée), 'correction' (ce qui est vrai), 'source'. Pour ajouter une règle : copie un bloc et adapte-le. Tester d'abord sur le guide : python3 scripts/verifier-affirmations.py --guide <dossier guide> --hs <dossier appli> --regles affirmations-fausses.json"
+  },
+  {
+    "id": "faute-lourde-conges-payes",
+    "titre": "Faute lourde présentée comme privant des congés payés",
+    "motifs": [
+      "faute lourde.{0,140}(prive|priv[ée]e?s?|perd|perdent|sans droit|pas droit|aucun droit).{0,100}(conges payes|indemnite compensatrice de conges)",
+      "faute lourde.{0,120}\\bni cp\\b",
+      "faute lourde.{0,80}pas d.indemnite[^.]{0,60}ni (conges|cp)"
+    ],
+    "sauf": "reste due|restent dus|sont dus|conges payes dus|censur|supprim|n.est plus|depuis 2016|autrefois|ancien|contrairement|a perdu",
+    "correction": "Depuis la décision du Conseil constitutionnel du 2 mars 2016 (n° 2015-523 QPC) et la loi, l'indemnité compensatrice de congés payés est due même en cas de licenciement pour faute lourde (art. L3141-28 du code du travail).",
+    "source": "Conseil constitutionnel, décision n° 2015-523 QPC du 2 mars 2016 ; art. L3141-28 CT ; Cass. soc. 30 sept. 2026, n° 25-15.171 (rappel)."
+  }
+]

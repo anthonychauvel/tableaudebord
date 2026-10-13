@@ -545,8 +545,18 @@ def main():
                     "--releves", os.path.join(os.path.dirname(args.out), "releves")]
     if args.guide:
         contenu_args += ["--guide", args.guide]
-    sections.append({"id": "contenu", "titre": "Contenu des articles cités",
-        **lancer("verifier-contenu-articles.py", contenu_args)})
+    contenu_res = lancer("verifier-contenu-articles.py", contenu_args)
+    # Phrases fausses connues (13/10/2026) : ce que disent les pages SANS citer
+    # d'article (ex. « la faute lourde prive des congés payés »). Règles dans
+    # affirmations-fausses.json, à enrichir à la main à chaque erreur trouvée.
+    affirmations_args = ["--hs", args.hs, "--regles", os.path.join(ici_veille, "affirmations-fausses.json")]
+    if args.guide:
+        affirmations_args += ["--guide", args.guide]
+    affirmations_res = lancer("verifier-affirmations.py", affirmations_args)
+    contenu_res = dict(contenu_res)
+    contenu_res["alertes"] = list(contenu_res.get("alertes", [])) + list(affirmations_res.get("alertes", []))
+    sections.append({"id": "contenu", "titre": "Contenu des articles cités et phrases fausses connues",
+        **contenu_res})
 
     # Nouveaux textes sur les sujets suivis (30/09/2026) : Code (sections des
     # articles cités), CCN, JORF, accords d'entreprise. APRÈS la section

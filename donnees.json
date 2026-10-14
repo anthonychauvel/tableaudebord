@@ -1,15 +1,15 @@
 {
-  "genere": "2026-10-13T11:18:58.626664+00:00",
-  "exceptions_appliquees": 474,
-  "nouvelles_alertes": 1,
+  "genere": "2026-10-14T14:38:01.199858+00:00",
+  "exceptions_appliquees": 504,
+  "nouvelles_alertes": 3,
   "routage": {
     "par_zone": {
-      "app": 0,
+      "app": 1,
       "outils": 1,
       "grilles": 3,
       "guide": 3,
       "mlt": 1,
-      "veille": 2
+      "veille": 0
     },
     "non_routees": 0,
     "zones": {
@@ -101,27 +101,6 @@
           "zones": [
             "mlt"
           ]
-        },
-        {
-          "categorie": "run-en-retard",
-          "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 21 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 21 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "veille",
-              "cible": "Aspirateur (dépôt droit, Actions)",
-              "fichiers": [],
-              "action": "Ouvrir le dernier passage dans GitHub Actions et relancer / corriger",
-              "raison": "santé de la veille",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "veille"
-          ]
         }
       ],
       "hors_sujet_ignores": 81
@@ -171,7 +150,7 @@
     },
     {
       "id": "contenu",
-      "titre": "Contenu des articles cités",
+      "titre": "Contenu des articles cités et phrases fausses connues",
       "module": "contenu-articles",
       "alertes": []
     },
@@ -284,40 +263,105 @@
       "module": "veille-sources-officielles",
       "alertes": [
         {
-          "categorie": "dares-perime",
-          "gravite": "moyenne",
-          "titre": "Liste officielle des conventions (DARES) : 134 jours",
-          "detail": "Le fichier qui sert d'univers des IDCC (Dares_Suivi_Historique_convention_collective_Juin2026.xlsx, daté du 2026-06-01 d'après nom du fichier) a plus de 120 jours. Les conventions créées ou fusionnées depuis ne sont pas vues par l'aspirateur.\n\nLe téléchargement automatique (maj_dares.py, dépôt droit) n'a pas trouvé de version plus récente, ou le site l'a bloqué. Récupère le fichier « Suivi historique des conventions collectives » sur le site de la DARES / du ministère du Travail et pose-le dans droit/ccn/ sous le nom Dares_Suivi_DERNIER.xlsx.",
-          "lien": "https://travail-emploi.gouv.fr/conventions-collectives-nomenclatures",
-          "date_texte": "2026-06-01",
-          "nouveau": false,
+          "categorie": "decision-haute-juridiction",
+          "gravite": "haute",
+          "titre": "🏛️ Conseil d'État — Conseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 506563",
+          "detail": "Conseil d'État — Conseil d'État — n° 506563 — 2026-09-21.\n\nConseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 506563\n\nSolution : Rejet\n\n⚠️ Articles que l'écosystème cite : L5421-1, L5422-1\n\nExtrait : Vu les procédures suivantes : 1° Sous le n° 506563, par une requête sommaire et un mémoire complémentaire, enregistrés les 23 juillet et 23 octobre 2025 au secrétariat du contentieux du Conseil d’Etat, la Ligue des droits de l’homme demande au Conseil d’Etat : 1°) d’annuler pour excès de pouvoir le décret n° 2025-478 du 30 mai 2025 relatif aux sanctions applicables aux demandeurs d’emploi en cas de manquement à leurs obligations ; 2°) de mettre à la charge de l’Etat la somme de 4 000 euros au…",
+          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887120",
+          "date_texte": "2026-09-21",
+          "vu_le": "2026-10-14",
+          "nouveau": true,
           "cibles": [
             {
-              "zone": "grilles",
-              "cible": "Référentiel des conventions (codes IDCC)",
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "fox/js/articles-loi.js"
               ],
-              "action": "Vérifier les conventions fusionnées ou disparues",
-              "raison": "référentiel",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "veille",
-              "cible": "Liste DARES (maj_dares.py, dépôt droit)",
-              "fichiers": [
-                "ccn/Dares_Suivi_Historique_convention_collective_*.xlsx"
-              ],
-              "action": "Télécharger la dernière liste DARES et la poser dans ccn/ (appli) — maj_dares le tente chaque lundi",
-              "raison": "référentiel des conventions",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L5421-1",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
-            "grilles",
-            "veille"
+            "app"
+          ]
+        },
+        {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "moyenne",
+          "titre": "🏛️ Conseil d'État — Conseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 508507",
+          "detail": "Conseil d'État — Conseil d'État — n° 508507 — 2026-09-21.\n\nConseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 508507\n\nSolution : Renvoi après cassation\n\nExtrait : Vu la procédure suivante : M. S... P... a demandé au tribunal administratif de Nîmes d’annuler la décision du 29 juillet 2024 par laquelle la présidente du conseil départemental de Vaucluse a confirmé la décision du 27 avril 2024 par laquelle la caisse d’allocations familiales de Vaucluse, après avoir suspendu les droits du foyer qu’il forme avec Mme U... Q..., son épouse, au revenu de solidarité active pour une durée de quatre mois à compter du 1er janvier 2024, les a supprimés à compter du…",
+          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887123",
+          "date_texte": "2026-09-21",
+          "vu_le": "2026-10-14",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Allocations familiales",
+              "fichiers": [
+                "outils/module-allocations-familiales.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congés familiaux",
+              "fichiers": [
+                "outils/module-famille.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Parentalité",
+              "fichiers": [
+                "outils/module-parentalite.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Proche Aidant",
+              "fichiers": [
+                "outils/module-proche-aidant.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-proche-aidant.html",
+                "conge-naissance-2026-guide.html",
+                "conges-maternite-paternite.html",
+                "conges-evenements-familiaux.html",
+                "conge-parental-educatif-guide.html",
+                "conge-paternite-accueil-enfant-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils",
+            "guide"
           ]
         }
       ]
@@ -330,47 +374,24 @@
         {
           "categorie": "fichier-modifie",
           "gravite": "basse",
-          "titre": "3 fichiers modifiés (2026-10-13) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (2) : outil:module-fincontrat.html, outil:module-rupture.html\n\nGUIDE (1) : transfert-entreprise-l1224-guide.html",
+          "titre": "app:grillepaye:ccn-data.json : a changé depuis le dernier run",
+          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
           "nouveau": true,
           "cibles": [
             {
-              "zone": "outils",
-              "cible": "Fin de contrat",
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
               "fichiers": [
-                "outils/module-fincontrat.html"
+                "GrillePaye/ccn-data.json"
               ],
               "action": "Simple constat — rien à faire si c'est ton travail",
               "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Rupture Conventionnelle",
-              "fichiers": [
-                "outils/module-rupture.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "transfert-entreprise-l1224-guide.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
+              "auto": false,
               "plus": 0
             }
           ],
           "zones": [
-            "outils",
-            "guide"
+            "grilles"
           ]
         }
       ]

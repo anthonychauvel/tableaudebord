@@ -1,14 +1,14 @@
 {
-  "genere": "2026-10-14T14:38:01.199858+00:00",
+  "genere": "2026-10-15T14:18:36.543151+00:00",
   "exceptions_appliquees": 504,
-  "nouvelles_alertes": 3,
+  "nouvelles_alertes": 0,
   "routage": {
     "par_zone": {
       "app": 1,
       "outils": 1,
-      "grilles": 3,
+      "grilles": 2,
       "guide": 3,
-      "mlt": 1,
+      "mlt": 0,
       "veille": 0
     },
     "non_routees": 0,
@@ -79,31 +79,8 @@
       "id": "droit",
       "titre": "MonLegiTexte",
       "module": "monlegitexte-droit",
-      "alertes": [
-        {
-          "categorie": "changement-reel",
-          "gravite": "haute",
-          "titre": "[Aspirateur principal (France)] 146 changement(s) sur tes sujets",
-          "detail": "Run du 2026-10-12 20:17 UTC (audits/2026-10-12.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-13)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n… et 131 autre(s).",
-          "date_texte": "2026-10-13",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "mlt",
-              "cible": "Site MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul pour les lecteurs — ouvrir seulement si le sujet te concerne",
-              "raison": "MonLegiTexte",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "mlt"
-          ]
-        }
-      ],
-      "hors_sujet_ignores": 81
+      "alertes": [],
+      "hors_sujet_ignores": 0
     },
     {
       "id": "modules",
@@ -270,7 +247,7 @@
           "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887120",
           "date_texte": "2026-09-21",
           "vu_le": "2026-10-14",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -296,7 +273,7 @@
           "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887123",
           "date_texte": "2026-09-21",
           "vu_le": "2026-10-14",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -370,31 +347,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "app:grillepaye:ccn-data.json : a changé depuis le dernier run",
-          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

@@ -757,5 +757,16 @@
       "basse": 1
     },
     "nouvelles_alertes": 3
+  },
+  {
+    "fichier": "2026-10-15-141836.json",
+    "genere": "2026-10-15T14:18:36.543151+00:00",
+    "total": 4,
+    "par_gravite": {
+      "haute": 2,
+      "moyenne": 2,
+      "basse": 0
+    },
+    "nouvelles_alertes": 0
   }
 ]

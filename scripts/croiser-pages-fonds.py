@@ -118,8 +118,7 @@ def main():
                        "La loi a changé : ce texte ne s'applique plus."),
         })
     for art, code, etat, lieux in non_confirmes:
-        raison = ("aucun des deux corpus (travail/sécu) ne le confirme"
-                  if code is None else f"état « {etat} »")
+        raison = vc.raison_non_confirme(code, etat)
         resultat["alertes"].append({
             "categorie": "citation-ecosysteme-non-confirmee",
             "gravite": "basse",

@@ -148,8 +148,19 @@ def citations_ecosysteme(racine_hs, racine_guide=None, inclure_fox=None):
 # le fonds ne descend pas : il n'aspire que le travail et la sécu. Ce n'est pas
 # une anomalie à signaler, c'est un périmètre. Les lire depuis le champ `code`
 # évite d'avoir à tenir une exception à la main pour chacun.
+# Pour sortir un article de la veille : dans outils/articles-loi.js, donner à
+# sa fiche l'un de ces codes (ex. code:'CSP' ou code:'lux').
 CODES_HORS_PERIMETRE = {"transports": "code des transports",
-                        "com.": "code de commerce"}
+                        "com.": "code de commerce",
+                        "CSP": "code de la santé publique",
+                        "lux": "Code du travail luxembourgeois",
+                        "CGI": "code général des impôts",
+                        "civ.": "code civil",
+                        "pén.": "code pénal",
+                        "rural": "code rural",
+                        "CGCT": "code général des collectivités territoriales",
+                        "CPI": "code de la propriété intellectuelle",
+                        "autre": "texte hors code du travail et de la sécu"}
 
 
 def codes_declares(racine_hs):
@@ -166,9 +177,39 @@ def codes_declares(racine_hs):
             re.finditer(r"'([A-Z]?\d[\w-]*)':\s*\{\s*code:\s*'([\w.]+)'", s[i:])}
 
 
+_UNIVERS = {}
+
+
+def _univers(fonds):
+    """Tous les numéros (en vigueur ou abrogés) des codes du travail et de la
+    sécu, d'après les listes du fonds. Vide si les listes manquent : on ne
+    conclut alors rien."""
+    if fonds not in _UNIVERS:
+        nums = set()
+        for nom in ("all_articles_code_travail.txt", "all_articles_code_secu.txt"):
+            try:
+                nums |= {l.strip() for l in open(os.path.join(fonds, nom), encoding="utf-8") if l.strip()}
+            except OSError:
+                pass
+        _UNIVERS[fonds] = nums
+    return _UNIVERS[fonds]
+
+
 def etat_reel(fonds, num):
     """Teste code-travail PUIS code-secu (pas de code explicite ici, contrairement
-    aux outils). Renvoie (code_trouve, etat)."""
+    aux outils). Renvoie (code_trouve, etat).
+
+    etat « fiche-vide » : le fonds a demandé l'article à Légifrance et n'a reçu
+    qu'une fiche vide (« article »: null) -- c'est le cas de milliers d'articles
+    pourtant en vigueur (L431-1 et L452-2 du CSS, par ex.). Ce n'est donc PAS
+    une erreur de l'appli, seulement un trou du fonds."""
+    univers = _univers(fonds)
+    if univers and num not in univers:
+        # Absent de la liste officielle des numéros des deux codes : le numéro
+        # n'existe pas (ex. R3131-1, cité pour R3135-1). Le fonds a pu tenter
+        # de le récupérer quand même (articles cités) et garder une fiche vide.
+        return None, "numero-inconnu"
+    vide = None
     for sous_dossier, code in (("code-travail", "CT"), ("code-secu", "CSS")):
         chemin = os.path.join(fonds, "output", sous_dossier, num + ".json")
         if not os.path.isfile(chemin):
@@ -179,9 +220,22 @@ def etat_reel(fonds, num):
             continue
         art = d.get("article")
         if art is None:
-            continue  # tenté par le fonds, rien d'exploitable -- on regarde l'autre corpus
+            vide = vide or code  # rien d'exploitable -- on regarde l'autre corpus
+            continue
         return code, (art.get("etat") or "etat-vide")
+    if vide:
+        return vide, "fiche-vide"
     return None, "jamais-tente"
+
+
+def raison_non_confirme(code, etat):
+    """Libellé court d'une citation non confirmée, à lire sur l'iPhone."""
+    if code is None:
+        return "numéro inconnu des codes du travail et de la sécu (faute de frappe ou autre code ?)"
+    if etat == "fiche-vide":
+        return ("texte absent du fonds (Légifrance a renvoyé une fiche vide) "
+                "— probablement pas une erreur de l'appli")
+    return f"état « {etat} »"
 
 
 def main():
@@ -253,8 +307,7 @@ def main():
             "detail": f"Cité dans {resume_lieux(lieux)} — la loi a changé, ce texte ne s'applique plus.",
         })
     for art, code, etat, lieux in non_confirmes:
-        raison = ("aucun des deux corpus (travail/sécu) ne le confirme"
-                   if code is None else f"état « {etat} »")
+        raison = raison_non_confirme(code, etat)
         resultat["alertes"].append({
             "categorie": "citation-ecosysteme-non-confirmee",
             "gravite": "basse",

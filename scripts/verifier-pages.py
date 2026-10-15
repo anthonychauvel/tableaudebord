@@ -54,7 +54,9 @@ from urllib.parse import urlparse, unquote
 
 ATTENTE_MS = 1200          # après « load » : laisse tourner les scripts de démarrage
 DELAI_PAGE_MS = 20000      # une page qui ne finit pas de charger en 20 s est signalée
-ART = re.compile(r"\b((?:L|R|D)\.?\s?\d{3,4}-\d{1,3}(?:-\d{1,2})?)\b")
+# Fin du numéro : pas de \b, car le texte rendu colle parfois le code au numéro
+# (« D1225-11-3CT ») : avec \b on lisait « D1225-11 », un article qui n'existe pas.
+ART = re.compile(r"\b((?:L|R|D)\.?\s?\d{3,4}-\d{1,3}(?:-\d{1,2})?)(?!-?\d)")
 
 
 class _Silencieux(http.server.SimpleHTTPRequestHandler):

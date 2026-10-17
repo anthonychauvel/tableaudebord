@@ -852,5 +852,105 @@
     "date": "2026-10-13",
     "motif": "fonctionnaires|fonction publique",
     "sauf": "heures? supplementaires|\\bsmic\\b"
+  },
+  {
+    "_bloc": "=== VEILLE DU 17/10/2026 — traitée avec Claude ==="
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1589)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Avenant du 24/06/2026 étendu (JO 13/10) : grille GrillePaye mise à jour le 17/10/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1555)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Accord du 08/07/2026 étendu (JO 13/10) : grille complète (23 niveaux) mise à jour le 17/10/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1580)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Accord du 16/07/2026 étendu (JO 13/10) : grille mise à jour le 17/10/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 573)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Accord salaires du 20/07/2026 étendu (JO 13/10), +1,70 % : grille mise à jour le 17/10/2026. Aucune règle HS changée."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 3043)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Simple levée d'une réserve d'extension (alinéa apprentis de l'art. 5.5.2.1) : ni grille ni règle HS changée."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 3224)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Avenant n° 13 du 17/06/2026 étendu (JO 15/10) : grille réelle (13 niveaux) mise à jour le 17/10/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1979)",
+    "mode": "jusqu_au",
+    "date": "2026-10-17",
+    "note": "Avenant n° 36 du 04/06/2026 étendu (JO 15/10), en vigueur au 01/11/2026 : onglet « À venir » ajouté le 17/10/2026. Aucune règle HS changée."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1672 — Protocole d'accord du 10 juin 2026",
+    "date": "2026-10-17",
+    "note": "Déjà intégré dans GrillePaye (RMA 2026, 7 classes) : faux positif récurrent."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-12.343",
+    "date": "2026-10-17",
+    "note": "Médecin du travail des gens de mer (marins) : aucun impact sur Fox ni les calculs."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-18.243",
+    "date": "2026-10-17",
+    "note": "Contrepartie du travail de nuit en MAS, CCN 66 : cas sectoriel, rien à changer dans M1, M2, Taiko, Fox ni les outils."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-14.660",
+    "date": "2026-10-17",
+    "note": "Prime annuelle Carrefour (accord d'entreprise vs branche, CCN 2216) : aucun impact sur le guide."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "506563",
+    "date": "2026-10-17",
+    "note": "Conseil d'État : sanctions des demandeurs d'emploi / RSA (France Travail). Hors sujet."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "508507",
+    "date": "2026-10-17",
+    "note": "Conseil d'État : suspension du RSA par la CAF. Rien à voir avec les allocations familiales des outils."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "R1452-3 (CT)",
+    "date": "2026-10-17",
+    "note": "Procédure prud'homale (convocation par le greffe) : sans rapport avec les outils CET et épargne salariale."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3345",
+    "date": "2026-10-17",
+    "note": "Rapport parlementaire, pas un texte de salaires ni une loi. À surveiller seulement si le PLFSS 2027 touche aux heures sup."
   }
 ]

@@ -1,17 +1,17 @@
 {
-  "genere": "2026-10-17T09:34:42.968945+00:00",
-  "exceptions_appliquees": 543,
-  "nouvelles_alertes": 24,
+  "genere": "2026-10-17T11:44:45.935381+00:00",
+  "exceptions_appliquees": 555,
+  "nouvelles_alertes": 1,
   "routage": {
     "par_zone": {
-      "app": 6,
-      "outils": 3,
-      "grilles": 18,
-      "guide": 12,
+      "app": 0,
+      "outils": 0,
+      "grilles": 8,
+      "guide": 7,
       "mlt": 3,
-      "veille": 1
+      "veille": 0
     },
-    "non_routees": 1,
+    "non_routees": 0,
     "zones": {
       "app": {
         "nom": "Application",
@@ -70,60 +70,12 @@
       "titre": "Grilles CCN",
       "alertes": [
         {
-          "categorie": "grille-sur-texte-ancien",
-          "gravite": "haute",
-          "titre": "IDCC 3213 : grille construite sur un texte remplacé",
-          "detail": "Les montants de la grille correspondent à « Accord du 23 janvier 2025 relatif aux salaires minimums conventionnels » (100% retrouvés), mais le fonds contient plus récent : « Accord du 8 avril 2026 relatif aux salaires minimums conventionnels ». — ETAM Niveau Salaire minimal mensuel national (hors Île-de-France) Salaire minimal mensuel région Île-de-France A1 1 883,47 € 1 964,42 € A2 2 036,24 € 2 168,50 € B 2 310,16 € 2 428,17 € C 2 555,25 € 2 683,47 € D 2 902,46 € 3 045,42 € E 3 157…",
-          "date_texte": "2026-09-21",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3213 — Économistes de la construction et métreurs-vérif",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Remplacer la source de la grille par le texte en vigueur",
-              "raison": "convention IDCC 3213, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "grille-sur-texte-ancien",
-          "gravite": "haute",
-          "titre": "IDCC 3221 : grille construite sur un texte remplacé",
-          "detail": "Les montants de la grille correspondent à « Avenant n° 9 du 2 juin 2025 relatif à la revalorisation des salaires minima (annexe 4 de la convention collective) » (100% retrouvés), mais le fonds contient plus récent : « Avenant n° 10 du 1er juin 2026 relatif à la revalorisation des salaires minima à compter du 1er juillet 2026 (annexe 4 de la convention collective) ». — Groupes de qualification Recrutement Prime d'ancienneté 3 ans 4 ans 5 ans 6 ans 9 ans 12 ans 15 ans 18 ans 20 ans Employés Techniciens Groupe 1 1 873,86 € 56,22 € 74,95 € 93,69 € 112,43 € 168,65 € 224,86 € 281,08 € 337,29 € 374,77 € Groupe …",
-          "date_texte": "2026-09-23",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3221 — Agences de presse (employés, techniciens, cadres",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Remplacer la source de la grille par le texte en vigueur",
-              "raison": "convention IDCC 3221, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
           "categorie": "grille-perimee",
           "gravite": "moyenne",
           "titre": "IDCC 3233 : grille dépassée de 105 jours",
           "detail": "Avenant du 16 avril 2026 relatif aux salaires minima garantis 2026 relevant des titres II et III de la convention collective — Revalorisation du « Point 100 profession » La valeur du point 100 profession du personnel ouvrier et ETDAM, telle que visée à l'article II.2.7 de la CCN, est revalorisée à : • 6,2974 € au 1er janvier 2026, soit une revalorisation de 1,1 % p… · Le montant de la prime de vacances, visée à l'article II.2.6 de la CCN, est porté à 1 000 € au 1er janvier 2026.",
           "date_texte": "2026-09-21",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -171,7 +123,7 @@
           "titre": "[Aspirateur principal (France)] 169 changement(s) sur tes sujets",
           "detail": "Run du 2026-10-15 15:03 UTC (audits/2026-10-15.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n… et 154 autre(s).",
           "date_texte": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "mlt",
@@ -253,7 +205,7 @@
           "theme": "Section suivie",
           "date_texte": "2026-10-17",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "mlt",
@@ -279,7 +231,7 @@
           "theme": "Section suivie",
           "date_texte": "2026-10-17",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "mlt",
@@ -296,202 +248,6 @@
           ]
         },
         {
-          "categorie": "nouvel-article-section",
-          "gravite": "haute",
-          "titre": "R1452-3 (CT) : nouvel article sur un sujet suivi",
-          "detail": "Nouvel article dans une section du Code du travail qui contient des articles que tu cites.\nSection : Partie réglementaire > Première partie – Les relations individuelles de travail > Livre IV – La résolution des litiges - Le conseil de prud'hommes > Titre V – Procédure devant le conseil de prud'hommes > Chapitre II – Saisine du conseil de prud'hommes\n\nTEXTE — Le greffe avise par tous moyens le demandeur des lieu, jour et heure de la séance du bureau de conciliation et d'orientation ou de l'audience lorsque le préalable de conciliation ne s'applique pas. Cet avis par tous moyens invite le demandeur à adresser ses pièces au défendeur avant la séance ou l'audience précitée et à en remettre un exemplaire lors de cette séance ou de cette audience. Il indique qu'en cas de non-comparution sans motif légitime il pourra être statué en l'état des pièces et moyens contradictoirement communiqués par l'autre partie.",
-          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R1452-3",
-          "fonds": "Code",
-          "theme": "Section suivie",
-          "date_texte": "2026-10-17",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "outils",
-              "cible": "CET",
-              "fichiers": [
-                "outils/module-cet.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : épargne salariale, CET",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Épargne Salariale",
-              "fichiers": [
-                "outils/module-epargne.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : épargne salariale, CET",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "mlt",
-              "cible": "Fiches articles de MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul — vérifier la fiche si besoin",
-              "raison": "texte du Code",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "outils"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "haute",
-          "titre": "Arrêté du 8 octobre 2026 portant extension d'un avenant à la convention collective nationale des mareyeurs-expéditeurs (n° 1589) : concerne une convention de l'appli (IDCC 1589) — Salaires minima",
-          "detail": "Paru au JO le 2026-10-13. Ce texte concerne une convention de l'appli (IDCC 1589) — Salaires minima.\n\nArrêté du 8 octobre 2026 portant extension d'un avenant à la convention collective nationale des mareyeurs-expéditeurs (n° 1589)\n\n💶 Salaires minima — « salaires minima » : …ication de la convention collective nationale des mareyeurs-expéditeurs du 15 mai 1990, les stipulations de l'avenant du 24 juin 2026 à l'annexe II relatif aux salaires minima à compter du 1 er juillet 2026, à la convention collective nationale susvisée. L'extension des effets et sanctions de l'avenant susvisé prend effet à compter d…",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054977744",
-          "fonds": "JORF",
-          "theme": "Salaires minima",
-          "date_texte": "2026-10-13",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1589 — Mareyeurs-expéditeurs",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1589, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "mareyeur-poissonnerie-gros-heures-supplementaires.html"
-              ],
-              "action": "Relire les montants et règles cités pour l'IDCC 1589",
-              "raison": "parlent de l'IDCC 1589",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles",
-            "guide"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "haute",
-          "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord collectif conclu dans le cadre de la convention collective nationale de la… : concerne une convention de l'appli (IDCC 1555) — Salaires minima",
-          "detail": "Paru au JO le 2026-10-13. Ce texte concerne une convention de l'appli (IDCC 1555) — Salaires minima.\n\nArrêté du 8 octobre 2026 portant extension d'un accord collectif conclu dans le cadre de la convention collective nationale de la fabrication et du commerce des produits à usage pharmaceutique, parapharmaceutique et vétérinaire (n° 1555)\n\n💶 Salaires minima — « rémunérations minimales » : …des produits à usage pharmaceutique, parapharmaceutique et vétérinaire du 1 er juin 1989, les stipulations de l'accord collectif du 8 juillet 2026 relatif aux rémunérations minimales conventionnelles, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à co…",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054977754",
-          "fonds": "JORF",
-          "theme": "Salaires minima",
-          "date_texte": "2026-10-13",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1555 — Fabrication commerce produits pharma para-pharma",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1555, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "haute",
-          "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie de la… : concerne une convention de l'appli (IDCC 1580) — Salaires minima",
-          "detail": "Paru au JO le 2026-10-13. Ce texte concerne une convention de l'appli (IDCC 1580) — Salaires minima.\n\nArrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie de la chaussure et des articles chaussants (n° 1580)\n\n💶 Salaires minima — « salaires minima » : …tion collective nationale de l'industrie de la chaussure et des articles chaussants du 7 mars 1990, les stipulations de l'accord du 16 juillet 2026 relatif aux salaires minima conventionnels, conclu dans le cadre de la convention collective susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à compter de la…",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054977764",
-          "fonds": "JORF",
-          "theme": "Salaires minima",
-          "date_texte": "2026-10-13",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1580 — Chaussure industrie",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1580, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "industrie-cuir-maroquinerie-luxe-heures-supplementaires.html"
-              ],
-              "action": "Relire les montants et règles cités pour l'IDCC 1580",
-              "raison": "parlent de l'IDCC 1580",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles",
-            "guide"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des commerces de gros (n°… : concerne une convention de l'appli (IDCC 573)",
-          "detail": "Paru au JO le 2026-10-13. Ce texte concerne une convention de l'appli (IDCC 573).\n\nArrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des commerces de gros (n° 573)",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054977774",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-13",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
-              "fichiers": [
-                "ccn/conventions-collectives.js"
-              ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 573",
-              "raison": "IDCC 573 a des règles dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "IDCC 573 — Commerce de gros alimentaire",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 573, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "grilles"
-          ]
-        },
-        {
           "categorie": "nouveau-texte-jorf",
           "gravite": "moyenne",
           "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des… : concerne une convention de l'appli (IDCC 538)",
@@ -501,7 +257,7 @@
           "theme": "Convention de l'appli",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -521,46 +277,6 @@
         },
         {
           "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 8 octobre 2026 portant modification de l'arrêté du 1er juin 2026 portant extension d'un avenant à la convention collective… : concerne une convention de l'appli (IDCC 3043)",
-          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 3043).\n\nArrêté du 8 octobre 2026 portant modification de l'arrêté du 1er juin 2026 portant extension d'un avenant à la convention collective nationale des entreprises de propreté et services associés (n° 3043)\n\nArticles de code cités dans le texte : L6222-23",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983821",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-15",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
-              "fichiers": [
-                "ccn/conventions-collectives.js"
-              ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 3043",
-              "raison": "IDCC 3043 a des règles dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3043 — Nettoyage entreprises de propreté",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 3043, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
           "gravite": "haute",
           "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des… : concerne une convention de l'appli (IDCC 2528) — Salaires minima",
           "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 2528) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des industries de la maroquinerie, articles de voyage, chasse-sellerie, gainerie, bracelets en cuir - secteur cuirs et peaux (n° 2528)\n\n💶 Salaires minima — « salaires minima » : …9 septembre 2005, et dans leur propre champ d'application professionnel (secteur cuirs et peaux), les stipulations de l'accord du 1 er juillet 2026 relatif aux salaires minima, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à compter de la date…",
@@ -569,7 +285,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -612,7 +328,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -646,34 +362,6 @@
         },
         {
           "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 12 octobre 2026 portant extension d'un avenant à la convention collective nationale de la distribution et du commerce de gros des… : concerne une convention de l'appli (IDCC 3224)",
-          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 3224).\n\nArrêté du 12 octobre 2026 portant extension d'un avenant à la convention collective nationale de la distribution et du commerce de gros des papiers-cartons (IDCC n° 3224)",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983850",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-15",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3224 — Distribution et commerce de gros des papiers-car",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 3224, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
           "gravite": "haute",
           "titre": "Arrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés,… : concerne une convention de l'appli (IDCC 998) — Salaires minima",
           "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 998) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés, techniciens et agents de maîtrise de l'exploitation d'équipements thermiques et de génie climatique (n° 998)\n\n💶 Salaires minima — « rémunérations minimales » : …e maîtrise de l'exploitation d'équipements thermiques et de génie climatique du 7 février 1979, les stipulations de : - l'accord du 17 juillet 2026 relatif aux rémunérations minimales professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée ; - l'accord du 17 juillet 2026 relatif au montant des primes e…",
@@ -682,7 +370,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -716,46 +404,6 @@
         },
         {
           "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 12 octobre 2026 portant extension d'un avenant à la convention collective nationale des hôtels, cafés, restaurants (n° 1979) : concerne une convention de l'appli (IDCC 1979)",
-          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 1979).\n\nArrêté du 12 octobre 2026 portant extension d'un avenant à la convention collective nationale des hôtels, cafés, restaurants (n° 1979)",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983870",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-15",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
-              "fichiers": [
-                "ccn/conventions-collectives.js"
-              ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 1979",
-              "raison": "IDCC 1979 a des règles dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1979 — Hôtels Cafés Restaurants HCR",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 1979, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
           "gravite": "haute",
           "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs… : concerne une convention de l'appli (IDCC 1256) — Salaires minima",
           "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 1256) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs et assimilés des entreprises de gestion d'équipements thermiques et de climatisation (n° 1256)\n\n💶 Salaires minima — « rémunérations minimales » : …et assimilés des entreprises de gestion d'équipements thermiques et de climatisation du 3 mai 1983, les stipulations de l'accord du 17 juillet 2026 relatif aux rémunérations minimales annuelles professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susv…",
@@ -764,7 +412,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -785,245 +433,6 @@
               ],
               "action": "Relire les montants et règles cités pour l'IDCC 1256",
               "raison": "parlent de l'IDCC 1256",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles",
-            "guide"
-          ]
-        },
-        {
-          "categorie": "nouvelle-jurisprudence",
-          "gravite": "haute",
-          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-12.343 e.a. : applique des articles que tu cites : R4623-1",
-          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Rejet · formation FS-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-12.343 e.a.\n\nElle applique des articles que tu cites : R4623-1.\n\nCe que la Cour a jugé : Selon l'article L. 5511-1, 3°, du code des transports, sont considérés comme marins les gens de mer salariés ou non salariés exerçant une activité directement liée à l'exploitation du navire. 8. Aux termes de l'article R. 5511-1 du même code, l'exploitation à bord comporte, pour l'application du 3° de l'article L. 5511-1, les activités professionnelles relatives à la marche, à la conduite ou à l'entretien ainsi que celles qui sont nécessaires pour assurer l'ensemble des fonctionnalités du…\n\n🏖️ Repos et congés — « congés payés » : …it grief à l'arrêt de rejeter ses demandes tendant à l'absence de cause réelle et sérieuse de son licenciement et en paiement d'une indemnité de préavis, outre congés payés afférents, d'indemnités de licenciement et pour licenciement sans cause réelle et sérieuse, de rappels de salaires, outre congés payés afférents, et de dommage…",
-          "lien": "https://www.courdecassation.fr/decision/6acf41677a1020213740e381",
-          "fonds": "Juris",
-          "theme": "Repos et congés",
-          "date_texte": "2026-10-14",
-          "etiquettes": [
-            "Publiée au Bulletin"
-          ],
-          "formation": "FS-B",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "M3 · Fox, moteur juridique",
-              "fichiers": [
-                "fox/js/articles-loi.js"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite R4623-1",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app"
-          ]
-        },
-        {
-          "categorie": "nouvelle-jurisprudence",
-          "gravite": "haute",
-          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-14.660 e.a. : applique des articles que tu cites : L2253-1",
-          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation FS-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-14.660 e.a.\n\nElle applique des articles que tu cites : L2253-1.\n\nCe que la Cour a jugé : Selon le premier de ces textes, les dispositions du programme social cible, parmi lesquelles figurent celles relatives aux rémunérations et aux primes, viennent soit compléter, pour les améliorer, les dispositions de la convention collective nationale applicables à l'entreprise, soit en préciser les modalités d'application, soit encore poser des avantages particuliers supplémentaires à ceux existants de par la convention collective de branche. 13. Aux termes du second de ces textes, le montant…\n\n⏱️ Heures supplémentaires — « heures supplémentaires » : …des statuts conclu le 29 mars 2007 prévoit que, pour le calcul de la prime annuelle, \"le salaire de référence comprend : - le salaire forfaitaire mensuel brut, heures supplémentaires exceptionnelles exclues, les primes fixes attribuées à titre individuel, comme par exemple les primes de remplacement, sauf intéressement, - la moyenne des heu…\n🕐 Temps partiel — « heures complémentaires » : …res exceptionnelles exclues, les primes fixes attribuées à titre individuel, comme par exemple les primes de remplacement, sauf intéressement, - la moyenne des heures complémentaires pour les salariés à temps partiel\" ; qu'il en résulte que l'accord d'entreprise ne se borne pas à exclure les heures supplémentaires exceptionnelles de l'assie…\n🕘 Durée du travail — « travail de nuit » : …'assiette de calcul de la prime annuelle les heures supplémentaires exceptionnelles\", les majorations pour travail le dimanche, travail effectué un jour férié, travail de nuit et pauses indemnisées doivent être prises en compte dans l'assiette de calcul de la prime annuelle, la cour d'appel a violé l'article L. 2253-3 du code du trav…\n🏖️ Repos et congés — « congés payés » : …n du pourvoi principal de l'employeur Enoncé du moyen 4. L'employeur fait grief à l'arrêt de le condamner à payer au salarié un rappel de prime annuelle, outre congés payés afférents, et au syndicat une somme à titre de dommages et intérêts, alors : « 1°/ que selon l'article L. 2253-3 du code du travail, entré en vigueur le 1er ja…\n💶 Salaires minima — « salaires minima » : …lles ayant le même objet prévues par la convention de branche ; qu'à l'exception des primes pour travaux dangereux ou insalubres, les primes qui s'ajoutent aux salaires minima hiérarchiques n'étant énumérées par les articles L. 2253-1 et L. 2253 2 du code du travail, les dispositions d'un accord collectif définissant les modalités de…",
-          "lien": "https://www.courdecassation.fr/decision/6acf416b7a1020213740e4e3",
-          "fonds": "Juris",
-          "theme": "Heures supplémentaires",
-          "date_texte": "2026-10-14",
-          "etiquettes": [
-            "Publiée au Bulletin"
-          ],
-          "formation": "FS-B",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "semaine-4-jours-droit-travail-guide.html"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L2253-1",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "guide"
-          ]
-        },
-        {
-          "categorie": "nouvelle-jurisprudence",
-          "gravite": "moyenne",
-          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-18.243 e.a. : parle de : Durée du travail, Repos et congés",
-          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-18.243 e.a.\n\nElle parle de : Durée du travail, Repos et congés.\n\nCe que la Cour a jugé : Vu l'accord n° 2002-01 du 17 avril 2002 relatif au travail de nuit, dans sa rédaction issue de l'avenant n° 1 du 19 avril 2007, et l'article 15, intitulé « Travail de nuit en maison d'accueil spécialisée », de l'annexe 10, intitulée « Dispositions particulières au personnel des établissements et services pour personnes handicapées adultes », à la convention collective nationale de travail des établissements et services pour personnes inadaptées et handicapées du 15 mars 1966 – 8. Selon…\n\n🕘 Durée du travail — « travail de nuit » : …et d'indemnité pour travail dissimulé, alors « qu'il résulte des dispositions de l'article 5.1.1 de l'accord de branche n° 2002-01 du 17 avril 2002 relatif au travail de nuit, applicable à la fondation Marie-Louise, que dans les établissements et services soumis à des conventions collectives ou des accords collectifs prévoyant déjà…\n🏖️ Repos et congés — « congés payés » : …à l'arrêt de le débouter de ses demandes en paiement d'un rappel de salaire au titre de la contrepartie due aux salariés travailleurs de nuit et d'un rappel de congés payés afférents, de dommages et intérêts du fait de l'inexécution par l'employeur de ses obligations contractuelles et d'indemnité pour travail dissimulé, alors « qu…",
-          "lien": "https://www.courdecassation.fr/decision/6acf416f7a1020213740e629",
-          "fonds": "Juris",
-          "theme": "Durée du travail",
-          "date_texte": "2026-10-14",
-          "etiquettes": [
-            "Publiée au Bulletin"
-          ],
-          "formation": "F-B",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "M1 · Compteur annuel des heures sup",
-              "fichiers": [
-                "heures/index.html"
-              ],
-              "action": "Vérifier que le calcul et les textes du module suivent la règle",
-              "raison": "thème : durée du travail · thème : congés payés",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "app",
-              "cible": "M3 · Fox, moteur juridique",
-              "fichiers": [
-                "fox/index.html"
-              ],
-              "action": "Vérifier que le calcul et les textes du module suivent la règle",
-              "raison": "thème : durée du travail",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "app",
-              "cible": "Taiko, plannings",
-              "fichiers": [
-                "taiko.html"
-              ],
-              "action": "Vérifier que le calcul et les textes du module suivent la règle",
-              "raison": "thème : durée du travail",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "app",
-              "cible": "M2 · Heures mensualisées (paye)",
-              "fichiers": [
-                "paye/index.html"
-              ],
-              "action": "Vérifier que le calcul et les textes du module suivent la règle",
-              "raison": "thème : congés payés",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Temps & Repos",
-              "fichiers": [
-                "outils/module-temps.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : durée du travail",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Modulation",
-              "fichiers": [
-                "outils/module-modulation.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : durée du travail",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Mes Congés Payés",
-              "fichiers": [
-                "outils/module-conges.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : congés payés",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Jours Fériés 2026",
-              "fichiers": [
-                "outils/module-feries.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : congés payés",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "horaires-individualises-guide.html",
-                "durees-maximales-travail-guide.html",
-                "badgeage-pointage-obligatoire-guide.html",
-                "badgeage-obligation-controle-temps-guide.html",
-                "compteur-heures-badgeage-droits-salarie-2026.html",
-                "equivalences-horaires-transport-hotellerie-guide.html",
-                "conge-paye-calcul.html",
-                "dimanche-jours-feries.html"
-              ],
-              "action": "Relire les pages de fond sur ce thème",
-              "raison": "thème : durée du travail · thème : congés payés",
-              "auto": false,
-              "plus": 3
-            }
-          ],
-          "zones": [
-            "app",
-            "outils",
-            "guide"
-          ]
-        },
-        {
-          "categorie": "nouvel-avenant-ccn",
-          "gravite": "haute",
-          "titre": "IDCC 1672 — Protocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026 : nouveau texte (Salaires minima)",
-          "detail": "Nouveau texte dans la convention IDCC 1672 (Convention collective nationale des sociétés d'assurances du 27 mai 1992) — convention présente dans l'appli.\nDate : 2026-09-23 · État : VIGUEUR_NON_ETEN\n\nProtocole d'accord du 10 juin 2026 relatif aux rémunérations minimales pour l'année 2026\n\n💶 Salaires minima — « rémunération minimale » : …itaine. Conformément à l' article L. 2241-10 du code du travail , modifié par la loi n° 2022-1158 du 16 août 2022 , dans l'hypothèse où le premier niveau de la rémunération minimale annuelle (RMA) serait inférieur au Smic, les partenaires sociaux se réuniront dans les conditions prévues par la loi.",
-          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054887698",
-          "fonds": "CCN",
-          "theme": "Salaires minima",
-          "date_texte": "2026-09-23",
-          "vu_le": "2026-10-05",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1672 — Sociétés assurances",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1672, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "assurance-heures-supplementaires.html",
-                "assurance-mutuelle-heures-supplementaires.html",
-                "charge-clientele-assurance-heures-supplementaires.html",
-                "charge-clientele-assurance-hs.html",
-                "gestionnaire-sinistres-assurance-heures-supplementaires.html",
-                "prime-anciennete-calcul-guide.html",
-                "teleconseiller-assurance-heures-supplementaires.html"
-              ],
-              "action": "Relire les montants et règles cités pour l'IDCC 1672",
-              "raison": "parlent de l'IDCC 1672",
               "auto": false,
               "plus": 0
             }
@@ -1090,136 +499,7 @@
       "id": "sources",
       "titre": "🏛️ BOSS, Parlement, liste DARES",
       "module": "veille-sources-officielles",
-      "alertes": [
-        {
-          "categorie": "texte-parlement",
-          "gravite": "haute",
-          "titre": "🏛️ N° 3345 tome II - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le…",
-          "detail": "Assemblée — documents parlementaires — Fri, 16 Oct 2026 00:00:00 +0000.\n\nN° 3345 tome II - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nN° 3345 tome II - Rapport de M. Thibault Bazin, Mme Danielle Simonnet, Mme Christine Loir, Mme Sandrine Runel et M. Louis Boyard sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
-          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3345-tII.asp",
-          "date_texte": "2026-10-17",
-          "vu_le": "2026-10-17",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3211",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
-              "raison": "convention IDCC 3211, grille « estimated » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "decision-haute-juridiction",
-          "gravite": "haute",
-          "titre": "🏛️ Conseil d'État — Conseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 506563",
-          "detail": "Conseil d'État — Conseil d'État — n° 506563 — 2026-09-21.\n\nConseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 506563\n\nSolution : Rejet\n\n⚠️ Articles que l'écosystème cite : L5421-1, L5422-1\n\nExtrait : Vu les procédures suivantes : 1° Sous le n° 506563, par une requête sommaire et un mémoire complémentaire, enregistrés les 23 juillet et 23 octobre 2025 au secrétariat du contentieux du Conseil d’Etat, la Ligue des droits de l’homme demande au Conseil d’Etat : 1°) d’annuler pour excès de pouvoir le décret n° 2025-478 du 30 mai 2025 relatif aux sanctions applicables aux demandeurs d’emploi en cas de manquement à leurs obligations ; 2°) de mettre à la charge de l’Etat la somme de 4 000 euros au…",
-          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887120",
-          "date_texte": "2026-09-21",
-          "vu_le": "2026-10-14",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "M3 · Fox, moteur juridique",
-              "fichiers": [
-                "fox/js/articles-loi.js"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L5421-1",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app"
-          ]
-        },
-        {
-          "categorie": "decision-haute-juridiction",
-          "gravite": "moyenne",
-          "titre": "🏛️ Conseil d'État — Conseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 508507",
-          "detail": "Conseil d'État — Conseil d'État — n° 508507 — 2026-09-21.\n\nConseil d'État, 1ère et 4ème chambres réunies, 21/09/2026, 508507\n\nSolution : Renvoi après cassation\n\nExtrait : Vu la procédure suivante : M. S... P... a demandé au tribunal administratif de Nîmes d’annuler la décision du 29 juillet 2024 par laquelle la présidente du conseil départemental de Vaucluse a confirmé la décision du 27 avril 2024 par laquelle la caisse d’allocations familiales de Vaucluse, après avoir suspendu les droits du foyer qu’il forme avec Mme U... Q..., son épouse, au revenu de solidarité active pour une durée de quatre mois à compter du 1er janvier 2024, les a supprimés à compter du…",
-          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054887123",
-          "date_texte": "2026-09-21",
-          "vu_le": "2026-10-14",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "outils",
-              "cible": "Allocations familiales",
-              "fichiers": [
-                "outils/module-allocations-familiales.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : famille",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Congés familiaux",
-              "fichiers": [
-                "outils/module-famille.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : famille",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Parentalité",
-              "fichiers": [
-                "outils/module-parentalite.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : famille",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Proche Aidant",
-              "fichiers": [
-                "outils/module-proche-aidant.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : famille",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "conge-proche-aidant.html",
-                "conge-naissance-2026-guide.html",
-                "conges-maternite-paternite.html",
-                "conges-evenements-familiaux.html",
-                "conge-parental-educatif-guide.html",
-                "conge-paternite-accueil-enfant-guide.html"
-              ],
-              "action": "Relire les pages de fond sur ce thème",
-              "raison": "thème : famille",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "outils",
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "changements",
@@ -1229,22 +509,36 @@
         {
           "categorie": "fichier-modifie",
           "gravite": "basse",
-          "titre": "app:sw.js : a changé depuis le dernier run",
-          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
+          "titre": "2 fichiers modifiés (2026-10-17) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (1) : grillepaye:ccn-data.json\n\nGUIDE (1) : grille-salaire-convention.html",
           "nouveau": true,
           "cibles": [
             {
-              "zone": "veille",
-              "cible": "À trier",
-              "fichiers": [],
-              "action": "Aucune destination reconnue : lire et décider",
-              "raison": "non routé",
-              "auto": false,
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "grille-salaire-convention.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
               "plus": 0
             }
           ],
           "zones": [
-            "veille"
+            "grilles",
+            "guide"
           ]
         }
       ]

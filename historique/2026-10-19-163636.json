@@ -1,0 +1,678 @@
+{
+  "genere": "2026-10-19T16:36:36.205386+00:00",
+  "exceptions_appliquees": 555,
+  "nouvelles_alertes": 2,
+  "routage": {
+    "par_zone": {
+      "app": 1,
+      "outils": 2,
+      "grilles": 8,
+      "guide": 7,
+      "mlt": 2,
+      "veille": 0
+    },
+    "non_routees": 0,
+    "zones": {
+      "app": {
+        "nom": "Application",
+        "emoji": "📱",
+        "depot": "hs"
+      },
+      "outils": {
+        "nom": "105 outils",
+        "emoji": "🧰",
+        "depot": "hs"
+      },
+      "grilles": {
+        "nom": "GrillePaye · Lumina",
+        "emoji": "💶",
+        "depot": "hs"
+      },
+      "guide": {
+        "nom": "Guide",
+        "emoji": "📘",
+        "depot": "guide"
+      },
+      "mlt": {
+        "nom": "MonLegiTexte",
+        "emoji": "⚖️",
+        "depot": "droit"
+      },
+      "veille": {
+        "nom": "Chaîne de veille",
+        "emoji": "🩺",
+        "depot": "tableaudebord"
+      }
+    },
+    "ordre": [
+      "app",
+      "outils",
+      "grilles",
+      "guide",
+      "mlt",
+      "veille"
+    ],
+    "index": {
+      "articles": 521,
+      "pages_guide": 980,
+      "outils": 104,
+      "idcc_grilles": 340
+    }
+  },
+  "sections": [
+    {
+      "id": "croisement",
+      "titre": "🔔 Textes parus pour une CCN en attente",
+      "alertes": []
+    },
+    {
+      "id": "grilles",
+      "titre": "Grilles CCN",
+      "alertes": [
+        {
+          "categorie": "grille-perimee",
+          "gravite": "moyenne",
+          "titre": "IDCC 3233 : grille dépassée de 105 jours",
+          "detail": "Avenant du 16 avril 2026 relatif aux salaires minima garantis 2026 relevant des titres II et III de la convention collective — Revalorisation du « Point 100 profession » La valeur du point 100 profession du personnel ouvrier et ETDAM, telle que visée à l'article II.2.7 de la CCN, est revalorisée à : • 6,2974 € au 1er janvier 2026, soit une revalorisation de 1,1 % p… · Le montant de la prime de vacances, visée à l'article II.2.6 de la CCN, est porté à 1 000 € au 1er janvier 2026.",
+          "date_texte": "2026-09-21",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3233 — Industrie de la fabrication des ciments",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la grille avec le texte plus récent du fonds",
+              "raison": "convention IDCC 3233, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "ciment-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 3233",
+              "raison": "parlent de l'IDCC 3233",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smic",
+      "titre": "💶 Revalorisation du SMIC",
+      "alertes": []
+    },
+    {
+      "id": "droit",
+      "titre": "MonLegiTexte",
+      "module": "monlegitexte-droit",
+      "alertes": [],
+      "hors_sujet_ignores": 0
+    },
+    {
+      "id": "modules",
+      "titre": "8 modules",
+      "alertes": []
+    },
+    {
+      "id": "outils",
+      "titre": "105 outils",
+      "alertes": []
+    },
+    {
+      "id": "guide",
+      "titre": "Guide SEO",
+      "alertes": []
+    },
+    {
+      "id": "syntaxe",
+      "titre": "Syntaxe JS (page entière cassée)",
+      "module": "syntaxe-js",
+      "alertes": []
+    },
+    {
+      "id": "pages",
+      "titre": "Pages qui ne se chargent plus (ouverture réelle)",
+      "module": "pages",
+      "alertes": []
+    },
+    {
+      "id": "citations",
+      "titre": "Citations juridiques (guide + modules)",
+      "alertes": []
+    },
+    {
+      "id": "structure",
+      "titre": "Structure (JSON-LD, outils orphelins)",
+      "alertes": []
+    },
+    {
+      "id": "noindex",
+      "titre": "MonLegiTexte — noindex en direct",
+      "module": "noindex-live",
+      "alertes": []
+    },
+    {
+      "id": "contenu",
+      "titre": "Contenu des articles cités et phrases fausses connues",
+      "module": "contenu-articles",
+      "alertes": []
+    },
+    {
+      "id": "nouveaux",
+      "titre": "📰 Nouveaux textes sur tes sujets",
+      "alertes": [
+        {
+          "categorie": "nouvel-article-section",
+          "gravite": "haute",
+          "titre": "R1452-2 (CT) : nouvel article sur un sujet suivi",
+          "detail": "Nouvel article dans une section du Code du travail qui contient des articles que tu cites.\nSection : Partie réglementaire > Première partie – Les relations individuelles de travail > Livre IV – La résolution des litiges - Le conseil de prud'hommes > Titre V – Procédure devant le conseil de prud'hommes > Chapitre II – Saisine du conseil de prud'hommes\n\nTEXTE — La requête est faite, remise ou adressée au greffe du conseil de prud'hommes. Elle comporte les mentions prescrites à peine de nullité à l' article 57 du code de procédure civile . En outre, elle contient un exposé sommaire des motifs de la demande et mentionne chacun des chefs de celle-ci. Il lui est annexé un bordereau énumérant les pièces que le demandeur souhaite invoquer à l'appui de ses prétentions. La requête et le bordereau sont établis en autant d'exemplaires qu'il existe de défendeurs, outre l'exemplaire destiné à la juridiction. La requête est en outre accompagnée du dernier bulletin de salaire afférent au litige ou de toute pièce permettant de déterminer l'activité de…",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R1452-2",
+          "fonds": "Code",
+          "theme": "Section suivie",
+          "date_texte": "2026-10-17",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouvel-article-section",
+          "gravite": "haute",
+          "titre": "R1452-4 (CT) : nouvel article sur un sujet suivi",
+          "detail": "Nouvel article dans une section du Code du travail qui contient des articles que tu cites.\nSection : Partie réglementaire > Première partie – Les relations individuelles de travail > Livre IV – La résolution des litiges - Le conseil de prud'hommes > Titre V – Procédure devant le conseil de prud'hommes > Chapitre II – Saisine du conseil de prud'hommes\n\nTEXTE — A réception des exemplaires de la requête et du bordereau mentionnés au deuxième alinéa de l'article R. 1452-2 , le greffe convoque le défendeur par lettre recommandée avec demande d'avis de réception. La convocation indique – 1° Les nom, profession et domicile du demandeur ; 2° Selon le cas, les lieu, jour et heure de la séance du bureau de conciliation et d'orientation ou de l'audience à laquelle l'affaire sera appelée ; 3° Le fait que des décisions exécutoires à titre provisoire pourront, même en son absence, être prises contre lui et qu'en cas de non-comparution sans motif légitime il pourra être statué en l'état des pièces et moyens contradictoirement communiqués par l'autre partie. La…",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R1452-4",
+          "fonds": "Code",
+          "theme": "Section suivie",
+          "date_texte": "2026-10-17",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des… : concerne une convention de l'appli (IDCC 538)",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 538).\n\nArrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des entreprises de manutention ferroviaire et travaux connexes (n° 538)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983811",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 538 — Manutention ferroviaire travaux connexes",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 538, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des… : concerne une convention de l'appli (IDCC 2528) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 2528) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des industries de la maroquinerie, articles de voyage, chasse-sellerie, gainerie, bracelets en cuir - secteur cuirs et peaux (n° 2528)\n\n💶 Salaires minima — « salaires minima » : …9 septembre 2005, et dans leur propre champ d'application professionnel (secteur cuirs et peaux), les stipulations de l'accord du 1 er juillet 2026 relatif aux salaires minima, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à compter de la date…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983829",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2528 — Maroquinerie gainerie bracelets cuir",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2528, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "cordonnier-heures-supplementaires.html",
+                "ganterie-cuir-heures-supplementaires.html",
+                "industrie-cuir-maroquinerie-luxe-heures-supplementaires.html",
+                "maroquinerie-cuir-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2528",
+              "raison": "parlent de l'IDCC 2528",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'optique-lunetterie… : concerne une convention de l'appli (IDCC 1431) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 1431) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'optique-lunetterie de détail (n° 1431)\n\n💶 Salaires minima — « salaires minima » : …'application de la convention collective nationale de l'optique-lunetterie de détail du 2 juin 1986, les stipulations de l'accord du 9 juillet 2026 relatif aux salaires minima, conclu dans le cadre de la convention collective nationale susvisée. Le premier alinéa de l'article 1 est étendu sous réserve qu'il ne vise que les territoire…\n\nArticles de code cités dans le texte : L2222-1",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983839",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1431 — Optique lunetterie de détail",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1431, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "opticien-lunetier-conseil-hs.html",
+                "opticien-lunetier-heures-supplementaires.html",
+                "optique-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1431",
+              "raison": "parlent de l'IDCC 1431",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés,… : concerne une convention de l'appli (IDCC 998) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 998) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés, techniciens et agents de maîtrise de l'exploitation d'équipements thermiques et de génie climatique (n° 998)\n\n💶 Salaires minima — « rémunérations minimales » : …e maîtrise de l'exploitation d'équipements thermiques et de génie climatique du 7 février 1979, les stipulations de : - l'accord du 17 juillet 2026 relatif aux rémunérations minimales professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée ; - l'accord du 17 juillet 2026 relatif au montant des primes e…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983860",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 998 — Exploitation équipements thermiques génie climat",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 998, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "equipements-thermiques-heures-supplementaires.html",
+                "plombier-chauffagiste-btp-hs.html",
+                "plombier-chauffagiste-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 998",
+              "raison": "parlent de l'IDCC 998",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs… : concerne une convention de l'appli (IDCC 1256) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 1256) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs et assimilés des entreprises de gestion d'équipements thermiques et de climatisation (n° 1256)\n\n💶 Salaires minima — « rémunérations minimales » : …et assimilés des entreprises de gestion d'équipements thermiques et de climatisation du 3 mai 1983, les stipulations de l'accord du 17 juillet 2026 relatif aux rémunérations minimales annuelles professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susv…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983880",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1256 — Cadres entreprises équipements thermiques climat",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1256, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "equipements-thermiques-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1256",
+              "raison": "parlent de l'IDCC 1256",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels… : parle de : Salaires minima",
+          "detail": "Paru au JO le 2026-09-30. Ce texte parle de : Salaires minima.\n\nAvis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223\n\n💶 Salaires minima — « salaires minima » : Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223 Avis portant extension…\n\nArticles de code cités dans le texte : L2231-5, L2231-6, L2261-15",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054914379",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-30",
+          "vu_le": "2026-10-01",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3223 — Transports et services maritimes, personnels nav",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 3223, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "marine-marchande-marins-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 3223",
+              "raison": "parlent de l'IDCC 3223",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accords",
+      "titre": "🏢 Accords d'entreprise à regarder",
+      "alertes": []
+    },
+    {
+      "id": "regles",
+      "titre": "📐 Règles et montants officiels",
+      "module": "regles-officielles",
+      "alertes": []
+    },
+    {
+      "id": "sources",
+      "titre": "🏛️ BOSS, Parlement, liste DARES",
+      "module": "veille-sources-officielles",
+      "alertes": [
+        {
+          "categorie": "boss-modifie",
+          "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-17.\n\n－ La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.\n－ 40,21% pour les entreprises de plus de 50 salariés\n－ 3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et «…\n－ Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie…\n＋ Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027\n＋ Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.\n＋ Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.\n＋ Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines…\n＋ Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :\n(… 4 paragraphe(s) retiré(s), 8 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-10-19",
+          "vu_le": "2026-10-19",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Allocations familiales",
+              "fichiers": [
+                "outils/module-allocations-familiales.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congés familiaux",
+              "fichiers": [
+                "outils/module-famille.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Parentalité",
+              "fichiers": [
+                "outils/module-parentalite.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Proche Aidant",
+              "fichiers": [
+                "outils/module-proche-aidant.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "csg-crds-salaire-guide.html",
+                "bulletin-paie-comprendre.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "controle-redressement-urssaf-guide.html",
+                "conge-proche-aidant.html",
+                "conge-naissance-2026-guide.html",
+                "conges-maternite-paternite.html",
+                "conges-evenements-familiaux.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : cotisations · thème : famille",
+              "auto": false,
+              "plus": 2
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "texte-parlement",
+          "gravite": "haute",
+          "titre": "🏛️ N° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+          "detail": "Assemblée — documents parlementaires — Wed, 14 Oct 2026 00:00:00 +0000.\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
+          "date_texte": "2026-10-19",
+          "vu_le": "2026-10-19",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3211",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 3211, grille « estimated » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils",
+            "grilles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
+      "alertes": []
+    },
+    {
+      "id": "age",
+      "titre": "Âge de la référence (3 mois et 12 mois)",
+      "module": "age-reference",
+      "alertes": []
+    }
+  ]
+}

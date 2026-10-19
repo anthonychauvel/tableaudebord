@@ -1,14 +1,14 @@
 {
-  "genere": "2026-10-17T11:44:45.935381+00:00",
+  "genere": "2026-10-19T16:36:36.205386+00:00",
   "exceptions_appliquees": 555,
-  "nouvelles_alertes": 1,
+  "nouvelles_alertes": 2,
   "routage": {
     "par_zone": {
-      "app": 0,
-      "outils": 0,
+      "app": 1,
+      "outils": 2,
       "grilles": 8,
       "guide": 7,
-      "mlt": 3,
+      "mlt": 2,
       "veille": 0
     },
     "non_routees": 0,
@@ -116,31 +116,8 @@
       "id": "droit",
       "titre": "MonLegiTexte",
       "module": "monlegitexte-droit",
-      "alertes": [
-        {
-          "categorie": "changement-reel",
-          "gravite": "haute",
-          "titre": "[Aspirateur principal (France)] 169 changement(s) sur tes sujets",
-          "detail": "Run du 2026-10-15 15:03 UTC (audits/2026-10-15.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-17)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n… et 154 autre(s).",
-          "date_texte": "2026-10-17",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "mlt",
-              "cible": "Site MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul pour les lecteurs — ouvrir seulement si le sujet te concerne",
-              "raison": "MonLegiTexte",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "mlt"
-          ]
-        }
-      ],
-      "hors_sujet_ignores": 86
+      "alertes": [],
+      "hors_sujet_ignores": 0
     },
     {
       "id": "modules",
@@ -499,49 +476,197 @@
       "id": "sources",
       "titre": "🏛️ BOSS, Parlement, liste DARES",
       "module": "veille-sources-officielles",
-      "alertes": []
-    },
-    {
-      "id": "changements",
-      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
-      "module": "changements-fichiers",
       "alertes": [
         {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "2 fichiers modifiés (2026-10-17) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (1) : grillepaye:ccn-data.json\n\nGUIDE (1) : grille-salaire-convention.html",
+          "categorie": "boss-modifie",
+          "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-17.\n\n－ La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.\n－ 40,21% pour les entreprises de plus de 50 salariés\n－ 3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et «…\n－ Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie…\n＋ Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027\n＋ Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.\n＋ Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.\n＋ Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines…\n＋ Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :\n(… 4 paragraphe(s) retiré(s), 8 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-10-19",
+          "vu_le": "2026-10-19",
           "nouveau": true,
           "cibles": [
             {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "paye/index.html"
               ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Allocations familiales",
+              "fichiers": [
+                "outils/module-allocations-familiales.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congés familiaux",
+              "fichiers": [
+                "outils/module-famille.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Parentalité",
+              "fichiers": [
+                "outils/module-parentalite.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Proche Aidant",
+              "fichiers": [
+                "outils/module-proche-aidant.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
               "plus": 0
             },
             {
               "zone": "guide",
               "cible": "Pages du guide",
               "fichiers": [
-                "grille-salaire-convention.html"
+                "csg-crds-salaire-guide.html",
+                "bulletin-paie-comprendre.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "controle-redressement-urssaf-guide.html",
+                "conge-proche-aidant.html",
+                "conge-naissance-2026-guide.html",
+                "conges-maternite-paternite.html",
+                "conges-evenements-familiaux.html"
               ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : cotisations · thème : famille",
+              "auto": false,
+              "plus": 2
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "texte-parlement",
+          "gravite": "haute",
+          "titre": "🏛️ N° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+          "detail": "Assemblée — documents parlementaires — Wed, 14 Oct 2026 00:00:00 +0000.\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
+          "date_texte": "2026-10-19",
+          "vu_le": "2026-10-19",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3211",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 3211, grille « estimated » dans l'appli",
+              "auto": false,
               "plus": 0
             }
           ],
           "zones": [
-            "grilles",
-            "guide"
+            "outils",
+            "grilles"
           ]
         }
       ]
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
+      "alertes": []
     },
     {
       "id": "age",

@@ -15,7 +15,7 @@
      "Mesures exceptionnelles et dispositifs temporaires",
      "Recueil des rescrits sociaux de portée générale"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits.html": {
@@ -33,7 +33,7 @@
      "Un nouvel environnement dédié aux Rescrits sociaux de portée générale est intégré au Bulletin officiel de la Sécurité sociale",
      "Des rescrits opposables seront progressivement ajoutés dans le but de renforcer l’accessibilité au droit en matière de cotisations et de contributions sociales."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration.html": {
@@ -42,16 +42,23 @@
     "paragraphes": [
      "Autres éléments de rémunération"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/actualites.html": {
     "titre": "Toutes les actualités du Boss",
-    "empreinte": "25c98705271edb9c",
+    "empreinte": "3f6129c9029e9192",
     "paragraphes": [
      "Toutes les actualités du Boss",
      "Filtrer l’actualité du Boss",
-     "La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.",
+     "Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027",
+     "Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.",
+     "Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.",
+     "Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines contributions et le calcul des droits sociaux.",
+     "Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :",
+     "Le plafond de sécurité sociale au 1er janvier 2024",
+     "A Mayotte, en application du décret n° 2003-589 du 1er juillet 2003, le montant du plafond mensuel de la sécurité sociale sera fixé à 3 229 € au 1er janvier 2027, soit une augmentation de 6,8 % par rapport au niveau de 2026.",
+     "La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus versés à compter du 1er janvier 2027.",
      "Evolution du traitement social de la prise en charge par l'employeur des frais de carburant",
      "Face à la hausse des prix du carburant et afin de soutenir les salariés confrontés à la hausse des prix des carburants, le Gouvernement a décidé de faire évoluer pour le seul exercice 2026 le régime social de la prime carburant définie à l’article L. 3261-3 du code du travail.",
      "Un décret en Conseil d’État modifiera le niveau de norme applicable à la fixation des plafonds prévus au e du 4° du III de l’article L. 136-1-1 du code de la sécurité sociale. Ces plafonds seront désormais fixés par arrêté des ministres chargés de la sécurité sociale et du budget, sur le fondement du deuxième alinéa du I du même article.",
@@ -206,12 +213,9 @@
      "Le texte porte trois volets principaux :",
      "1. Echange de taux entre les taux d’assurance vieillesse de base et le taux net de cotisation des ATMP prévu par la LFRSS pour 2023. A ce titre, le taux de la cotisation patronale d’assurance vieillesse déplafonnée est réhaussé à 2,11% pour le régime général.",
      "2. Ajustement des paramètres de calcul de la réduction générale dégressive unique. Le décret fixe comme chaque année le taux maximum d’exonération applicable au niveau du SMIC, en cohérence avec le taux vieillesse modifié (cf. supra) et un taux ATMP « sans risque » abaissé de 0,50% à 0,49%. Aussi, ce taux maximum est fixé à :",
-     "39,81% pour les entreprises de moins de 50 salariés",
-     "40,21% pour les entreprises de plus de 50 salariés",
-     "3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et « famille », au profit de leur intégration dans la RGDU. Elle a toutefois maintenu ces réductions proportionnelles dans leur version antérieure pour les rémunérations ouvrant droit à une exonération dégressive spécifique. En outre, la LFSS pour 2026 prévoit un maintien de ces réductions proportionnelles pour certains employeurs relevant de régimes spéciaux qui en bénéficiaient sans relever de la réduction générale. Aussi, le décret retient des seuils identiques à ceux en vigueur en 2025 soit les seuils suivants :",
-     "Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie (2,3960 SMIC au 1er janvier 2026) ; 3,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’allocations familiales (3,3544 SMIC au 1er janvier 2026). Pour rappel, la perte du bénéfice des réductions proportionnelles reste concomitante à la perte du bénéfice de l’exonération spécifique dégressive associée."
+     "39,81% pour les entreprises de moins de 50 salariés"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/montant-net-social.html": {
@@ -341,7 +345,7 @@
      "26. Pour les salariés bénéficiant de la déduction forfaitaire spécifique pour frais professionnels (DFS), faut-il déduire le montant de l’abattement dans le calcul du montant net social ?",
      "Comme précisé dans le tableau du A du 1 de la partie II, l’ensemble de la rémunération brute du salarié est pris en compte, indépendamment des abattements applicables. Seules les cotisations et contributions sociales à la charge du salarié sont à déduire du montant net social. Le montant net social ne doit donc pas être diminué du montant de l’abattement pour les salariés bénéficiant de la déduction forfaitaire spécifique (DFS)."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement.html": {
@@ -350,7 +354,7 @@
     "paragraphes": [
      "Règles d'assujettissement"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/contribution-sociale-generalisee.html": {
@@ -430,7 +434,7 @@
      "Ainsi, sont soumis à la CFA en tant que revenus non « professionnels », au sens des prélèvements sociaux, les revenus tirés de la location de biens meublés, dès lors que cette activité génère moins de 23 000 euros de recettes annuelles (2° du 2 du IV de l’article 155 du code général des impôts). A ce titre, ils sont donc assujettis à un taux qui cumule CSG et CFA à hauteur de 10,6 %.",
      "Les personnes dont les revenus sont supérieurs à ce seuil sont assujetties à la CSG portant sur les revenus d’activité, sous réserve, s’agissant des locations meublées de longue durée, que ces revenus excèdent les revenus du foyer fiscal soumis à l’impôt sur le revenu dans les autres catégories de revenus d’activité listées au 3° du 2 du IV de l’article 155 CGI."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-zonees.html": {
@@ -609,7 +613,7 @@
      "Pour les salariés dont la rémunération n’est pas déterminée selon un nombre d’heures, des modalités de reconstitution des heures rémunérées sont prévues à l’article D. 241-27 du code de la sécurité sociale . Sont concernés :",
      "les salariés titulaires d’une convention individuelle de forfait en jours sur l’année : le nombre d’heures rémunérées au cours du mois est égal au produit de la durée légale de travail calculée sur le mois par le rapport entre le nombre de jours prévus au forfait du salarié et 218 jours ;"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/protection-sociale-complementair.html": {
@@ -760,7 +764,7 @@
      "Les prestations de prévoyance sont, quelle que soit leur dénomination, les capitaux décès et les allocations d’obsèques, les rentes de conjoint survivant, les rentes d’orphelin, les rentes ou capitaux d’invalidité, les remboursements de frais de santé, et les indemnités journalières qui interviennent à la suite de la prise en charge par l’employeur du maintien de salaire en application des articles L. 1226-1 et suivants du code du travail ou d’un accord collectif ayant le même objet.",
      "Pour déterminer si les garanties sont des prestations de prévoyance complémentaire, il convient de considérer prioritairement si un lien avec les risques couverts par les régimes de base de sécurité sociale peut être établi."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/'+data.fiches.valeurs[i].url+'": {
@@ -770,7 +774,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/indemnites-de-rupture.html": {
@@ -780,7 +784,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/protection-sociale-complementair.html": {
@@ -931,7 +935,7 @@
      "Les prestations de prévoyance sont, quelle que soit leur dénomination, les capitaux décès et les allocations d’obsèques, les rentes de conjoint survivant, les rentes d’orphelin, les rentes ou capitaux d’invalidité, les remboursements de frais de santé, et les indemnités journalières qui interviennent à la suite de la prise en charge par l’employeur du maintien de salaire en application des articles L. 1226-1 et suivants du code du travail ou d’un accord collectif ayant le même objet.",
      "Pour déterminer si les garanties sont des prestations de prévoyance complémentaire, il convient de considérer prioritairement si un lien avec les risques couverts par les régimes de base de sécurité sociale peut être établi."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exoneration-contrat-dapprentissa.html": {
@@ -1034,7 +1038,7 @@
      "En 2026, pour un apprenti rémunéré mensuellement à hauteur de 1 652,46 € dont 114,11 € sont liés à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), la rémunération de ces heures représente 114,11 € / 1 652,46 € = 6,91 % de la rémunération totale de ce mois et cette rémunération excède de 718,46 € le plafond de 50 % du SMIC (934 € au 1er juin 2026). La réduction ne s’appliquera donc que sur 6,91 % de la rémunération excédant 50 % du SMIC, soit 49,65 €.",
      "Ces dispositifs sont cumulables également avec les autres dispositifs de soutien à l’apprentissage, tels que l’aide unique à l’embauche ou l’exonération d’impôt sur le revenu à hauteur du montant du SMIC annuel."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-heures-supplementai.html": {
@@ -1177,7 +1181,7 @@
      "A. Affichage sur le bulletin de paie",
      "Le montant de la réduction doit être affiché sur une ligne distincte du bulletin de paie, après les lignes relatives aux cotisations et contributions sociales salariales et patronales."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/effectif.html": {
@@ -1426,7 +1430,7 @@
      "Les titulaires d’un contrat de soutien et d’aide par le travail,",
      "Les titulaires d’un contrat d’appui au projet d’entreprise (CAPE),"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/reductions-proportionnelles-du-t.html": {
@@ -1546,7 +1550,7 @@
      "La régularisation peut également être effectuée en une seule fois lors du calcul des cotisations déclarées pour le dernier mois ou le dernier trimestre de l’année.",
      "Pour les contrats qui prennent fin en cours d’année, la régularisation est opérée lors du calcul des cotisations afférentes à la dernière période d’emploi."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/regimes-de-retraites-supplementa.html": {
@@ -1628,7 +1632,7 @@
      "En cas de départ du bénéficiaire du contrat de l'entreprise, les droits à retraite restent acquis à ce dernier ;",
      "L'adhésion au contrat peut être subordonnée à une durée de présence minimale du bénéficiaire dans l'entreprise. L'acquisition des droits à retraite du même contrat peut être soumise à une condition de durée de cotisations. La somme de ces deux durées ne peut pas excéder trois ans ;"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/allegements-generaux.html": {
@@ -1784,7 +1788,7 @@
      "Section 1. Détermination du montant de la réduction",
      "Pour les rémunérations éligibles telles que définies au chapitre 1, le montant de la réduction est égal au produit du montant de la rémunération et d’un coefficient de réduction présenté à la section 2 du présent chapitre, qui rapporte la rémunération annuelle du salarié au SMIC calculé pour un an."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/formationpro-apprentissage.html": {
@@ -1956,7 +1960,7 @@
      "articles L. 6241-2 , D. 6241-29 à D. 6241-32 du code du travail",
      "L'employeur peut déduire du solde de la TA les subventions en nature versées au centre de formation d'apprentis sous forme d'équipements et de matériels conformes aux besoins des formations dispensées."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/mesures-exceptionnelles/sapeurs-pompiers-volontaires.html": {
@@ -2019,7 +2023,7 @@
      "Chapitre 3 - Modalités de contrôle",
      "En cas de contrôle, la condition d’engagement et de réalisation de la mission opérationnelle est démontrée par la présentation par l'employeur d’une attestation délivrée par le service d'incendie et de secours dont relève le sapeur-pompier volontaire."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-heures-supplementai.html": {
@@ -2162,7 +2166,7 @@
      "A. Affichage sur le bulletin de paie",
      "Le montant de la réduction doit être affiché sur une ligne distincte du bulletin de paie, après les lignes relatives aux cotisations et contributions sociales salariales et patronales."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/frais-professionnels.html": {
@@ -2300,7 +2304,7 @@
      "Le régime social des frais de repas des salariés en mission dans l’entreprise cliente est, dans ce cas, celui applicable aux salariés sédentaires.",
      "ETT : Cour de cassation, chambre sociale, 6 mai 1985, Sté Soloprest c/Urssaf de Meurthe et Moselle, n°83-15748 , SSII : Cour de cassation, 2ème chambre civile, 21 février 2008, Urssaf de Lyon c/Société Altran Technologie, n°07-12230"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/assiette-generale.html": {
@@ -2483,7 +2487,7 @@
      "Lorsqu’il est applicable en matière d’assiette de la CSG, l’abattement de 1,75 % au titre des frais professionnels s’applique pour la détermination de l’assiette de la CRDS.",
      "Ordonnance n° 96-50 du 24 janvier 1996 relative au remboursement de la dette sociale, Article 14"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-aide-a-domicile.html": {
@@ -2654,7 +2658,7 @@
      "et à l’exclusion de la rémunération afférente aux autres activités (hors champ de l’aide à domicile telles que les tâches administratives).",
      "Le nombre d'heures d’aide à domicile effectuées auprès d'un public dit « fragile » correspond à l'ensemble des heures d’aide à domicile effectuées auprès des publics entrant dans le champ d'application de l'exonération aide à domicile mentionnés au C de la section 2 du chapitre 1."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/impatries.html": {
@@ -2663,7 +2667,7 @@
     "paragraphes": [
      "S’agissant du versement par l’employeur de la contribution minimale de 20 000 € par an sur des produits d’assurance vieillesse français ou étrangers, comment s’apprécie la durée d’un an ?"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/jeunes-entreprises-innovantes.html": {
@@ -2806,7 +2810,7 @@
      "Si le mandataire est rémunéré 3 000 € sur le mois, soit une rémunération supérieure ou égale à la rémunération de référence, le nombre d’heures pris en compte pour le calcul de l’exonération est égal à :",
      "36 h x 52/12 = 156 heures"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/allegements-generaux.html": {
@@ -2962,7 +2966,7 @@
      "Section 1. Détermination du montant de la réduction",
      "Pour les rémunérations éligibles telles que définies au chapitre 1, le montant de la réduction est égal au produit du montant de la rémunération et d’un coefficient de réduction présenté à la section 2 du présent chapitre, qui rapporte la rémunération annuelle du salarié au SMIC calculé pour un an."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/avantages-en-nature.html": {
@@ -3115,7 +3119,7 @@
      "Article R.111-1 du code de la construction et de l’habitation",
      "L’avantage logement est évalué par semaine ou par mois. Selon l’article 2 de l’arrêté du 25 février 2025, l’évaluation par semaine ou par mois s’entend des semaines ou mois complets, quel que soit le nombre de jours ouvrables qu’ils contiennent. Toute semaine incomplète doit être comptabilisée comme une semaine entière. En cas de mois incomplet, c’est le nombre de semaines qui est pris en compte, dans la limite de 4."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/frais-professionnels.html": {
@@ -3253,7 +3257,7 @@
      "Le régime social des frais de repas des salariés en mission dans l’entreprise cliente est, dans ce cas, celui applicable aux salariés sédentaires.",
      "ETT : Cour de cassation, chambre sociale, 6 mai 1985, Sté Soloprest c/Urssaf de Meurthe et Moselle, n°83-15748 , SSII : Cour de cassation, 2ème chambre civile, 21 février 2008, Urssaf de Lyon c/Société Altran Technologie, n°07-12230"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exoneration-contrat-dapprentissa.html": {
@@ -3356,7 +3360,7 @@
      "En 2026, pour un apprenti rémunéré mensuellement à hauteur de 1 652,46 € dont 114,11 € sont liés à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), la rémunération de ces heures représente 114,11 € / 1 652,46 € = 6,91 % de la rémunération totale de ce mois et cette rémunération excède de 718,46 € le plafond de 50 % du SMIC (934 € au 1er juin 2026). La réduction ne s’appliquera donc que sur 6,91 % de la rémunération excédant 50 % du SMIC, soit 49,65 €.",
      "Ces dispositifs sont cumulables également avec les autres dispositifs de soutien à l’apprentissage, tels que l’aide unique à l’embauche ou l’exonération d’impôt sur le revenu à hauteur du montant du SMIC annuel."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-aide-a-domicile.html": {
@@ -3527,7 +3531,7 @@
      "et à l’exclusion de la rémunération afférente aux autres activités (hors champ de l’aide à domicile telles que les tâches administratives).",
      "Le nombre d'heures d’aide à domicile effectuées auprès d'un public dit « fragile » correspond à l'ensemble des heures d’aide à domicile effectuées auprès des publics entrant dans le champ d'application de l'exonération aide à domicile mentionnés au C de la section 2 du chapitre 1."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/jeunes-entreprises-innovantes.html": {
@@ -3670,7 +3674,7 @@
      "Si le mandataire est rémunéré 3 000 € sur le mois, soit une rémunération supérieure ou égale à la rémunération de référence, le nombre d’heures pris en compte pour le calcul de l’exonération est égal à :",
      "36 h x 52/12 = 156 heures"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exoneration-stagiaires.html": {
@@ -3783,7 +3787,7 @@
      "• à la contribution au versement mobilité.",
      "Arrêté du 24 janvier 1980 relatif aux cotisations forfaitaires de sécurité sociale dues pour les stagiaires de la formation professionnelle continue non rémunérés ou rémunérés par l'Etat"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/effectif.html": {
@@ -3792,7 +3796,7 @@
     "paragraphes": [
      "Les vendeurs à domicile indépendants (VDI) sont-ils pris en compte dans l’effectif d’assujettissement au versement mobilité ? Leurs rémunérations sont-elles à prendre en compte dans l’assiette du versement mobilité dès lors que le seuil d’assujettissement d’au moins 11 salariés est atteint ?"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exoneration-stagiaires.html": {
@@ -3905,7 +3909,7 @@
      "• à la contribution au versement mobilité.",
      "Arrêté du 24 janvier 1980 relatif aux cotisations forfaitaires de sécurité sociale dues pour les stagiaires de la formation professionnelle continue non rémunérés ou rémunérés par l'Etat"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/indemnites-de-rupture.html": {
@@ -4094,7 +4098,7 @@
      "La part non imposable de l’indemnité (50 000 €) est inférieure au plafonnement de l’exonération sociale de 2 PASS (le montant des 2 PASS étant de 48 060 € x 2 = 96 120 €, en retenant un montant du PASS 2026 de 48 060 €).",
      "La limite maximale d’exclusion de l’assiette des cotisations de sécurité sociale de 2 PASS n’étant pas atteinte, l’indemnité contractuelle de licenciement sera exonérée à hauteur de la part non imposable, soit à concurrence de 50 000 €."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/frais-professionnels.html": {
@@ -4106,7 +4110,7 @@
      "La déduction forfaitaire spécifique (DFS) est-elle cumulable avec l’indemnité de transport prévue par une convention collective nationale (CCN), y compris pour sa fraction excédant la limite de 4 euros ?",
      "Les salariés mis à disposition par une entreprise peuvent-ils bénéficier du remboursement de leurs frais de repas lorsqu’ils travaillent au sein de l’entreprise utilisatrice ?"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/avantages-en-nature.html": {
@@ -4259,7 +4263,7 @@
      "Article R.111-1 du code de la construction et de l’habitation",
      "L’avantage logement est évalué par semaine ou par mois. Selon l’article 2 de l’arrêté du 25 février 2025, l’évaluation par semaine ou par mois s’entend des semaines ou mois complets, quel que soit le nombre de jours ouvrables qu’ils contiennent. Toute semaine incomplète doit être comptabilisée comme une semaine entière. En cas de mois incomplet, c’est le nombre de semaines qui est pris en compte, dans la limite de 4."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/regles-generales-relatives-au-bu.html": {
@@ -4389,7 +4393,7 @@
      "22. Comment renseigner le montant des rémunérations des heures supplémentaires nettes en cas de dépassement du plafond d’exonération en cours de mois ?",
      "Pour le cas de personnel rémunéré bénéficiant sur le même mois d’heures supplémentaires et/ou complémentaires exonérées et non exonérées, il convient de ventiler sur le bulletin de paie chacune des parts dans les rubriques « montant net imposable » pour le montant des heures non exonérées et « montant net des HC/HS/RTT exonérées » pour la seule part du montant des heures exonérées."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-zonees.html": {
@@ -4568,7 +4572,7 @@
      "Pour les salariés dont la rémunération n’est pas déterminée selon un nombre d’heures, des modalités de reconstitution des heures rémunérées sont prévues à l’article D. 241-27 du code de la sécurité sociale . Sont concernés :",
      "les salariés titulaires d’une convention individuelle de forfait en jours sur l’année : le nombre d’heures rémunérées au cours du mois est égal au produit de la durée légale de travail calculée sur le mois par le rapport entre le nombre de jours prévus au forfait du salarié et 218 jours ;"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/epargne-salariale.html": {
@@ -4695,7 +4699,7 @@
      "Si une entreprise verse une prime à la fois aux salariés dont la rémunération est inférieure à 3 SMIC et aux salariés dont la rémunération est supérieure ou égale à 3 SMIC :",
      "Pour tous les salariés, la prime bénéficie, à compter du 1er juillet 2022, des exonérations précisées au A de la présente section,"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/Article L. 541-1 du code de l’action sociale et des familles": {
@@ -4705,7 +4709,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/'+data.fiches.valeurs[i].url+'": {
@@ -4715,7 +4719,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/autres-avantages-en-nature.html": {
@@ -4727,7 +4731,7 @@
      "Dans une entreprise de travail temporaire, est-il possible d’exclure les intérimaires du bénéfice de l’avantage sport en entreprise ?",
      "L'octroi par l'employeur d'un budget de 50 € par salarié et par an, pour l'organisation de moments conviviaux internes à l’entreprise peut-il être considéré comme un avantage en nature à assujettir à cotisations et contributions sociales ?"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 541-1 du code de l’action sociale et des familles": {
@@ -4737,7 +4741,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/'+data.fiches.valeurs[i].url+'": {
@@ -4747,7 +4751,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/Article L. 245-3 du code de l’action sociale et des familles": {
@@ -4757,7 +4761,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 245-3 du code de l’action sociale et des familles": {
@@ -4767,7 +4771,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/frais-professionnels/boss-res-000002.html": {
@@ -4780,7 +4784,7 @@
      "Les ouvriers des entreprises de nettoyage de locaux ont été admis par tolérance dans le champ de la DFS applicable aux ouvriers du bâtiment. La tolérance étant d’application stricte, les salariés occupés à l'entretien des espaces verts ne sont pas éligibles à la DFS, ces derniers n’exerçant pas une activité de nettoyage de locaux",
      "Le rescrit BOSS-RES-000003 est intégré à la rubrique \" Frais professionnels \"."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/'+data.fiches.valeurs[i].url+'": {
@@ -4790,7 +4794,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/effectif/boss-res-000006.html": {
@@ -4801,7 +4805,7 @@
      "Les VDI sont exclus du décompte de l'effectif puisqu'ils ne sont pas titulaires d'un contrat de travail. En revanche, leurs rémunérations sont incluses dans l'assiette du versement mobilité dans les conditions de droit commun dès lors que le seuil d'assujettissement est atteint sur la zone.",
      "Le rescrit BOSS-RES-000006 est intégré à la rubrique \" Effectif \"."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/'+data.fiches.valeurs[i].url+'": {
@@ -4811,7 +4815,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/files/Avantages en nature/2024 Modèle dattestation micro-crèches.docx": {
@@ -4821,7 +4825,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/'+data.fiches.valeurs[i].url+'": {
@@ -4831,7 +4835,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/impatries/boss-res-000009.html": {
@@ -4841,17 +4845,17 @@
      "S’agissant du versement par l’employeur de la contribution minimale de 20 000 € par an sur des produits d’assurance vieillesse français ou étrangers, comment s’apprécie la durée d’un an ?",
      "La condition relative au versement de la contribution annuelle minimale est vérifiée pour chaque année civile. La proratisation du montant de la contribution annuelle est admise lorsqu’un salarié arrive en cours d’année."
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/nourriture.html": {
     "titre": "Nourriture",
-    "empreinte": "9299875d25e4131d",
+    "empreinte": "acf135f07bbddbb8",
     "paragraphes": [
-     "Les salariés mis à disposition par une entreprise peuvent-ils bénéficier d’une prise en charge de leurs frais de repas lorsqu’ils travaillent au sein de l’entreprise utilisatrice ?",
-     "L’apprenti d’une entreprise qui relève de la convention collective nationale (CCN) des HCR doit-il percevoir une indemnité compensatrice de nourriture durant les périodes de formation au CFA ?"
+     "L’apprenti d’une entreprise qui relève de la convention collective nationale (CCN) des HCR doit-il percevoir une indemnité compensatrice de nourriture durant les périodes de formation au CFA ?",
+     "Les salariés mis à disposition par une entreprise peuvent-ils bénéficier d’une prise en charge de leurs frais de repas lorsqu’ils travaillent au sein de l’entreprise utilisatrice ?"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/'+data.fiches.valeurs[i].url+'": {
@@ -4861,14 +4865,14 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-10-17",
+    "vu_le": "2026-10-19",
     "format": "html"
    }
   },
   "echecs": 1,
-  "capture_empreinte": "0d47d464a74730ca",
-  "capture_recue": "2026-10-08",
-  "dernier": "2026-10-17"
+  "capture_empreinte": "4add0f98e9a1cbc2",
+  "capture_recue": "2026-10-19",
+  "dernier": "2026-10-19"
  },
  "parlement": {
   "vus": {
@@ -5256,28 +5260,63 @@
    "https://www.assemblee-nationale.fr/17/propositions/pion3319.asp": "2026-10-17",
    "https://www.assemblee-nationale.fr/17/propositions/pion3293.asp": "2026-10-17",
    "https://www.assemblee-nationale.fr/17/propositions/pion3101.asp": "2026-10-17",
-   "https://www.assemblee-nationale.fr/17/propositions/pion3129.asp": "2026-10-17"
+   "https://www.assemblee-nationale.fr/17/propositions/pion3129.asp": "2026-10-17",
+   "http://www.senat.fr/leg/ppl26-052.html": "2026-10-19",
+   "http://www.senat.fr/leg/ppl26-058.html": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3313.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/rapports/r3339.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/europe/resolutions/ppe2918.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/propositions/pion2162.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3346.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627015.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627014.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627013.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627012.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627011.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627010.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627009.asp": "2026-10-19",
+   "https://www.assemblee-nationale.fr/17/cr-soc/26-27/c2627008.asp": "2026-10-19"
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
     "echecs": 0,
-    "lu": "2026-10-17"
+    "lu": "2026-10-19"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
     "echecs": 0,
-    "lu": "2026-10-17"
+    "lu": "2026-10-19"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {
     "echecs": 0,
-    "lu": "2026-10-17"
+    "lu": "2026-10-19"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance": {
     "echecs": 0,
-    "lu": "2026-10-17"
+    "lu": "2026-10-19"
    }
   }
  },
  "detectes": [
+  {
+   "categorie": "boss-modifie",
+   "gravite": "haute",
+   "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
+   "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-17.\n\n－ La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.\n－ 40,21% pour les entreprises de plus de 50 salariés\n－ 3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et «…\n－ Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie…\n＋ Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027\n＋ Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.\n＋ Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.\n＋ Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines…\n＋ Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :\n(… 4 paragraphe(s) retiré(s), 8 ajouté(s) au total)",
+   "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+   "date_texte": "2026-10-19",
+   "_id": "boss:https://boss.gouv.fr/portail/accueil/actualites.html:3f6129c9029e9192",
+   "vu_le": "2026-10-19"
+  },
+  {
+   "categorie": "texte-parlement",
+   "gravite": "haute",
+   "titre": "🏛️ N° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
+   "detail": "Assemblée — documents parlementaires — Wed, 14 Oct 2026 00:00:00 +0000.\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+   "lien": "https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
+   "date_texte": "2026-10-19",
+   "_id": "parl:https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
+   "vu_le": "2026-10-19"
+  },
   {
    "categorie": "texte-parlement",
    "gravite": "haute",
@@ -6269,7 +6308,7 @@
    "vu_le": "2026-10-02"
   }
  ],
- "dernier_passage": "2026-10-17",
+ "dernier_passage": "2026-10-19",
  "fonds_dila": {
   "circulaires": [
    "cir_36328.json",

@@ -952,5 +952,18 @@
     "cle": "N° 3345",
     "date": "2026-10-17",
     "note": "Rapport parlementaire, pas un texte de salaires ni une loi. À surveiller seulement si le PLFSS 2027 touche aux heures sup."
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 3233",
+    "date": "2026-10-20",
+    "expire": "2026-12-31",
+    "note": "La grille intègre déjà le dernier texte du corpus (avenant du 16 avril 2026, effet 01/01/2026). Rien de plus récent à reporter ; à revoir fin 2026."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3339",
+    "date": "2026-10-20",
+    "note": "Avis parlementaire sur le PLFSS 2027 (n°3211 = numéro du projet de loi, sans rapport avec l'IDCC 3211). Aucun montant à reporter tant que la loi n'est pas votée."
   }
 ]

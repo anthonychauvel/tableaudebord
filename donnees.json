@@ -1,14 +1,14 @@
 {
-  "genere": "2026-10-19T16:36:36.205386+00:00",
-  "exceptions_appliquees": 555,
-  "nouvelles_alertes": 2,
+  "genere": "2026-10-20T03:21:15.432725+00:00",
+  "exceptions_appliquees": 578,
+  "nouvelles_alertes": 7,
   "routage": {
     "par_zone": {
-      "app": 1,
-      "outils": 2,
+      "app": 4,
+      "outils": 3,
       "grilles": 8,
-      "guide": 7,
-      "mlt": 2,
+      "guide": 10,
+      "mlt": 3,
       "veille": 0
     },
     "non_routees": 0,
@@ -68,44 +68,7 @@
     {
       "id": "grilles",
       "titre": "Grilles CCN",
-      "alertes": [
-        {
-          "categorie": "grille-perimee",
-          "gravite": "moyenne",
-          "titre": "IDCC 3233 : grille dépassée de 105 jours",
-          "detail": "Avenant du 16 avril 2026 relatif aux salaires minima garantis 2026 relevant des titres II et III de la convention collective — Revalorisation du « Point 100 profession » La valeur du point 100 profession du personnel ouvrier et ETDAM, telle que visée à l'article II.2.7 de la CCN, est revalorisée à : • 6,2974 € au 1er janvier 2026, soit une revalorisation de 1,1 % p… · Le montant de la prime de vacances, visée à l'article II.2.6 de la CCN, est porté à 1 000 € au 1er janvier 2026.",
-          "date_texte": "2026-09-21",
-          "nouveau": false,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3233 — Industrie de la fabrication des ciments",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Mettre à jour la grille avec le texte plus récent du fonds",
-              "raison": "convention IDCC 3233, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "ciment-heures-supplementaires.html"
-              ],
-              "action": "Relire les montants et règles cités pour l'IDCC 3233",
-              "raison": "parlent de l'IDCC 3233",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles",
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "smic",
@@ -116,8 +79,31 @@
       "id": "droit",
       "titre": "MonLegiTexte",
       "module": "monlegitexte-droit",
-      "alertes": [],
-      "hors_sujet_ignores": 0
+      "alertes": [
+        {
+          "categorie": "changement-reel",
+          "gravite": "haute",
+          "titre": "[Aspirateur principal (France)] 202 changement(s) sur tes sujets",
+          "detail": "Run du 2026-10-19 16:38 UTC (audits/2026-10-19.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n… et 187 autre(s).",
+          "date_texte": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Site MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul pour les lecteurs — ouvrir seulement si le sujet te concerne",
+              "raison": "MonLegiTexte",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        }
+      ],
+      "hors_sujet_ignores": 88
     },
     {
       "id": "modules",
@@ -172,6 +158,334 @@
       "id": "nouveaux",
       "titre": "📰 Nouveaux textes sur tes sujets",
       "alertes": [
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 13 octobre 2026 portant extension d'accords régionaux (Provence-Alpes-Côte d'Azur) conclus dans le cadre des conventions… : concerne une convention de l'appli (IDCC 2609)",
+          "detail": "Paru au JO le 2026-10-16. Ce texte concerne une convention de l'appli (IDCC 2609).\n\nArrêté du 13 octobre 2026 portant extension d'accords régionaux (Provence-Alpes-Côte d'Azur) conclus dans le cadre des conventions collectives nationales des ouvriers employés par les entreprises du bâtiment visées et non visées par le décret du 1er mars 1962 modifié (entreprises occupant jusqu'à 10 salariés et entreprises occupant plus de 10 salariés) (nos 1596 et 1597) et de la convention…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054988660",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-16",
+          "vu_le": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2609 — Employés, techniciens et agents de maîtrise du b",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 2609, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a. : parle de : Heures supplémentaires",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a.\n\nElle parle de : Heures supplémentaires.\n\nCe que la Cour a jugé : Au termes du premier de ces textes, le juge qui refusera de juger, sous prétexte du silence, de l'obscurité ou de l'insuffisance de la loi, pourra être poursuivi comme coupable de déni de justice. 15. Aux termes du deuxième, le juge doit se prononcer sur tout ce qui est demandé et seulement sur ce qui est demandé. 16. Selon le troisième, le juge tranche le litige conformément aux règles de droit qui lui sont applicables. 17. Pour condamner le CHT à payer à M. [Z] « les heures additionnelles…\n\n⏱️ Heures supplémentaires — « heures supplémentaires » : …mai 2020. 2. Par requête du 29 janvier 2021, M. [Z] a saisi le tribunal du travail d'une demande en paiement à titre de majorations de salaires applicables aux heures supplémentaires effectuées depuis le 1er août 2017. 3. Le CHT a soulevé une exception d'incompétence du tribunal du travail au profit de la juridiction administrative. Examen…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606bac27382d099f5744b",
+          "fonds": "Juris",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-10-07",
+          "formation": "F-D",
+          "vu_le": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Temps & Repos",
+              "fichiers": [
+                "outils/module-temps.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "heures-non-payees.html",
+                "heures-supplementaires-guide.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "depassement-contingent-refus-salarie.html",
+                "calcul-exoneration-hs-etape-par-etape.html",
+                "depassement-contingent-refus-salarie-avance.html",
+                "teletravail-frais-heures-supplementaires-guide.html",
+                "declaration-impots-heures-supplementaires-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "moyenne",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-11.353 e.a. : applique des articles que tu cites : L1411-1",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-11.353 e.a.\n\nElle applique des articles que tu cites : L1411-1.\n\nCe que la Cour a jugé : Selon le dernier de ces textes, lorsque le plan de cession prévoit des licenciements pour motif économique, il ne peut être arrêté par le tribunal qu'après que la procédure prévue au I de l'article L. 1233-58 du code du travail a été mise en uvre. Le plan précise notamment les licenciements qui doivent intervenir dans le délai d'un mois après le jugement sur simple notification du liquidateur ou de l'administrateur lorsqu'il en a été désigné, sous réserve des droits de préavis prévus par la…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606c5c27382d099f57623",
+          "fonds": "Juris",
+          "theme": "Article cité",
+          "date_texte": "2026-10-07",
+          "formation": "F-D",
+          "vu_le": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Fichiers communs (références de loi, glossaire, scripts)",
+              "fichiers": [
+                "legi-ref.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1411-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M5 · Mizuki, temps partiel",
+              "fichiers": [
+                "module5/js/features/glossaire.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1411-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
+              "fichiers": [
+                "module6/js/data/glossaire-cadres.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1411-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "prud-hommes-procedure-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1411-1",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "moyenne",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-13.588 e.a. : applique des articles que tu cites : L1152-2, L1152-3, L1154-1, L1226-9, L4121-1, L4121-2",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation FS-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-13.588 e.a.\n\nElle applique des articles que tu cites : L1152-2, L1152-3, L1154-1, L1226-9, L4121-1, L4121-2.\n\nCe que la Cour a jugé : Lorsque le licenciement est nul, le salarié doit être, s'il le demande, réintégré dans son emploi ou un emploi équivalent, demande à laquelle l'employeur est tenu de faire droit sauf s'il justifie d'une impossibilité de procéder à cette réintégration. 18. Pour débouter le salarié de sa demande en réintégration et en paiement des salaires dus entre le licenciement et la réintégration, l'arrêt retient, d'abord, qu'il résulte de l'article L. 1235-3-1 du code du travail que le salarié ne peut pas…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606bfc27382d099f57501",
+          "fonds": "Juris",
+          "theme": "Article cité",
+          "date_texte": "2026-10-07",
+          "formation": "FS-D",
+          "vu_le": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js",
+                "fox/index.html",
+                "fox/js/ai-integration.js",
+                "fox/js/scenarios-ai.js",
+                "fox/js/vue-pro.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1152-2 · cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M4 · DTE, prédiction santé et repos",
+              "fichiers": [
+                "module4/js/features/dte-scenarios.js",
+                "module4/app.js",
+                "module4/js/app.js",
+                "module4/js/features/dte-glossary.js",
+                "module4/js/features/lifestyle.js",
+                "module4/js/core/dte-risks.js",
+                "module4/js/core/dte-simulator.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1152-3 · cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "Fichiers communs (références de loi, glossaire, scripts)",
+              "fichiers": [
+                "legi-ref.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
+              "fichiers": [
+                "module6/js/app.js",
+                "module6/js/features/coach.js",
+                "module6/js/features/nullite-checker.js",
+                "module6/js/features/rupture-calculateur.js",
+                "module6/js/features/simulateur-nullite.js",
+                "module6/js/features/zenji-popup.js",
+                "module6/js/features/zenji.js",
+                "module6/js/data/glossaire-cadres.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L4121-1",
+              "auto": false,
+              "plus": 5
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "harcelement-moral-travail.html",
+                "licenciement-nul-causes-guide.html",
+                "obligation-securite-employeur-guide.html",
+                "prevention-addictions-travail-guide.html",
+                "risque-routier-professionnel-guide.html",
+                "risques-psychosociaux-prevention-guide.html",
+                "elagueur-arboriste-grimpeur-heures-supplementaires.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1152-3 · cite L1154-1 · cite L1226-9 · cite L4121-1 · cite L4121-2",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "moyenne",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-14.338 e.a. : applique des articles que tu cites : L1224-1, L1226-14",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-14.338 e.a.\n\nElle applique des articles que tu cites : L1224-1, L1226-14.\n\nCe que la Cour a jugé : Selon le premier de ces textes, les règles particulières aux salariés victimes d'un accident du travail ou d'une maladie professionnelle ne sont pas applicables aux rapports entre un employeur et son salarié victime d'un accident du travail ou d'une maladie professionnelle, survenu ou contractée au service d'un autre employeur. 7. Selon le préambule du troisième de ces textes, les partenaires sociaux conviennent que les changements de prestataires qui caractérisent les activités de déchet…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606d3c27382d099f578a8",
+          "fonds": "Juris",
+          "theme": "Article cité",
+          "date_texte": "2026-10-07",
+          "formation": "F-D",
+          "vu_le": "2026-10-20",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1226-14",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Inaptitude & Reclassement",
+              "fichiers": [
+                "outils/module-inaptitude.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1226-14",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "agent-nettoyage-heures-supplementaires.html",
+                "cession-fonds-commerce-salarie-guide.html",
+                "hs-non-pris-en-compte-entreprise-rachetee.html",
+                "index.html",
+                "transfert-entreprise-l1224-guide.html",
+                "inaptitude-guide.html",
+                "maladie-professionnelle-inaptitude-heures-supplementaires.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1224-1 · cite L1226-14",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils",
+            "guide"
+          ]
+        },
         {
           "categorie": "nouvel-article-section",
           "gravite": "haute",
@@ -485,7 +799,7 @@
           "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
           "date_texte": "2026-10-19",
           "vu_le": "2026-10-19",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -599,66 +913,6 @@
             "outils",
             "guide"
           ]
-        },
-        {
-          "categorie": "texte-parlement",
-          "gravite": "haute",
-          "titre": "🏛️ N° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).",
-          "detail": "Assemblée — documents parlementaires — Wed, 14 Oct 2026 00:00:00 +0000.\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nN° 3339 avis - Avis de M. Nicolas Tryzna sur le projet de loi de financement de la sécurité sociale pour 2027 (n°3211).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
-          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3339.asp",
-          "date_texte": "2026-10-19",
-          "vu_le": "2026-10-19",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "outils",
-              "cible": "Bulletin de Paie Décrypté",
-              "fichiers": [
-                "outils/module-bulletin.html"
-              ],
-              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Net · Brut · Coût employeur",
-              "fichiers": [
-                "outils/module-salaire-cout-employeur.html"
-              ],
-              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Lexique Bulletin",
-              "fichiers": [
-                "outils/module-lexique.html"
-              ],
-              "action": "Vérifier si l'outil reprend une règle propre à l'IDCC 3211",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "IDCC 3211",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
-              "raison": "convention IDCC 3211, grille « estimated » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "outils",
-            "grilles"
-          ]
         }
       ]
     },
@@ -666,7 +920,31 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "app:grillepaye:ccn-data.json : a changé depuis le dernier run",
+          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        }
+      ]
     },
     {
       "id": "age",

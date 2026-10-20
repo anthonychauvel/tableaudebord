@@ -801,5 +801,16 @@
       "basse": 0
     },
     "nouvelles_alertes": 2
+  },
+  {
+    "fichier": "2026-10-20-032115.json",
+    "genere": "2026-10-20T03:21:15.432725+00:00",
+    "total": 16,
+    "par_gravite": {
+      "haute": 8,
+      "moyenne": 6,
+      "basse": 2
+    },
+    "nouvelles_alertes": 7
   }
 ]

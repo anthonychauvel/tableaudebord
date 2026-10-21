@@ -1,13 +1,13 @@
 {
-  "genere": "2026-10-20T03:21:15.432725+00:00",
-  "exceptions_appliquees": 578,
-  "nouvelles_alertes": 7,
+  "genere": "2026-10-21T14:38:06.352561+00:00",
+  "exceptions_appliquees": 612,
+  "nouvelles_alertes": 2,
   "routage": {
     "par_zone": {
-      "app": 4,
-      "outils": 3,
-      "grilles": 8,
-      "guide": 10,
+      "app": 6,
+      "outils": 5,
+      "grilles": 7,
+      "guide": 12,
       "mlt": 3,
       "veille": 0
     },
@@ -86,7 +86,7 @@
           "titre": "[Aspirateur principal (France)] 202 changement(s) sur tes sujets",
           "detail": "Run du 2026-10-19 16:38 UTC (audits/2026-10-19.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1000.json — 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n  APRÈS — Convention collective nationale des avocats et de leur personnel du 20 février 1979. Etendue par arrêté du 13 novembre 1979 JONC 9 janvier 1980 Titre XII …ur l'année 2019, cette cotisation sera de 6 pour 10 000 des salaires. La contribution versée au…\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1388.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n  APRÈS — Convention collective nationale de l'industrie du pétrole du 3 septembre 1985. Etendue par arrêté du 31 juillet 1986 JORF 9 août 1986. Liberté d'opinion … l'embauchage, la conduite ou la répartition du travail, la rémunération, l'octroi d'avantages s…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-10-20)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n… et 187 autre(s).",
           "date_texte": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "mlt",
@@ -168,7 +168,7 @@
           "theme": "Convention de l'appli",
           "date_texte": "2026-10-16",
           "vu_le": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -197,7 +197,7 @@
           "date_texte": "2026-10-07",
           "formation": "F-D",
           "vu_le": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -279,7 +279,7 @@
           "date_texte": "2026-10-07",
           "formation": "F-D",
           "vu_le": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -294,9 +294,9 @@
             },
             {
               "zone": "app",
-              "cible": "M5 · Mizuki, temps partiel",
+              "cible": "M6 · Zenji, cadres et forfaits",
               "fichiers": [
-                "module5/js/features/glossaire.js"
+                "module6/js/data/glossaire-cadres.js"
               ],
               "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
               "raison": "cite L1411-1",
@@ -305,9 +305,9 @@
             },
             {
               "zone": "app",
-              "cible": "M6 · Zenji, cadres et forfaits",
+              "cible": "M5 · Mizuki, temps partiel",
               "fichiers": [
-                "module6/js/data/glossaire-cadres.js"
+                "module5/js/features/glossaire.js"
               ],
               "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
               "raison": "cite L1411-1",
@@ -342,7 +342,7 @@
           "date_texte": "2026-10-07",
           "formation": "FS-D",
           "vu_le": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -366,10 +366,10 @@
                 "module4/js/features/dte-scenarios.js",
                 "module4/app.js",
                 "module4/js/app.js",
-                "module4/js/features/dte-glossary.js",
-                "module4/js/features/lifestyle.js",
                 "module4/js/core/dte-risks.js",
-                "module4/js/core/dte-simulator.js"
+                "module4/js/core/dte-simulator.js",
+                "module4/js/features/dte-glossary.js",
+                "module4/js/features/lifestyle.js"
               ],
               "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
               "raison": "cite L1152-3 · cite L4121-1",
@@ -391,14 +391,14 @@
               "zone": "app",
               "cible": "M6 · Zenji, cadres et forfaits",
               "fichiers": [
+                "module6/ccn/conventions-cadres.js",
                 "module6/js/app.js",
-                "module6/js/features/coach.js",
-                "module6/js/features/nullite-checker.js",
-                "module6/js/features/rupture-calculateur.js",
-                "module6/js/features/simulateur-nullite.js",
-                "module6/js/features/zenji-popup.js",
-                "module6/js/features/zenji.js",
-                "module6/js/data/glossaire-cadres.js"
+                "module6/js/core/bio-engine.js",
+                "module6/js/core/storage.js",
+                "module6/js/data/glossaire-cadres.js",
+                "module6/js/views/view-cadre-dirigeant.js",
+                "module6/js/views/view-forfait-jours.js",
+                "module6/js/features/coach.js"
               ],
               "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
               "raison": "cite L4121-1",
@@ -439,7 +439,7 @@
           "date_texte": "2026-10-07",
           "formation": "F-D",
           "vu_le": "2026-10-20",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -792,6 +792,200 @@
       "module": "veille-sources-officielles",
       "alertes": [
         {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "moyenne",
+          "titre": "🏛️ Conseil d'État — Conseil d'État, 3ème et 8ème chambres réunies, 12/10/2026, 500877",
+          "detail": "Conseil d'État — Conseil d'État — n° 500877 — 2026-10-12.\n\nConseil d'État, 3ème et 8ème chambres réunies, 12/10/2026, 500877\n\nSolution : Renvoi après cassation\n\nExtrait : Vu la procédure suivante : Mme U... Z... a demandé au tribunal administratif de Montpellier, d’une part, d’annuler la décision du 23 septembre 2021 par laquelle le maire de Saint-Clément-de-Rivière (Hérault) a retenu le 24 avril 2021 comme date de point de départ du versement de l’allocation d’aide au retour à l’emploi (ARE) à laquelle elle a droit ainsi que la décision du 11 décembre 2021 rejetant implicitement son recours gracieux et, d’autre part, d’enjoindre à la commune de…\n\n📟 Astreintes — « astreinte »",
+          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054978975",
+          "date_texte": "2026-10-12",
+          "vu_le": "2026-10-21",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M7 · Mimizuku, nuit, astreintes, primes",
+              "fichiers": [
+                "module7/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : astreintes",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Astreintes",
+              "fichiers": [
+                "outils/module-astreintes.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : astreintes",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Droits Chômage",
+              "fichiers": [
+                "outils/module-chomage.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : assurance chômage",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Démission Légitime",
+              "fichiers": [
+                "outils/module-demission-are.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : assurance chômage",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "astreinte-guide.html",
+                "astreinte-guide-complet-2026.html",
+                "astreinte-indemnisation-calcul-2026.html",
+                "chomage-are-calcul.html",
+                "demission-legitime-are-guide.html",
+                "attestation-france-travail-erreurs-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : astreintes · thème : assurance chômage",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "haute",
+          "titre": "🏛️ Conseil d'État — Conseil d'État, 4ème et 1ère chambres réunies, 02/10/2026, 511609, Publié au recueil Lebon",
+          "detail": "Conseil d'État — Conseil d'État — n° 511609 — 2026-10-02.\n\nConseil d'État, 4ème et 1ère chambres réunies, 02/10/2026, 511609, Publié au recueil Lebon\n\nSolution : Satisfaction partielle\n\n⚠️ Articles que l'écosystème cite : L1233-3, L1233-61, L2312-8, L4121-1, L4121-2\n\nExtrait : Vu la procédure suivante : La Fédération CGT des personnels du commerce, de la distribution et des services, d’une part, le comité social et économique (CSE) de la société Auchan E-Commerce France, M. Z... T..., M. F... D..., M. K... R..., Mme P... W... et M. J... L..., d’autre part, ont demandé au tribunal administratif de Lille d’annuler pour excès de pouvoir la décision du 29 avril 2025 par laquelle le directeur régional de l’économie, de l’emploi, du travail et des solidarités des…",
+          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054987857",
+          "date_texte": "2026-10-02",
+          "vu_le": "2026-10-21",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js",
+                "fox/index.html",
+                "fox/js/ai-integration.js",
+                "fox/js/scenarios-ai.js",
+                "fox/js/vue-pro.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1233-3 · cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M4 · DTE, prédiction santé et repos",
+              "fichiers": [
+                "module4/js/features/dte-scenarios.js",
+                "module4/app.js",
+                "module4/js/app.js",
+                "module4/js/core/dte-risks.js",
+                "module4/js/core/dte-simulator.js",
+                "module4/js/features/dte-glossary.js",
+                "module4/js/features/lifestyle.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2312-8 · cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "Fichiers communs (références de loi, glossaire, scripts)",
+              "fichiers": [
+                "legi-ref.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L4121-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
+              "fichiers": [
+                "module6/ccn/conventions-cadres.js",
+                "module6/js/app.js",
+                "module6/js/core/bio-engine.js",
+                "module6/js/core/storage.js",
+                "module6/js/data/glossaire-cadres.js",
+                "module6/js/views/view-cadre-dirigeant.js",
+                "module6/js/views/view-forfait-jours.js",
+                "module6/js/features/coach.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L4121-1",
+              "auto": false,
+              "plus": 5
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2312-8",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Seuils d'effectif",
+              "fichiers": [
+                "outils/module-effectifs.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2312-8",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "restructuration-plan-sauvegarde-hs-guide.html",
+                "intelligence-artificielle-surveillance-travail-guide.html",
+                "obligation-securite-employeur-guide.html",
+                "prevention-addictions-travail-guide.html",
+                "risque-routier-professionnel-guide.html",
+                "risques-psychosociaux-prevention-guide.html",
+                "elagueur-arboriste-grimpeur-heures-supplementaires.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1233-61 · cite L2312-8 · cite L4121-1 · cite L4121-2",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
           "categorie": "boss-modifie",
           "gravite": "haute",
           "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
@@ -920,31 +1114,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "app:grillepaye:ccn-data.json : a changé depuis le dernier run",
-          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

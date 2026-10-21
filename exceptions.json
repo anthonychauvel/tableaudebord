@@ -965,5 +965,49 @@
     "cle": "N° 3339",
     "date": "2026-10-20",
     "note": "Avis parlementaire sur le PLFSS 2027 (n°3211 = numéro du projet de loi, sans rapport avec l'IDCC 3211). Aucun montant à reporter tant que la loi n'est pas votée."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-11.353",
+    "date": "2026-10-21",
+    "note": "Arrêt F-D (non publié) sur la compétence du juge judiciaire pour contrôler un licenciement autorisé par un plan de cession (L1411-1, L642-5 C. com.). Aucun texte de l'appli ou du guide ne traite ce point."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-13.588",
+    "date": "2026-10-21",
+    "note": "Arrêt FS-D (non publié). Réintégration après licenciement nul L1226-9 : déjà exacte dans le guide ; irrecevabilité de l'action en manquement à l'obligation de sécurité pour AT/MP (L451-1 CSS) : guide obligation-securite corrigé le 21/10/2026."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-14.338",
+    "date": "2026-10-21",
+    "note": "Arrêt F-D (non publié) : transfert conventionnel (convention déchets) ≠ L1224-1, L1226-6 reste applicable. Cas d'espèce sectoriel ; rien à modifier."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "511609",
+    "date": "2026-10-21",
+    "note": "CE Lebon 2/10/2026 : périmètre du groupe / contrôle conjoint pour un PSE (Auchan). Contentieux de validation d'accord PSE, non repris par l'appli ni le guide (seul L1233-3 est cité dans fox, sans notion de groupe)."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "500877",
+    "date": "2026-10-21",
+    "note": "CE 12/10/2026 : ARE d'un agent public en auto-assurance (salaire de référence, congé maladie). Hors périmètre des outils chômage, qui traitent le régime Unédic."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Provence-Alpes-Côte d'Azur",
+    "date": "2026-10-21",
+    "note": "Accords régionaux PACA du 6/07/2026 (BTP ouvriers 1596/1597 et ETAM 2609) : l'appli n'a pas de grille PACA (régions couvertes : Occitanie, Bourgogne-Franche-Comté, Centre-Val de Loire). À revoir si une grille PACA est ajoutée.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1431)",
+    "date": "2026-10-21",
+    "note": "Grille du 9/07/2026 enregistrée dans GrillePaye (champ prochain, effet 01/11/2026). Bascule à faire au 1er novembre.",
+    "expire": "2026-11-02"
   }
 ]

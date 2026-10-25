@@ -69,7 +69,7 @@ a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
   <div id="log"></div>
 </div>
 
-<div class="c">
+<div class="c" id="dossiers">
   <h2>🧹 Dossiers photos sur le serveur (R2)</h2>
   <div class="msg" style="margin-top:0">Chaque dossier = un code (ton carnet, un voyage partagé, un lien abonné…). Son nom est une empreinte : on ne voit jamais les photos. 🟢 servi depuis moins de 30 jours · 🟡 inactif · ⚪ sans aucune fiche (déjà orphelin).</div>
   <label for="known">Codes que je connais (facultatif, gardés sur ce téléphone) — un par ligne : « Nom : CODE »</label>
@@ -185,6 +185,7 @@ async function foldWipe(i){
   catch(e){ alert('⚠️ ' + e.message); }
 }
 if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) list();
+if(location.hash === '#dossiers'){ setTimeout(()=>{ $('dossiers').scrollIntoView({behavior:'smooth', block:'start'}); if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) folders(); }, 200); }
 </script>
 </body>
 </html>

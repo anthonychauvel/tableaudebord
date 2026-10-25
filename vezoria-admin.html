@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Vezoria — signalements</title>
+<title>Vezoria — admin</title>
 <meta name="theme-color" content="#11151A">
 <style>
 :root{--ink:#0B0E12;--ink2:#11151A;--ink3:#171C22;--edge:#262E38;--txt:#E6EBF0;--txt2:#8994A1;--accent:#6EA8FE;--haute:#ff6b6b;--moyenne:#ffb454;--ok:#4cd585}
@@ -67,6 +67,15 @@ a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
   <div class="row"><button class="sec" onclick="list()">↻ Actualiser</button></div>
   <h2 style="margin-top:16px">Journal</h2>
   <div id="log"></div>
+</div>
+
+<div class="c">
+  <h2>🧹 Dossiers photos sur le serveur (R2)</h2>
+  <div class="msg" style="margin-top:0">Chaque dossier = un code (ton carnet, un voyage partagé, un lien abonné…). Son nom est une empreinte : on ne voit jamais les photos. 🟢 servi depuis moins de 30 jours · 🟡 inactif · ⚪ sans aucune fiche (déjà orphelin).</div>
+  <label for="known">Codes que je connais (facultatif, gardés sur ce téléphone) — un par ligne : « Nom : CODE »</label>
+  <textarea id="known" placeholder="Mon carnet : ABCD-EFGH-JKLM&#10;Abonnés : WXYZ-1234-5678&#10;Claire : …"></textarea>
+  <div class="row"><button id="bFold" onclick="folders()">🔎 Analyser les dossiers</button></div>
+  <div id="fold"></div>
 </div>
 
 <div class="c">
@@ -142,6 +151,38 @@ async function list(){
       ${b.status === 'suspendu' ? `<div class="row"><button class="ok" onclick="act('restore',{space:'${b.space}'})">▶ Rétablir</button><button class="dang" onclick="act('delete',{space:'${b.space}'})">🗑 Effacer</button></div>` : ''}</div>`).join('') || '<div class="msg">Aucun carnet suspendu.</div>';
     $('log').innerHTML = (j.log||[]).map(l=>`<div class="it"><b>${esc(l.action)}</b> <code>${esc(l.short)}…</code><br><small>${when(l.at)}${l.note ? ' — ' + esc(l.note) : ''}</small></div>`).join('') || '<div class="msg">Journal vide.</div>';
   } catch(e){ $('list').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
+}
+// 🧹 dossiers photos : chaque code connu est transformé ici en empreinte (comme l'appli), pour reconnaître son dossier
+$('known').value = LS.get('vz_admin_known');
+async function sha(t){ const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join(''); }
+const KNOWN = {};
+async function knownMap(){
+  const txt = $('known').value; LS.set('vz_admin_known', txt);
+  for(const line of txt.split('\n')){ const m = line.match(/^(.*?)[:=]\s*(\S.*)$/), code = codeOf(m ? m[2] : line), name = (m ? m[1] : '').trim() || code.slice(0, 4) + '…';
+    if(code.length < 8) continue; const k = 'c:' + code; if(!KNOWN[k]) KNOWN[k] = await sha('carnet-voyage:' + await tokenOf(code)); KNOWN[KNOWN[k]] = name; }
+}
+const ago = t => { if(!t) return 'jamais'; const d = Math.floor((Date.now() - t) / 864e5); return d < 1 ? 'aujourd’hui' : d === 1 ? 'hier' : d < 60 ? 'il y a ' + d + ' j' : 'il y a ' + Math.round(d / 30) + ' mois'; };
+let FOLD = [];
+async function folders(){
+  $('bFold').disabled = true; $('fold').innerHTML = '<div class="msg">⏳ Analyse… (le calcul des codes connus prend quelques secondes chacun)</div>';
+  try {
+    await knownMap(); const j = await api({action:'folders'}); FOLD = j.folders || [];
+    const tot = FOLD.reduce((a, f)=>a + (f.mb || 0), 0), old = FOLD.filter(f=>!f.records || Date.now() - f.last > 30 * 864e5), oldMb = old.reduce((a, f)=>a + (f.mb || 0), 0);
+    $('fold').innerHTML = `<div class="res"><b>${FOLD.length} dossiers · ${Math.round(tot)} Mo</b><br>${old.length} inactif(s) ou orphelin(s) : <b>${Math.round(oldMb)} Mo</b> récupérables</div>` + FOLD.map((f, i)=>{
+      const act = f.records && Date.now() - f.last < 30 * 864e5, name = KNOWN[f.space], dot = !f.records ? '⚪' : act ? '🟢' : '🟡';
+      const canDel = !act && !f.caps && !f.blocked;
+      return `<div class="it">${dot} ${name ? `<b>${esc(name)}</b> · ` : ''}<code>${esc(f.short)}…</code> ${f.blocked ? `<span class="st ${f.blocked==='effacé'?'e':'s'}">${esc(f.blocked)}</span>` : ''}<br>
+        <small>${f.mb == null ? '? Mo' : f.mb + ' Mo'}${f.n != null ? ' · ' + f.n + ' fichier(s)' : ''} · ${f.records} fiche(s) · dernière activité : ${ago(f.last)}${f.caps ? ' · 🫙 ' + f.caps + ' photo(s) du pot commun' : ''}</small>
+        ${canDel ? `<div class="row"><button class="dang" onclick="foldWipe(${i})">🗑 Effacer ce dossier</button></div>` : f.caps && !act ? '<div class="msg">Contient des photos du pot commun : à garder.</div>' : ''}</div>`; }).join('');
+  } catch(e){ $('fold').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
+  finally { $('bFold').disabled = false; }
+}
+async function foldWipe(i){
+  const f = FOLD[i]; if(!f) return; const name = KNOWN[f.space];
+  if(!confirm(`Effacer le dossier ${name ? '« ' + name + ' » ' : ''}${f.short}… ?\n\n${f.mb == null ? '' : f.mb + ' Mo, '}${f.records} fiche(s), dernière activité : ${ago(f.last)}.\n\nTout ce qu'il contient est effacé du serveur (photos et fiches). Les téléphones gardent leurs propres copies. Irréversible.`)) return;
+  if(f.records && (prompt('Ce dossier a encore des fiches. Pour confirmer, écris EFFACER') || '').trim().toUpperCase() !== 'EFFACER') return;
+  try { const j = await api({action:'folderWipe', space:f.space, note:'ménage dossier inactif' + (name ? ' (' + name + ')' : '')}); alert('🗑 Effacé : ' + j.wiped.photos + ' photo(s), ' + j.wiped.records + ' fiche(s).'); folders(); list(); }
+  catch(e){ alert('⚠️ ' + e.message); }
 }
 if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) list();
 </script>

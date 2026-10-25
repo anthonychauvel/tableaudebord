@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Celmar Apps — micro-entreprise</title>
+<meta name="theme-color" content="#11151A">
+<style>
+:root{--ink:#0B0E12;--ink2:#11151A;--ink3:#171C22;--edge:#262E38;--txt:#E6EBF0;--txt2:#8994A1;--accent:#6EA8FE;--haute:#ff6b6b;--moyenne:#ffb454;--ok:#4cd585;--vio:#b49cff}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:#0A0D11}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--ink);color:var(--txt);min-height:100vh;padding:calc(14px + env(safe-area-inset-top)) 14px calc(90px + env(safe-area-inset-bottom));max-width:620px;margin:0 auto}
+h1{font-size:20px;font-weight:800;margin:4px 2px 2px}h1 small{display:block;font-size:12px;color:var(--txt2);font-weight:600;margin-top:3px}
+a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
+.c{background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid var(--edge);border-radius:18px;padding:14px;margin:12px 0}
+.c h2{font-size:11px;font-weight:750;letter-spacing:1.1px;text-transform:uppercase;color:var(--txt2);margin-bottom:10px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.c h2 small{letter-spacing:0;text-transform:none;font-weight:650}
+label{display:block;font-size:12px;color:var(--txt2);margin:10px 0 4px;font-weight:650}
+input,select,textarea{width:100%;background:var(--ink2);border:1px solid var(--edge);border-radius:12px;color:var(--txt);font:16px -apple-system,system-ui,sans-serif;padding:11px 12px;-webkit-appearance:none;appearance:none}
+input[type=date]{min-height:46px}
+textarea{min-height:60px;resize:vertical}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.row>*{flex:1 1 0;min-width:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+button{border:0;border-radius:12px;padding:11px 14px;font:700 14px -apple-system,system-ui,sans-serif;color:#0B0E12;background:var(--accent);cursor:pointer}
+button.sec{background:#232a33;color:var(--txt)}button.dang{background:var(--haute);color:#fff}button.ok{background:var(--ok)}button.sm{padding:7px 10px;font-size:12px}
+.msg{font-size:13px;line-height:1.45;color:var(--txt2)}.msg b{color:var(--txt)}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.kpi{background:var(--ink2);border:1px solid var(--edge);border-radius:14px;padding:11px 12px}
+.kpi small{display:block;font-size:11px;color:var(--txt2);font-weight:650}.kpi b{display:block;font-size:20px;margin-top:3px;font-variant-numeric:tabular-nums}.kpi i{display:block;font-style:normal;font-size:11px;color:var(--txt2);margin-top:2px}
+.bar{height:8px;border-radius:4px;background:#232a33;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:var(--ok);border-radius:4px}
+.bar.w i{background:var(--moyenne)}.bar.d i{background:var(--haute)}
+.it{display:flex;gap:10px;align-items:center;border-top:1px solid var(--edge);padding:10px 2px;font-size:14px;cursor:pointer}.it:first-child{border-top:0}
+.it .t{flex:1;min-width:0}.it .t b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:650}.it .t small{display:block;font-size:12px;color:var(--txt2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.it .m{font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap}
+.it .ic{width:34px;height:34px;flex:none;border-radius:10px;background:#232a33;display:grid;place-items:center;font-size:17px}
+.tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:99px;background:#232a33;color:var(--txt2);margin-left:4px;vertical-align:1px}
+.tag.ok{background:rgba(76,213,133,.15);color:var(--ok)}.tag.w{background:rgba(255,180,84,.18);color:var(--moyenne)}.tag.d{background:rgba(255,107,107,.18);color:var(--haute)}.tag.v{background:rgba(180,156,255,.16);color:var(--vio)}
+.mh{font-size:12px;font-weight:800;color:var(--txt2);margin:14px 2px 2px;display:flex;justify-content:space-between}
+.next{border-left:4px solid var(--moyenne);background:rgba(255,180,84,.07);border-radius:12px;padding:11px 12px;font-size:14px;line-height:1.45}
+.next.d{border-color:var(--haute);background:rgba(255,107,107,.08)}.next.ok{border-color:var(--ok);background:rgba(76,213,133,.07)}
+.next b{display:block}.next small{color:var(--txt2)}
+.ck{width:26px;height:26px;flex:none;border-radius:8px;border:2px solid var(--edge);background:transparent;display:grid;place-items:center;padding:0;font-size:14px;color:var(--ok)}
+.ck.on{background:rgba(76,213,133,.15);border-color:var(--ok)}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(17,21,26,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--edge);display:flex;justify-content:center;padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+.tabs div{display:flex;max-width:620px;width:100%}
+.tabs button{flex:1;background:none;color:var(--txt2);font-size:10.5px;font-weight:700;padding:6px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;border-radius:10px;min-width:0}
+.tabs button span{font-size:19px}.tabs button.on{color:var(--txt);background:#1c232c}
+.sh-bg{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.6);display:flex;align-items:flex-end;justify-content:center}
+.sh{background:var(--ink3);border:1px solid var(--edge);border-radius:20px 20px 0 0;width:100%;max-width:620px;max-height:92vh;overflow:auto;padding:16px 16px calc(20px + env(safe-area-inset-bottom))}
+.sh h3{font-size:17px;margin-bottom:4px}
+.seg{display:flex;gap:6px;flex-wrap:wrap}.seg button{flex:1 1 auto;background:#232a33;color:var(--txt2);font-size:13px;padding:9px 10px}.seg button.on{background:var(--accent);color:#0B0E12}
+.sync{font-size:12px;color:var(--txt2);margin:2px 2px 0}.sync b{color:var(--ok)}.sync b.w{color:var(--moyenne)}.sync b.d{color:var(--haute)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}.chips span{font-size:12px;background:#232a33;border-radius:99px;padding:4px 9px}
+.empty{font-size:13px;color:var(--txt2);padding:10px 2px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.yr{background:#232a33;color:var(--txt);border-radius:10px;padding:7px 10px;font-weight:700;font-size:13px;width:auto}
+</style>
+</head>
+<body>
+<div class="top"><div><a class="back" href="index.html">‹ Tableau de bord</a>
+<h1>💼 Celmar Apps<small id="sub">Micro-entreprise · recettes, frais, affiliations, échéances</small></h1>
+<div class="sync" id="sync"></div></div>
+<select class="yr" id="yr" onchange="Y=+this.value;draw()" aria-label="Année"></select></div>
+<main id="main"></main>
+<nav class="tabs"><div id="tabs"></div></nav>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   Celmar Apps — tableau de bord de la micro-entreprise (perso).
+   Données : sur ce téléphone + coffre chiffré sur le serveur Vezoria
+   (/api/admin, actions vaultGet/vaultPut). Le chiffrement AES-256-GCM
+   se fait ICI avec une clé tirée de la clé d'administration : le serveur
+   ne garde qu'un bloc illisible.
+   Les taux (cotisations, versement libératoire, plafonds) sont réglables :
+   à vérifier chaque janvier sur autoentrepreneur.urssaf.fr.
+═══════════════════════════════════════════════════════════════════ */
+const $ = id => document.getElementById(id);
+const LS = {get:k=>{try{return localStorage.getItem(k)||'';}catch(e){return '';}}, set:(k,v)=>{try{localStorage.setItem(k,v);}catch(e){}}};
+const esc = t => String(t==null?'':t).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+const num = v => { const n = parseFloat(String(v==null?'':v).replace(/\s/g,'').replace(',', '.')); return isFinite(n) ? n : 0; };
+const eur = n => (Math.round(n*100)/100).toLocaleString('fr-FR', {minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits:2}) + ' €';
+const today = () => new Date().toISOString().slice(0,10);
+const fd = d => d ? new Date(d + 'T12:00:00').toLocaleDateString('fr-FR', {day:'numeric', month:'short', year:'numeric'}) : '';
+const addDays = (d, n) => { const x = new Date(d + 'T12:00:00'); x.setDate(x.getDate() + n); return x.toISOString().slice(0,10); };
+const daysTo = d => Math.round((new Date(d + 'T12:00:00') - new Date(today() + 'T12:00:00')) / 864e5);
+const lastDay = (y, m) => new Date(Date.UTC(y, m, 0)).toISOString().slice(0,10);   // m = 1..12
+
+const DEF = {start:'2026-11-01', per:'T', vl:true, rs:21.2, cfp:0.1, rvl:1.7, plafond:83600, tva:37500, nom:'Celmar Apps', siret:'', apps:'Vezoria, SimulHeures, MonLegiTexte, Escale'};
+const SRC = ['Booking.com','GetYourGuide','Travelpayouts','Awin','Google AdSense','Buy Me a Coffee','Google Play','Autre'];
+const MODES = ['Virement','PayPal','Stripe','Carte','Espèces','Autre'];
+const CATS = [['serv','🖥️','Serveur / hébergement'],['dom','🌐','Nom de domaine'],['store','📱','Store (Google, Apple)'],['logi','🧩','Logiciel / abonnement'],['mat','💻','Matériel'],['pub','📣','Publicité / promo'],['form','🎓','Formation'],['banq','🏦','Banque'],['autre','📦','Autre']];
+const AST = [['todo','À demander','w'],['wait','En attente','v'],['ok','Validé','ok'],['no','Refusé','d'],['stop','Arrêté','']];
+
+/* ── état ── */
+let S = load(), Y = new Date().getFullYear(), TAB = LS.get('mc_tab') || 'home';
+function blank(){ return {v:1, rec:[], dep:[], aff:[], dl:[], done:{}, set:Object.assign({at:0}, DEF)}; }
+function load(){ try { const j = JSON.parse(LS.get('mc_data') || 'null'); if(j && j.v) return Object.assign(blank(), j, {set:Object.assign({}, DEF, j.set || {})}); } catch(e){} return blank(); }
+const live = a => (a || []).filter(x=>!x.del);
+const setv = () => S.set;
+function persist(){ LS.set('mc_data', JSON.stringify(S)); }
+function touch(){ persist(); draw(); push(); }
+function upsert(list, o){ o.at = Date.now(); const i = S[list].findIndex(x=>x.id === o.id); if(i >= 0) S[list][i] = o; else S[list].push(o); touch(); }
+function drop(list, id){ const x = S[list].find(x=>x.id === id); if(x){ x.del = true; x.at = Date.now(); touch(); } }
+
+/* ── calculs ── */
+const inY = (d, y) => d && +d.slice(0,4) === y;
+const recY = y => live(S.rec).filter(r=>r.st !== 'att' && inY(r.date, y));
+const depY = y => live(S.dep).filter(r=>inY(r.date, y));
+const sum = a => a.reduce((s, x)=>s + num(x.amt), 0);
+const rate = () => { const s = setv(); return (num(s.rs) + num(s.cfp) + (s.vl ? num(s.rvl) : 0)) / 100; };
+// périodes de déclaration URSSAF (la 1ʳᵉ couvre le début d'activité jusqu'à la fin du trimestre — ou du mois — où tombent les 90 premiers jours)
+function periods(){
+  const s = setv(), st = s.start || DEF.start, out = [], T = s.per !== 'M';
+  const p90 = addDays(st, 90); let y = +p90.slice(0,4), m = +p90.slice(5,7);
+  if(T) m = Math.ceil(m / 3) * 3;
+  let from = st;
+  for(let i = 0; i < 40; i++){
+    const to = lastDay(y, m); let dy = y, dm = m + 1; if(dm > 12){ dm = 1; dy++; }
+    out.push({k:'u:' + to, from, to, due:lastDay(dy, dm), first:i === 0});   // à déclarer avant la fin du mois qui suit la période
+    from = addDays(to, 1); m += T ? 3 : 1; if(m > 12){ m -= 12; y++; }
+    if(from > addDays(today(), 400)) break;
+  }
+  return out;
+}
+const caIn = (a, b) => live(S.rec).filter(r=>r.st !== 'att' && r.date >= a && r.date <= b).reduce((s, r)=>s + num(r.amt), 0);
+function autoDl(){
+  const s = setv(), y0 = +(s.start || DEF.start).slice(0,4), L = [];
+  periods().forEach(p=>{ const ca = caIn(p.from, p.to);
+    L.push({id:p.k, auto:1, date:p.due, ic:'🧾', title:`Déclarer le CA à l'URSSAF${p.first ? ' (1ʳᵉ déclaration)' : ''}`,
+      note:`Période du ${fd(p.from)} au ${fd(p.to)} · CA encaissé : ${eur(ca)} · à payer ≈ ${eur(ca * rate())}${ca ? '' : ' — déclarer 0 € quand même'}`, url:'https://autoentrepreneur.urssaf.fr'}); });
+  for(let y = y0 + 1; y <= new Date().getFullYear() + 1; y++){
+    const ca = recY(y - 1).reduce((s, r)=>s + num(r.amt), 0);
+    L.push({id:'ir:' + y, auto:1, date:`${y}-05-25`, ic:'🏛️', title:`Reporter le CA ${y - 1} sur la déclaration de revenus`, note:`Déclaration 2042-C-PRO, rubrique micro-entrepreneur${s.vl ? ' (versement libératoire : déjà payé, c’est pour le calcul du revenu fiscal)' : ''} · CA ${y - 1} : ${eur(ca)} · date exacte selon ton département`, url:'https://www.impots.gouv.fr'});
+    if(y >= y0 + 1) L.push({id:'cfe:' + y, auto:1, date:`${y}-12-15`, ic:'🏢', title:`CFE ${y} (cotisation foncière)`, note:`${y === y0 + 1 ? 'Exonérée l’année de création ; ' : ''}exonérée aussi si le CA de l’année N-2 est sous 5 000 €. L’avis arrive dans l’espace professionnel impots.gouv en novembre.`, url:'https://www.impots.gouv.fr/professionnel'});
+  }
+  L.push({id:'cfeinit', auto:1, date:`${y0}-12-31`, ic:'🏢', title:'Déclaration initiale de CFE (1447-C-SD)', note:'À vérifier dans ton espace professionnel impots.gouv : à déposer l’année de création pour bénéficier de l’exonération.', url:'https://www.impots.gouv.fr/professionnel'});
+  return L;
+}
+const START = [['siret','🔢','Recevoir le SIREN/SIRET (mail INSEE)'],['urssaf','🧾','Créer l’espace autoentrepreneur.urssaf.fr'],['pro','🏛️','Créer l’espace professionnel impots.gouv'],['ml','⚖️','Mettre le nom « Celmar Apps », le SIRET et l’adresse dans les mentions légales des applis'],['aff','🤝','Inscrire les programmes d’affiliation avec le SIRET'],['play','📱','Passer le compte Google Play en « professionnel » si demandé'],['banq','🏦','Compte bancaire dédié (obligatoire si CA > 10 000 € deux ans de suite)']];
+const isDone = k => !!(S.done[k] && S.done[k].v);
+function allDl(){ return [...autoDl(), ...live(S.dl).map(d=>Object.assign({ic:'📌'}, d))].sort((a, b)=>(a.date || '9').localeCompare(b.date || '9')); }
+
+/* ── chiffrement + synchro (coffre sur le serveur Vezoria) ── */
+const b64 = u8 => { let s = ''; for(let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
+const unb64 = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
+let KEY = null, KEYK = '';
+async function ckey(){ const k = LS.get('vz_admin_key'); if(!k) return null; if(KEY && KEYK === k) return KEY;
+  const te = new TextEncoder(), base = await crypto.subtle.importKey('raw', te.encode(k), 'PBKDF2', false, ['deriveKey']);
+  KEY = await crypto.subtle.deriveKey({name:'PBKDF2', salt:te.encode('celmar-micro/vault/v1'), iterations:200000, hash:'SHA-256'}, base, {name:'AES-GCM', length:256}, false, ['encrypt', 'decrypt']); KEYK = k; return KEY; }
+async function seal(o){ const k = await ckey(), iv = crypto.getRandomValues(new Uint8Array(12)); const ct = new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM', iv}, k, new TextEncoder().encode(JSON.stringify(o)))); const out = new Uint8Array(12 + ct.length); out.set(iv); out.set(ct, 12); return b64(out); }
+async function open_(s){ const k = await ckey(), u = unb64(s); return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM', iv:u.slice(0, 12)}, k, u.slice(12)))); }
+async function api(body){
+  const url = LS.get('vz_admin_url'), key = LS.get('vz_admin_key'); if(!url || !key) throw Object.assign(new Error('Synchro non réglée'), {cfg:1});
+  const r = await fetch(url + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json', 'X-Admin-Key':key}, body:JSON.stringify(body)});
+  let j = {}; try { j = await r.json(); } catch(e){}
+  if(r.status === 409) return Object.assign(j, {conflict:1});
+  if(!r.ok) throw new Error(r.status === 403 ? 'clé refusée' : r.status === 404 ? 'ADMIN_KEY absente sur Cloudflare' : (j.error || 'erreur ' + r.status));
+  return j;
+}
+function merge(a, b){   // fusion : chaque fiche garde sa version la plus récente (rien ne se perd entre deux appareils)
+  const o = blank();
+  ['rec','dep','aff','dl'].forEach(k=>{ const m = {}; [...(a[k] || []), ...(b[k] || [])].forEach(x=>{ if(!m[x.id] || (x.at || 0) > (m[x.id].at || 0)) m[x.id] = x; }); o[k] = Object.values(m); });
+  const dn = Object.assign({}, a.done); Object.entries(b.done || {}).forEach(([k, v])=>{ if(!dn[k] || (v.at || 0) > (dn[k].at || 0)) dn[k] = v; }); o.done = dn;
+  o.set = Object.assign({}, DEF, (a.set.at || 0) >= ((b.set || {}).at || 0) ? a.set : b.set);
+  return o;
+}
+let BASE = +LS.get('mc_base') || 0, pushT = 0, busy = false, SY = {st:'', at:+LS.get('mc_synced') || 0};
+function syncMsg(){ const e = $('sync'); if(!e) return; const has = LS.get('vz_admin_url') && LS.get('vz_admin_key');
+  e.innerHTML = !has ? '📱 Sur ce téléphone seulement · <a href="#" onclick="tab(\'set\');return false" style="color:var(--accent)">activer la sauvegarde</a>'
+    : SY.st === 'err' ? `<b class="d">⚠️ ${esc(SY.err)}</b> · gardé sur ce téléphone` : SY.st === 'busy' ? '<b class="w">⏳ synchro…</b>' : `<b>🔐 Sauvegardé chiffré</b>${SY.at ? ' · ' + new Date(SY.at).toLocaleString('fr-FR', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'}) : ''}`; }
+function push(){ clearTimeout(pushT); pushT = setTimeout(sync, 1200); }
+async function sync(){
+  if(busy){ push(); return; } if(!(LS.get('vz_admin_url') && LS.get('vz_admin_key'))){ syncMsg(); return; }
+  busy = true; SY.st = 'busy'; syncMsg();
+  try {
+    let g = await api({action:'vaultGet', k:'micro'});
+    if(g.v && g.at !== BASE){ S = merge(S, await open_(g.v)); persist(); }
+    BASE = g.at || 0;
+    for(let i = 0; i < 3; i++){
+      const r = await api({action:'vaultPut', k:'micro', v:await seal(S), base:BASE});
+      if(!r.conflict){ BASE = r.at; break; }
+      S = merge(S, await open_(r.v)); BASE = r.at;   // un autre appareil a écrit entre-temps : on fusionne et on renvoie
+    }
+    LS.set('mc_base', String(BASE)); persist(); SY = {st:'ok', at:Date.now()}; LS.set('mc_synced', String(SY.at));
+  } catch(e){ SY = {st:'err', err:/decrypt|operation/i.test(e.name + e.message) ? 'coffre illisible avec cette clé' : e.message, at:SY.at}; }
+  busy = false; syncMsg(); draw();
+}
+
+/* ── écrans ── */
+const TABS = [['home','🏠','Accueil'],['rec','💶','Recettes'],['dep','🧾','Frais'],['aff','🤝','Affiliations'],['dl','⏰','Échéances'],['set','⚙️','Réglages']];
+function tab(t){ TAB = t; LS.set('mc_tab', t); draw(); window.scrollTo(0, 0); }
+function draw(){
+  const ys = new Set([new Date().getFullYear(), +(setv().start || DEF.start).slice(0,4)]); [...S.rec, ...S.dep].forEach(x=>{ if(x.date) ys.add(+x.date.slice(0,4)); });
+  $('yr').innerHTML = [...ys].sort((a, b)=>b - a).map(y=>`<option${y === Y ? ' selected' : ''}>${y}</option>`).join('');
+  $('yr').style.visibility = ['home','rec','dep'].includes(TAB) ? '' : 'hidden';
+  $('tabs').innerHTML = TABS.map(([k, ic, l])=>`<button class="${TAB === k ? 'on' : ''}" onclick="tab('${k}')"><span>${ic}</span>${l}</button>`).join('');
+  $('main').innerHTML = ({home, rec:recV, dep:depV, aff:affV, dl:dlV, set:setV})[TAB]();
+  syncMsg();
+}
+function nextDl(){ return allDl().filter(d=>!isDone(d.id) && d.date).find(d=>daysTo(d.date) >= -60); }
+function dlBox(d){ if(!d) return `<div class="next ok"><b>✓ Aucune échéance en vue</b></div>`; const n = daysTo(d.date);
+  return `<div class="next${n < 0 ? ' d' : n > 20 ? ' ok' : ''}" onclick="tab('dl')"><b>${d.ic} ${esc(d.title)}</b>${fd(d.date)} · ${n < 0 ? `<b style="display:inline;color:var(--haute)">en retard de ${-n} j</b>` : n === 0 ? 'aujourd’hui' : `dans ${n} j`}<br><small>${esc(d.note || '')}</small></div>`; }
+function home(){
+  const s = setv(), ca = sum(recY(Y)), fr = sum(depY(Y)), cot = ca * rate(), att = live(S.rec).filter(r=>r.st === 'att'), attT = sum(att);
+  const pl = num(s.plafond) || 1, pct = Math.min(100, ca / pl * 100), tva = num(s.tva) || 1, ptva = ca / tva * 100;
+  const pc = periods().find(p=>p.from <= today() && today() <= p.to) || periods()[0], caP = pc ? caIn(pc.from, pc.to) : 0;
+  const by = (k, a) => { const m = {}; a.forEach(r=>{ const x = r[k] || '—'; m[x] = (m[x] || 0) + num(r.amt); }); return Object.entries(m).sort((a, b)=>b[1] - a[1]); };
+  const todo = START.filter(([k])=>!isDone('st:' + k)).length;
+  return `${dlBox(nextDl())}
+  <div class="c"><h2>${Y} en un coup d’œil <small>encaissé</small></h2>
+    <div class="kpis">
+      <div class="kpi"><small>Chiffre d’affaires</small><b>${eur(ca)}</b><i>${recY(Y).length} recette(s)</i></div>
+      <div class="kpi"><small>Cotisations + impôt ≈</small><b>${eur(cot)}</b><i>${(rate() * 100).toFixed(1).replace('.', ',')} % du CA</i></div>
+      <div class="kpi"><small>Frais</small><b>${eur(fr)}</b><i>non déductibles en micro</i></div>
+      <div class="kpi"><small>Reste net</small><b style="color:${ca - cot - fr >= 0 ? 'var(--ok)' : 'var(--haute)'}">${eur(ca - cot - fr)}</b><i>CA − cotisations − frais</i></div>
+    </div>
+    <label style="margin-top:14px">Plafond micro (${eur(pl)}) · ${pct.toFixed(1).replace('.', ',')} %</label><div class="bar${pct > 90 ? ' d' : pct > 70 ? ' w' : ''}"><i style="width:${pct}%"></i></div>
+    <label>Seuil de TVA (${eur(tva)}) · ${Math.min(999, ptva).toFixed(1).replace('.', ',')} %</label><div class="bar${ptva > 90 ? ' d' : ptva > 70 ? ' w' : ''}"><i style="width:${Math.min(100, ptva)}%"></i></div>
+    ${ptva > 80 ? `<div class="msg" style="margin-top:8px;color:var(--moyenne)">⚠️ Proche du seuil de TVA : au-delà, il faudra facturer la TVA. À vérifier avec l’URSSAF ou les impôts.</div>` : ''}
+  </div>
+  ${pc ? `<div class="c"><h2>Période à déclarer <small>${fd(pc.from)} → ${fd(pc.to)}</small></h2><div class="kpis"><div class="kpi"><small>CA de la période</small><b>${eur(caP)}</b></div><div class="kpi"><small>À payer ≈</small><b>${eur(caP * rate())}</b><i>avant le ${fd(pc.due)}</i></div></div></div>` : ''}
+  ${att.length ? `<div class="c"><h2>Commissions en attente <small>${eur(attT)}</small></h2><div class="msg" style="margin-bottom:6px">Validées par les partenaires mais pas encore versées : elles ne comptent dans le CA qu’au jour où l’argent arrive.</div>${att.slice(0, 6).map(recRow).join('')}</div>` : ''}
+  ${recY(Y).length ? `<div class="c"><h2>Par appli</h2>${by('app', recY(Y)).map(([k, v])=>`<div class="it" style="cursor:default"><div class="t"><b>${esc(k)}</b></div><div class="m">${eur(v)}</div></div>`).join('')}
+    <h2 style="margin-top:12px">Par source</h2>${by('src', recY(Y)).map(([k, v])=>`<div class="it" style="cursor:default"><div class="t"><b>${esc(k)}</b></div><div class="m">${eur(v)}</div></div>`).join('')}</div>` : ''}
+  ${todo ? `<div class="c"><h2>Pour démarrer <small>${START.length - todo}/${START.length}</small></h2>${START.map(([k, ic, l])=>`<div class="it" onclick="tog('st:${k}')"><button class="ck${isDone('st:' + k) ? ' on' : ''}" aria-label="Fait">${isDone('st:' + k) ? '✓' : ''}</button><div class="t" style="white-space:normal"><b style="white-space:normal;${isDone('st:' + k) ? 'opacity:.5;text-decoration:line-through' : ''}">${ic} ${l}</b></div></div>`).join('')}</div>` : ''}
+  <div class="row"><button onclick="recEd()">＋ Recette</button><button class="sec" onclick="depEd()">＋ Frais</button></div>`;
+}
+function tog(k){ S.done[k] = {v:!isDone(k), at:Date.now()}; touch(); }
+function recRow(r){ return `<div class="it" onclick="recEd('${r.id}')"><div class="ic">${r.st === 'att' ? '⏳' : '💶'}</div><div class="t"><b>${esc(r.src || 'Recette')}${r.app ? ' · ' + esc(r.app) : ''}</b><small>${fd(r.date)}${r.mode ? ' · ' + esc(r.mode) : ''}${r.note ? ' · ' + esc(r.note) : ''}</small></div><div class="m" style="${r.st === 'att' ? 'color:var(--txt2)' : ''}">${eur(num(r.amt))}</div></div>`; }
+function monthGroups(a, row){
+  const g = {}; a.sort((x, y)=>(y.date || '').localeCompare(x.date || '')).forEach(r=>{ const k = (r.date || '').slice(0, 7); (g[k] = g[k] || []).push(r); });
+  return Object.entries(g).map(([k, L])=>`<div class="mh"><span>${k ? new Date(k + '-15').toLocaleDateString('fr-FR', {month:'long', year:'numeric'}) : 'Sans date'}</span><span>${eur(sum(L.filter(x=>x.st !== 'att')))}</span></div><div class="c" style="margin:4px 0;padding:4px 12px">${L.map(row).join('')}</div>`).join('');
+}
+function recV(){ const L = live(S.rec).filter(r=>inY(r.date, Y) || r.st === 'att');
+  return `<div class="row" style="margin-top:4px"><button onclick="recEd()">＋ Recette</button><button class="sec" onclick="csv()">⬇︎ Livre des recettes ${Y}</button></div>
+  <div class="msg" style="margin:10px 2px">En micro, on déclare ce qui est <b>encaissé</b> (argent reçu sur le compte), à la date d’encaissement. Le livre des recettes est obligatoire : ce registre le tient pour toi.</div>
+  ${L.length ? monthGroups(L, recRow) : '<div class="empty">Aucune recette en ' + Y + '.</div>'}`; }
+function depRow(d){ const c = CATS.find(x=>x[0] === d.cat) || CATS[CATS.length - 1]; return `<div class="it" onclick="depEd('${d.id}')"><div class="ic">${c[1]}</div><div class="t"><b>${esc(d.lib || c[2])}</b><small>${fd(d.date)} · ${c[2]}${d.app ? ' · ' + esc(d.app) : ''}</small></div><div class="m">${eur(num(d.amt))}</div></div>`; }
+function depV(){ const L = depY(Y);
+  return `<div class="row" style="margin-top:4px"><button onclick="depEd()">＋ Frais</button></div>
+  <div class="msg" style="margin:10px 2px">En micro, les frais ne se déduisent pas : l’abattement est forfaitaire. Les noter sert à connaître ton vrai bénéfice par appli.</div>
+  ${L.length ? monthGroups(L, depRow) : '<div class="empty">Aucun frais en ' + Y + '.</div>'}`; }
+function affV(){ const L = live(S.aff).sort((a, b)=>AST.findIndex(x=>x[0] === a.st) - AST.findIndex(x=>x[0] === b.st) || (a.name || '').localeCompare(b.name || ''));
+  return `<div class="row" style="margin-top:4px"><button onclick="affEd()">＋ Programme d’affiliation</button></div>
+  ${L.length ? `<div class="c">${L.map(a=>{ const s = AST.find(x=>x[0] === a.st) || AST[0], tot = sum(live(S.rec).filter(r=>r.st !== 'att' && r.src === a.name)), wait = sum(live(S.rec).filter(r=>r.st === 'att' && r.src === a.name));
+    return `<div class="it" onclick="affEd('${a.id}')"><div class="ic">🤝</div><div class="t"><b>${esc(a.name)} <span class="tag ${s[2]}">${s[1]}</span></b><small>${[a.plat, a.apps, a.taux ? 'commission ' + a.taux : '', a.seuil ? 'paiement dès ' + a.seuil : ''].filter(Boolean).map(esc).join(' · ')}</small></div><div class="m">${tot ? eur(tot) : ''}${wait ? `<small style="display:block;font-size:11px;color:var(--txt2)">+${eur(wait)} en attente</small>` : ''}</div></div>`; }).join('')}</div>`
+    : `<div class="c"><div class="msg">Note ici chaque programme : où tu as postulé, son statut, ton identifiant, le seuil de paiement… Les recettes rattachées à un programme s’additionnent ici.<br><br>Idées pour Vezoria : Booking.com, GetYourGuide, Travelpayouts (vols, trains), Awin, Civitatis, Discover Cars.</div></div>`}`; }
+function dlV(){
+  const L = allDl(), open = L.filter(d=>!isDone(d.id)), done = L.filter(d=>isDone(d.id)), soon = open.filter(d=>daysTo(d.date) <= 400);
+  const row = d => { const n = daysTo(d.date), dn = isDone(d.id); return `<div class="it"><button class="ck${dn ? ' on' : ''}" onclick="tog('${esc(d.id)}')" aria-label="Fait">${dn ? '✓' : ''}</button><div class="t" onclick="${d.auto ? (d.url ? `window.open('${d.url}','_blank')` : '') : `dlEd('${d.id}')`}"><b style="white-space:normal;${dn ? 'opacity:.5;text-decoration:line-through' : ''}">${d.ic} ${esc(d.title)}</b><small style="white-space:normal">${fd(d.date)}${!dn ? n < 0 ? ` · <span style="color:var(--haute);font-weight:800">en retard de ${-n} j</span>` : n <= 30 ? ` · <span style="color:var(--moyenne);font-weight:800">dans ${n} j</span>` : ` · dans ${n} j` : ''}<br>${esc(d.note || '')}</small></div></div>`; };
+  return `<div class="row" style="margin-top:4px"><button onclick="dlEd()">＋ Échéance perso</button></div>
+  <div class="msg" style="margin:10px 2px">Les déclarations URSSAF, l’impôt et la CFE se calculent tout seuls d’après ta date de début (${fd(setv().start)}) et ta périodicité (${setv().per === 'M' ? 'mensuelle' : 'trimestrielle'}). Coche quand c’est fait. Touche une échéance pour ouvrir le bon site.</div>
+  <div class="c"><h2>À venir</h2>${soon.length ? soon.map(row).join('') : '<div class="empty">Rien à faire pour l’instant.</div>'}</div>
+  ${done.length ? `<details class="c"><summary class="msg" style="cursor:pointer;font-weight:700">✓ Faites (${done.length})</summary>${done.slice(-20).reverse().map(row).join('')}</details>` : ''}`; }
+function setV(){ const s = setv();
+  return `<div class="c"><h2>Ton entreprise</h2>
+    <div class="g2"><div><label>Nom commercial</label><input id="s-nom" value="${esc(s.nom)}"></div><div><label>SIRET</label><input id="s-siret" inputmode="numeric" value="${esc(s.siret)}" placeholder="à recevoir"></div></div>
+    <div class="g2"><div><label>Début d’activité</label><input id="s-start" type="date" value="${esc(s.start)}"></div><div><label>Déclarations URSSAF</label><select id="s-per"><option value="T"${s.per !== 'M' ? ' selected' : ''}>Trimestrielles</option><option value="M"${s.per === 'M' ? ' selected' : ''}>Mensuelles</option></select></div></div>
+    <label>Tes applis (séparées par des virgules)</label><input id="s-apps" value="${esc(s.apps)}">
+    <h2 style="margin-top:16px">Taux et plafonds <small>à vérifier chaque janvier</small></h2>
+    <div class="g2"><div><label>Cotisations sociales %</label><input id="s-rs" inputmode="decimal" value="${esc(s.rs)}"></div><div><label>Formation pro (CFP) %</label><input id="s-cfp" inputmode="decimal" value="${esc(s.cfp)}"></div></div>
+    <div class="g2"><div><label>Versement libératoire</label><select id="s-vl"><option value="1"${s.vl ? ' selected' : ''}>Oui</option><option value="0"${s.vl ? '' : ' selected'}>Non</option></select></div><div><label>Taux libératoire %</label><input id="s-rvl" inputmode="decimal" value="${esc(s.rvl)}"></div></div>
+    <div class="g2"><div><label>Plafond CA micro €</label><input id="s-pl" inputmode="numeric" value="${esc(s.plafond)}"></div><div><label>Seuil TVA €</label><input id="s-tva" inputmode="numeric" value="${esc(s.tva)}"></div></div>
+    <div class="msg" style="margin-top:8px">Valeurs 2026 pour une activité commerciale de services : cotisations 21,2 %, CFP 0,1 %, libératoire 1,7 % (total 23 %), plafond 83 600 €.</div>
+    <div class="row"><button onclick="setSave()">💾 Enregistrer</button></div></div>
+  <div class="c"><h2>Sauvegarde chiffrée</h2>
+    <div class="msg">Les données restent sur ce téléphone et partent, <b>chiffrées ici</b>, dans un coffre sur ton serveur Vezoria. Mêmes réglages que la page Signalements : ils sont partagés.</div>
+    <label>Adresse de Vezoria</label><input id="s-url" value="${esc(LS.get('vz_admin_url'))}" placeholder="https://vezoria.pages.dev" autocapitalize="off" autocomplete="off">
+    <label>Clé d’administration (ADMIN_KEY)</label><input id="s-key" type="password" value="${esc(LS.get('vz_admin_key'))}" autocomplete="off">
+    <div class="msg" style="margin-top:6px">⚠️ Si tu changes un jour ADMIN_KEY, exporte d’abord une copie : l’ancien coffre ne serait plus lisible.</div>
+    <div class="row"><button onclick="cfgSave()">🔐 Enregistrer et synchroniser</button></div></div>
+  <div class="c"><h2>Copies</h2><div class="row"><button class="sec" onclick="exportJ()">⬇︎ Exporter (JSON)</button><button class="sec" onclick="$('imp').click()">⬆︎ Importer</button></div><input type="file" id="imp" accept="application/json,.json" style="display:none" onchange="importJ(this)"></div>`; }
+function setSave(){ const s = S.set; s.nom = $('s-nom').value.trim(); s.siret = $('s-siret').value.replace(/\s/g, ''); s.start = $('s-start').value || DEF.start; s.per = $('s-per').value; s.apps = $('s-apps').value;
+  s.rs = num($('s-rs').value); s.cfp = num($('s-cfp').value); s.vl = $('s-vl').value === '1'; s.rvl = num($('s-rvl').value); s.plafond = num($('s-pl').value); s.tva = num($('s-tva').value); s.at = Date.now(); touch(); toast('Réglages enregistrés'); }
+function cfgSave(){ LS.set('vz_admin_url', $('s-url').value.trim().replace(/\/+$/, '')); LS.set('vz_admin_key', $('s-key').value); BASE = 0; LS.set('mc_base', '0'); sync(); toast('Synchro lancée'); }
+function exportJ(){ const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(S, null, 1)], {type:'application/json'})); a.download = 'celmar-apps-' + today() + '.json'; a.click(); }
+function importJ(inp){ const f = inp.files[0]; if(!f) return; f.text().then(t=>{ const j = JSON.parse(t); if(!j || !j.v) throw new Error('fichier inconnu'); S = merge(S, Object.assign(blank(), j)); touch(); toast('Importé et fusionné'); }).catch(e=>alert('Import impossible : ' + e.message)); inp.value = ''; }
+function csv(){
+  const L = live(S.rec).filter(r=>r.st !== 'att' && inY(r.date, Y)).sort((a, b)=>a.date.localeCompare(b.date)), q = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+  const rows = [['Date d’encaissement','Client / plateforme','Nature de la prestation','Application','Montant (€)','Mode de règlement','Référence'], ...L.map(r=>[fd(r.date), r.src, r.nat || 'Commission d’affiliation', r.app, String(num(r.amt)).replace('.', ','), r.mode, r.ref]), ['','','','Total', String(sum(L)).replace('.', ','), '', '']];
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob(['﻿' + rows.map(r=>r.map(q).join(';')).join('\r\n')], {type:'text/csv'})); a.download = `livre-des-recettes-${Y}.csv`; a.click(); }
+
+/* ── fiches (feuilles du bas) ── */
+function sheet(h){ close_(); const d = document.createElement('div'); d.className = 'sh-bg'; d.id = 'sh'; d.innerHTML = `<div class="sh">${h}</div>`; d.onclick = e=>{ if(e.target === d) close_(); }; document.body.appendChild(d); document.body.style.overflow = 'hidden'; }
+function close_(){ const d = $('sh'); if(d) d.remove(); document.body.style.overflow = ''; }
+const appsOpt = cur => { const A = String(setv().apps || '').split(',').map(x=>x.trim()).filter(Boolean); if(cur && !A.includes(cur)) A.push(cur); return `<option value="">—</option>` + A.map(a=>`<option${a === cur ? ' selected' : ''}>${esc(a)}</option>`).join(''); };
+const srcOpt = cur => { const A = [...new Set([...live(S.aff).map(a=>a.name), ...SRC])]; if(cur && !A.includes(cur)) A.unshift(cur); return A.map(a=>`<option${a === cur ? ' selected' : ''}>${esc(a)}</option>`).join(''); };
+function segH(id, opts, cur){ return `<div class="seg" id="${id}">${opts.map(([k, l])=>`<button type="button" data-v="${k}" class="${k === cur ? 'on' : ''}" onclick="this.parentNode.querySelectorAll('button').forEach(b=>b.classList.remove('on'));this.classList.add('on')">${l}</button>`).join('')}</div>`; }
+const segV = id => { const b = document.querySelector('#' + id + ' button.on'); return b ? b.dataset.v : ''; };
+function recEd(id, pre){ const r = id ? S.rec.find(x=>x.id === id) : Object.assign({date:today(), st:'ok', mode:'Virement'}, pre || {});
+  sheet(`<h3>${id ? 'Recette' : 'Nouvelle recette'}</h3>
+    ${segH('r-st', [['ok','💶 Encaissée'],['att','⏳ En attente de paiement']], r.st || 'ok')}
+    <div class="g2"><div><label>Montant €</label><input id="r-amt" inputmode="decimal" value="${esc(r.amt || '')}" placeholder="0,00"></div><div><label>Date d’encaissement</label><input id="r-date" type="date" value="${esc(r.date)}"></div></div>
+    <label>Source / plateforme</label><select id="r-src">${srcOpt(r.src)}</select>
+    <div class="g2"><div><label>Application</label><select id="r-app">${appsOpt(r.app)}</select></div><div><label>Mode</label><select id="r-mode">${MODES.map(m=>`<option${m === r.mode ? ' selected' : ''}>${m}</option>`).join('')}</select></div></div>
+    <label>Nature</label><select id="r-nat">${['Commission d’affiliation','Publicité','Don','Vente intégrée / abonnement','Autre'].map(m=>`<option${m === (r.nat || 'Commission d’affiliation') ? ' selected' : ''}>${m}</option>`).join('')}</select>
+    <div class="g2"><div><label>Référence (n° de paiement)</label><input id="r-ref" value="${esc(r.ref || '')}"></div><div><label>Note</label><input id="r-note" value="${esc(r.note || '')}"></div></div>
+    <div class="row"><button onclick="recSave('${id || ''}')">💾 Enregistrer</button>${id ? `<button class="dang" style="flex:0 0 auto" onclick="if(confirm('Supprimer cette recette ?')){drop('rec','${id}');close_();}">🗑</button>` : ''}<button class="sec" style="flex:0 0 auto" onclick="close_()">✕</button></div>`);
+  if(!id) setTimeout(()=>{ const e = $('r-amt'); if(e) e.focus(); }, 80); }
+function recSave(id){ const amt = num($('r-amt').value); if(!amt){ alert('Indique un montant.'); return; }
+  const dt = $('r-date').value || today(); if(segV('r-st') !== 'att' && dt < (setv().start || DEF.start) && !confirm('Cette date est avant le début d’activité (' + fd(setv().start) + ') : l’argent encaissé avant ne compte pas comme chiffre d’affaires de l’entreprise. Enregistrer quand même ?')) return;
+  upsert('rec', {id:id || uid(), st:segV('r-st') || 'ok', amt, date:$('r-date').value || today(), src:$('r-src').value, app:$('r-app').value, mode:$('r-mode').value, nat:$('r-nat').value, ref:$('r-ref').value.trim(), note:$('r-note').value.trim()}); close_(); toast('Recette enregistrée'); }
+function depEd(id){ const d = id ? S.dep.find(x=>x.id === id) : {date:today(), cat:'serv'};
+  sheet(`<h3>${id ? 'Frais' : 'Nouveau frais'}</h3>
+    <div class="g2"><div><label>Montant €</label><input id="d-amt" inputmode="decimal" value="${esc(d.amt || '')}" placeholder="0,00"></div><div><label>Date</label><input id="d-date" type="date" value="${esc(d.date)}"></div></div>
+    <label>Libellé</label><input id="d-lib" value="${esc(d.lib || '')}" placeholder="Ex. Cloudflare Workers Paid, domaine .fr…">
+    <div class="g2"><div><label>Catégorie</label><select id="d-cat">${CATS.map(([k, ic, l])=>`<option value="${k}"${k === d.cat ? ' selected' : ''}>${ic} ${l}</option>`).join('')}</select></div><div><label>Application</label><select id="d-app">${appsOpt(d.app)}</select></div></div>
+    <label>Note</label><input id="d-note" value="${esc(d.note || '')}">
+    <div class="row"><button onclick="depSave('${id || ''}')">💾 Enregistrer</button>${id ? `<button class="dang" style="flex:0 0 auto" onclick="if(confirm('Supprimer ce frais ?')){drop('dep','${id}');close_();}">🗑</button>` : ''}<button class="sec" style="flex:0 0 auto" onclick="close_()">✕</button></div>`);
+  if(!id) setTimeout(()=>{ const e = $('d-amt'); if(e) e.focus(); }, 80); }
+function depSave(id){ const amt = num($('d-amt').value); if(!amt){ alert('Indique un montant.'); return; }
+  upsert('dep', {id:id || uid(), amt, date:$('d-date').value || today(), lib:$('d-lib').value.trim(), cat:$('d-cat').value, app:$('d-app').value, note:$('d-note').value.trim()}); close_(); toast('Frais enregistré'); }
+function affEd(id){ const a = id ? S.aff.find(x=>x.id === id) : {st:'todo'};
+  sheet(`<h3>${id ? esc(a.name) : 'Programme d’affiliation'}</h3>
+    <label>Nom du programme</label><input id="a-name" value="${esc(a.name || '')}" placeholder="Ex. Booking.com">
+    <label>Statut</label>${segH('a-st', AST.map(([k, l])=>[k, l]), a.st || 'todo')}
+    <div class="g2"><div><label>Réseau / plateforme</label><input id="a-plat" value="${esc(a.plat || '')}" placeholder="Direct, Awin, Travelpayouts…"></div><div><label>Applis concernées</label><input id="a-apps" value="${esc(a.apps || '')}" placeholder="Vezoria"></div></div>
+    <div class="g2"><div><label>Commission</label><input id="a-taux" value="${esc(a.taux || '')}" placeholder="Ex. 4 % de la résa"></div><div><label>Seuil de paiement</label><input id="a-seuil" value="${esc(a.seuil || '')}" placeholder="Ex. 50 €"></div></div>
+    <label>Identifiant / ID partenaire</label><input id="a-aid" value="${esc(a.aid || '')}" autocapitalize="off">
+    <label>Lien du tableau de bord partenaire</label><input id="a-url" value="${esc(a.url || '')}" placeholder="https://" autocapitalize="off">
+    <label>Notes (dates de candidature, contact, conditions…)</label><textarea id="a-note">${esc(a.note || '')}</textarea>
+    <div class="row"><button onclick="affSave('${id || ''}')">💾 Enregistrer</button>${id ? `<button class="dang" style="flex:0 0 auto" onclick="if(confirm('Supprimer ce programme ?')){drop('aff','${id}');close_();}">🗑</button>` : ''}<button class="sec" style="flex:0 0 auto" onclick="close_()">✕</button></div>
+    ${id ? `<div class="row">${a.url ? `<button class="sec" onclick="window.open('${esc(a.url)}','_blank')">↗ Ouvrir</button>` : ''}<button class="sec" onclick="close_();recEd(null,{src:'${esc(a.name)}',app:'${esc((a.apps || '').split(',')[0].trim())}'})">＋ Recette de ce programme</button></div>` : ''}`); }
+function affSave(id){ const name = $('a-name').value.trim(); if(!name){ alert('Donne un nom.'); return; }
+  upsert('aff', {id:id || uid(), name, st:segV('a-st') || 'todo', plat:$('a-plat').value.trim(), apps:$('a-apps').value.trim(), taux:$('a-taux').value.trim(), seuil:$('a-seuil').value.trim(), aid:$('a-aid').value.trim(), url:$('a-url').value.trim(), note:$('a-note').value}); close_(); toast('Programme enregistré'); }
+function dlEd(id){ const d = id ? S.dl.find(x=>x.id === id) : {date:addDays(today(), 7)};
+  sheet(`<h3>${id ? 'Échéance' : 'Nouvelle échéance'}</h3>
+    <label>Quoi ?</label><input id="e-title" value="${esc(d.title || '')}" placeholder="Ex. Renouveler le domaine vezoria.app">
+    <label>Date</label><input id="e-date" type="date" value="${esc(d.date)}">
+    <label>Note</label><input id="e-note" value="${esc(d.note || '')}">
+    <div class="row"><button onclick="dlSave('${id || ''}')">💾 Enregistrer</button>${id ? `<button class="dang" style="flex:0 0 auto" onclick="if(confirm('Supprimer ?')){drop('dl','${id}');close_();}">🗑</button>` : ''}<button class="sec" style="flex:0 0 auto" onclick="close_()">✕</button></div>`); }
+function dlSave(id){ const title = $('e-title').value.trim(); if(!title){ alert('Écris l’échéance.'); return; }
+  upsert('dl', {id:id || uid(), title, date:$('e-date').value || today(), note:$('e-note').value.trim()}); close_(); toast('Échéance enregistrée'); }
+let tT = 0; function toast(t){ let e = $('toast'); if(!e){ e = document.createElement('div'); e.id = 'toast'; e.style.cssText = 'position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translateX(-50%);background:#232a33;color:#E6EBF0;border:1px solid #262E38;border-radius:99px;padding:9px 16px;font:700 13px -apple-system,system-ui,sans-serif;z-index:60'; document.body.appendChild(e); } e.textContent = t; e.style.display = ''; clearTimeout(tT); tT = setTimeout(()=>{ e.style.display = 'none'; }, 1800); }
+
+draw(); sync();
+document.addEventListener('visibilitychange', ()=>{ if(document.visibilityState === 'visible') sync(); });
+</script>
+</body>
+</html>

@@ -345,6 +345,11 @@ details.carte>summary .chev{line-height:34px;}
   <div class="sect"><h2>Où traiter</h2><button class="lnk" onclick="allerA('dests')">Détail ›</button></div>
   <div class="dests" id="destsAccueil"></div>
   <div id="blocVezoria"></div>
+  <a href="micro.html" id="lienMicro" style="display:flex;align-items:center;gap:12px;margin:12px 0;padding:13px 14px;border-radius:16px;background:linear-gradient(160deg,#1C222A,#13171D);border:1px solid #262E38;color:#E6EBF0;text-decoration:none">
+    <span style="font-size:24px">💼</span><span style="flex:1;min-width:0"><b style="display:block;font-size:15px">Celmar Apps · micro-entreprise</b><small id="microSub" style="color:#8994A1;font-size:12px">Recettes, frais, affiliations, échéances URSSAF</small></span><span style="color:#6EA8FE;font-size:20px">›</span></a>
+  <script>(function(){ try { const S = JSON.parse(localStorage.getItem('mc_data') || 'null'); if(!S) return; const y = String(new Date().getFullYear());
+    const ca = (S.rec || []).filter(r=>!r.del && r.st !== 'att' && (r.date || '').startsWith(y)).reduce((s, r)=>s + (parseFloat(String(r.amt).replace(',', '.')) || 0), 0);
+    document.getElementById('microSub').textContent = 'CA ' + y + ' : ' + ca.toLocaleString('fr-FR', {maximumFractionDigits:2}) + ' € · touche pour les échéances'; } catch(e){} })();</script>
   <div class="sect"><h2>Actions prioritaires</h2><small id="missionCompte"></small></div>
   <div class="puces" id="puces"></div>
   <div id="mission"></div>

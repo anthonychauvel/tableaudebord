@@ -233,8 +233,19 @@ function monthGroups(a, row){
   const g = {}; a.sort((x, y)=>(y.date || '').localeCompare(x.date || '')).forEach(r=>{ const k = (r.date || '').slice(0, 7); (g[k] = g[k] || []).push(r); });
   return Object.entries(g).map(([k, L])=>`<div class="mh"><span>${k ? new Date(k + '-15').toLocaleDateString('fr-FR', {month:'long', year:'numeric'}) : 'Sans date'}</span><span>${eur(sum(L.filter(x=>x.st !== 'att')))}</span></div><div class="c" style="margin:4px 0;padding:4px 12px">${L.map(row).join('')}</div>`).join('');
 }
+// 🧾 une ligne par déclaration URSSAF : le montant à taper, ce qui sera prélevé, et où on en est
+function declH(){
+  const P = periods().filter(p=>+p.from.slice(0,4) <= Y && +p.to.slice(0,4) >= Y); if(!P.length) return '';
+  return `<div class="c"><h2>Déclarations URSSAF <small>${setv().per === 'M' ? 'mensuelles' : 'trimestrielles'}</small></h2>
+    ${P.map(p=>{ const ca = caIn(p.from, p.to), dn = isDone(p.k), st = dn ? ['✓ déclarée','ok'] : today() > p.due ? ['en retard','d'] : today() > p.to ? ['à déclarer','w'] : today() >= p.from ? ['en cours','v'] : ['à venir',''];
+      return `<div class="it"><button class="ck${dn ? ' on' : ''}" onclick="tog('${p.k}')" aria-label="Déclarée">${dn ? '✓' : ''}</button>
+        <div class="t" onclick="window.open('https://autoentrepreneur.urssaf.fr','_blank')"><b style="white-space:normal">${fd(p.from)} → ${fd(p.to)} <span class="tag ${st[1]}">${st[0]}</span></b><small style="white-space:normal">${p.first ? '1ʳᵉ déclaration (plus longue) · ' : ''}à faire avant le ${fd(p.due)} · à payer ≈ ${eur(ca * rate())}</small></div>
+        <div class="m">${eur(ca)}</div></div>`; }).join('')}
+    <div class="msg" style="margin-top:8px">Le montant à droite, c’est ce que tu tapes sur autoentrepreneur.urssaf.fr : la somme des recettes <b>encaissées</b> pendant la période (0 € s’il n’y a rien, mais il faut déclarer quand même). L’URSSAF calcule et prélève elle-même les cotisations et l’impôt.</div></div>`;
+}
 function recV(){ const L = live(S.rec).filter(r=>inY(r.date, Y) || r.st === 'att');
   return `<div class="row" style="margin-top:4px"><button onclick="recEd()">＋ Recette</button><button class="sec" onclick="csv()">⬇︎ Livre des recettes ${Y}</button></div>
+  ${declH()}
   <div class="msg" style="margin:10px 2px">En micro, on déclare ce qui est <b>encaissé</b> (argent reçu sur le compte), à la date d’encaissement. Le livre des recettes est obligatoire : ce registre le tient pour toi.</div>
   ${L.length ? monthGroups(L, recRow) : '<div class="empty">Aucune recette en ' + Y + '.</div>'}`; }
 function depRow(d){ const c = CATS.find(x=>x[0] === d.cat) || CATS[CATS.length - 1]; return `<div class="it" onclick="depEd('${d.id}')"><div class="ic">${c[1]}</div><div class="t"><b>${esc(d.lib || c[2])}</b><small>${fd(d.date)} · ${c[2]}${d.app ? ' · ' + esc(d.app) : ''}</small></div><div class="m">${eur(num(d.amt))}</div></div>`; }

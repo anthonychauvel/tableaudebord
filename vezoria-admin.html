@@ -30,12 +30,14 @@ button:disabled{opacity:.45}
 .alerte{border-left:4px solid var(--haute);background:rgba(255,107,107,.07);border-radius:12px;padding:11px 12px;font-size:13px;line-height:1.5}
 .alerte a{color:var(--accent)}
 code{font:12px ui-monospace,Menlo,monospace;color:#c7d2fe}
+select{width:100%;background:var(--ink2);border:1px solid var(--edge);border-radius:12px;color:var(--txt);font:16px -apple-system,system-ui,sans-serif;padding:11px 12px}
+.gcode{font:800 20px/1.3 ui-monospace,Menlo,monospace;letter-spacing:1px;text-align:center;padding:12px;border:1px dashed var(--accent);border-radius:12px;margin-top:10px;user-select:all;color:var(--txt)}
 a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
 </style>
 </head>
 <body>
 <a class="back" href="index.html">‹ Tableau de bord</a>
-<h1>🛡️ Vezoria — signalements<small>Suspendre, rétablir ou effacer un carnet signalé, sans jamais voir son contenu.</small></h1>
+<h1>🛡️ Vezoria — administration<small>Signalements (sans jamais voir le contenu), dossiers photos, codes cadeaux.</small></h1>
 
 <div class="c">
   <div class="alerte"><b>Règles d'or</b><br>
@@ -76,6 +78,31 @@ a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
   <textarea id="known" placeholder="Mon carnet : ABCD-EFGH-JKLM&#10;Abonnés : WXYZ-1234-5678&#10;Claire : …"></textarea>
   <div class="row"><button id="bFold" onclick="folders()">🔎 Analyser les dossiers</button></div>
   <div id="fold"></div>
+</div>
+
+<div class="c" id="cadeaux">
+  <h2>🎁 Codes cadeaux et formules</h2>
+  <div class="msg" style="margin-top:0">Place photos sans limite pour toi et tes proches, Plus/Max offerts aux testeurs… La personne tape le code dans l’appli : ☁️ Cloud → 🎁 J’ai un code cadeau.</div>
+  <div class="row" style="margin-top:6px">
+    <div style="flex:1 1 140px"><label for="gPlan">Formule</label><select id="gPlan"><option value="unlimited">Illimité (famille)</option><option value="plus">Plus</option><option value="max">Max</option></select></div>
+    <div style="flex:1 1 140px"><label for="gDays">Durée</label><select id="gDays"><option value="0">Pour toujours</option><option value="30">1 mois</option><option value="365">1 an</option></select></div>
+  </div>
+  <div class="row" style="margin-top:0">
+    <div style="flex:1 1 100px"><label for="gUses">Utilisations</label><input id="gUses" type="number" min="0" value="1"></div>
+    <div style="flex:2 1 160px"><label for="gNote">Pour qui (note)</label><input id="gNote" placeholder="Maman"></div>
+  </div>
+  <div class="row"><button id="bGift" onclick="giftMake()">🎁 Créer le code</button></div>
+  <div id="gOut"></div>
+  <label for="pCode" style="margin-top:16px">Ou donner une formule à un carnet (son code administrateur, transformé ici, jamais envoyé)</label>
+  <input id="pCode" placeholder="ABCD-EFGH-JKLM" autocapitalize="characters" autocomplete="off" autocorrect="off" spellcheck="false">
+  <div class="row" style="margin-top:6px">
+    <div style="flex:1 1 140px"><select id="pPlan"><option value="unlimited">Illimité</option><option value="plus">Plus</option><option value="max">Max</option><option value="free">Retirer (gratuit)</option></select></div>
+    <div style="flex:1 1 140px"><select id="pDays"><option value="0">Pour toujours</option><option value="30">1 mois</option><option value="365">1 an</option></select></div>
+  </div>
+  <div class="row"><button class="sec" onclick="planGo(false)">🔎 Voir sa place</button><button onclick="planGo(true)">✓ Appliquer</button></div>
+  <div class="msg" id="pOut"></div>
+  <div class="row" style="margin-top:14px"><button class="sec" onclick="giftList()">📋 Codes déjà créés</button></div>
+  <div id="gList"></div>
 </div>
 
 <div class="c">
@@ -210,6 +237,38 @@ async function foldWipe(i){
 }
 if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) list();
 if(location.hash === '#dossiers'){ setTimeout(()=>{ $('dossiers').scrollIntoView({behavior:'smooth', block:'start'}); if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) folders(); }, 200); }
+// 🎁 codes cadeaux : le serveur ne garde qu'une empreinte du code ; il n'est affiché qu'une fois, ici
+const planTxt = p => ({unlimited:'Illimité', plus:'Plus', max:'Max'}[p] || p || 'Gratuit');
+async function giftMake(){
+  $('bGift').disabled = true; $('gOut').innerHTML = '<div class="msg">⏳</div>';
+  try {
+    const j = await api({action:'giftCreate', plan:$('gPlan').value, days:+$('gDays').value, uses:+$('gUses').value, note:$('gNote').value.trim()});
+    $('gOut').innerHTML = `<div class="gcode">${esc(j.code)}</div><div class="msg">${planTxt(j.plan)} · ${j.days ? j.days + ' jours' : 'pour toujours'} · ${j.uses ? j.uses + ' utilisation(s)' : 'utilisations illimitées'}<br><b>Note-le maintenant : il ne sera plus jamais affiché.</b></div><div class="row"><button class="sec" onclick="navigator.clipboard.writeText('${esc(j.code)}').then(()=>this.textContent='✓ Copié')">📋 Copier</button></div>`;
+  } catch(e){ $('gOut').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
+  finally { $('bGift').disabled = false; }
+}
+async function planGo(apply){
+  const code = codeOf($('pCode').value); if(code.length < 8){ $('pOut').textContent = 'Colle le code administrateur du carnet (12 caractères).'; return; }
+  if(apply && $('pPlan').value === 'free' && !confirm('Retirer la formule de ce carnet ? Il repasse à la place gratuite.')) return;
+  $('pOut').textContent = '⏳ Calcul de l’empreinte (quelques secondes)…';
+  try {
+    const token = await tokenOf(code);
+    const j = await api(apply ? {action:'planSet', token, plan:$('pPlan').value, days:+$('pDays').value, note:'depuis le tableau de bord'} : {action:'planLook', token});
+    $('pOut').innerHTML = `${apply ? '<b>✓ Appliqué.</b><br>' : ''}Carnet <code>${esc(j.owner)}…</code> · <b>${j.usedMb} Mo</b> utilisés sur ${j.quotaMb} Mo · ${planTxt(j.active ? j.plan : '')}${j.active && j.until ? ' jusqu’au ' + new Date(j.until).toLocaleDateString('fr-FR') : ''} · ${j.kids} voyage(s) branché(s)${j.graceEnd ? '<br>⚠️ Place dépassée : effacement possible après le ' + new Date(j.graceEnd).toLocaleDateString('fr-FR') : ''}${j.branch ? '<br><small>(code d’un voyage : on montre le carnet de son créateur)</small>' : ''}`;
+  } catch(e){ $('pOut').innerHTML = '⚠️ ' + esc(e.message); }
+}
+async function giftList(){
+  $('gList').innerHTML = '<div class="msg">⏳</div>';
+  try {
+    const j = await api({action:'giftList'});
+    $('gList').innerHTML = (j.gifts || []).map(g=>`<div class="it"><b>${planTxt(g.plan)}</b> · ${esc(g.note || '—')}${g.revoked ? ' <span class="st e">retiré</span>' : ''}<br><small>${g.days ? g.days + ' j' : 'pour toujours'} · utilisé ${g.used}/${g.uses || '∞'} · créé le ${new Date(g.created).toLocaleDateString('fr-FR')}</small>${g.revoked ? '' : `<div class="row"><button class="sec" onclick="giftRevoke('${g.id}')">Retirer ce code</button></div>`}</div>`).join('') || '<div class="msg">Aucun code créé.</div>';
+  } catch(e){ $('gList').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
+}
+async function giftRevoke(id){
+  if(!confirm('Retirer ce code ? Il ne pourra plus servir. Les carnets qui l’ont déjà utilisé gardent leur formule.')) return;
+  try { await api({action:'giftRevoke', id}); giftList(); } catch(e){ alert('⚠️ ' + e.message); }
+}
+if(location.hash === '#cadeaux') setTimeout(()=>{ $('cadeaux').scrollIntoView({behavior:'smooth', block:'start'}); }, 200);
 </script>
 </body>
 </html>

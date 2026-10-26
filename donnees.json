@@ -1,17 +1,17 @@
 {
-  "genere": "2026-10-22T14:52:37.363687+00:00",
-  "exceptions_appliquees": 619,
-  "nouvelles_alertes": 1,
+  "genere": "2026-10-26T16:14:44.914514+00:00",
+  "exceptions_appliquees": 606,
+  "nouvelles_alertes": 17,
   "routage": {
     "par_zone": {
-      "app": 2,
-      "outils": 2,
-      "grilles": 5,
-      "guide": 7,
-      "mlt": 2,
-      "veille": 0
+      "app": 10,
+      "outils": 4,
+      "grilles": 15,
+      "guide": 10,
+      "mlt": 4,
+      "veille": 3
     },
-    "non_routees": 0,
+    "non_routees": 2,
     "zones": {
       "app": {
         "nom": "Application",
@@ -79,7 +79,29 @@
       "id": "droit",
       "titre": "MonLegiTexte",
       "module": "monlegitexte-droit",
-      "alertes": [],
+      "alertes": [
+        {
+          "categorie": "run-en-retard",
+          "gravite": "moyenne",
+          "titre": "[OIT] Dernier run vieux de 13 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 13 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "Aspirateur (dépôt droit, Actions)",
+              "fichiers": [],
+              "action": "Ouvrir le dernier passage dans GitHub Actions et relancer / corriger",
+              "raison": "santé de la veille",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        }
+      ],
       "hors_sujet_ignores": 0
     },
     {
@@ -129,12 +151,541 @@
       "id": "contenu",
       "titre": "Contenu des articles cités et phrases fausses connues",
       "module": "contenu-articles",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "R323-1 (CSS) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 3.0 -> 4.0). Cité dans 1 fichier(s) — guide : arret-maladie-salarie.html.\n\nAVANT — Pour l'application du premier alinéa de l'article L. 323-1 : 1°) le point de départ de l'indemnité journalière définie par de l'article L. 321-1 est le quatrième jour de l'incapacité de travail. Ce délai ne s'applique, pour une période de trois ans, qu'au premier des arrêts de travail dus à une…\n\nAPRÈS — Pour l'application de l'article L. 323-1 : 1°) le point de départ de l'indemnité journalière définie par de l'article L. 321-1 est le quatrième jour de l'incapacité de travail. Ce délai ne s'applique, pour la période pendant laquelle l'indemnité journalière peut être servie, qu'au premier des…\n\nRelevé complet des lieux : releves/R323-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R323-1&code=secu",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "arret-maladie-salarie.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "cite R323-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        }
+      ]
     },
     {
       "id": "nouveaux",
       "titre": "📰 Nouveaux textes sur tes sujets",
       "alertes": [
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 14 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des transports routiers… : concerne une convention de l'appli (IDCC 16)",
+          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003186",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-21",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
+              "raison": "IDCC 16 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 16 — Transport routier de marchandises",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
+          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003195",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-21",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
+              "raison": "IDCC 16 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 16 — Transport routier de marchandises",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
+          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003205",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-21",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
+              "raison": "IDCC 16 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 16 — Transport routier de marchandises",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
+          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003215",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-21",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
+              "raison": "IDCC 16 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 16 — Transport routier de marchandises",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
+          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003225",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-21",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
+              "raison": "IDCC 16 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 16 — Transport routier de marchandises",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 6 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie… : concerne une convention de l'appli (IDCC 176)",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 176).\n\nArrêté du 6 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie pharmaceutique (n° 176)\n\nArticles de code cités dans le texte : D3123-16-1, L3123-4-1, L5422-12",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006630",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 176",
+              "raison": "IDCC 176 a des règles dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 176 — Industrie pharmaceutique",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 176, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 13 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 1978)",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1978).\n\nArrêté du 13 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des fleuristes, de la vente et des services des animaux familiers (n° 1978)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006642",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1978 — Fleuristes vente et services animaux familiers",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 1978, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale des distributeurs conseils hors domicile (n°… : concerne une convention de l'appli (IDCC 1536) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1536) — Salaires minima.\n\nArrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale des distributeurs conseils hors domicile (n° 1536)\n\n💶 Salaires minima — « salaires minima » : …e la convention collective nationale des distributeurs conseils hors domicile du 15 décembre 1971, les stipulations de l'avenant 2026/3 du 29 juin 2026 sur les salaires minima conventionnels au 1 er juin 2026 portant révision de la grille des salaires minima visée par l'annexe 1 de la convention collective issue de l'accord 2021/2 du…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006651",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1536 — Distributeurs conseils hors domicile (CHD)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1536, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale de la charcuterie de détail (n° 953) : concerne une convention de l'appli (IDCC 953)",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 953).\n\nArrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale de la charcuterie de détail (n° 953)\n\nArticles de code cités dans le texte : L2261-15",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006661",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 953 — Charcuterie de détail",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 953, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606) : concerne une convention de l'appli (IDCC 1606) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1606) — Salaires minima.\n\nArrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606)\n\n💶 Salaires minima — « salaires minima » : …'application de la convention collective nationale du bricolage du 30 septembre 1991, les stipulations de l'accord professionnel du 29 juillet 2026 relatif aux salaires minima conventionnels, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à comp…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006672",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1606 — Bricolage commerce de détail",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1606, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "bricolage-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1606",
+              "raison": "parlent de l'IDCC 1606",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 22 octobre 2026 portant extension d'avenants salariaux à des conventions collectives de travail étendues relatives aux… : parle de : Salaires minima",
+          "detail": "Paru au JO le 2026-10-24. Ce texte parle de : Salaires minima.\n\nArrêté du 22 octobre 2026 portant extension d'avenants salariaux à des conventions collectives de travail étendues relatives aux professions agricoles\n\n💶 Salaires minima — « salaire minimum de croissance » : …ion professionnel et territorial dont ils relèvent, sous réserve, le cas échéant, de l'application des dispositions législatives et réglementaires relatives au salaire minimum de croissance. L'extension des effets et sanctions des avenants visés à l'article 1 er est applicable à compter de la date de publication du présent arrêté pour la durée res…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055012558",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-24",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa… : parle de : Astreintes",
+          "detail": "Paru au JO le 2026-10-25. Ce texte parle de : Astreintes.\n\nArrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa demande, au service des gardes et astreintes médicales pris pour application de l'article R. 6153-1-5 du code de la santé publique\n\n📟 Astreintes — « astreintes » : …du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa demande, au service des gardes et astreintes médicales pris pour application de l'article R. 6153-1-5 du code de la santé publique Arrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquel…\n\nArticles de code cités dans le texte : D633-11, R6153-1-5, R6153-93, R632-20",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055013524",
+          "fonds": "JORF",
+          "theme": "Astreintes",
+          "date_texte": "2026-10-25",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Articles concernés (non cités dans l'écosystème)",
+              "fichiers": [],
+              "action": "Rien à corriger : D633-11, R6153-1-5, R6153-93, R632-20 ne sont cités nulle part dans l'appli ni le guide",
+              "raison": "articles",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul au prochain passage",
+              "raison": "articles du Code modifiés",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "haute",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-21, n° 25-13.708 e.a. : applique des articles que tu cites : L1221-1, L2242-1",
+          "detail": "Décision du 2026-10-21 — Cour de cassation Chambre sociale · solution : Rejet · formation F-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-21, n° 25-13.708 e.a.\n\nElle applique des articles que tu cites : L1221-1, L2242-1.\n\nCe que la Cour a jugé : Ayant constaté d'une part, par une appréciation souveraine des éléments de fait et de preuve soumis à son examen, que les syndicats n'avaient pas accepté les propositions d'augmentation des salaires et de certaines primes avant leur retrait par l'employeur lors de la réunion du 27 avril 2021, et d'autre part que l'employeur avait motivé le retrait de ses propositions par des événements survenus au cours des négociations fragilisant la situation économique de l'entreprise, la cour d'appel, qui…\n\n📟 Astreintes — « astreinte » : …yndicat CGT Valdepharm et le syndicat Sud chimie (les syndicats) ont saisi la formation de référé du tribunal judiciaire de demandes notamment d'exécution sous astreinte par l'employeur de son engagement rétroactivement au 1er avril 2021 d'augmenter les salaires et certaines primes ainsi que des demandes de provisions sur domma…\n💶 Salaires minima — « grille de salaires » : …n du 5 mai 2021, l'employeur a confirmé le retrait de sa proposition d'augmentation générale des salaires pour l'année 2021 et a proposé la mise en place d'une grille de salaires minimum à l'embauche et du télétravail occasionnel, la prise en charge intégrale des montures de lunettes dans les conditions proposées par la mutuelle, l'orga…",
+          "lien": "https://www.courdecassation.fr/decision/6ad8888e7a1020213707fbc2",
+          "fonds": "Juris",
+          "theme": "Astreintes",
+          "date_texte": "2026-10-21",
+          "etiquettes": [
+            "Publiée au Bulletin"
+          ],
+          "formation": "F-B",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1221-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2242-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Seuils d'effectif",
+              "fichiers": [
+                "outils/module-effectifs.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2242-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "interim-vs-cdd-vs-cdi-comparatif.html",
+                "nao-negociation-annuelle-hs-guide.html",
+                "negociation-annuelle-obligatoire-nao-guide.html",
+                "seuils-effectifs-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1221-1 · cite L2242-1",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
         {
           "categorie": "nouvelle-jurisprudence",
           "gravite": "basse",
@@ -483,6 +1034,129 @@
         {
           "categorie": "boss-modifie",
           "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 22 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-22.\n\n－ Charte du cotisant contrôlé\n－ La « charte du cotisant contrôlé » est désormais publiée sur le BOSS dans un nouveau bloc « Contrôle »\n－ Le décret n° 2025-1338 du 26 décembre 2025 modifie l’article R. 243-59 du code de la sécurité sociale en vue de prévoir la publication de la charte du cotisant contrôlé sur le Bulletin officiel de la sécurité sociale (BOSS) à compter du 1er janvier 2026. In fine , ce document opposable sera…\n－ La charte du cotisant contrôlé est désormais publiée dans le nouveau bloc « Contrôle » accessible depuis la page d’accueil du BOSS. Vous avez la possibilité de télécharger une version imprimable de la charte depuis le lien indiqué dans le cartouche en haut de cette rubrique.\n－ Aucune évolution n’a été apportée à la charte au moment de sa publication sur le BOSS.\n＋ Evolution du traitement social de la prise en charge par l’employeur des frais de carburant\n＋ Le régime social de la « prime carburant » défini à l’article L. 3261-3 du code du travail, qui a fait précédemment l’objet d’un communiqué paru le 6 août 2026, est de nouveau modifié, conformément aux annonces gouvernementales du 22 septembre dernier.\n＋ Selon des dispositions qui seront désormais prévues par décret, et non plus dans la loi, conformément à la décision de déclassement n° 2026-327 L du 29 juillet 2026 du Conseil constitutionnel, les limites d’exonération des avantages liés aux frais de transports personnels continuent d’être les…\n＋ 600 € par an pour la prise en charge des frais de carburant ou d'alimentation des véhicules électriques (article L. 3261-3 du code du travail) et du forfait mobilités durables (article L. 3261-3-1), dans la limite de 300 € pour les frais de carburant ;\n＋ 900 € (ou, s'il est supérieur, le montant de la prise en charge des abonnements de transport) en cas de cumul du forfait mobilités durables avec la prise en charge prévue à l'article L. 3261-2 ;\n(… 12 paragraphe(s) retiré(s), 10 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-10-26",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Articles concernés (non cités dans l'écosystème)",
+              "fichiers": [],
+              "action": "Rien à corriger : L3261-3, R243-59 ne sont cités nulle part dans l'appli ni le guide",
+              "raison": "articles",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "texte-parlement",
+          "gravite": "moyenne",
+          "titre": "🏛️ N° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant…",
+          "detail": "Assemblée — commission des affaires sociales — Mon, 26 Oct 2026 10:00:00 +0000.\n\nN° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant l'augmentation des salaires et des pensions (3176).\n\nN° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant l'augmentation des salaires et des pensions (3176).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3350.asp",
+          "date_texte": "2026-10-26",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "texte-parlement",
+          "gravite": "haute",
+          "titre": "🏛️ Texte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027",
+          "detail": "Assemblée — commission des affaires sociales — Fri, 23 Oct 2026 15:05:00 +0000.\n\nTexte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027\n\nTexte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "https://www.assemblee-nationale.fr/17/ta/ta0358.asp",
+          "date_texte": "2026-10-26",
+          "vu_le": "2026-10-26",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "csg-crds-salaire-guide.html",
+                "bulletin-paie-comprendre.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "controle-redressement-urssaf-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "boss-modifie",
+          "gravite": "haute",
           "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
           "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-17.\n\n－ La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.\n－ 40,21% pour les entreprises de plus de 50 salariés\n－ 3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et «…\n－ Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie…\n＋ Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027\n＋ Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.\n＋ Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.\n＋ Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines…\n＋ Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :\n(… 4 paragraphe(s) retiré(s), 8 ajouté(s) au total)",
           "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
@@ -609,31 +1283,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "guide:obligation-securite-employeur-guide.html : a changé depuis le dernier run",
-          "detail": "Constat neutre, pas un jugement -- peut être un changement voulu (session de travail) ou une modification à vérifier si elle est inattendue.",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "obligation-securite-employeur-guide.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

@@ -1221,7 +1221,12 @@ function _planTexte(){
   var d=window.__DONNEES||{}, toutes=toutesAlertes().filter(function(a){return a.gravite!=='basse'&&!FAIT[cleAlerte(a)];});
   var L=['PLAN D\'ACTION PAR DESTINATION — VEILLE JURIDIQUE SIMULHEURES',
          'Dernier passage : '+(d.genere?new Date(d.genere).toLocaleString('fr-FR'):'?')+' · exporté le '+new Date().toLocaleString('fr-FR'),
-         toutes.length+' point(s) à traiter (critiques et à traiter, hors « pour info » et déjà traités).',''];
+         toutes.length+' point(s) à traiter (critiques et à traiter, hors « pour info » et déjà traités).','',
+         '⚠️ RAPPEL — À CHAQUE MODIFICATION DE L\'APPLI (grille, texte, règle, correction) :',
+         '  [ ] Ajouter une entrée dans nouveautes.html : nouveau bloc « version » tout en haut (date + n° de version), badge NOUVEAU retiré de l\'ancienne version',
+         '  [ ] Reporter ce n° de version dans menu.html (NV_DERNIERE) et en bas de nouveautes.html (NV_SEEN), pour que le badge du menu réapparaisse',
+         '  [ ] Changer CACHE_NAME dans sw.js, sinon les téléphones gardent les anciens fichiers',
+         '  → Les utilisateurs voient ainsi que l\'appli est suivie et mise à jour.',''];
   ORDRE_ZONES.forEach(function(z){
     var grp={}, ordre=[];
     toutes.forEach(function(a){ciblesDe(a).forEach(function(c){

@@ -114,13 +114,14 @@ a.back{color:var(--accent);font-size:13px;text-decoration:none;font-weight:650}
   <div class="row"><button class="sec" onclick="save()">💾 Enregistrer</button><button class="sec" onclick="forget()">Oublier la clé</button></div>
 </div>
 
+<script src="coffre.js"></script>
 <script>
 const $ = id => document.getElementById(id);
 const LS = {get:k=>{try{return localStorage.getItem(k)||'';}catch(e){return '';}}, set:(k,v)=>{try{localStorage.setItem(k,v);}catch(e){}}, del:k=>{try{localStorage.removeItem(k);}catch(e){}}};
 const esc = t => String(t==null?'':t).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('url').value = LS.get('vz_admin_url'); $('key').value = LS.get('vz_admin_key');
-function save(){ LS.set('vz_admin_url', $('url').value.trim().replace(/\/+$/,'')); LS.set('vz_admin_key', $('key').value); msg('Réglages enregistrés sur ce téléphone.'); list(); }
-function forget(){ LS.del('vz_admin_key'); $('key').value=''; msg('Clé oubliée.'); }
+$('url').value = LS.get('vz_admin_url'); $('key').value = Coffre.get('vz_admin_key');
+function save(){ LS.set('vz_admin_url', $('url').value.trim().replace(/\/+$/,'')); Coffre.set('vz_admin_key', $('key').value); msg('Réglages enregistrés sur ce téléphone.'); list(); }
+function forget(){ Coffre.del('vz_admin_key'); $('key').value=''; msg('Clé oubliée.'); }
 function msg(h){ $('msg').innerHTML = h; }
 // Même calcul que l'appli : empreinte = PBKDF2(code, « carnet-voyage/space/v2 », 200 000 tours, SHA-256).
 // Le code reste sur ce téléphone ; seul ce résultat part vers le serveur.
@@ -135,7 +136,7 @@ async function tokenOf(code){
   return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
 }
 async function api(body){
-  const url = LS.get('vz_admin_url') || $('url').value.trim().replace(/\/+$/,''), key = LS.get('vz_admin_key') || $('key').value;
+  const url = LS.get('vz_admin_url') || $('url').value.trim().replace(/\/+$/,''), key = Coffre.get('vz_admin_key') || $('key').value;
   if(!url || !key) throw new Error('Renseigne l’adresse de Vezoria et la clé dans les réglages en bas.');
   const r = await fetch(url + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json','X-Admin-Key':key}, body:JSON.stringify(body)});
   let j = {}; try { j = await r.json(); } catch(e){}
@@ -180,11 +181,11 @@ async function list(){
   } catch(e){ $('list').innerHTML = '<div class="msg">⚠️ ' + esc(e.message) + '</div>'; }
 }
 // 🧹 dossiers photos : chaque code connu est transformé ici en empreinte (comme l'appli), pour reconnaître son dossier
-$('known').value = LS.get('vz_admin_known');
+$('known').value = Coffre.get('vz_admin_known');
 async function sha(t){ const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(t)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join(''); }
 const KNOWN = {}, TOK = {}; let KLIST = [];
 async function knownMap(){
-  const txt = $('known').value; LS.set('vz_admin_known', txt); KLIST = [];
+  const txt = $('known').value; if(txt !== Coffre.get('vz_admin_known')) Coffre.set('vz_admin_known', txt); KLIST = [];
   for(const line of txt.split('\n')){ if(!line.trim()) continue; const m = line.match(/^(.*?)[:=]\s*(\S.*)$/), code = codeOf(m ? m[2] : line), name = (m ? m[1] : '').trim() || code;
     if(code.length < 8){ KLIST.push({name, code, bad:1}); continue; }
     const k = 'c:' + code; if(!KNOWN[k]){ TOK[k] = await tokenOf(code); KNOWN[k] = await sha('carnet-voyage:' + TOK[k]); } KNOWN[KNOWN[k]] = name; KLIST.push({name, code, space:KNOWN[k], token:TOK[k]}); }
@@ -235,8 +236,8 @@ async function foldWipe(i){
   try { const j = await api({action:'folderWipe', space:f.space, note:'ménage dossier inactif' + (name ? ' (' + name + ')' : '')}); alert('🗑 Effacé : ' + j.wiped.photos + ' photo(s), ' + j.wiped.records + ' fiche(s).'); folders(); list(); }
   catch(e){ alert('⚠️ ' + e.message); }
 }
-if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) list();
-if(location.hash === '#dossiers'){ setTimeout(()=>{ $('dossiers').scrollIntoView({behavior:'smooth', block:'start'}); if(LS.get('vz_admin_url') && LS.get('vz_admin_key')) folders(); }, 200); }
+if(LS.get('vz_admin_url') && Coffre.get('vz_admin_key')) list();
+if(location.hash === '#dossiers'){ setTimeout(()=>{ $('dossiers').scrollIntoView({behavior:'smooth', block:'start'}); if(LS.get('vz_admin_url') && Coffre.get('vz_admin_key')) folders(); }, 200); }
 // 🎁 codes cadeaux : le serveur ne garde qu'une empreinte du code ; il n'est affiché qu'une fois, ici
 const planTxt = p => ({unlimited:'Illimité', plus:'Plus', max:'Max'}[p] || p || 'Gratuit');
 async function giftMake(){

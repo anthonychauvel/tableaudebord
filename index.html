@@ -312,6 +312,7 @@ details.carte>summary .chev{line-height:34px;}
 .rt{background:var(--ink2);border-radius:10px;}
 .ligne{background:var(--ink2);border-radius:10px;}
 </style>
+<script src="coffre.js"></script>
 </head>
 <body>
 
@@ -1353,7 +1354,7 @@ const ROBOTS = [
    repo:'anthonychauvel/tableaudebord', wf:'regenerer.yml', inputs:{}},
 ];
 const CLE_JETON='veille_jeton_github';
-function lireJeton(){try{return localStorage.getItem(CLE_JETON)||'';}catch(e){return '';}}
+function lireJeton(){return Coffre.get(CLE_JETON);}
 // Message DANS le panneau : c'est là que tu regardes quand tu viens de toucher.
 function msgRelance(cls, txt){var m=document.getElementById('relanceMsg');m.className='relance-msg on '+cls;m.textContent=txt;}
 function ouvrirRelance(){document.getElementById('relanceMsg').className='relance-msg';document.getElementById('relanceFond').classList.add('on');document.getElementById('relance').classList.add('on');rendreRelance();}
@@ -1379,10 +1380,10 @@ function enregistrerJeton(){
   var v=(document.getElementById('champJeton').value||'').trim();
   if(/^https?:/.test(v)){msgRelance('ko',"C'est un lien, pas une clé. Sur GitHub, après « Generate token », copie le long code qui commence par github_pat_ (il n'est affiché qu'une fois).");return;}
   if(!/^(github_pat_|ghp_)[A-Za-z0-9_]{20,}$/.test(v)){msgRelance('ko',"Ça ne ressemble pas à une clé GitHub : elle commence par github_pat_ et fait environ 90 caractères, sans espace.");return;}
-  try{localStorage.setItem(CLE_JETON,v);}catch(e){}
+  Coffre.set(CLE_JETON,v);
   rendreRelance();msgRelance('ok','🔑 Clé enregistrée sur ce téléphone. Touche un robot pour le lancer.');
 }
-function oublierJeton(){try{localStorage.removeItem(CLE_JETON);}catch(e){}rendreRelance();msgRelance('info','Clé oubliée.');}
+function oublierJeton(){Coffre.del(CLE_JETON);rendreRelance();msgRelance('info','Clé oubliée.');}
 async function majEtat(r){
   var el=document.getElementById('etat-'+r.k); if(!el) return;
   try{
@@ -1478,7 +1479,7 @@ if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
       try {
         const r = await fetch(u + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json', 'X-Admin-Key':k}, body:'{"action":"list"}'});
         erreur.style.color = '#e05c5c';
-        if(r.ok){ ecrire('vz_admin_url', u); ecrire('vz_admin_key', k); ecrire(CLE_LOCAL, OK); erreur.textContent = ''; ouvrir(); return; }
+        if(r.ok){ ecrire('vz_admin_url', u); Coffre.set('vz_admin_key', k); ecrire(CLE_LOCAL, OK); erreur.textContent = ''; ouvrir(); return; }
         erreur.textContent = r.status === 403 ? 'Clé incorrecte' : r.status === 404 ? 'ADMIN_KEY absente dans Cloudflare (ou pas encore redéployé)' : 'Erreur du serveur (' + r.status + ')';
         champ.value = '';
       } catch(e){ erreur.style.color = '#e05c5c'; erreur.textContent = 'Serveur injoignable : vérifie l’adresse et le réseau'; url.style.display = ''; }

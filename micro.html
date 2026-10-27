@@ -65,6 +65,7 @@ button.sec{background:#232a33;color:var(--txt)}button.dang{background:var(--haut
 <main id="main"></main>
 <nav class="tabs"><div id="tabs"></div></nav>
 
+<script src="coffre.js"></script>
 <script>
 /* ═══════════════════════════════════════════════════════════════════
    Celmar Apps — tableau de bord de la micro-entreprise (perso).
@@ -146,13 +147,13 @@ function allDl(){ return [...autoDl(), ...live(S.dl).map(d=>Object.assign({ic:'�
 const b64 = u8 => { let s = ''; for(let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); };
 const unb64 = s => Uint8Array.from(atob(s), c=>c.charCodeAt(0));
 let KEY = null, KEYK = '';
-async function ckey(){ const k = LS.get('vz_admin_key'); if(!k) return null; if(KEY && KEYK === k) return KEY;
+async function ckey(){ const k = Coffre.get('vz_admin_key'); if(!k) return null; if(KEY && KEYK === k) return KEY;
   const te = new TextEncoder(), base = await crypto.subtle.importKey('raw', te.encode(k), 'PBKDF2', false, ['deriveKey']);
   KEY = await crypto.subtle.deriveKey({name:'PBKDF2', salt:te.encode('celmar-micro/vault/v1'), iterations:200000, hash:'SHA-256'}, base, {name:'AES-GCM', length:256}, false, ['encrypt', 'decrypt']); KEYK = k; return KEY; }
 async function seal(o){ const k = await ckey(), iv = crypto.getRandomValues(new Uint8Array(12)); const ct = new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM', iv}, k, new TextEncoder().encode(JSON.stringify(o)))); const out = new Uint8Array(12 + ct.length); out.set(iv); out.set(ct, 12); return b64(out); }
 async function open_(s){ const k = await ckey(), u = unb64(s); return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM', iv:u.slice(0, 12)}, k, u.slice(12)))); }
 async function api(body){
-  const url = LS.get('vz_admin_url'), key = LS.get('vz_admin_key'); if(!url || !key) throw Object.assign(new Error('Synchro non réglée'), {cfg:1});
+  const url = LS.get('vz_admin_url'), key = Coffre.get('vz_admin_key'); if(!url || !key) throw Object.assign(new Error('Synchro non réglée'), {cfg:1});
   const r = await fetch(url + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json', 'X-Admin-Key':key}, body:JSON.stringify(body)});
   let j = {}; try { j = await r.json(); } catch(e){}
   if(r.status === 409) return Object.assign(j, {conflict:1});
@@ -167,12 +168,12 @@ function merge(a, b){   // fusion : chaque fiche garde sa version la plus récen
   return o;
 }
 let BASE = +LS.get('mc_base') || 0, pushT = 0, busy = false, SY = {st:'', at:+LS.get('mc_synced') || 0};
-function syncMsg(){ const e = $('sync'); if(!e) return; const has = LS.get('vz_admin_url') && LS.get('vz_admin_key');
+function syncMsg(){ const e = $('sync'); if(!e) return; const has = LS.get('vz_admin_url') && Coffre.get('vz_admin_key');
   e.innerHTML = !has ? '📱 Sur ce téléphone seulement · <a href="#" onclick="tab(\'set\');return false" style="color:var(--accent)">activer la sauvegarde</a>'
     : SY.st === 'err' ? `<b class="d">⚠️ ${esc(SY.err)}</b> · gardé sur ce téléphone` : SY.st === 'busy' ? '<b class="w">⏳ synchro…</b>' : `<b>🔐 Sauvegardé chiffré</b>${SY.at ? ' · ' + new Date(SY.at).toLocaleString('fr-FR', {day:'numeric', month:'short', hour:'2-digit', minute:'2-digit'}) : ''}`; }
 function push(){ clearTimeout(pushT); pushT = setTimeout(sync, 1200); }
 async function sync(){
-  if(busy){ push(); return; } if(!(LS.get('vz_admin_url') && LS.get('vz_admin_key'))){ syncMsg(); return; }
+  if(busy){ push(); return; } if(!(LS.get('vz_admin_url') && Coffre.get('vz_admin_key'))){ syncMsg(); return; }
   busy = true; SY.st = 'busy'; syncMsg();
   try {
     let g = await api({action:'vaultGet', k:'micro'});
@@ -279,13 +280,13 @@ function setV(){ const s = setv();
   <div class="c"><h2>Sauvegarde chiffrée</h2>
     <div class="msg">Les données restent sur ce téléphone et partent, <b>chiffrées ici</b>, dans un coffre sur ton serveur Vezoria. Mêmes réglages que la page Signalements : ils sont partagés.</div>
     <label>Adresse de Vezoria</label><input id="s-url" value="${esc(LS.get('vz_admin_url'))}" placeholder="https://vezoria.pages.dev" autocapitalize="off" autocomplete="off">
-    <label>Clé d’administration (ADMIN_KEY)</label><input id="s-key" type="password" value="${esc(LS.get('vz_admin_key'))}" autocomplete="off">
+    <label>Clé d’administration (ADMIN_KEY)</label><input id="s-key" type="password" value="${esc(Coffre.get('vz_admin_key'))}" autocomplete="off">
     <div class="msg" style="margin-top:6px">⚠️ Si tu changes un jour ADMIN_KEY, exporte d’abord une copie : l’ancien coffre ne serait plus lisible.</div>
     <div class="row"><button onclick="cfgSave()">🔐 Enregistrer et synchroniser</button></div></div>
   <div class="c"><h2>Copies</h2><div class="row"><button class="sec" onclick="exportJ()">⬇︎ Exporter (JSON)</button><button class="sec" onclick="$('imp').click()">⬆︎ Importer</button></div><input type="file" id="imp" accept="application/json,.json" style="display:none" onchange="importJ(this)"></div>`; }
 function setSave(){ const s = S.set; s.nom = $('s-nom').value.trim(); s.siret = $('s-siret').value.replace(/\s/g, ''); s.start = $('s-start').value || DEF.start; s.per = $('s-per').value; s.apps = $('s-apps').value;
   s.rs = num($('s-rs').value); s.cfp = num($('s-cfp').value); s.vl = $('s-vl').value === '1'; s.rvl = num($('s-rvl').value); s.plafond = num($('s-pl').value); s.tva = num($('s-tva').value); s.at = Date.now(); touch(); toast('Réglages enregistrés'); }
-function cfgSave(){ LS.set('vz_admin_url', $('s-url').value.trim().replace(/\/+$/, '')); LS.set('vz_admin_key', $('s-key').value); BASE = 0; LS.set('mc_base', '0'); sync(); toast('Synchro lancée'); }
+function cfgSave(){ LS.set('vz_admin_url', $('s-url').value.trim().replace(/\/+$/, '')); Coffre.set('vz_admin_key', $('s-key').value); BASE = 0; LS.set('mc_base', '0'); sync(); toast('Synchro lancée'); }
 function exportJ(){ const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([JSON.stringify(S, null, 1)], {type:'application/json'})); a.download = 'celmar-apps-' + today() + '.json'; a.click(); }
 function importJ(inp){ const f = inp.files[0]; if(!f) return; f.text().then(t=>{ const j = JSON.parse(t); if(!j || !j.v) throw new Error('fichier inconnu'); S = merge(S, Object.assign(blank(), j)); touch(); toast('Importé et fusionné'); }).catch(e=>alert('Import impossible : ' + e.message)); inp.value = ''; }
 function csv(){

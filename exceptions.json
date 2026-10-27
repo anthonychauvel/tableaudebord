@@ -1058,5 +1058,36 @@
     "cle": "N° 3350",
     "date": "2026-10-27",
     "note": "Rapport sur une proposition de loi (augmentation des salaires et des pensions) : pas une loi, rien à appliquer."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "22-14.023",
+    "date": "2026-10-27",
+    "note": "Arrêt F-D : un institut de massage/spa doit prouver que l'activité spa est principale pour la dérogation au repos dominical (R3132-5) ; intérêts moratoires à compter de l'exigibilité. Rien à modifier."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-14.862",
+    "date": "2026-10-27",
+    "note": "Arrêt F-D : indemnité de rupture conventionnelle ≥ indemnité conventionnelle de licenciement (ANI 2008). Outil module-rupture déjà juste ; guide rupture-conventionnelle.html complété le 27/10/2026."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-16.937",
+    "date": "2026-10-27",
+    "note": "Arrêt F-D : offre d'embauche rétractable jusqu'à réception, acceptée = contrat formé. Guide promesse-embauche-offre-contrat déjà conforme."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-14.651",
+    "date": "2026-10-27",
+    "note": "Arrêt FS-D : interprétation d'un accord d'entreprise Carrefour sur la prime annuelle (CCN 2216). Cas d'espèce, rien à modifier."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "497765",
+    "date": "2026-10-27",
+    "note": "CE 23/10/2026 : circulaire CNAM sur les enfants nés de GPA (rattachement, congé de paternité). Seul un extrait est dans le corpus, dispositif non lu : à revoir si la décision publiée étend le congé de paternité au conjoint du père.",
+    "expire": "2026-12-31"
   }
 ]

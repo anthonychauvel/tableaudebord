@@ -1009,5 +1009,54 @@
     "date": "2026-10-21",
     "note": "Grille du 9/07/2026 enregistrée dans GrillePaye (champ prochain, effet 01/11/2026). Bascule à faire au 1er novembre.",
     "expire": "2026-11-02"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 14 octobre 2026 portant extension",
+    "date": "2026-10-27",
+    "note": "IDCC 16 : 4 avenants « protection santé » (mutuelle) et l'accord « compagnon déménageur » (+2 % du taux horaire, coefficient 1C DEM) : note ajoutée dans GrillePaye le 27/10/2026. Aucune règle HS ni grille à changer."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 octobre 2026 portant extension",
+    "date": "2026-10-27",
+    "note": "IDCC 176 : accord du 8/07/2025 sur l'emploi des seniors. Ni grille, ni heures sup, ni temps partiel."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 13 octobre 2026 portant extension d'un avenant à un accord",
+    "date": "2026-10-27",
+    "note": "IDCC 1978 : avenant n° 4 sur la prévoyance. Rien à reporter."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "charcuterie de détail (n° 953)",
+    "date": "2026-10-27",
+    "note": "Grille 953 mise à jour le 27/10/2026 (avenant n° 65, au 01/06/2026)."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-13.708",
+    "date": "2026-10-27",
+    "note": "Arrêt F-B (NAO) : propositions retirées ≠ engagement unilatéral. Phrase ajoutée dans negociation-annuelle-obligatoire-nao-guide.html le 27/10/2026."
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "R323-1 (CSS)",
+    "date": "2026-10-27",
+    "note": "Décret 2026-866 du 16/09/2026 (ALD non exonérante : 1 an d'IJ, arrêts prescrits depuis le 15/10/2026). Guide arret-maladie-salarie.html et outil module-arret.html mis à jour le 27/10/2026.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "Texte adopté n° 358",
+    "date": "2026-10-27",
+    "note": "PLFSS 2027 rejeté par l'Assemblée en première lecture : rien à appliquer, la navette continue au Sénat."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3350",
+    "date": "2026-10-27",
+    "note": "Rapport sur une proposition de loi (augmentation des salaires et des pensions) : pas une loi, rien à appliquer."
   }
 ]

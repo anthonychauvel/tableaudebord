@@ -1,17 +1,17 @@
 {
-  "genere": "2026-10-26T16:14:44.914514+00:00",
-  "exceptions_appliquees": 606,
-  "nouvelles_alertes": 17,
+  "genere": "2026-10-27T10:50:02.789328+00:00",
+  "exceptions_appliquees": 620,
+  "nouvelles_alertes": 9,
   "routage": {
     "par_zone": {
-      "app": 10,
-      "outils": 4,
-      "grilles": 15,
-      "guide": 10,
+      "app": 9,
+      "outils": 6,
+      "grilles": 8,
+      "guide": 15,
       "mlt": 4,
-      "veille": 3
+      "veille": 2
     },
-    "non_routees": 2,
+    "non_routees": 1,
     "zones": {
       "app": {
         "nom": "Application",
@@ -83,8 +83,8 @@
         {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 13 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 13 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 14 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 14 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -151,312 +151,392 @@
       "id": "contenu",
       "titre": "Contenu des articles cités et phrases fausses connues",
       "module": "contenu-articles",
-      "alertes": [
-        {
-          "categorie": "contenu-article-modifie",
-          "gravite": "moyenne",
-          "titre": "R323-1 (CSS) : le texte a changé depuis la dernière vérification",
-          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 3.0 -> 4.0). Cité dans 1 fichier(s) — guide : arret-maladie-salarie.html.\n\nAVANT — Pour l'application du premier alinéa de l'article L. 323-1 : 1°) le point de départ de l'indemnité journalière définie par de l'article L. 321-1 est le quatrième jour de l'incapacité de travail. Ce délai ne s'applique, pour une période de trois ans, qu'au premier des arrêts de travail dus à une…\n\nAPRÈS — Pour l'application de l'article L. 323-1 : 1°) le point de départ de l'indemnité journalière définie par de l'article L. 321-1 est le quatrième jour de l'incapacité de travail. Ce délai ne s'applique, pour la période pendant laquelle l'indemnité journalière peut être servie, qu'au premier des…\n\nRelevé complet des lieux : releves/R323-1.txt",
-          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R323-1&code=secu",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "arret-maladie-salarie.html"
-              ],
-              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
-              "raison": "cite R323-1",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "mlt",
-              "cible": "Fiches articles de MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul — vérifier la fiche si besoin",
-              "raison": "texte du Code",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "nouveaux",
       "titre": "📰 Nouveaux textes sur tes sujets",
       "alertes": [
         {
-          "categorie": "nouveau-texte-jorf",
+          "categorie": "nouvelle-jurisprudence",
           "gravite": "moyenne",
-          "titre": "Arrêté du 14 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des transports routiers… : concerne une convention de l'appli (IDCC 16)",
-          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003186",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-21",
-          "vu_le": "2026-10-26",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 22-14.023 e.a. : applique des articles que tu cites : L3132-12, R3132-5",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 22-14.023 e.a.\n\nElle applique des articles que tu cites : L3132-12, R3132-5.\n\nCe que la Cour a jugé : En application de ce texte, d'une part, les créances salariales portent intérêt au taux légal à compter de la sommation de payer ou d'un autre acte équivalent telle une lettre missive s'il en résulte une interpellation suffisante, et, d'autre part, l'intérêt n'est dû que si la créance est exigible. 12. L'arrêt, après avoir condamné l'employeur à payer à la salariée des sommes de 16 311,68 euros à titre de rappel sur majoration de salaire et de 1 631,17 euros de congés payés afférents, rappelle…\n\n⏱️ Heures supplémentaires — « majoration de salaire » : …'est dû que si la créance est exigible. 12. L'arrêt, après avoir condamné l'employeur à payer à la salariée des sommes de 16 311,68 euros à titre de rappel sur majoration de salaire et de 1 631,17 euros de congés payés afférents, rappelle que les intérêts au taux légal portant sur les condamnations de nature salariale sont dus à compter de…\n🕘 Durée du travail — « repos dominical » : …i remettre des bulletins de salaire rectifiés, alors « que les établissements de hammam et spa bénéficient, de manière permanente, de la dérogation de droit au repos dominical ; que l'activité de spa, entendue comme l'exercice de techniques de bien être, de modelage et de soins par l'eau par référence à des codes culturels, inclut né…\n🏖️ Repos et congés — « repos hebdomadaire » : …écessaire par les contraintes de la production, de l'activité ou les besoins du public, peuvent de droit déroger à la règle du repos dominical en attribuant le repos hebdomadaire par roulement. Un décret en Conseil d'Etat détermine les catégories d'établissements intéressées. 7. Selon l'article R. 3132-5 du code du travail, dans sa réda…",
+          "lien": "https://www.courdecassation.fr/decision/6acf408a7a102021374087f1",
+          "fonds": "Juris",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
           "nouveau": true,
           "cibles": [
             {
               "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "cible": "M3 · Fox, moteur juridique",
               "fichiers": [
-                "ccn/conventions-collectives.js"
+                "fox/js/articles-loi.js",
+                "fox/js/scenarios-ai.js"
               ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
-              "raison": "IDCC 16 a des règles dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3132-12",
               "auto": false,
               "plus": 0
             },
             {
-              "zone": "grilles",
-              "cible": "IDCC 16 — Transport routier de marchandises",
+              "zone": "guide",
+              "cible": "Pages du guide",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "repos-dominical-derogations-guide.html",
+                "travail-equipe-feu-continu-guide.html"
               ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3132-12 · cite R3132-5",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
             "app",
-            "grilles"
+            "guide"
           ]
         },
         {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
-          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003195",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-21",
-          "vu_le": "2026-10-26",
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Rejet · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : C'est dans l'exercice de son pouvoir souverain d'appréciation que le conseil de prud'hommes, sans modifier l'objet du litige, a estimé que les pièces produites par le salarié ne permettaient pas d'établir le bien-fondé des demandes, formées par le salarié, en paiement d'un solde d'indemnité compensatrice de préavis, d'un solde d'allocation congé de reclassement 65 %, d'un solde d'allocation congé de reclassement 81 % et d'un solde d'indemnité conventionnelle de licenciement. 7. Le moyen n'est…\n\n🏖️ Repos et congés — « congés payés » : …n 5. Le salarié fait grief au jugement de le débouter de ses demandes en paiement de diverses sommes à titre de soldes d'indemnité compensatrice de préavis, de congés payés afférents, d'allocation congé de reclassement 65 %, d'allocation congé de reclassement 81 % et d'indemnité conventionnelle de licenciement, alors « qu'en affir…",
+          "lien": "https://www.courdecassation.fr/decision/6acf407c7a10202137408228",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
           "nouveau": true,
           "cibles": [
             {
               "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "cible": "M1 · Compteur annuel des heures sup",
               "fichiers": [
-                "ccn/conventions-collectives.js"
+                "heures/index.html"
               ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
-              "raison": "IDCC 16 a des règles dans l'appli",
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
               "auto": false,
               "plus": 0
             },
             {
-              "zone": "grilles",
-              "cible": "IDCC 16 — Transport routier de marchandises",
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "paye/index.html"
               ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
             "app",
-            "grilles"
+            "outils",
+            "guide"
           ]
         },
         {
-          "categorie": "nouveau-texte-jorf",
+          "categorie": "nouvelle-jurisprudence",
           "gravite": "moyenne",
-          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
-          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003205",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-21",
-          "vu_le": "2026-10-26",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-14.651 e.a. : applique des articles que tu cites : L2253-1",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation FS-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-14.651 e.a.\n\nElle applique des articles que tu cites : L2253-1.\n\nCe que la Cour a jugé : Selon le premier de ces textes, les dispositions du programme social cible, parmi lesquelles figurent celles relatives aux rémunérations et aux primes, viennent soit compléter, pour les améliorer, les dispositions de la convention collective nationale applicables à l'entreprise, soit en préciser les modalités d'application, soit encore poser des avantages particuliers supplémentaires à ceux existants de par la convention collective de branche. 14. Aux termes du second de ces textes, le montant…\n\n⏱️ Heures supplémentaires — « heures supplémentaires » : …des statuts conclu le 29 mars 2007 prévoit que, pour le calcul de la prime annuelle, \"le salaire de référence comprend : - le salaire forfaitaire mensuel brut, heures supplémentaires exceptionnelles exclues, les primes fixes attribuées à titre individuel, comme par exemple les primes de remplacement, sauf intéressement, - la moyenne des heu…\n🕐 Temps partiel — « heures complémentaires » : …res exceptionnelles exclues, les primes fixes attribuées à titre individuel, comme par exemple les primes de remplacement, sauf intéressement, - la moyenne des heures complémentaires pour les salariés à temps partiel\" ; qu'il en résulte que l'accord d'entreprise ne se borne pas à exclure les heures supplémentaires exceptionnelles de l'assie…\n🕘 Durée du travail — « travail de nuit » : …'assiette de calcul de la prime annuelle les heures supplémentaires exceptionnelles\", les majorations pour travail le dimanche, travail effectué un jour férié, travail de nuit et pauses indemnisées doivent être prises en compte dans l'assiette de calcul de la prime annuelle, la cour d'appel a violé l'article L. 2253-3 du code du trav…\n🏖️ Repos et congés — « congés payés » : …pourvois principaux de l'employeur Enoncé du moyen 5. L'employeur fait grief aux arrêts de le condamner à payer aux salariés un rappel de prime annuelle, outre congés payés afférents, et au syndicat une somme à titre de dommages et intérêts, alors : « 1°/ que selon l'article L. 2253-3 du code du travail, entré en vigueur le 1er ja…\n💶 Salaires minima — « salaires minima » : …lles ayant le même objet prévues par la convention de branche ; qu'à l'exception des primes pour travaux dangereux ou insalubres, les primes qui s'ajoutent aux salaires minima hiérarchiques n'étant énumérées par les articles L. 2253-1 et L. 2253 2 du code du travail, les dispositions d'un accord collectif définissant les modalités de…",
+          "lien": "https://www.courdecassation.fr/decision/6acf40797a102021374080f1",
+          "fonds": "Juris",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-10-14",
+          "formation": "FS-D",
+          "vu_le": "2026-10-27",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "semaine-4-jours-droit-travail-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2253-1",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "moyenne",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-14.862 e.a. : applique des articles que tu cites : L1237-11, L1237-13, L2253-1",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Rejet · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-14.862 e.a.\n\nElle applique des articles que tu cites : L1237-11, L1237-13, L2253-1.\n\nCe que la Cour a jugé : Selon l'article 12 de l'accord national interprofessionnel du 11 janvier 2008, modifié par l'avenant n° 4 du 18 mai 2009 étendu par arrêté du 26 novembre 2009, l'accès aux indemnités de rupture est assuré par le versement d'une indemnité spécifique dont le montant ne peut être inférieur à celui de l'indemnité de rupture prévue à l'article 11 ni à l'indemnité conventionnelle de licenciement prévue par la convention collective applicable. 8. L'article IV de l'accord national interprofessionnel…",
+          "lien": "https://www.courdecassation.fr/decision/6acf40987a10202137408cd8",
+          "fonds": "Juris",
+          "theme": "Article cité",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
           "nouveau": true,
           "cibles": [
             {
               "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "cible": "Fichiers communs (références de loi, glossaire, scripts)",
               "fichiers": [
-                "ccn/conventions-collectives.js"
+                "legi-ref.js"
               ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
-              "raison": "IDCC 16 a des règles dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
               "auto": false,
               "plus": 0
             },
             {
-              "zone": "grilles",
-              "cible": "IDCC 16 — Transport routier de marchandises",
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "module6/js/data/glossaire-cadres.js"
               ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/index.html",
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CDI / CDD / Intérim",
+              "fichiers": [
+                "outils/module-contrats.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Rupture Conventionnelle",
+              "fichiers": [
+                "outils/module-rupture.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Comparatif Ruptures",
+              "fichiers": [
+                "outils/module-preavis-comp.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-13",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "rupture-conventionnelle.html",
+                "semaine-4-jours-droit-travail-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-11 · cite L1237-13 · cite L2253-1",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
             "app",
-            "grilles"
+            "outils",
+            "guide"
           ]
         },
         {
-          "categorie": "nouveau-texte-jorf",
+          "categorie": "nouvelle-jurisprudence",
           "gravite": "moyenne",
-          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
-          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003215",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-21",
-          "vu_le": "2026-10-26",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-16.937 e.a. : applique des articles que tu cites : L1221-1, L1231-1",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-16.937 e.a.\n\nElle applique des articles que tu cites : L1221-1, L1231-1.\n\nCe que la Cour a jugé : Il résulte des deux premiers de ces textes que l'acte par lequel un employeur propose un engagement précisant l'emploi, la rémunération et la date d'entrée en fonction et exprime la volonté de son auteur d'être lié en cas d'acceptation, constitue une offre de contrat de travail, qui peut être librement rétractée tant qu'elle n'est pas parvenue à son destinataire ; que la rétractation de l'offre avant l'expiration du délai fixé par son auteur ou, à défaut, l'issue d'un délai raisonnable, fait…\n\n🏖️ Repos et congés — « congés payés » : …21 au 25 juin 2021, en remboursement des frais d'abonnement exposés pour le déplacement entre le domicile et le lieu de travail et en paiement d'indemnités de congés payés sur rappel de salaire, pour licenciement sans cause réelle ni sérieuse, pour travail dissimulé et pour non-respect de la procédure de licenciement, alors : « 1…",
+          "lien": "https://www.courdecassation.fr/decision/6acf40917a10202137408a8e",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
           "nouveau": true,
           "cibles": [
             {
               "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "cible": "M3 · Fox, moteur juridique",
               "fichiers": [
-                "ccn/conventions-collectives.js"
+                "fox/js/articles-loi.js",
+                "fox/js/scenarios-ai.js"
               ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
-              "raison": "IDCC 16 a des règles dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1221-1 · cite L1231-1",
               "auto": false,
               "plus": 0
             },
             {
-              "zone": "grilles",
-              "cible": "IDCC 16 — Transport routier de marchandises",
+              "zone": "guide",
+              "cible": "Pages du guide",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "interim-vs-cdd-vs-cdi-comparatif.html"
               ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1221-1",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
             "app",
-            "grilles"
+            "guide"
           ]
         },
         {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 16)",
-          "detail": "Paru au JO le 2026-10-21. Ce texte concerne une convention de l'appli (IDCC 16).\n\nArrêté du 14 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des transports routiers et des activités auxiliaires du transport (n° 16)\n\nArticles de code cités dans le texte : R871-2",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055003225",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-21",
-          "vu_le": "2026-10-26",
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : Selon ce texte, l'objet du litige est déterminé par les prétentions respectives des parties. 7. Pour dire que la prise d'acte de la rupture du contrat de travail du 5 mars 2024 aux torts de l'employeur produit les effets d'un licenciement nul et condamner l'employeur à payer à la salariée des dommages et intérêts pour licenciement nul, l'arrêt retient que la prise d'acte étant pour partie justifiée par des faits de harcèlement moral, la demande de la salariée en dommages et intérêts pour…\n\n🏖️ Repos et congés — « congés payés » : …salariée de percevoir des indemnités journalières complémentaires et de le condamner à payer à la salariée certaines sommes à titre de rappel de salaire et de congés payés afférents, à titre d'indemnité compensatrice de préavis et de congés payés afférents, à titre de dommages et intérêts pour licenciement nul et de dommages et i…",
+          "lien": "https://www.courdecassation.fr/decision/6acf409f7a10202137408f92",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
           "nouveau": true,
           "cibles": [
             {
               "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "cible": "M1 · Compteur annuel des heures sup",
               "fichiers": [
-                "ccn/conventions-collectives.js"
+                "heures/index.html"
               ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 16",
-              "raison": "IDCC 16 a des règles dans l'appli",
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
               "auto": false,
               "plus": 0
             },
             {
-              "zone": "grilles",
-              "cible": "IDCC 16 — Transport routier de marchandises",
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
               "fichiers": [
-                "GrillePaye/ccn-data.json"
+                "paye/index.html"
               ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 16, grille « real » dans l'appli",
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
               "auto": false,
               "plus": 0
             }
           ],
           "zones": [
             "app",
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 6 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie… : concerne une convention de l'appli (IDCC 176)",
-          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 176).\n\nArrêté du 6 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie pharmaceutique (n° 176)\n\nArticles de code cités dans le texte : D3123-16-1, L3123-4-1, L5422-12",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006630",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-22",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
-              "fichiers": [
-                "ccn/conventions-collectives.js"
-              ],
-              "action": "Vérifier si le texte change les règles HS / temps partiel / forfait de l'IDCC 176",
-              "raison": "IDCC 176 a des règles dans l'appli",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "IDCC 176 — Industrie pharmaceutique",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 176, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 13 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des… : concerne une convention de l'appli (IDCC 1978)",
-          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1978).\n\nArrêté du 13 octobre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des fleuristes, de la vente et des services des animaux familiers (n° 1978)",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006642",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-22",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 1978 — Fleuristes vente et services animaux familiers",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 1978, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
+            "outils",
+            "guide"
           ]
         },
         {
@@ -469,7 +549,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-22",
           "vu_le": "2026-10-26",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -489,34 +569,6 @@
         },
         {
           "categorie": "nouveau-texte-jorf",
-          "gravite": "moyenne",
-          "titre": "Arrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale de la charcuterie de détail (n° 953) : concerne une convention de l'appli (IDCC 953)",
-          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 953).\n\nArrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale de la charcuterie de détail (n° 953)\n\nArticles de code cités dans le texte : L2261-15",
-          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006661",
-          "fonds": "JORF",
-          "theme": "Convention de l'appli",
-          "date_texte": "2026-10-22",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "grilles",
-              "cible": "IDCC 953 — Charcuterie de détail",
-              "fichiers": [
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 953, grille « real » dans l'appli",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "grilles"
-          ]
-        },
-        {
-          "categorie": "nouveau-texte-jorf",
           "gravite": "haute",
           "titre": "Arrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606) : concerne une convention de l'appli (IDCC 1606) — Salaires minima",
           "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1606) — Salaires minima.\n\nArrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606)\n\n💶 Salaires minima — « salaires minima » : …'application de la convention collective nationale du bricolage du 30 septembre 1991, les stipulations de l'accord professionnel du 29 juillet 2026 relatif aux salaires minima conventionnels, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à comp…",
@@ -525,7 +577,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-22",
           "vu_le": "2026-10-26",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -565,7 +617,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-24",
           "vu_le": "2026-10-26",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "veille",
@@ -591,7 +643,7 @@
           "theme": "Astreintes",
           "date_texte": "2026-10-25",
           "vu_le": "2026-10-26",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "mlt",
@@ -614,76 +666,6 @@
           ],
           "zones": [
             "mlt"
-          ]
-        },
-        {
-          "categorie": "nouvelle-jurisprudence",
-          "gravite": "haute",
-          "titre": "Cour de cassation Chambre sociale, 2026-10-21, n° 25-13.708 e.a. : applique des articles que tu cites : L1221-1, L2242-1",
-          "detail": "Décision du 2026-10-21 — Cour de cassation Chambre sociale · solution : Rejet · formation F-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-21, n° 25-13.708 e.a.\n\nElle applique des articles que tu cites : L1221-1, L2242-1.\n\nCe que la Cour a jugé : Ayant constaté d'une part, par une appréciation souveraine des éléments de fait et de preuve soumis à son examen, que les syndicats n'avaient pas accepté les propositions d'augmentation des salaires et de certaines primes avant leur retrait par l'employeur lors de la réunion du 27 avril 2021, et d'autre part que l'employeur avait motivé le retrait de ses propositions par des événements survenus au cours des négociations fragilisant la situation économique de l'entreprise, la cour d'appel, qui…\n\n📟 Astreintes — « astreinte » : …yndicat CGT Valdepharm et le syndicat Sud chimie (les syndicats) ont saisi la formation de référé du tribunal judiciaire de demandes notamment d'exécution sous astreinte par l'employeur de son engagement rétroactivement au 1er avril 2021 d'augmenter les salaires et certaines primes ainsi que des demandes de provisions sur domma…\n💶 Salaires minima — « grille de salaires » : …n du 5 mai 2021, l'employeur a confirmé le retrait de sa proposition d'augmentation générale des salaires pour l'année 2021 et a proposé la mise en place d'une grille de salaires minimum à l'embauche et du télétravail occasionnel, la prise en charge intégrale des montures de lunettes dans les conditions proposées par la mutuelle, l'orga…",
-          "lien": "https://www.courdecassation.fr/decision/6ad8888e7a1020213707fbc2",
-          "fonds": "Juris",
-          "theme": "Astreintes",
-          "date_texte": "2026-10-21",
-          "etiquettes": [
-            "Publiée au Bulletin"
-          ],
-          "formation": "F-B",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "M3 · Fox, moteur juridique",
-              "fichiers": [
-                "fox/js/articles-loi.js"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L1221-1",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
-              "fichiers": [
-                "outils/articles-loi.js"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L2242-1",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Seuils d'effectif",
-              "fichiers": [
-                "outils/module-effectifs.html"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L2242-1",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "interim-vs-cdd-vs-cdi-comparatif.html",
-                "nao-negociation-annuelle-hs-guide.html",
-                "negociation-annuelle-obligatoire-nao-guide.html",
-                "seuils-effectifs-guide.html"
-              ],
-              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
-              "raison": "cite L1221-1 · cite L2242-1",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "outils",
-            "guide"
           ]
         },
         {
@@ -1032,6 +1014,57 @@
       "module": "veille-sources-officielles",
       "alertes": [
         {
+          "categorie": "decision-haute-juridiction",
+          "gravite": "haute",
+          "titre": "🏛️ Conseil d'État — Conseil d'État, 1ère et 4ème chambres réunies, 23/10/2026, 497765",
+          "detail": "Conseil d'État — Conseil d'État — n° 497765 — 2026-10-23.\n\nConseil d'État, 1ère et 4ème chambres réunies, 23/10/2026, 497765\n\nSolution : Satisfaction partielle\n\n⚠️ Articles que l'écosystème cite : L1225-35, L3142-1\n\nExtrait : Vu les procédures suivantes : 1° Sous le n° 497765, par une requête sommaire, un mémoire complémentaire et deux nouveaux mémoires, enregistrés les 11 septembre et 11 décembre 2024 et les 4 avril et 15 décembre 2025 au secrétariat du contentieux du Conseil d’Etat, l’association des parents et futurs parents gays et lesbiens demande au Conseil d’Etat : 1°) d’annuler pour excès de pouvoir la circulaire CIR-20/2024 du 11 juillet 2024 de la Caisse nationale de l’assurance maladie relative aux droits…",
+          "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000055013104",
+          "date_texte": "2026-10-23",
+          "vu_le": "2026-10-27",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M6 · Zenji, cadres et forfaits",
+              "fichiers": [
+                "module6/js/features/nullite-checker.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1225-35",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1225-35",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paternite-accueil-enfant-guide.html",
+                "conges-evenements-familiaux.html",
+                "maladie-enfant-conges-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1225-35 · cite L3142-1",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "guide"
+          ]
+        },
+        {
           "categorie": "boss-modifie",
           "gravite": "haute",
           "titre": "BOSS — Toutes les actualités du Boss : 22 paragraphe(s) modifié(s)",
@@ -1053,105 +1086,6 @@
           ],
           "zones": [
             "mlt"
-          ]
-        },
-        {
-          "categorie": "texte-parlement",
-          "gravite": "moyenne",
-          "titre": "🏛️ N° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant…",
-          "detail": "Assemblée — commission des affaires sociales — Mon, 26 Oct 2026 10:00:00 +0000.\n\nN° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant l'augmentation des salaires et des pensions (3176).\n\nN° 3350 rapport - Rapport de M. Hadrien Clouet sur la proposition de loi de M. Hadrien Clouet et plusieurs de ses collègues visant l'augmentation des salaires et des pensions (3176).\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
-          "lien": "https://www.assemblee-nationale.fr/17/rapports/r3350.asp",
-          "date_texte": "2026-10-26",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "veille",
-              "cible": "À trier",
-              "fichiers": [],
-              "action": "Aucune destination reconnue : lire et décider",
-              "raison": "non routé",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "veille"
-          ]
-        },
-        {
-          "categorie": "texte-parlement",
-          "gravite": "haute",
-          "titre": "🏛️ Texte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027",
-          "detail": "Assemblée — commission des affaires sociales — Fri, 23 Oct 2026 15:05:00 +0000.\n\nTexte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027\n\nTexte adopté n° 358 - Projet de loi de financement de la sécurité sociale rejeté par l'Assemblée nationale, pour 2027\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
-          "lien": "https://www.assemblee-nationale.fr/17/ta/ta0358.asp",
-          "date_texte": "2026-10-26",
-          "vu_le": "2026-10-26",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "M2 · Heures mensualisées (paye)",
-              "fichiers": [
-                "paye/index.html"
-              ],
-              "action": "Vérifier que le calcul et les textes du module suivent la règle",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Bulletin de Paie Décrypté",
-              "fichiers": [
-                "outils/module-bulletin.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Net · Brut · Coût employeur",
-              "fichiers": [
-                "outils/module-salaire-cout-employeur.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Lexique Bulletin",
-              "fichiers": [
-                "outils/module-lexique.html"
-              ],
-              "action": "Vérifier montants, règles et textes de l'outil",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "csg-crds-salaire-guide.html",
-                "bulletin-paie-comprendre.html",
-                "hs-salaires-nets-bruts-guide.html",
-                "controle-redressement-urssaf-guide.html"
-              ],
-              "action": "Relire les pages de fond sur ce thème",
-              "raison": "thème : cotisations",
-              "auto": false,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "outils",
-            "guide"
           ]
         },
         {
@@ -1283,7 +1217,70 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "7 fichiers modifiés (2026-10-27) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (5) : menu.html, nouveautes.html, sw.js, grillepaye:ccn-data.json, outil:module-arret.html\n\nGUIDE (2) : arret-maladie-salarie.html, negociation-annuelle-obligatoire-nao-guide.html",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "menu.html",
+                "nouveautes.html",
+                "sw.js"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Arrêt Maladie",
+              "fichiers": [
+                "outils/module-arret.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "arret-maladie-salarie.html",
+                "negociation-annuelle-obligatoire-nao-guide.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
     },
     {
       "id": "age",

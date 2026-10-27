@@ -845,5 +845,16 @@
       "basse": 1
     },
     "nouvelles_alertes": 17
+  },
+  {
+    "fichier": "2026-10-27-105002.json",
+    "genere": "2026-10-27T10:50:02.789328+00:00",
+    "total": 23,
+    "par_gravite": {
+      "haute": 10,
+      "moyenne": 9,
+      "basse": 4
+    },
+    "nouvelles_alertes": 9
   }
 ]

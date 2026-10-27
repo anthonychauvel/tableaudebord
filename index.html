@@ -320,10 +320,10 @@ details.carte>summary .chev{line-height:34px;}
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:24px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
   <div style="font-size:34px;margin-bottom:14px;">🔒</div>
-  <div style="color:#8A97A5;font-size:13px;margin-bottom:14px;text-align:center;line-height:1.4">Clé d'administration<br><small style="font-size:11px">la même que <b>ADMIN_KEY</b> dans Cloudflare (Vezoria)</small></div>
-  <input id="gateUrl" type="url" autocomplete="off" autocapitalize="off" placeholder="Adresse de Vezoria (https://…)"
-    style="background:#1B2027;border:1px solid #2E3742;border-radius:12px;color:#E8EDF2;font-size:15px;padding:12px 14px;width:280px;margin-bottom:8px;">
-  <input id="gateCode" type="password" autocomplete="current-password" placeholder="Clé"
+  <div style="color:#8A97A5;font-size:13px;margin-bottom:14px;text-align:center;line-height:1.4">Accès privé</div>
+  <input id="gateUrl" type="url" autocomplete="off" autocapitalize="off" placeholder="Adresse"
+    style="display:none;background:#1B2027;border:1px solid #2E3742;border-radius:12px;color:#E8EDF2;font-size:15px;padding:12px 14px;width:280px;margin-bottom:8px;">
+  <input id="gateCode" type="password" autocomplete="current-password" placeholder="Code d’accès"
     style="background:#1B2027;border:1px solid #2E3742;border-radius:12px;color:#E8EDF2;font-size:17px;padding:13px 14px;width:280px;">
   <button id="gateGo" type="button" style="margin-top:12px;width:280px;border:0;border-radius:12px;padding:13px;font-weight:800;font-size:15px;background:#6EA8FE;color:#0B0E12;">Ouvrir</button>
   <div id="gateErr" style="color:#e05c5c;font-size:12px;margin-top:10px;height:16px;"></div>
@@ -1469,20 +1469,20 @@ if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');
   if(lire(CLE_LOCAL) === OK){ ouvrir(); }
   else {
     app.style.display = 'none';
-    url.value = lire('vz_admin_url'); if(url.value) url.style.display = 'none';
-    (url.value ? champ : url).focus();
+    url.value = lire('vz_admin_url') || 'https://vezoria.pages.dev';   // rien n'est affiché à l'écran
+    champ.focus();
     async function essayer(){
       const u = (url.value || '').trim().replace(/\/+$/, ''), k = champ.value;
-      if(!/^https:\/\//.test(u)){ url.style.display = ''; erreur.textContent = 'Adresse de Vezoria manquante (https://…)'; return; }
-      if(!k){ erreur.textContent = 'Saisis la clé'; return; }
+      if(!/^https:\/\//.test(u)){ erreur.textContent = 'Accès impossible'; return; }
+      if(!k){ erreur.textContent = 'Code d’accès ?'; return; }
       btn.disabled = true; erreur.style.color = '#8A97A5'; erreur.textContent = 'Vérification…';
       try {
         const r = await fetch(u + '/api/admin', {method:'POST', headers:{'Content-Type':'application/json', 'X-Admin-Key':k}, body:'{"action":"list"}'});
         erreur.style.color = '#e05c5c';
         if(r.ok){ ecrire('vz_admin_url', u); Coffre.set('vz_admin_key', k); ecrire(CLE_LOCAL, OK); erreur.textContent = ''; ouvrir(); return; }
-        erreur.textContent = r.status === 403 ? 'Clé incorrecte' : r.status === 404 ? 'ADMIN_KEY absente dans Cloudflare (ou pas encore redéployé)' : 'Erreur du serveur (' + r.status + ')';
+        erreur.textContent = r.status === 429 ? 'Trop d’essais : réessaie plus tard' : 'Code incorrect';   // aucun indice sur l’origine du code
         champ.value = '';
-      } catch(e){ erreur.style.color = '#e05c5c'; erreur.textContent = 'Serveur injoignable : vérifie l’adresse et le réseau'; url.style.display = ''; }
+      } catch(e){ erreur.style.color = '#e05c5c'; erreur.textContent = 'Pas de connexion'; }
       finally { btn.disabled = false; }
     }
     btn.addEventListener('click', essayer);

@@ -1,0 +1,1029 @@
+{
+  "genere": "2026-10-28T16:07:56.400681+00:00",
+  "exceptions_appliquees": 625,
+  "nouvelles_alertes": 3,
+  "routage": {
+    "par_zone": {
+      "app": 5,
+      "outils": 4,
+      "grilles": 8,
+      "guide": 10,
+      "mlt": 4,
+      "veille": 3
+    },
+    "non_routees": 2,
+    "zones": {
+      "app": {
+        "nom": "Application",
+        "emoji": "📱",
+        "depot": "hs"
+      },
+      "outils": {
+        "nom": "105 outils",
+        "emoji": "🧰",
+        "depot": "hs"
+      },
+      "grilles": {
+        "nom": "GrillePaye · Lumina",
+        "emoji": "💶",
+        "depot": "hs"
+      },
+      "guide": {
+        "nom": "Guide",
+        "emoji": "📘",
+        "depot": "guide"
+      },
+      "mlt": {
+        "nom": "MonLegiTexte",
+        "emoji": "⚖️",
+        "depot": "droit"
+      },
+      "veille": {
+        "nom": "Chaîne de veille",
+        "emoji": "🩺",
+        "depot": "tableaudebord"
+      }
+    },
+    "ordre": [
+      "app",
+      "outils",
+      "grilles",
+      "guide",
+      "mlt",
+      "veille"
+    ],
+    "index": {
+      "articles": 522,
+      "pages_guide": 980,
+      "outils": 104,
+      "idcc_grilles": 340
+    }
+  },
+  "sections": [
+    {
+      "id": "croisement",
+      "titre": "🔔 Textes parus pour une CCN en attente",
+      "alertes": []
+    },
+    {
+      "id": "grilles",
+      "titre": "Grilles CCN",
+      "alertes": []
+    },
+    {
+      "id": "smic",
+      "titre": "💶 Revalorisation du SMIC",
+      "alertes": []
+    },
+    {
+      "id": "droit",
+      "titre": "MonLegiTexte",
+      "module": "monlegitexte-droit",
+      "alertes": [
+        {
+          "categorie": "run-en-retard",
+          "gravite": "moyenne",
+          "titre": "[OIT] Dernier run vieux de 15 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 15 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "Aspirateur (dépôt droit, Actions)",
+              "fichiers": [],
+              "action": "Ouvrir le dernier passage dans GitHub Actions et relancer / corriger",
+              "raison": "santé de la veille",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        }
+      ],
+      "hors_sujet_ignores": 0
+    },
+    {
+      "id": "modules",
+      "titre": "8 modules",
+      "alertes": []
+    },
+    {
+      "id": "outils",
+      "titre": "105 outils",
+      "alertes": []
+    },
+    {
+      "id": "guide",
+      "titre": "Guide SEO",
+      "alertes": []
+    },
+    {
+      "id": "syntaxe",
+      "titre": "Syntaxe JS (page entière cassée)",
+      "module": "syntaxe-js",
+      "alertes": []
+    },
+    {
+      "id": "pages",
+      "titre": "Pages qui ne se chargent plus (ouverture réelle)",
+      "module": "pages",
+      "alertes": []
+    },
+    {
+      "id": "citations",
+      "titre": "Citations juridiques (guide + modules)",
+      "alertes": []
+    },
+    {
+      "id": "structure",
+      "titre": "Structure (JSON-LD, outils orphelins)",
+      "alertes": []
+    },
+    {
+      "id": "noindex",
+      "titre": "MonLegiTexte — noindex en direct",
+      "module": "noindex-live",
+      "alertes": []
+    },
+    {
+      "id": "contenu",
+      "titre": "Contenu des articles cités et phrases fausses connues",
+      "module": "contenu-articles",
+      "alertes": []
+    },
+    {
+      "id": "nouveaux",
+      "titre": "📰 Nouveaux textes sur tes sujets",
+      "alertes": [
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Rejet · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : C'est dans l'exercice de son pouvoir souverain d'appréciation que le conseil de prud'hommes, sans modifier l'objet du litige, a estimé que les pièces produites par le salarié ne permettaient pas d'établir le bien-fondé des demandes, formées par le salarié, en paiement d'un solde d'indemnité compensatrice de préavis, d'un solde d'allocation congé de reclassement 65 %, d'un solde d'allocation congé de reclassement 81 % et d'un solde d'indemnité conventionnelle de licenciement. 7. Le moyen n'est…\n\n🏖️ Repos et congés — « congés payés » : …n 5. Le salarié fait grief au jugement de le débouter de ses demandes en paiement de diverses sommes à titre de soldes d'indemnité compensatrice de préavis, de congés payés afférents, d'allocation congé de reclassement 65 %, d'allocation congé de reclassement 81 % et d'indemnité conventionnelle de licenciement, alors « qu'en affir…",
+          "lien": "https://www.courdecassation.fr/decision/6acf407c7a10202137408228",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : Selon ce texte, l'objet du litige est déterminé par les prétentions respectives des parties. 7. Pour dire que la prise d'acte de la rupture du contrat de travail du 5 mars 2024 aux torts de l'employeur produit les effets d'un licenciement nul et condamner l'employeur à payer à la salariée des dommages et intérêts pour licenciement nul, l'arrêt retient que la prise d'acte étant pour partie justifiée par des faits de harcèlement moral, la demande de la salariée en dommages et intérêts pour…\n\n🏖️ Repos et congés — « congés payés » : …salariée de percevoir des indemnités journalières complémentaires et de le condamner à payer à la salariée certaines sommes à titre de rappel de salaire et de congés payés afférents, à titre d'indemnité compensatrice de préavis et de congés payés afférents, à titre de dommages et intérêts pour licenciement nul et de dommages et i…",
+          "lien": "https://www.courdecassation.fr/decision/6acf409f7a10202137408f92",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale des distributeurs conseils hors domicile (n°… : concerne une convention de l'appli (IDCC 1536) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1536) — Salaires minima.\n\nArrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale des distributeurs conseils hors domicile (n° 1536)\n\n💶 Salaires minima — « salaires minima » : …e la convention collective nationale des distributeurs conseils hors domicile du 15 décembre 1971, les stipulations de l'avenant 2026/3 du 29 juin 2026 sur les salaires minima conventionnels au 1 er juin 2026 portant révision de la grille des salaires minima visée par l'annexe 1 de la convention collective issue de l'accord 2021/2 du…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006651",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1536 — Distributeurs conseils hors domicile (CHD)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1536, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606) : concerne une convention de l'appli (IDCC 1606) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-22. Ce texte concerne une convention de l'appli (IDCC 1606) — Salaires minima.\n\nArrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage (n° 1606)\n\n💶 Salaires minima — « salaires minima » : …'application de la convention collective nationale du bricolage du 30 septembre 1991, les stipulations de l'accord professionnel du 29 juillet 2026 relatif aux salaires minima conventionnels, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à comp…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055006672",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-22",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1606 — Bricolage commerce de détail",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1606, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "bricolage-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1606",
+              "raison": "parlent de l'IDCC 1606",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 22 octobre 2026 portant extension d'avenants salariaux à des conventions collectives de travail étendues relatives aux… : parle de : Salaires minima",
+          "detail": "Paru au JO le 2026-10-24. Ce texte parle de : Salaires minima.\n\nArrêté du 22 octobre 2026 portant extension d'avenants salariaux à des conventions collectives de travail étendues relatives aux professions agricoles\n\n💶 Salaires minima — « salaire minimum de croissance » : …ion professionnel et territorial dont ils relèvent, sous réserve, le cas échéant, de l'application des dispositions législatives et réglementaires relatives au salaire minimum de croissance. L'extension des effets et sanctions des avenants visés à l'article 1 er est applicable à compter de la date de publication du présent arrêté pour la durée res…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055012558",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-24",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa… : parle de : Astreintes",
+          "detail": "Paru au JO le 2026-10-25. Ce texte parle de : Astreintes.\n\nArrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa demande, au service des gardes et astreintes médicales pris pour application de l'article R. 6153-1-5 du code de la santé publique\n\n📟 Astreintes — « astreintes » : …du 23 octobre 2026 relatif à la liste des spécialités pour lesquelles le docteur junior peut être autorisé à participer, à sa demande, au service des gardes et astreintes médicales pris pour application de l'article R. 6153-1-5 du code de la santé publique Arrêté du 23 octobre 2026 relatif à la liste des spécialités pour lesquel…\n\nArticles de code cités dans le texte : D633-11, R6153-1-5, R6153-93, R632-20",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055013524",
+          "fonds": "JORF",
+          "theme": "Astreintes",
+          "date_texte": "2026-10-25",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Articles concernés (non cités dans l'écosystème)",
+              "fichiers": [],
+              "action": "Rien à corriger : D633-11, R6153-1-5, R6153-93, R632-20 ne sont cités nulle part dans l'appli ni le guide",
+              "raison": "articles",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul au prochain passage",
+              "raison": "articles du Code modifiés",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a. : parle de : Heures supplémentaires",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a.\n\nElle parle de : Heures supplémentaires.\n\nCe que la Cour a jugé : Au termes du premier de ces textes, le juge qui refusera de juger, sous prétexte du silence, de l'obscurité ou de l'insuffisance de la loi, pourra être poursuivi comme coupable de déni de justice. 15. Aux termes du deuxième, le juge doit se prononcer sur tout ce qui est demandé et seulement sur ce qui est demandé. 16. Selon le troisième, le juge tranche le litige conformément aux règles de droit qui lui sont applicables. 17. Pour condamner le CHT à payer à M. [Z] « les heures additionnelles…\n\n⏱️ Heures supplémentaires — « heures supplémentaires » : …mai 2020. 2. Par requête du 29 janvier 2021, M. [Z] a saisi le tribunal du travail d'une demande en paiement à titre de majorations de salaires applicables aux heures supplémentaires effectuées depuis le 1er août 2017. 3. Le CHT a soulevé une exception d'incompétence du tribunal du travail au profit de la juridiction administrative. Examen…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606bac27382d099f5744b",
+          "fonds": "Juris",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-10-07",
+          "formation": "F-D",
+          "vu_le": "2026-10-20",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Temps & Repos",
+              "fichiers": [
+                "outils/module-temps.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "heures-non-payees.html",
+                "heures-supplementaires-guide.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "depassement-contingent-refus-salarie.html",
+                "calcul-exoneration-hs-etape-par-etape.html",
+                "depassement-contingent-refus-salarie-avance.html",
+                "teletravail-frais-heures-supplementaires-guide.html",
+                "declaration-impots-heures-supplementaires-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-article-section",
+          "gravite": "haute",
+          "titre": "R1452-2 (CT) : nouvel article sur un sujet suivi",
+          "detail": "Nouvel article dans une section du Code du travail qui contient des articles que tu cites.\nSection : Partie réglementaire > Première partie – Les relations individuelles de travail > Livre IV – La résolution des litiges - Le conseil de prud'hommes > Titre V – Procédure devant le conseil de prud'hommes > Chapitre II – Saisine du conseil de prud'hommes\n\nTEXTE — La requête est faite, remise ou adressée au greffe du conseil de prud'hommes. Elle comporte les mentions prescrites à peine de nullité à l' article 57 du code de procédure civile . En outre, elle contient un exposé sommaire des motifs de la demande et mentionne chacun des chefs de celle-ci. Il lui est annexé un bordereau énumérant les pièces que le demandeur souhaite invoquer à l'appui de ses prétentions. La requête et le bordereau sont établis en autant d'exemplaires qu'il existe de défendeurs, outre l'exemplaire destiné à la juridiction. La requête est en outre accompagnée du dernier bulletin de salaire afférent au litige ou de toute pièce permettant de déterminer l'activité de…",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R1452-2",
+          "fonds": "Code",
+          "theme": "Section suivie",
+          "date_texte": "2026-10-17",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouvel-article-section",
+          "gravite": "haute",
+          "titre": "R1452-4 (CT) : nouvel article sur un sujet suivi",
+          "detail": "Nouvel article dans une section du Code du travail qui contient des articles que tu cites.\nSection : Partie réglementaire > Première partie – Les relations individuelles de travail > Livre IV – La résolution des litiges - Le conseil de prud'hommes > Titre V – Procédure devant le conseil de prud'hommes > Chapitre II – Saisine du conseil de prud'hommes\n\nTEXTE — A réception des exemplaires de la requête et du bordereau mentionnés au deuxième alinéa de l'article R. 1452-2 , le greffe convoque le défendeur par lettre recommandée avec demande d'avis de réception. La convocation indique – 1° Les nom, profession et domicile du demandeur ; 2° Selon le cas, les lieu, jour et heure de la séance du bureau de conciliation et d'orientation ou de l'audience à laquelle l'affaire sera appelée ; 3° Le fait que des décisions exécutoires à titre provisoire pourront, même en son absence, être prises contre lui et qu'en cas de non-comparution sans motif légitime il pourra être statué en l'état des pièces et moyens contradictoirement communiqués par l'autre partie. La…",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=R1452-4",
+          "fonds": "Code",
+          "theme": "Section suivie",
+          "date_texte": "2026-10-17",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des… : concerne une convention de l'appli (IDCC 538)",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 538).\n\nArrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des entreprises de manutention ferroviaire et travaux connexes (n° 538)",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983811",
+          "fonds": "JORF",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 538 — Manutention ferroviaire travaux connexes",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
+              "raison": "convention IDCC 538, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des… : concerne une convention de l'appli (IDCC 2528) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 2528) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des industries de la maroquinerie, articles de voyage, chasse-sellerie, gainerie, bracelets en cuir - secteur cuirs et peaux (n° 2528)\n\n💶 Salaires minima — « salaires minima » : …9 septembre 2005, et dans leur propre champ d'application professionnel (secteur cuirs et peaux), les stipulations de l'accord du 1 er juillet 2026 relatif aux salaires minima, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susvisé prend effet à compter de la date…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983829",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2528 — Maroquinerie gainerie bracelets cuir",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2528, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "cordonnier-heures-supplementaires.html",
+                "ganterie-cuir-heures-supplementaires.html",
+                "industrie-cuir-maroquinerie-luxe-heures-supplementaires.html",
+                "maroquinerie-cuir-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2528",
+              "raison": "parlent de l'IDCC 2528",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés,… : concerne une convention de l'appli (IDCC 998) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 998) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés, techniciens et agents de maîtrise de l'exploitation d'équipements thermiques et de génie climatique (n° 998)\n\n💶 Salaires minima — « rémunérations minimales » : …e maîtrise de l'exploitation d'équipements thermiques et de génie climatique du 7 février 1979, les stipulations de : - l'accord du 17 juillet 2026 relatif aux rémunérations minimales professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée ; - l'accord du 17 juillet 2026 relatif au montant des primes e…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983860",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 998 — Exploitation équipements thermiques génie climat",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 998, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "equipements-thermiques-heures-supplementaires.html",
+                "plombier-chauffagiste-btp-hs.html",
+                "plombier-chauffagiste-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 998",
+              "raison": "parlent de l'IDCC 998",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "haute",
+          "titre": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs… : concerne une convention de l'appli (IDCC 1256) — Salaires minima",
+          "detail": "Paru au JO le 2026-10-15. Ce texte concerne une convention de l'appli (IDCC 1256) — Salaires minima.\n\nArrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs et assimilés des entreprises de gestion d'équipements thermiques et de climatisation (n° 1256)\n\n💶 Salaires minima — « rémunérations minimales » : …et assimilés des entreprises de gestion d'équipements thermiques et de climatisation du 3 mai 1983, les stipulations de l'accord du 17 juillet 2026 relatif aux rémunérations minimales annuelles professionnelles garanties, conclu dans le cadre de la convention collective nationale susvisée. L'extension des effets et sanctions de l'accord susv…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054983880",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-15",
+          "vu_le": "2026-10-17",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1256 — Cadres entreprises équipements thermiques climat",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1256, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "equipements-thermiques-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1256",
+              "raison": "parlent de l'IDCC 1256",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels… : parle de : Salaires minima",
+          "detail": "Paru au JO le 2026-09-30. Ce texte parle de : Salaires minima.\n\nAvis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223\n\n💶 Salaires minima — « salaires minima » : Avis portant extension de l'avenant n° 5 du 9 juin 2026 relatif aux salaires minima de la convention collective nationale des personnels navigants officiers des entreprises de transport et services maritimes - IDCC 3223 Avis portant extension…\n\nArticles de code cités dans le texte : L2231-5, L2231-6, L2261-15",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054914379",
+          "fonds": "JORF",
+          "theme": "Salaires minima",
+          "date_texte": "2026-09-30",
+          "vu_le": "2026-10-01",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3223 — Transports et services maritimes, personnels nav",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 3223, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "marine-marchande-marins-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 3223",
+              "raison": "parlent de l'IDCC 3223",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accords",
+      "titre": "🏢 Accords d'entreprise à regarder",
+      "alertes": []
+    },
+    {
+      "id": "regles",
+      "titre": "📐 Règles et montants officiels",
+      "module": "regles-officielles",
+      "alertes": []
+    },
+    {
+      "id": "sources",
+      "titre": "🏛️ BOSS, Parlement, liste DARES",
+      "module": "veille-sources-officielles",
+      "alertes": [
+        {
+          "categorie": "texte-parlement",
+          "gravite": "moyenne",
+          "titre": "🏛️ N° 3404 - Proposition de loi de M. Alexandre Allegret-Pilot tendant à renforcer la protection des salariés licenciés en cas de liquidation…",
+          "detail": "Assemblée — commission des affaires sociales — Tue, 27 Oct 2026 00:00:00 +0000.\n\nN° 3404 - Proposition de loi de M. Alexandre Allegret-Pilot tendant à renforcer la protection des salariés licenciés en cas de liquidation judiciaire de leur employeur\n\nN° 3404 - Proposition de loi de M. Alexandre Allegret-Pilot tendant à renforcer la protection des salariés licenciés en cas de liquidation judiciaire de leur employeur\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "https://www.assemblee-nationale.fr/17/propositions/pion3404.asp",
+          "date_texte": "2026-10-28",
+          "vu_le": "2026-10-28",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "boss-modifie",
+          "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 22 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-22.\n\n－ Charte du cotisant contrôlé\n－ La « charte du cotisant contrôlé » est désormais publiée sur le BOSS dans un nouveau bloc « Contrôle »\n－ Le décret n° 2025-1338 du 26 décembre 2025 modifie l’article R. 243-59 du code de la sécurité sociale en vue de prévoir la publication de la charte du cotisant contrôlé sur le Bulletin officiel de la sécurité sociale (BOSS) à compter du 1er janvier 2026. In fine , ce document opposable sera…\n－ La charte du cotisant contrôlé est désormais publiée dans le nouveau bloc « Contrôle » accessible depuis la page d’accueil du BOSS. Vous avez la possibilité de télécharger une version imprimable de la charte depuis le lien indiqué dans le cartouche en haut de cette rubrique.\n－ Aucune évolution n’a été apportée à la charte au moment de sa publication sur le BOSS.\n＋ Evolution du traitement social de la prise en charge par l’employeur des frais de carburant\n＋ Le régime social de la « prime carburant » défini à l’article L. 3261-3 du code du travail, qui a fait précédemment l’objet d’un communiqué paru le 6 août 2026, est de nouveau modifié, conformément aux annonces gouvernementales du 22 septembre dernier.\n＋ Selon des dispositions qui seront désormais prévues par décret, et non plus dans la loi, conformément à la décision de déclassement n° 2026-327 L du 29 juillet 2026 du Conseil constitutionnel, les limites d’exonération des avantages liés aux frais de transports personnels continuent d’être les…\n＋ 600 € par an pour la prise en charge des frais de carburant ou d'alimentation des véhicules électriques (article L. 3261-3 du code du travail) et du forfait mobilités durables (article L. 3261-3-1), dans la limite de 300 € pour les frais de carburant ;\n＋ 900 € (ou, s'il est supérieur, le montant de la prise en charge des abonnements de transport) en cas de cumul du forfait mobilités durables avec la prise en charge prévue à l'article L. 3261-2 ;\n(… 12 paragraphe(s) retiré(s), 10 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-10-26",
+          "vu_le": "2026-10-26",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "mlt",
+              "cible": "Articles concernés (non cités dans l'écosystème)",
+              "fichiers": [],
+              "action": "Rien à corriger : L3261-3, R243-59 ne sont cités nulle part dans l'appli ni le guide",
+              "raison": "articles",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "mlt"
+          ]
+        },
+        {
+          "categorie": "boss-modifie",
+          "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-17.\n\n－ La rubrique dédiée au Montant net social a été mise à jour d’après les dispositions prévues par un projet de décret en Conseil d’Etat dont les caisses de sécurité sociale ont été saisies. Les modifications visées s’appliquent aux revenus dus à compter du 1er janvier 2027.\n－ 40,21% pour les entreprises de plus de 50 salariés\n－ 3. Fixation des seuils d’éligibilité aux réductions proportionnelles d’assurance maladie et d’allocations familiales résiduellement maintenues pour certaines entreprises. La LFSS pour 2025 a supprimé, pour l’essentiel des rémunérations, les réductions proportionnelles de taux « maladie » et «…\n－ Rémunérations sur lesquelles l’employeur bénéficie d’une réduction dégressive de cotisations patronales spécifique (Lodeom, TO-DE, AAD et les exonérations zonées - ZRD, ZFRR et ZFU.) : 2,5 fois la valeur du SMIC applicable au 31 décembre 2023 pour la réduction de cotisations d’assurance maladie…\n＋ Le plafond de la sécurité sociale augmentera de 1,74 % au 1er janvier 2027\n＋ Le plafond annuel de la sécurité sociale sera fixé à 48 900 € au 1er janvier 2027. Le plafond mensuel s’établira donc à 4 075 €, soit une augmentation de 1,74 % par rapport au niveau de 2026.\n＋ Le plafond de la sécurité sociale avait déjà été augmenté en 2026 (+ 2,0 %). L’augmentation pour 2027 prend en compte l’évolution du salaire moyen par tête en application des dispositions de l’article D. 242-17 du code de la sécurité sociale.\n＋ Le plafond de la sécurité sociale correspond au montant maximal des rémunérations ou gains à prendre en compte pour le calcul de certaines cotisations, principalement les cotisations d’assurance vieillesse de base, et sert également de référence pour la définition de l’assiette de certaines…\n＋ Un arrêté fixant le niveau du plafond sera publié avant la fin de l’année 2026. Le chapitre 6 de la rubrique « Assiette générale » sera mis à jour au 1er janvier 2027. Les valeurs du plafond de la sécurité sociale pour 2027 seront alors les suivantes :\n(… 4 paragraphe(s) retiré(s), 8 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-10-19",
+          "vu_le": "2026-10-19",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Allocations familiales",
+              "fichiers": [
+                "outils/module-allocations-familiales.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congés familiaux",
+              "fichiers": [
+                "outils/module-famille.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Parentalité",
+              "fichiers": [
+                "outils/module-parentalite.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Proche Aidant",
+              "fichiers": [
+                "outils/module-proche-aidant.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : famille",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "csg-crds-salaire-guide.html",
+                "bulletin-paie-comprendre.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "controle-redressement-urssaf-guide.html",
+                "conge-proche-aidant.html",
+                "conge-naissance-2026-guide.html",
+                "conges-maternite-paternite.html",
+                "conges-evenements-familiaux.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : cotisations · thème : famille",
+              "auto": false,
+              "plus": 2
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "6 fichiers modifiés (2026-10-28) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (5) : menu.html, nouveautes.html, sw.js, grillepaye:index.html, grillepaye:ccn-data.json\n\nGUIDE (1) : rupture-conventionnelle.html",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "menu.html",
+                "nouveautes.html",
+                "sw.js"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/index.html",
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "rupture-conventionnelle.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "titre": "Âge de la référence (3 mois et 12 mois)",
+      "module": "age-reference",
+      "alertes": []
+    }
+  ]
+}

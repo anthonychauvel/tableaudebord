@@ -1,13 +1,13 @@
 {
-  "genere": "2026-10-28T16:07:56.400681+00:00",
+  "genere": "2026-10-29T16:11:55.250964+00:00",
   "exceptions_appliquees": 625,
-  "nouvelles_alertes": 3,
+  "nouvelles_alertes": 1,
   "routage": {
     "par_zone": {
-      "app": 5,
+      "app": 4,
       "outils": 4,
-      "grilles": 8,
-      "guide": 10,
+      "grilles": 7,
+      "guide": 9,
       "mlt": 4,
       "veille": 3
     },
@@ -83,8 +83,8 @@
         {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 15 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 15 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 16 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 16 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -797,7 +797,7 @@
           "lien": "https://www.assemblee-nationale.fr/17/propositions/pion3404.asp",
           "date_texte": "2026-10-28",
           "vu_le": "2026-10-28",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "veille",
@@ -966,58 +966,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "6 fichiers modifiés (2026-10-28) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (5) : menu.html, nouveautes.html, sw.js, grillepaye:index.html, grillepaye:ccn-data.json\n\nGUIDE (1) : rupture-conventionnelle.html",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
-              "fichiers": [
-                "menu.html",
-                "nouveautes.html",
-                "sw.js"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/index.html",
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "rupture-conventionnelle.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "grilles",
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

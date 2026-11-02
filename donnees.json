@@ -1,13 +1,13 @@
 {
-  "genere": "2026-10-29T16:11:55.250964+00:00",
-  "exceptions_appliquees": 625,
-  "nouvelles_alertes": 1,
+  "genere": "2026-11-02T19:36:26.566764+00:00",
+  "exceptions_appliquees": 547,
+  "nouvelles_alertes": 3,
   "routage": {
     "par_zone": {
-      "app": 4,
-      "outils": 4,
-      "grilles": 7,
-      "guide": 9,
+      "app": 5,
+      "outils": 6,
+      "grilles": 9,
+      "guide": 11,
       "mlt": 4,
       "veille": 3
     },
@@ -53,18 +53,13 @@
       "veille"
     ],
     "index": {
-      "articles": 522,
+      "articles": 524,
       "pages_guide": 980,
       "outils": 104,
-      "idcc_grilles": 340
+      "idcc_grilles": 0
     }
   },
   "sections": [
-    {
-      "id": "croisement",
-      "titre": "🔔 Textes parus pour une CCN en attente",
-      "alertes": []
-    },
     {
       "id": "grilles",
       "titre": "Grilles CCN",
@@ -73,7 +68,8 @@
     {
       "id": "smic",
       "titre": "💶 Revalorisation du SMIC",
-      "alertes": []
+      "alertes": [],
+      "erreur": "ccn-data.json illisible : Expecting value: line 1 column 1 (char 0)"
     },
     {
       "id": "droit",
@@ -83,8 +79,8 @@
         {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 16 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 16 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 20 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 20 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -107,7 +103,31 @@
     {
       "id": "modules",
       "titre": "8 modules",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "livrable-session",
+          "gravite": "basse",
+          "titre": "Onglet « Nos sources » : pas encore en ligne",
+          "detail": "Marqueur « suivi-public.json » absent de GrillePaye/index.html.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/index.html"
+              ],
+              "action": "Pousser la version attendue en production",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        }
+      ]
     },
     {
       "id": "outils",
@@ -334,7 +354,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1536, grille « real » dans l'appli",
+              "raison": "convention IDCC 1536",
               "auto": false,
               "plus": 0
             }
@@ -362,7 +382,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1606, grille « real » dans l'appli",
+              "raison": "convention IDCC 1606",
               "auto": false,
               "plus": 0
             },
@@ -597,7 +617,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Lire l'avenant : grille, primes ou règles de temps de travail changées ?",
-              "raison": "convention IDCC 538, grille « real » dans l'appli",
+              "raison": "convention IDCC 538",
               "auto": false,
               "plus": 0
             }
@@ -625,7 +645,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 2528, grille « real » dans l'appli",
+              "raison": "convention IDCC 2528",
               "auto": false,
               "plus": 0
             },
@@ -668,7 +688,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 998, grille « real » dans l'appli",
+              "raison": "convention IDCC 998",
               "auto": false,
               "plus": 0
             },
@@ -710,7 +730,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 1256, grille « real » dans l'appli",
+              "raison": "convention IDCC 1256",
               "auto": false,
               "plus": 0
             },
@@ -750,7 +770,7 @@
                 "GrillePaye/ccn-data.json"
               ],
               "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
-              "raison": "convention IDCC 3223, grille « real » dans l'appli",
+              "raison": "convention IDCC 3223",
               "auto": false,
               "plus": 0
             },
@@ -789,6 +809,88 @@
       "titre": "🏛️ BOSS, Parlement, liste DARES",
       "module": "veille-sources-officielles",
       "alertes": [
+        {
+          "categorie": "boss-modifie",
+          "gravite": "haute",
+          "titre": "BOSS — Toutes les actualités du Boss : 28 paragraphe(s) modifié(s)",
+          "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-10-29.\n\n－ Le régime social de la « prime carburant » défini à l’article L. 3261-3 du code du travail, qui a fait précédemment l’objet d’un communiqué paru le 6 août 2026, est de nouveau modifié, conformément aux annonces gouvernementales du 22 septembre dernier.\n－ Selon des dispositions qui seront désormais prévues par décret, et non plus dans la loi, conformément à la décision de déclassement n° 2026-327 L du 29 juillet 2026 du Conseil constitutionnel, les limites d’exonération des avantages liés aux frais de transports personnels continuent d’être les…\n－ 600 € par an pour la prise en charge des frais de carburant ou d'alimentation des véhicules électriques (article L. 3261-3 du code du travail) et du forfait mobilités durables (article L. 3261-3-1), dans la limite de 300 € pour les frais de carburant ;\n－ 900 € (ou, s'il est supérieur, le montant de la prise en charge des abonnements de transport) en cas de cumul du forfait mobilités durables avec la prise en charge prévue à l'article L. 3261-2 ;\n－ 310 € pour la prise en charge par une collectivité territoriale, un EPCI ou France Travail des frais engagés par les salariés dont le domicile est distant d'au moins 30 km du lieu de travail ou des conducteurs en covoiturage.\n＋ Le régime social de la « prime carburant » défini à l’article L. 3261-3 du code du travail, qui a fait précédemment l’objet d’un communiqué paru le 6 août 2026, est modifié, conformément aux annonces du Gouvernement du 22 septembre dernier, par les décrets n° 2026-973 et n° 2026-974 et du 20…\n＋ Les dispositions relatives à ce régime social seront désormais prévues par décret, et non plus dans la loi, tirant les conséquences de la décision de déclassement n° 2026-327 L du 29 juillet 2026 du Conseil constitutionnel.\n＋ Les limites d’exonération des avantages liés aux frais de transports personnels sont les suivantes :\n＋ - 600 € par an pour la prise en charge des frais de carburant ou d'alimentation des véhicules électriques (article L. 3261-3 du code du travail) et du forfait mobilités durables (article L. 3261-3-1), dans la limite de 300 € pour les frais de carburant ;\n＋ - 900 € (ou, s'il est supérieur, le montant de la prise en charge des abonnements de transport) en cas de cumul du forfait mobilités durables avec la prise en charge prévue à l'article L. 3261-2 ;\n(… 16 paragraphe(s) retiré(s), 12 ajouté(s) au total)",
+          "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+          "date_texte": "2026-11-02",
+          "vu_le": "2026-11-02",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Télétravail",
+              "fichiers": [
+                "outils/module-teletravail.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-2",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Transport & Mobilité",
+              "fichiers": [
+                "outils/module-transport.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-2",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-3-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-3-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Forfait Mobilités Durables",
+              "fichiers": [
+                "outils/module-mobilites.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-3-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "indemnite-transport-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L3261-2",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils",
+            "guide"
+          ]
+        },
         {
           "categorie": "texte-parlement",
           "gravite": "moyenne",
@@ -966,13 +1068,86 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "18 fichiers modifiés (2026-11-02) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nMONLEGITEXTE (SITE DÉPLOYÉ) (1) : MonLegiTexte (site déployé)\n\nAPP (8) : mentions-legales.html, menu.html, nouveautes.html, privacy.html, sw.js, grillepaye:index.html, grillepaye:ccn-data.json, outil:module-atmp.html\n\nGUIDE (9) : accident-travail-droits.html, alimentation-succursales-heures-supplementaires.html, apercu.html, conditions-utilisation.html, confidentialite.html, horloger-reparateur-heures-supplementaires.html, index.html, reference-chiffres-cles-2026-guide.html, surveillant-etablissement-hs.html",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "mentions-legales.html",
+                "menu.html",
+                "nouveautes.html",
+                "privacy.html",
+                "sw.js"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "AT/MP",
+              "fichiers": [
+                "outils/module-atmp.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/index.html",
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "accident-travail-droits.html",
+                "alimentation-succursales-heures-supplementaires.html",
+                "apercu.html",
+                "conditions-utilisation.html",
+                "confidentialite.html",
+                "horloger-reparateur-heures-supplementaires.html",
+                "index.html",
+                "reference-chiffres-cles-2026-guide.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 1
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "grilles",
+            "guide"
+          ]
+        }
+      ]
     },
     {
       "id": "age",
       "titre": "Âge de la référence (3 mois et 12 mois)",
-      "module": "age-reference",
-      "alertes": []
+      "module": "verifier-age-reference.py",
+      "alertes": [],
+      "erreur": "               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.11.17/x64/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n"
     }
   ]
 }

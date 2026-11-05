@@ -1,17 +1,17 @@
 {
-  "genere": "2026-11-04T17:20:48.822476+00:00",
+  "genere": "2026-11-05T17:29:49.941191+00:00",
   "exceptions_appliquees": 617,
-  "nouvelles_alertes": 127,
+  "nouvelles_alertes": 2,
   "routage": {
     "par_zone": {
-      "app": 48,
-      "outils": 112,
-      "grilles": 19,
-      "guide": 65,
-      "mlt": 5,
-      "veille": 1
+      "app": 47,
+      "outils": 110,
+      "grilles": 18,
+      "guide": 64,
+      "mlt": 4,
+      "veille": 2
     },
-    "non_routees": 0,
+    "non_routees": 1,
     "zones": {
       "app": {
         "nom": "Application",
@@ -70,7 +70,7 @@
           "titre": "IDCC 18 : avenant salaires paru pour cette CCN en attente",
           "detail": "Cette convention attend une grille (« IDCC 18 : grille construite sur un texte remplacé »), et un texte vient de paraître qui la mentionne — probablement de quoi lever l'alerte :\n• 💶 [Journal Officiel] Arrêté du 18 janvier 2022 portant extension de l'avenant n° 38 du 27 janvier 2021 relatif \n• 💶 [Journal Officiel] Arrêté du 18 décembre 2020 modifiant l'arrêté du 8 février 2002 fixant les taux de <mark>r\n• 💶 [Journal Officiel] Décision du 17 mars 2023 relative à l'homologation de l'accord du 18 janvier 2023 relatif \n• 💶 [Journal Officiel] Arrêté du 18 juin 2024 établissant la liste des éléments de <mark>rémunération</mark> exce\n• 💶 [Journal Officiel] Décision n° 2017-784 du 18 octobre 2017 portant extension de l'autorisation délivrée à la \n• [Journal Officiel] Arrêté du 18 mars 2019 portant nomination d'un notaire <mark>salarié</mark> (officiers pub\n• [Journal Officiel] Arrêté du 18 juillet 2023 portant nomination d'un notaire <mark>salarié</mark> (officiers \n• [Journal Officiel] Arrêté du 18 avril 2018 constatant la reprise de fonctions d'un notaire <mark>salarié</mar\n• [Journal Officiel] Arrêté du 10 décembre 2020 modifiant l'arrêté du 18 septembre 2020 portant nomination au c\n• [Journal Officiel] Arrêté du 18 mai 2020 portant nomination d'un avocat au Conseil d'Etat et à la Cour de cas\n• (+ 483 arrêté(s) d'extension/agrément, sans nouveaux minima)",
           "date_texte": "2026-10-27",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -93,7 +93,7 @@
           "gravite": "moyenne",
           "titre": "IDCC 500 : texte paru pour cette CCN en attente",
           "detail": "Cette convention attend une grille (« IDCC 500 : grille dépassée de 175 jours »), et un texte vient de paraître qui la mentionne — probablement de quoi lever l'alerte :\n• [accord d'entreprise] Accord collectif relatif à la négociation annuelle obligatoire sur l'égalité professionnel\n• (+ 17 arrêté(s) d'extension/agrément, sans nouveaux minima)",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -123,7 +123,7 @@
           "titre": "IDCC 18 : grille construite sur un texte remplacé",
           "detail": "Les montants de la grille correspondent à « Accord du 15 janvier 2026 relatif aux salaires minima mensuels au 1er janvier 2026 » (100% retrouvés), mais le fonds contient plus récent : « Accord du 17 juin 2026 relatif aux salaires minima mensuels au 1er juin 2026 ». — Niveau 1 1 898 € Niveau 2 Échelon 1 1 901 € Échelon 2 1 906 € Échelon 3 1 915 € Niveau 3 Échelon 1 1 916 € Échelon 2 1 920 € Échelon 3 1 931 € Niveau 4 Échelon 1 1 933 € Échelon 2 1 996 € Échelon 3 2 080 € Niveau 5 Échelon 1 2 087 € Échelon…\n\nRéelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
           "date_texte": "2026-10-29",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -147,7 +147,7 @@
           "titre": "IDCC 468 : grille construite sur un texte remplacé",
           "detail": "Les montants de la grille correspondent à « Accord du 3 décembre 2024 relatif aux salaires » (100% retrouvés), mais le fonds contient plus récent : « Accord du 18 juin 2026 relatif aux salaires minima conventionnels au 1er août 2026 ». — À compter du 1er août 2026, il est institué de nouveaux minima mensuels conventionnels pour les employés : Niveau Échelon Minima mensuel conventionnel 1 – 1 867,02 € 2 – 1 869,63 € 2 2 1 874,90 € 3 – 1 879,11 € 3 2 1 888,60 € 4 – 1 910,19 €…\n\nRéelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.\n\nIDCC 468 — Chaussure commerce succursaliste : 03/12/2024 (23 mois)",
           "date_texte": "2026-10-14",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -171,7 +171,7 @@
           "titre": "IDCC 500 : grille dépassée de 175 jours",
           "detail": "Avenant du 25 juin 2026 à l'annexe 56 A sur les salaires minima mensuels — aucun montant repérable, ouvrir la clause",
           "date_texte": "2026-10-14",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -202,32 +202,10 @@
       "module": "monlegitexte-droit",
       "alertes": [
         {
-          "categorie": "changement-reel",
-          "gravite": "haute",
-          "titre": "[Aspirateur principal (France)] 134 changement(s) sur tes sujets",
-          "detail": "Run du 2026-11-02 20:48 UTC (audits/2026-11-02.md). Seuls les textes qui ont VRAIMENT changé et qui touchent tes sujets sont listés :\n\n• output/ccn-index/1147.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n  APRÈS — Convention collective nationale du personnel des cabinets médicaux du 14 octobre 1981 Titre XI : Congés payés et vacances …tion bénéficie chaque année de vacances payées aux taux des appointements réels conformément à la loi. A la date du départ en c…\n\n• output/ccn-index/1170.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕐 Temps partiel (« temps partiel »); 🕘 Durée du travail (« durée du travail »); 🏖️ Repos et congés (« jours fériés ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n  APRÈS — Convention collective nationale de l'industrie des tuiles et briques du 17 février 1982 Conditions particulières d'emploi … de travail à durée déterminée ; b) Aux contrats de travail à temps partiel ; c) A l'emploi du personnel temporaire (ou intérim…\n\n• output/ccn-index/1261.json — 💶 Salaires minima (« valeur du point ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n  APRÈS — Convention collective nationale des acteurs du lien social et familial : centres sociaux et socioculturels, associations d'accueil de jeunes enfants, associations de développement social local du 4 juin 1983. Etendue par arrêté du 22 janvier 1987 JOR…\n\n• output/ccn-index/1267.json — 🕘 Durée du travail (« temps de travail effectif ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n  APRÈS — Convention collective nationale de la pâtisserie du 30 juin 1983. Etendue par arrêté du 29 décembre 1983 JONC 13 janvier 1984. Libre exercice du droit syndical et liberté d'opinion des salariés …ieuse, en particulier en ce qui concerne l'embauchage e…\n\n• output/ccn-index/1286.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n  APRÈS — Convention collective nationale des détaillants et détaillants-fabricants de la confiserie, chocolaterie, biscuiterie du 1er janvier 1984. Etendue par arrêté du 2 octobre 1984 JONC 12 octobre 1984. Dénonciation …andée avec accusé de réception. Elle s…\n\n• output/ccn-index/1307.json — ⏱️ Heures supplémentaires (« majoration de salaire ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n  APRÈS — Convention collective nationale de l'exploitation cinématographique du 19 juillet 1984. Champ d'application professionnel …n contrat de travail saisonnier ; ceux-ci bénéficient d'une majoration de salaire de 5 %. Pour les dispositions soumises à une …\n\n• output/ccn-index/1351.json — ⏱️ Heures supplémentaires (« contingent annuel ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n  APRÈS — Convention collective nationale des entreprises de prévention et de sécurité du 15 février 1985. Etendue par arrêté du 25 juillet 1985 (JO du 30 juillet 1985) Rémunération …, selon application de la grille des classifications. 9.03. Prime d'anciennet…\n\n• output/ccn-index/1480.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n  APRÈS — Convention collective nationale des journalistes du 1er novembre 1976, refondue le 27 octobre 1987. Etendue par arrêté du 2 février 1988 (JO du 13 février 1988) Stagiaires …la rédaction. Le stagiaire licencié après avoir effectué la période d'essai d…\n\n• output/ccn-index/1487.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n  APRÈS — Convention collective nationale du commerce de détail de l'horlogerie bijouterie du 17 décembre 1987. Etendue par arrêté du 20 octobre 1988 JORF 28 octobre 1988. Chapitre V : Salaires et classifications Chapitre V : Salaires et classifications Classi…\n\n• output/ccn-index/1499.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n  APRÈS — Convention collective nationale de la miroiterie, de la transformation et du négoce du verre du 9 mars 1988 Durée du travail …ques de chômage partiel pour les heures non travaillées. 6. Contingent annuel d'heures supplémentaires Le contingent annuel …\n\n• output/ccn-index/1501.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 🕘 Durée du travail (« durée du travail ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n  APRÈS — Convention collective nationale de la restauration rapide du 18 mars 1988 Titre IV : Durée du travail Titre IV : Durée du travail Durée du travail …re en cas de démission, sauf lorsque le salarié perçoit une rémunération annuelle brute supérieure à t…\n\n• output/ccn-index/1513.json — ⏱️ Heures supplémentaires (« heures supplémentaires »); 💶 Salaires minima (« salaires minima ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n  APRÈS — Convention collective nationale des activités de production des eaux embouteillées et boissons rafraîchissantes sans alcool et de bière du 1er septembre 2010. Etendue par arrêté du 30 mai 2012 JORF 06 juin 2012. Chapitre V : Salaires et classificatio…\n\n• output/ccn-index/1516.json — 🕘 Durée du travail (« temps de travail effectif »); 🏖️ Repos et congés (« congés payés ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n  APRÈS — Convention collective nationale des organismes de formation du 10 juin 1988 Service national …sation d'absence exceptionnelle de 1 journée, sans perte de rémunération. Cette journée d'absence est assimilée à du temps de travail effectif pour la déter…\n\n• output/ccn-index/1557.json — 🕐 Temps partiel (« temps partiel ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale du commerce des articles de sports et d'équipements de loisirs du 26 juin 1989. Collèges électoraux …tifs, commerciaux ou techniques assimilés sur le plan de la classification est au moins égal à 25 au moment de la con…\n  APRÈS — Convention collective nationale du commerce des articles de sports et d'équipements de loisirs du 26 juin 1989. Collèges électoraux …tifs, commerciaux ou techniques assimilés sur le plan de la classification est au moins égal à 25 au moment de la con…\n\n• output/ccn-index/1586.json — 🏖️ Repos et congés (« congés payés ») (changé le 2026-11-04)\n  AVANT — Convention collective nationale de l'industrie de la salaison, charcuterie en gros et conserves de viandes du 29 mars 1972. Etendue par arrêté du 14 mai 1975 JORF 4 juin 1975. Indemnité de congé payé L'indemnité de congé payé est calculée sur la rému…\n  APRÈS — Convention collective nationale de l'industrie de la salaison, charcuterie en gros et conserves de viandes du 29 mars 1972. Etendue par arrêté du 14 mai 1975 JORF 4 juin 1975. Indemnité de congé payé L'indemnité de congé payé est calculée sur la rému…\n\n… et 119 autre(s).",
-          "date_texte": "2026-11-04",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "mlt",
-              "cible": "Site MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul pour les lecteurs — ouvrir seulement si le sujet te concerne",
-              "raison": "MonLegiTexte",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "mlt"
-          ]
-        },
-        {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 22 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 22 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 23 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 23 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -245,7 +223,7 @@
           ]
         }
       ],
-      "hors_sujet_ignores": 62
+      "hors_sujet_ignores": 0
     },
     {
       "id": "modules",
@@ -261,7 +239,7 @@
           "gravite": "haute",
           "titre": "D1225-11-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-parentalite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -295,7 +273,7 @@
           "gravite": "haute",
           "titre": "D1226-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-arret.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -329,7 +307,7 @@
           "gravite": "haute",
           "titre": "D1242-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-precarite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -377,7 +355,7 @@
           "gravite": "haute",
           "titre": "D242-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-bulletin.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -411,7 +389,7 @@
           "gravite": "haute",
           "titre": "D3171-16 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -445,7 +423,7 @@
           "gravite": "haute",
           "titre": "D3243-8 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -479,7 +457,7 @@
           "gravite": "haute",
           "titre": "D4711-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -513,7 +491,7 @@
           "gravite": "haute",
           "titre": "L1153-5-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -547,7 +525,7 @@
           "gravite": "haute",
           "titre": "L1221-25 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-essai.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -593,7 +571,7 @@
           "gravite": "haute",
           "titre": "L1222-9 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-teletravail.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -688,7 +666,7 @@
           "gravite": "haute",
           "titre": "L1225-46-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-parentalite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -722,7 +700,7 @@
           "gravite": "haute",
           "titre": "L1225-54 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-parentalite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -768,7 +746,7 @@
           "gravite": "haute",
           "titre": "L1226-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-arret.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -850,7 +828,7 @@
           "gravite": "haute",
           "titre": "L1226-14 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-inaptitude.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -897,7 +875,7 @@
           "gravite": "haute",
           "titre": "L1234-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-preavis.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -967,7 +945,7 @@
           "gravite": "haute",
           "titre": "L1234-19 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-fincontrat2.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1014,7 +992,7 @@
           "gravite": "haute",
           "titre": "L1234-20 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-fincontrat2.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1061,7 +1039,7 @@
           "gravite": "haute",
           "titre": "L1234-9 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-inaptitude.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1129,7 +1107,7 @@
           "gravite": "haute",
           "titre": "L1237-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-conge-ss.html, module-preavis.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1210,7 +1188,7 @@
           "gravite": "haute",
           "titre": "L1237-10 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-preavis.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1244,7 +1222,7 @@
           "gravite": "haute",
           "titre": "L1237-13 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-rupture.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1301,7 +1279,7 @@
           "gravite": "haute",
           "titre": "L1237-14 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-rupture.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1347,7 +1325,7 @@
           "gravite": "haute",
           "titre": "L1237-18 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-fincontrat2.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1404,7 +1382,7 @@
           "gravite": "haute",
           "titre": "L1237-6 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-preavis.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1438,7 +1416,7 @@
           "gravite": "haute",
           "titre": "L1243-10 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-precarite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1472,7 +1450,7 @@
           "gravite": "haute",
           "titre": "L1243-8 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-precarite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1541,7 +1519,7 @@
           "gravite": "haute",
           "titre": "L1332-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-miseapied.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1575,7 +1553,7 @@
           "gravite": "haute",
           "titre": "L1332-4 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-miseapied.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1609,7 +1587,7 @@
           "gravite": "haute",
           "titre": "L1471-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1656,7 +1634,7 @@
           "gravite": "haute",
           "titre": "L161-22 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-cumul-retraite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1690,7 +1668,7 @@
           "gravite": "haute",
           "titre": "L2141-5 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1736,7 +1714,7 @@
           "gravite": "haute",
           "titre": "L2143-13 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-cse.html, module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1806,7 +1784,7 @@
           "gravite": "haute",
           "titre": "L2242-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1854,7 +1832,7 @@
           "gravite": "haute",
           "titre": "L2242-20 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1888,7 +1866,7 @@
           "gravite": "haute",
           "titre": "L2311-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -1948,7 +1926,7 @@
           "gravite": "haute",
           "titre": "L2312-24 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -1982,7 +1960,7 @@
           "gravite": "haute",
           "titre": "L2312-28 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2016,7 +1994,7 @@
           "gravite": "haute",
           "titre": "L2312-36 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2050,7 +2028,7 @@
           "gravite": "haute",
           "titre": "L2312-8 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2119,7 +2097,7 @@
           "gravite": "haute",
           "titre": "L2313-7 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2153,7 +2131,7 @@
           "gravite": "haute",
           "titre": "L2314-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-cse.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2199,7 +2177,7 @@
           "gravite": "haute",
           "titre": "L2314-33 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-cse.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2233,7 +2211,7 @@
           "gravite": "haute",
           "titre": "L2315-10 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2279,7 +2257,7 @@
           "gravite": "haute",
           "titre": "L2315-14 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2313,7 +2291,7 @@
           "gravite": "haute",
           "titre": "L2315-36 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2347,7 +2325,7 @@
           "gravite": "haute",
           "titre": "L2315-7 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2405,7 +2383,7 @@
           "gravite": "haute",
           "titre": "L2315-78 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2462,7 +2440,7 @@
           "gravite": "haute",
           "titre": "L2411-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2521,7 +2499,7 @@
           "gravite": "haute",
           "titre": "L243-16 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2555,7 +2533,7 @@
           "gravite": "haute",
           "titre": "L2511-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-greve.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2601,7 +2579,7 @@
           "gravite": "haute",
           "titre": "L3121-11 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-astreintes.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -2635,7 +2613,7 @@
           "gravite": "haute",
           "titre": "L3121-16 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2718,7 +2696,7 @@
           "gravite": "haute",
           "titre": "L3121-18 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2843,7 +2821,7 @@
           "gravite": "haute",
           "titre": "L3121-20 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -2999,7 +2977,7 @@
           "gravite": "haute",
           "titre": "L3121-22 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3144,7 +3122,7 @@
           "gravite": "haute",
           "titre": "L3121-27 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3256,7 +3234,7 @@
           "gravite": "haute",
           "titre": "L3121-30 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3353,7 +3331,7 @@
           "gravite": "haute",
           "titre": "L3121-33 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3499,7 +3477,7 @@
           "gravite": "haute",
           "titre": "L3121-36 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3633,7 +3611,7 @@
           "gravite": "haute",
           "titre": "L3121-50 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-feries.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -3667,7 +3645,7 @@
           "gravite": "haute",
           "titre": "L3122-20 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3713,7 +3691,7 @@
           "gravite": "haute",
           "titre": "L3122-5 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3785,7 +3763,7 @@
           "gravite": "haute",
           "titre": "L3122-6 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3842,7 +3820,7 @@
           "gravite": "haute",
           "titre": "L3131-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -3969,7 +3947,7 @@
           "gravite": "haute",
           "titre": "L3132-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4064,7 +4042,7 @@
           "gravite": "haute",
           "titre": "L3132-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4150,7 +4128,7 @@
           "gravite": "haute",
           "titre": "L3132-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-temps.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4234,7 +4212,7 @@
           "gravite": "haute",
           "titre": "L3133-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-feries.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4316,7 +4294,7 @@
           "gravite": "haute",
           "titre": "L3133-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-feries.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4397,7 +4375,7 @@
           "gravite": "haute",
           "titre": "L3133-4 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-feries.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4431,7 +4409,7 @@
           "gravite": "haute",
           "titre": "L3133-7 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-feries.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4477,7 +4455,7 @@
           "gravite": "haute",
           "titre": "L3142-19 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-proche-aidant.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4511,7 +4489,7 @@
           "gravite": "haute",
           "titre": "L3142-28 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-sabbatique.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4557,7 +4535,7 @@
           "gravite": "haute",
           "titre": "L3171-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4591,7 +4569,7 @@
           "gravite": "haute",
           "titre": "L3243-4 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -4637,7 +4615,7 @@
           "gravite": "haute",
           "titre": "L331-3 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-parentalite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4671,7 +4649,7 @@
           "gravite": "haute",
           "titre": "L331-8-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-parentalite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4705,7 +4683,7 @@
           "gravite": "haute",
           "titre": "L3322-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4752,7 +4730,7 @@
           "gravite": "haute",
           "titre": "L3334-8 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-cet.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4798,7 +4776,7 @@
           "gravite": "haute",
           "titre": "L3342-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-anciennete.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4832,7 +4810,7 @@
           "gravite": "haute",
           "titre": "L341-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-invalidite.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4866,7 +4844,7 @@
           "gravite": "haute",
           "titre": "L411-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-atmp.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4912,7 +4890,7 @@
           "gravite": "haute",
           "titre": "L441-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-atmp.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4946,7 +4924,7 @@
           "gravite": "haute",
           "titre": "L441-4 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -4980,7 +4958,7 @@
           "gravite": "haute",
           "titre": "L452-5 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-atmp.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5014,7 +4992,7 @@
           "gravite": "haute",
           "titre": "L461-7 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-atmp.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5048,7 +5026,7 @@
           "gravite": "haute",
           "titre": "L4622-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5082,7 +5060,7 @@
           "gravite": "haute",
           "titre": "L5122-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-activite-partielle.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5116,7 +5094,7 @@
           "gravite": "haute",
           "titre": "L5212-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5150,7 +5128,7 @@
           "gravite": "haute",
           "titre": "L6315-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-entretien.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5184,7 +5162,7 @@
           "gravite": "haute",
           "titre": "L6323-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-formation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5230,7 +5208,7 @@
           "gravite": "haute",
           "titre": "R1221-26 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5264,7 +5242,7 @@
           "gravite": "haute",
           "titre": "R2314-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5322,7 +5300,7 @@
           "gravite": "haute",
           "titre": "R2315-5 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-delegation.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5356,7 +5334,7 @@
           "gravite": "haute",
           "titre": "R4121-1 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-effectifs.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -5438,7 +5416,7 @@
           "gravite": "haute",
           "titre": "R433-2 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-atmp.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5484,7 +5462,7 @@
           "gravite": "haute",
           "titre": "R4624-31 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-inaptitude.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5518,7 +5496,7 @@
           "gravite": "haute",
           "titre": "R4624-46 : cité mais absent d'articles-loi.js",
           "detail": "Cité dans module-archives.html — la citation s'affichera vide.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5558,7 +5536,7 @@
           "gravite": "moyenne",
           "titre": "alimentation-succursales-heures-supplementaires.html : cite IDCC 1314, fusionnée, sans le dire",
           "detail": "Reprise par « Sans convention collective ». Aucun mot du champ fusion/historique/repris trouvé sur la page — probablement présentée comme active alors qu'elle ne l'est plus.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "guide",
@@ -5594,7 +5572,7 @@
           "gravite": "haute",
           "titre": "outils/_reference-loi.html : erreur JavaScript au chargement",
           "detail": "SH is not defined",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5623,7 +5601,7 @@
           "gravite": "basse",
           "titre": "L1214-8-2 : aucun des deux corpus (travail/sécu) ne le confirme",
           "detail": "Cité dans outil:outils/module-effectifs.html.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5646,7 +5624,7 @@
           "gravite": "basse",
           "titre": "L225-102-1 : aucun des deux corpus (travail/sécu) ne le confirme",
           "detail": "Cité dans outil:outils/module-effectifs.html.",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "outils",
@@ -5681,41 +5659,7 @@
       "id": "contenu",
       "titre": "Contenu des articles cités et phrases fausses connues",
       "module": "contenu-articles",
-      "alertes": [
-        {
-          "categorie": "contenu-article-modifie",
-          "gravite": "moyenne",
-          "titre": "D3171-16 (CT) : le texte a changé depuis la dernière vérification",
-          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 2.0 -> 2.0). Cité dans 1 fichier(s) — dans l'application : outil:outils/module-archives.html.\n\nRelevé complet des lieux : releves/D3171-16.txt",
-          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=D3171-16",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "outils",
-              "cible": "Conservation Documents RH",
-              "fichiers": [
-                "outils/module-archives.html"
-              ],
-              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
-              "raison": "fichier nommé",
-              "auto": false,
-              "plus": 0
-            },
-            {
-              "zone": "mlt",
-              "cible": "Fiches articles de MonLegiTexte",
-              "fichiers": [],
-              "action": "Se met à jour seul — vérifier la fiche si besoin",
-              "raison": "texte du Code",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "outils"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "nouveaux",
@@ -5731,7 +5675,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-29",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -5773,7 +5717,7 @@
           "theme": "Convention de l'appli",
           "date_texte": "2026-10-14",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -5801,7 +5745,7 @@
           "theme": "Temps partiel",
           "date_texte": "2026-10-29",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -5841,7 +5785,7 @@
           "theme": "Temps partiel",
           "date_texte": "2026-10-14",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -5881,7 +5825,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-14",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -5909,7 +5853,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-14",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -5938,7 +5882,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6042,7 +5986,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6095,7 +6039,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6136,7 +6080,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6177,7 +6121,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6232,7 +6176,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6305,7 +6249,7 @@
           "date_texte": "2026-10-21",
           "formation": "F-D",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -6811,7 +6755,7 @@
           "theme": "Salaires minima",
           "date_texte": "2026-10-15",
           "vu_le": "2026-10-17",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -6945,13 +6889,37 @@
       "alertes": [
         {
           "categorie": "texte-parlement",
+          "gravite": "moyenne",
+          "titre": "🏛️ Inscrire les élus locaux sur la liste des salariés protégés - texte N° 133",
+          "detail": "Sénat — textes déposés — Thu,05 Nov 2026 02:03:34 GMT.\n\nInscrire les élus locaux sur la liste des salariés protégés - texte N° 133\n\nProposition de loi visant à inscrire les élus locaux sur la liste des salariés protégés : texte N° 133 de M. Éric KERROUCHE, déposé au Sénat le 30 octobre 2026\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+          "lien": "http://www.senat.fr/leg/ppl26-133.html",
+          "date_texte": "2026-11-05",
+          "vu_le": "2026-11-05",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "texte-parlement",
           "gravite": "haute",
           "titre": "🏛️ Financement de la sécurité sociale pour 2027 - texte N° 138",
           "detail": "Sénat — textes déposés — Tue,03 Nov 2026 02:04:01 GMT.\n\nFinancement de la sécurité sociale pour 2027 - texte N° 138\n\nProjet de loi de financement de la sécurité sociale pour 2027 : texte N° 138 transmis au Sénat le 2 novembre 2026\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
           "lien": "http://www.senat.fr/leg/pjl26-138.html",
           "date_texte": "2026-11-04",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -7026,7 +6994,7 @@
           "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000055036754",
           "date_texte": "2026-10-29",
           "vu_le": "2026-11-04",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "app",
@@ -7261,98 +7229,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "15 fichiers modifiés (2026-11-04) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (8) : menu.html, nouveautes.html, sw.js, grillepaye:index.html, grillepaye:ccn-data.json, outil:module-lexique.html, outil:module-mobilites.html, outil:module-transport.html\n\nGUIDE (7) : apercu-nouveautes.html, forfait-mobilites-durables-velo-guide.html, frais-professionnels-remboursement.html, indemnite-transport-guide.html, indemnites-kilometriques-bareme-guide.html, index.html, reference-chiffres-cles-2026-guide.html",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
-              "fichiers": [
-                "menu.html",
-                "nouveautes.html",
-                "sw.js"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "lexique",
-              "fichiers": [
-                "outils/module-lexique.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "mobilites",
-              "fichiers": [
-                "outils/module-mobilites.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "transport",
-              "fichiers": [
-                "outils/module-transport.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/index.html",
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "guide",
-              "cible": "Pages du guide",
-              "fichiers": [
-                "apercu-nouveautes.html",
-                "forfait-mobilites-durables-velo-guide.html",
-                "frais-professionnels-remboursement.html",
-                "indemnite-transport-guide.html",
-                "indemnites-kilometriques-bareme-guide.html",
-                "index.html",
-                "reference-chiffres-cles-2026-guide.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "outils",
-            "grilles",
-            "guide"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

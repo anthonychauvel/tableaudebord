@@ -1103,5 +1103,173 @@
     "date": "2026-11-03",
     "note": "Extension d'avenants salariaux à plusieurs conventions sans IDCC lisible dans la source : à rapprocher quand l'aspirateur remontera le détail.",
     "expire": "2026-11-30"
+  },
+  {
+    "_bloc": "=== VEILLE DU 05/11/2026, traitée le 06/11/2026 (v10.20) ==="
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 18 — Accord du 17 juin 2026",
+    "date": "2026-11-06",
+    "note": "Grille 18 reportée le 06/11/2026 (accord du 17/06/2026, au 01/06/2026, 152,25 h)."
+  },
+  {
+    "categorie": "texte-pour-ccn-en-alerte",
+    "cle": "IDCC 18 :",
+    "date": "2026-11-06",
+    "note": "Grille 18 mise à jour le 06/11/2026 sur l'accord du 17/06/2026.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 18 :",
+    "date": "2026-11-06",
+    "note": "Grille 18 reconstruite le 06/11/2026 sur l'accord du 17/06/2026.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 500 — Avenant du 25 juin 2026",
+    "date": "2026-11-06",
+    "note": "Grille 500 reportée le 06/11/2026 (avenant 56 A du 25/06/2026, au 01/07/2026, 19 lignes)."
+  },
+  {
+    "categorie": "texte-pour-ccn-en-alerte",
+    "cle": "IDCC 500 :",
+    "date": "2026-11-06",
+    "note": "Grille 500 mise à jour le 06/11/2026 sur l'avenant du 25/06/2026.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 500 :",
+    "date": "2026-11-06",
+    "note": "Grille 500 mise à jour le 06/11/2026 (avenant du 25/06/2026).",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 468 — Accord du 18 juin 2026",
+    "date": "2026-11-06",
+    "note": "Grille 468 reportée le 06/11/2026 (accord du 18/06/2026, au 01/08/2026 ; cadres en minima annuels ÷ 12)."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 468 :",
+    "date": "2026-11-06",
+    "note": "Grille 468 reconstruite le 06/11/2026 sur l'accord du 18/06/2026.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1606)",
+    "date": "2026-11-06",
+    "note": "Grille 1606 reportée le 06/11/2026 : accord du 29/07/2026 étendu par arrêté du 19/10/2026, au 01/09/2026 (13 coefficients, 120 à 600)."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 1431)",
+    "date": "2026-11-06",
+    "note": "Grille 1431 reportée le 06/11/2026 : accord du 9/07/2026 étendu par arrêté du 12/10/2026, au 01/11/2026 (2 filières, 27 lignes)."
+  },
+  {
+    "categorie": "convention-perimee-sans-mention",
+    "cle": "alimentation-succursales-heures-supplementaires.html",
+    "date": "2026-11-06",
+    "note": "FAQ corrigée le 06/11/2026 (JSON-LD + HTML) : IDCC 1314 inactive depuis juillet 2019 selon la DARES, sans fusion ni repreneuse ; renvoi vers l'IDCC 2216. Le corps de la page le disait déjà."
+  },
+  {
+    "categorie": "boss-modifie",
+    "cle": "BOSS — Toutes les actualités du Boss : 28 paragraphe(s) modifié(s)",
+    "date": "2026-11-06",
+    "note": "Communiqué prime carburant : plafond de cotisations 1 000 € en 2026 (décrets 2026-973/974). Déjà intégré : outils Mobilités, Transport, Lexique (fmd_plafond_social_2026, v10.19/v10.20) et guide indemnite-transport-guide.html. L'outil Télétravail ne cite L3261-2 que pour les 50 % d'abonnement : inchangé.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "(IDCC 2528)",
+    "date": "2026-11-06",
+    "note": "Arrêté du 12/10/2026 = extension de l'accord du 1/07/2026, secteur cuirs et peaux (ex-IDCC 207). Ce secteur n'est pas affiché dans la grille 2528 (maroquinerie, accord du 18/02/2026) : rien à reporter. Note ajoutée dans ccn-data.json."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 218 — Avenant du 30 avril 2026",
+    "date": "2026-11-06",
+    "note": "Texte sans effet sur la grille ni sur les règles HS/temps partiel (protocole du 12/08/2008). Noté dans ccn-data.json le 06/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 218 — Protocole d'accord du 27 mai 2026",
+    "date": "2026-11-06",
+    "note": "Soutien aux salariés proches aidants : pas une règle de temps partiel ni de salaire minimum. Rien à modifier (noté dans ccn-data.json)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 45 — Accord du 20 mai 2026",
+    "date": "2026-11-06",
+    "note": "Méthodologie de négociation sur l'emploi des salariés : pas de règle HS, temps partiel ni salaire. Rien à modifier (noté dans ccn-data.json)."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "24-17.315",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : préjudice pour absence de formation (L6321-1) laissé à l'appréciation souveraine des juges du fond. Rien de nouveau, rien à modifier."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "24-19.406",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : co-emploi dans un groupe (L1221-1, critère d'immixtion permanente), jurisprudence constante. Rien à modifier."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "24-21.050",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : AGS subrogée / co-emploi en liquidation judiciaire. Cas d'espèce, rien à modifier."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "24-21.059",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : même série (AGS, co-emploi) ; le moyen HS (L3171-4) ne change pas la règle de preuve partagée. Rien à modifier."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-12.143",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : règles protectrices AT/MP (L1226-10, L1226-14) et forfait jours, application classique. Outil Inaptitude et guides inchangés."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-12.649",
+    "date": "2026-11-06",
+    "note": "Arrêt F-D non publié : exécution loyale d'un accord de PSE bancaire (L1221-1). Cas d'espèce, rien à modifier."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "501105",
+    "date": "2026-11-06",
+    "note": "CE 29/10/2026 : décret sur les contrôles et sanctions des crèches (recours des crèches privées rejeté). Hors durée du travail, astreintes et primes : rien pour M7 ni l'outil Astreintes."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "texte N° 138",
+    "date": "2026-11-06",
+    "note": "PLFSS 2027 transmis au Sénat le 02/11/2026 : pas encore une loi, rien à appliquer. À reprendre à la promulgation (LFSS 2027).",
+    "expire": "2027-01-15"
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "texte N° 133",
+    "date": "2026-11-06",
+    "note": "Proposition de loi (élus locaux salariés protégés), simple dépôt au Sénat le 30/10/2026 : aucune règle en vigueur. À revoir seulement si elle est adoptée.",
+    "expire": "2027-06-30"
+  },
+  {
+    "categorie": "boss-modifie",
+    "cle": "BOSS — Toutes les actualités du Boss : 12 paragraphe(s) modifié(s)",
+    "date": "2026-11-06",
+    "note": "PASS 2027 annoncé : 48 900 €/an, 4 075 €/mois au 01/01/2027 ; montant net social révisé pour les revenus 2027. Rien à changer avant le 01/01/2027 : à reporter dans articles-loi.js (pass/pmss) lors de la mise à jour de janvier.",
+    "expire": "2026-12-31"
   }
 ]

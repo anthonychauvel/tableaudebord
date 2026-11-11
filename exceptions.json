@@ -1200,5 +1200,243 @@
     "cle": "Arrêté du 29 octobre 2026 portant extension d'un avenant à la convention collective nationale des détaillants et détaillants-fabricants de",
     "date": "2026-11-09",
     "note": "Avenant n° 44 (salaires, 1286) étendu : grille 1286 refaite le 09/11/2026 (12 niveaux, dès la paie de novembre 2026)."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 1558",
+    "date": "2026-11-11",
+    "note": "Grille 1558 refaite le 11/11/2026 sur l'accord du 29/06/2026 (au 01/06/2026, étendu le 07/09/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 1801",
+    "date": "2026-11-11",
+    "note": "Grille 1801 refaite le 11/11/2026 sur l'avenant n° 54 (au 01/01/2026, RAG 24 624 €, non étendu).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1558 — Accord du 29 juin 2026",
+    "date": "2026-11-11",
+    "note": "Grille 1558 mise à jour le 11/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1801 — Avenant n° 54 du 12 février 2026",
+    "date": "2026-11-11",
+    "note": "Grille 1801 mise à jour le 11/11/2026 (barème lu dans le fonds droit)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1801 — Avenant n° 55 du 14 avril 2026",
+    "date": "2026-11-11",
+    "note": "Ancienneté pour maternité / service national / réserve : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1801 — Avenant n° 56 du 14 avril 2026",
+    "date": "2026-11-11",
+    "note": "Temps partiel (compléments d'heures : 8 par an, 26 semaines, +10 %), non étendu : proposition faite pour Mizuki le 11/11/2026, en attente de validation.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "PACA Accord du 6 juillet 2026 relatif aux salaires",
+    "date": "2026-11-11",
+    "note": "Onglet PACA ajouté le 11/11/2026 dans les grilles 1596 et 1597 (au 01/09/2026, étendu le 13/10/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1555 — Accord du 8 juillet 2026",
+    "date": "2026-11-11",
+    "note": "Grille 1555 déjà à jour (accord du 08/07/2026, au 01/06/2026). Accord de salaires, pas de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1580 — Accord du 16 juillet 2026",
+    "date": "2026-11-11",
+    "note": "Grille 1580 déjà à jour (accord du 16/07/2026, au 01/06/2026). Accord de salaires, pas de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1621 — Accord du 16 juin 2026",
+    "date": "2026-11-11",
+    "note": "Grille 1621 déjà à jour (accord du 16/06/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 18 — Accord du 17 juin 2026",
+    "date": "2026-11-11",
+    "note": "Grille 18 déjà à jour (accord du 17/06/2026, au 01/06/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 468 — Accord du 18 juin 2026",
+    "date": "2026-11-11",
+    "note": "Grille 468 déjà à jour (accord du 18/06/2026, au 01/08/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 500 — Avenant du 25 juin 2026",
+    "date": "2026-11-11",
+    "note": "Grille 500 déjà à jour (avenant du 25/06/2026, au 01/07/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1486 — Annexe V",
+    "date": "2026-11-11",
+    "note": "Liste NAF 2025 du champ d'application : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1586 — Accord du 6 mai 2026",
+    "date": "2026-11-11",
+    "note": "Liste des métiers exposés aux risques ergonomiques : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1794 — Accord du 1er juillet 2026",
+    "date": "2026-11-11",
+    "note": "Salariés expérimentés (seniors) : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1794 — Avenant n° 1 du 30 juin 2026",
+    "date": "2026-11-11",
+    "note": "Salariés aidants : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 218 — Avenant du 30 avril 2026",
+    "date": "2026-11-11",
+    "note": "Avenant au protocole du 12/08/2008 (régime complémentaire) : sans effet sur la grille."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 218 — Protocole d'accord du 27 mai 2026",
+    "date": "2026-11-11",
+    "note": "Soutien aux proches aidants : sans effet sur la grille ni les règles d'heures."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 45 — Accord du 20 mai 2026",
+    "date": "2026-11-11",
+    "note": "Méthodologie de négociation sur l'emploi des seniors : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale des personnels des activités hippiques",
+    "date": "2026-11-11",
+    "note": "Grille 7012 refaite et IDCC 7026 ajoutée à Lumina le 11/11/2026 (avenant n° 6 au 01/02/2026, avenant n° 12 trot/galop au 01/03/2026). Aucun avenant salaires plus récent recensé."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale des entreprises de la publicité",
+    "date": "2026-11-11",
+    "note": "86 : avenant étendu non identifié en accès libre, aucun avenant salaires depuis le 19/03/2025. À revoir à parution du BOCC.",
+    "expire": "2026-12-31"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 8 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des…",
+    "date": "2026-11-11",
+    "note": "538 : aucun accord salaires 2026 recensé ; grille sur l'accord du 27/11/2025."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 19 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du bricolage",
+    "date": "2026-11-11",
+    "note": "1606 : grille déjà à l'accord du 29/07/2026 (au 01/09/2026)."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'optique-lunetterie",
+    "date": "2026-11-11",
+    "note": "1431 : grille déjà à l'accord du 09/07/2026 (au 01/11/2026)."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de travail des…",
+    "date": "2026-11-11",
+    "note": "2528 : accord du secteur cuirs et peaux (ex-207), grille maroquinerie inchangée."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 19 octobre 2026 portant extension d'un avenant à la convention collective nationale des distributeurs conseils hors domicile",
+    "date": "2026-11-11",
+    "note": "1536 : avenant 2026/3 étendu, montants absents du fonds et des sources libres. À reporter dès qu'il arrive dans le fonds.",
+    "expire": "2026-11-30"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 12 octobre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des ouvriers, employés,",
+    "date": "2026-11-11",
+    "note": "998 : accords du 17/07/2026 étendus, montants absents du fonds et des sources libres. À reporter.",
+    "expire": "2026-11-30"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 12 octobre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des cadres, ingénieurs",
+    "date": "2026-11-11",
+    "note": "1256 : accord du 17/07/2026 étendu, montants absents du fonds et des sources libres. À reporter.",
+    "expire": "2026-11-30"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "docteur junior",
+    "date": "2026-11-11",
+    "note": "Gardes et astreintes médicales des docteurs juniors (internes) : hors salariés du privé."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-10-21",
+    "date": "2026-11-11",
+    "note": "Cass. soc. 21/10/2026, arrêts F-D appliquant une jurisprudence constante (formation L6321-1, preuve des heures L3171-4, harcèlement, inaptitude). Rien à changer.",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "501105",
+    "date": "2026-11-11",
+    "note": "CE 29/10/2026 : contrôles et sanctions des crèches privées. Hors sujet."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "texte N° 133",
+    "date": "2026-11-11",
+    "note": "Proposition de loi (élus locaux salariés protégés) : pas encore une loi, à revoir si adoptée.",
+    "expire": "2027-06-30"
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "D351-1-9 (CSS)",
+    "date": "2026-11-11",
+    "note": "Retraite anticipée pour incapacité permanente (taux 20 %) : pas dans les outils."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "D351-1-10 (CSS)",
+    "date": "2026-11-11",
+    "note": "Retraite anticipée pour incapacité permanente (taux 10 %, 17 ans d'exposition) : pas dans les outils."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "R1452-2 (CT)",
+    "date": "2026-11-11",
+    "note": "Procédure prud'homale (requête au greffe) : sans rapport avec les calculs des outils."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "R1452-4 (CT)",
+    "date": "2026-11-11",
+    "note": "Procédure prud'homale (convocation par le greffe) : sans rapport avec les calculs des outils."
+  },
+  {
+    "categorie": "boss-modifie",
+    "cle": "Toutes les actualités du Boss",
+    "date": "2026-11-11",
+    "note": "Communiqués BOSS lus le 11/11/2026 : prime carburant 1 000 € (décrets 2026-973/974, déjà dans les outils, cumul avec l'abonnement ajouté), charte du cotisant contrôlé (sans changement), montant net social 2027 (ajouté au Lexique).",
+    "mode": "jusqu_au"
   }
 ]

@@ -1,0 +1,4676 @@
+{
+  "genere": "2026-11-12T17:40:55.986771+00:00",
+  "exceptions_appliquees": 637,
+  "nouvelles_alertes": 4,
+  "routage": {
+    "par_zone": {
+      "app": 109,
+      "outils": 109,
+      "grilles": 22,
+      "guide": 3,
+      "mlt": 0,
+      "veille": 1
+    },
+    "non_routees": 0,
+    "zones": {
+      "app": {
+        "nom": "Application",
+        "emoji": "📱",
+        "depot": "hs"
+      },
+      "outils": {
+        "nom": "105 outils",
+        "emoji": "🧰",
+        "depot": "hs"
+      },
+      "grilles": {
+        "nom": "GrillePaye · Lumina",
+        "emoji": "💶",
+        "depot": "hs"
+      },
+      "guide": {
+        "nom": "Guide",
+        "emoji": "📘",
+        "depot": "guide"
+      },
+      "mlt": {
+        "nom": "MonLegiTexte",
+        "emoji": "⚖️",
+        "depot": "droit"
+      },
+      "veille": {
+        "nom": "Chaîne de veille",
+        "emoji": "🩺",
+        "depot": "tableaudebord"
+      }
+    },
+    "ordre": [
+      "app",
+      "outils",
+      "grilles",
+      "guide",
+      "mlt",
+      "veille"
+    ],
+    "index": {
+      "articles": 524,
+      "pages_guide": 980,
+      "outils": 104,
+      "idcc_grilles": 341
+    }
+  },
+  "sections": [
+    {
+      "id": "croisement",
+      "titre": "🔔 Textes parus pour une CCN en attente",
+      "alertes": []
+    },
+    {
+      "id": "grilles",
+      "titre": "Grilles CCN",
+      "alertes": [
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 179 — Personnel des coopératives de consommation d",
+          "detail": "IDCC 179 — Personnel des coopératives de consommation d : 01/01/2013 (166 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 179 — Personnel des coopératives de consommation d",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 179, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 7017 — Parcs et jardins zoologiques",
+          "detail": "IDCC 7017 — Parcs et jardins zoologiques : 01/04/2017 (115 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 7017 — Parcs et jardins zoologiques",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 7017, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 7018 — Entreprises du paysage",
+          "detail": "IDCC 7018 — Entreprises du paysage : 01/10/2017 (109 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 7018 — Entreprises du paysage",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 7018, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 7005 — Caves coopératives vinicoles",
+          "detail": "IDCC 7005 — Caves coopératives vinicoles : 01/01/2018 (106 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 7005 — Caves coopératives vinicoles",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 7005, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 7010 — Élevages aquacoles",
+          "detail": "IDCC 7010 — Élevages aquacoles : 01/05/2018 (102 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 7010 — Personnel des élevages aquacoles",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 7010, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 715 — Instruments à écrire industries connexes",
+          "detail": "IDCC 715 — Instruments à écrire industries connexes : 01/08/2020 (75 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 715 — Instruments à écrire industries connexes",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 715, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3228 — Personnel navigant maritime (Officier/Appui)",
+          "detail": "IDCC 3228 — Personnel navigant maritime (Officier/Appui) : 01/01/2022 (58 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3228 — Armateurs de services de passages d'eau, personn",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3228, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 413 — Établissements personnes inadaptées et handi",
+          "detail": "IDCC 413 — Établissements personnes inadaptées et handi : 01/07/2022 (52 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 413 — CCN 66 inadaptés handicapés",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 413, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 567 — Bijouterie joaillerie orfèvrerie",
+          "detail": "IDCC 567 — Bijouterie joaillerie orfèvrerie : 2023 (46 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 567 — Bijouterie joaillerie orfèvrerie",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 567, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 2412 — Production de films d'animation",
+          "detail": "IDCC 2412 — Production de films d'animation : 01/10/2023 (37 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2412 — Production de films d'animation",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 2412, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3210 — Banque Populaire",
+          "detail": "IDCC 3210 — Banque Populaire : 01/01/2024 (34 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3210 — Banque Populaire",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3210, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3225 — Éditeurs de la presse magazine (fusionnée da",
+          "detail": "IDCC 3225 — Éditeurs de la presse magazine (fusionnée da : 01/01/2024 (34 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3225 — Éditeurs de la presse magazine (fusionnée dans l",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3225, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3144 — Bâtiment TP ETAM Guadeloupe",
+          "detail": "IDCC 3144 — Bâtiment TP ETAM Guadeloupe : 01/05/2024 (30 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3144 — Bâtiment TP ETAM Guadeloupe",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3144, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3218 — Enseignement privé non lucratif (EPNL)",
+          "detail": "IDCC 3218 — Enseignement privé non lucratif (EPNL) : 01/09/2024 (26 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3218 — Enseignement privé non lucratif",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3218, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 45 — Caoutchouc industrie",
+          "detail": "IDCC 45 — Caoutchouc industrie : 2025 (22 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 45 — Caoutchouc industrie",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 45, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 1486 — Syntec bureaux études techniques informatiqu",
+          "detail": "IDCC 1486 — Syntec bureaux études techniques informatiqu : 01/01/2025 (22 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1486 — Syntec bureaux études techniques informatique in",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 1486, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 1850 — Avocats salariés (cabinets d'avocats)",
+          "detail": "IDCC 1850 — Avocats salariés (cabinets d'avocats) : 01/01/2025 (22 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1850 — Avocats salariés (cabinets d'avocats)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 1850, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 2149 — Activités du déchet",
+          "detail": "IDCC 2149 — Activités du déchet : 01/01/2025 (22 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2149 — Activités du déchet",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 2149, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3223 — Personnels navigants officiers maritimes",
+          "detail": "IDCC 3223 — Personnels navigants officiers maritimes : 01/01/2025 (22 mois)",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3223 — Transports et services maritimes, personnels nav",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3223, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3252 — Entreprises au service de la création et de ",
+          "detail": "IDCC 3252 — Entreprises au service de la création et de  : 01/01/2025 (22 mois)",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3252 — Entreprises au service de la création et de l'év",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3252, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-ancienne",
+          "gravite": "basse",
+          "titre": "IDCC 3253 — Salariés des cabinets d'avocats",
+          "detail": "IDCC 3253 — Salariés des cabinets d'avocats : 01/01/2025 (22 mois)",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 3253 — Cabinets d'avocats (personnel salarié)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Chercher un avenant salaires plus récent (KALI, BOCC)",
+              "raison": "convention IDCC 3253, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smic",
+      "titre": "💶 Revalorisation du SMIC",
+      "alertes": []
+    },
+    {
+      "id": "droit",
+      "titre": "MonLegiTexte",
+      "module": "monlegitexte-droit",
+      "alertes": [
+        {
+          "categorie": "run-en-retard",
+          "gravite": "moyenne",
+          "titre": "[OIT] Dernier run vieux de 30 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 30 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "Aspirateur (dépôt droit, Actions)",
+              "fichiers": [],
+              "action": "Ouvrir le dernier passage dans GitHub Actions et relancer / corriger",
+              "raison": "santé de la veille",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        }
+      ],
+      "hors_sujet_ignores": 0
+    },
+    {
+      "id": "modules",
+      "titre": "8 modules",
+      "alertes": []
+    },
+    {
+      "id": "outils",
+      "titre": "105 outils",
+      "alertes": []
+    },
+    {
+      "id": "guide",
+      "titre": "Guide SEO",
+      "alertes": []
+    },
+    {
+      "id": "syntaxe",
+      "titre": "Syntaxe JS (page entière cassée)",
+      "module": "syntaxe-js",
+      "alertes": []
+    },
+    {
+      "id": "pages",
+      "titre": "Pages qui ne se chargent plus (ouverture réelle)",
+      "module": "pages",
+      "alertes": []
+    },
+    {
+      "id": "citations",
+      "titre": "Citations juridiques (guide + modules)",
+      "alertes": []
+    },
+    {
+      "id": "structure",
+      "titre": "Structure (JSON-LD, outils orphelins)",
+      "alertes": [
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-abonnements : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Coût des abonnements",
+              "fichiers": [
+                "outils/module-abonnements.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-activite-partielle : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Activité Partielle",
+              "fichiers": [
+                "outils/module-activite-partielle.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-allocations-familiales : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Allocations familiales",
+              "fichiers": [
+                "outils/module-allocations-familiales.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-alternance : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Alternance",
+              "fichiers": [
+                "outils/module-alternance.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-anciennete : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Ancienneté",
+              "fichiers": [
+                "outils/module-anciennete.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-archives : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Conservation Documents RH",
+              "fichiers": [
+                "outils/module-archives.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-arret : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Arrêt Maladie",
+              "fichiers": [
+                "outils/module-arret.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-astreintes : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Astreintes",
+              "fichiers": [
+                "outils/module-astreintes.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-atmp : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "AT/MP",
+              "fichiers": [
+                "outils/module-atmp.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-avantages-nature : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Avantages en nature",
+              "fichiers": [
+                "outils/module-avantages-nature.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-bonus-malus-eco : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bonus/malus écologique",
+              "fichiers": [
+                "outils/module-bonus-malus-eco.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-budget : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Budget 50/30/20",
+              "fichiers": [
+                "outils/module-budget.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-bulletin : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-c2p : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "C2P Pénibilité",
+              "fichiers": [
+                "outils/module-c2p.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-cash-vs-credit : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Paiement 3-4× vs crédit",
+              "fichiers": [
+                "outils/module-cash-vs-credit.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-cet : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CET",
+              "fichiers": [
+                "outils/module-cet.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-chomage : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Droits Chômage",
+              "fichiers": [
+                "outils/module-chomage.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-comparateur-forfaits : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Comparateur de forfaits",
+              "fichiers": [
+                "outils/module-comparateur-forfaits.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-conge-ss : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congé Sans Solde",
+              "fichiers": [
+                "outils/module-conge-ss.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-conges : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-conso-auto : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Coût d'un trajet",
+              "fichiers": [
+                "outils/module-conso-auto.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-conso-electrique : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Coût d'un appareil",
+              "fichiers": [
+                "outils/module-conso-electrique.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-contrats : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CDI / CDD / Intérim",
+              "fichiers": [
+                "outils/module-contrats.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-convertisseur : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Convertisseur Rémunération",
+              "fichiers": [
+                "outils/module-convertisseur.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-cout-voiture : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Coût complet d'une voiture",
+              "fichiers": [
+                "outils/module-cout-voiture.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-credit-cout : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Coût d'un crédit",
+              "fichiers": [
+                "outils/module-credit-cout.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-cse : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CSE & Représentation",
+              "fichiers": [
+                "outils/module-cse.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-cumul-retraite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Cumul Emploi-Retraite",
+              "fichiers": [
+                "outils/module-cumul-retraite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-dates : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Calcul de dates",
+              "fichiers": [
+                "outils/module-dates.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-decodeur-sigles : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Décodeur de sigles",
+              "fichiers": [
+                "outils/module-decodeur-sigles.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-delegation : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Heures de Délégation",
+              "fichiers": [
+                "outils/module-delegation.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-arrivee-france : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Arrivée en France",
+              "fichiers": [
+                "outils/module-demarche-arrivee-france.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-deces : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Décès d'un proche",
+              "fichiers": [
+                "outils/module-demarche-deces.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-demenagement : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Déménagement",
+              "fichiers": [
+                "outils/module-demarche-demenagement.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-depot-garantie : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Dépôt de garantie & préavis",
+              "fichiers": [
+                "outils/module-demarche-depot-garantie.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-eco-gestes : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Éco-gestes & économies",
+              "fichiers": [
+                "outils/module-demarche-eco-gestes.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-logement-etudiant : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Premier logement étudiant",
+              "fichiers": [
+                "outils/module-demarche-logement-etudiant.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-micro-entreprise : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Créer une micro-entreprise",
+              "fichiers": [
+                "outils/module-demarche-micro-entreprise.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-naissance : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Naissance d'un enfant",
+              "fichiers": [
+                "outils/module-demarche-naissance.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-pacs-mariage : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "PACS ou mariage",
+              "fichiers": [
+                "outils/module-demarche-pacs-mariage.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-papiers-perdus : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Perte de papiers",
+              "fichiers": [
+                "outils/module-demarche-papiers-perdus.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-permis : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Permis de conduire",
+              "fichiers": [
+                "outils/module-demarche-permis.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-premier-emploi : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Premier emploi",
+              "fichiers": [
+                "outils/module-demarche-premier-emploi.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-securite-numerique : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Sécurité numérique de base",
+              "fichiers": [
+                "outils/module-demarche-securite-numerique.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-valise-voyage : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Préparer son voyage",
+              "fichiers": [
+                "outils/module-demarche-valise-voyage.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demarche-voiture-occasion : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Achat/vente voiture d'occasion",
+              "fichiers": [
+                "outils/module-demarche-voiture-occasion.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-demission-are : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Démission Légitime",
+              "fichiers": [
+                "outils/module-demission-are.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-devises : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Convertisseur de devises",
+              "fichiers": [
+                "outils/module-devises.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-dpe-decodeur : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Décodeur de DPE",
+              "fichiers": [
+                "outils/module-dpe-decodeur.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-droits-passagers : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Droits des passagers",
+              "fichiers": [
+                "outils/module-droits-passagers.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-effectifs : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Seuils d'effectif",
+              "fichiers": [
+                "outils/module-effectifs.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-egalite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Index Égalité",
+              "fichiers": [
+                "outils/module-egalite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-entretien : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Entretien de Parcours Pro.",
+              "fichiers": [
+                "outils/module-entretien.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-epargne : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Épargne Salariale",
+              "fichiers": [
+                "outils/module-epargne.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-essai : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Période d'Essai",
+              "fichiers": [
+                "outils/module-essai.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-famille : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congés familiaux",
+              "fichiers": [
+                "outils/module-famille.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-feries : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-fincontrat : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fin de contrat",
+              "fichiers": [
+                "outils/module-fincontrat.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-fincontrat2 : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Solde de Tout Compte",
+              "fichiers": [
+                "outils/module-fincontrat2.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-formation : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "CPF & Formation",
+              "fichiers": [
+                "outils/module-formation.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-francs-euros : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Francs ↔ Euros",
+              "fichiers": [
+                "outils/module-francs-euros.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-fuseaux : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fuseaux horaires",
+              "fichiers": [
+                "outils/module-fuseaux.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-greve : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Grève",
+              "fichiers": [
+                "outils/module-greve.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-imc : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "IMC & besoins caloriques",
+              "fichiers": [
+                "outils/module-imc.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-impot-revenu : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Impôt sur le revenu",
+              "fichiers": [
+                "outils/module-impot-revenu.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-inaptitude : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Inaptitude & Reclassement",
+              "fichiers": [
+                "outils/module-inaptitude.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-interets-composes : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Épargne & intérêts",
+              "fichiers": [
+                "outils/module-interets-composes.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-invalidite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Invalidité",
+              "fichiers": [
+                "outils/module-invalidite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-journal : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Journal d'Incidents",
+              "fichiers": [
+                "outils/module-journal.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-lexique : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-livrets-epargne : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Livrets réglementés",
+              "fichiers": [
+                "outils/module-livrets-epargne.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-loyer-prorata : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Loyer au prorata",
+              "fichiers": [
+                "outils/module-loyer-prorata.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-miseapied : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mise à Pied",
+              "fichiers": [
+                "outils/module-miseapied.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-mobilites : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Forfait Mobilités Durables",
+              "fichiers": [
+                "outils/module-mobilites.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-modulation : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Modulation",
+              "fichiers": [
+                "outils/module-modulation.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-mutuelle : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mutuelle Obligatoire",
+              "fichiers": [
+                "outils/module-mutuelle.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-nonconcurrence : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Clause de Non-Concurrence",
+              "fichiers": [
+                "outils/module-nonconcurrence.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-numeros-urgence : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Numéros utiles & urgences",
+              "fichiers": [
+                "outils/module-numeros-urgence.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-parentalite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Parentalité",
+              "fichiers": [
+                "outils/module-parentalite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-partage-addition : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Partage d'addition",
+              "fichiers": [
+                "outils/module-partage-addition.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-partage-depenses : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Partage de dépenses",
+              "fichiers": [
+                "outils/module-partage-depenses.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-pension-alimentaire : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Pension alimentaire",
+              "fichiers": [
+                "outils/module-pension-alimentaire.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-pourcentages : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Pourcentages",
+              "fichiers": [
+                "outils/module-pourcentages.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-preavis : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Préavis",
+              "fichiers": [
+                "outils/module-preavis.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-preavis-comp : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Comparatif Ruptures",
+              "fichiers": [
+                "outils/module-preavis-comp.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-precarite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Prime de Précarité",
+              "fichiers": [
+                "outils/module-precarite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-prix-unitaire : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Prix au kilo / litre",
+              "fichiers": [
+                "outils/module-prix-unitaire.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-proche-aidant : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Proche Aidant",
+              "fichiers": [
+                "outils/module-proche-aidant.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-remboursement-sante : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Remboursement santé",
+              "fichiers": [
+                "outils/module-remboursement-sante.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-remise : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Remises & soldes",
+              "fichiers": [
+                "outils/module-remise.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-reperes-consommateur : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Repères droits consommateur",
+              "fichiers": [
+                "outils/module-reperes-consommateur.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-retraite : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Retraite",
+              "fichiers": [
+                "outils/module-retraite.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-rupture : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Rupture Conventionnelle",
+              "fichiers": [
+                "outils/module-rupture.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-sabbatique : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Congé Sabbatique",
+              "fichiers": [
+                "outils/module-sabbatique.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-saisie : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Saisie sur Salaire",
+              "fichiers": [
+                "outils/module-saisie.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-salaire-cout-employeur : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-solde-points-permis : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Solde de points du permis",
+              "fichiers": [
+                "outils/module-solde-points-permis.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-surface : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Peinture & surface",
+              "fichiers": [
+                "outils/module-surface.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-teletravail : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Télétravail",
+              "fichiers": [
+                "outils/module-teletravail.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-temps : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Temps & Repos",
+              "fichiers": [
+                "outils/module-temps.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-tr : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Titres-Restaurant",
+              "fichiers": [
+                "outils/module-tr.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-transport : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Transport & Mobilité",
+              "fichiers": [
+                "outils/module-transport.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-tva : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "HT · TTC · TVA",
+              "fichiers": [
+                "outils/module-tva.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module-unites : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Convertisseur d'unités",
+              "fichiers": [
+                "outils/module-unites.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "outil-orphelin",
+          "gravite": "basse",
+          "titre": "module8 : le fichier existe, mais n'apparaît dans aucune catégorie",
+          "detail": "Personne ne peut l'atteindre par la navigation normale, même pas par la recherche interne.",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "outils.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Module8",
+              "fichiers": [
+                "outils/module-module8.html"
+              ],
+              "action": "Ajouter l'outil à une catégorie de outils.html",
+              "raison": "",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "noindex",
+      "titre": "MonLegiTexte — noindex en direct",
+      "module": "noindex-live",
+      "alertes": []
+    },
+    {
+      "id": "contenu",
+      "titre": "Contenu des articles cités et phrases fausses connues",
+      "module": "contenu-articles",
+      "alertes": []
+    },
+    {
+      "id": "nouveaux",
+      "titre": "📰 Nouveaux textes sur tes sujets",
+      "alertes": [
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Rejet · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-10.207 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : C'est dans l'exercice de son pouvoir souverain d'appréciation que le conseil de prud'hommes, sans modifier l'objet du litige, a estimé que les pièces produites par le salarié ne permettaient pas d'établir le bien-fondé des demandes, formées par le salarié, en paiement d'un solde d'indemnité compensatrice de préavis, d'un solde d'allocation congé de reclassement 65 %, d'un solde d'allocation congé de reclassement 81 % et d'un solde d'indemnité conventionnelle de licenciement. 7. Le moyen n'est…\n\n🏖️ Repos et congés — « congés payés » : …n 5. Le salarié fait grief au jugement de le débouter de ses demandes en paiement de diverses sommes à titre de soldes d'indemnité compensatrice de préavis, de congés payés afférents, d'allocation congé de reclassement 65 %, d'allocation congé de reclassement 81 % et d'indemnité conventionnelle de licenciement, alors « qu'en affir…",
+          "lien": "https://www.courdecassation.fr/decision/6acf407c7a10202137408228",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a. : parle de : Repos et congés",
+          "detail": "Décision du 2026-10-14 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-14, n° 25-17.732 e.a.\n\nElle parle de : Repos et congés.\n\nCe que la Cour a jugé : Selon ce texte, l'objet du litige est déterminé par les prétentions respectives des parties. 7. Pour dire que la prise d'acte de la rupture du contrat de travail du 5 mars 2024 aux torts de l'employeur produit les effets d'un licenciement nul et condamner l'employeur à payer à la salariée des dommages et intérêts pour licenciement nul, l'arrêt retient que la prise d'acte étant pour partie justifiée par des faits de harcèlement moral, la demande de la salariée en dommages et intérêts pour…\n\n🏖️ Repos et congés — « congés payés » : …salariée de percevoir des indemnités journalières complémentaires et de le condamner à payer à la salariée certaines sommes à titre de rappel de salaire et de congés payés afférents, à titre d'indemnité compensatrice de préavis et de congés payés afférents, à titre de dommages et intérêts pour licenciement nul et de dommages et i…",
+          "lien": "https://www.courdecassation.fr/decision/6acf409f7a10202137408f92",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-10-14",
+          "formation": "F-D",
+          "vu_le": "2026-10-27",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Mes Congés Payés",
+              "fichiers": [
+                "outils/module-conges.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Jours Fériés 2026",
+              "fichiers": [
+                "outils/module-feries.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "conge-paye-calcul.html",
+                "dimanche-jours-feries.html",
+                "hs-pendant-conge-paye.html",
+                "conges-payes-maladie-report-guide.html",
+                "demande-conges-payes-refus-employeur-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : congés payés",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "basse",
+          "titre": "Cour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a. : parle de : Heures supplémentaires",
+          "detail": "Décision du 2026-10-07 — Cour de cassation Chambre sociale · solution : Cassation · formation F-D · non publiée (ne fait pas jurisprudence)\n\nCour de cassation Chambre sociale, 2026-10-07, n° 25-10.840 e.a.\n\nElle parle de : Heures supplémentaires.\n\nCe que la Cour a jugé : Au termes du premier de ces textes, le juge qui refusera de juger, sous prétexte du silence, de l'obscurité ou de l'insuffisance de la loi, pourra être poursuivi comme coupable de déni de justice. 15. Aux termes du deuxième, le juge doit se prononcer sur tout ce qui est demandé et seulement sur ce qui est demandé. 16. Selon le troisième, le juge tranche le litige conformément aux règles de droit qui lui sont applicables. 17. Pour condamner le CHT à payer à M. [Z] « les heures additionnelles…\n\n⏱️ Heures supplémentaires — « heures supplémentaires » : …mai 2020. 2. Par requête du 29 janvier 2021, M. [Z] a saisi le tribunal du travail d'une demande en paiement à titre de majorations de salaires applicables aux heures supplémentaires effectuées depuis le 1er août 2017. 3. Le CHT a soulevé une exception d'incompétence du tribunal du travail au profit de la juridiction administrative. Examen…",
+          "lien": "https://www.courdecassation.fr/decision/6ac606bac27382d099f5744b",
+          "fonds": "Juris",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-10-07",
+          "formation": "F-D",
+          "vu_le": "2026-10-20",
+          "nouveau": false,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M1 · Compteur annuel des heures sup",
+              "fichiers": [
+                "heures/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Temps & Repos",
+              "fichiers": [
+                "outils/module-temps.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "heures-non-payees.html",
+                "heures-supplementaires-guide.html",
+                "hs-salaires-nets-bruts-guide.html",
+                "depassement-contingent-refus-salarie.html",
+                "calcul-exoneration-hs-etape-par-etape.html",
+                "depassement-contingent-refus-salarie-avance.html",
+                "teletravail-frais-heures-supplementaires-guide.html",
+                "declaration-impots-heures-supplementaires-guide.html"
+              ],
+              "action": "Relire les pages de fond sur ce thème",
+              "raison": "thème : heures supplementaires",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "accords",
+      "titre": "🏢 Accords d'entreprise à regarder",
+      "alertes": []
+    },
+    {
+      "id": "regles",
+      "titre": "📐 Règles et montants officiels",
+      "module": "regles-officielles",
+      "alertes": []
+    },
+    {
+      "id": "sources",
+      "titre": "🏛️ BOSS, Parlement, liste DARES",
+      "module": "veille-sources-officielles",
+      "alertes": []
+    },
+    {
+      "id": "changements",
+      "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
+      "module": "changements-fichiers",
+      "alertes": [
+        {
+          "categorie": "fichier-modifie",
+          "gravite": "basse",
+          "titre": "9 fichiers modifiés (2026-11-12) : app, guide, MonLegiTexte",
+          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (9) : menu.html, nouveautes.html, sw.js, module:module5, grillepaye:index.html, grillepaye:ccn-data.json, outil:module-lexique.html, outil:module-mobilites.html, outil:module-transport.html",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
+              "fichiers": [
+                "menu.html",
+                "nouveautes.html",
+                "sw.js"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "app",
+              "cible": "M5 · Mizuki, temps partiel",
+              "fichiers": [
+                "module5/index.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Forfait Mobilités Durables",
+              "fichiers": [
+                "outils/module-mobilites.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Transport & Mobilité",
+              "fichiers": [
+                "outils/module-transport.html"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "GrillePaye (données et page)",
+              "fichiers": [
+                "GrillePaye/index.html",
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Simple constat — rien à faire si c'est ton travail",
+              "raison": "",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "grilles"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "titre": "Âge de la référence (3 mois et 12 mois)",
+      "module": "age-reference",
+      "alertes": []
+    }
+  ]
+}

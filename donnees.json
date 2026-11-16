@@ -1,17 +1,17 @@
 {
-  "genere": "2026-11-12T17:40:55.986771+00:00",
-  "exceptions_appliquees": 637,
-  "nouvelles_alertes": 4,
+  "genere": "2026-11-16T19:40:00.108993+00:00",
+  "exceptions_appliquees": 625,
+  "nouvelles_alertes": 26,
   "routage": {
     "par_zone": {
-      "app": 109,
-      "outils": 109,
-      "grilles": 22,
-      "guide": 3,
+      "app": 115,
+      "outils": 111,
+      "grilles": 34,
+      "guide": 16,
       "mlt": 0,
-      "veille": 1
+      "veille": 2
     },
-    "non_routees": 0,
+    "non_routees": 1,
     "zones": {
       "app": {
         "nom": "Application",
@@ -69,6 +69,90 @@
       "id": "grilles",
       "titre": "Grilles CCN",
       "alertes": [
+        {
+          "categorie": "grille-sur-texte-ancien",
+          "gravite": "haute",
+          "titre": "IDCC 2120 : grille construite sur un texte remplacé",
+          "detail": "Les montants de la grille correspondent à « Accord du 16 avril 2026 relatif aux salaires » (100% retrouvés), mais le fonds contient plus récent : « Avenant du 26 juin 2026 à l'accord du 21 juillet 2022 relatif à la réévaluation des salaires minima inférieurs au Smic ». — Le premier alinéa de l'article 1er de l'accord visé est supprimé et remplacé par l'alinéa suivant : « Les salaires minima visés à l'article 42.2 de la convention collective ne peuvent être inférieurs à la valeur du montant du Smic annuel au…",
+          "date_texte": "2026-10-14",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2120 — Banque (AFB)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Remplacer la source de la grille par le texte en vigueur",
+              "raison": "convention IDCC 2120, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-sur-texte-ancien",
+          "gravite": "haute",
+          "titre": "IDCC 2219 : grille construite sur un texte remplacé",
+          "detail": "Les montants de la grille correspondent à « Accord du 20 juin 2025 relatif aux rémunérations minimales » (100% retrouvés), mais le fonds contient plus récent : « Accord du 28 avril 2026 relatif aux rémunérations minimales ». — visite médicale d'autorisation 1 865,43 € 12,30 € Niveau 2 Conducteur(trice) Confirmé(e) Conducteur(trice) titulaire du permis de conduire B ; · visite médicale d'autorisation Ayant au moins 2 années d'expérience dans la profession 1 881,14 € 12,40 € Échelon 2 Qualifications Salaire minimal pour 151,67 heures mensuelles Taux horaire Niveau 1 Conducteur(trice) Débutant(te) Titulaire …\n\nRéelle et sourcée, mais sous le SMIC — la branche n'a pas renégocié. Rien à corriger, le SMIC prime automatiquement.",
+          "date_texte": "2026-10-29",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2219 — Taxis",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Remplacer la source de la grille par le texte en vigueur",
+              "raison": "convention IDCC 2219, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "grille-perimee",
+          "gravite": "moyenne",
+          "titre": "IDCC 2335 : grille dépassée de 146 jours",
+          "detail": "Avenant n° 7 du 27 mai 2026 relatif aux salaires minima au 1er juin 2026 — Les partenaires sociaux, réunis en commission paritaire permanente de négociation et d'interprétation, ont décidé de réévaluer la 1re classe du barème des salaires des minima annuels bruts figurant à l'annexe 1 afin de respecter l'écart de …",
+          "date_texte": "2026-10-14",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2335 — Personnel agences générales assurances",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la grille avec le texte plus récent du fonds",
+              "raison": "convention IDCC 2335, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "agent-general-assurance-collaborateur-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2335",
+              "raison": "parlent de l'IDCC 2335",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
         {
           "categorie": "grille-ancienne",
           "gravite": "basse",
@@ -511,7 +595,7 @@
           "gravite": "basse",
           "titre": "IDCC 3252 — Entreprises au service de la création et de ",
           "detail": "IDCC 3252 — Entreprises au service de la création et de  : 01/01/2025 (22 mois)",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -534,7 +618,7 @@
           "gravite": "basse",
           "titre": "IDCC 3253 — Salariés des cabinets d'avocats",
           "detail": "IDCC 3253 — Salariés des cabinets d'avocats : 01/01/2025 (22 mois)",
-          "nouveau": true,
+          "nouveau": false,
           "cibles": [
             {
               "zone": "grilles",
@@ -567,8 +651,8 @@
         {
           "categorie": "run-en-retard",
           "gravite": "moyenne",
-          "titre": "[OIT] Dernier run vieux de 30 jours",
-          "detail": "Cadence normale : environ tous les 7 jours. 30 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
+          "titre": "[OIT] Dernier run vieux de 34 jours",
+          "detail": "Cadence normale : environ tous les 7 jours. 34 jours sans run suggère un cycle manqué ou le workflow en échec silencieux.",
           "nouveau": true,
           "cibles": [
             {
@@ -4311,12 +4395,900 @@
       "id": "contenu",
       "titre": "Contenu des articles cités et phrases fausses connues",
       "module": "contenu-articles",
-      "alertes": []
+      "alertes": [
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L5122-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 6.0 -> 6.0). Cité dans 3 fichier(s) — dans l'application : outil:module-activite-partielle.html, outil:outils/articles-loi.js, outil:outils/module-activite-partielle.html.\n\nAVANT — …bénéficient d'une allocation d'activité partielle selon les modalités prévues au présent chapitre.Conformément au II de l’article 211 de la loi n° 2022-1726 du 30 décembre 2022, ces dispositions s’appliquent aux demandes d'autorisation adressées à l'autorité administrative par les employeurs…\n\nAPRÈS — …bénéficient d'une allocation d'activité partielle selon les modalités prévues au présent chapitre .Conformément au II de l’article 211 de la loi n° 2022-1726 du 30 décembre 2022, ces dispositions s’appliquent aux demandes d'autorisation adressées à l'autorité administrative par les employeurs…\n\nRelevé complet des lieux : releves/L5122-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L5122-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "outils",
+              "cible": "Activité Partielle",
+              "fichiers": [
+                "outils/module-activite-partielle.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "outils"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L5121-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 1.0 -> 1.0). Cité dans 1 fichier(s) — dans l'application : fox:fox/js/articles-loi.js.\n\nAVANT — …de branche ou à des organisations interprofessionnelles par le moyen de conventions, dénommées \" engagements de développement de l'emploi et des compétences \", qui ont pour objet d'anticiper et d'accompagner l'évolution des emplois et des qualifications des actifs occupés. Ces engagements sont…\n\nAPRÈS — …de branche ou à des organisations interprofessionnelles par le moyen de conventions, dénommées \"engagements de développement de l'emploi et des compétences\", qui ont pour objet d'anticiper et d'accompagner l'évolution des emplois et des qualifications des actifs occupés. Ces engagements sont…\n\nRelevé complet des lieux : releves/L5121-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L5121-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L3232-5 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 2.0 -> 2.0). Cité dans 1 fichier(s) — dans l'application : fox:fox/js/articles-loi.js.\n\nAVANT — …minimale et la somme qu'il a effectivement perçue. Pour l'application du présent chapitre, sont assimilées à l'indemnité d'activité partielle, les indemnités pour intempéries prévues aux articles L. 5424-6 et suivants .\n\nAPRÈS — …minimale et la somme qu'il a effectivement perçue. Pour l'application du présent chapitre , sont assimilées à l'indemnité d'activité partielle, les indemnités pour intempéries prévues aux articles L. 5424-6 et suivants .\n\nRelevé complet des lieux : releves/L3232-5.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L3232-5",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L4741-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 5.0 -> 5.0). Cité dans 1 fichier(s) — dans l'application : module:module4/js/features/dte-scenarios.js.\n\nAVANT — …II, chapitre IV du titre III et titre IV du livre V ; 6° Chapitre II du titre II du présent livre. La récidive est punie d'un emprisonnement d'un an et d'une amende de 30 000 euros. L'amende est appliquée autant de fois qu'il y a de travailleurs de l'entreprise concernés indépendamment du nombre…\n\nAPRÈS — …II, chapitre IV du titre III et titre IV du livre V ; 6° Chapitre II du titre II du présent livre . La récidive est punie d'un emprisonnement d'un an et d'une amende de 30 000 euros. L'amende est appliquée autant de fois qu'il y a de travailleurs de l'entreprise concernés indépendamment du nombre…\n\nRelevé complet des lieux : releves/L4741-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L4741-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M4 · DTE, prédiction santé et repos",
+              "fichiers": [
+                "module4/js/features/dte-scenarios.js"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "fichier nommé",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L3332-11 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 4.0 -> 4.0). Cité dans 1 fichier(s) — guide : epargne-salariale-pee-percol-guide.html.\n\nAVANT — …sur ce plan dans les conditions prévues au chapitre XI du titre III du livre II du code de commerce, dans la limite de 30 % du montant annuel du plafond mentionné à l' article L. 241-3 du code de la sécurité sociale . Ces versements ne sont pas pris en compte pour l'appréciation du plafond…\n\nAPRÈS — …sur ce plan dans les conditions prévues au chapitre XI du titre III du livre II du code de commerce , dans la limite de 30 % du montant annuel du plafond mentionné à l' article L. 241-3 du code de la sécurité sociale . Ces versements ne sont pas pris en compte pour l'appréciation du plafond…\n\nRelevé complet des lieux : releves/L3332-11.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L3332-11",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "epargne-salariale-pee-percol-guide.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "cite L3332-11",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L3421-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 2.0 -> 2.0). Cité dans 1 fichier(s) — guide : heures-supplementaires-mayotte-guide.html.\n\nAVANT — Les dispositions générales prévues par les articles L. 1521-1 à L. 1521-4 sont également applicables aux dispositions du présent titre.\n\nAPRÈS — Les dispositions générales prévues par les articles L. 1521-1 à L. 1521-4 sont également applicables aux dispositions du présent titre .\n\nRelevé complet des lieux : releves/L3421-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L3421-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "heures-supplementaires-mayotte-guide.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "cite L3421-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L3321-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 3.0 -> 3.0). Cité dans 1 fichier(s) — guide : participation-salaries-guide.html.\n\nAVANT — …conditions dans lesquelles ces dispositions leur sont applicables. Lorsque, dans le présent titre, il est fait référence à l'effectif salarié, cet effectif et le franchissement du seuil sont déterminés au niveau de l'entreprise ou de l'unité économique et sociale selon les modalités prévues à…\n\nAPRÈS — …conditions dans lesquelles ces dispositions leur sont applicables. Lorsque, dans le présent titre , il est fait référence à l'effectif salarié, cet effectif et le franchissement du seuil sont déterminés au niveau de l'entreprise ou de l'unité économique et sociale selon les modalités prévues à…\n\nRelevé complet des lieux : releves/L3321-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L3321-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "participation-salaries-guide.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "cite L3321-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        },
+        {
+          "categorie": "contenu-article-modifie",
+          "gravite": "moyenne",
+          "titre": "L3324-1 (CT) : le texte a changé depuis la dernière vérification",
+          "detail": "Toujours en vigueur, mais le contenu diffère de la dernière empreinte (version 6.0 -> 6.0). Cité dans 1 fichier(s) — guide : participation-salaries-guide.html.\n\nAVANT — …en application des dispositions des articles 44 sexies , 44 sexies A , 44 octies A , 44 octies B, 44 duodecies à 44 septdecies et 208 C du code général des impôts . Ce bénéfice est diminué de l'impôt correspondant qui, pour les entreprises soumises à l'impôt sur le revenu, est déterminé dans les…\n\nAPRÈS — …en application des dispositions des articles 44 sexies , 44 sexies A , 44 octies A , 44 octies B , 44 duodecies à 44 septdecies et 208 C du code général des impôts . Ce bénéfice est diminué de l'impôt correspondant qui, pour les entreprises soumises à l'impôt sur le revenu, est déterminé dans les…\n\nRelevé complet des lieux : releves/L3324-1.txt",
+          "lien": "https://monlegitexte.heuressupfrance.workers.dev/?art=L3324-1",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "participation-salaries-guide.html"
+              ],
+              "action": "Relire ce que le fichier dit de l'article : le texte a changé",
+              "raison": "cite L3324-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul — vérifier la fiche si besoin",
+              "raison": "texte du Code",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "guide"
+          ]
+        }
+      ]
     },
     {
       "id": "nouveaux",
       "titre": "📰 Nouveaux textes sur tes sujets",
       "alertes": [
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Décret n° 2026-1037 du 6 novembre 2026 relatif aux conditions et modalités dérogatoires de calcul de la réduction générale dégressive… : parle de : Durée du travail, Salaires minima",
+          "detail": "Paru au JO le 2026-11-10. Ce texte parle de : Durée du travail, Salaires minima.\n\nDécret n° 2026-1037 du 6 novembre 2026 relatif aux conditions et modalités dérogatoires de calcul de la réduction générale dégressive unique prévues au III bis de l'article L. 241-13 du code de la sécurité sociale en fonction du salaire minimum national professionnel\n\n🕘 Durée du travail — « durée légale » : …cun des champs territoriaux. « Le montant du salaire minimum national professionnel défini dans les conditions prévues aux alinéas précédents est rapporté à la durée légale de travail pour vérifier s'il est au moins égal à la valeur du SMIC prise en compte sur la même base. « III. - Le montant déterminé conformément au II est étab…\n💶 Salaires minima — « salaires minimaux » : …prise ni aucune décision unilatérale de l'employeur n'a prévu, entre le 1 er janvier de l'année civile précédente et le 31 octobre de l'année en cours, que les salaires minimaux soient supérieurs au salaire minimum de croissance en vigueur au 1 er janvier de l'année civile précédente, le salaire minimum calculé pour un an mentionné au…\n\nArticles de code cités dans le texte : D2231-3, D241-6, D241-7, L2231-6, L2261-22, L241-13",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055075486",
+          "fonds": "JORF",
+          "theme": "Durée du travail",
+          "date_texte": "2026-11-10",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M2 · Heures mensualisées (paye)",
+              "fichiers": [
+                "paye/index.html"
+              ],
+              "action": "Vérifier que le calcul et les textes du module suivent la règle",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Bulletin de Paie Décrypté",
+              "fichiers": [
+                "outils/module-bulletin.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Net · Brut · Coût employeur",
+              "fichiers": [
+                "outils/module-salaire-cout-employeur.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Lexique Bulletin",
+              "fichiers": [
+                "outils/module-lexique.html"
+              ],
+              "action": "Vérifier montants, règles et textes de l'outil",
+              "raison": "thème : cotisations",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "mlt",
+              "cible": "Fiches articles de MonLegiTexte",
+              "fichiers": [],
+              "action": "Se met à jour seul au prochain passage",
+              "raison": "articles du Code modifiés",
+              "auto": true,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils"
+          ]
+        },
+        {
+          "categorie": "nouveau-texte-jorf",
+          "gravite": "moyenne",
+          "titre": "Arrêté du 9 novembre 2026 relatif à l'agrément de certains accords de travail applicables dans les établissements et services du secteur… : parle de : Heures supplémentaires, Temps partiel, Durée du travail, Salaires minima",
+          "detail": "Paru au JO le 2026-11-14. Ce texte parle de : Heures supplémentaires, Temps partiel, Durée du travail, Salaires minima.\n\nArrêté du 9 novembre 2026 relatif à l'agrément de certains accords de travail applicables dans les établissements et services du secteur social et médico-social privé à but non lucratif\n\n⏱️ Heures supplémentaires — « majoration des heures » : …alariés 75 Moissons Nouvelles 75019 Paris Accord 16/07/2026 Mise en œuvre du télétravail 78 Fondation Diaconesses de Reuilly 78000 Versailles Accord 18/02/2026 Majoration des heures complémentaires des salariés 88 Association SELIA 88100 Saint-Dié-des-Vosges Accord 21/09/2026 Organisation des élections du CSE 91 Association ALTERITE 91260…\n🕐 Temps partiel — « heures complémentaires » : …sons Nouvelles 75019 Paris Accord 16/07/2026 Mise en œuvre du télétravail 78 Fondation Diaconesses de Reuilly 78000 Versailles Accord 18/02/2026 Majoration des heures complémentaires des salariés 88 Association SELIA 88100 Saint-Dié-des-Vosges Accord 21/09/2026 Organisation des élections du CSE 91 Association ALTERITE 91260 Juvisy-sur-Orge…\n🕘 Durée du travail — « annualisation » : …tion SELIA 88100 Saint-Dié-des-Vosges Accord 21/09/2026 Organisation des élections du CSE 91 Association ALTERITE 91260 Juvisy-sur-Orge Avenant n° 3 24/06/2026 Annualisation du temps de travail Annexe ANNEXE 3 ACCORDS ET DÉCISIONS UNILATÉRALES VISÉS À L'ARTICLE 3 N° dpt Association Code postal Ville Nature Date Objet 01 ADSEA01 019…\n💶 Salaires minima — « salaire minimum conventionnel » : …26 15/09/2026 Actualisation du champ d'application de la convention collective avec la nouvelle nomenclature NAF BAD Avenant 80/2026 15/09/2026 Réévaluation du salaire minimum conventionnel à hauteur du SMIC de juin 2026 NEXEM Accord 01/10/2026 Renouvellement du régime mutualisé de prévoyance dans la CCN66 Sont agréés, sous réserve de l'applicatio…",
+          "lien": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000055087618",
+          "fonds": "JORF",
+          "theme": "Heures supplémentaires",
+          "date_texte": "2026-11-14",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "veille",
+              "cible": "À trier",
+              "fichiers": [],
+              "action": "Aucune destination reconnue : lire et décider",
+              "raison": "non routé",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "veille"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1979 — Avenant n° 10 du 4 mars 2026 à l'accord du 6 octobre 2010 relatif à la mise en place d'un régime professionnel de frais… : nouveau texte",
+          "detail": "Nouveau texte dans la convention IDCC 1979 (Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997) — convention présente dans l'appli.\nDate : 2026-11-10 · État : VIGUEUR_NON_ETEN\n\nAvenant n° 10 du 4 mars 2026 à l'accord du 6 octobre 2010 relatif à la mise en place d'un régime professionnel de frais de santé",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055076760",
+          "fonds": "CCN",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-11-10",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1979 — Hôtels Cafés Restaurants HCR",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 1979, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 1979 — Avenant n° 36 du 4 juin 2026 relatif aux salaires : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 1979 (Convention collective nationale des hôtels, cafés restaurants (HCR) du 30 avril 1997) — convention présente dans l'appli.\nDate : 2026-11-10 · État : VIGUEUR_ETEN\n\nAvenant n° 36 du 4 juin 2026 relatif aux salaires\n\n💶 Salaires minima — « salaires minima » : …enseigne commerciale identique. Les rémunérations horaires brutes applicables sur le territoire métropolitain et les DROM sont déterminées dans le respect des salaires minima conventionnels suivants : Niveau I Niveau II Niveau III Niveau IV Niveau V Échelon 1 12,31 € 12,58 € 13,59 € 14 69 € 18,80 € Échelon 2 12,37 € 12,80 € 13,81 €…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055076779",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-11-10",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 1979 — Hôtels Cafés Restaurants HCR",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 1979, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "barman-sommelier-heures-supplementaires.html",
+                "chef-reception-hotel-heures-supplementaires.html",
+                "congres-salons-heures-supplementaires.html",
+                "cuisinier-chef-heures-supplementaires.html",
+                "equivalences-horaires-transport-hotellerie-guide.html",
+                "femme-valet-chambre-hs.html",
+                "franchise-commerce-heures-supplementaires.html",
+                "gouvernante-hotel-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 1979",
+              "raison": "parlent de l'IDCC 1979",
+              "auto": false,
+              "plus": 16
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2120 — Avenant du 26 juin 2026 à l'accord du 21 juillet 2022 relatif à la réévaluation des salaires minima inférieurs au Smic : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 2120 (Convention collective nationale de la banque du 10 janvier 2000. Etendue par arrêté du 17…) — convention présente dans l'appli.\nDate : 2026-10-14 · État : VIGUEUR_ETEN\n\nAvenant du 26 juin 2026 à l'accord du 21 juillet 2022 relatif à la réévaluation des salaires minima inférieurs au Smic\n\n💶 Salaires minima — « salaires minima » : Avenant du 26 juin 2026 à l'accord du 21 juillet 2022 relatif à la réévaluation des salaires minima inférieurs au Smic Préambule En application de l'article 2 de l'« accord de réévaluation des salaires minima de la branche banque inférieurs au Smic » signé le…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054982028",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-14",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2120 — Banque (AFB)",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2120, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "analyste-credit-heures-supplementaires.html",
+                "banque-heures-supplementaires.html",
+                "conseiller-bancaire-agence-heures-supplementaires.html",
+                "employe-banque-guichet-hs.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2120",
+              "raison": "parlent de l'IDCC 2120",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2128 — Accord de méthode du 28 avril 2026 relatif à la révision et à la modernisation de la convention collective : nouveau texte (Durée du travail)",
+          "detail": "Nouveau texte dans la convention IDCC 2128 (Convention collective nationale de la mutualité du 31 janvier 2000) — convention présente dans l'appli.\nDate : 2026-11-02 · État : VIGUEUR_ETEN\n\nAccord de méthode du 28 avril 2026 relatif à la révision et à la modernisation de la convention collective\n\n🕘 Durée du travail — « temps de travail effectif » : …les d'informer l'ANEM de l'utilisation des journées mentionnées ci-dessus figure en annexe du présent accord de branche. Ces journées sont considérées comme du temps de travail effectif et fractionnables en demi-journées. L'ANEM et la structure employeur doivent être destinataires de la justification de la participation effective des intéressé…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055046191",
+          "fonds": "CCN",
+          "theme": "Durée du travail",
+          "date_texte": "2026-11-02",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "Règles des conventions (HS, temps partiel, forfaits)",
+              "fichiers": [
+                "ccn/conventions-collectives.js"
+              ],
+              "action": "Ajouter ou mettre à jour la règle conventionnelle de l'IDCC 2128 (HS, temps partiel, forfait, repos)",
+              "raison": "texte de l'IDCC 2128 sur le temps de travail",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2128 — Mutualité",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 2128, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2219 — Accord du 28 avril 2026 relatif aux rémunérations minimales : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 2219 (Convention collective nationale des taxis du 11 septembre 2001) — convention présente dans l'appli.\nDate : 2026-10-29 · État : VIGUEUR_ETEN\n\nAccord du 28 avril 2026 relatif aux rémunérations minimales\n\n💶 Salaires minima — « rémunérations minimales » : Accord du 28 avril 2026 relatif aux rémunérations minimales Le présent accord s'applique à l'ensemble des entreprises entrant dans le champ d'application de la présente convention collective. Échelon 1 Qualifications Sa…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055028257",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-29",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2219 — Taxis",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2219, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "chauffeur-variantes-ccn-guide.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2219",
+              "raison": "parlent de l'IDCC 2219",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2219 — Avenant n° 2 du 28 avril 2026 à l'accord du 16 mai 2018 relatif à la mise en place de la commission paritaire… : nouveau texte",
+          "detail": "Nouveau texte dans la convention IDCC 2219 (Convention collective nationale des taxis du 11 septembre 2001) — convention présente dans l'appli.\nDate : 2026-10-29 · État : VIGUEUR_ETEN\n\nAvenant n° 2 du 28 avril 2026 à l'accord du 16 mai 2018 relatif à la mise en place de la commission paritaire permanente de négociation et d'interprétation (CPPNI)",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055028276",
+          "fonds": "CCN",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-29",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2219 — Taxis",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 2219, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2219 — Adhésion par lettre du 18 juin 2026 de l'union fédérale route FGTE-CFDT à la convention collective : nouveau texte",
+          "detail": "Nouveau texte dans la convention IDCC 2219 (Convention collective nationale des taxis du 11 septembre 2001) — convention présente dans l'appli.\nDate : 2026-10-29 · État : VIGUEUR\n\nAdhésion par lettre du 18 juin 2026 de l'union fédérale route FGTE-CFDT à la convention collective",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055028281",
+          "fonds": "CCN",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-10-29",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2219 — Taxis",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Mettre à jour la date du dernier texte connu ; grille inchangée sauf primes",
+              "raison": "convention IDCC 2219, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2247 — Avenant du 11 juin 2026 relatif à la modification de l'article 21 « Classification des fonctions » de la convention… : nouveau texte",
+          "detail": "Nouveau texte dans la convention IDCC 2247 (Convention collective nationale des entreprises de courtage d'assurances et/ou de…) — convention présente dans l'appli.\nDate : 2026-11-02 · État : VIGUEUR_ETEN\n\nAvenant du 11 juin 2026 relatif à la modification de l'article 21 « Classification des fonctions » de la convention collective",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055046273",
+          "fonds": "CCN",
+          "theme": "Convention de l'appli",
+          "date_texte": "2026-11-02",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2247 — Courtage assurances et réassurances",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2247, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "assurance-mutuelle-heures-supplementaires.html",
+                "charge-clientele-assurance-heures-supplementaires.html",
+                "conseiller-clientele-mutuelle-heures-supplementaires.html",
+                "courtier-assurance-salarie-heures-supplementaires.html",
+                "gestionnaire-sinistres-assurance-heures-supplementaires.html",
+                "teleconseiller-assurance-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2247",
+              "raison": "parlent de l'IDCC 2247",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2335 — Avenant n° 7 du 27 mai 2026 relatif aux salaires minima au 1er juin 2026 : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 2335 (Convention collective nationale du personnel des agences générales d'assurances du 17…) — convention présente dans l'appli.\nDate : 2026-10-14 · État : VIGUEUR_ETEN\n\nAvenant n° 7 du 27 mai 2026 relatif aux salaires minima au 1er juin 2026\n\n💶 Salaires minima — « salaires minima » : Avenant n° 7 du 27 mai 2026 relatif aux salaires minima au 1er juin 2026 L'arrêté du 22 mai 2026 a réévalué le Smic de 2,41 % à compter du 1er juin 2026. Les partenaires sociaux, réunis en commission paritaire perma…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000054982041",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-10-14",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2335 — Personnel agences générales assurances",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2335, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "agent-general-assurance-collaborateur-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2335",
+              "raison": "parlent de l'IDCC 2335",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvel-avenant-ccn",
+          "gravite": "haute",
+          "titre": "IDCC 2336 — Accord n° 33 du 17 juin 2026 relatif à la négociation salariale annuelle obligatoire : nouveau texte (Salaires minima)",
+          "detail": "Nouveau texte dans la convention IDCC 2336 (Convention collective nationale de l'habitat et du logement accompagnés du 16 juillet…) — convention présente dans l'appli.\nDate : 2026-11-03 · État : VIGUEUR_ETEN\n\nAccord n° 33 du 17 juin 2026 relatif à la négociation salariale annuelle obligatoire\n\n💶 Salaires minima — « salaire minimum conventionnel » : …ée. Toutefois, la branche a toujours eu la volonté d'avoir des salaires supérieurs au Smic. Ainsi, afin de garantir ce principe, il a été décidé d'instaurer un salaire minimum conventionnel garanti de branche. Le présent accord formalise ainsi les décisions issues de ces réunions de négociations. Le présent accord s'applique à l'ensemble des organ…",
+          "lien": "https://www.legifrance.gouv.fr/conv_coll/id/KALITEXT000055051370",
+          "fonds": "CCN",
+          "theme": "Salaires minima",
+          "date_texte": "2026-11-03",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "grilles",
+              "cible": "IDCC 2336 — Habitat et logement accompagnés (ex-foyers de je",
+              "fichiers": [
+                "GrillePaye/ccn-data.json"
+              ],
+              "action": "Reporter les nouveaux montants dans la grille (vérifier dans le texte / le BOCC)",
+              "raison": "convention IDCC 2336, grille « real » dans l'appli",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "foyers-jeunes-travailleurs-heures-supplementaires.html"
+              ],
+              "action": "Relire les montants et règles cités pour l'IDCC 2336",
+              "raison": "parlent de l'IDCC 2336",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "grilles",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "haute",
+          "titre": "Cour de cassation Chambre sociale, 2026-11-10, n° 23-23.782 e.a. : applique des articles que tu cites : L1237-13, L1237-14, L2411-1",
+          "detail": "Décision du 2026-11-10 — Cour de cassation Chambre sociale · solution : Cassation · formation FS-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-11-10, n° 23-23.782 e.a.\n\nElle applique des articles que tu cites : L1237-13, L1237-14, L2411-1.\n\nCe que la Cour a jugé : Selon l'article L. 1237-14 du code du travail, à l'issue du délai de rétractation, la partie la plus diligente adresse une demande d'homologation à l'autorité administrative, laquelle dispose d'un délai d'instruction de quinze jours ouvrables, à compter de la réception de la demande, pour s'assurer du respect des conditions prévues à la présente section et de la liberté de consentement des parties. A défaut de notification dans ce délai, l'homologation est réputée acquise et l'autorité…\n\n🏖️ Repos et congés — « congés payés » : …e du contrat de travail de la salariée, de condamner la société à payer à la salariée des sommes à titre d'indemnité pour violation du statut protecteur et des congés payés afférents, d'indemnité pour licenciement illicite, d'indemnité compensatrice de préavis et des congés payés afférents et d'indemnité de licenciement, d'ordonne…",
+          "lien": "https://www.courdecassation.fr/decision/6af2c6c06c2e1778126fe2c7",
+          "fonds": "Juris",
+          "theme": "Repos et congés",
+          "date_texte": "2026-11-10",
+          "etiquettes": [
+            "Publiée au Bulletin"
+          ],
+          "formation": "FS-B",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-14",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Fichiers communs des outils (articles-loi.js, page loi, catalogue)",
+              "fichiers": [
+                "outils/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-13",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Comparatif Ruptures",
+              "fichiers": [
+                "outils/module-preavis-comp.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-13",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Rupture Conventionnelle",
+              "fichiers": [
+                "outils/module-rupture.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-13",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "outils",
+              "cible": "Conservation Documents RH",
+              "fichiers": [
+                "outils/module-archives.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L2411-1",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "rupture-conventionnelle.html",
+                "licenciement-nul-causes-guide.html",
+                "protection-representants-personnel.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1237-13 · cite L2411-1",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "outils",
+            "guide"
+          ]
+        },
+        {
+          "categorie": "nouvelle-jurisprudence",
+          "gravite": "haute",
+          "titre": "Cour de cassation Chambre sociale, 2026-11-10, n° 25-19.212 e.a. : applique des articles que tu cites : L1132-3-3, L1132-4",
+          "detail": "Décision du 2026-11-10 — Cour de cassation Chambre sociale · solution : Cassation · formation FS-B · publiée (fait jurisprudence)\n\nCour de cassation Chambre sociale, 2026-11-10, n° 25-19.212 e.a.\n\nElle applique des articles que tu cites : L1132-3-3, L1132-4.\n\nCe que la Cour a jugé : Aux termes du premier de ces textes, un lanceur d'alerte est une personne physique qui signale ou divulgue, sans contrepartie financière directe et de bonne foi, des informations portant sur un crime, un délit, une menace ou un préjudice pour l'intérêt général, une violation ou une tentative de dissimulation d'une violation d'un engagement international régulièrement ratifié ou approuvé par la France, d'un acte unilatéral d'une organisation internationale pris sur le fondement d'un tel…",
+          "lien": "https://www.courdecassation.fr/decision/6af2c6d26c2e1778126fe47a",
+          "fonds": "Juris",
+          "theme": "Article cité",
+          "date_texte": "2026-11-10",
+          "etiquettes": [
+            "Publiée au Bulletin"
+          ],
+          "formation": "FS-B",
+          "vu_le": "2026-11-16",
+          "nouveau": true,
+          "cibles": [
+            {
+              "zone": "app",
+              "cible": "M3 · Fox, moteur juridique",
+              "fichiers": [
+                "fox/js/articles-loi.js"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1132-3-3",
+              "auto": false,
+              "plus": 0
+            },
+            {
+              "zone": "guide",
+              "cible": "Pages du guide",
+              "fichiers": [
+                "clause-confidentialite-guide.html",
+                "licenciement-nul-causes-guide.html"
+              ],
+              "action": "Vérifier ce que le fichier dit de cet article à la lumière du nouveau texte",
+              "raison": "cite L1132-3-3 · cite L1132-4",
+              "auto": false,
+              "plus": 0
+            }
+          ],
+          "zones": [
+            "app",
+            "guide"
+          ]
+        },
         {
           "categorie": "nouvelle-jurisprudence",
           "gravite": "basse",
@@ -4580,91 +5552,7 @@
       "id": "changements",
       "titre": "Fichiers modifiés (app, guide, MonLegiTexte)",
       "module": "changements-fichiers",
-      "alertes": [
-        {
-          "categorie": "fichier-modifie",
-          "gravite": "basse",
-          "titre": "9 fichiers modifiés (2026-11-12) : app, guide, MonLegiTexte",
-          "detail": "Simple constat : ces fichiers ont changé depuis le passage précédent. Si c'est toi qui as travaillé dessus, rien à faire.\n\nAPP (9) : menu.html, nouveautes.html, sw.js, module:module5, grillepaye:index.html, grillepaye:ccn-data.json, outil:module-lexique.html, outil:module-mobilites.html, outil:module-transport.html",
-          "nouveau": true,
-          "cibles": [
-            {
-              "zone": "app",
-              "cible": "Coquille de l'appli (menu, cache hors ligne, manifest)",
-              "fichiers": [
-                "menu.html",
-                "nouveautes.html",
-                "sw.js"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "app",
-              "cible": "M5 · Mizuki, temps partiel",
-              "fichiers": [
-                "module5/index.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Lexique Bulletin",
-              "fichiers": [
-                "outils/module-lexique.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Forfait Mobilités Durables",
-              "fichiers": [
-                "outils/module-mobilites.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "outils",
-              "cible": "Transport & Mobilité",
-              "fichiers": [
-                "outils/module-transport.html"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            },
-            {
-              "zone": "grilles",
-              "cible": "GrillePaye (données et page)",
-              "fichiers": [
-                "GrillePaye/index.html",
-                "GrillePaye/ccn-data.json"
-              ],
-              "action": "Simple constat — rien à faire si c'est ton travail",
-              "raison": "",
-              "auto": true,
-              "plus": 0
-            }
-          ],
-          "zones": [
-            "app",
-            "outils",
-            "grilles"
-          ]
-        }
-      ]
+      "alertes": []
     },
     {
       "id": "age",

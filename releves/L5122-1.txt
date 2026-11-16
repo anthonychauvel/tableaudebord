@@ -1,0 +1,5 @@
+Fichiers citant L5122-1 — 3 au total
+
+outil:module-activite-partielle.html
+outil:outils/articles-loi.js
+outil:outils/module-activite-partielle.html

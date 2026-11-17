@@ -1437,5 +1437,153 @@
     "date": "2026-11-11",
     "note": "Communiqués BOSS lus le 11/11/2026 : prime carburant 1 000 € (décrets 2026-973/974, déjà dans les outils, cumul avec l'abonnement ajouté), charte du cotisant contrôlé (sans changement), montant net social 2027 (ajouté au Lexique).",
     "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "23-23.782",
+    "date": "2026-11-17",
+    "note": "Arrêt publié du 10/11/2026 : rupture conventionnelle d'un salarié protégé homologuée sans autorisation de l'inspection : le délai de 12 mois pour agir court dès l'homologation. Cas très particulier, rien de contraire dans l'appli ni le guide."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "25-19.212",
+    "date": "2026-11-17",
+    "note": "Arrêt du 10/11/2026 : la protection du lanceur d'alerte (loi du 21 mars 2022) s'applique à un licenciement prononcé après son entrée en vigueur, même pour une alerte plus ancienne. Rien de contraire dans l'appli ni le guide."
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L5121-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L3232-5 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L4741-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L5122-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L3332-11 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L3421-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L3321-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L3324-1 (CT)",
+    "date": "2026-11-17",
+    "note": "Vérifié le 17/11/2026 dans droit/output/code-travail : même version en vigueur qu'avant (dernière modification connue antérieure à 2026, ou loi du 19/02/2026 pour L3324-1, déjà prise en compte). Changement de format du fonds, pas du droit.",
+    "expire": "2027-01-31"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Décret n° 2026-1037 du 6 novembre 2026",
+    "date": "2026-11-17",
+    "note": "Réduction générale dégressive (cotisations patronales) minorée à partir du 01/01/2027 dans les branches dont les minima restent sous le SMIC : côté employeur, rien à changer dans les calculs du salarié."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 9 novembre 2026 relatif à l'agrément de certains accords de travail",
+    "date": "2026-11-17",
+    "note": "Agrément d'accords du secteur social et médico-social : pas de convention suivie touchée dans l'appli."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 2120",
+    "date": "2026-11-17",
+    "note": "L'avenant du 26/06/2026 relève seulement les minima passés sous le SMIC ; aucun niveau de la grille Banque n'est sous le SMIC (le plus bas : 1 948,92 €). Grille de l'accord du 16/04/2026 toujours valable.",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2128 — Accord de méthode du 28 avril 2026",
+    "date": "2026-11-17",
+    "note": "Accord de méthode pour réviser la convention de la Mutualité : aucune règle d'heures sup, de temps partiel ni de grille pour l'instant."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2219 — Avenant n° 2 du 28 avril 2026",
+    "date": "2026-11-17",
+    "note": "Commission paritaire de la branche : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2219 — Adhésion par lettre du 18 juin 2026",
+    "date": "2026-11-17",
+    "note": "Adhésion d'un syndicat : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2219 — Accord du 28 avril 2026 relatif aux rémunérations minimales",
+    "date": "2026-11-17",
+    "note": "Grille 2219 mise à jour le 17/11/2026 (accord étendu, applicable au 01/10/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1979 — Avenant n° 36 du 4 juin 2026",
+    "date": "2026-11-17",
+    "note": "Grille HCR mise à jour le 17/11/2026 (avenant 36 étendu, au 01/11/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 1979 — Avenant n° 10 du 4 mars 2026",
+    "date": "2026-11-17",
+    "note": "Régime de frais de santé : pas de grille ni de règle d'heures sup."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2335 — Avenant n° 7 du 27 mai 2026",
+    "date": "2026-11-17",
+    "note": "Grille 2335 mise à jour le 17/11/2026 (avenant 7 étendu, au 01/06/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2120 — Avenant du 26 juin 2026",
+    "date": "2026-11-17",
+    "note": "Relèvement automatique des minima passés sous le SMIC : aucun niveau de la grille Banque n'est sous le SMIC, rien à changer."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2247 — Avenant du 11 juin 2026",
+    "date": "2026-11-17",
+    "note": "Modifie l'article 21 (classification), sans nouveaux montants. Grille 2247 complétée (8 classes) le 17/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2336 — Accord n° 33 du 17 juin 2026",
+    "date": "2026-11-17",
+    "note": "Crée un salaire minimum conventionnel garanti de branche au 01/08/2026 ; montant pas trouvé dans les sources publiques. À reprendre quand le texte sera lisible.",
+    "expire": "2026-12-31"
   }
 ]

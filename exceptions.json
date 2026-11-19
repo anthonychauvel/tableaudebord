@@ -1585,5 +1585,124 @@
     "date": "2026-11-17",
     "note": "Crée un salaire minimum conventionnel garanti de branche au 01/08/2026 ; montant pas trouvé dans les sources publiques. À reprendre quand le texte sera lisible.",
     "expire": "2026-12-31"
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 2528",
+    "date": "2026-11-19",
+    "note": "Grille 2528 refaite le 19/11/2026 : maroquinerie (accord du 18/02/2026, dernier texte du secteur) + onglets ganterie, cordonnerie et cuirs et peaux (accords du 01/07/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 2683",
+    "date": "2026-11-19",
+    "note": "Grille 2683 refaite le 19/11/2026 sur l'avenant du 15/06/2026 (au 01/06/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 3017",
+    "date": "2026-11-19",
+    "note": "Avenant n° 21 du 04/12/2025 reste le dernier texte salaires de la manutention ; onglet marins des grands ports ajouté le 19/11/2026 (avenants n° 1 du 20/05/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L5421-1 (CT)",
+    "date": "2026-11-19",
+    "note": "Vérifié le 19/11/2026 dans droit/output/code-travail : même version en vigueur (depuis le 01/01/2019). Changement de forme seulement."
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L6323-10 (CT)",
+    "date": "2026-11-19",
+    "note": "Vérifié le 19/11/2026 dans droit/output/code-travail : même version en vigueur (depuis le 23/08/2019). Changement de forme seulement."
+  },
+  {
+    "categorie": "contenu-article-modifie",
+    "cle": "L8261-2 (CT)",
+    "date": "2026-11-19",
+    "note": "Vérifié le 19/11/2026 dans droit/output/code-travail : même version en vigueur (depuis le 01/05/2008). Changement de forme seulement."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "L452-2 (CSS)",
+    "date": "2026-11-19",
+    "note": "Nouvelle rédaction au 01/11/2026 (rente duale, LFSS 2025 + décret 2026-354) : intégrée le 19/11/2026 dans l'outil AT/MP et dans outils/articles-loi.js. Arrêt maladie, invalidité, inaptitude : pas concernés."
+  },
+  {
+    "categorie": "nouvel-article-section",
+    "cle": "L452-3 (CSS)",
+    "date": "2026-11-19",
+    "note": "Nouvelle rédaction au 01/11/2026 : intégrée le 19/11/2026 dans l'outil AT/MP et dans outils/articles-loi.js."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2511 — Accord du 8 juin 2026",
+    "date": "2026-11-19",
+    "note": "Certificats complémentaires professionnels : sans effet sur la grille ni les règles d'heures."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2528 — Accord du 1er juillet 2026",
+    "date": "2026-11-19",
+    "note": "Onglets cordonnerie multiservice et cuirs et peaux ajoutés le 19/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2543 — Accord du 29 mai 2026",
+    "date": "2026-11-19",
+    "note": "Titre 12 « Commissions paritaires » : sans effet sur la grille ni les heures sup (mal classé « Heures supplémentaires » par la veille)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2683 — Avenant du 15 juin 2026",
+    "date": "2026-11-19",
+    "note": "Grille 2683 mise à jour le 19/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2691 — Adhésion par lettre du 22 juillet 2026",
+    "date": "2026-11-19",
+    "note": "Adhésion de l'UPES : sans effet sur la grille."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2931 — Accord du 17 juin 2026",
+    "date": "2026-11-19",
+    "note": "Grille 2931 mise à jour le 19/11/2026 (non étendu)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 2931 — Avenant du 17 juin 2026",
+    "date": "2026-11-19",
+    "note": "Nouvelle classification applicable au 01/01/2028 : à reprendre dans la grille à ce moment-là.",
+    "expire": "2027-12-31"
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3017 — Avenant n° 1 du 20 mai 2026",
+    "date": "2026-11-19",
+    "note": "Onglet marins des grands ports ajouté le 19/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3017 — Protocole d'accord du 8 juillet 2026",
+    "date": "2026-11-19",
+    "note": "Rentes de retraite supplémentaire : sans effet sur la grille ; les outils retraite et cumul emploi-retraite ne reprennent aucune règle propre à l'IDCC 3017."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "Cour de cassation Chambre sociale, 2026-11-04",
+    "date": "2026-11-19",
+    "note": "Cass. soc. 04/11/2026 : jurisprudence constante (preuve partagée des heures sup L3171-4, mentions du contrat à temps partiel L3123-6, suivi du forfait jours, télétravail, préavis, salaire de référence). Rien à changer.",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "504535",
+    "date": "2026-11-19",
+    "note": "CE 09/11/2026 : complément d'AEEH cumulable avec chômage, IJ ou congé maternité/paternité si l'activité était déjà réduite. Les outils ne traitent pas l'AEEH : sans effet."
   }
 ]

@@ -1,11 +1,36 @@
 {
  "cdtn": {
-  "version": "4.253.0",
-  "depuis": "2026-11-16"
+  "version": "4.253.1",
+  "depuis": "2026-11-23"
  },
  "urssaf": {
   "version": "11.1.0",
   "depuis": "2026-10-01"
  },
- "detectes": []
+ "detectes": [
+  {
+   "categorie": "regle-officielle-modifiee",
+   "gravite": "haute",
+   "titre": "CDTN — Indemnité de licenciement (4.253.1) : 7 règle(s) modifiée(s)",
+   "detail": "Le Code du travail numérique a publié la version 4.253.1 de ses règles (vue au passage précédent : 4.253.0). 7 règle(s) du simulateur « Indemnité de licenciement » ont changé — conventions : bureaux études techniques (IDCC 1486), métallurgie (IDCC 3248).\n\nOutil(s) de l'appli à revoir : Fin de contrat, Comparatif ruptures.\nConventions de l'appli concernées : IDCC 1486, 3248.\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . au dela de dix ans\n  ＋ plancher : 0 an\n  ＋ somme · (- 10 an)\n  ＋ somme · contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . jusqu'à dix ans ou moins\n  ＋ le minimum de · 10 an\n  ＋ le minimum de · contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . dix ans ou moins\n  ＋ unité : €\n  ＋ produit · assiette : contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . jusqu'à dix ans ou moins *…\n  ＋ produit · facteur : 1 / 4\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . plus de dix ans\n  ＋ unité : €\n  ＋ produit · assiette : contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . au dela de dix ans * contr…\n  ＋ produit · facteur : 1 / 3\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . résultat conventionnel\n  ＋ somme · contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . dix ans ou moins\n  ＋ somme · contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . plus de dix ans\n  － produit · assiette : contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventi…\n  － produit · facteur : 1 / 3\n\n• contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel . formule plafond\n  applicable si : résultat conventionnel >= 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel → base * majoration >= plafond\n\n• contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul\n  plafond : plafond → plafond * minoration",
+   "lien": "https://code.travail.gouv.fr/outils",
+   "fonds": "Règles",
+   "theme": "Indemnité de licenciement",
+   "date_texte": "2026-11-23",
+   "_id": "cdtn:indemnite-licenciement:4.253.1",
+   "vu_le": "2026-11-23"
+  },
+  {
+   "categorie": "regle-officielle-modifiee",
+   "gravite": "haute",
+   "titre": "CDTN — Rupture conventionnelle (4.253.1) : 7 règle(s) modifiée(s)",
+   "detail": "Le Code du travail numérique a publié la version 4.253.1 de ses règles (vue au passage précédent : 4.253.0). 7 règle(s) du simulateur « Rupture conventionnelle » ont changé — conventions : bureaux études techniques (IDCC 1486), métallurgie (IDCC 3248).\n\nOutil(s) de l'appli à revoir : Rupture conventionnelle, Comparatif ruptures.\nConventions de l'appli concernées : IDCC 1486, 3248.\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . au dela de dix ans\n  ＋ plancher : 0 an\n  ＋ somme · (- 10 an)\n  ＋ somme · contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . jusqu'à dix ans ou moins\n  ＋ le minimum de · 10 an\n  ＋ le minimum de · contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . dix ans ou moins\n  ＋ unité : €\n  ＋ produit · assiette : contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . jusqu'à dix ans ou moins *…\n  ＋ produit · facteur : 1 / 4\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . plus de dix ans\n  ＋ unité : €\n  ＋ produit · assiette : contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . au dela de dix ans * contr…\n  ＋ produit · facteur : 1 / 3\n\n• contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . résultat conventionnel\n  ＋ somme · contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . dix ans ou moins\n  ＋ somme · contrat salarié . convention collective . bureaux études techniques . indemnité de licenciement . nouvelles règles . etam . calcul . plus de dix ans\n  － produit · assiette : contrat salarié . indemnité de licenciement . ancienneté conventionnelle en année * contrat salarié . indemnité de licenciement . salaire de référence conventi…\n  － produit · facteur : 1 / 3\n\n• contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel . formule plafond\n  applicable si : résultat conventionnel >= 18 * contrat salarié . indemnité de licenciement . salaire de référence conventionnel → base * majoration >= plafond\n\n• contrat salarié . convention collective . métallurgie . indemnité de licenciement . catégorie professionnelle . FGHI . résultat conventionnel calcul\n  plafond : plafond → plafond * minoration",
+   "lien": "https://code.travail.gouv.fr/outils",
+   "fonds": "Règles",
+   "theme": "Rupture conventionnelle",
+   "date_texte": "2026-11-23",
+   "_id": "cdtn:rupture-conventionnelle:4.253.1",
+   "vu_le": "2026-11-23"
+  }
+ ]
 }

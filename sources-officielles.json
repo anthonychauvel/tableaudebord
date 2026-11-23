@@ -15,7 +15,7 @@
      "Mesures exceptionnelles et dispositifs temporaires",
      "Recueil des rescrits sociaux de portée générale"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits.html": {
@@ -33,7 +33,7 @@
      "Un nouvel environnement dédié aux Rescrits sociaux de portée générale est intégré au Bulletin officiel de la Sécurité sociale",
      "Des rescrits opposables seront progressivement ajoutés dans le but de renforcer l’accessibilité au droit en matière de cotisations et de contributions sociales."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration.html": {
@@ -42,15 +42,20 @@
     "paragraphes": [
      "Autres éléments de rémunération"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/actualites.html": {
     "titre": "Toutes les actualités du Boss",
-    "empreinte": "416e58477a926ac4",
+    "empreinte": "1a1b697bfb9288a1",
     "paragraphes": [
      "Toutes les actualités du Boss",
      "Filtrer l’actualité du Boss",
+     "Les rubriques Exonérations zonées et Exonérations heures supplémentaires et complémentaires ont été actualisées.",
+     "Paragraphe 950 : Correction de la liste des dispositifs non cumulables avec l’exonération BER pour l’emploi d’un même salarié.",
+     "Paragraphes 700 et 1 000 : modification du plafond d’octroi des aides de minimis d’après le règlement (UE) 2023/2831 de la Commission du 13 décembre 2023 relatif à l’application des articles 107 et 108 du traité sur le fonctionnement de l’Union européenne aux aides de minimis et mise à jour des textes de référence.",
+     "Exonérations heures supplémentaires et complémentaires :",
+     "Paragraphe 700 : modification du plafond d’octroi des aides de minimis d’après le règlement (UE) 2023/2831 de la Commission du 13 décembre 2023 relatif à l’application des articles 107 et 108 du traité sur le fonctionnement de l’Union européenne aux aides de minimis et mise à jour des textes de référence.",
      "Evolution du traitement social de la prise en charge par l’employeur des frais de carburant",
      "Le régime social de la « prime carburant » défini à l’article L. 3261-3 du code du travail, qui a fait précédemment l’objet d’un communiqué paru le 6 août 2026, est modifié, conformément aux annonces du Gouvernement du 22 septembre dernier, par les décrets n° 2026-973 et n° 2026-974 du 20 octobre 2026.",
      "Les dispositions relatives à ce régime social seront désormais prévues par décret, et non plus dans la loi, tirant les conséquences de la décision de déclassement n° 2026-327 L du 29 juillet 2026 du Conseil constitutionnel.",
@@ -193,23 +198,9 @@
      "Mise à jour au 1er janvier 2026 des données paramétriques",
      "Les rubriques suivantes ont été actualisées :",
      "• Contributions à la formation professionnelle et à l’apprentissage ,",
-     "• Exonération aide à domicile ,",
-     "• Exonérations heures supplémentaires et complémentaires ,",
-     "• Indemnités de rupture ,",
-     "• Prime de partage de la valeur ,",
-     "• Exonération contrat d’apprentissage ,",
-     "• Régime social applicable aux rémunérations des stagiaires ,",
-     "• Jeunes entreprises innovantes, universitaires et de croissance ,",
-     "• Remboursements de frais professionnels ,",
-     "• Protection sociale complémentaire ,",
-     "• Sapeur-pompier volontaire .",
-     "Application à Mayotte de la réduction générale dégressive unique et de l’exonération Lodeom",
-     "L’article 23 de la loi de financement de la sécurité sociale pour 2026 rend applicables à Mayotte, avec adaptations, deux dispositifs de droit commun :",
-     "• la réduction générale dégressive unique (RGDU) à compter du 1er janvier 2026 ;",
-     "• l’exonération LODEOM telle qu’applicable en Guadeloupe, en Guyane, en Martinique et à La Réunion à compter du 1er juillet 2026.",
-     "Un projet de décret à paraitre fixera les modalités réglementaires nécessaires à cette mise en œuvre à Mayotte, dans un contexte marqué par des écarts persistants de législation sociale (taux, assiette, niveau de SMIC et dispositifs d’exonération) et par une trajectoire de convergence progressive vers le droit commun. Il comportera deux volets principaux :"
+     "• Exonération aide à domicile ,"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/montant-net-social.html": {
@@ -339,7 +330,7 @@
      "26. Pour les salariés bénéficiant de la déduction forfaitaire spécifique pour frais professionnels (DFS), faut-il déduire le montant de l’abattement dans le calcul du montant net social ?",
      "Comme précisé dans le tableau du A du 1 de la partie II, l’ensemble de la rémunération brute du salarié est pris en compte, indépendamment des abattements applicables. Seules les cotisations et contributions sociales à la charge du salarié sont à déduire du montant net social. Le montant net social ne doit donc pas être diminué du montant de l’abattement pour les salariés bénéficiant de la déduction forfaitaire spécifique (DFS)."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement.html": {
@@ -348,7 +339,7 @@
     "paragraphes": [
      "Règles d'assujettissement"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/contribution-sociale-generalisee.html": {
@@ -428,7 +419,7 @@
      "Ainsi, sont soumis à la CFA en tant que revenus non « professionnels », au sens des prélèvements sociaux, les revenus tirés de la location de biens meublés, dès lors que cette activité génère moins de 23 000 euros de recettes annuelles (2° du 2 du IV de l’article 155 du code général des impôts). A ce titre, ils sont donc assujettis à un taux qui cumule CSG et CFA à hauteur de 10,6 %.",
      "Les personnes dont les revenus sont supérieurs à ce seuil sont assujetties à la CSG portant sur les revenus d’activité, sous réserve, s’agissant des locations meublées de longue durée, que ces revenus excèdent les revenus du foyer fiscal soumis à l’impôt sur le revenu dans les autres catégories de revenus d’activité listées au 3° du 2 du IV de l’article 155 CGI."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-zonees.html": {
@@ -607,7 +598,7 @@
      "Pour les salariés dont la rémunération n’est pas déterminée selon un nombre d’heures, des modalités de reconstitution des heures rémunérées sont prévues à l’article D. 241-27 du code de la sécurité sociale . Sont concernés :",
      "les salariés titulaires d’une convention individuelle de forfait en jours sur l’année : le nombre d’heures rémunérées au cours du mois est égal au produit de la durée légale de travail calculée sur le mois par le rapport entre le nombre de jours prévus au forfait du salarié et 218 jours ;"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/protection-sociale-complementair.html": {
@@ -758,7 +749,7 @@
      "Les prestations de prévoyance sont, quelle que soit leur dénomination, les capitaux décès et les allocations d’obsèques, les rentes de conjoint survivant, les rentes d’orphelin, les rentes ou capitaux d’invalidité, les remboursements de frais de santé, et les indemnités journalières qui interviennent à la suite de la prise en charge par l’employeur du maintien de salaire en application des articles L. 1226-1 et suivants du code du travail ou d’un accord collectif ayant le même objet.",
      "Pour déterminer si les garanties sont des prestations de prévoyance complémentaire, il convient de considérer prioritairement si un lien avec les risques couverts par les régimes de base de sécurité sociale peut être établi."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/'+data.fiches.valeurs[i].url+'": {
@@ -768,7 +759,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/indemnites-de-rupture.html": {
@@ -778,7 +769,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/protection-sociale-complementair.html": {
@@ -929,7 +920,7 @@
      "Les prestations de prévoyance sont, quelle que soit leur dénomination, les capitaux décès et les allocations d’obsèques, les rentes de conjoint survivant, les rentes d’orphelin, les rentes ou capitaux d’invalidité, les remboursements de frais de santé, et les indemnités journalières qui interviennent à la suite de la prise en charge par l’employeur du maintien de salaire en application des articles L. 1226-1 et suivants du code du travail ou d’un accord collectif ayant le même objet.",
      "Pour déterminer si les garanties sont des prestations de prévoyance complémentaire, il convient de considérer prioritairement si un lien avec les risques couverts par les régimes de base de sécurité sociale peut être établi."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exoneration-contrat-dapprentissa.html": {
@@ -1032,12 +1023,12 @@
      "En 2026, pour un apprenti rémunéré mensuellement à hauteur de 1 652,46 € dont 114,11 € sont liés à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), la rémunération de ces heures représente 114,11 € / 1 652,46 € = 6,91 % de la rémunération totale de ce mois et cette rémunération excède de 718,46 € le plafond de 50 % du SMIC (934 € au 1er juin 2026). La réduction ne s’appliquera donc que sur 6,91 % de la rémunération excédant 50 % du SMIC, soit 49,65 €.",
      "Ces dispositifs sont cumulables également avec les autres dispositifs de soutien à l’apprentissage, tels que l’aide unique à l’embauche ou l’exonération d’impôt sur le revenu à hauteur du montant du SMIC annuel."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-heures-supplementai.html": {
     "titre": "Exonérations heures supplémentaires et complémentaires",
-    "empreinte": "4f2197107aeb6a57",
+    "empreinte": "1a86622ee815582f",
     "paragraphes": [
      "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
      "ABSENCE (ABSENTEISME) 240",
@@ -1167,7 +1158,7 @@
      "Le taux de réduction est égal à la somme des taux de chacune des cotisations salariales d’assurance vieillesse due par le salarié. Dans le cas d’un salarié affilié au régime général et dont la rémunération est inférieure au plafond de la sécurité sociale, ce taux est égal à 11,31 % (soit 7,3 % d’assurance vieillesse de base et 4,01 % de retraite complémentaire).",
      "Pour les salariés soumis à un taux spécifique soit du fait de leur affiliation à un régime spécial, soit du fait de l’application de taux réduits sur les cotisations de retraite de base ou complémentaire, soit du fait d’une répartition dérogatoire des cotisations de retraite complémentaire dues à l’AGIRC-ARRCO, le taux de réduction est ajusté en fonction des taux effectivement applicables au salarié, dans la limite du taux de droit commun de 11,31 %.",
      "Lorsque la rémunération excède le plafond de la sécurité sociale, le taux de réduction est le taux moyen de cotisations salariales d’assurance vieillesse applicable sur l’ensemble de la rémunération, calculé en rapportant le montant total des cotisations salariales d’assurance vieillesse dues au titre de la totalité de la rémunération à cette même rémunération, dans la limite de 11,31 %.",
-     "En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la rémunération inférieure ou égale au plafond de la sécurité sociale (4 008 x 11,45 %) et 103,50 € pour la part de la rémunération supérieure à ce plafond (1 008,77 × 10,26 %). En plus des cotisations salariales d’assurance vieillesse, ce salarié est également soumis à la cotisation APEC, qui ne fait pas l’objet d’une réduction. Le taux moyen de cotisation effectif est donc de 562,07/ 5 013,77 = 11,21 %. Le montant de la réduction applicable sur les heures supplémentaires est en conséquence égal à 346,22 € x 11,21 % = 38,81 €.",
+     "En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la rémunération inférieure ou égale au plafond de la sécurité sociale (4 005 x 11,45 %) et 103,50 € pour la part de la rémunération supérieure à ce plafond (1 008,77 × 10,26 %). En plus des cotisations salariales d’assurance vieillesse, ce salarié est également soumis à la cotisation APEC, qui ne fait pas l’objet d’une réduction. Le taux moyen de cotisation effectif est donc de 562,07/ 5 013,77 = 11,21 %. Le montant de la réduction applicable sur les heures supplémentaires est en conséquence égal à 346,22 € x 11,21 % = 38,81 €.",
      "À Mayotte, compte tenu du fait que la convention AGIRC-ARRCO ne couvre pas ce territoire, le taux de réduction est égal, dans le cas général, à 5,54 % en 2026 (le taux de la cotisation salariale d’assurance vieillesse évoluant chaque année jusqu’en 2036, pour assurer la convergence du barème mahorais avec le droit commun).",
      "À Saint-Pierre-et-Miquelon, le taux de réduction est égal à 11,01 % au 1er janvier 2026.",
      "Section 3 - Modalités d’application",
@@ -1175,7 +1166,7 @@
      "A. Affichage sur le bulletin de paie",
      "Le montant de la réduction doit être affiché sur une ligne distincte du bulletin de paie, après les lignes relatives aux cotisations et contributions sociales salariales et patronales."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/effectif.html": {
@@ -1424,7 +1415,7 @@
      "Les titulaires d’un contrat de soutien et d’aide par le travail,",
      "Les titulaires d’un contrat d’appui au projet d’entreprise (CAPE),"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/reductions-proportionnelles-du-t.html": {
@@ -1544,7 +1535,7 @@
      "La régularisation peut également être effectuée en une seule fois lors du calcul des cotisations déclarées pour le dernier mois ou le dernier trimestre de l’année.",
      "Pour les contrats qui prennent fin en cours d’année, la régularisation est opérée lors du calcul des cotisations afférentes à la dernière période d’emploi."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/regimes-de-retraites-supplementa.html": {
@@ -1626,7 +1617,7 @@
      "En cas de départ du bénéficiaire du contrat de l'entreprise, les droits à retraite restent acquis à ce dernier ;",
      "L'adhésion au contrat peut être subordonnée à une durée de présence minimale du bénéficiaire dans l'entreprise. L'acquisition des droits à retraite du même contrat peut être soumise à une condition de durée de cotisations. La somme de ces deux durées ne peut pas excéder trois ans ;"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/allegements-generaux.html": {
@@ -1782,7 +1773,7 @@
      "Section 1. Détermination du montant de la réduction",
      "Pour les rémunérations éligibles telles que définies au chapitre 1, le montant de la réduction est égal au produit du montant de la rémunération et d’un coefficient de réduction présenté à la section 2 du présent chapitre, qui rapporte la rémunération annuelle du salarié au SMIC calculé pour un an."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/formationpro-apprentissage.html": {
@@ -1954,7 +1945,7 @@
      "articles L. 6241-2 , D. 6241-29 à D. 6241-32 du code du travail",
      "L'employeur peut déduire du solde de la TA les subventions en nature versées au centre de formation d'apprentis sous forme d'équipements et de matériels conformes aux besoins des formations dispensées."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/mesures-exceptionnelles/sapeurs-pompiers-volontaires.html": {
@@ -2017,12 +2008,12 @@
      "Chapitre 3 - Modalités de contrôle",
      "En cas de contrôle, la condition d’engagement et de réalisation de la mission opérationnelle est démontrée par la présentation par l'employeur d’une attestation délivrée par le service d'incendie et de secours dont relève le sapeur-pompier volontaire."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-heures-supplementai.html": {
     "titre": "Exonérations heures supplémentaires et complémentaires",
-    "empreinte": "4f2197107aeb6a57",
+    "empreinte": "1a86622ee815582f",
     "paragraphes": [
      "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z",
      "ABSENCE (ABSENTEISME) 240",
@@ -2152,7 +2143,7 @@
      "Le taux de réduction est égal à la somme des taux de chacune des cotisations salariales d’assurance vieillesse due par le salarié. Dans le cas d’un salarié affilié au régime général et dont la rémunération est inférieure au plafond de la sécurité sociale, ce taux est égal à 11,31 % (soit 7,3 % d’assurance vieillesse de base et 4,01 % de retraite complémentaire).",
      "Pour les salariés soumis à un taux spécifique soit du fait de leur affiliation à un régime spécial, soit du fait de l’application de taux réduits sur les cotisations de retraite de base ou complémentaire, soit du fait d’une répartition dérogatoire des cotisations de retraite complémentaire dues à l’AGIRC-ARRCO, le taux de réduction est ajusté en fonction des taux effectivement applicables au salarié, dans la limite du taux de droit commun de 11,31 %.",
      "Lorsque la rémunération excède le plafond de la sécurité sociale, le taux de réduction est le taux moyen de cotisations salariales d’assurance vieillesse applicable sur l’ensemble de la rémunération, calculé en rapportant le montant total des cotisations salariales d’assurance vieillesse dues au titre de la totalité de la rémunération à cette même rémunération, dans la limite de 11,31 %.",
-     "En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la rémunération inférieure ou égale au plafond de la sécurité sociale (4 008 x 11,45 %) et 103,50 € pour la part de la rémunération supérieure à ce plafond (1 008,77 × 10,26 %). En plus des cotisations salariales d’assurance vieillesse, ce salarié est également soumis à la cotisation APEC, qui ne fait pas l’objet d’une réduction. Le taux moyen de cotisation effectif est donc de 562,07/ 5 013,77 = 11,21 %. Le montant de la réduction applicable sur les heures supplémentaires est en conséquence égal à 346,22 € x 11,21 % = 38,81 €.",
+     "En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la rémunération inférieure ou égale au plafond de la sécurité sociale (4 005 x 11,45 %) et 103,50 € pour la part de la rémunération supérieure à ce plafond (1 008,77 × 10,26 %). En plus des cotisations salariales d’assurance vieillesse, ce salarié est également soumis à la cotisation APEC, qui ne fait pas l’objet d’une réduction. Le taux moyen de cotisation effectif est donc de 562,07/ 5 013,77 = 11,21 %. Le montant de la réduction applicable sur les heures supplémentaires est en conséquence égal à 346,22 € x 11,21 % = 38,81 €.",
      "À Mayotte, compte tenu du fait que la convention AGIRC-ARRCO ne couvre pas ce territoire, le taux de réduction est égal, dans le cas général, à 5,54 % en 2026 (le taux de la cotisation salariale d’assurance vieillesse évoluant chaque année jusqu’en 2036, pour assurer la convergence du barème mahorais avec le droit commun).",
      "À Saint-Pierre-et-Miquelon, le taux de réduction est égal à 11,01 % au 1er janvier 2026.",
      "Section 3 - Modalités d’application",
@@ -2160,7 +2151,7 @@
      "A. Affichage sur le bulletin de paie",
      "Le montant de la réduction doit être affiché sur une ligne distincte du bulletin de paie, après les lignes relatives aux cotisations et contributions sociales salariales et patronales."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/frais-professionnels.html": {
@@ -2298,7 +2289,7 @@
      "Le régime social des frais de repas des salariés en mission dans l’entreprise cliente est, dans ce cas, celui applicable aux salariés sédentaires.",
      "ETT : Cour de cassation, chambre sociale, 6 mai 1985, Sté Soloprest c/Urssaf de Meurthe et Moselle, n°83-15748 , SSII : Cour de cassation, 2ème chambre civile, 21 février 2008, Urssaf de Lyon c/Société Altran Technologie, n°07-12230"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/assiette-generale.html": {
@@ -2481,7 +2472,7 @@
      "Lorsqu’il est applicable en matière d’assiette de la CSG, l’abattement de 1,75 % au titre des frais professionnels s’applique pour la détermination de l’assiette de la CRDS.",
      "Ordonnance n° 96-50 du 24 janvier 1996 relative au remboursement de la dette sociale, Article 14"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-aide-a-domicile.html": {
@@ -2652,7 +2643,7 @@
      "et à l’exclusion de la rémunération afférente aux autres activités (hors champ de l’aide à domicile telles que les tâches administratives).",
      "Le nombre d'heures d’aide à domicile effectuées auprès d'un public dit « fragile » correspond à l'ensemble des heures d’aide à domicile effectuées auprès des publics entrant dans le champ d'application de l'exonération aide à domicile mentionnés au C de la section 2 du chapitre 1."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/impatries.html": {
@@ -2661,7 +2652,7 @@
     "paragraphes": [
      "S’agissant du versement par l’employeur de la contribution minimale de 20 000 € par an sur des produits d’assurance vieillesse français ou étrangers, comment s’apprécie la durée d’un an ?"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/jeunes-entreprises-innovantes.html": {
@@ -2804,7 +2795,7 @@
      "Si le mandataire est rémunéré 3 000 € sur le mois, soit une rémunération supérieure ou égale à la rémunération de référence, le nombre d’heures pris en compte pour le calcul de l’exonération est égal à :",
      "36 h x 52/12 = 156 heures"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/allegements-generaux.html": {
@@ -2960,7 +2951,7 @@
      "Section 1. Détermination du montant de la réduction",
      "Pour les rémunérations éligibles telles que définies au chapitre 1, le montant de la réduction est égal au produit du montant de la rémunération et d’un coefficient de réduction présenté à la section 2 du présent chapitre, qui rapporte la rémunération annuelle du salarié au SMIC calculé pour un an."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/avantages-en-nature.html": {
@@ -3113,7 +3104,7 @@
      "Article R.111-1 du code de la construction et de l’habitation",
      "L’avantage logement est évalué par semaine ou par mois. Selon l’article 2 de l’arrêté du 25 février 2025, l’évaluation par semaine ou par mois s’entend des semaines ou mois complets, quel que soit le nombre de jours ouvrables qu’ils contiennent. Toute semaine incomplète doit être comptabilisée comme une semaine entière. En cas de mois incomplet, c’est le nombre de semaines qui est pris en compte, dans la limite de 4."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/frais-professionnels.html": {
@@ -3251,7 +3242,7 @@
      "Le régime social des frais de repas des salariés en mission dans l’entreprise cliente est, dans ce cas, celui applicable aux salariés sédentaires.",
      "ETT : Cour de cassation, chambre sociale, 6 mai 1985, Sté Soloprest c/Urssaf de Meurthe et Moselle, n°83-15748 , SSII : Cour de cassation, 2ème chambre civile, 21 février 2008, Urssaf de Lyon c/Société Altran Technologie, n°07-12230"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exoneration-contrat-dapprentissa.html": {
@@ -3354,7 +3345,7 @@
      "En 2026, pour un apprenti rémunéré mensuellement à hauteur de 1 652,46 € dont 114,11 € sont liés à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), la rémunération de ces heures représente 114,11 € / 1 652,46 € = 6,91 % de la rémunération totale de ce mois et cette rémunération excède de 718,46 € le plafond de 50 % du SMIC (934 € au 1er juin 2026). La réduction ne s’appliquera donc que sur 6,91 % de la rémunération excédant 50 % du SMIC, soit 49,65 €.",
      "Ces dispositifs sont cumulables également avec les autres dispositifs de soutien à l’apprentissage, tels que l’aide unique à l’embauche ou l’exonération d’impôt sur le revenu à hauteur du montant du SMIC annuel."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-aide-a-domicile.html": {
@@ -3525,7 +3516,7 @@
      "et à l’exclusion de la rémunération afférente aux autres activités (hors champ de l’aide à domicile telles que les tâches administratives).",
      "Le nombre d'heures d’aide à domicile effectuées auprès d'un public dit « fragile » correspond à l'ensemble des heures d’aide à domicile effectuées auprès des publics entrant dans le champ d'application de l'exonération aide à domicile mentionnés au C de la section 2 du chapitre 1."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/jeunes-entreprises-innovantes.html": {
@@ -3668,7 +3659,7 @@
      "Si le mandataire est rémunéré 3 000 € sur le mois, soit une rémunération supérieure ou égale à la rémunération de référence, le nombre d’heures pris en compte pour le calcul de l’exonération est égal à :",
      "36 h x 52/12 = 156 heures"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/exoneration-stagiaires.html": {
@@ -3781,7 +3772,7 @@
      "• à la contribution au versement mobilité.",
      "Arrêté du 24 janvier 1980 relatif aux cotisations forfaitaires de sécurité sociale dues pour les stagiaires de la formation professionnelle continue non rémunérés ou rémunérés par l'Etat"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/effectif.html": {
@@ -3790,7 +3781,7 @@
     "paragraphes": [
      "Les vendeurs à domicile indépendants (VDI) sont-ils pris en compte dans l’effectif d’assujettissement au versement mobilité ? Leurs rémunérations sont-elles à prendre en compte dans l’assiette du versement mobilité dès lors que le seuil d’assujettissement d’au moins 11 salariés est atteint ?"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exoneration-stagiaires.html": {
@@ -3903,7 +3894,7 @@
      "• à la contribution au versement mobilité.",
      "Arrêté du 24 janvier 1980 relatif aux cotisations forfaitaires de sécurité sociale dues pour les stagiaires de la formation professionnelle continue non rémunérés ou rémunérés par l'Etat"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/indemnites-de-rupture.html": {
@@ -4092,7 +4083,7 @@
      "La part non imposable de l’indemnité (50 000 €) est inférieure au plafonnement de l’exonération sociale de 2 PASS (le montant des 2 PASS étant de 48 060 € x 2 = 96 120 €, en retenant un montant du PASS 2026 de 48 060 €).",
      "La limite maximale d’exclusion de l’assiette des cotisations de sécurité sociale de 2 PASS n’étant pas atteinte, l’indemnité contractuelle de licenciement sera exonérée à hauteur de la part non imposable, soit à concurrence de 50 000 €."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/frais-professionnels.html": {
@@ -4104,7 +4095,7 @@
      "La déduction forfaitaire spécifique (DFS) est-elle cumulable avec l’indemnité de transport prévue par une convention collective nationale (CCN), y compris pour sa fraction excédant la limite de 4 euros ?",
      "Les salariés mis à disposition par une entreprise peuvent-ils bénéficier du remboursement de leurs frais de repas lorsqu’ils travaillent au sein de l’entreprise utilisatrice ?"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/avantages-en-nature.html": {
@@ -4257,7 +4248,7 @@
      "Article R.111-1 du code de la construction et de l’habitation",
      "L’avantage logement est évalué par semaine ou par mois. Selon l’article 2 de l’arrêté du 25 février 2025, l’évaluation par semaine ou par mois s’entend des semaines ou mois complets, quel que soit le nombre de jours ouvrables qu’ils contiennent. Toute semaine incomplète doit être comptabilisée comme une semaine entière. En cas de mois incomplet, c’est le nombre de semaines qui est pris en compte, dans la limite de 4."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/bulletin-de-paie/regles-generales-relatives-au-bu.html": {
@@ -4387,7 +4378,7 @@
      "22. Comment renseigner le montant des rémunérations des heures supplémentaires nettes en cas de dépassement du plafond d’exonération en cours de mois ?",
      "Pour le cas de personnel rémunéré bénéficiant sur le même mois d’heures supplémentaires et/ou complémentaires exonérées et non exonérées, il convient de ventiler sur le bulletin de paie chacune des parts dans les rubriques « montant net imposable » pour le montant des heures non exonérées et « montant net des HC/HS/RTT exonérées » pour la seule part du montant des heures exonérées."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/exonerations-zonees.html": {
@@ -4566,7 +4557,7 @@
      "Pour les salariés dont la rémunération n’est pas déterminée selon un nombre d’heures, des modalités de reconstitution des heures rémunérées sont prévues à l’article D. 241-27 du code de la sécurité sociale . Sont concernés :",
      "les salariés titulaires d’une convention individuelle de forfait en jours sur l’année : le nombre d’heures rémunérées au cours du mois est égal au produit de la durée légale de travail calculée sur le mois par le rapport entre le nombre de jours prévus au forfait du salarié et 218 jours ;"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/epargne-salariale.html": {
@@ -4693,7 +4684,7 @@
      "Si une entreprise verse une prime à la fois aux salariés dont la rémunération est inférieure à 3 SMIC et aux salariés dont la rémunération est supérieure ou égale à 3 SMIC :",
      "Pour tous les salariés, la prime bénéficie, à compter du 1er juillet 2022, des exonérations précisées au A de la présente section,"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/Article L. 541-1 du code de l’action sociale et des familles": {
@@ -4703,7 +4694,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/'+data.fiches.valeurs[i].url+'": {
@@ -4713,7 +4704,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/autres-avantages-en-nature.html": {
@@ -4725,7 +4716,7 @@
      "Dans une entreprise de travail temporaire, est-il possible d’exclure les intérimaires du bénéfice de l’avantage sport en entreprise ?",
      "L'octroi par l'employeur d'un budget de 50 € par salarié et par an, pour l'organisation de moments conviviaux internes à l’entreprise peut-il être considéré comme un avantage en nature à assujettir à cotisations et contributions sociales ?"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 541-1 du code de l’action sociale et des familles": {
@@ -4735,7 +4726,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/regles-dassujettissement/'+data.fiches.valeurs[i].url+'": {
@@ -4745,7 +4736,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/exonerations/Article L. 245-3 du code de l’action sociale et des familles": {
@@ -4755,7 +4746,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/Article L. 245-3 du code de l’action sociale et des familles": {
@@ -4765,7 +4756,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/frais-professionnels/boss-res-000002.html": {
@@ -4778,7 +4769,7 @@
      "Les ouvriers des entreprises de nettoyage de locaux ont été admis par tolérance dans le champ de la DFS applicable aux ouvriers du bâtiment. La tolérance étant d’application stricte, les salariés occupés à l'entretien des espaces verts ne sont pas éligibles à la DFS, ces derniers n’exerçant pas une activité de nettoyage de locaux",
      "Le rescrit BOSS-RES-000003 est intégré à la rubrique \" Frais professionnels \"."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/allegements-et-exonerations/'+data.fiches.valeurs[i].url+'": {
@@ -4788,7 +4779,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/effectif/boss-res-000006.html": {
@@ -4799,7 +4790,7 @@
      "Les VDI sont exclus du décompte de l'effectif puisqu'ils ne sont pas titulaires d'un contrat de travail. En revanche, leurs rémunérations sont incluses dans l'assiette du versement mobilité dans les conditions de droit commun dès lors que le seuil d'assujettissement est atteint sur la zone.",
      "Le rescrit BOSS-RES-000006 est intégré à la rubrique \" Effectif \"."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/'+data.fiches.valeurs[i].url+'": {
@@ -4809,7 +4800,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/files/Avantages en nature/2024 Modèle dattestation micro-crèches.docx": {
@@ -4819,7 +4810,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/avantages-en-nature-et-frais-pro/'+data.fiches.valeurs[i].url+'": {
@@ -4829,7 +4820,7 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/impatries/boss-res-000009.html": {
@@ -4839,7 +4830,7 @@
      "S’agissant du versement par l’employeur de la contribution minimale de 20 000 € par an sur des produits d’assurance vieillesse français ou étrangers, comment s’apprécie la durée d’un an ?",
      "La condition relative au versement de la contribution annuelle minimale est vérifiée pour chaque année civile. La proratisation du montant de la contribution annuelle est admise lorsqu’un salarié arrive en cours d’année."
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/rescrits/avantages-en-nature/nourriture.html": {
@@ -4849,7 +4840,7 @@
      "Les salariés mis à disposition par une entreprise peuvent-ils bénéficier d’une prise en charge de leurs frais de repas lorsqu’ils travaillent au sein de l’entreprise utilisatrice ?",
      "L’apprenti d’une entreprise qui relève de la convention collective nationale (CCN) des HCR doit-il percevoir une indemnité compensatrice de nourriture durant les périodes de formation au CFA ?"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    },
    "https://boss.gouv.fr/portail/accueil/autres-elements-de-remuneration/'+data.fiches.valeurs[i].url+'": {
@@ -4859,14 +4850,14 @@
      "Le fichier que vous avez demandé est introuvable sur ce serveur.",
      "Cliquez ici pour revenir à la page d'accueil : Page d'accueil"
     ],
-    "vu_le": "2026-11-19",
+    "vu_le": "2026-11-23",
     "format": "html"
    }
   },
   "echecs": 1,
-  "capture_empreinte": "d99327f0fe1a9ee0",
-  "capture_recue": "2026-11-16",
-  "dernier": "2026-11-19"
+  "capture_empreinte": "fec22f9bdccc5f50",
+  "capture_recue": "2026-11-23",
+  "dernier": "2026-11-23"
  },
  "parlement": {
   "vus": {
@@ -5446,28 +5437,87 @@
    "https://www.assemblee-nationale.fr/17/propositions/pion3393.asp": "2026-11-19",
    "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a19.asp": "2026-11-19",
    "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a4.asp": "2026-11-19",
-   "https://www.assemblee-nationale.fr/17/propositions/pion3124.asp": "2026-11-19"
+   "https://www.assemblee-nationale.fr/17/propositions/pion3124.asp": "2026-11-19",
+   "http://www.senat.fr/leg/ppl26-182.html": "2026-11-23",
+   "http://www.senat.fr/leg/ppl26-171.html": "2026-11-23",
+   "http://www.senat.fr/leg/ppl26-175.html": "2026-11-23",
+   "http://www.senat.fr/leg/ppl26-177.html": "2026-11-23",
+   "http://www.senat.fr/leg/pjl26-165.html": "2026-11-23",
+   "http://www.senat.fr/leg/pjl26-187.html": "2026-11-23",
+   "http://www.senat.fr/leg/ppl26-173.html": "2026-11-23",
+   "http://www.senat.fr/leg/tas26-033.html": "2026-11-23",
+   "http://www.senat.fr/rap/a26-159-2/a26-159-2.html": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/rapports/r3490.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/budget/plf2027/a3340-tVIII.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a21.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a6.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/rapports/r3480.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/budget/plf2027/b3291-tIII-a14.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/ta-commission/r3064-a0.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/propositions/pion3492.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/ta/ta0365.asp": "2026-11-23",
+   "https://www.assemblee-nationale.fr/17/projets/pl3488.asp": "2026-11-23"
   },
   "flux": {
    "https://www.senat.fr/rss/textes.rss": {
     "echecs": 0,
-    "lu": "2026-11-19"
+    "lu": "2026-11-23"
    },
    "https://www.senat.fr/themes/rss/therss20.rss": {
     "echecs": 0,
-    "lu": "2026-11-19"
+    "lu": "2026-11-23"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/documents-parlementaires": {
     "echecs": 0,
-    "lu": "2026-11-19"
+    "lu": "2026-11-23"
    },
    "https://www2.assemblee-nationale.fr/feeds/detail/ID_420120/(type)/instance": {
     "echecs": 0,
-    "lu": "2026-11-19"
+    "lu": "2026-11-23"
    }
   }
  },
  "detectes": [
+  {
+   "categorie": "boss-modifie",
+   "gravite": "haute",
+   "titre": "BOSS — Toutes les actualités du Boss : 19 paragraphe(s) modifié(s)",
+   "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-11-19.\n\n－ • Exonérations heures supplémentaires et complémentaires ,\n－ • Indemnités de rupture ,\n－ • Prime de partage de la valeur ,\n－ • Exonération contrat d’apprentissage ,\n－ • Régime social applicable aux rémunérations des stagiaires ,\n＋ Les rubriques Exonérations zonées et Exonérations heures supplémentaires et complémentaires ont été actualisées.\n＋ Paragraphe 950 : Correction de la liste des dispositifs non cumulables avec l’exonération BER pour l’emploi d’un même salarié.\n＋ Paragraphes 700 et 1 000 : modification du plafond d’octroi des aides de minimis d’après le règlement (UE) 2023/2831 de la Commission du 13 décembre 2023 relatif à l’application des articles 107 et 108 du traité sur le fonctionnement de l’Union européenne aux aides de minimis et mise à jour des…\n＋ Exonérations heures supplémentaires et complémentaires :\n＋ Paragraphe 700 : modification du plafond d’octroi des aides de minimis d’après le règlement (UE) 2023/2831 de la Commission du 13 décembre 2023 relatif à l’application des articles 107 et 108 du traité sur le fonctionnement de l’Union européenne aux aides de minimis et mise à jour des textes de…\n(… 14 paragraphe(s) retiré(s), 5 ajouté(s) au total)",
+   "lien": "https://boss.gouv.fr/portail/accueil/actualites.html",
+   "date_texte": "2026-11-23",
+   "_id": "boss:https://boss.gouv.fr/portail/accueil/actualites.html:1a1b697bfb9288a1",
+   "vu_le": "2026-11-23"
+  },
+  {
+   "categorie": "boss-modifie",
+   "gravite": "haute",
+   "titre": "BOSS — Exonérations heures supplémentaires et complémentaires : 2 paragraphe(s) modifié(s)",
+   "detail": "Une page du Bulletin officiel de la Sécurité sociale sur tes sujets a changé depuis la capture du 2026-11-19.\n\n－ En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la…\n＋ En juin 2026, pour un salarié cadre rémunéré 5 013,77 € sur ce mois, dont 346,22 € est lié à la réalisation de 9 heures supplémentaires (majorées au taux légal de 25 %), le montant des cotisations salariales sur l’ensemble de la rémunération est égal à 562,07 €, dont 458,57 € pour la part de la…",
+   "lien": "https://boss.gouv.fr/portail/accueil/exonerations/exonerations-heures-supplementai.html",
+   "date_texte": "2026-11-23",
+   "_id": "boss:https://boss.gouv.fr/portail/accueil/exonerations/exonerations-heures-supplementai.html:1a86622ee815582f",
+   "vu_le": "2026-11-23"
+  },
+  {
+   "categorie": "texte-parlement",
+   "gravite": "haute",
+   "titre": "🏛️ Financement de la sécurité sociale pour 2027 - Texte n° 33",
+   "detail": "Sénat — affaires sociales — Thu,19 Nov 2026 23:00:00 GMT.\n\nFinancement de la sécurité sociale pour 2027 - Texte n° 33\n\nTexte\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+   "lien": "http://www.senat.fr/leg/tas26-033.html",
+   "date_texte": "2026-11-23",
+   "_id": "parl:http://www.senat.fr/leg/tas26-033.html",
+   "vu_le": "2026-11-23"
+  },
+  {
+   "categorie": "texte-parlement",
+   "gravite": "haute",
+   "titre": "🏛️ N° 3488 - Projet de loi de financement de la sécurité sociale, modifié par le Sénat, pour 2027",
+   "detail": "Assemblée — commission des affaires sociales — Mon, 23 Nov 2026 09:53:00 +0000.\n\nN° 3488 - Projet de loi de financement de la sécurité sociale, modifié par le Sénat, pour 2027\n\nN° 3488 - Projet de loi de financement de la sécurité sociale, modifié par le Sénat, pour 2027\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.",
+   "lien": "https://www.assemblee-nationale.fr/17/projets/pl3488.asp",
+   "date_texte": "2026-11-23",
+   "_id": "parl:https://www.assemblee-nationale.fr/17/projets/pl3488.asp",
+   "vu_le": "2026-11-23"
+  },
   {
    "categorie": "texte-parlement",
    "gravite": "moyenne",
@@ -6757,659 +6807,9 @@
    "date_texte": "2026-10-06",
    "_id": "dila:jade:CETATEXT000054970294",
    "vu_le": "2026-10-14"
-  },
-  {
-   "categorie": "texte-parlement",
-   "gravite": "moyenne",
-   "titre": "🏛️ N° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires",
-   "detail": "Assemblée — documents parlementaires — Tue, 06 Oct 2026 00:00:00 +0000.\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nN° 3244 - Proposition de loi de Mme Valérie Rossi visant à améliorer le dispositif du temps partiel thérapeutique pour les fonctionnaires\n\nCe texte n'est PAS encore une loi : il peut être modifié ou rejeté. À suivre pour anticiper ce que l'appli devra changer s'il est adopté.\n\n🕐 Temps partiel — « temps partiel »",
-   "lien": "https://www.assemblee-nationale.fr/17/propositions/pion3244.asp",
-   "date_texte": "2026-10-07",
-   "_id": "parl:https://www.assemblee-nationale.fr/17/propositions/pion3244.asp",
-   "vu_le": "2026-10-07"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° DSS/SD5C/2012/186 du 16 novembre 2012 relative à l’attestation de vigilance (obligations déclaratives et…",
-   "detail": "Circulaire / instruction — 2012-11-16.\n\nCIRCULAIRE N° DSS/SD5C/2012/186 du 16 novembre 2012 relative à l’attestation de vigilance (obligations déclaratives et paiement des cotisations sociales)\n\nExtrait : 37 /pdf/2013/01/cir_36328.pdf 36328 81870 V 2013-01-09 2013-01-14 27 59 Santé, solidarité CIRCULAIRE N° DSS/SD5C/2012/186 du 16 novembre 2012 relative à l’attestation de vigilance (obligations déclaratives et paiement des cotisations sociales) AFSS1225441C DSS/SD5C/2012/186 2012-11-16 La ministre des affaires sociales et de la santé; Le ministre de l’économie et des finances; Le ministre de l’agriculture, de l’agroalimentaire et de la forêt Agence centrale des organismes de sécurité sociale ;…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36328",
-   "date_texte": "2012-11-16",
-   "_id": "dila:circulaires:cir_36328",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Recensement des entreprises disposant d’un agrément en tant qu’entreprise solidaire au titre des dispositions de…",
-   "detail": "Circulaire / instruction — 2012-12-27.\n\nRecensement des entreprises disposant d’un agrément en tant qu’entreprise solidaire au titre des dispositions de l’article L.3332-17-1 du code du travail.\n\nExtrait : 27 /pdf/2013/01/cir_36334.pdf 36334 146032 V 2013-01-10 2013-01-10 47 Economie, finance, industrie Recensement des entreprises disposant d’un agrément en tant qu’entreprise solidaire au titre des dispositions de l’article L.3332-17-1 du code du travail. EFIT1300427C 2012-12-27 Le Ministre délégué auprès du ministre de l'économie et des finances, chargé de l'économie sociale et solidaire et de la consommation Mesdames et Messieurs les Préfets de région, Mesdames et Messieurs les Préfets de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36334",
-   "date_texte": "2012-12-27",
-   "_id": "dila:circulaires:cir_36334",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N°DGOS/RH3/DGCS/4B/2013/15 du 2 janvier 2013 relative au bilan social des établissements publics énumérés à…",
-   "detail": "Circulaire / instruction — 2013-01-02.\n\nINSTRUCTION N°DGOS/RH3/DGCS/4B/2013/15 du 2 janvier 2013 relative au bilan social des établissements publics énumérés à l'article 2 de la loi n° 86-33 du 9 janvier 1986 portant dispositions statutaires relatives à la fonction publique hospitalière\n\nExtrait : 37 /pdf/2013/01/cir_36377.pdf 36377 552756 V 2013-01-17 2013-01-22 Santé, solidarité INSTRUCTION N°DGOS/RH3/DGCS/4B/2013/15 du 2 janvier 2013 relative au bilan social des établissements publics énumérés à l'article 2 de la loi n° 86-33 du 9 janvier 1986 portant dispositions statutaires relatives à la fonction publique hospitalière AFSH1301449J 2013-01-02 La ministre des affaires sociales et de la santé Les directeurs des agences régionales de santé ; les directeurs des établissements publics de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36377",
-   "date_texte": "2013-01-02",
-   "_id": "dila:circulaires:cir_36377",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° 446683/DEF/SGA/DRH-MD relative à la procédure d'enregistrement des titres du ministère de la défense au…",
-   "detail": "Circulaire / instruction — 2012-08-13.\n\nCIRCULAIRE N° 446683/DEF/SGA/DRH-MD relative à la procédure d'enregistrement des titres du ministère de la défense au répertoire national des certifications professionnelles.\n\n⚠️ Articles que l'écosystème cite : L6411-1\n\nExtrait : 4 /pdf/2013/01/cir_36406.pdf 36406 260799 V 2013-01-25 2013-01-30 Défense CIRCULAIRE N° 446683/DEF/SGA/DRH-MD relative à la procédure d'enregistrement des titres du ministère de la défense au répertoire national des certifications professionnelles. DEFP1252662C 446683 BOC N° 5 du 25 janvier 2013, texte 1. 2012-08-13 Ministre de la défense services Circulaire relative à la procédure d'enregistrement des titres du ministère de la défense au répertoire national des certifications professionnelles.…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36406",
-   "date_texte": "2012-08-13",
-   "_id": "dila:circulaires:cir_36406",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N°DGOS/RH4/DGCS/2013/42 du 5 février 2013 relative à l’application du décret n° 2012-1366 du 6 décembre 2012…",
-   "detail": "Circulaire / instruction — 2013-02-05.\n\nCIRCULAIRE N°DGOS/RH4/DGCS/2013/42 du 5 février 2013 relative à l’application du décret n° 2012-1366 du 6 décembre 2012 modifiant certaines dispositions relatives au compte épargne-temps et aux congés annuels dans la fonction publique hospitalière\n\nExtrait : 37 /pdf/2013/02/cir_36501.pdf 36501 338767 V 2013-02-13 2013-02-18 Santé, solidarité CIRCULAIRE N°DGOS/RH4/DGCS/2013/42 du 5 février 2013 relative à l’application du décret n° 2012-1366 du 6 décembre 2012 modifiant certaines dispositions relatives au compte épargne-temps et aux congés annuels dans la fonction publique hospitalière AFSH1303344C 2013-02-05 La ministre des affaires sociales et de la santé les préfets de région ; les directeurs généraux des agences régionales de santé; les préfets…\n\n🏖️ Repos et congés — « compte épargne-temps »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36501",
-   "date_texte": "2013-02-05",
-   "_id": "dila:circulaires:cir_36501",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — Circulaire interministérielle relative à la mise en oeuvre du plan national de lutte contre le travail illégal…",
-   "detail": "Circulaire / instruction — 2013-02-11.\n\nCirculaire interministérielle relative à la mise en oeuvre du plan national de lutte contre le travail illégal 2013-2015.\n\n⚠️ Articles que l'écosystème cite : L8271-1\n\nExtrait : 39 /pdf/2013/02/cir_36502.pdf 36502 3037217 V 2013-02-14 2013-02-19 27 28 43 Budget, fiscalité Economie, finance, industrie Intérieur Travail, emploi, formation professionnelle Circulaire interministérielle relative à la mise en oeuvre du plan national de lutte contre le travail illégal 2013-2015. INTK1300188C 2013-02-11 M. le ministre de l'économie et des finances, M. le ministre de l'intérieur, M. le ministre du travail, de l'emploi, de la formation professionnelle et du dialogue social et M.…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36502",
-   "date_texte": "2013-02-11",
-   "_id": "dila:circulaires:cir_36502",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire du 12 février 2013 relative à la présentation de l’article 3 de la loi n° 2011-1862 du 13 décembre 2011…",
-   "detail": "Circulaire / instruction — 2013-02-12.\n\nCirculaire du 12 février 2013 relative à la présentation de l’article 3 de la loi n° 2011-1862 du 13 décembre 2011 relative à la répartition des contentieux et à l’allègement de certaines procédures juridictionnelles, du décret n° 2013-109 du 30 janvier 2013 relatif à la simplification de la procédure de saisie des rémunérations et du décret n° 2012-1401 du 13 décembre 2012 pris pour l’application\n\nExtrait : 11 /pdf/2013/02/cir_36567.pdf 36567 169342 V 2013-02-28 2013-03-05 Justice Circulaire du 12 février 2013 relative à la présentation de l’article 3 de la loi n° 2011-1862 du 13 décembre 2011 relative à la répartition des contentieux et à l’allègement de certaines procédures juridictionnelles, du décret n° 2013-109 du 30 janvier 2013 relatif à la simplification de la procédure de saisie des rémunérations et du décret n° 2012-1401 du 13 décembre 2012 pris pour l’application de l’article L. 3252-8…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36567",
-   "date_texte": "2013-02-12",
-   "_id": "dila:circulaires:cir_36567",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels…",
-   "detail": "Circulaire / instruction — 2013-03-13.\n\nCirculaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels enseignants du premier degré exerçant dans les écoles et décharges des directeurs d'école\n\nExtrait : 7 /pdf/2013/03/cir_36640.pdf 36640 84755 A 2013-03-14 2013-03-19 Education, enseignement supérieur, recherche Circulaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels enseignants du premier degré exerçant dans les écoles et décharges des directeurs d'école MENH1306560C 2013-038 2013-03-13 Le ministre de l'éducation nationale Les recteurs et rectrices d'académie, chanceliers et chancelières des universités ; les vice-recteurs ; les…\n\n🕐 Temps partiel — « temps partiel »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36640",
-   "date_texte": "2013-03-13",
-   "_id": "dila:circulaires:cir_36640",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels…",
-   "detail": "Circulaire / instruction — 2013-03-13.\n\nCirculaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels enseignants du premier degré et décharges des directeurs d'école\n\nExtrait : 7 /pdf/2013/03/cir_36695.pdf 36695 85245 A 2013-03-22 2013-03-27 Education, enseignement supérieur, recherche Circulaire relative à la mise en oeuvre des nouveaux rythmes scolaires : travail à temps partiel des personnels enseignants du premier degré et décharges des directeurs d'école MENH1306560C 2013-038 2013-03-13 Le ministre de l'éducation nationale Les recteurs et rectrices d'académie, chanceliers et chancelières des universités ; les vice-recteurs ; les directeurs et directrices…\n\n🕐 Temps partiel — « temps partiel »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36695",
-   "date_texte": "2013-03-13",
-   "_id": "dila:circulaires:cir_36695",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N°DGOS/R4/DGCS/2013/107 du 18 mars 2013 relative à l’intervention des établissements d’hospitalisation à…",
-   "detail": "Circulaire / instruction — 2013-03-18.\n\nCIRCULAIRE N°DGOS/R4/DGCS/2013/107 du 18 mars 2013 relative à l’intervention des établissements d’hospitalisation à domicile dans les établissements d’hébergement à caractère social ou médico-social\n\n⚠️ Articles que l'écosystème cite : L6111-1\n\nExtrait : 37 /pdf/2013/03/cir_36720.pdf 36720 679078 V 2013-03-28 2013-04-02 Santé, solidarité CIRCULAIRE N°DGOS/R4/DGCS/2013/107 du 18 mars 2013 relative à l’intervention des établissements d’hospitalisation à domicile dans les établissements d’hébergement à caractère social ou médico-social AFSH1307292C 2013-03-18 La ministre des affaires sociales et de la santé Les Directeurs généraux d’agences régionales de santé ; les préfets de région , les préfets de département, les directeurs régionaux de la…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36720",
-   "date_texte": "2013-03-18",
-   "_id": "dila:circulaires:cir_36720",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° DSS/2A/2013/163 du 16 avril 2013 relative au régime juridique applicable aux personnes exerçant une…",
-   "detail": "Circulaire / instruction — 2013-04-16.\n\nCIRCULAIRE N° DSS/2A/2013/163 du 16 avril 2013 relative au régime juridique applicable aux personnes exerçant une profession discontinue pour l’accès aux prestations en espèces servies au titre de la maladie et de la maternité\n\n⚠️ Articles que l'écosystème cite : L323-1, R323-1\n\nExtrait : 37 /pdf/2013/04/cir_36822.pdf 36822 82147 V 2013-04-18 2013-04-23 27 Santé, solidarité CIRCULAIRE N° DSS/2A/2013/163 du 16 avril 2013 relative au régime juridique applicable aux personnes exerçant une profession discontinue pour l’accès aux prestations en espèces servies au titre de la maladie et de la maternité AFSS1309923C DSS/2A/2013/163 2013-04-16 Ministre des affaires sociales et de la santé ; Ministre de l’économie et des finances Monsieur le directeur général de la caisse centrale de la…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36822",
-   "date_texte": "2013-04-16",
-   "_id": "dila:circulaires:cir_36822",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 1301/DEF/CGA/IS/ITA portant abrogation de texte.",
-   "detail": "Circulaire / instruction — 2013-03-19.\n\nINSTRUCTION N° 1301/DEF/CGA/IS/ITA portant abrogation de texte.\n\nExtrait : 4 /pdf/2013/04/cir_36877.pdf 36877 199605 V 2013-04-26 2013-05-01 Défense INSTRUCTION N° 1301/DEF/CGA/IS/ITA portant abrogation de texte. DEFC1350482J 1301 BOC N° 19 du 26 avril 2013, texte 2. 2013-03-19 Le ministre de défense. Contrôle général des armées. portant abrogation de texte. Directives adressées par le ministre aux services chargés de leur application, sous réserve, le cas échéant, de l'examen particulier des situations individuelles. non 0 Défense, anciens combattants ) Loi n°…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36877",
-   "date_texte": "2013-03-19",
-   "_id": "dila:circulaires:cir_36877",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire DGEFP 2013/05 du 17 avril 2013 concernant le montant des cotisations de Sécurité Sociale des stagiaires de…",
-   "detail": "Circulaire / instruction — 2013-04-17.\n\nCirculaire DGEFP 2013/05 du 17 avril 2013 concernant le montant des cotisations de Sécurité Sociale des stagiaires de la formation professionnelle rémunérés ou non rémunérés\n\nExtrait : 28 /pdf/2013/05/cir_36963.pdf 36963 86025 V 2013-05-15 2013-05-20 Travail, emploi, formation professionnelle Circulaire DGEFP 2013/05 du 17 avril 2013 concernant le montant des cotisations de Sécurité Sociale des stagiaires de la formation professionnelle rémunérés ou non rémunérés ETSD1303207C 2013-05 2013-04-17 SDPFC - MDFF Préfets de régions, DIREECTE, DANFPA, DGPE, DGASP La présente note fixe pour l'année 2013 le montant des cotisations de sécurité sociale à verser pour les stagiaires de la…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36963",
-   "date_texte": "2013-04-17",
-   "_id": "dila:circulaires:cir_36963",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Rescrit social - Décisions prises par les organismes de recouvrement, en application de l’article L. 243-6-3 du code de…",
-   "detail": "Circulaire / instruction — 2013-05-16.\n\nRescrit social - Décisions prises par les organismes de recouvrement, en application de l’article L. 243-6-3 du code de la sécurité sociale, présentant une portée générale et publiée en vertu du décret n° 2009-1598 du 18 décembre 2009 relatif aux modalités déclaratives liées au titre emploi-service entreprise (TESE) et au rescrit social\n\nExtrait : 37 /pdf/2013/05/cir_36974.pdf 36974 60801 V 2013-05-16 2013-05-21 27 Santé, solidarité Rescrit social - Décisions prises par les organismes de recouvrement, en application de l’article L. 243-6-3 du code de la sécurité sociale, présentant une portée générale et publiée en vertu du décret n° 2009-1598 du 18 décembre 2009 relatif aux modalités déclaratives liées au titre emploi-service entreprise (TESE) et au rescrit social AFSS1312235J 2013-05-16 ACOSS Employeurs cotisants (particuliers) Les…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_36974",
-   "date_texte": "2013-05-16",
-   "_id": "dila:circulaires:cir_36974",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 1379/DEF/DCSSA/PC/ERS relative à l'organisation et au fonctionnement du service de protection…",
-   "detail": "Circulaire / instruction — 2013-03-14.\n\nINSTRUCTION N° 1379/DEF/DCSSA/PC/ERS relative à l'organisation et au fonctionnement du service de protection radiologique des armées.\n\nExtrait : 4 /pdf/2013/05/cir_37043.pdf 37043 217280 V 2013-05-31 2013-06-05 Défense INSTRUCTION N° 1379/DEF/DCSSA/PC/ERS relative à l'organisation et au fonctionnement du service de protection radiologique des armées. DEFE1350608J 1379 BOC N° 24 du 31 mai 2013, texte 7. 2013-03-14 Le ministre de la défense. Service de santé des armées. Instruction relative à l'organisation et au fonctionnement du service de protection radiologique des armées. Directives adressées par le ministre aux services chargés de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37043",
-   "date_texte": "2013-03-14",
-   "_id": "dila:circulaires:cir_37043",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Suivi extra-comptable des prises en charge de cotisations sociales accordées par les caisses de MSA et les autres…",
-   "detail": "Circulaire / instruction — 2013-06-24.\n\nSuivi extra-comptable des prises en charge de cotisations sociales accordées par les caisses de MSA et les autres organismes assureurs.\n\nExtrait : 1 /pdf/2013/06/cir_37159.pdf 37159 52118 V 2013-06-28 2013-07-03 Agriculture et pêche Suivi extra-comptable des prises en charge de cotisations sociales accordées par les caisses de MSA et les autres organismes assureurs. AGRS1316514N SG/SAFSL/SDTPS/N2013-1514 2013-06-24 Le Ministre de l'agriculture, de l'agroalimentaire et de la forêt Monsieur le Directeur Général de la Caisse Centrale de laMutualité Sociale Agricole,Madame l'Agent comptable de la Caisse Centrale de la Mutualité Sociale…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37159",
-   "date_texte": "2013-06-24",
-   "_id": "dila:circulaires:cir_37159",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 1700/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées en…",
-   "detail": "Circulaire / instruction — 2013-05-13.\n\nINSTRUCTION N° 1700/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées en Polynésie française.\n\nExtrait : 4 /pdf/2013/07/cir_37182.pdf 37182 214587 V 2013-07-01 2013-07-04 Défense INSTRUCTION N° 1700/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées en Polynésie française. DEFC1350712J 1700 BOC N° 28 du 28 juin 2013, texte 4. 2013-05-13 Le ministre de la défense. Contrôle général des armées. Instruction relative au titre d'habilitation des inspecteurs du travail dans les armées en Polynésie française. Directives adressées par le ministre aux services chargés…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37182",
-   "date_texte": "2013-05-13",
-   "_id": "dila:circulaires:cir_37182",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 1703/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs de la radioprotection.",
-   "detail": "Circulaire / instruction — 2013-05-13.\n\nINSTRUCTION N° 1703/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs de la radioprotection.\n\nExtrait : 4 /pdf/2013/07/cir_37183.pdf 37183 675109 V 2013-07-01 2013-07-04 Défense INSTRUCTION N° 1703/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs de la radioprotection. DEFC1350709J 1703 BOC N° 28 du 28 juin 2013, texte 6. 2013-05-13 Le ministre de la défense. Contrôle général des armées. Instruction relative au titre d'habilitation des inspecteurs de la radioprotection. Directives adressées par le ministre aux services chargés de leur application, sous réserve, le cas échéant, de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37183",
-   "date_texte": "2013-05-13",
-   "_id": "dila:circulaires:cir_37183",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Mise en œuvre du dispositif des emplois d'avenir professeur dans l'enseignement agricole",
-   "detail": "Circulaire / instruction — 2013-07-05.\n\nMise en œuvre du dispositif des emplois d'avenir professeur dans l'enseignement agricole\n\nExtrait : 1 /pdf/2013/07/cir_37225.pdf 37225 121389 V 2013-07-12 2013-07-17 Agriculture et pêche Mise en œuvre du dispositif des emplois d'avenir professeur dans l'enseignement agricole AGRE1315633C DGER/SDEDC/N2013-2093 2013-07-05 MINISTÈRE DE L'AGRICULTURE, DE L'AGROALIMENTAIRE ET DE LA FORET administration centrale ; - directions régionales de l'alimentation, de l'agriculture et de la forêt ; - directions de l'alimentation, l'agriculture et de la forêt des DOM ; - CGAAER ; - inspection de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37225",
-   "date_texte": "2013-07-05",
-   "_id": "dila:circulaires:cir_37225",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° DSS/SD2/2013/253 du 20 juin 2013 relative aux modalités de détermination du salaire net servant de base…",
-   "detail": "Circulaire / instruction — 2013-06-20.\n\nCIRCULAIRE N° DSS/SD2/2013/253 du 20 juin 2013 relative aux modalités de détermination du salaire net servant de base au calcul des indemnités journalières dues au titre de la maternité.\n\nExtrait : 37 /pdf/2013/07/cir_37286.pdf 37286 144760 V 2013-07-24 2013-07-29 27 Santé, solidarité CIRCULAIRE N° DSS/SD2/2013/253 du 20 juin 2013 relative aux modalités de détermination du salaire net servant de base au calcul des indemnités journalières dues au titre de la maternité. AFSS1316366C DSS/SD2/2013/253 2013-06-20 Ministre des affaires sociales et de la santé ; Ministre de l’économie et des finances CNAMTS ; CNAVTS ; CCMSA ; MNC Le salaire servant de base au calcul des indemnités journalières…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37286",
-   "date_texte": "2013-06-20",
-   "_id": "dila:circulaires:cir_37286",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 1702/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées.",
-   "detail": "Circulaire / instruction — 2013-05-13.\n\nINSTRUCTION N° 1702/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées.\n\nExtrait : 4 /pdf/2013/08/cir_37335.pdf 37335 215123 V 2013-08-02 2013-08-07 Défense INSTRUCTION N° 1702/DEF/CGA/IS/ITA relative au titre d'habilitation des inspecteurs du travail dans les armées. DEFC1350708J 1702 BOC N° 33 du 2 août 2013, texte 2. 2013-05-13 Le ministre de la défense. Contrôle général des armées. Instruction relative au titre d'habilitation des inspecteurs du travail dans les armées. Directives adressées par le ministre aux services chargés de leur application, sous réserve, le cas…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37335",
-   "date_texte": "2013-05-13",
-   "_id": "dila:circulaires:cir_37335",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE INTERMINISTERIELLE N° DGOS/PF1/DGFiP/CL1B/2013/276 du 25 juillet 2013 relative aux évolutions d'ordre…",
-   "detail": "Circulaire / instruction — 2013-07-25.\n\nCIRCULAIRE INTERMINISTERIELLE N° DGOS/PF1/DGFiP/CL1B/2013/276 du 25 juillet 2013 relative aux évolutions d'ordre budgétaire et comptable à compter de l’exercice 2013 pour les établissements de santé antérieurement financés par dotation globale\n\nExtrait : 37 /pdf/2013/08/cir_37347.pdf 37347 676606 V 2013-08-02 2013-08-07 Santé, solidarité CIRCULAIRE INTERMINISTERIELLE N° DGOS/PF1/DGFiP/CL1B/2013/276 du 25 juillet 2013 relative aux évolutions d'ordre budgétaire et comptable à compter de l’exercice 2013 pour les établissements de santé antérieurement financés par dotation globale AFSH1317885C 2013-07-25 La ministre des affaires sociales et de la santé , le Ministre de l’économie et des finances en charge du budget Les Directeurs généraux d’agences…\n\n🏖️ Repos et congés — « compte épargne-temps »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37347",
-   "date_texte": "2013-07-25",
-   "_id": "dila:circulaires:cir_37347",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N°DSS/SD5B/2013/344 du 25 septembre 2013 relative aux modalités d’assujettissement aux cotisations et…",
-   "detail": "Circulaire / instruction — 2013-09-25.\n\nCIRCULAIRE N°DSS/SD5B/2013/344 du 25 septembre 2013 relative aux modalités d’assujettissement aux cotisations et contributions de sécurité sociale des contributions des employeurs destinées au financement de prestations de retraite supplémentaire et de prévoyance complémentaire.\n\n⚠️ Articles que l'écosystème cite : L242-1\n\nExtrait : 37 /pdf/2013/10/cir_37507.pdf 37507 130562 V 2013-10-01 2013-10-04 27 Santé, solidarité CIRCULAIRE N°DSS/SD5B/2013/344 du 25 septembre 2013 relative aux modalités d’assujettissement aux cotisations et contributions de sécurité sociale des contributions des employeurs destinées au financement de prestations de retraite supplémentaire et de prévoyance complémentaire. AFSS1323390C DSS/SD5B/2013/344 2013-09-25 La ministre des affaires sociales et de la santé ; Le ministre de l’économie et des…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37507",
-   "date_texte": "2013-09-25",
-   "_id": "dila:circulaires:cir_37507",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N°DGOS/RH3/2013/354 du 1er octobre 2013 relative à l’incidence du congé de maternité, du congé d’adoption,…",
-   "detail": "Circulaire / instruction — 2013-10-01.\n\nINSTRUCTION N°DGOS/RH3/2013/354 du 1er octobre 2013 relative à l’incidence du congé de maternité, du congé d’adoption, du congé de paternité et du congé parental sur le report des congés annuels des personnels médicaux des établissements publics de santé\n\n⚠️ Articles que l'écosystème cite : L1225-35, L1225-37, L1225-47\n\nExtrait : 37 /pdf/2013/10/cir_37595.pdf 37595 102311 V 2013-10-31 2013-11-05 Santé, solidarité INSTRUCTION N°DGOS/RH3/2013/354 du 1er octobre 2013 relative à l’incidence du congé de maternité, du congé d’adoption, du congé de paternité et du congé parental sur le report des congés annuels des personnels médicaux des établissements publics de santé AFSH1324540J 2013-10-01 La Ministre des affaires sociales et de la santé les directeurs généraux d’agences régionales de santé, les directeurs d’établissements…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37595",
-   "date_texte": "2013-10-01",
-   "_id": "dila:circulaires:cir_37595",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° DSS/SD5D/2013/386 du 22 novembre 2013 relative à la contribution assise sur les dépenses de promotion des…",
-   "detail": "Circulaire / instruction — 2013-11-22.\n\nCIRCULAIRE N° DSS/SD5D/2013/386 du 22 novembre 2013 relative à la contribution assise sur les dépenses de promotion des médicaments\n\n⚠️ Articles que l'écosystème cite : L242-1, L4111-1, L5121-1, L5122-1\n\nExtrait : 37 /pdf/2013/11/cir_37679.pdf 37679 182953 V 2013-11-28 2013-12-03 27 Santé, solidarité CIRCULAIRE N° DSS/SD5D/2013/386 du 22 novembre 2013 relative à la contribution assise sur les dépenses de promotion des médicaments AFSS1328833C DSS/SD5D/2013/386 2013-11-22 La ministre des affaires sociales et de la santé ; Le ministre de l’économie et des finances Directeur de l’ACOSS (Agence centrale des organismes de Sécurité sociale) La présente circulaire vise à préciser les questions d’interprétation…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37679",
-   "date_texte": "2013-11-22",
-   "_id": "dila:circulaires:cir_37679",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire du 31 octobre 2013 relative à l’évaluation des risques professionnels pour la santé et la sécurité des…",
-   "detail": "Circulaire / instruction — 2013-10-31.\n\nCirculaire du 31 octobre 2013 relative à l’évaluation des risques professionnels pour la santé et la sécurité des personnels du ministère de la justice\n\nExtrait : 11 /pdf/2013/11/cir_37697.pdf 37697 1056762 V 2013-11-29 2013-12-04 Justice Circulaire du 31 octobre 2013 relative à l’évaluation des risques professionnels pour la santé et la sécurité des personnels du ministère de la justice JUST1327538C BOMJ 2013-11 du 29 novembre 2013 2013-10-31 Eric LUCAS; secrétaire général L'inspecteur général des services judiciaires; le directeur des services judiciaires; la directrice de l'administration pénitentiaire; la directrice de la protection judiciaire de la…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37697",
-   "date_texte": "2013-10-31",
-   "_id": "dila:circulaires:cir_37697",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Modalités de comptabilisation des droits à congés, des comptes épargne-temps, des heures supplémentaires et des heures…",
-   "detail": "Circulaire / instruction — 2013-11-27.\n\nModalités de comptabilisation des droits à congés, des comptes épargne-temps, des heures supplémentaires et des heures complémentaires\n\nExtrait : 43 /pdf/2013/12/cir_37705.pdf 37705 1682816 V 2013-12-03 2013-12-06 Budget, fiscalité Modalités de comptabilisation des droits à congés, des comptes épargne-temps, des heures supplémentaires et des heures complémentaires BUDE1329691J GCP130024 2013-11-27 Direction générale des Finances publiques Réseau La présente instruction a pour objet de décrire les modalités de comptabilisation à la date de clôture des droits à congés, du compte épargne-temps, des heures supplémentaires et des heures…\n\n⏱️ Heures supplémentaires — « heures supplémentaires »\n🕐 Temps partiel — « heures complémentaires »\n🏖️ Repos et congés — « compte épargne-temps »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37705",
-   "date_texte": "2013-11-27",
-   "_id": "dila:circulaires:cir_37705",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N°DGOS/PF3/DREES/DMSI/2013/402 du 19 décembre 2013 relative à l’enregistrement des centres de santé dans le…",
-   "detail": "Circulaire / instruction — 2013-12-19.\n\nINSTRUCTION N°DGOS/PF3/DREES/DMSI/2013/402 du 19 décembre 2013 relative à l’enregistrement des centres de santé dans le Fichier National des Établissements Sanitaires et Sociaux (FINESS)\n\n⚠️ Articles que l'écosystème cite : L6323-1\n\nExtrait : 37 /pdf/2013/12/cir_37774.pdf 37774 493853 V 2013-12-20 2013-12-25 Santé, solidarité INSTRUCTION N°DGOS/PF3/DREES/DMSI/2013/402 du 19 décembre 2013 relative à l’enregistrement des centres de santé dans le Fichier National des Établissements Sanitaires et Sociaux (FINESS) AFSH1330452J 2013-12-19 La Ministre des affaires sociales et de la santé les directeurs généraux des agences régionales de santé, le directeur de l’union nationale des caisses d’assurance maladie (UNCAM) Règles d’enregistrement…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37774",
-   "date_texte": "2013-12-19",
-   "_id": "dila:circulaires:cir_37774",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° DGOS/RH3/DSS/2013/411 du 16 décembre 2013 relative à l’assujettissement aux prélèvements fiscaux et…",
-   "detail": "Circulaire / instruction — 2013-12-16.\n\nINSTRUCTION N° DGOS/RH3/DSS/2013/411 du 16 décembre 2013 relative à l’assujettissement aux prélèvements fiscaux et sociaux des indemnités de départ volontaires et des aides à la mobilité financées dans le cadre du Fonds d’intervention régional.\n\n⚠️ Articles que l'écosystème cite : L242-1\n\nExtrait : 37 /pdf/2013/12/cir_37790.pdf 37790 481881 V 2013-12-31 2014-01-03 Santé, solidarité INSTRUCTION N° DGOS/RH3/DSS/2013/411 du 16 décembre 2013 relative à l’assujettissement aux prélèvements fiscaux et sociaux des indemnités de départ volontaires et des aides à la mobilité financées dans le cadre du Fonds d’intervention régional. AFSH1331128J 2013-12-16 La ministre des Affaires sociales et de la Santé Monsieur le Directeur général de la Caisse nationale de l'assurance maladie des travailleurs…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37790",
-   "date_texte": "2013-12-16",
-   "_id": "dila:circulaires:cir_37790",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 509469/DEF/DCSSA/RH/RES relative à l'organisation et au fonctionnement de la réserve militaire du…",
-   "detail": "Circulaire / instruction — 2013-09-11.\n\nINSTRUCTION N° 509469/DEF/DCSSA/RH/RES relative à l'organisation et au fonctionnement de la réserve militaire du service de santé des armées.\n\nExtrait : 4 /pdf/2014/01/cir_37832.pdf 37832 1934139 V 2014-01-17 2014-01-22 Défense INSTRUCTION N° 509469/DEF/DCSSA/RH/RES relative à l'organisation et au fonctionnement de la réserve militaire du service de santé des armées. DEFE1351842J 509469 BOC n° 3 du 17 janvier 2014, texte 4. 2013-09-11 Le ministre de la défense. Service de santé des armées. Instruction relative à l'organisation et au fonctionnement de la réserve militaire du service de santé des armées. Directives adressées par le ministre aux…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37832",
-   "date_texte": "2013-09-11",
-   "_id": "dila:circulaires:cir_37832",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 0-3253-2013/DEF/EMM/MDR/SST portant abrogation d'un texte.",
-   "detail": "Circulaire / instruction — 2013-12-18.\n\nINSTRUCTION N° 0-3253-2013/DEF/EMM/MDR/SST portant abrogation d'un texte.\n\n⚠️ Articles que l'écosystème cite : R4412-94\n\nExtrait : 4 /pdf/2014/02/cir_37921.pdf 37921 337427 V 2014-02-11 2014-02-14 Défense INSTRUCTION N° 0-3253-2013/DEF/EMM/MDR/SST portant abrogation d'un texte. DEFB1352360J 0-3253-2013 BOC n° 7 du 7 février 2014, texte 17. 2013-12-18 Le ministre de la défense. Marine nationale. Instruction portant abrogation d'un texte. Directives adressées par le ministre aux services chargés de leur application, sous réserve, le cas échéant, de l'examen particulier des situations individuelles. non 0 Défense, anciens…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_37921",
-   "date_texte": "2013-12-18",
-   "_id": "dila:circulaires:cir_37921",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N DGOS/RH4/2014/101 du 31 mars 2014 relative à la mise en œuvre de l’arrêté du 8 novembre 2013 modifiant…",
-   "detail": "Circulaire / instruction — 2014-03-31.\n\nINSTRUCTION N DGOS/RH4/2014/101 du 31 mars 2014 relative à la mise en œuvre de l’arrêté du 8 novembre 2013 modifiant l’arrêté du 30 avril 2003 relatif à l’organisation et à l’indemnisation de la continuité des soins et de la permanence pharmaceutique dans les établissements publics de santé et les établissements publics d’hébergement pour personnes âgées dépendantes\n\nExtrait : 37 /pdf/2014/04/cir_38181.pdf 38181 199207 V 2014-04-14 2014-04-17 Santé, solidarité INSTRUCTION N DGOS/RH4/2014/101 du 31 mars 2014 relative à la mise en œuvre de l’arrêté du 8 novembre 2013 modifiant l’arrêté du 30 avril 2003 relatif à l’organisation et à l’indemnisation de la continuité des soins et de la permanence pharmaceutique dans les établissements publics de santé et les établissements publics d’hébergement pour personnes âgées dépendantes AFSH1408177J 2014-03-31 La ministre des…\n\n🕐 Temps partiel — « temps partiel »\n🕘 Durée du travail — « aménagement du temps de travail »\n🏖️ Repos et congés — « repos quotidien »\n📟 Astreintes — « astreintes »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38181",
-   "date_texte": "2014-03-31",
-   "_id": "dila:circulaires:cir_38181",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N°DGOS/RH4/2014/128 du 22 avril 2014 clarifiant les dispositions réglementaires relatives aux internes",
-   "detail": "Circulaire / instruction — 2014-04-22.\n\nINSTRUCTION N°DGOS/RH4/2014/128 du 22 avril 2014 clarifiant les dispositions réglementaires relatives aux internes\n\nExtrait : 37 /pdf/2014/04/cir_38215.pdf 38215 188893 V 2014-04-24 2014-04-29 Santé, solidarité INSTRUCTION N°DGOS/RH4/2014/128 du 22 avril 2014 clarifiant les dispositions réglementaires relatives aux internes AFSH1409479J 2014-04-22 La ministre des affaires sociales et de la santé les préfets de région, les directeurs généraux des agences régionales de santé,les préfets de département,les directeurs des établissements de santé Clarification des dispositions réglementaires applicables aux internes…\n\n🕐 Temps partiel — « temps partiel »\n🕘 Durée du travail — « aménagement du temps de travail »\n📟 Astreintes — « astreintes »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38215",
-   "date_texte": "2014-04-22",
-   "_id": "dila:circulaires:cir_38215",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE N° DSS/DACI/5B/2A/2014/147 du 23 mai 2014 relative à l’intégration dans le régime général de sécurité…",
-   "detail": "Circulaire / instruction — 2014-05-23.\n\nCIRCULAIRE N° DSS/DACI/5B/2A/2014/147 du 23 mai 2014 relative à l’intégration dans le régime général de sécurité sociale des frontaliers qui résident en France et travaillent en Suisse et à leur accès aux soin\n\nExtrait : 37 /pdf/2014/05/cir_38331.pdf 38331 147686 V 2014-05-23 2014-05-28 60 Santé, solidarité CIRCULAIRE N° DSS/DACI/5B/2A/2014/147 du 23 mai 2014 relative à l’intégration dans le régime général de sécurité sociale des frontaliers qui résident en France et travaillent en Suisse et à leur accès aux soin AFSS1410663C DSS/DACI/5B/2A/2014/147 2014-05-23 La ministre des affaires sociales et de la santé Monsieur le directeur général de la caisse nationale d’assurance maladie des travailleurs salariés…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38331",
-   "date_texte": "2014-05-23",
-   "_id": "dila:circulaires:cir_38331",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — Circulaire du 20 mai 2014 relative à la mise en œuvre de l’accord cadre relatif à la prévention des risques…",
-   "detail": "Circulaire / instruction — 2014-05-20.\n\nCirculaire du 20 mai 2014 relative à la mise en œuvre de l’accord cadre relatif à la prévention des risques psychosociaux dans la fonction publique de l’Etat.\n\n⚠️ Articles que l'écosystème cite : L4121-1, L4121-2\n\nExtrait : 42 /pdf/2014/05/cir_38341.pdf 38341 327610 V 2014-05-26 2014-05-29 67 Fonction publique Circulaire du 20 mai 2014 relative à la mise en œuvre de l’accord cadre relatif à la prévention des risques psychosociaux dans la fonction publique de l’Etat. RDFF1411151C 2014-05-20 Ministère de la décentralisation, de la réforme de l'Etat et de la fonction publique Mesdames et messieurs les ministres, Mesdames et messieurs les préfets Mise en œuvre, dans la fonction publique de l’Etat, de l’accord-cadre du…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38341",
-   "date_texte": "2014-05-20",
-   "_id": "dila:circulaires:cir_38341",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Circulaire du 31 juillet 2014 relative à l’indemnisation des conseillers prud’hommes",
-   "detail": "Circulaire / instruction — 2014-07-31.\n\nCirculaire du 31 juillet 2014 relative à l’indemnisation des conseillers prud’hommes\n\nExtrait : 11 /pdf/2014/08/cir_38629.pdf 38629 307918 V 2014-08-14 2014-08-19 Justice Circulaire du 31 juillet 2014 relative à l’indemnisation des conseillers prud’hommes JUSB1418984C Bulletin officiel complémentaire du 14 août 2014 2014-07-31 La garde des sceaux, ministre de la justice Mesdames et messieurs les premiers présidents des cours d'appel ; Mesdames et messieurs les procureurs généraux près lesdites cours ; Mesdames et messieurs les présidents et vice-présidents des conseils de prud’hommes…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38629",
-   "date_texte": "2014-07-31",
-   "_id": "dila:circulaires:cir_38629",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — Mise en œuvre, dans la fonction publique territoriale, de l’accord-cadre du 22 octobre 2013 concernant la prévention…",
-   "detail": "Circulaire / instruction — 2014-07-25.\n\nMise en œuvre, dans la fonction publique territoriale, de l’accord-cadre du 22 octobre 2013 concernant la prévention des risques psychosociaux.\n\n⚠️ Articles que l'écosystème cite : L4121-1\n\nExtrait : 39 /pdf/2014/08/cir_38658.pdf 38658 3157978 V 2014-08-26 2014-08-29 Collectivités territoriales Mise en œuvre, dans la fonction publique territoriale, de l’accord-cadre du 22 octobre 2013 concernant la prévention des risques psychosociaux. RDFB1410419C 2014-07-25 Mme la ministre de la décentralisation et de la fonction publique Mmes et MM. les préfets Cette circulaire a pour objet de préciser les modalités de déploiement, de mise en œuvre et de suivi, dans la fonction publique territoriale, du…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38658",
-   "date_texte": "2014-07-25",
-   "_id": "dila:circulaires:cir_38658",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Travail à temps partiel des personnels enseignants du premier degré exerçant dans les écoles",
-   "detail": "Circulaire / instruction — 2014-09-03.\n\nTravail à temps partiel des personnels enseignants du premier degré exerçant dans les écoles\n\nExtrait : 66 /pdf/2014/09/cir_38700.pdf 38700 1653055 V 2014-09-04 2014-09-09 Education, enseignement supérieur, recherche Travail à temps partiel des personnels enseignants du premier degré exerçant dans les écoles MENH1416699C 2014-09-03 La ministre de l'éducation nationale, de l'enseignement supérieur et de la recherche Texte adressé aux rectrices et recteurs d'académie ; aux vice-rectrices et vice-recteurs d'académie ; aux inspectrices et inspecteurs d'académie-directrices et directeurs académiques…\n\n🕐 Temps partiel — « temps partiel »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38700",
-   "date_texte": "2014-09-03",
-   "_id": "dila:circulaires:cir_38700",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Instruction du Gouvernement du 19 août 2014 relative à la prévention des risques psychosociaux au sein du ministère de…",
-   "detail": "Circulaire / instruction — 2014-08-19.\n\nInstruction du Gouvernement du 19 août 2014 relative à la prévention des risques psychosociaux au sein du ministère de l'écologie, du développement durable et de l'énergie et du ministère du logement et de l'égalité des territoires\n\nExtrait : 5 /pdf/2014/09/cir_38711.pdf 38711 100381 V 2014-09-11 2014-09-16 Ecologie, développement durable Instruction du Gouvernement du 19 août 2014 relative à la prévention des risques psychosociaux au sein du ministère de l'écologie, du développement durable et de l'énergie et du ministère du logement et de l'égalité des territoires DEVK1409170J Bulletin officiel n°17 du 25 septembre 2014 2014-08-19 La ministre de l'écologie, du développement durable et de l'énergie ; La ministre du logement et de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38711",
-   "date_texte": "2014-08-19",
-   "_id": "dila:circulaires:cir_38711",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Information du 22 septembre 2014 relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suites à…",
-   "detail": "Circulaire / instruction — 2014-09-22.\n\nInformation du 22 septembre 2014 relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suites à donner aux dispositions de l'article 31de la loi de finances rectificative pour 2014\n\nExtrait : 39 /pdf/2014/09/cir_38758.pdf 38758 236019 A 2014-09-30 2014-10-03 Immigration Information du 22 septembre 2014 relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suites à donner aux dispositions de l'article 31de la loi de finances rectificative pour 2014 INTV1421734N 2014-09-22 M. le ministre de l'intérieur M. le préfet de police , Mmes et MM. les préfets de département (métropole et outre-mer) La présente information a pour objet de préciser les conditions de mise en…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38758",
-   "date_texte": "2014-09-22",
-   "_id": "dila:circulaires:cir_38758",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Information relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suite à donner aux dispositions…",
-   "detail": "Circulaire / instruction — 2014-09-22.\n\nInformation relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suite à donner aux dispositions de l'article 31 de la loi de fiannces rectificative pour 2014.\n\nExtrait : 39 /pdf/2014/10/cir_38844.pdf 38844 233379 V 2014-10-28 2014-10-31 Intérieur Information relative à l'allocation temporaire d'attente versée aux demandeurs d'asile. Suite à donner aux dispositions de l'article 31 de la loi de fiannces rectificative pour 2014. INTV1421734N 2014-09-22 M. le ministre de l'intérieur M. le préfet de police, Mmes et MM. les préfets de département (métropole et outre-mer) La présente information a pour objet de préciser les conditions de mise en oeuvre des…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38844",
-   "date_texte": "2014-09-22",
-   "_id": "dila:circulaires:cir_38844",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° 14-03005/DEF/CGA/IS/ITA - N° 863/INSP/IPE relative aux relations entre l’inspection du travail dans les…",
-   "detail": "Circulaire / instruction — 2014-09-09.\n\nINSTRUCTION N° 14-03005/DEF/CGA/IS/ITA - N° 863/INSP/IPE relative aux relations entre l’inspection du travail dans les armées et l’inspection de l’armement pour les poudres et explosifs pour l’application du chapitre II. du titre VI. du livre IV. de la quatrième partie du code du travail : « Prévention du risque pyrotechnique ».\n\nExtrait : 4 /pdf/2014/11/cir_38924.pdf 38924 436306 V 2014-11-18 2014-11-21 Défense INSTRUCTION N° 14-03005/DEF/CGA/IS/ITA - N° 863/INSP/IPE relative aux relations entre l’inspection du travail dans les armées et l’inspection de l’armement pour les poudres et explosifs pour l’application du chapitre II. du titre VI. du livre IV. de la quatrième partie du code du travail : « Prévention du risque pyrotechnique ». DEFC1451680J 14-03005/DEF/CGA/IS/ITA - N° 863/INSP/IPE BOC n° 58 du 14 novembre 2014, texte 1.…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38924",
-   "date_texte": "2014-09-09",
-   "_id": "dila:circulaires:cir_38924",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° DGOS/RH3/DGCS/4B/2014/321 du 20 novembre 2014 relative à la mise en œuvre dans la fonction publique…",
-   "detail": "Circulaire / instruction — 2014-11-20.\n\nINSTRUCTION N° DGOS/RH3/DGCS/4B/2014/321 du 20 novembre 2014 relative à la mise en œuvre dans la fonction publique hospitalière de l’accord-cadre du 22 octobre 2013 relatif à la prévention des risques psychosociaux dans les trois fonctions publiques\n\n⚠️ Articles que l'écosystème cite : L4121-1, L4121-2\n\nExtrait : 70 /pdf/2014/11/cir_38971.pdf 38971 533538 V 2014-11-28 2014-12-03 Santé, solidarité INSTRUCTION N° DGOS/RH3/DGCS/4B/2014/321 du 20 novembre 2014 relative à la mise en œuvre dans la fonction publique hospitalière de l’accord-cadre du 22 octobre 2013 relatif à la prévention des risques psychosociaux dans les trois fonctions publiques AFSH1427357J 2014-11-20 La Ministre des affaires sociales, de la santé et des droits des femmes les Directeurs généraux d’agences régionales de santé les préfets de…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_38971",
-   "date_texte": "2014-11-20",
-   "_id": "dila:circulaires:cir_38971",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — Instruction relative aux aides au paiement des cotisations et contributions sociales des personnes non salariées des…",
-   "detail": "Circulaire / instruction — 2014-12-09.\n\nInstruction relative aux aides au paiement des cotisations et contributions sociales des personnes non salariées des professions agricoles et des employeurs de main-d'oeuvre agricole.\n\nExtrait : 1 /pdf/2014/12/cir_39010.pdf 39010 186731 V 2014-12-12 2014-12-17 Agriculture et pêche Instruction relative aux aides au paiement des cotisations et contributions sociales des personnes non salariées des professions agricoles et des employeurs de main-d'oeuvre agricole. AGRS1429282C SG/SASFL/SDTPS/2014-975 2014-12-09 MINISTERE DE L'AGRICULTURE, DE L'AGROALIMENTAIRE ET DE LA FORET Monsieur le Directeur Général de la Caisse centrale de la Mutualité sociale agricole Mmes et MM. les Directeurs…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_39010",
-   "date_texte": "2014-12-09",
-   "_id": "dila:circulaires:cir_39010",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — INSTRUCTION N° DGOS/RH4/2014/340 du 10 décembre 2014 clarifiant les dispositions réglementaires relatives aux étudiants…",
-   "detail": "Circulaire / instruction — 2014-12-10.\n\nINSTRUCTION N° DGOS/RH4/2014/340 du 10 décembre 2014 clarifiant les dispositions réglementaires relatives aux étudiants en médecine, en odontologie et en pharmacie.\n\nExtrait : 70 /pdf/2014/12/cir_39021.pdf 39021 182489 V 2014-12-17 2014-12-22 Santé, solidarité INSTRUCTION N° DGOS/RH4/2014/340 du 10 décembre 2014 clarifiant les dispositions réglementaires relatives aux étudiants en médecine, en odontologie et en pharmacie. AFSH1429376J 2014-12-10 La ministre des affaires sociales, de la santé et des droits des femmes les préfets de région, les directeurs généraux des agences régionales de santé, les préfets de département, les directeurs des établissements de santé…\n\n🕐 Temps partiel — « temps partiel »\n🕘 Durée du travail — « aménagement du temps de travail »",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_39021",
-   "date_texte": "2014-12-10",
-   "_id": "dila:circulaires:cir_39021",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "moyenne",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE INTERMINISTERIELLE N° DSS/3A/2014/347 du 29 décembre 2014 relative aux nouvelles règles applicables en…",
-   "detail": "Circulaire / instruction — 2014-12-29.\n\nCIRCULAIRE INTERMINISTERIELLE N° DSS/3A/2014/347 du 29 décembre 2014 relative aux nouvelles règles applicables en matière de cumul d’une activité rémunérée et d’une pension de vieillesse.\n\nExtrait : 70 /pdf/2014/12/cir_39056.pdf 39056 81071 V 2014-12-30 2015-01-02 60 Santé, solidarité CIRCULAIRE INTERMINISTERIELLE N° DSS/3A/2014/347 du 29 décembre 2014 relative aux nouvelles règles applicables en matière de cumul d’une activité rémunérée et d’une pension de vieillesse. AFSS1430319C DSS/3A/2014/347 2014-12-29 Le ministre des finances et des comptes publics et la ministre des affaires sociales, de la santé et des droits des femmes Organismes de sécurité sociale et autres; le directeur de la…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_39056",
-   "date_texte": "2014-12-29",
-   "_id": "dila:circulaires:cir_39056",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "nouvelle-circulaire",
-   "gravite": "haute",
-   "titre": "📨 Circulaire / instruction — CIRCULAIRE INTERMINISTERIELLE N° DSS/SD2/2014/370 du 30 décembre 2014 relative aux modalités de calcul des indemnités…",
-   "detail": "Circulaire / instruction — 2014-12-30.\n\nCIRCULAIRE INTERMINISTERIELLE N° DSS/SD2/2014/370 du 30 décembre 2014 relative aux modalités de calcul des indemnités journalières dues au titre de la maladie, de la maternité, des accidents du travail et des maladies professionnelles.\n\n⚠️ Articles que l'écosystème cite : R323-4\n\nExtrait : 70 /pdf/2014/12/cir_39058.pdf 39058 173846 V 2014-12-31 2015-01-05 60 Santé, solidarité CIRCULAIRE INTERMINISTERIELLE N° DSS/SD2/2014/370 du 30 décembre 2014 relative aux modalités de calcul des indemnités journalières dues au titre de la maladie, de la maternité, des accidents du travail et des maladies professionnelles. AFSS1431362C DSS/SD2/2014/370 2014-12-30 Le ministre des finances et des comptes publics ; La ministre des affaires sociales, de la santé et des droits des femmes. Le…",
-   "lien": "https://www.legifrance.gouv.fr/circulaire/id/cir_39058",
-   "date_texte": "2014-12-30",
-   "_id": "dila:circulaires:cir_39058",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "moyenne",
-   "titre": "🏛️ Conseil constitutionnel — Nature juridique de certaines dispositions de l’article L. 1422-3 du code du travail et de l’article L. 131-3 du code…",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-325 — 2026-07-02.\n\nNature juridique de certaines dispositions de l’article L. 1422-3 du code du travail et de l’article L. 131-3 du code de l’entrée et du séjour des étrangers et du droit d’asile\n\nSolution : Réglementaire\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, le 3 juin 2026, par le Premier ministre, dans les conditions prévues au second alinéa de l'article 37 de la Constitution, d'une demande enregistrée au secrétariat général du Conseil constitutionnel sous le n° 2026-325 L. Le Premier ministre demande au Conseil constitutionnel de se prononcer sur la nature juridique des mots « en Conseil d'État » figurant à l'article L. 1422-3 du code du travail, de la seconde phrase du premier alinéa de l'article L. 131-3…",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054398789",
-   "date_texte": "2026-07-02",
-   "_id": "dila:constit:CONSTEXT000054398789",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil constitutionnel — Loi relative à la lutte contre les fraudes sociales et fiscales : CENSURE / ANNULATION",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-904 — 2026-06-18.\n\nLoi relative à la lutte contre les fraudes sociales et fiscales\n\nSolution : Non conformité partielle - réserve\n\n⚠️ Articles que l'écosystème cite : L243-7\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, dans les conditions prévues au deuxième alinéa de l'article 61 de la Constitution, de la loi relative à la lutte contre les fraudes sociales et fiscales, sous le n° 2026-904 DC, le 18 mai 2026, par M. Boris VALLAUD, Mme Marie-José ALLEMAND, MM. Joël AVIRAGNET, Christian BAPTISTE, Fabrice BARUSSEAU, Mme Marie-Noëlle BATTISTEL, MM. Laurent BAUMEL, Belkhir BELHADDAD, Mme Béatrice BELLAY, MM. Karim BENBRAHIM, Mickaël BOULOUX, Mme Dorine BREGMAN, MM. Philippe…",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054398790",
-   "date_texte": "2026-06-18",
-   "_id": "dila:constit:CONSTEXT000054398790",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil constitutionnel — Nature juridique de certaines dispositions de l’article L. 136-1-1 du code de la sécurité sociale",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-327 — 2026-07-29.\n\nNature juridique de certaines dispositions de l’article L. 136-1-1 du code de la sécurité sociale\n\nSolution : Partiellement réglementaire\n\n⚠️ Articles que l'écosystème cite : L3261-3-1\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, le 30 juin 2026, par le Premier ministre, dans les conditions prévues au second alinéa de l'article 37 de la Constitution, d'une demande enregistrée au secrétariat général du Conseil constitutionnel sous le n° 2026-327 L. Le Premier ministre demande au Conseil constitutionnel de se prononcer sur la nature juridique des dispositions du e du 4° du paragraphe III de l'article L. 136-1-1 du code de la sécurité sociale. Au vu des textes suivants : – la…",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054617304",
-   "date_texte": "2026-07-29",
-   "_id": "dila:constit:CONSTEXT000054617304",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil constitutionnel — M. Bruno N. et M. Joseph A. [Absence d'indemnité compensatrice de congé payé en cas de rupture du contrat de travail… : CENSURE / ANNULATION",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-1217/1218 — 2026-08-06.\n\nM. Bruno N. et M. Joseph A. [Absence d'indemnité compensatrice de congé payé en cas de rupture du contrat de travail provoquée par la faute lourde du salarié en Nouvelle-Calédonie]\n\nSolution : Non conformité totale\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI le 17 juin 2026 par la Cour de cassation (chambre sociale, arrêts nos 599 et 600 du 11 juin 2026), dans les conditions prévues à l'article 61-1 de la Constitution, de deux questions prioritaires de constitutionnalité. Ces questions ont été posées pour M. Bruno N. et M. Joseph A. par la SCP Alain Bénabent, avocat au Conseil d'État et à la Cour de cassation. Elles ont été enregistrées au secrétariat général du Conseil constitutionnel sous les nos 2026-1217…\n\n🏖️ Repos et congés — « congés payés »",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054952962",
-   "date_texte": "2026-08-06",
-   "_id": "dila:constit:CONSTEXT000054952962",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "moyenne",
-   "titre": "🏛️ Conseil constitutionnel — Nature juridique de certaines dispositions de l’article L. 120-1 du code du service national",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-332 — 2026-10-01.\n\nNature juridique de certaines dispositions de l’article L. 120-1 du code du service national\n\nSolution : Réglementaire\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, le 3 septembre 2026, par le Premier ministre, dans les conditions prévues au second alinéa de l'article 37 de la Constitution, d'une demande enregistrée au secrétariat général du Conseil constitutionnel sous le n° 2026-332 L. Le Premier ministre demande au Conseil constitutionnel de se prononcer sur la nature juridique des mots « de six à » figurant à la première phrase du premier alinéa du paragraphe II de l'article L. 120-1 du code du service national.…",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054952972",
-   "date_texte": "2026-10-01",
-   "_id": "dila:constit:CONSTEXT000054952972",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil constitutionnel — Loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la…",
-   "detail": "Conseil constitutionnel — Conseil constitutionnel — n° 2026-907 — 2026-08-06.\n\nLoi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense\n\nSolution : Conformité\n\n⚠️ Articles que l'écosystème cite : L1332-1, L2143-1, L3132-1, L411-1\n\nExtrait : LE CONSEIL CONSTITUTIONNEL A ÉTÉ SAISI, dans les conditions prévues au deuxième alinéa de l'article 61 de la Constitution, de la loi actualisant la programmation militaire pour les années 2024 à 2030 et portant diverses dispositions intéressant la défense, sous le n° 2026-907 DC, le 6 juillet 2026, par Mmes Mathilde PANOT, Nadège ABOMANGOLI, MM. Laurent ALEXANDRE, Gabriel AMARD, Mmes Ségolène AMIOT, Farida AMRANI, MM. Rodrigo ARENAS, Raphaël ARNAULT, Mmes Anaïs BELOUASSA-CHERIFI, Shéhérazade…",
-   "lien": "https://www.legifrance.gouv.fr/cons/id/CONSTEXT000054952973",
-   "date_texte": "2026-08-06",
-   "_id": "dila:constit:CONSTEXT000054952973",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de LYON, 2ème chambre, 24/09/2026, 24LY02004, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de LYON — n° 24LY02004 — 2026-09-24.\n\nCAA de LYON, 2ème chambre, 24/09/2026, 24LY02004, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L136-1\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure M. B... E... a demandé au tribunal administratif de Lyon de prononcer la décharge des cotisations supplémentaires d'impôt sur le revenu et des contributions sociales auxquelles son foyer fiscal a été assujetti au titre des années 2012, 2013 et 2014, ainsi que des pénalités correspondantes. Par un jugement n° 2204708 du 14 mai 2024, le tribunal administratif de Lyon a déchargé M. E..., en droits et pénalités, des cotisations…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054903571",
-   "date_texte": "2026-09-24",
-   "_id": "dila:jade:CETATEXT000054903571",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "moyenne",
-   "titre": "🏛️ Conseil d'État — CAA de LYON, 2ème chambre, 24/09/2026, 26LY00237, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de LYON — n° 26LY00237 — 2026-09-24.\n\nCAA de LYON, 2ème chambre, 24/09/2026, 26LY00237, Inédit au recueil Lebon\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure M. B... A... a demandé au tribunal administratif de Grenoble de prononcer la décharge des cotisations d'impôt sur le revenu et de contributions sociales auxquelles il a été assujetti au titre de l'année 2017, ainsi que des pénalités correspondantes. Par un jugement n° 2207762 du 24 novembre 2025, le tribunal administratif de Grenoble a rejeté sa demande. Procédure devant la cour Par une requête et des mémoires, enregistrés le 28…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054903591",
-   "date_texte": "2026-09-24",
-   "_id": "dila:jade:CETATEXT000054903591",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de BORDEAUX, 3ème chambre, 24/09/2026, 23BX03047, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de BORDEAUX — n° 23BX03047 — 2026-09-24.\n\nCAA de BORDEAUX, 3ème chambre, 24/09/2026, 23BX03047, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1224-1\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : La société à responsabilité limitée (SARL) société de Transports Zuneve, la SARL société Alick Zuneve (AZ Transports), la société par actions simplifiée (SAS) société de Transports internationale de voyageurs et de marchandise Anamay transports (STIVMAT), la SARL société Transports Yves Prévot et la SAS société Guyamazone ont demandé au tribunal administratif de la Guyane, d'une part, d'annuler ou à titre subsidiaire de résilier, le…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054903595",
-   "date_texte": "2026-09-24",
-   "_id": "dila:jade:CETATEXT000054903595",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de BORDEAUX, 3ème chambre, 24/09/2026, 24BX00343, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de BORDEAUX — n° 24BX00343 — 2026-09-24.\n\nCAA de BORDEAUX, 3ème chambre, 24/09/2026, 24BX00343, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1232-2, L1232-3\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : M. A... C... B... a demandé au tribunal administratif de la Guyane d'annuler la décision du 4 mai 2022 par laquelle l'inspectrice du travail de l'unité de contrôle de Guyane a autorisé son licenciement pour faute grave. Par un jugement n° 2201262 du 14 décembre 2023, le tribunal administratif de la Guyane a rejeté sa demande. Procédure devant la cour : Par une requête et des mémoires enregistrés le 13 février 2024 et les 6 janvier…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054903597",
-   "date_texte": "2026-09-24",
-   "_id": "dila:jade:CETATEXT000054903597",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00480, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de DOUAI — n° 25DA00480 — 2026-09-17.\n\nCAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00480, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1235-1, L4121-1\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : La société Airbus Atlantic a demandé au tribunal administratif d'Amiens, d'une part, d'annuler la décision du 7 juillet 2022 par laquelle l'inspection du travail a rejeté sa demande d'autorisation de licencier M. B... A... et la décision implicite du 2 janvier 2023 par laquelle le ministre du travail a rejeté son recours hiérarchique contre cette décision, d'autre part, d'annuler la décision du 27 avril 2023 par laquelle le ministre…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054912250",
-   "date_texte": "2026-09-17",
-   "_id": "dila:jade:CETATEXT000054912250",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00715, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de DOUAI — n° 25DA00715 — 2026-09-17.\n\nCAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00715, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1224-1, L1233-3, L1233-4\n\nExtrait : Vu la procédure suivante : Procédures contentieuses antérieures : M. B... A... a demandé au tribunal administratif de Lille d'annuler pour excès de pouvoir la décision du 12 octobre 2021 par laquelle l'inspectrice du travail de l'unité de contrôle Lille-Ouest a autorisé son licenciement pour motif économique ainsi que la décision du 12 juillet 2022 par laquelle le ministre du travail, du plein emploi et de l'insertion a rejeté le recours hiérarchique qu'il a formé contre cette décision. Par un…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054912253",
-   "date_texte": "2026-09-17",
-   "_id": "dila:jade:CETATEXT000054912253",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00716, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de DOUAI — n° 25DA00716 — 2026-09-17.\n\nCAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00716, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1224-1, L1233-3, L1233-4\n\nExtrait : Vu la procédure suivante : Procédures contentieuses antérieures : M. A... B... a demandé au tribunal administratif de Lille d'annuler pour excès de pouvoir la décision du 12 octobre 2021 par laquelle l'inspectrice du travail de l'unité de contrôle Lille-Ouest a autorisé son licenciement pour motif économique ainsi que la décision du 12 juillet 2022 par laquelle le ministre du travail, du plein emploi et de l'insertion a rejeté le recours hiérarchique qu'il a formé contre cette décision. Par un…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054912254",
-   "date_texte": "2026-09-17",
-   "_id": "dila:jade:CETATEXT000054912254",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00718, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de DOUAI — n° 25DA00718 — 2026-09-17.\n\nCAA de DOUAI, 3ème chambre, 17/09/2026, 25DA00718, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1224-1, L1233-3, L1233-4\n\nExtrait : Vu la procédure suivante : Procédures contentieuses antérieures : M. A... B... a demandé au tribunal administratif de Lille d'annuler pour excès de pouvoir la décision du 12 octobre 2021 par laquelle l'inspectrice du travail de l'unité de contrôle Lille-Ouest a autorisé son licenciement pour motif économique ainsi que la décision du 12 juillet 2022 par laquelle le ministre du travail, du plein emploi et de l'insertion a rejeté le recours hiérarchique qu'il a formé contre cette décision. Par un…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054912255",
-   "date_texte": "2026-09-17",
-   "_id": "dila:jade:CETATEXT000054912255",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "moyenne",
-   "titre": "🏛️ Conseil d'État — CAA de DOUAI, 3ème chambre, 17/09/2026, 26DA00004, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de DOUAI — n° 26DA00004 — 2026-09-17.\n\nCAA de DOUAI, 3ème chambre, 17/09/2026, 26DA00004, Inédit au recueil Lebon\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : M. A... B... a demandé au tribunal administratif de Rouen d'annuler l'arrêté du 13 août 2024 par lequel le préfet de la Seine-Maritime a refusé de lui délivrer un titre de séjour. Par un jugement n° 2404009 du 9 décembre 2025, le tribunal administratif de Rouen a rejeté sa demande. Procédure devant la cour : Par une requête enregistrée le 2 janvier 2026, M. A... B..., représenté par Me Leprince, demande à la cour : 1°) d'annuler ce…\n\n📟 Astreintes — « astreinte »",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054912258",
-   "date_texte": "2026-09-17",
-   "_id": "dila:jade:CETATEXT000054912258",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "moyenne",
-   "titre": "🏛️ Conseil d'État — CAA de VERSAILLES, 4ème chambre, 22/09/2026, 24VE03075, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de VERSAILLES — n° 24VE03075 — 2026-09-22.\n\nCAA de VERSAILLES, 4ème chambre, 22/09/2026, 24VE03075, Inédit au recueil Lebon\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : La SAS PCC IDF a demandé au tribunal administratif de Cergy-Pontoise, d'une part, d'annuler la décision du 1er septembre 2022 par laquelle le directeur général de l'office français de l'immigration et de l'intégration (OFII) a mis à sa charge la somme de 75 200 euros au titre de la contribution spéciale prévue à l'article L. 8253-1 du code du travail ainsi qu'une somme de 8 496 euros au titre la contribution forfaitaire prévue aux…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054927989",
-   "date_texte": "2026-09-22",
-   "_id": "dila:jade:CETATEXT000054927989",
-   "vu_le": "2026-10-06"
-  },
-  {
-   "categorie": "decision-haute-juridiction",
-   "gravite": "haute",
-   "titre": "🏛️ Conseil d'État — CAA de PARIS, 7ème chambre, 01/10/2026, 25PA01649, Inédit au recueil Lebon",
-   "detail": "Conseil d'État — CAA de PARIS — n° 25PA01649 — 2026-10-01.\n\nCAA de PARIS, 7ème chambre, 01/10/2026, 25PA01649, Inédit au recueil Lebon\n\n⚠️ Articles que l'écosystème cite : L1234-9, L1235-1, L1235-3\n\nExtrait : Vu la procédure suivante : Procédure contentieuse antérieure : M. C... A... et Mme B... D... ont demandé au tribunal administratif de Paris de prononcer la décharge partielle des cotisations d'impôt sur le revenu auxquelles ils ont été assujettis au titre de l'année 2017. Par un jugement n° 2306025/2-3 du 20 février 2025, le tribunal administratif de Paris a rejeté cette demande. Procédure devant la cour : Par une requête, enregistrée le 8 avril 2025, M. A... et Mme D..., représentés par Me…",
-   "lien": "https://www.legifrance.gouv.fr/ceta/id/CETATEXT000054946308",
-   "date_texte": "2026-10-01",
-   "_id": "dila:jade:CETATEXT000054946308",
-   "vu_le": "2026-10-06"
   }
  ],
- "dernier_passage": "2026-11-19",
+ "dernier_passage": "2026-11-23",
  "fonds_dila": {
   "circulaires": [
    "cir_36328.json",
@@ -7788,6 +7188,6 @@
  },
  "openfisca": {
   "echecs": 0,
-  "version": "177.0.3"
+  "version": "177.1.1"
  }
 }

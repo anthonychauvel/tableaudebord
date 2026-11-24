@@ -1704,5 +1704,387 @@
     "cle": "504535",
     "date": "2026-11-19",
     "note": "CE 09/11/2026 : complément d'AEEH cumulable avec chômage, IJ ou congé maternité/paternité si l'activité était déjà réduite. Les outils ne traitent pas l'AEEH : sans effet."
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 2528",
+    "date": "2026-11-24",
+    "note": "Le texte plus récent signalé (accord du 01/07/2026, cordonnerie multiservice) est déjà dans l'onglet « Cordonnerie multiservice » ; grille maroquinerie = accord du 18/02/2026, dernier texte du secteur (note ajoutée le 24/11/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "grille-sur-texte-ancien",
+    "cle": "IDCC 3205",
+    "date": "2026-11-24",
+    "note": "Grille refaite le 24/11/2026 sur l'avenant n° 934 du 18/06/2026 (11 groupes au 01/07/2026).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 3252",
+    "date": "2026-11-24",
+    "note": "Grille refaite le 24/11/2026 sur l'avenant n° 7 du 01/06/2026 (niveaux 2 à 10, minima à 3 et 8 ans).",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des industries de…",
+    "date": "2026-11-24",
+    "note": "Accord du 9/02/2026 (métiers exposés aux risques ergonomiques, L4163-2-1) : sans effet sur la grille et les règles HS."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des…",
+    "date": "2026-11-24",
+    "note": "Annexes 3 à 7 de l'accord du 17/12/2025 (classifications navigants et sédentaires, temps de travail) : pas de nouveau montant ; annexe 6 = contingent 220 h (droit commun), heures complémentaires 10 %/25 %, annualisation et forfait jours → ccn/conventions-collectives.js 3229 fj:true et note de grille le 24/11/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 13 novembre 2026 portant extension d'accords conclus dans le cadre de la convention collective nationale des personnels des ports…",
+    "date": "2026-11-24",
+    "note": "Accords du 02/04/2026 (+0,5 %) et du 15/09/2026 (point à 12,14 € au 01/09/2026, intégration des 5 points) : grille 1182 mise à jour le 24/11/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des entreprises…",
+    "date": "2026-11-24",
+    "note": "Accord du 27/05/2026 (fonds d'action sociale) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale du…",
+    "date": "2026-11-24",
+    "note": "Avenant n° 4 du 13/03/2026 (formation professionnelle) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des commerces et…",
+    "date": "2026-11-24",
+    "note": "Accord du 17/03/2026 (contrat de valorisation de l'expérience) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des services de…",
+    "date": "2026-11-24",
+    "note": "Accord du 04/06/2026 RNCSA/RNQSA (répertoire des certifications) : pas de salaire minimum, sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale des hôtels, cafés, restaurants (n° 1979)",
+    "date": "2026-11-24",
+    "note": "Avenant n° 37 du 04/06/2026 (indemnisation des négociateurs) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale de la métallurgie (n° 3248)",
+    "date": "2026-11-24",
+    "note": "Avenant du 30/06/2026 (allocation de déplacement paritaire, liste des CPTN) et accord territorial Loire (mesures emploi-formation) : sans effet sur la grille SMH et les règles HS."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale de la…",
+    "date": "2026-11-24",
+    "note": "Avenant n° 3 du 25/11/2024 (prévention et santé au travail) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie…",
+    "date": "2026-11-24",
+    "note": "Accord du 09/04/2026 (emploi des personnes handicapées) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale de la pharmacie d'officine (n° 1996)",
+    "date": "2026-11-24",
+    "note": "Avenant du 30/03/2026 portant révision (primes CQP en points) : pas de règle HS ni temps partiel, sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale du sport (n° 2511)",
+    "date": "2026-11-24",
+    "note": "Avenant n° 217 du 06/01/2026 (CQP réparateur de parachute) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à la convention collective nationale de la branche de l'aide, de l'accompagnement,…",
+    "date": "2026-11-24",
+    "note": "Avenants n° 65/2024 (instances, révision) et n° 71/2025 (congés) : pas de règle HS ni de salaire, sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale du négoce…",
+    "date": "2026-11-24",
+    "note": "Avenant du 30/04/2026 (médaille d'honneur du travail) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des sociétés…",
+    "date": "2026-11-24",
+    "note": "Accord du 04/12/2025 (formation professionnelle) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale des entreprises du…",
+    "date": "2026-11-24",
+    "note": "Accord du 03/04/2026 (salaires au 01/05/2026) étendu : grille 1408 refaite le 24/11/2026 (16 coefficients)."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un avenant à un accord conclu dans le cadre de la convention collective nationale des…",
+    "date": "2026-11-24",
+    "note": "Avenant du 23/02/2026 à l'accord de mise à jour (absences ; réserve L1225-16 sur les absences liées à un projet parental) : pas de règle HS, temps partiel ou forfait ; contingent 180 h inchangé."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale de l'industrie laitière…",
+    "date": "2026-11-24",
+    "note": "Accord du 22/01/2026 (métiers exposés aux risques ergonomiques) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 9 novembre 2026 portant extension d'un avenant à la convention collective nationale des casinos (n° 2257)",
+    "date": "2026-11-24",
+    "note": "Avenant n° 39 du 07/01/2026 (QVCT) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 13 novembre 2026 portant extension d'un avenant à la convention collective nationale de la boucherie,…",
+    "date": "2026-11-24",
+    "note": "Avenant n° 7-b du 27/11/2025 (frais de santé) : sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3205 — Avenant n° 934 du 18 juin 2026 relatif aux salaires minima au 1er juillet 2026",
+    "date": "2026-11-24",
+    "note": "Grille 3205 refaite le 24/11/2026 (11 groupes au 01/07/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3220 — Avenant n° 2 du 16 juin 2026 relatif à la modification de la convention collective",
+    "date": "2026-11-24",
+    "note": "Mise à jour de la convention (préambule OPCHS, congés familiaux, formation, suppression Pro-A) : aucune règle de temps partiel changée ; note de grille ajoutée le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3224 — Avenant n° 13 du 17 juin 2026 relatif aux salaires et minima conventionnels",
+    "date": "2026-11-24",
+    "note": "Déjà dans la grille 3224 (17/10/2026) ; montants recoupés avec le texte Légifrance le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3236 — Avenant du 10 juillet 2026 relatif aux salaires minima mensuels au 1er juin 2026",
+    "date": "2026-11-24",
+    "note": "Déjà dans la grille 3236 ; montants recoupés avec le texte Légifrance le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Orne et Calvados Accord du 8 juin 2026 relatif à la valeur de point pour le calcul de la prime d'ancienneté à compter…",
+    "date": "2026-11-24",
+    "note": "Valeur du point de la prime d'ancienneté (Orne-Calvados) : hors grille SMH ; aucun outil ne reprend la prime d'ancienneté 3248 ; note de grille le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Pas-de-Calais Accord du 3 juillet 2026 relatif à la valeur de point pour le calcul de la prime d'ancienneté à compter…",
+    "date": "2026-11-24",
+    "note": "Valeur du point de la prime d'ancienneté (Pas-de-Calais) : hors grille SMH, sans effet sur les outils."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Aube Accord du 3 juin 2026 relatif à la valeur de point pour le calcul de la prime d'ancienneté à compter du 1er juin…",
+    "date": "2026-11-24",
+    "note": "Valeur du point de la prime d'ancienneté (Aube) : hors grille SMH, sans effet sur les outils."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Aube Accord du 3 juin 2026 relatif à l'indemnité d'éloignement domicile – lieu de travail à compter du 1er juin 2026",
+    "date": "2026-11-24",
+    "note": "Indemnité d'éloignement (Aube) : hors grille, sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Haute-Marne Accord du 3 juin 2026 relatif à la valeur de point pour le calcul de la prime d'ancienneté à compter du 1er…",
+    "date": "2026-11-24",
+    "note": "Valeur du point de la prime d'ancienneté (Haute-Marne) : hors grille SMH, sans effet sur les outils."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Loire et arrondissement d'Yssingeaux Accord du 5 juin 2026 relatif à des mesures urgentes en faveur de l'emploi et de…",
+    "date": "2026-11-24",
+    "note": "Mesures emploi-formation (Loire) : sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Ardennes Accord du 29 juin 2026 relatif à la valeur de point pour le calcul de la prime d'ancienneté et de la prime de…",
+    "date": "2026-11-24",
+    "note": "Valeur du point (5,08 €) et prime de vacances (Ardennes) : hors grille SMH ; l'outil Ancienneté ne reprend pas de règle 3248 : sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Ille-et-Vilaine et Morbihan Accord du 1er juillet 2026 relatif à des mesures urgentes en faveur de l'emploi et de la…",
+    "date": "2026-11-24",
+    "note": "Mesures emploi-formation (Ille-et-Vilaine, Morbihan) : sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3248 — Avenant du 30 juin 2026 relatif à la modification de la convention collective",
+    "date": "2026-11-24",
+    "note": "Paritarisme (allocation de déplacement, CPTN) : sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3249 — Avenant n° 2 du 30 avril 2026 à l'accord d'harmonisation du 11 avril 2024 relatif aux salaires minimaux garantis des…",
+    "date": "2026-11-24",
+    "note": "12 onglets « Béton préfabriqué — région » ajoutés le 24/11/2026 (grilles au 01/07/2026) ; guide minerais-carrières : contingent corrigé à 180 h."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3250 — Avenant n° 13 du 10 juillet 2026 relatif à la modification de l'article 6 « Allocation de fin de carrière » (annexe II)",
+    "date": "2026-11-24",
+    "note": "Allocation de fin de carrière (annexe II) : hors grille, sans effet."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3250 — Avenant n° 14 du 10 juillet 2026 relatif à la modification du coefficient de l'emploi-repère « Clerc assistant…",
+    "date": "2026-11-24",
+    "note": "Grille 3250 refaite le 24/11/2026 sur l'annexe de l'avenant n° 14 (au 01/07/2026, coefficient 263)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3251 — Accord du 9 juin 2026 relatif aux salaires minimaux conventionnels",
+    "date": "2026-11-24",
+    "note": "Déjà dans la grille 3251 ; montants recoupés avec le texte Légifrance le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3252 — Avenant n° 7 du 1er juin 2026 relatif aux négociations annuelles obligatoires (NAO) portant sur les salaires minimaux",
+    "date": "2026-11-24",
+    "note": "Grille 3252 refaite le 24/11/2026 (niveaux 2 à 10, minima à 3 et 8 ans)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 3255 — Avenant n° 5 du 2 juillet 2026 relatif à la modification de l'article 21 « Salaires minima conventionnels »",
+    "date": "2026-11-24",
+    "note": "Déjà dans la grille 3255 ; montants recoupés avec le texte Légifrance le 24/11/2026 ; « heures supplémentaires » = exclusion de l'assiette du minimum, pas de nouvelle règle HS."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7002 — Avenant n° 139 du 20 février 2026 relatif à la revalorisation de la rémunération annuelle garantie (RAG) pour l'année…",
+    "date": "2026-11-24",
+    "note": "Grille 7002 refaite le 24/11/2026 (RAG 2026, 26 échelons)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7004 — Avenant n° 100 du 22 janvier 2026",
+    "date": "2026-11-24",
+    "note": "Grille 7004 refaite le 24/11/2026 (avenants n° 100 à 102)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7004 — Avenant n° 101 du 22 janvier 2026",
+    "date": "2026-11-24",
+    "note": "RAM de l'encadrement au forfait (annexe 1 bis) citée dans la note de grille 7004 le 24/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7004 — Avenant n° 102 du 22 janvier 2026",
+    "date": "2026-11-24",
+    "note": "Grille 7004 refaite le 24/11/2026 (minima mensuels au 01/02/2026)."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7004 — Ain, Doubs et Jura Avenant n° 3 du 19 mars 2026 relatif à l'annexe X de la convention collective nationale des…",
+    "date": "2026-11-24",
+    "note": "Onglet « Coopératives fruitières (Ain, Doubs, Jura) » ajouté le 24/11/2026 (au 01/05/2026)."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-10.048",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 10/11/2026, non publiée : suspension de la prescription (art. 2234 C. civ.), jurisprudence constante : sans effet."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-12.202",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 10/11/2026, non publiée : preuve partagée des heures sup (L3171-4), employeur sans aucun élément de contrôle : jurisprudence constante déjà dans les outils et le guide preuve."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-14.082",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 10/11/2026, non publiée : indemnité exprimée en brut ou en net : sans effet."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-14.595",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 18/11/2026, publiée : travail dissimulé apprécié à la date du bulletin, régularisation ultérieure sans effet → encadré ajouté le 24/11/2026 au guide travail-dissimule-hs-non-declarees-2026."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-15.128",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 10/11/2026, non publiée : expertise du CSE d'établissement : sans effet."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-17.586",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 18/11/2026, publiée : CDI intérimaire conclu avant la loi de 2015, non-rétroactivité : pas de règle temps partiel à changer, guide hs-cdi-intermittent inchangé."
+  },
+  {
+    "categorie": "regle-officielle-modifiee",
+    "cle": "Indemnité de licenciement (4.253.1)",
+    "date": "2026-11-24",
+    "note": "Règles conventionnelles Syntec ETAM et métallurgie (plafond FGHI) : les outils Fin de contrat, Rupture et Comparatif calculent l'indemnité légale seulement (pas de formule 1486 ou 3248) : sans effet."
+  },
+  {
+    "categorie": "regle-officielle-modifiee",
+    "cle": "Rupture conventionnelle (4.253.1)",
+    "date": "2026-11-24",
+    "note": "Mêmes règles conventionnelles 1486/3248 : les outils ne calculent que le minimum légal : sans effet."
+  },
+  {
+    "categorie": "boss-modifie",
+    "cle": "Toutes les actualités du Boss",
+    "date": "2026-11-24",
+    "note": "Mise à jour du 16/11/2026 : plafond de minimis (règlement UE 2023/2831) aux §700 HS et §700/1000 exonérations zonées, §950 BER : aucun outil ni module ne cite le plafond de minimis : sans effet."
+  },
+  {
+    "categorie": "boss-modifie",
+    "cle": "Exonérations heures supplémentaires et complémentaires",
+    "date": "2026-11-24",
+    "note": "Version au 01/11/2026 : §700 (de minimis de la déduction forfaitaire patronale) et correction de l'exemple (PSS 4 005 €) ; taux, plafond 7 500 € et déduction inchangés : sans effet."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3488",
+    "date": "2026-11-24",
+    "note": "PLFSS 2027 modifié par le Sénat : pas encore une loi, à reprendre après adoption définitive.",
+    "expire": "2027-01-15"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 6 novembre 2026 portant extension d'un accord territorial (département de la Loire et de l'arrondissement d'Yssingeaux) conclu…",
+    "date": "2026-11-24",
+    "note": "Accord territorial Loire et arrondissement d'Yssingeaux du 05/06/2026 (mesures emploi-formation) : sans effet."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 9 novembre 2026 portant extension d'un accord conclu dans le cadre de la convention collective nationale du personnel des…",
+    "date": "2026-11-24",
+    "note": "Annexes 4, 6 et 7 de l'accord du 17/12/2025 (temps de travail des navigants et sédentaires) étendues le 09/11/2026 : contingent 220 h (droit commun), heures complémentaires 10 %/25 %, annualisation, forfait jours (annexe 6) → ccn 3229 fj:true le 24/11/2026 ; pas d'autre règle à changer."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 24-18.263",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 18/11/2026, publiée (forfait jours, accord insuffisant : nul avant le 10/08/2016, puis garanties L3121-65) : guide forfait-jours-cadres et convention-forfait-jours-validite-2026, M6 nullite-checker et simulateur-nullite, Fox articles-loi L3121-64 mis à jour le 24/11/2026."
+  },
+  {
+    "categorie": "nouvelle-jurisprudence",
+    "cle": "n° 25-15.641",
+    "date": "2026-11-24",
+    "note": "Cass. soc. 18/11/2026, publiée (conformité de l'accord à vérifier avant le dispositif L3121-65) : mêmes mises à jour que n° 24-18.263 le 24/11/2026."
   }
 ]

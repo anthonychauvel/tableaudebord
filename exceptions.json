@@ -2086,5 +2086,91 @@
     "cle": "n° 25-15.641",
     "date": "2026-11-24",
     "note": "Cass. soc. 18/11/2026, publiée (conformité de l'accord à vérifier avant le dispositif L3121-65) : mêmes mises à jour que n° 24-18.263 le 24/11/2026."
+  },
+  {
+    "categorie": "grille-perimee",
+    "cle": "IDCC 7028 : grille",
+    "date": "2026-11-26",
+    "note": "Onglets « Teillage de lin et chanvre (annexe 3) » (avenant n° 5 du 18/03/2026) et « Déshydratation (annexe 4) » (avenant n° 4) ajoutés le 26/11/2026.",
+    "mode": "jusqu_au"
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Décret n° 2026-1069 du 19 novembre 2026 modifiant le décret n° 2009-552 du 19 mai 2009 relatif au groupe d'experts sur le salaire minimum…",
+    "date": "2026-11-26",
+    "note": "Décret sur le groupe d'experts du SMIC (composition, fonctionnement) : ne fixe aucun montant, sans effet. Le SMIC au 1/12/2026 sera traité à la parution de son décret."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 20 novembre 2026 portant extension d'un accord territorial (Dordogne) conclu dans le cadre de la convention collective nationale…",
+    "date": "2026-11-26",
+    "note": "Accord territorial Dordogne du 30/06/2026 (valeur du point de la prime d'ancienneté) : hors grille SMH, aucun outil ne reprend la prime d'ancienneté 3248 ; note de grille le 26/11/2026."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 20 novembre 2026 portant extension d'accords régionaux (Centre-Val de Loire, Pays de la Loire, Bourgogne-Franche-Comté) conclus…",
+    "date": "2026-11-26",
+    "note": "Accords régionaux PdL 25/08, CVL 27/08, BFC 01/09/2026 étendus : montants pas encore au fonds Légifrance ni dans la presse ; note de grille 3249 le 26/11/2026. À reporter quand les textes arrivent au fonds (alerte nouvel-avenant-ccn)."
+  },
+  {
+    "categorie": "nouveau-texte-jorf",
+    "cle": "Arrêté du 20 novembre 2026 portant extension d'un avenant à la convention collective nationale de l'assainissement et de la maintenance…",
+    "date": "2026-11-26",
+    "note": "Avenant n° 46 du 15/09/2026 (salaires au 01/10/2026) étendu : montants pas encore au fonds Légifrance ; note de grille 2272 et plancher SMIC du coefficient 170 corrigé le 26/11/2026. À reporter quand le texte arrive au fonds."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7024 — Avenant n° 11 du 2 juillet 2026",
+    "date": "2026-11-26",
+    "note": "Grille 7024 refaite le 26/11/2026 : 12 paliers de l'avenant n° 11, en vigueur au 01/10/2026 ; guide : aucun montant 7024 cité."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7024 — Gers Avenant n° 129 du 4 mai 2026 relatif à la modification de l'avenant n° 125 du 20 juillet 2023",
+    "date": "2026-11-26",
+    "note": "Rémunération forfaitaire à la tâche en viticulture (Gers) : hors grille nationale et sans règle HS ; mentionnée dans la note de grille 7024 le 26/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7025 — Avenant n° 12 du 15 juillet 2026",
+    "date": "2026-11-26",
+    "note": "Grille 7025 refaite le 26/11/2026 (avenant n° 12, au 01/10/2026) + 4 onglets (forestier, sylviculture, aviculture, administratif) ; guide : aucun montant 7025 cité."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7028 — Avenant n° 3 du 20 janvier 2026 relatif aux salaires minima conventionnels (annexe 4 « Filière déshydratation »)",
+    "date": "2026-11-26",
+    "note": "Grille au 01/02/2026, remplacée au 01/07/2026 par l'avenant n° 4 ; « heures supplémentaires » = note sur la base 162,5 h, pas de règle HS nouvelle ; onglet Déshydratation ajouté le 26/11/2026."
+  },
+  {
+    "categorie": "nouvel-avenant-ccn",
+    "cle": "IDCC 7028 — Avenant n° 4 du 20 janvier 2026 relatif aux salaires minima conventionnels (annexe 4 « Filière déshydratation »)",
+    "date": "2026-11-26",
+    "note": "Onglet « Déshydratation (annexe 4) » ajouté le 26/11/2026 (grille au 01/07/2026) ; pas de nouvelle règle HS."
+  },
+  {
+    "categorie": "texte-parlement",
+    "cle": "N° 3510",
+    "date": "2026-11-26",
+    "note": "Proposition de loi (périodicité des réunions du CSE de 11 à 49 salariés) : pas encore une loi, à reprendre si adoptée.",
+    "expire": "2027-03-31"
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "Gel temporaire du montant des",
+    "date": "2026-11-26",
+    "note": "QPC 2026-1230/1231 : censure du gel des cotisations de complémentaire santé ; ni l'appli, ni les outils, ni le guide ne parlent de ce gel : sans effet."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "Alexion Pharma",
+    "date": "2026-11-26",
+    "note": "Contribution sur le chiffre d'affaires des laboratoires pharmaceutiques : hors sujet SimulHeures."
+  },
+  {
+    "categorie": "decision-haute-juridiction",
+    "cle": "504261",
+    "date": "2026-11-26",
+    "note": "CE 03/11/2026 (obligation de revitalisation des bassins d'emploi) : hors sujet SimulHeures."
   }
 ]
